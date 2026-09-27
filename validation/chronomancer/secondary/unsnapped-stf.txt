@@ -1,0 +1,17 @@
+Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
+Legion off; snapped none; 1 levels in 0.09 s (setup 12 ms)
+Enchant 10: ×6.20e26 vs no items [25 candidates, 8 searched slots, 1920 leaves, 6298 bounds, 84 ms]
+    Head       Empowering Headguard +10                 ×15.1
+    Hands      Empowering Handguards +10                ×63.5
+    Chest      The Ribcage +10                          ×383
+    Feet       Boots Of Concentration +10               ×226
+    Shoulder   Stabilizing Pauldrons +10                ×5470
+    Neck       Torc Of Privilege +10                    ×22
+    Waist      Encircling Trophies +10                  ×70.7
+    Back       Timeshroud +10                           ×666
+    Research   Servants Overclocking +10                ×361
+    Finger     Frosty Ring +10                          ×46.2
+    Finger     Morbid Loop +10                          ×111
+    Trophy     Mutated Mycelium +10                     ×89.4
+    Trophy     Necrotic Powerstone +10                  ×100
+Excluded items: excluded-slot 77, not-owned 28, no-effect 9, requirements 24

@@ -1,0 +1,432 @@
+{
+  "variant": "era-notes",
+  "level": 10,
+  "summary": {
+    "slots": 13,
+    "supplyGuideStat": 13,
+    "mainStatIsGuideStat": 10,
+    "categoriesCovered": [
+      "Incantation",
+      "Evocation",
+      "Character ability power",
+      "Idle bonus"
+    ],
+    "categoriesMissing": [
+      "Max Time Distortion"
+    ],
+    "mainStatNotGuide": [
+      "Boots Of Concentration (Prod.Global)",
+      "Spell Helix (Prod.Global)",
+      "Necrotic Powerstone (Void.ProfitPerPoint)"
+    ]
+  },
+  "slots": [
+    {
+      "slot": "Head",
+      "name": "The Artificer's Crown",
+      "set": null,
+      "recordedContributionLog10": 1.0840996582557807,
+      "removalLog10": 1.0840996582557807,
+      "desc": "Experiment and Crafting efficiency +10%, character ability power +200%.",
+      "enchant": "Evocation efficiency +15%",
+      "shares": [
+        {
+          "stat": "Spell.EvocationEfficiency",
+          "category": "Evocation",
+          "log10": 0.6069784035361181
+        },
+        {
+          "stat": "Hero.AbilityPower",
+          "category": "Character ability power",
+          "log10": 0.4771212547196626
+        },
+        {
+          "stat": "Items.ExperimentEfficiency",
+          "category": null,
+          "log10": 0
+        },
+        {
+          "stat": "Items.CraftingEfficiency",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Hands",
+      "name": "Empowering Handguards",
+      "set": "Power Armor",
+      "recordedContributionLog10": 1.3281683386073553,
+      "removalLog10": 1.3281683386073553,
+      "desc": "Evocation efficiency +150%, Incantation efficiency +35%, Accumulated spells' starting casts amount +400",
+      "enchant": "Incantation efficiency +4%",
+      "shares": [
+        {
+          "stat": "Spell.IncantationEfficiency",
+          "category": "Incantation",
+          "log10": 0.9302283299353178
+        },
+        {
+          "stat": "Spell.EvocationEfficiency",
+          "category": "Evocation",
+          "log10": 0.3979400086720375
+        },
+        {
+          "stat": "Spell.AccumulatedStartingCasts",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Chest",
+      "name": "The Ribcage",
+      "set": "Ancient Bones",
+      "recordedContributionLog10": 2.40414113974947,
+      "removalLog10": 2.4041411397494983,
+      "desc": "Profits +150%, Idle bonus +100%",
+      "enchant": "Idle bonus +15%",
+      "shares": [
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 1.8301098720217794
+        },
+        {
+          "stat": "Prod.Global",
+          "category": null,
+          "log10": 0.3979400086720375
+        }
+      ]
+    },
+    {
+      "slot": "Feet",
+      "name": "Boots Of Concentration",
+      "set": "Raiments Of The Perfect Mind",
+      "recordedContributionLog10": 2.353983616999301,
+      "removalLog10": 2.353983616999301,
+      "desc": "Mysteries power (base) +25%, Idle bonus +100%",
+      "enchant": "Profits +25%",
+      "shares": [
+        {
+          "stat": "Prod.Global",
+          "category": null,
+          "log10": 0.9691001300805624
+        },
+        {
+          "stat": "Mysteries.Power",
+          "category": null,
+          "log10": 0.7781512503836439
+        },
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 0.6067322365350947
+        }
+      ]
+    },
+    {
+      "slot": "Shoulder",
+      "name": "Mantle Of The Crypt",
+      "set": "Ancient Bones",
+      "recordedContributionLog10": 2.3072311267414136,
+      "removalLog10": 2.307231126741442,
+      "desc": "Idle bonus +100%, character ability power +100%, summoning efficiency +25%",
+      "enchant": "Idle bonus +15%",
+      "shares": [
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 1.8301098720217794
+        },
+        {
+          "stat": "Hero.AbilityPower",
+          "category": "Character ability power",
+          "log10": 0.30102999566398125
+        },
+        {
+          "stat": "Spell.SummoningEfficiency",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Neck",
+      "name": "Searing Gaze",
+      "set": null,
+      "recordedContributionLog10": 1.2689337151959137,
+      "removalLog10": 1.2689337151959137,
+      "desc": "Evocation efficiency +200%, Spell Fountains profit +400%, reduces Evocation duration +50%",
+      "enchant": "Evocation efficiency +20%",
+      "shares": [
+        {
+          "stat": "Spell.EvocationEfficiency",
+          "category": "Evocation",
+          "log10": 1.2689337151959137
+        },
+        {
+          "stat": "Building.3.Profit",
+          "category": null,
+          "log10": 0
+        },
+        {
+          "stat": "Spell.EvocationDuration",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Waist",
+      "name": "Encircling Trophies",
+      "set": "Ancient Bones",
+      "recordedContributionLog10": 1.6708579288014676,
+      "removalLog10": 1.6708579288014676,
+      "desc": "Profits +150%<br>Idle bonus +75%<br>Patience +50",
+      "enchant": "Character Ability Power 15%",
+      "shares": [
+        {
+          "stat": "Hero.AbilityPower",
+          "category": "Character ability power",
+          "log10": 0.6069784035361181
+        },
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 0.4898482575376306
+        },
+        {
+          "stat": "Prod.Global",
+          "category": null,
+          "log10": 0.3979400086720375
+        },
+        {
+          "stat": "Attr.Patience",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Back",
+      "name": "Flaming Cape",
+      "set": null,
+      "recordedContributionLog10": 1.8135157286593255,
+      "removalLog10": 1.8135157286593255,
+      "desc": "Evocation efficiency +200%, Incantation efficiency +50%",
+      "enchant": "Evocation efficiency +20%",
+      "shares": [
+        {
+          "stat": "Spell.EvocationEfficiency",
+          "category": "Evocation",
+          "log10": 1.2689337151959137
+        },
+        {
+          "stat": "Spell.IncantationEfficiency",
+          "category": "Incantation",
+          "log10": 0.5445820134634118
+        }
+      ]
+    },
+    {
+      "slot": "Research",
+      "name": "Servants Overclocking",
+      "set": null,
+      "recordedContributionLog10": 2.557562376258943,
+      "removalLog10": 2.557562376258943,
+      "desc": "Idle bonus +200%",
+      "enchant": "Idle bonus +20%",
+      "shares": [
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 2.557562376258943
+        }
+      ]
+    },
+    {
+      "slot": "Finger",
+      "name": "Morbid Loop",
+      "set": "Ancient Bones",
+      "recordedContributionLog10": 1.8669231538465567,
+      "removalLog10": 1.8669231538465567,
+      "desc": "Profits +100%, Idle bonus +100%, character ability power +50%",
+      "enchant": "Character ability power +15%",
+      "shares": [
+        {
+          "stat": "Hero.AbilityPower",
+          "category": "Character ability power",
+          "log10": 0.7830696625917994
+        },
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 0.6067322365350947
+        },
+        {
+          "stat": "Prod.Global",
+          "category": null,
+          "log10": 0.30102999566398125
+        }
+      ]
+    },
+    {
+      "slot": "Finger",
+      "name": "Spell Helix",
+      "set": null,
+      "recordedContributionLog10": 1.616554777788025,
+      "removalLog10": 1.616554777788025,
+      "desc": "Reduces Spells costs reduction +20%, charging Spells' costs reduction +5%, Evocation efficiency +200%",
+      "enchant": "Profits +30%",
+      "shares": [
+        {
+          "stat": "Prod.Global",
+          "category": null,
+          "log10": 1.1394335230683623
+        },
+        {
+          "stat": "Spell.EvocationEfficiency",
+          "category": "Evocation",
+          "log10": 0.4771212547196626
+        },
+        {
+          "stat": "Spell.CostReduction",
+          "category": null,
+          "log10": 0
+        },
+        {
+          "stat": "Spell.ChargingCostReduction",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    },
+    {
+      "slot": "Trophy",
+      "name": "Mutated Mycelium",
+      "set": null,
+      "recordedContributionLog10": 1.9515480422130622,
+      "removalLog10": 1.9515480422130622,
+      "desc": "Idle bonus +0.0324 * Expedition Level (3.24% per Expedition Level)",
+      "enchant": "Idle bonus +13.5%",
+      "shares": [
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 1.9515480422130622
+        }
+      ]
+    },
+    {
+      "slot": "Trophy",
+      "name": "Necrotic Powerstone",
+      "set": null,
+      "recordedContributionLog10": 2.000604688302076,
+      "removalLog10": 2.000604688302076,
+      "desc": "Void Mana profits +300%, idle bonus +100%, Mana Gem profit +300% ",
+      "enchant": "Void Mana profit +20%",
+      "shares": [
+        {
+          "stat": "Void.ProfitPerPoint",
+          "category": null,
+          "log10": 1.3938724517669812
+        },
+        {
+          "stat": "Idle.Bonus",
+          "category": "Idle bonus",
+          "log10": 0.6067322365350947
+        },
+        {
+          "stat": "Building.1.Profit",
+          "category": null,
+          "log10": 0
+        }
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "name": "Power Armor",
+      "pieces": 1,
+      "tiers": [],
+      "stats": [],
+      "wholeSetLog10": 1.3281683386073553
+    },
+    {
+      "name": "Ancient Bones",
+      "pieces": 4,
+      "tiers": [
+        "2pc: Summoning efficiency +35%",
+        "3pc: Idle bonus +50%",
+        "4pc: Character Ability Power +50%"
+      ],
+      "stats": [
+        "Spell.SummoningEfficiency",
+        "Idle.Bonus",
+        "Hero.AbilityPower"
+      ],
+      "wholeSetLog10": 8.075795178323602
+    },
+    {
+      "name": "Raiments Of The Perfect Mind",
+      "pieces": 1,
+      "tiers": [],
+      "stats": [],
+      "wholeSetLog10": 2.353983616999301
+    }
+  ],
+  "scalings": {
+    "headlineSet": {
+      "Evo": 0.9999999999990905,
+      "Inc": 3.090895553778239,
+      "CAP": 1.0000000000005116,
+      "PAP": 0.30000000000001137,
+      "Idle": 2.015520862619269
+    },
+    "noItems": {
+      "Evo": 1.0000000000005116,
+      "Inc": 3.1009679602547635,
+      "CAP": 1.0000000000005116,
+      "PAP": 0.30000000000001137,
+      "Idle": 2.01552086262069
+    },
+    "headlineSetGemResonanceSnapped": {
+      "Evo": 0.9999999999990905,
+      "Inc": 3.090895553778239,
+      "CAP": 1.0000000000005116,
+      "PAP": 0.30000000000001137,
+      "Idle": 2.015520862619269
+    }
+  },
+  "maxTdItems": [
+    {
+      "name": "Stabilizing Pauldrons",
+      "slot": "Shoulder",
+      "requirements": {
+        "Spellcraft": 50
+      },
+      "available": true,
+      "chosen": false,
+      "desc": "Maximum Time Distortion +10, Compressed Time gained per tick +50%, Nexi profit +200%",
+      "swap": {
+        "log10": -0.6906763489534171,
+        "out": "Mantle Of The Crypt"
+      }
+    },
+    {
+      "name": "Timeshroud",
+      "slot": "Back",
+      "requirements": {
+        "Spellcraft": 125
+      },
+      "available": true,
+      "chosen": false,
+      "desc": "Evocation efficiency +200%, Incantation efficiency +25%, max time distortion +5",
+      "swap": {
+        "log10": -0.24480124484759358,
+        "out": "Flaming Cape"
+      }
+    }
+  ]
+}

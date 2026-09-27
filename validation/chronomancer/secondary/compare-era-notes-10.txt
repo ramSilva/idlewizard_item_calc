@@ -1,0 +1,110 @@
+era-notes at enchant 10 (recorded set; score ×1.13e24 vs no items)
+  slots supplying a guide burst stat: 13/13; main stat is a guide stat: 10/13; categories missing: Max Time Distortion; main stat not a guide stat: Boots Of Concentration (Prod.Global), Spell Helix (Prod.Global), Necrotic Powerstone (Void.ProfitPerPoint)
+
+Head      The Artificer's Crown  contribution ×12.1 (recorded ×12.1)
+  text: Experiment and Crafting efficiency +10%, character ability power +200%. | enchant: Evocation efficiency +15%
+  Spell.EvocationEfficiency                         ×4.05  Evocation
+  Hero.AbilityPower                                    ×3  Character ability power
+  Items.ExperimentEfficiency                           ×1  
+  Items.CraftingEfficiency                             ×1  
+  guide burst categories supplying > x1.05: Evocation, Character ability power
+
+Hands     Empowering Handguards  contribution ×21.3 (recorded ×21.3)
+  text: Evocation efficiency +150%, Incantation efficiency +35%, Accumulated spells' starting casts amount +400 | enchant: Incantation efficiency +4%
+  Spell.IncantationEfficiency                       ×8.52  Incantation
+  Spell.EvocationEfficiency                          ×2.5  Evocation
+  Spell.AccumulatedStartingCasts                       ×1  
+  guide burst categories supplying > x1.05: Incantation, Evocation
+
+Chest     The Ribcage  contribution ×254 (recorded ×254)
+  text: Profits +150%, Idle bonus +100% | enchant: Idle bonus +15%
+  Idle.Bonus                                        ×67.6  Idle bonus
+  Prod.Global                                        ×2.5  
+  guide burst categories supplying > x1.05: Idle bonus
+
+Feet      Boots Of Concentration  contribution ×226 (recorded ×226)
+  text: Mysteries power (base) +25%, Idle bonus +100% | enchant: Profits +25%
+  Prod.Global                                       ×9.31  
+  Mysteries.Power                                      ×6  
+  Idle.Bonus                                        ×4.04  Idle bonus
+  guide burst categories supplying > x1.05: Idle bonus
+
+Shoulder  Mantle Of The Crypt  contribution ×203 (recorded ×203)
+  text: Idle bonus +100%, character ability power +100%, summoning efficiency +25% | enchant: Idle bonus +15%
+  Idle.Bonus                                        ×67.6  Idle bonus
+  Hero.AbilityPower                                    ×2  Character ability power
+  Spell.SummoningEfficiency                            ×1  
+  guide burst categories supplying > x1.05: Idle bonus, Character ability power
+
+Neck      Searing Gaze  contribution ×18.6 (recorded ×18.6)
+  text: Evocation efficiency +200%, Spell Fountains profit +400%, reduces Evocation duration +50% | enchant: Evocation efficiency +20%
+  Spell.EvocationEfficiency                         ×18.6  Evocation
+  Building.3.Profit                                    ×1  
+  Spell.EvocationDuration                              ×1  
+  guide burst categories supplying > x1.05: Evocation
+
+Waist     Encircling Trophies  contribution ×46.9 (recorded ×46.9)
+  text: Profits +150%<br>Idle bonus +75%<br>Patience +50 | enchant: Character Ability Power 15%
+  Hero.AbilityPower                                 ×4.05  Character ability power
+  Idle.Bonus                                        ×3.09  Idle bonus
+  Prod.Global                                        ×2.5  
+  Attr.Patience                                        ×1  
+  guide burst categories supplying > x1.05: Character ability power, Idle bonus
+
+Back      Flaming Cape  contribution ×65.1 (recorded ×65.1)
+  text: Evocation efficiency +200%, Incantation efficiency +50% | enchant: Evocation efficiency +20%
+  Spell.EvocationEfficiency                         ×18.6  Evocation
+  Spell.IncantationEfficiency                        ×3.5  Incantation
+  guide burst categories supplying > x1.05: Evocation, Incantation
+
+Research  Servants Overclocking  contribution ×361 (recorded ×361)
+  text: Idle bonus +200% | enchant: Idle bonus +20%
+  Idle.Bonus                                         ×361  Idle bonus
+  guide burst categories supplying > x1.05: Idle bonus
+
+Finger    Morbid Loop  contribution ×73.6 (recorded ×73.6)
+  text: Profits +100%, Idle bonus +100%, character ability power +50% | enchant: Character ability power +15%
+  Hero.AbilityPower                                 ×6.07  Character ability power
+  Idle.Bonus                                        ×4.04  Idle bonus
+  Prod.Global                                          ×2  
+  guide burst categories supplying > x1.05: Character ability power, Idle bonus
+
+Finger    Spell Helix  contribution ×41.4 (recorded ×41.4)
+  text: Reduces Spells costs reduction +20%, charging Spells' costs reduction +5%, Evocation efficiency +200% | enchant: Profits +30%
+  Prod.Global                                       ×13.8  
+  Spell.EvocationEfficiency                            ×3  Evocation
+  Spell.CostReduction                                  ×1  
+  Spell.ChargingCostReduction                          ×1  
+  guide burst categories supplying > x1.05: Evocation
+
+Trophy    Mutated Mycelium  contribution ×89.4 (recorded ×89.4)
+  text: Idle bonus +0.0324 * Expedition Level (3.24% per Expedition Level) | enchant: Idle bonus +13.5%
+  Idle.Bonus                                        ×89.4  Idle bonus
+  guide burst categories supplying > x1.05: Idle bonus
+
+Trophy    Necrotic Powerstone  contribution ×100 (recorded ×100)
+  text: Void Mana profits +300%, idle bonus +100%, Mana Gem profit +300%  | enchant: Void Mana profit +20%
+  Void.ProfitPerPoint                               ×24.8  
+  Idle.Bonus                                        ×4.04  Idle bonus
+  Building.1.Profit                                    ×1  
+  guide burst categories supplying > x1.05: Idle bonus
+
+Set Power Armor (1 pieces; all its pieces together ×21.3): 
+
+Set Ancient Bones (4 pieces; all its pieces together ×1.19e8): Spell.SummoningEfficiency, Idle.Bonus, Hero.AbilityPower
+  2pc: Summoning efficiency +35%
+  3pc: Idle bonus +50%
+  4pc: Character Ability Power +50%
+
+Set Raiments Of The Perfect Mind (1 pieces; all its pieces together ×226): 
+
+Burst scalings (d ln score / d ln stat):
+  headlineSet: Evo 1.000, Inc 3.091, CAP 1.000, PAP 0.300, Idle 2.016
+  noItems: Evo 1.000, Inc 3.101, CAP 1.000, PAP 0.300, Idle 2.016
+  headlineSetGemResonanceSnapped: Evo 1.000, Inc 3.091, CAP 1.000, PAP 0.300, Idle 2.016
+
+Max Time Distortion items:
+  Stabilizing Pauldrons (Shoulder; req {"Spellcraft":50}; available): Maximum Time Distortion +10, Compressed Time gained per tick +50%, Nexi profit +200%
+    swapped in for Mantle Of The Crypt: ×0.204
+  Timeshroud (Back; req {"Spellcraft":125}; available): Evocation efficiency +200%, Incantation efficiency +25%, max time distortion +5
+    swapped in for Flaming Cape: ×0.569

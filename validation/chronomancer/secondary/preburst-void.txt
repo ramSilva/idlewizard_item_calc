@@ -1,0 +1,16 @@
+Chronomancer with Risen Giant, spells 65,67,30,34,104,69, score void-mana
+Legion off; snapped none; 1 levels in 0.02 s (setup 8 ms)
+Enchant 10: ×1.74e6 vs no items [17 candidates, 4 searched slots, 81 leaves, 0 bounds, 17 ms]
+    Head       Empowering Headguard +10                 ×1.86
+    Hands      Empowering Handguards +10                ×3
+    Chest      Empowering Chestguard                    ×2.13
+    Feet       Boots Of Eastern Blessings +10           ×2.19
+    Neck       Torc Of Privilege +10                    ×1.8
+    Waist      Sash of Luxury +10                       ×1.8
+    Back       The Amplifier +10                        ×2.35
+    Research   Void Sampling +10                        ×61.9
+    Finger     Fiery Ring +10                           ×2.09
+    Finger     Frosty Ring                              ×1.31
+    Trophy     Anima Core +10                           ×3.59
+    Trophy     Anomalous Essence +10                    ×24.8
+Excluded items: excluded-slot 77, not-owned 28, no-effect 56, requirements 20
