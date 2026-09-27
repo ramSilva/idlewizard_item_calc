@@ -1,0 +1,2 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}} [[Category:Items]]
+[[Category:Legs]]

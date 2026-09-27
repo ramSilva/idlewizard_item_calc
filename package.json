@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "scrape": "node scripts/scrape/scrape.mjs"
+    "scrape": "node scripts/scrape/scrape.mjs",
+    "build-data": "node scripts/data/build-data.mjs"
   },
   "dependencies": {
     "break_eternity.js": "^2.1.3",

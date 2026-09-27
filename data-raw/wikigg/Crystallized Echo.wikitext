@@ -1,0 +1,15 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Unlocking==
+This [[Mount]] ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+It is unlocked upon completion of all tasks in the [[WHAT - Wizard's Hat Annual Tournament]] event. This also is rewarded at the start of the [[Anniversary]] event for free. It is also available for unlock during other annual events by redeeming with a specific amount of event currency.
+
+Event Mounts alternate between this and {{ItemTooltip|Broomstaff Of Klevdariah}}. This mount may be obtained during the following [[Events|events]]:
+* [[WHAT - Wizard's_Hat_Annual_Tournament]]
+* [[Solstice]]
+* [[Halloween]]
+* [[Anniversary]] (Mount automatically awarded to player if not yet unlocked)
+
+[[Category:Items]]
+[[Category:Mount]]

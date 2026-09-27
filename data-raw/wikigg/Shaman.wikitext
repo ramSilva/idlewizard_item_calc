@@ -1,0 +1,80 @@
+{{ClassInfobox
+|level=
+*[[Paragon]] level 22
+*Any level 100
+**{{ClassTooltip|Apprentice}}
+**{{ClassTooltip|Druid}}
+**{{ClassTooltip|Necromancer}}
+|unlock=
+*Reach 1e5 autoclicks
+*Use 30 {{SpellTooltip|Synthetic Entity}}
+|source=Witching Cauldron
+}}
+==Description==
+
+Increases [[Idle Mode|idle bonus]] with time spent idle and summon efficiency with amount of autoclicks performed. Has a unique Idle bar bonus, which increases Idle bonus based on amount of Autoclicks currently performed (formula is in the Hero Ability section below).
+
+Unique [[Sources|Source]]: Witching Cauldron, replaces Alchemy Desk.
+
+In addition, Shaman has access to Forbidden Tomes (instead of Grimoires) and Trees of Life (instead of Enchanted Trees), like the {{ClassTooltip|Necromancer}} and {{ClassTooltip|Druid}}.
+
+Upon reaching [[Paragon]] 42, Shaman may take on either [[Ascension Forms]]: {{ClassTooltip|Demiurge}} or {{ClassTooltip|Defiance}}.
+
+==Guides==
+* [[Shaman_Guide|Shaman Guide]]
+* {{ClassTooltip|Demiurge|link=Demiurge Shaman Guide|display_name=Demiurge Shaman}} ([[Ascension Forms|Ascension Form]])
+* {{ClassTooltip|Defiance|link=Defiance Shaman Guide|display_name=Defiance Shaman}} ([[Ascension Forms|Ascension Form]])
+
+''To learn about writing your own guides, please see the [[Guide to Guides]].''
+
+==Hero Ability==
+
+Multiplies Idle bonus by:
+<br><math>\frac{\left(T_{G}+1\right)^2}{1000} \times C^{0.30} \times L^{1.6} + L + 1</math>
+
+
+Multiplies Summoning spell efficiency by:
+<br><math>\left(1 + \frac{A\times G^{0.25}}{10000} \right)^{0.85} \times \frac{C^{0.155} \times L^{0.31} }{400} + 1</math>
+
+where:
+* <math>L = \text{Character Level}</math>
+* <math>C = \text{Character Ability Power}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+* <math>T = \text{Time Spent as Shaman this Exile, in Hours}</math>
+* <math>A = \text{Autoclicks this Exile}</math>
+
+and <math>T_{G}</math> is the growth- and softcap modified time, given by:
+* <math>T_{G} = \begin{cases}
+ T \times G,  &\text{ if } 1 + T\times G < 720  \quad \text{and} \\
+719 + {\left(T \times G - 719\right)}^{0.9} , &\text{ if } 1 + T\times G\geq 720.
+\end{cases}
+</math>
+
+After 7e7 autoclicks:
+
+* <math>A = \left(\text{Autoclicks this Exile} - 7\times 10^7\right)^{0.75}+7\times 10^7</math>
+
+===Idle Bar Bonus===
+Multiplies Idle Bonus by:
+<br><math>10 \times A^{0.5} + 1</math>
+
+where:
+*<math>A = \text{Autoclicks currently performed}</math>
+
+==[[Spells]]==
+{{SpellList}}
+
+==[[Upgrades]]==
+{| class="mw-collapsible mw-collapsed wikitable" width="100%" data-expandtext="Reveal" data-collapsetext="Conceal"
+! colspan="50" |Upgrades
+|-
+|{{UpgradeList}}
+|}
+
+==Lore==
+{{Lore|Folk tales tell of mysterious sorcerers that live in the deepest forests and swamps, performing obscure rituals and summoning various abominations. A Shaman fits the description quite closely. Their origins differ, some secluding themselves from Druid societies, seeing death as an aspect of nature equal to life, while others come steering away from pure Necromancers' practices, realizing the importance of maintaining life as a source of sustenance for their never-ending service of death. They despise both factions, believing druids do not understand the true balance of nature, and necromancers - not realizing that they're too single-minded in their pursuits. Shamans both cultivate life and take it at will, twisting souls and essence or bolstering them in time of need. A Shaman can both spare a village or poison a city, should she see it fit for the greater balance. They have control over nature similar to a Druid, but tend to call upon the help of more sinister and devious creatures - venomous insects, snakes, and other vermin, combing them with their undead or zombified servants, terrorizing their foes before finally killing them.}}
+
+{{SiteNav}}
+[[Category:Classes]]
+[[Category:Wizard]]
+[[Category:Tier 2 Classes]]

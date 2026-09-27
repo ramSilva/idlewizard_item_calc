@@ -1,0 +1,51 @@
+local p = {}
+
+local classes = {}
+local ascensions = {}
+
+ascensions["Tempest"] = {
+	spells = {'Artificial Muse', 'Possessed Blade', 'Fire with Fire', 'Materialize Cosmic Conduit'},
+    classes = {'Archon', 'Oni', 'Desolator'},
+    mechanics = {
+    	'Increase spell efficiencies based on selected spell types',
+    	'7th spell slot',
+    	'Gain ascension experience on spell cast and over time for each active spell'
+    }
+}
+
+ascensions["Demiurge"] = {
+	spells = {'Primal Power', 'Voracious Plague', 'Conjure Void Elemental','Forge Empyreal Vassal'},
+    classes = {'Shaman', 'Temporalist', 'Heretic'},
+    mechanics = {
+    	'Reduce mana cost of sources',
+    	'Increase attributes per-point power',
+    	'Gain 9th mana source with built-in memetic upgrade (copies red cata from other sources)',
+    	'Gain ascension experience over time, based on your character level'
+    }    
+}
+
+ascensions["Dread"] = {
+	spells = {'Voidbolt', 'True Sorcery', 'Artificial Muse','Manifest Twisted Reality'},
+    classes = {'Temporalist', 'Heretic', 'Desolator'},
+    mechanics = {
+    	'Increase gods main ability power',
+    	'Unlocks a second pet slot with limitations and reduced effectiveness',
+    	'Gain ascension experience over time, dependant on both pet levels'
+    }
+}
+
+ascensions["Defiance"] = {
+	spells = {'Unclean Knowledge', 'Nightfall', 'Nullzone','Employ Celestial Countermeasures'},
+    classes = {'Archon', 'Oni', 'Shaman'},
+    mechanics = {
+    	'Gain a toggleable stance',
+    	'Stance inactive: Increased void Mana per entity',
+    	'Stance active: Profit boosting abilities depending on class',
+    	'Gain ascension experience each second, dependant on autoclicks performed in the last second'
+    }
+}
+
+p.classes = classes
+p.ascensions = ascensions
+p.mechanics = mechanics
+return p

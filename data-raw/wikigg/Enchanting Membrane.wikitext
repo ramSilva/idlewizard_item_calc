@@ -1,0 +1,33 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants a bonus to passive production of enchanting dust, and can be activated to earn additional enchanting dust after experiments.
+
+==Details==
+
+Multiplies Enchanting Dust income by:
+<br><math>\frac{5^R \times 1.4}{100} + 1</math>
+
+
+On activation, consumes all charges to grant Enchanting Dust, equal to:
+<br><math>5^R \times 1.4 \times C \times D</math>
+
+Gains one charge with each Experiment performed.
+''Note: This is unaffected by {{ItemTooltip|item_name=Temporal Scabbard}}.''
+
+where:
+* <math>C = \text{Weapon Charges}</math>
+* <math>R = \text{Tier} \times 0.25 + 1</math>
+* <math>D = \text{Enchanting Dust Income}</math>
+''Note: This is the value in Statistics, which includes the passive bonus {{PAGENAME}} provides (but excludes Crafting).''
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

@@ -1,0 +1,54 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 92
+*60 [[Attributes#Insight|Insight]]
+|unlock=
+*200 [[Void Entities]] collected
+*Reach 1e6 Void Mana
+*{{PetTooltip|Voidfiend}} level 100
+|description=''A Voidterror is a more aberrant and evolved form of Voidfiend. These boast immense size, thick bone-shells and overwhelming strength, hunting much more efficiently and largely uncontested.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Voidfiend}}. 
+
+Periodically yields void mana based on Pet level and Void Mana earned from a single Void Entity. increases the effectiveness of void mana and allows getting temporary buffs from [[Void Entities]].
+
+Gains [[Experience#Pet Experience|experience]] each time it grants Void Mana with its main ability, xp amount depends on amount of Void Mana granted.
+
+Doesn't work offline.
+
+== Pet Abilities ==
+
+On ability activation (every 5 seconds), yields Void Mana, equal to:
+<br><math>E \times P^{0.7} \times \frac{L}{40}</math>
+<br>''Note: minimum ability charge time is 0.1 seconds, even with {{ItemTooltip|item_name=Whiplash}} and {{ItemTooltip|item_name=Collar Of Obedience}}''
+
+Multiplies Void Mana Profit by:
+<br><math>(V + 1)^{0.21} \times P^{0.9} \times \frac{L}{150} + 2</math>
+
+
+
+where:
+* <math>E = \text{Void Mana per Entity}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>V = \text{All Void Mana this Exile}</math>
+
+== Experience Gain ==
+Accrues experience each time it grants Void Mana with its ability, equal to:
+<br><math>\left( 300 \times \log_{10}(V) + F \right) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>V = \text{Void Mana Granted}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

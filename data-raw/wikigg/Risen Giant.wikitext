@@ -1,0 +1,59 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 82
+*40 [[Attributes#Patience|Patience]]
+|unlock=
+*2 hours [[Idle Mode]]
+*{{PetTooltip|Zombie}} level 100
+|description=''If the common zombie could be regarded as infantry, the Giant would be an elite shocktrooper. Large, powerful and extremely resilient, they sow terror across entire battlefields.''
+}}
+
+== Description ==
+A superior {{PetTooltip|Zombie}}, his autoclick is stronger, with 100% click profit, 30% crit chance for 1200% crit profit. Increases source profits based on idle bonus and pet level. Also increases shard pool efficiency depending on his level.
+
+Gains [[Experience#Pet Experience|experience]] through his autoclicks, even when offline.
+
+== Pet Abilities ==
+
+Autoclicks once per second:
+* <math>\text{Click Profit}\;=\;\text{Hero Click Profit}</math>
+* <math>\text{Crit Chance} = 30\%</math>
+* <math>\text{Crit Profit} = 1200\%</math>
+
+
+Multiplies profits by:
+<br><math>L \times 10 \times 30^{0.6875\log_{10}(I)} \times \left(P^{0.6} + 1\right) \times T^{2} + 1</math>
+
+
+with
+
+<math>T = \begin{cases}\text{Pet Time in Hours},&\text{ if Pet Time }\leq\text{ 14 days}\\
+\left(336^2 + (\text{Pet Time in Hours} - 336)^{0.5}\right)^{0.5},&\text{ if Pet Time }>\text{ 14 days}\end{cases}</math>
+
+''Note:'' <math>30^{0.6875\log_{10}(I)} \approx I^{1.0155}</math>
+
+
+Multiplies shard pool efficiency by:
+<br><math>\left(S^{0.2} + 1 \right) \times \left(P^{0.01} + 1 \right) \times L \times 0.05 + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>I = 1 + \frac{\text{Idle Profit Bonus}\%}{100}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>S = \text{Summoning Efficiency}</math>
+
+== Experience Gain ==
+Gains experience each time it autoclicks, and each second while [[Idle Mode]] is active:
+
+<math>(0.5 + F) \times M</math>
+
+where:
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]
+[[Category:Wizard]]

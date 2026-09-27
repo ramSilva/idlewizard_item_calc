@@ -1,0 +1,11 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}}
+
+==Notes==
+Due to rounding, to calculate the pet level needed for a specific attribute bonus, use the following formula
+
+Floor((TargetBonus - 0.5) / 0.08)
+
+For example, to have an extra perk (25 bonus points): 24.5 / 0.08 = 306.25, rounded up 307
+
+[[Category:Items]]
+[[Category:Offhand]]

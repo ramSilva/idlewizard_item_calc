@@ -1,0 +1,282 @@
+--<nowiki>
+local p = {}
+
+local embed_template = [=[{|class="BiS"
+| colspan="2" | %s
+|-
+| Spells
+| %s %s
+|-
+| Score
+| %s
+|-
+| Command
+| style="background-color: #222;" | %s
+%s
+|-
+| colspan="2" | ''Don't know what this is? Read the [[BiS_Guide|BiS Guide]].''
+|}]=]
+
+function p.Embed(frame)
+    local raw_data = frame.args[1]
+    local command, raw_score, formula, class, pet, pet2, enchants, spells, spellcodes, passives, elixir, stance = p.Import(raw_data)
+    
+    header = Header(class, pet, pet2)
+    spell_set = SpellSet(spells)
+    
+    spell_codes = SpellCodes(spellcodes, spells)
+    other = Other(spell_codes, passives, elixir, stance)
+    score = Score(raw_score)
+    enchant_rows = EnchantRows(enchants)
+        
+    return frame:preprocess(string.format(embed_template,
+        header, spell_set, other, score, command, enchant_rows
+    ))
+end
+
+function p.Import(raw)
+    local command = ''
+    local score = ''
+    local formula = ''
+    local class = ''
+    local pet = ''
+    local pet2 = ''
+    local spells = {}
+    local spellcodesflag  = False
+    local passives = {}
+    local elixir = ''
+    local stance = ''
+    local enchants = {}
+    
+    for line, _ in raw:gmatch"([^\r\n]*)([\r\n]*)" do
+        for info, infodata in line:gmatch"([^:]*):(.*)" do
+            if info == "Command" then command = infodata end
+            if info == "Formula" then formula = infodata end
+            if info == "Class" then class = infodata end
+            if info == "Pet" then pet = infodata end
+            if info == "Pet2" then pet2 = infodata end
+            if info == "Score" then score = infodata end
+            if info == "Spells" then
+                for spell in infodata:gmatch"([^,]+)" do
+                    spells[#spells+1] = spell
+                end
+            end
+            if info == "Spellcodes" then spellcodesflag = infodata end
+            if info == "Passive" then
+                for passive in infodata:gmatch"([^,]+)" do
+                    passives[#passives+1] = passive
+                end
+            end
+            if info == "Elixir" then elixir = infodata end
+            if info == "Stance" then stance = infodata end
+            
+            if info == "Enchant" then
+                for elvl, edata in infodata:gmatch"([^>]*)>(.*)" do
+                    local items = {}
+                    for item in edata:gmatch"([^,]*)" do
+                        -- :gsub("^.(.*).$", "%1")
+                        for slot, name in item:gsub("^.(.*).$", "%1"):gmatch"([^|]*)#(.*)" do
+                            items[#items+1] = {slot, name}
+                        end
+                    end
+                    enchants[#enchants+1] = {elvl, items}
+                end
+            end
+        end
+    end
+    
+    return command, score, formula, class, pet, pet2, enchants, spells, spellcodesflag, passives, elixir, stance
+end
+
+function Header(class, pet, pet2)
+    header = "{{BiSHeader"
+    if pet2 ~= "" then
+        header = header .. "|pet2=" .. pet2
+    end    
+    if class ~= "" then
+        header = header .. "|class=" .. class
+    end
+    if pet ~= "" then
+        header = header .. "|pet=" .. pet
+    end
+    return header .. "}}"
+end
+
+function SpellSet(spells)
+    spell_set = '{{SpellSet'
+    
+    -- Repeat for each spell
+    for num, spell in ipairs(spells) do
+        spell_set = spell_set .. string.format('|spell_%s_name=%s', num, spell)
+    end
+    
+    spell_set = spell_set .. '}}'
+    return spell_set
+end
+
+function SpellCodes(spellcodesflag, spells)
+    if not spellcodesflag then return '' end
+    	
+    spell_codes = '{{SpellCodes'
+    
+    -- Repeat for each spell
+    for num, spell in ipairs(spells) do
+        spell_codes = spell_codes .. string.format('|spell_%s_name=%s', num, spell)
+    end
+    
+    spell_codes = spell_codes .. '}}'
+    return spell_codes
+end
+
+local other_row = [=[
+|-
+| %s
+| %s
+]=]
+
+local elixirs = {
+    ["Evocation"] = "Evocation Elixir (Increases evocation efficiency)",
+    ["Summoning"] = "Summoning Elixir (Increases summoning efficiency)",
+    ["Pet"] = "Pet Elixir (Increases Pet Ability Power)",
+    ["Shadow"] = "Shadow Elixir (Increases Liquid Shadow generation)",
+}
+
+local stances = {
+    ["Meditation"] = "Meditation Stance (Charges non-shard spells)",
+    ["Defence"] = "Defence Stance (Reduces incantation spell's duration)",
+    ["Berserk"] = "Berserk Stance (Increases evocation efficiency)",
+}
+
+function Other(spellcodes, passives, elixir, stance)
+    other = ""
+    if spellcodes ~= "" then
+        other = other .. string.format(other_row, "Spellcodes", spellcodes)
+    end
+    if #passives > 0 then
+        passives_string = ""
+        for _, passive in pairs(passives) do
+            if _ > 1 then
+                passives_string = passives_string .. ", "
+            end
+            passives_string = passives_string .. "{{SpellTooltip|spell_name=" .. passive .. "}}"
+        end 
+        other = other .. string.format(other_row, "Passives", passives_string)
+    end
+    
+    if elixir ~= "" then
+        if elixirs[elixir] == nil then
+            other = other .. string.format(other_row, "Elixir", elixir)
+        else
+            other = other .. string.format(other_row, "Elixir", elixirs[elixir])
+        end
+    end
+    
+    if stance ~= "" then
+        if stances[stance] == nil then
+            other = other .. string.format(other_row, "Stance", stance)
+        else
+            other = other .. string.format(other_row, "Stance", stances[stance])
+        end
+    end
+    
+    return other
+end
+
+local scores = {
+    ["Spell.EvocationEfficiency"] = "Evocation Efficiency",
+    ["Spell.IncantationEfficiency"] = "Incantation Efficiency",
+    ["Spell.SummoningEfficiency"] = "Summoning Efficiency",
+    ["Click.Profit"] = "Click Profit",
+    ["Click.AutoClickProfit"] = "Autoclick Profit",
+    ["Hero.AbilityPower"] = "Character Ability Power",
+    ["Voidfiend/VM"] = "Void Mana earned by [[Voidfiend]]",
+    ["Voidterror/VM"] = "Void Mana earned by [[Voidterror]]",
+    ["Daemon/Mana"] = "Mana earned by [[Daemon]]",
+    ["Pit Lord/Mana"] = "Mana earned by [[Pit Lord]]",
+    ["Magic Missile"] = "Mana earned by {{SpellTooltip|spell_name=Magic Missile}}",
+    ["Gem Resonance"] = "Mana Gems from {{SpellTooltip|spell_name=Gem Resonance}}",
+    ["Synthetic Entity"] = "[[Void Entities]] earned by {{SpellTooltip|spell_name=Synthetic Entity}}",
+    ["Fire Ball/Mana"] = "Mana earned by {{SpellTooltip|spell_name=Fire Ball}}",
+    ["Fire Ball/Experience"] = "Pet experience earned by {{SpellTooltip|spell_name=Fire Ball}}",
+    ["Hellstorm/Mana"] = "Mana earned by {{SpellTooltip|spell_name=Hellstorm}}",
+    ["Hellstorm/Experience"] = "Pet experience earned by {{SpellTooltip|spell_name=Hellstorm}}",
+    ["Plague Zombie"] = "Mana earned by {{SpellTooltip|spell_name=Plague Zombie}}",
+    ["Lightning Bolt"] = "Mana earned by {{SpellTooltip|spell_name=Lightning Bolt}}",
+    ["Lightning Bolt/Shard"] = "Spell Shards earned by {{SpellTooltip|spell_name=Lightning Bolt}}",
+    ["Jas'Aham's Missile Storm"] = "Mana earned by {{SpellTooltip|spell_name=Jas'Aham's Missile Storm}}",
+    ["Kelphior's Black Beam"] = "Mana earned by {{SpellTooltip|spell_name=Kelphior's Black Beam}}",
+    ["Voidbolt"] = "Mana earned by {{SpellTooltip|spell_name=Voidbolt}}",
+    ["Void Syphon"] = "[[Void Entities]] earned by {{SpellTooltip|spell_name=Void Syphon}}",
+    ["Smite"] = "Mana earned by {{SpellTooltip|spell_name=Smite}}",
+    ["Relentlessness"] = "Hallowed Clicks earned by {{SpellTooltip|spell_name=Relentlessness}}",
+    ["Holy Fervor"] = "Hallowed Clicks earned by {{SpellTooltip|spell_name=Holy Fervor}}",
+    ["Flash Fire"] = "Mana earned by {{SpellTooltip|spell_name=Flash Fire}}",
+    ["Day Into Night"] = "Mana earned by {{SpellTooltip|spell_name=Day Into Night}}",
+    ["Seethe In Shadows"] = "Mana earned by {{SpellTooltip|spell_name=Seethe In Shadows}}",
+    ["Void Decompression"] = "Void Mana earned by {{SpellTooltip|spell_name=Void Decompression}}",
+    ["Crystallization"] = "Spell Shards earned by {{SpellTooltip|spell_name=Crystallization}}",
+    ["Anima Synteta"] = "Mana earned by {{SpellTooltip|spell_name=Anima Synteta}}",
+    ["Temper The Steel"] = "Charge earned by {{SpellTooltip|spell_name=Temper The Steel}}",
+    ["Force Of Will"] = "Spell Shards earned by {{SpellTooltip|spell_name=Force Of Will}}",
+    ["Counterspell"] = "Mana earned by {{SpellTooltip|spell_name=Counterspell}}",
+    ["Materialise Doppelganger"] = "Pet Experience earned by {{SpellTooltip|spell_name=Materialise Doppelganger}}",
+    ["Debilitate"] = "Mana earned by {{SpellTooltip|spell_name=Debilitate}}",
+    ["LS Income"] = "Liquid Shadow Earnings",
+}
+
+function Score(raw_score)
+    if scores[raw_score] == nil then
+        return raw_score
+    else
+        return scores[raw_score]
+    end
+end
+
+local enchant_row = [=[
+|- class="enchant-row"
+| Enchant %s
+| {{ItemPreset|head_name=%s|hands_name=%s|chest_name=%s|boots_name=%s|shoulder_name=%s|neck_name=%s|waist_name=%s|wrist_name=%s|back_name=%s|weapon_name=%s|offhand_name=%s|ring1_name=%s|ring2_name=%s|research_name=%s|trophy1_name=%s|trophy2_name=%s|pants_name=%s}}]=]
+
+function EnchantRows(enchant_levels)
+    enchant_rows = ''
+
+    -- enchant_levels is a table
+    -- enchant_levels[1] = { 0, { { "Head", "Emp HG" }, { "Hands", "Fiery Grips" }, ... } }
+    -- so enchants[1][1] is the table with items of the first enchant
+    for _, enchdata in pairs(enchant_levels) do
+        lvl = {}
+        enchlvl = enchdata[1]
+        for _, item in pairs(enchdata[2]) do
+            lvl[item[1]] = item[2]
+        end
+        
+        -- Enchant level, head, hands, chest, boots, shoulder, neck, waist, wrist, back, weapon, ring1, ring2
+        enchant_rows = enchant_rows .. string.format(enchant_row,
+            enchlvl, 
+            lvl['Head'] ~= nil and lvl['Head'] or '', 
+            lvl['Hands'] ~= nil and lvl['Hands'] or '', 
+            lvl['Chest'] ~= nil and lvl['Chest'] or '', 
+            lvl['Boots'] ~= nil and lvl['Boots'] or '', 
+            lvl['Shoulder'] ~= nil and lvl['Shoulder'] or '', 
+            lvl['Neck'] ~= nil and lvl['Neck'] or '', 
+            lvl['Waist'] ~= nil and lvl['Waist'] or '', 
+            lvl['Wrist'] ~= nil and lvl['Wrist'] or '', 
+            lvl['Back'] ~= nil and lvl['Back'] or '', 
+            lvl['Weapon'] ~= nil and lvl['Weapon'] or '', 
+            lvl['Offhand'] ~= nil and lvl['Offhand'] or '', 
+            lvl['Ring1'] ~= nil and lvl['Ring1'] or '', 
+            lvl['Ring2'] ~= nil and lvl['Ring2'] or '',
+            lvl['Research'] ~= nil and lvl['Research'] or '',
+            lvl['Trophy1'] ~= nil and lvl['Trophy1'] or '',
+            lvl['Trophy2'] ~= nil and lvl['Trophy2'] or '',
+            lvl['Pants'] ~= nil and lvl['Pants'] or ''
+        )
+    end
+    
+    return enchant_rows
+end
+
+return p
+
+--</nowiki>
+--[[Category:Lua]]

@@ -1,0 +1,36 @@
+{{PetInfobox
+|selection=Character level 25
+|unlock=Spell shards collected 3e4
+|description=''Faithful companion infused with magic.''
+}}
+
+== Description ==
+Yields spell shards periodically based on pet level.
+
+Gains [[Experience#Pet Experience|experience]] with spells cast; experience gained depends on the shard cost of the spells.
+
+The Spellhound is universally used to [[Experience|level up]] more easily, and to stack certain [[spells]] such as Ritual of Power.
+
+== Pet Ability ==
+Grants spell shards every 10 seconds equal to:
+<br><math>L^{1.15} \times P \times 4</math>
+<br>If over <math>10^7</math>:
+<br><math>\left(L^{1.15} \times P \times 4 - 10^7\right)^{0.15} + 10^7</math>
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Spellhound gains experience for each shard-based spell cast, equal to:
+<br><math>(S \times 0.8 + F) \times M</math>
+
+where:
+* <math>S = \text{Spell Shard Cost}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

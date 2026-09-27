@@ -1,0 +1,48 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants an ability which grants you temporary [[Sources#Hellhole_-_Demonologist|Hellholes]], based on usage of Fire spells during its charging period.
+
+== Details ==
+When activated at 0 charges, gains charges over 10 seconds, equal to:
+<br><math>R \times 6 \times \left\lfloor G \times 24 + C \times 5 + H \times 2.8 + M \times N \times 2.72 + F \times 4 + T \times 5 + I \times 6 \right\rfloor</math>
+
+When activated with charges, consumes all charges to grant temporary Hellholes while active (10 seconds), equal to charges consumed.
+
+where:
+* <math>G = \text{Goblet of Fire Casts Since Activation} \times 6</math>
+* <math>C = \text{Casts of the Following Spells Since Activation:}</math>
+** <math>\text{Fire Ball}</math>
+** <math>\text{Hellstorm}</math>
+** <math>\text{Meditative Fury}</math>
+* <math>H = \text{Hellstorm Ticks Since Activation}</math>
+* <math>M = \text{Meditative Fury Ticks Since Activation}</math>
+* <math>N = \left\lfloor \frac{\left\lfloor \log_{10}(M_E) \right\rfloor - 1450}{26.2712} \right\rfloor + 1</math>
+* <math>M_E = \text{Mana earned this exile} </math>
+* <math>F = \text{Fireball Ticks During Activation}</math>
+* <math>T = \text{Summon Infernal Thrasher Ticks During Activation}</math>
+* <math>I = \text{Summon Horned Incinerator Ticks During Activation}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+''Note: Ticks usually happen once per second, but can be slower due to frames.''
+
+If less than 1e1450 mana this exile:
+* <math>N = 1</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+== See also ==
+* {{SpellTooltip|spell_name=Goblet Of Fire}}
+* {{SpellTooltip|spell_name=Summon Infernal Thrasher}}
+* {{SpellTooltip|spell_name=Summon Horned Incinerator}}
+* {{SpellTooltip|spell_name=Fire Ball}}
+* {{SpellTooltip|spell_name=Hellstorm}}
+* {{SpellTooltip|spell_name=Meditative Fury}}
+
+[[Category:Items]]
+[[Category:Weapon]]

@@ -1,0 +1,125 @@
+{{PetInfobox
+|title = Psychic Cacophony
+|selection=
+*{{ClassTooltip|Archon}} only
+*[[Paragon]] level 33
+*{{PetTooltip|Soulstealer}} level 325
+|description=''The Psychic Cacophony is less of a name, and more of a description of what is happening inside the mind and body of an Archon's human souls trying to tear apart the link between themselves and the Soulstealer. As the difference grows greater and greater, both their souls and the Soulstealer grow exponentially stronger, and the fragile balance becomes impossibly hard to maintain. This constant verge of collapse grants unimaginable amounts of power to the Archon, but just staying sane requires tremendous willpower from both, if not all three of them.''}}
+
+== Description ==
+The [[:Category:Tier_3_Pets|Tier 3]] version of {{PetTooltip|pet_name=Soulstealer}}. Available only to the {{ClassTooltip|class_name=Archon}} class and can be only be evolved from a Soulstealer once it reaches a certain level (325). Bestows a lot of different bonuses, unlocking more as it reaches higher level.
+
+Experience gained per second depends on character experience.
+
+== Pet Ability ==
+
+On ability activation (every 1 second), grants 1 [[Sources|mana source]] whose cost must not exceed:
+<br><math>10\,000 \times M</math>
+
+From level 25, multiplies Shards Pool capacity by:
+<br><math>P^{0.02} \times L^{2} \times 1000000</math>
+
+
+From level 50, multiplies spell shards per click by:
+<br><math>P^{0.15} \times L^{2} \times 0.0025 + 1</math>
+
+
+From level 75, autoclicks:
+<br><math>1 + \frac{L-75}{16} \times P^{0.015}</math>
+<br>times each second, with:
+<br><math>\text{Click Profit}\ =\ \text{Hero Click Profit}</math>
+<br><math>\text{Crit Chance}\ =\ \text{Hero Crit Chance}</math>
+<br><math>\text{Crit Profit}\ =\ \text{Hero Crit Profit}</math>
+
+From level 100, multiplies spell shards per second by:
+<br><math>P^{0.15} \times L^{2}\times 0.002 + 1</math>
+
+
+From level 125, multiplies profits by:
+<br><math>P^{0.16} \times L \times C \times 0.002 + 1</math>
+
+
+From level 150, multiplies Evocation efficiency by:
+<br><math>P^{0.17} \times L^{2} \times S^{0.15} \times 0.00005 + 1</math>
+
+
+From level 175, multiplies Incantation efficiency by:
+<br><math>P^{0.065} \times L^{1.15} \times 0.01 + 1</math>
+
+
+From level 200, multiplies Mysteries power by:
+<br><math>P^{0.12} \times L^{2} \times (D + 1) \times 0.006 + 1</math>
+
+
+From level 225, multiplies Void Profit by:
+<br><math>P^{0.12} \times L^{2} \times 0.00008 + 1</math>
+
+
+From level 250, multiplies Void Entity lifetime by:
+<br><math>P^{0.23} \times L^{2} \times 0.0001 + 1</math>
+<br>And Void Entity spawn rate by:
+<br><math>P^{0.06} \times L^{2} \times 0.00001 + 1</math>
+
+
+From level 275, multiplies Character Ability Power by:
+<br><math>P^{0.13} \times (L - 274)^{2} \times 0.0002 + 1</math>
+
+
+From level 300, multiplies Void Mana per Entity by:
+<br><math>P^{0.125} \times \max(1, L - 300)^{2} \times 0.0014 + 1</math>
+
+
+From level 325, multiplies Pet Ability Power by:
+<br><math>\left(\log_{10}(Y) - 474\right) \times (L - 324)^{2} \times 0.003 + 1</math>
+<br>''Note: Grants no bonus below 1e475 Mysteries.''
+
+
+From level 400, multiplies Void Mana per Entity by:
+<br><math>P^{0.1} \times \max(1, L - 400)^{2} \times \log_{10}(E) \times \frac{6.25}{10^6} + 1</math>
+
+
+From level 500, charges non-shard spells over time by (min 1%, max 3%):<br>
+<math>\frac{\log_{10}(P)}{10^6} \times \max(1, L - 500)</math>
+
+From level 600, multiplies Summoning Efficiency by:
+<br><math>P^{0.1} \times \max(1, L - 600)^{2} \times 1.25 + 1</math>
+
+
+From level 700, increases amount of Arcanasprings by:
+<br><math>\max(1, L - 700)</math>
+
+where:
+* <math>M = \text{All Mana this Realm}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>C = \text{Character Level}</math>
+* <math>S = \text{Spells Cast this Exile}</math>
+* <math>D = \text{Enchanting Dust Collected this Exile}</math>
+* <math>Y = \text{Current Amount of Mysteries}</math>
+* <math>E = \text{Evocation Efficiency}</math>
+
+== Experience Gain ==
+
+Accrues experience each second, equal to:
+<br><math>\left( 0.3 \times X^K + F \right) \times M</math>
+
+The XP needed for the next level is multiplied by 1.16 per level:
+<br><math>N_{L} = 100 \times 1.16^{L-1}</math>
+<br>''Note: This is the same as a Tier 1 pet.''
+
+
+where:
+* <math>X = \text{Total Character Experience}</math>
+* <math>K =\begin{cases}
+0.05 + 0.1\times\left(\frac{\widetilde{C}}{100}\right)^3, &\text{if } \widetilde{C} < 300, \text{ and} \\
+0.05 + 0.1\times 27 \times \left(\frac{\widetilde{C}}{100} - 2\right), &\text{else}.
+\end{cases}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>\widetilde{C} = \max\{101,\ \text{Character Level}\}</math>
+* <math>N_{L} = \text{XP from Pet Level}\ L\ \text{to}\ (L+1)</math>
+* <math>L = \text{Pet Level}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

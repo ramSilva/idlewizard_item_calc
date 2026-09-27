@@ -1,0 +1,47 @@
+{{PetInfobox
+|selection=Character level 7
+|unlock=30 minutes [[Idle Mode]]
+|description=''An undead servant brought back to life.''
+}}
+
+== Description ==
+Increases source profits based on idle bonus and pet level. Autoclicks 1 times per second for 50% profit with 20% crit chance for 900% increased profit.
+
+Gains [[Experience#Pet Experience|experience]] through his autoclicks, even when offline.
+
+This undead creature is the frequent accomplice of the [[Necromancer]], as it supports the [[Idle Mode|idle style]] really well.
+
+== Pet Abilities ==
+
+
+Autoclicks once per second:
+* <math>\text{Click Profit} = \frac{\text{Hero Click Profit}}{2}</math>
+* <math>\text{Crit Chance} = 20\%</math>
+* <math>\text{Crit Profit} = 900\%</math>
+
+
+Multiplies profits by:
+<br><math>\frac{L}{5} \times \left(1 + 30^{0.6875\log_{10}(I)} \times T \times \left(P^{0.6} + 1\right)\right) + 1</math>
+
+''Note:''<math>30^{0.6875\log_{10}(I)} \approx I^{1.0155}</math>
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>I = 1 + \frac{\text{Idle Profit Bonus}\%}{100}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>T = \text{Pet Time, in Hours}</math>
+After 14 days:
+* <math>T = 336 + (\text{Pet Time, in Hours} - 336)^{0.5}</math>
+
+
+== Experience Gain ==
+Zombie gains experience each time it autoclicks, and each second while [[Idle Mode]] is active:
+<br><math>(0.5 + F) \times M</math>
+<br>where:
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

@@ -1,0 +1,49 @@
+{{PetInfobox
+|title = Nix-Instability
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 180
+*200 [[Attributes#Intelligence|Intelligence]]
+|unlock=*Reach 1e7 [[Liquid Shadow|Liquid Shadows]] spent as {{ClassTooltip|Desolator}}
+*{{PetTooltip|Ebonsand Behemoth}} level 100
+|description=''Umbramancers and their pets can only wreak so much destruction, limited by their natural potential and shadows available. The insane, Umbra-bound Alchemists have long sought to find a way to augment their power - and this seemingly harmless blob of bright-white 'shadow' is their masterpiece. Indeed, harmless under normal cicumstances, this substance, a sort of pure white jelly impervious to Shadow-flame and imbued by some semblance of 'soul' through infusion of Anima dubbed Nix, is a catastrophe waiting for it's chance to truly shine. When surrounded by sufficient amount of Liquid Shadow and ignited, it consciously fractures itself into myriad tiny white surfaces spread across all the burning volume, embeddding into any material it encounters and accumulating shadows upon them, which, in turn, ignite and spread the Nix even more, creating a chain reaction. Resulting is an explosion that can engulf entire cities before finally ceasing - to the greatest satisfaction of the Umbra.''}}
+
+== Description ==
+The [[:Category:Tier 3 Pets|Tier 3]] upgrade of {{PetTooltip|pet_name=Ebonsand Behemoth}}. Offline production increases. Spawns mana sources depending on Mana available. While Idle Mode is off, profits increase with time spent this Exile.
+
+Gain experience each second.
+
+== Pet Ability ==
+
+Multiplies Offline production by:
+<br><math>P \times L^{1.5} \times 0.25 + 1</math>
+
+
+While Idle mode is Off, multiplies profits by:
+<br><math>P^{0.5} \times L \times T^{4.5} \times 0.002 + 1</math>
+
+
+where:
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>T = 3 + \text{Played Game Time, in Days}</math>
+After 11 days:
+* <math>T = \left(\text{Played Game Time, in Days}-11\right)^{0.1}+14</math>
+
+Each second, grants 1 mana source whose cost does not exceed All Mana This Realm.
+
+''Note: As this is not an ability activation, it is unaffected by {{ItemTooltip|item_name=Whiplash}} and {{ItemTooltip|item_name=Collar Of Obedience}}.''
+
+Charges all non-shard spells by 1% every second.
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>(2 + F) \times 3 \times M</math>
+
+where:
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

@@ -1,0 +1,29 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants an ability charged by spending [[Umbramancer#Liquid_Shadow|Liquid Shadow]] in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to [[Void_Entities|Void Mana]].
+
+== Details ==
+
+On activation, multiplies profit for 60 seconds by:
+<br><math>\left( {S_{C}}^{0.5} \times B \right)^R \times 0.001 + 1</math>
+
+Charges on expenditure of Liquid Shadow by:
+<br><math>R^{0.5} \times S_{S} \times 0.05\%</math>
+
+where:
+* <math>S_{C} = \text{Current Amount of Liquid Shadow}</math>
+* <math>B = \text{Current Amount of Shadow Coals}</math>
+* <math>S_{S} = \text{Liquid Shadow Spent}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

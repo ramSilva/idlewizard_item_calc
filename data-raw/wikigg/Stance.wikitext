@@ -1,0 +1,155 @@
+{{TODO}}
+==Overview==
+'''Stances''' are states that grant a passive bonus to various stats or mechanics to the class that have them.
+
+Stances available to the following classes:
+* {{ClassTooltip|Ironsoul}} and {{ClassTooltip|Oni}}
+* {{ClassTooltip|Abolisher}} while in [[Quasi-Realms#A Tragic Fate|A Tragic Fate Quasi-Realm]]
+* {{ClassTooltip|Shapeshifter}} while in [[Quasi-Realms#Primal Instincts|Primal Instincts Quasi-Realm]]
+
+A stance can be activated or selected by pressing its hotkey or clicking its button.
+
+==Ironsoul and Oni==
+For both of these classes, only one stance can be active at a time.
+
+By default, the {{StanceTooltip|Meditation}} Stance is active when none is selected.
+
+===Meditation===
+{{StanceTooltip|Meditation}} Stance charges non-shard spells over time ('''X'''% per sec).
+
+Each second, this gives:
+<br><math>(\text{Charging Speed} \times X)%</math>
+<br>of a charge to all Charging spells on the Spell Panel. This effect is scales with cost, so e.g. 20% per sec will always give 20% of a charge (increased by Charging Speed).
+
+However, certain spells do not get the full benefit. While the effect still scales with cost, the charging itself is directly reduced per these formulas.
+
+{{SpellTooltip|Synthetic Entity}}, {{SpellTooltip|Temper The Steel}}, {{SpellTooltip|Force Of Will}}, and {{SpellTooltip|Possessed Blade}} instead get:
+<br><math>\frac{\text{Charging Speed} \times X}{\text{Charges} + 1} \,%</math>
+<br>of a charge per sec.
+
+{{SpellTooltip|spell_name=Furious Strike}} instead gets:
+<br><math>\frac{\text{Charging Speed} \times X}{\text{Charges}^2 \times 5 + \text{Charges} \times 6 + 1} \,%</math>
+<br>of a charge per sec.
+
+Certain items can speed charging in various ways:
+* {{ItemTooltip|Grasp Of The Grave}} reduces charging Spells' cost by '''5'''%. This reduces the cost of Charging spells by 5% ''additively''. '''Meditation''' charging scales with cost, so this has no effect.
+* {{ItemTooltip|Spell Helix}} reduces charge Spells charging time by '''5'''%. This reduces the cost of Charging spells by 5% ''additively''. '''Meditation''' charging scales with cost, so this has no effect.
+* {{ItemTooltip|Perfected Kata Bracers}} Reduces charging Spells' cost by '''25'''%. This reduces the cost of Charging spells by 25% ''multiplicatively''. '''Meditation''' charging scales with cost, so this has no effect.
+* {{ItemTooltip|Temporal Scabbard}} Enchant: Increases charge-based spell charging speed by '''10'''%. This increases '''Charging Speed''' by 10% per enchant ''multiplicatively''. This ''does'' increase '''Meditation''' charging.
+
+===Defense===
+{{StanceTooltip|Defense}} Stance reduces the duration of Incantation spells by '''Y'''%. {{ClassTooltip|Oni}}: Makes Furious Strike instant.
+
+===Berserk===
+{{StanceTooltip|Berserk}} Stance increases the efficiency of Evocation spells by '''Z'''%.
+
+==Abolisher (Quasi-Realm)==
+During [[Quasi-Realms#A Tragic Fate|A Tragic Fate Quasi-Realm]], this class loses {{PetTooltip|Doppelganger}} but gains Stances as a replacement which provide passive bonuses similar to unique perks or attributes from its former pet.
+
+By default, the class has no Stance active until one is selected.
+
+<small>''NOTE: The information that follows was copied from [[A Tragic Fate Abolisher Guide#Explanation of the stances|A Tragic Fate Abolisher Guide]].</small>
+
+Each stance has 3 perks associated with them, obtained at lvls 10, 20, and 30 of the respective stance. '''You do not need a stance selected to have its perks be active.''' Instead each stance always provides its passive bonuses, and selecting a stance just provides a small amount of bonus Character Ability Power to the respective perks instead. To balance this '''the exp cost of each stance is based on the total lvl of all 3 stances''', so for example if cruelty was lvl 30, but Treachery was lvl 0, lvl 1 of treachery would still cost the same as lvl 31 of cruelty. This effectively means you need to think about your final desired investment balance.
+
+XP to reach next level:
+<br><math>1.155^{L} \times 100</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.155^{n} - 1 \right) \times 645</math>
+<br>where:
+<br><math>L = \text{Current Level Sum}</math>
+
+===Deception===
+{| class="wikitable sortable"
+!Perk
+!{{StanceTooltip|Deception}}
+|-
+|Lvl 10
+|Increases Shard Pool Capacity by <math>\text{1e4} \times \text{CAP}^{0.02} \times \text{Level}^{1.7}</math>
+|-
+|Lvl 20
+|Increases Shard Gain by <math>1 + {0.5} \times \text{CAP}^{0.1} \times \text{Level}^{1.7}</math>
+|-
+|Lvl 30
+|Increases Incantation by <math>1 + {0.1} \times \text{CAP}^{0.03} \times \text{Level}^{1.7}</math>
+|- class="sortbottom"
+|}
+
+===Cruelty===
+{| class="wikitable sortable"
+!Perk
+!{{StanceTooltip|Cruelty}}
+|-
+|Lvl 10
+|Autoclicks <math>1 + \text{CAP}^{0.02} \times \text{Level}^{1.65}</math> times a second
+|-
+|Lvl 20
+|Increases Mana gem amount by <math>1 + \text{Level}^{1.7}</math><br>(Level counts as 1 higher if stance is selected)
+|-
+|Lvl 30
+|Increases Pet Ability Power by <math>1 + \text{CAP}^{0.12} \times \text{Level}^{1.7}</math>
+|- class="sortbottom"
+|}
+
+===Treachery===
+{| class="wikitable sortable"
+!Perk
+!{{StanceTooltip|Treachery}}
+|-
+|Lvl 10
+|Increases Evocation by <math>1 + {0.1} \times \text{CAP}^{0.1} \times \text{Level}^{1.7}</math>
+|-
+|Lvl 20
+|Increases Mysteries Power by <math>1 + \text{CAP}^{0.1} \times \text{Level}^{1.7}</math>
+|-
+|Lvl 30
+|Increases Void Mana per Entity by <math>1 + {0.025} \times \text{CAP}^{0.1} \times \text{Level}^{1.7}</math>
+|- class="sortbottom"
+|}
+
+==Shapeshifter (Quasi-Realm)==
+This class can only have one stance (''aka Form'') active at a time.
+
+By default, the {{StanceTooltip|Bear Form}} is active when none is selected.
+
+===Bear Form===
+''"The king of the forest."''
+
+{{StanceTooltip|Bear Form}} allows the class to utilize Mana-earning spells:
+* {{SpellTooltip|Maul}}
+* {{SpellTooltip|Eagle's Splendor}}
+* {{SpellTooltip|Lycanthropy}}
+* {{SpellTooltip|Eagle Eye}}
+* {{SpellTooltip|Capacitor Scales}}
+* {{SpellTooltip|Feast On Secrets}}
+* {{SpellTooltip|Well-Fed}}
+* {{SpellTooltip|Invoke The Spirits}}
+* {{SpellTooltip|Primal Rage}}
+* {{SpellTooltip|Ritual Of Power}}
+
+===Griffin Form===
+''"The apex predator, a flawless hunter."''
+
+{{StanceTooltip|Griffin Form}} allows the class to earn '''Satiety''', and stack empowering Augments:
+* {{SpellTooltip|Eagle's Splendor}}
+* {{SpellTooltip|Nurture}}
+* {{SpellTooltip|Procure Sustenance}}
+* {{SpellTooltip|Eagle Eye}}
+* {{SpellTooltip|Capacitor Scales}}
+* {{SpellTooltip|Ornithology}}
+* {{SpellTooltip|Common Ancestry}}
+
+===Raptor Form===
+''"The agile stalker of the Void."''
+
+{{StanceTooltip|Raptor Form}} allows the class to earn Void Mana and Clicks, and stack Accumulated Augments:
+* {{SpellTooltip|Eagle's Splendor}}
+* {{SpellTooltip|Treacherous Venom}}
+* {{SpellTooltip|Eagle Eye}}
+* {{SpellTooltip|Capacitor Scales}}
+* {{SpellTooltip|Uncover Fossils}}
+* {{SpellTooltip|Luring The Prey}}
+* {{SpellTooltip|Snatch}}
+* {{SpellTooltip|Paleontology}}
+
+[[Category:Mechanics]]

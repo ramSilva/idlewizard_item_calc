@@ -1,0 +1,47 @@
+{{PetInfobox
+|selection=Character level 12
+|unlock=1000 total [[Sources|Mana Sources]]
+|description=''An artificial humanoid created through magic.''
+}}
+
+== Description ==
+Increases profits, based on Pet Level. Periodically creates a new mana [[Sources|source]] while online, based on bought mana sources.
+
+Gains [[Experience#Pet Experience|experience]] passively, based on Character Level.
+
+Uniquely suited to unlocking other classes and completing [[Challenges]], it is useful to push the boundaries of an early wizard's power.
+
+== Pet Abilities ==
+
+Multiplies profits by:
+<br><math>L \times P \times 0.25 + 1</math>
+
+
+Grants one mana source every:
+<br><math>\left\lfloor \frac{S^{0.6}}{P} \right\rceil</math>
+<br>seconds (minimum 1), whose cost does not exceed:
+<br><math>M \times 10</math>
+<br>''Note: Chooses from sources with at least one manual purchase.''
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>S = \text{Bought Mana Sources}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>M = \text{All Mana this Realm}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>\left(0.75 + \frac{L}{75} + F\right) \times M</math>
+<br>where:
+* <math>L = \text{Character Level}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+== Strategy ==
+* Use its source maxing ability to make unlock conditions easier.
+* Combine with {{ItemTooltip|Whiplash}} and {{ItemTooltip|Collar Of Obedience}} to quickly max sources at the start of an Exile.
+* From the start of the Exile, buy only one type of mana source. Since its source-granting ability only works on purchased sources (i.e. excludes Red [[Catalysts]]), this is the fastest way to generate a particular mana source. After reaching the target amount, other sources can be purchased.
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]

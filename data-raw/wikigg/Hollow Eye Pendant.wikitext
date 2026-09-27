@@ -1,0 +1,3 @@
+{{ItemPage|{{PAGENAME}}}}
+[[Category:Items]]
+[[Category:Neck]]

@@ -1,0 +1,6376 @@
+--<nowiki>
+-- !!!IMPORTANT!!!
+-- All Mythic items data must be appended at the end of the items{} list
+-- All non-Mythic items data must precede Mythic items data in items{} list
+-- Mythic items data are currently not included in sets{} list
+-- Mythic items data are currently not included in IDs{} list
+
+local p = {}
+
+p.qualities = {'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Unique', 'Mythic'}
+
+p.mythicDescription = '<br><br><b>Random Bonuses:</b> 3 bonuses randomly picked from a pool when crafting, may be rerolled via Mythic Forge<br/><b>Imbuement:</b> 2 bonuses randomly picked from 5 pools - both cannot be from the same pool, pools may be selected and bonuses rerolled via Mythic Forge'
+p.mythicEnchant = 'Manually selected, via Mythic Forge, from all available enchantments in the same Item Slot'
+
+local items = {}
+items["The Artificer's Crown"] = {
+	ID = 0,
+	Slot = "Head",
+	Quality = 6,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Experiment and Crafting efficiency +10%, character ability power +200%.",
+		},
+	},
+	Enchant = "Evocation efficiency +15%"
+}
+items["Circlet Of Deep Thoughts"] = {
+	ID = 1,
+	Slot = "Head",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 45,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +2%",
+			Cost = {0, 0, 120, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +3%",
+			Cost = {0, 0, 250, 20}
+		},
+		{
+			Desc = "Mysteries power (base) +5%",
+			Cost = {25, 25, 500, 50}
+		},
+		{
+			Desc = "Mysteries power (base) +10%",
+			Cost = {50, 50, 1200, 100}
+		},
+		{
+			Desc = "Mysteries power (base) +20%, Intelligence +20",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Easymind Hat"] = {
+	ID = 2,
+	Slot = "Head",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Wisdom +20",
+			Cost = {25, 50, 200, 25}
+		},
+		{
+			Desc = "Wisdom +30",
+			Cost = {50, 50, 400, 25}
+		},
+		{
+			Desc = "Wisdom +40",
+			Cost = {150, 150, 900, 100}
+		},
+		{
+			Desc = "Wisdom +50",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +20%"
+}
+items["Brightwing Helmet"] = {
+	ID = 3,
+	Slot = "Head",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+		Dominance = 35,
+	},
+	Tiers = {
+		{
+			Desc = "Hallowed click profit +75%, critical chance +1%",
+			Cost = {0, 10, 10, 120}
+		},
+		{
+			Desc = "Hallowed click profit +150%, critical chance +2%",
+			Cost = {20, 50, 50, 180}
+		},
+		{
+			Desc = "Hallowed click profit +250%, critical chance +3%",
+			Cost = {60, 100, 100, 350}
+		},
+		{
+			Desc = "Hallowed click profit +300%, critical chance +3%, critical rating +100",
+			Cost = {120, 200, 200, 800}
+		},
+		{
+			Desc = "Hallowed click profit +400%, critical chance +3%, critical rating +500",
+		},
+	},
+	Enchant = "Critical profit +20%"
+}
+items["Casque Of Learning"] = {
+	ID = 4,
+	Slot = "Head",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 35,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +50%",
+			Cost = {55, 55, 55, 55}
+		},
+		{
+			Desc = "Character ability power +100%",
+			Cost = {225, 225, 225, 225}
+		},
+		{
+			Desc = "Character ability power +150%, experience gained from actions +20%",
+			Cost = {560, 560, 560, 560}
+		},
+		{
+			Desc = "Character ability power +200%, experience gained from actions +100%",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["The Bright Beacon"] = {
+	ID = 5,
+	Slot = "Head",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+		Insight = 70,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +25%",
+			Cost = {80, 80, 50, 20}
+		},
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {180, 150, 100, 50}
+		},
+		{
+			Desc = "Void Mana per Entity +100%, Entities remain 15% longer",
+			Cost = {230, 230, 180, 160}
+		},
+		{
+			Desc = "Void Mana per Entity +125%, Void Mana profit (base) +2%, Entities remain 20% longer",
+			Cost = {650, 650, 300, 200}
+		},
+		{
+			Desc = "Void Mana per Entity +150%, Void Mana profit (base) +5%, Entities remain 25% longer",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Conjured Ragecrown"] = {
+	ID = 6,
+	Slot = "Head",
+	Set = "Conjurer's Chains",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 40,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%, Evocation efficiency +25%",
+			Cost = {250, 0, 0, 250}
+		},
+		{
+			Desc = "Character ability power +50%, Evocation efficiency +50%",
+			Cost = {500, 0, 0, 500}
+		},
+		{
+			Desc = "Character ability power +50%, Pet ability power +50%, Evocation efficiency +100%",
+			Cost = {1025, 200, 250, 1125}
+		},
+		{
+			Desc = "Character ability power +100%, Pet ability power +100% , Evocation efficiency +100%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Empowering Headguard"] = {
+	ID = 7,
+	Slot = "Head",
+	Set = "Power Armor",
+	Quality = 2,
+	Requirements = {
+		Spellcraft = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +75%",
+			Cost = {0, 0, 300, 100}
+		},
+		{
+			Desc = "Evocation efficiency +150%",
+			Cost = {0, 0, 600, 450}
+		},
+		{
+			Desc = "Evocation efficiency +175%, Accumulated spells' starting casts amount +500.",
+			Cost = {0, 0, 1350, 600}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Accumulated spells' starting casts amount +1500.",
+		},
+	},
+	Enchant = "Incantation efficiency +3%"
+}
+items["Earthen Cowl"] = {
+	ID = 8,
+	Slot = "Head",
+	Set = "Blessing Of The Forest",
+	Quality = 1,
+	Requirements = {
+		Dominance = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +25%",
+			Cost = {20, 80, 20, 40}
+		},
+		{
+			Desc = "Autoclick profit +50%",
+			Cost = {30, 160, 30, 50}
+		},
+		{
+			Desc = "Autoclick profit +100%",
+			Cost = {60, 400, 60, 60}
+		},
+		{
+			Desc = "Autoclick profit +150%, critical profit +75%",
+			Cost = {150, 800, 150, 200}
+		},
+		{
+			Desc = "Autoclick profit +200%, critical profit +200%",
+		},
+	},
+	Enchant = "Autoclick profit +25%"
+}
+items["Falconer's Ranger Hat"] = {
+	ID = 9,
+	Slot = "Head",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {0, 100, 0, 50}
+		},
+		{
+			Desc = "Pet ability power +50%",
+			Cost = {0, 150, 0, 150}
+		},
+		{
+			Desc = "Pet ability power +100%",
+			Cost = {0, 300, 0, 300}
+		},
+		{
+			Desc = "Pet ability power +150%, Pet experience (base) +200.",
+			Cost = {0, 600, 0, 600}
+		},
+		{
+			Desc = "Pet ability power +200%, Pet experience (base) +1000.",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Faithful Fists"] = {
+	ID = 10,
+	Slot = "Hands",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+		Dominance = 65,
+	},
+	Tiers = {
+		{
+			Desc = "Critical rating +500",
+			Cost = {20, 20, 10, 90}
+		},
+		{
+			Desc = "Critical rating +1000",
+			Cost = {30, 30, 20, 190}
+		},
+		{
+			Desc = "Critical rating +2000",
+			Cost = {50, 50, 40, 450}
+		},
+		{
+			Desc = "Critical rating +5000, critical profit +50%",
+			Cost = {100, 100, 100, 1000}
+		},
+		{
+			Desc = "Critical rating +10000, critical profit +200%",
+		},
+	},
+	Enchant = "Critical profit +25%"
+}
+items["Fiery Grips"] = {
+	ID = 11,
+	Slot = "Hands",
+	Quality = 1,
+	Requirements = {
+		Insight = 40,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +35%",
+			Cost = {50, 50, 60, 50}
+		},
+		{
+			Desc = "Evocation efficiency +80%",
+			Cost = {100, 100, 120, 100}
+		},
+		{
+			Desc = "Evocation efficiency +125%",
+			Cost = {200, 200, 250, 200}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +25%",
+			Cost = {500, 500, 650, 500}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +50%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Grasp Of The Grave"] = {
+	ID = 12,
+	Slot = "Hands",
+	Quality = 6,
+	Requirements = {
+		Patience = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Divides summoning duration +1.35, Spell costs reduction +5%, charging Spells' costs reduction +5%, Idle bonus +150%",
+		},
+	},
+	Enchant = "Summoning efficiency +4%"
+}
+items["Falconer's Gloves"] = {
+	ID = 13,
+	Slot = "Hands",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 25,
+		Intelligence = 25,
+		Patience = 25,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {120, 0, 0, 0}
+		},
+		{
+			Desc = "Pet ability power +75%",
+			Cost = {180, 50, 50, 20}
+		},
+		{
+			Desc = "Pet ability power +100%, pet experience gained +35%",
+			Cost = {350, 100, 100, 60}
+		},
+		{
+			Desc = "Pet ability power +150%, pet experience gained +50%",
+			Cost = {800, 200, 200, 120}
+		},
+		{
+			Desc = "Pet ability power +175%, pet experience gained +100%, profits +35%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["The Clockcarers"] = {
+	ID = 14,
+	Slot = "Hands",
+	Set = "Time-traveler Gear",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 90,
+	},
+	Tiers = {
+		{
+			Desc = "Compressed Time gained per tick +30%",
+			Cost = {200, 0, 0, 20}
+		},
+		{
+			Desc = "Compressed Time gained per tick +50%, Nexi profit +100%",
+			Cost = {400, 0, 0, 50}
+		},
+		{
+			Desc = "Compressed Time gained per tick +75%, Nexi profit +200%",
+			Cost = {1000, 10, 10, 100}
+		},
+		{
+			Desc = "Compressed Time gained per tick +100%, Nexi profit +250%, Evocation efficiency +100%",
+		},
+	},
+	Enchant = "Evocation efficiency +30%"
+}
+items["Netherfist"] = {
+	ID = 15,
+	Slot = "Hands",
+	Set = "Nether's Embrace",
+	Quality = 3,
+	Requirements = {
+		Intelligence = 60,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +100%",
+			Cost = {400, 200, 800, 120}
+		},
+		{
+			Desc = "Void Mana per Entity +125%",
+			Cost = {550, 300, 1200, 240}
+		},
+		{
+			Desc = "Insight +20, Void Mana per Entity +150%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Talented Gloves"] = {
+	ID = 16,
+	Slot = "Hands",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +40%",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Profits +80%",
+			Cost = {0, 0, 350, 100}
+		},
+		{
+			Desc = "Profits +120%",
+			Cost = {0, 0, 500, 250}
+		},
+		{
+			Desc = "Profits +150%, character ability power +50%",
+			Cost = {0, 0, 1200, 500}
+		},
+		{
+			Desc = "Profits +200%, character ability power +150%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Conjured Claws"] = {
+	ID = 17,
+	Slot = "Hands",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Mastery = 20,
+		Empathy = 20,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%",
+			Cost = {0, 10, 10, 100}
+		},
+		{
+			Desc = "Character ability power +50%",
+			Cost = {0, 20, 20, 200}
+		},
+		{
+			Desc = "Character ability power +100%",
+			Cost = {0, 50, 50, 350}
+		},
+		{
+			Desc = "Character ability power +125%, pet ability power +50%",
+			Cost = {0, 200, 200, 700}
+		},
+		{
+			Desc = "Character ability power +150%, pet ability power +100%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Empowering Handguards"] = {
+	ID = 18,
+	Slot = "Hands",
+	Set = "Power Armor",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+			Cost = {50, 0, 50, 0}
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {100, 0, 100, 0}
+		},
+		{
+			Desc = "Evocation efficiency +75%, Incantation efficiency +10%",
+			Cost = {200, 0, 200, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +25%",
+			Cost = {550, 0, 550, 0}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +35%, Accumulated spells' starting casts amount +400",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Darklight Claws"] = {
+	ID = 19,
+	Slot = "Hands",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 120,
+	},
+	Tiers = {
+		{
+			Desc = "Passive Liquid Shadow generation +25%",
+			Cost = {0, 230, 0, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +50%, offline bonus +25%",
+			Cost = {0, 500, 100, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +75%, offline bonus +50%",
+			Cost = {0, 800, 250, 150}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +150%, offline bonus +60%",
+			Cost = {0, 1200, 600, 300}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +200%, Entities spawnrate +100%, offline bonus +125%",
+		},
+	},
+	Enchant = "Offline bonus +25%"
+}
+items["The Ribcage"] = {
+	ID = 20,
+	Slot = "Chest",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+		Patience = 30,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +35%",
+			Cost = {120, 0, 0, 0}
+		},
+		{
+			Desc = "Profits +75%",
+			Cost = {220, 20, 20, 10}
+		},
+		{
+			Desc = "Profits +125%",
+			Cost = {400, 80, 80, 30}
+		},
+		{
+			Desc = "Profits +150%, Idle bonus +50%",
+			Cost = {800, 150, 150, 100}
+		},
+		{
+			Desc = "Profits +150%, Idle bonus +100%",
+		},
+	},
+	Enchant = "Idle bonus +15%"
+}
+items["Forest's Embrace"] = {
+	ID = 21,
+	Slot = "Chest",
+	Set = "Blessing Of The Forest",
+	Quality = 1,
+	Requirements = {
+		Dominance = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Click profit +25%",
+			Cost = {0, 120, 0, 0}
+		},
+		{
+			Desc = "Click profit +50%",
+			Cost = {0, 250, 0, 0}
+		},
+		{
+			Desc = "Click profit +100%, additionally 2% of your Mana per second",
+			Cost = {0, 500, 0, 25}
+		},
+		{
+			Desc = "Click profit +150%, additionally 4% of your Mana per second",
+			Cost = {0, 1000, 0, 100}
+		},
+		{
+			Desc = "Click profit +200%, additionally 5% of your Mana per second. Enchanted Trees profit +200%",
+		},
+	},
+	Enchant = "Autoclick profit +25%"
+}
+items["Burning Heart Breastplate"] = {
+	ID = 22,
+	Slot = "Chest",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+		Dominance = 45,
+		Spellcraft = 25,
+	},
+	Tiers = {
+		{
+			Desc = "Critical profits +50%",
+			Cost = {0, 0, 80, 90}
+		},
+		{
+			Desc = "Critical profits +100%",
+			Cost = {0, 0, 140, 180}
+		},
+		{
+			Desc = "Critical profits +150%, Evocation efficiency +25%",
+			Cost = {0, 50, 280, 360}
+		},
+		{
+			Desc = "Critical profits +200%, Evocation efficiency +75%",
+			Cost = {0, 100, 760, 720}
+		},
+		{
+			Desc = "Critical profits +300%, Evocation efficiency +100%, character ability power +35%",
+		},
+	},
+	Enchant = "Critical rating +20%"
+}
+items["Empowering Chestguard"] = {
+	ID = 23,
+	Slot = "Chest",
+	Set = "Power Armor",
+	Quality = 3,
+	Requirements = {
+		Spellcraft = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Incantation efficiency +25%",
+			Cost = {100, 100, 400, 100}
+		},
+		{
+			Desc = "Incantation efficiency +45%, Accumulated spells' starting casts amount +250",
+			Cost = {100, 100, 1200, 100}
+		},
+		{
+			Desc = "Incantation efficiency +50%, Incantation duration +100%, Accumulated spells' starting casts amount +500",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Conjured Thornmail"] = {
+	ID = 24,
+	Slot = "Chest",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 20,
+		Mastery = 25,
+		Patience = 30,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +15%, Pet ability power +15%",
+			Cost = {0, 90, 0, 90}
+		},
+		{
+			Desc = "Character ability power +25%, Pet ability power +25%",
+			Cost = {0, 180, 0, 180}
+		},
+		{
+			Desc = "Character ability power +40%, Pet ability power +40%, divides summoning duration +1.15",
+			Cost = {0, 350, 0, 350}
+		},
+		{
+			Desc = "Character ability power +75%, Pet ability power +75%, divides summoning duration +1.20",
+			Cost = {0, 700, 90, 700}
+		},
+		{
+			Desc = "Character ability power +100%, Pet ability power +100%, divides summoning duration +1.25",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Nethershell"] = {
+	ID = 25,
+	Slot = "Chest",
+	Set = "Nether's Embrace",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 30,
+		Spellcraft = 60,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {120, 0, 400, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +75%, Incantation efficiency +15%",
+			Cost = {260, 0, 600, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +100%, Incantation efficiency +25%",
+			Cost = {480, 240, 1200, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +125%, Incantation efficiency +30%, Dimensional Rifts profit +200%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Darklight Tunic"] = {
+	ID = 26,
+	Slot = "Chest",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Offline bonus +100%",
+			Cost = {150, 0, 0, 150}
+		},
+		{
+			Desc = "Offline bonus +150%",
+			Cost = {250, 0, 0, 300}
+		},
+		{
+			Desc = "Offline bonus +200%",
+			Cost = {350, 0, 0, 700}
+		},
+		{
+			Desc = "Offline bonus +250%, character ability power +100%",
+			Cost = {500, 0, 0, 1400}
+		},
+		{
+			Desc = "Offline bonus +300%, character ability power +200%",
+		},
+	},
+	Enchant = "Offline bonus +30%"
+}
+items["Falconer's Furcoat"] = {
+	ID = 27,
+	Slot = "Chest",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience gained +15%",
+			Cost = {0, 0, 150, 50}
+		},
+		{
+			Desc = "Pet experience gained +35%",
+			Cost = {0, 0, 300, 100}
+		},
+		{
+			Desc = "Pet experience gained +50%, profits +25%",
+			Cost = {0, 0, 600, 200}
+		},
+		{
+			Desc = "Pet experience gained +75%, profits +50%",
+			Cost = {0, 300, 600, 600}
+		},
+		{
+			Desc = "Pet experience gained 100%, profits +150%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Pompous Tunic"] = {
+	ID = 28,
+	Slot = "Chest",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +25%",
+			Cost = {50, 50, 50, 50}
+		},
+		{
+			Desc = "Profits +50%, Mastery +5",
+			Cost = {50, 50, 150, 150}
+		},
+		{
+			Desc = "Profits +100%, Mastery +10",
+			Cost = {100, 100, 300, 300}
+		},
+		{
+			Desc = "Profits +150%, Mastery +20",
+			Cost = {200, 200, 600, 600}
+		},
+		{
+			Desc = "Profits +200%, character ability power +50%, Mastery +25",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Seclusion Shell"] = {
+	ID = 29,
+	Slot = "Chest",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +2%",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Mysteries power (base) +3%",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Mysteries power (base) +6%, character ability power +25%",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Mysteries power (base) +12%, character ability power +65%",
+			Cost = {600, 600, 600, 600}
+		},
+		{
+			Desc = "Mysteries power (base) +25%, character ability power +100%, Incantation efficiency +20%",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Legacy"] = {
+	ID = 30,
+	Slot = "Feet",
+	Quality = 6,
+	Requirements = {
+		Intelligence = 50,
+		Insight = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Insight +40, Void Entities spawnrate +25%",
+		},
+	},
+	Enchant = "Void Mana per entity +10%"
+}
+items["The Great Journey"] = {
+	ID = 31,
+	Slot = "Feet",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 25,
+		Mastery = 15,
+		Spellcraft = 15,
+	},
+	Tiers = {
+		{
+			Desc = "Character experience gained from actions +25%",
+			Cost = {50, 50, 100, 50}
+		},
+		{
+			Desc = "Character experience gained from actions +50%, character ability power +50%",
+			Cost = {20, 100, 200, 100}
+		},
+		{
+			Desc = "Character experience gained from actions +75%, character ability power +100%",
+			Cost = {50, 200, 500, 200}
+		},
+		{
+			Desc = "Character experience gained from actions +100%, character ability power +150%",
+			Cost = {200, 400, 800, 400}
+		},
+		{
+			Desc = "Character experience gained from actions +100%, character ability power +200%, reduces level requirements +1",
+		},
+	},
+	Enchant = "Character ability power +25%"
+}
+items["Boots Of Eastern Blessings"] = {
+	ID = 32,
+	Slot = "Feet",
+	Set = "The Eastern Tale",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 45,
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated spells' starting casts amount +200",
+			Cost = {0, 10, 0, 120}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +400",
+			Cost = {0, 25, 0, 240}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +750",
+			Cost = {0, 50, 0, 480}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +1500",
+			Cost = {0, 100, 0, 960}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +3000, Incantation efficiency +30%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Lordic Greaves"] = {
+	ID = 33,
+	Slot = "Feet",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+		Patience = 35,
+	},
+	Tiers = {
+		{
+			Desc = "Idle bonus +35%",
+			Cost = {0, 0, 40, 100}
+		},
+		{
+			Desc = "Idle bonus +70%",
+			Cost = {0, 20, 60, 200}
+		},
+		{
+			Desc = "Idle bonus +115%",
+			Cost = {0, 30, 90, 390}
+		},
+		{
+			Desc = "Idle bonus +150%, summoning efficiency +15%",
+			Cost = {0, 60, 120, 800}
+		},
+		{
+			Desc = "Idle bonus +150%, summoning efficiency +50%",
+		},
+	},
+	Enchant = "Idle bonus +15%"
+}
+items["Gemshoes"] = {
+	ID = 34,
+	Slot = "Feet",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Profits +25%",
+			Cost = {50, 50, 50, 50}
+		},
+		{
+			Desc = "Profits +50%",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Profits +100%",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Profits +150%",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Profits +175%, Mana Gems profit +200%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Boots Of Harsh Trials"] = {
+	ID = 35,
+	Slot = "Feet",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Spellcraft +10",
+			Cost = {60, 0, 200, 0}
+		},
+		{
+			Desc = "Spellcraft +15",
+			Cost = {150, 0, 400, 0}
+		},
+		{
+			Desc = "Spellcraft +20",
+			Cost = {350, 0, 450, 0}
+		},
+		{
+			Desc = "Spellcraft +25",
+			Cost = {700, 120, 1100, 120}
+		},
+		{
+			Desc = "Spellcraft +30, Wisdom +25",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Boots Of Concentration"] = {
+	ID = 36,
+	Slot = "Feet",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Patience = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +3%",
+			Cost = {0, 200, 0, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +6%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +12%",
+			Cost = {0, 750, 0, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +18%, Idle bonus +50%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +25%, Idle bonus +100%",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Valiant Greaves"] = {
+	ID = 37,
+	Slot = "Feet",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+		Dominance = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Click profit +35%",
+			Cost = {0, 20, 20, 100}
+		},
+		{
+			Desc = "Click profit +70%",
+			Cost = {0, 150, 25, 100}
+		},
+		{
+			Desc = "Click profit +115%",
+			Cost = {0, 500, 50, 100}
+		},
+		{
+			Desc = "Click profit +150%, critical rating +1000",
+			Cost = {100, 800, 100, 200}
+		},
+		{
+			Desc = "Click profit +200%, critical rating +5000",
+		},
+	},
+	Enchant = "Critical profit +20%"
+}
+items["Conjured Spiked Stompers"] = {
+	ID = 38,
+	Slot = "Feet",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Mastery = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {0, 100, 0, 50}
+		},
+		{
+			Desc = "Pet ability power +50%",
+			Cost = {0, 150, 0, 150}
+		},
+		{
+			Desc = "Character ability power +50%, Pet ability power +50%",
+			Cost = {0, 300, 0, 300}
+		},
+		{
+			Desc = "Character ability power +75%, Pet ability power +75%",
+			Cost = {0, 800, 0, 500}
+		},
+		{
+			Desc = "Character ability power +75%, Pet ability power +75%, summoning efficiency +25%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Empowering Ankleguards"] = {
+	ID = 39,
+	Slot = "Feet",
+	Set = "Power Armor",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+			Cost = {60, 0, 60, 0}
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {120, 0, 120, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +5%",
+			Cost = {240, 0, 240, 0}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +10%",
+			Cost = {550, 0, 550, 0}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +20%, Accumulated spells' starting casts amount +500",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +20%"
+}
+items["Artificer's Shoulderpads"] = {
+	ID = 40,
+	Slot = "Shoulder",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 100,
+		Patience = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Experiment and Crafting efficiency +2%.",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +4%.",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +6%.",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +8%, character experience from actions +15%.",
+			Cost = {800, 800, 800, 800}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +10%, character experience from actions +50%.",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Stabilizing Pauldrons"] = {
+	ID = 41,
+	Slot = "Shoulder",
+	Set = "Time-traveler Gear",
+	Quality = 3,
+	Requirements = {
+		Spellcraft = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Maximum Time Distortion +5",
+			Cost = {0, 400, 0, 450}
+		},
+		{
+			Desc = "Maximum Time Distortion +7, Compressed Time gained per tick +40%",
+			Cost = {200, 800, 200, 1000}
+		},
+		{
+			Desc = "Maximum Time Distortion +10, Compressed Time gained per tick +50%, Nexi profit +200%",
+		},
+	},
+	Enchant = "Evocation efficiency +30%"
+}
+items["WrathSeed"] = {
+	ID = 42,
+	Slot = "Shoulder",
+	Quality = 1,
+	Requirements = {
+		Dominance = 65,
+	},
+	Tiers = {
+		{
+			Desc = "Critical rating +50%",
+			Cost = {0, 200, 0, 100}
+		},
+		{
+			Desc = "Critical rating +100%",
+			Cost = {0, 400, 0, 200}
+		},
+		{
+			Desc = "Click Profit +100%, critical rating +100%",
+			Cost = {0, 600, 0, 500}
+		},
+		{
+			Desc = "Click profit +150%, critical rating +150%",
+			Cost = {0, 1000, 0, 1200}
+		},
+		{
+			Desc = "Click profit +200%, critical profit +200%, critical rating +200%",
+		},
+	},
+	Enchant = "Critical rating +20%"
+}
+items["Falconer's Leather Wrappings"] = {
+	ID = 43,
+	Slot = "Shoulder",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 35,
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience gained +25%",
+			Cost = {0, 0, 0, 140}
+		},
+		{
+			Desc = "Pet experience gained +50%",
+			Cost = {0, 0, 50, 260}
+		},
+		{
+			Desc = "Pet ability power +25%, pet experience gained +75%",
+			Cost = {0, 0, 120, 600}
+		},
+		{
+			Desc = "Pet ability power +50%, Pet experience gained +100%",
+			Cost = {200, 0, 460, 1200}
+		},
+		{
+			Desc = "Pet ability power +100%, pet experience gained +100%, reduces level requirements +1",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Empowering Shoulderguard"] = {
+	ID = 44,
+	Slot = "Shoulder",
+	Set = "Power Armor",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 60,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +25%",
+			Cost = {100, 50, 100, 0}
+		},
+		{
+			Desc = "Profits +50%",
+			Cost = {200, 100, 200, 0}
+		},
+		{
+			Desc = "Profits +75%, Incantation duration +25%",
+			Cost = {400, 200, 400, 0}
+		},
+		{
+			Desc = "Profits +100%, Incantation duration +75%",
+			Cost = {900, 600, 900, 140}
+		},
+		{
+			Desc = "Profits +150%, Incantation duration +100%, Accumulated spells' starting casts amount +1500.",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Strange Spaulders"] = {
+	ID = 45,
+	Slot = "Shoulder",
+	Set = "Jester's Privilege",
+	Quality = 3,
+	Requirements = {
+		Intelligence = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Patience +20.",
+			Cost = {0, 600, 0, 0}
+		},
+		{
+			Desc = "Patience +25, Wisdom +10, profits +100%",
+			Cost = {0, 1200, 100, 450}
+		},
+		{
+			Desc = "Patience +25, Wisdom +25, Dominance +25, profits +200%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Conjured Razorspaulders"] = {
+	ID = 46,
+	Slot = "Shoulder",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Mastery = 50,
+		Empathy = 25,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%",
+			Cost = {200, 200, 0, 0}
+		},
+		{
+			Desc = "Character ability power +50%",
+			Cost = {400, 400, 0, 0}
+		},
+		{
+			Desc = "Character ability power +50%, Pet ability power +50%",
+			Cost = {600, 600, 0, 0}
+		},
+		{
+			Desc = "Character ability power +75%, Pet ability power +75%",
+			Cost = {800, 1000, 0, 0}
+		},
+		{
+			Desc = "Character ability power +100%, Pet ability power +100, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Character ability power +15%"
+}
+items["Mantle Of The Crypt"] = {
+	ID = 47,
+	Slot = "Shoulder",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+		Patience = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Idle bonus +25%",
+			Cost = {200, 0, 200, 0}
+		},
+		{
+			Desc = "Idle bonus +50%",
+			Cost = {400, 0, 400, 0}
+		},
+		{
+			Desc = "Idle bonus +75%, character ability power +25%",
+			Cost = {600, 0, 600, 0}
+		},
+		{
+			Desc = "Idle bonus +100%, character ability power +50%",
+			Cost = {800, 100, 900, 0}
+		},
+		{
+			Desc = "Idle bonus +100%, character ability power +100%, summoning efficiency +25%",
+		},
+	},
+	Enchant = "Idle bonus +15%"
+}
+items["Tranquil Spaulders"] = {
+	ID = 48,
+	Slot = "Shoulder",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +2%",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Mysteries power (base) +3%",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Mysteries power (base) +5%, character ability power +50%",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Mysteries power (base) +10%, character ability power +75%",
+			Cost = {600, 600, 600, 600}
+		},
+		{
+			Desc = "Mysteries power (base) +20%, character ability power +75%, Incantation efficiency +35%",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Ebon Mantle"] = {
+	ID = 49,
+	Slot = "Shoulder",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+		Insight = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +25%",
+			Cost = {80, 70, 60, 20}
+		},
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {180, 140, 120, 40}
+		},
+		{
+			Desc = "Void Mana per Entity +115%, Entities remain 10% longer",
+			Cost = {230, 220, 180, 170}
+		},
+		{
+			Desc = "Void Mana per Entity +150%, Void Mana profit (base) +3%, Entities remain 20% longer",
+			Cost = {690, 650, 300, 200}
+		},
+		{
+			Desc = "Void Mana per Entity +250%, Void Mana profit (base) +5%, Entities remain 25% longer",
+		},
+	},
+	Enchant = "Void Mana per entity +10%"
+}
+items["Light Of Eighth Star"] = {
+	ID = 50,
+	Slot = "Neck",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Maximum resources in jars +3000, additionally +200%",
+		},
+	},
+	Enchant = "Idle bonus +15%"
+}
+items["Radiant Leaf Pendant"] = {
+	ID = 51,
+	Slot = "Neck",
+	Set = "Blessing Of The Forest",
+	Quality = 1,
+	Requirements = {
+		Dominance = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +50%",
+			Cost = {0, 200, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +100%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +100%, critical rating +250",
+			Cost = {0, 750, 0, 200}
+		},
+		{
+			Desc = "Autoclick profit +200%, critical rating +500",
+			Cost = {0, 1200, 0, 500}
+		},
+		{
+			Desc = "Autoclick profit +300%, critical rating +1000",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Fist Brooch"] = {
+	ID = 52,
+	Slot = "Neck",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+		Dominance = 80,
+	},
+	Tiers = {
+		{
+			Desc = "Hallowed clicks profit +50%",
+			Cost = {0, 0, 0, 200}
+		},
+		{
+			Desc = "Hallowed clicks profit +100%",
+			Cost = {0, 0, 0, 500}
+		},
+		{
+			Desc = "Hallowed clicks profit +200%, click profit +50%",
+			Cost = {0, 100, 100, 750}
+		},
+		{
+			Desc = "Hallowed clicks profit +250%, click profit +100%",
+			Cost = {0, 400, 100, 1200}
+		},
+		{
+			Desc = "Hallowed clicks profit +300%, click profit +150%",
+		},
+	},
+	Enchant = "Click profit +25%"
+}
+items["Shadow Tendril"] = {
+	ID = 53,
+	Slot = "Neck",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Offline bonus +50%",
+			Cost = {250, 0, 0, 0}
+		},
+		{
+			Desc = "Offline bonus +100%",
+			Cost = {500, 0, 0, 0}
+		},
+		{
+			Desc = "Offline bonus +150%",
+			Cost = {600, 100, 100, 100}
+		},
+		{
+			Desc = "Offline bonus +175%, pet ability power +50%",
+			Cost = {1000, 150, 150, 250}
+		},
+		{
+			Desc = "Offline bonus +200%, pet ability power +100%",
+		},
+	},
+	Enchant = "Offline bonus +25%"
+}
+items["Lucky Amulet"] = {
+	ID = 54,
+	Slot = "Neck",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 40,
+		Spellcraft = 25,
+		Patience = 25,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +50%",
+			Cost = {0, 300, 0, 0}
+		},
+		{
+			Desc = "Profits +75%",
+			Cost = {0, 600, 0, 0}
+		},
+		{
+			Desc = "Profits +100%",
+			Cost = {0, 800, 300, 0}
+		},
+		{
+			Desc = "Profits +100%, Idle bonus +50%",
+			Cost = {200, 1250, 500, 0}
+		},
+		{
+			Desc = "Profits +100%, Idle bonus +100%, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Nether Chain"] = {
+	ID = 55,
+	Slot = "Neck",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+		Insight = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana profit (base) +15%",
+			Cost = {0, 0, 300, 0}
+		},
+		{
+			Desc = "Void Mana profit (base) +30%",
+			Cost = {0, 0, 600, 0}
+		},
+		{
+			Desc = "Void Mana profit (base) +35%, Void Mana per Entity +25%",
+			Cost = {350, 0, 750, 0}
+		},
+		{
+			Desc = "Void Mana profit (base) +50%, Void Mana per Entity +50%",
+			Cost = {500, 0, 1400, 0}
+		},
+		{
+			Desc = "Void Mana profit (base) +60%, Void Mana profit (multiplicative) +20%, Void Mana per Entity +100%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Torc Of Privilege"] = {
+	ID = 56,
+	Slot = "Neck",
+	Set = "The Eastern Tale",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated spells' starting casts amount +200",
+			Cost = {0, 0, 300, 0}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +500",
+			Cost = {200, 0, 400, 0}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +750, Evocation efficiency +50%",
+			Cost = {400, 0, 600, 200}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +1200, Evocation efficiency +150%",
+			Cost = {800, 200, 1000, 400}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +2400, Evocation efficiency +200%, Incantation efficiency +10%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Hollow Eye Pendant"] = {
+	ID = 57,
+	Slot = "Neck",
+	Quality = 2,
+	Requirements = {
+		Empathy = 175,
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience gained +100%",
+			Cost = {0, 200, 0, 400}
+		},
+		{
+			Desc = "Pet experience gained +100%, character experience from actions +100%",
+			Cost = {0, 400, 0, 800}
+		},
+		{
+			Desc = "Pet experience gained +100%, character experience from actions +100%, from mana sources +30%",
+			Cost = {0, 800, 0, 1600}
+		},
+		{
+			Desc = "Pet experience gained +100%, character experience from actions +100%, from mana sources +35%, pet ability power +100%",
+		},
+	},
+	Enchant = "Pet ability power +20%"
+}
+items["Searing Gaze"] = {
+	ID = 58,
+	Slot = "Neck",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+			Cost = {100, 0, 200, 0}
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {200, 0, 400, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, reduces Evocation duration +10%",
+			Cost = {200, 200, 600, 200}
+		},
+		{
+			Desc = "Evocation efficiency +150%, reduces Evocation duration +25%",
+			Cost = {800, 300, 800, 500}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Spell Fountains profit +400%, reduces Evocation duration +50%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Miniaturized Accelerator"] = {
+	ID = 59,
+	Slot = "Neck",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "All profits by (0.0001 * (Catalysts + 1))<sup>0.3</sup>, based on catalyst shards amount .",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Empowering Waistguard"] = {
+	ID = 60,
+	Slot = "Waist",
+	Set = "Power Armor",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+			Cost = {100, 0, 200, 0}
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {150, 0, 350, 0}
+		},
+		{
+			Desc = "Evocation efficiency +75%, Incantation efficiency +10%",
+			Cost = {200, 0, 700, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +15%",
+			Cost = {400, 100, 1000, 100}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Evocation efficiency +15%"
+}
+items["Chemical Toolbelt"] = {
+	ID = 61,
+	Slot = "Waist",
+	Quality = 2,
+	Requirements = {
+		Mastery = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Summoning efficiency +10%",
+			Cost = {0, 400, 100, 0}
+		},
+		{
+			Desc = "Summoning efficiency +20%",
+			Cost = {0, 700, 200, 0}
+		},
+		{
+			Desc = "Summoning efficiency +35%, Evocation efficiency +50%",
+			Cost = {100, 1000, 400, 100}
+		},
+		{
+			Desc = "Summoning efficiency +75%, Evocation efficiency +100%",
+		},
+	},
+	Enchant = "Summoning efficiency +5%"
+}
+items["Colourful Belt"] = {
+	ID = 62,
+	Slot = "Waist",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +25%",
+			Cost = {150, 0, 0, 150}
+		},
+		{
+			Desc = "Profits +50%",
+			Cost = {300, 0, 50, 150}
+		},
+		{
+			Desc = "Profits +100%",
+			Cost = {400, 50, 300, 150}
+		},
+		{
+			Desc = "Profits +150%, character ability power +25%",
+			Cost = {800, 50, 600, 150}
+		},
+		{
+			Desc = "Profits +175%, character ability power +75%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Umbral Coil"] = {
+	ID = 63,
+	Slot = "Waist",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Offline bonus +35%",
+			Cost = {0, 0, 0, 300}
+		},
+		{
+			Desc = "Offline bonus +70%",
+			Cost = {0, 0, 0, 500}
+		},
+		{
+			Desc = "Wisdom +10, offline bonus +100%",
+			Cost = {0, 0, 200, 700}
+		},
+		{
+			Desc = "Wisdom +25, offline bonus +150%",
+			Cost = {400, 0, 400, 800}
+		},
+		{
+			Desc = "Wisdom +25, offline bonus +200%, character ability power +50%",
+		},
+	},
+	Enchant = "Offline bonus +25%"
+}
+items["Gravemoss Waistband"] = {
+	ID = 64,
+	Slot = "Waist",
+	Quality = 1,
+	Requirements = {
+		Dominance = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +35%",
+			Cost = {0, 300, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +70%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +100%, divides summoning duration +1.25",
+			Cost = {200, 700, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +200%, divides summoning duration +1.50",
+			Cost = {400, 800, 400, 0}
+		},
+		{
+			Desc = "Autoclick profit +300%,summoning efficiency +100%, divides summoning duration +1.50",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Encircling Trophies"] = {
+	ID = 65,
+	Slot = "Waist",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+		Patience = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +35%",
+			Cost = {50, 200, 50, 50}
+		},
+		{
+			Desc = "Profits +75%",
+			Cost = {50, 400, 50, 100}
+		},
+		{
+			Desc = "Profits +75%<br>Idle bonus +50%",
+			Cost = {50, 800, 50, 100}
+		},
+		{
+			Desc = "Profits +125%<br>Idle bonus +75%",
+			Cost = {100, 1200, 100, 200}
+		},
+		{
+			Desc = "Profits +150%<br>Idle bonus +75%<br>Patience +50",
+		},
+	},
+	Enchant = "Character Ability Power 15%"
+}
+items["Endless Pouches"] = {
+	ID = 66,
+	Slot = "Waist",
+	Quality = 2,
+	Requirements = {
+		Mastery = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Character experience gained from actions +25%",
+			Cost = {0, 200, 0, 100}
+		},
+		{
+			Desc = "Character experience gained from actions +75%",
+			Cost = {0, 300, 0, 300}
+		},
+		{
+			Desc = "Character experience gained from actions +100%, pet experience gained +50%",
+			Cost = {100, 600, 0, 600}
+		},
+		{
+			Desc = "Character experience gained from actions +150%, pet experience gained +100%, character ability power +200%",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Collar Of Obedience"] = {
+	ID = 67,
+	Slot = "Waist",
+	Quality = 6,
+	Requirements = {
+		Mastery = 175,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability charging speed +0.2 * log<sub>10</sub>(Character Ability Power + 1), based on character ability power.",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Sash of Luxury"] = {
+	ID = 68,
+	Slot = "Waist",
+	Set = "The Eastern Tale",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated spells' starting casts amount +200",
+			Cost = {0, 0, 200, 100}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +500",
+			Cost = {200, 0, 400, 100}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +750, Evocation efficiency +50%",
+			Cost = {400, 0, 700, 200}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +2000, Evocation efficiency +150%",
+			Cost = {800, 300, 1000, 400}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +4000, Evocation efficiency +250%",
+		},
+	},
+	Enchant = "Incantation efficiency +5%"
+}
+items["Architectural Databelt"] = {
+	ID = 69,
+	Slot = "Waist",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Red catalyst power +10% (multiplicative)",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +20%"
+}
+items["Precise Wristband"] = {
+	ID = 70,
+	Slot = "Wrist",
+	Set = "Time-traveler Gear",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Compressed Time gained per tick +50%",
+			Cost = {250, 0, 250, 0}
+		},
+		{
+			Desc = "Compressed Time gained per tick +75%, Pet experience (base) +100",
+			Cost = {300, 0, 300, 300}
+		},
+		{
+			Desc = "Compressed Time gained per tick +100%, Pet experience (base) +500",
+			Cost = {800, 0, 400, 400}
+		},
+		{
+			Desc = "Compressed Time gained per tick +100%, Pet experience (base) +1000, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Focusing Bracers"] = {
+	ID = 71,
+	Slot = "Wrist",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +2%",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +4%",
+			Cost = {0, 0, 400, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +8%",
+			Cost = {0, 0, 800, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +16%",
+			Cost = {0, 0, 1200, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +20%, character ability power +100%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Rich Bands"] = {
+	ID = 72,
+	Slot = "Wrist",
+	Set = "The Eastern Tale",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated spells' starting casts amount +200",
+			Cost = {0, 50, 0, 200}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +400",
+			Cost = {0, 100, 100, 300}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +750",
+			Cost = {0, 150, 150, 600}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +1500",
+			Cost = {200, 300, 300, 800}
+		},
+		{
+			Desc = "Accumulated spells' starting casts amount +3000, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Rugged Wristcoat"] = {
+	ID = 73,
+	Slot = "Wrist",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Mastery +10",
+			Cost = {0, 50, 200, 0}
+		},
+		{
+			Desc = "Mastery +20",
+			Cost = {0, 150, 400, 0}
+		},
+		{
+			Desc = "Mastery +30",
+			Cost = {100, 200, 800, 100}
+		},
+		{
+			Desc = "Mastery +40",
+			Cost = {300, 400, 1000, 300}
+		},
+		{
+			Desc = "Mastery +50, Dominance +15",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Nomadic Wrists"] = {
+	ID = 74,
+	Slot = "Wrist",
+	Quality = 1,
+	Requirements = {
+		Mastery = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%",
+			Cost = {50, 50, 50, 50}
+		},
+		{
+			Desc = "Character ability power +50%",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Character ability power +100%, character experience gained from sources +20%",
+			Cost = {500, 100, 500, 100}
+		},
+		{
+			Desc = "Character ability power +150%, character experience gained from sources +50%",
+			Cost = {500, 500, 700, 500}
+		},
+		{
+			Desc = "Character ability power +200%, character experience gained from sources +75%, reduces level requirements +1",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Spirit's Guidance"] = {
+	ID = 75,
+	Slot = "Wrist",
+	Quality = 1,
+	Requirements = {
+		Dominance = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Click profit +50%",
+			Cost = {0, 0, 0, 300}
+		},
+		{
+			Desc = "Click profit +100%",
+			Cost = {0, 0, 0, 600}
+		},
+		{
+			Desc = "Click profit +100%, critical profit +50%",
+			Cost = {0, 400, 0, 800}
+		},
+		{
+			Desc = "Click profit, critical profit +125%, critical rating +50%",
+			Cost = {0, 600, 0, 1200}
+		},
+		{
+			Desc = "Click profit, critical profit +200%, critical rating +1000, 150%",
+		},
+	},
+	Enchant = "Critical profit +20%"
+}
+items["Bite Sleeves"] = {
+	ID = 76,
+	Slot = "Wrist",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Empathy +10",
+			Cost = {0, 300, 0, 0}
+		},
+		{
+			Desc = "Empathy +20",
+			Cost = {0, 600, 0, 0}
+		},
+		{
+			Desc = "Empathy +35, level requirement reduction +1",
+			Cost = {0, 600, 0, 600}
+		},
+		{
+			Desc = "Empathy +50, level requirement reduction +2",
+			Cost = {300, 900, 300, 900}
+		},
+		{
+			Desc = "Empathy +75, level requirement reduction +3, pet ability power +100%",
+		},
+	},
+	Enchant = "Pet ability power +20%"
+}
+items["Perfected Kata Bracers"] = {
+	ID = 77,
+	Slot = "Wrist",
+	Quality = 3,
+	Requirements = {
+		Spellcraft = 175,
+	},
+	Tiers = {
+		{
+			Desc = "Charge-based spell charging speed +20%",
+			Cost = {0, 600, 0, 600}
+		},
+		{
+			Desc = "Charge-based spell charging speed +25%, Incantation Duration Divisor 1.5",
+			Cost = {0, 1000, 0, 1000}
+		},
+		{
+			Desc = "Charge-based spell charging speed +25%, Evocation efficiency +100%, Incantation Duration Divisor 2",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Nethershackles"] = {
+	ID = 78,
+	Slot = "Wrist",
+	Quality = 1,
+	Requirements = {
+		Insight = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +25%",
+			Cost = {50, 100, 150, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {150, 200, 200, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +75%",
+			Cost = {100, 300, 600, 0}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +25%, Void Mana per Entity +100%",
+			Cost = {200, 600, 700, 100}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +50%, Void Mana per Entity +200%, Dimensional Rift profit +400%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Conjured Sawrings"] = {
+	ID = 79,
+	Slot = "Wrist",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Mastery = 50,
+		Empathy = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {0, 10, 10, 100}
+		},
+		{
+			Desc = "Pet ability power +50%",
+			Cost = {0, 20, 20, 200}
+		},
+		{
+			Desc = "Pet ability power +100%",
+			Cost = {0, 50, 50, 350}
+		},
+		{
+			Desc = "Character ability power +50%, pet ability power +125%",
+			Cost = {0, 200, 200, 700}
+		},
+		{
+			Desc = "Character ability power +100%, pet ability power +150%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Embrace Of The Grove"] = {
+	ID = 80,
+	Slot = "Back",
+	Set = "Blessing Of The Forest",
+	Quality = 2,
+	Requirements = {
+		Dominance = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +50%",
+			Cost = {0, 600, 0, 0}
+		},
+		{
+			Desc = "Autoclick profit +100%",
+			Cost = {100, 800, 0, 200}
+		},
+		{
+			Desc = "Autoclick profit +200%, critical profit +50%",
+			Cost = {200, 1200, 200, 400}
+		},
+		{
+			Desc = "Autoclick profit +300%, critical profit +100%",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Darklight Mantle"] = {
+	ID = 81,
+	Slot = "Back",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Offline bonus +35%",
+			Cost = {0, 0, 0, 300}
+		},
+		{
+			Desc = "Offline bonus +70%",
+			Cost = {0, 0, 0, 600}
+		},
+		{
+			Desc = "Offline bonus +100%, character ability power +25%",
+			Cost = {0, 0, 0, 1000}
+		},
+		{
+			Desc = "Offline bonus +150%, character ability power +50%",
+			Cost = {400, 100, 100, 1200}
+		},
+		{
+			Desc = "Offline bonus +150%, character ability power +50%, Pet ability power +50%",
+		},
+	},
+	Enchant = "Offline bonus +30%"
+}
+items["Fancy Cape"] = {
+	ID = 82,
+	Slot = "Back",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +35%",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Profits +70%",
+			Cost = {0, 0, 500, 100}
+		},
+		{
+			Desc = "Profits +100%, pet ability power +25%",
+			Cost = {100, 0, 700, 200}
+		},
+		{
+			Desc = "Profits +150%, pet ability power +50%",
+			Cost = {300, 0, 1200, 300}
+		},
+		{
+			Desc = "Profits +200%, pet ability power +100%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Flaming Cape"] = {
+	ID = 83,
+	Slot = "Back",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +35%",
+			Cost = {250, 0, 0, 0}
+		},
+		{
+			Desc = "Evocation efficiency +70%",
+			Cost = {500, 0, 0, 0}
+		},
+		{
+			Desc = "Evocation efficiency +125%",
+			Cost = {800, 0, 100, 0}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +25%",
+			Cost = {1200, 0, 400, 0}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +50%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["The Amplifier"] = {
+	ID = 84,
+	Slot = "Back",
+	Quality = 6,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated spells' starting casts amount +100%, Incantation efficiency +25%",
+		},
+	},
+	Enchant = "Incantation efficiency +5%"
+}
+items["Timeshroud"] = {
+	ID = 85,
+	Slot = "Back",
+	Set = "Time-traveler Gear",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 125,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {0, 0, 300, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%",
+			Cost = {0, 0, 600, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +10%",
+			Cost = {100, 0, 800, 0}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +20%",
+			Cost = {300, 100, 1200, 100}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +25%, max time distortion +5",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Concealing Shroud"] = {
+	ID = 86,
+	Slot = "Back",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power (base) +10%",
+			Cost = {300, 0, 0, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +15%, Wisdom +5",
+			Cost = {300, 0, 300, 0}
+		},
+		{
+			Desc = "Mysteries power (base) +20%, Wisdom +10",
+			Cost = {600, 0, 600, 200}
+		},
+		{
+			Desc = "Mysteries power (base) +20%, Wisdom +25, Shards Pool capacity +100%",
+			Cost = {1200, 0, 1200, 600}
+		},
+		{
+			Desc = "Mysteries power (base) +25%, Wisdom +50, Shards Pool capacity +300%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Falconer's Warm Cape"] = {
+	ID = 87,
+	Slot = "Back",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 175,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {0, 300, 0, 0}
+		},
+		{
+			Desc = "Pet ability power +50%",
+			Cost = {0, 500, 0, 100}
+		},
+		{
+			Desc = "Pet ability power +75%, pet experience gained +25%",
+			Cost = {100, 700, 0, 200}
+		},
+		{
+			Desc = "Pet ability power +100%, pet experience gained +50%",
+			Cost = {100, 1400, 0, 500}
+		},
+		{
+			Desc = "Pet ability power +150%, pet experience gained +75%, profits +50%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["The Magnifier"] = {
+	ID = 88,
+	Slot = "Back",
+	Quality = 6,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Each persistent spell cast counts twice for the purpose of the spell's active part accumulation. Evocation efficiency +50%.",
+		},
+	},
+	Enchant = "Summoning efficiency +4%"
+}
+items["Chaos Mantle"] = {
+	ID = 89,
+	Slot = "Back",
+	Quality = 2,
+	Requirements = {
+		Insight = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {220, 0, 300, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +75%, Void Mana profits +25%",
+			Cost = {350, 0, 500, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +100%, Void Mana profits +50%",
+			Cost = {480, 240, 1000, 200}
+		},
+		{
+			Desc = "Void Mana per Entity +125%, Void Mana profits +100%, Void Entity spawn rate +50%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Fiery Ring"] = {
+	ID = 100,
+	Slot = "Finger",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +45%",
+			Cost = {150, 0, 150, 0}
+		},
+		{
+			Desc = "Evocation efficiency +75%",
+			Cost = {300, 0, 200, 0}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +20%",
+			Cost = {600, 0, 600, 0}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +25%",
+			Cost = {1400, 0, 800, 0}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +25%, Incantation duration +50%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Frosty Ring"] = {
+	ID = 101,
+	Slot = "Finger",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 75,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +45%",
+			Cost = {0, 150, 0, 150}
+		},
+		{
+			Desc = "Evocation efficiency +75%",
+			Cost = {0, 300, 0, 200}
+		},
+		{
+			Desc = "Evocation efficiency +100%, Incantation efficiency +15%",
+			Cost = {0, 600, 0, 600}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +20%, Incantation Duration Divisor 1.35",
+			Cost = {0, 1200, 0, 1000}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +25%, Incantation Duration Divisor 4",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Shadowflame Loop"] = {
+	ID = 102,
+	Slot = "Finger",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Time without clicks before Idle mode activates +10 sec",
+			Cost = {0, 0, 0, 200}
+		},
+		{
+			Desc = "Time without clicks before Idle mode activates +20 sec, offline bonus +25%",
+			Cost = {100, 0, 0, 400}
+		},
+		{
+			Desc = "Time without clicks before Idle mode activates +30 sec, offline bonus +50%",
+			Cost = {250, 0, 0, 800}
+		},
+		{
+			Desc = "Time without clicks before Idle mode activates +45 sec, offline bonus +75%, Liquid Shadow per Entity +100%",
+			Cost = {500, 0, 0, 1300}
+		},
+		{
+			Desc = "Time without clicks before Idle mode activates +1 min, offline bonus +100%, Liquid Shadow per Entity +200%",
+		},
+	},
+	Enchant = "Offline bonus +30%"
+}
+items["Seeping Shadow Signet"] = {
+	ID = 103,
+	Slot = "Finger",
+	Set = "Regalia Of Shadow",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Passive Liquid Shadow generation +25%",
+			Cost = {0, 200, 0, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +50%, offline bonus +25%",
+			Cost = {0, 400, 100, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +75%, offline bonus +50%",
+			Cost = {0, 800, 250, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +100%, Entities spawnrate +50%, offline bonus +75%",
+			Cost = {0, 1200, 600, 0}
+		},
+		{
+			Desc = "Passive Liquid Shadow generation +200%, Entities spawnrate +100%, offline bonus +100%, amount of Liquid Shadow converted to Shadow Spells charges per tick +50%",
+		},
+	},
+	Enchant = "Offline bonus +30%"
+}
+items["Chronoboost Ring"] = {
+	ID = 104,
+	Slot = "Finger",
+	Set = "Time-traveler Gear",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 50,
+		Insight = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Compressed Time gained per tick +50%",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Compressed Time gained per tick +100%",
+			Cost = {250, 0, 250, 0}
+		},
+		{
+			Desc = "Compressed Time gained per tick +150%, Incantation efficiency +10%",
+			Cost = {400, 200, 400, 200}
+		},
+		{
+			Desc = "Compressed Time gained per tick +200%, Incantation efficiency +20%",
+			Cost = {600, 400, 600, 400}
+		},
+		{
+			Desc = "Compressed Time gained per tick +250%, Incantation efficiency +25%, profits +100%",
+		},
+	},
+	Enchant = "Evocation efficiency +30%"
+}
+items["Symbiotic Loop"] = {
+	ID = 105,
+	Slot = "Finger",
+	Quality = 1,
+	Requirements = {
+		Dominance = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Click profit +50%",
+			Cost = {0, 0, 0, 200}
+		},
+		{
+			Desc = "Click profit +75%",
+			Cost = {0, 100, 0, 400}
+		},
+		{
+			Desc = "Click profit +100%, critical profit +50%",
+			Cost = {0, 300, 0, 700}
+		},
+		{
+			Desc = "Click profit +100%, critical profit +75%, critical rating +50%",
+			Cost = {0, 800, 0, 1000}
+		},
+		{
+			Desc = "Click profit +100%, critical profit +100%, critical rating +100%",
+		},
+	},
+	Enchant = "Critical profit +30%"
+}
+items["Companionship Ring"] = {
+	ID = 106,
+	Slot = "Finger",
+	Set = "Falconer's Trust",
+	Quality = 3,
+	Requirements = {
+		Empathy = 35,
+		Patience = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience gained +100%",
+			Cost = {0, 500, 0, 500}
+		},
+		{
+			Desc = "Pet experience gained +150%, pet ability power +50%",
+			Cost = {0, 900, 0, 900}
+		},
+		{
+			Desc = "Pet experience gained +200%, pet ability power +200%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Spell Helix"] = {
+	ID = 107,
+	Slot = "Finger",
+	Quality = 2,
+	Requirements = {
+		Spellcraft = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Reduces Spells costs reduction +10%",
+			Cost = {200, 0, 400, 0}
+		},
+		{
+			Desc = "Reduces Spells costs reduction +15%, charging Spells' costs reduction +5%",
+			Cost = {300, 100, 600, 0}
+		},
+		{
+			Desc = "Reduces Spells costs reduction +15%, charging Spells' costs reduction +5%, Evocation efficiency +75%",
+			Cost = {800, 100, 900, 0}
+		},
+		{
+			Desc = "Reduces Spells costs reduction +20%, charging Spells' costs reduction +5%, Evocation efficiency +200%",
+		},
+	},
+	Enchant = "Profits +30%"
+}
+items["Morbid Loop"] = {
+	ID = 108,
+	Slot = "Finger",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Profits +35%",
+			Cost = {50, 50, 50, 50}
+		},
+		{
+			Desc = "Profits +50%",
+			Cost = {150, 150, 150, 150}
+		},
+		{
+			Desc = "Profits +100%, Idle bonus +25%",
+			Cost = {250, 250, 250, 250}
+		},
+		{
+			Desc = "Profits +100%, Idle bonus +100%",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Profits +100%, Idle bonus +100%, character ability power +50%",
+		},
+	},
+	Enchant = "Character ability power +15%"
+}
+items["The Bond"] = {
+	ID = 109,
+	Slot = "Finger",
+	Quality = 6,
+	Requirements = {
+		Mastery = 40,
+		Empathy = 40,
+	},
+	Tiers = {
+		{
+			Desc = "Pet Ability Power for tier 1 +900%, for tier 2 +200%, Character Ability Power +200%",
+		},
+	},
+	Enchant = "Pet Ability Power +15%"
+}
+items["Hoop Of Branches"] = {
+	ID = 110,
+	Slot = "Finger",
+	Set = "Blessing Of The Forest",
+	Quality = 1,
+	Requirements = {
+		Dominance = 100,
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +35%",
+			Cost = {0, 125, 0, 125}
+		},
+		{
+			Desc = "Autoclick profit +70%",
+			Cost = {0, 250, 0, 250}
+		},
+		{
+			Desc = "Autoclick profit +100%, critical profit +25%",
+			Cost = {0, 500, 0, 500}
+		},
+		{
+			Desc = "Autoclick profit +150%, critical profit +50%",
+			Cost = {0, 800, 0, 800}
+		},
+		{
+			Desc = "Autoclick profit +200%, critical profit +100%, click profit +5% of your Mana per second",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Netherloop"] = {
+	ID = 111,
+	Slot = "Finger",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+		Insight = 125,
+	},
+	Tiers = {
+		{
+			Desc = "The spawnrate of Void Entities +25%",
+			Cost = {0, 150, 150, 0}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +50%",
+			Cost = {0, 200, 300, 0}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +75%",
+			Cost = {100, 300, 600, 0}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +100%, Void Mana per Entity +25%",
+			Cost = {200, 500, 800, 100}
+		},
+		{
+			Desc = "The spawnrate of Void Entities +200%, Void Mana per Entity +50%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Whiplash"] = {
+	ID = 112,
+	Slot = "Finger",
+	Quality = 6,
+	Requirements = {
+		Empathy = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +100%, pet ability charging speed +300%",
+		},
+	},
+	Enchant = "Pet ability power +20%"
+}
+items["Resonator Ring"] = {
+	ID = 113,
+	Slot = "Finger",
+	Quality = 2,
+	Requirements = {
+		Intelligence = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Enchantments on your equipped items are 1 levels stronger",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Enchantments on your equipped items are 2 levels stronger",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Enchantments on your equipped items are 3 levels stronger",
+			Cost = {800, 800, 800, 800}
+		},
+		{
+			Desc = "Enchantments on your equipped items are 4 levels stronger",
+		},
+	},
+	Enchant = "Shard Pool efficiency +5%"
+}
+items["Voidstrike Seal"] = {
+	ID = 114,
+	Slot = "Finger",
+	Quality = 1,
+	Requirements = {},
+	Tiers = {
+		{
+			Desc = "Dominance +25",
+			Cost = {0, 100, 0, 200}
+		},
+		{
+			Desc = "Dominance +50",
+			Cost = {0, 200, 0, 400}
+		},
+		{
+			Desc = "Dominance +80",
+			Cost = {0, 400, 0, 800}
+		},
+		{
+			Desc = "Dominance +110",
+			Cost = {0, 600, 0, 1400}
+		},
+			{
+			Desc = "Dominance +150",
+		},
+	},
+	Enchant = "Void Profits +22.50%"
+}
+items["Cold-blooded Ring"] = {
+	ID = 115,
+	Slot = "Finger",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 50
+	},
+	Tiers = {
+		{
+			Desc = "Divides summoning duration +1.10",
+			Cost = {100, 200, 0, 0}
+		},
+		{
+			Desc = "Divides summoning duration +1.20",
+			Cost = {200, 400, 0, 0}
+		},
+		{
+			Desc = "Divides summoning duration +1.40",
+			Cost = {400, 800, 0, 0}
+		},
+		{
+			Desc = "Divides summoning duration +1.75",
+			Cost = {600, 1400, 0, 0}
+		},
+			{
+			Desc = "Divides summoning duration +2, autoclicks amount +20%",
+		},
+	},
+	Enchant = "Autoclicks amount +5%"
+}
+items["Scales of Appraisal"] = {
+	ID = 200,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Experiment and Crafting efficiency +1 + 0.02 * Log<sub>10</sub>(Experiments+1)<sup>0.5</sup>, based on Experiments performed this Realm",
+			Cost = {50, 50, 50, 50}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +1 + 0.03 * Log<sub>10</sub>(Experiments+1)<sup>0.5</sup>, based on Experiments performed this Realm",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +1 + 0.05 * Log<sub>10</sub>(Experiments+1)<sup>0.5</sup>, based on Experiments performed this Realm",
+			Cost = {250, 250, 250, 250}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +1 + 0.07 * Log<sub>10</sub>(Experiments+1)<sup>0.5</sup>, based on Experiments performed this Realm",
+			Cost = {500, 500, 500, 500}
+		},
+		{
+			Desc = "Experiment and Crafting efficiency +1 + 0.1 * Log<sub>10</sub>(Experiments+1)<sup>0.5</sup>, based on Experiments performed this Realm",
+		},
+	},
+	Enchant = "Shard Pool efficiency +20%"
+}
+items["Enigmatic Parchment"] = {
+	ID = 201,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power by (1 * (Enchanting Dust + 1))<sup>0.15</sup>, based on enchanting dust collected in this Exile ",
+			Cost = {100, 0, 100, 0}
+		},
+		{
+			Desc = "Character ability power by (1 * (Enchanting Dust + 1))<sup>0.25</sup>, based on enchanting dust collected in this Exile ",
+			Cost = {200, 0, 200, 0}
+		},
+		{
+			Desc = "Character ability power by (1 * (Enchanting Dust + 1))<sup>0.35</sup>, based on enchanting dust collected in this Exile ",
+			Cost = {500, 0, 500, 0}
+		},
+		{
+			Desc = "Character ability power by (1 * (Enchanting Dust + 1))<sup>0.45</sup>, based on enchanting dust collected in this Exile ",
+			Cost = {1000, 0, 1000, 0}
+		},
+		{
+			Desc = "Character ability power by (2.5 * (Enchanting Dust + 1))<sup>0.5</sup>, based on enchanting dust collected in this Exile ",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Pitch-black Cage"] = {
+	ID = 202,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity  +1 * (Bats + 1)<sup>0.15</sup>, based on bats collected in this Exile ",
+			Cost = {0, 100, 0, 100}
+		},
+		{
+			Desc = "Void Mana per Entity  +2 * (Bats + 1)<sup>0.25</sup>, based on bats collected in this Exile ",
+			Cost = {0, 200, 0, 200}
+		},
+		{
+			Desc = "Void Mana per Entity  +3 * (Bats + 1)<sup>0.35</sup>, based on bats collected in this Exile ",
+			Cost = {0, 500, 0, 500}
+		},
+		{
+			Desc = "Void Mana per Entity  +4 * (Bats + 1)<sup>0.45</sup>, based on bats collected in this Exile ",
+			Cost = {0, 1000, 0, 1000}
+		},
+		{
+			Desc = "Void Mana per Entity  +5 * (Bats + 1)<sup>0.5</sup>, based on bats collected in this Exile ",
+		},
+	},
+	Enchant = "Void Mana per entity +20%"
+}
+items["Simple Memento"] = {
+	ID = 203,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience +1.5 * log<sub>10</sub>(Pet Level + 1)<sup>-1</sup> + 1. The bonus is stronger the lower the pet's level is, gradually decreasing as it gets higher",
+			Cost = {100, 0, 0, 100}
+		},
+		{
+			Desc = "Pet experience +2 * log<sub>10</sub>(Pet Level + 1)<sup>-1</sup> + 1. The bonus is stronger the lower the pet's level is, gradually decreasing as it gets higher",
+			Cost = {200, 0, 0, 200}
+		},
+		{
+			Desc = "Pet experience +3 * log<sub>10</sub>(Pet Level + 1)<sup>-1</sup> + 1. The bonus is stronger the lower the pet's level is, gradually decreasing as it gets higher",
+			Cost = {500, 0, 0, 500}
+		},
+		{
+			Desc = "Pet experience +4 * log<sub>10</sub>(Pet Level + 1)<sup>-1</sup> + 1. The bonus is stronger the lower the pet's level is, gradually decreasing as it gets higher",
+			Cost = {1000, 0, 0, 1000}
+		},
+		{
+			Desc = "Pet experience +5 * log<sub>10</sub>(Pet Level + 1)<sup>-1</sup> + 1. The bonus is stronger the lower the pet's level is, gradually decreasing as it gets higher",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Ceaseless Hunger"] = {
+	ID = 204,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +0.1 * (Void Entities + 1)<sup>0.1</sup>, based on collected voids in this Exile ",
+			Cost = {0, 100, 100, 0}
+		},
+		{
+			Desc = "Pet ability power +0.2 * (Void Entities + 1)<sup>0.15</sup>, based on collected voids in this Exile ",
+			Cost = {0, 200, 200, 0}
+		},
+		{
+			Desc = "Pet ability power +0.4 * (Void Entities + 1)<sup>0.2</sup>, based on collected voids in this Exile ",
+			Cost = {0, 500, 500, 0}
+		},
+		{
+			Desc = "Pet ability power +0.6 * (Void Entities + 1)<sup>0.25</sup>, based on collected voids in this Exile ",
+			Cost = {0, 1000, 1000, 0}
+		},
+		{
+			Desc = "Pet ability power +1 * (Void Entities + 1)<sup>0.3</sup>, based on collected voids in this Exile ",
+		},
+	},
+	Enchant = "Pet ability power +20%"
+}
+items["Black Vortex"] = {
+	ID = 206,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Void mana profits +0.1 * (Idle + 1)<sup>0.08</sup>, based on idle bonus",
+			Cost = {0, 0, 100, 100}
+		},
+		{
+			Desc = "Void mana profits +0.2 * (Idle + 1)<sup>0.1</sup>, based on idle bonus",
+			Cost = {0, 0, 200, 200}
+		},
+		{
+			Desc = "Void mana profits +0.35 * (Idle + 1)<sup>0.13</sup>, based on idle bonus",
+			Cost = {0, 0, 500, 500}
+		},
+		{
+			Desc = "Void mana profits +0.7 * (Idle + 1)<sup>0.16</sup>, based on idle bonus",
+			Cost = {0, 0, 1000, 1000}
+		},
+		{
+			Desc = "Void mana profits +1 * (Idle + 1)<sup>0.2</sup>, based on idle bonus",
+		},
+	},
+	Enchant = "Void Mana profit +20%"
+}
+items["Murmuring Spellbook"] = {
+	ID = 207,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Idle bonus +0.1 * (Spells + 1)<sup>0.06</sup>, based on spell casts in this Exile ",
+			Cost = {200, 0, 0, 0}
+		},
+		{
+			Desc = "Idle bonus +0.2 * (Spells + 1)<sup>0.11</sup>, based on spell casts in this Exile ",
+			Cost = {400, 0, 0, 0}
+		},
+		{
+			Desc = "Idle bonus +0.25 * (Spells + 1)<sup>0.16</sup>, based on spell casts in this Exile ",
+			Cost = {1000, 0, 0, 0}
+		},
+		{
+			Desc = "Idle bonus +0.5 * (Spells + 1)<sup>0.21</sup>, based on spell casts in this Exile ",
+			Cost = {2000, 0, 0, 0}
+		},
+		{
+			Desc = "Idle bonus +1 * (Spells + 1)<sup>0.26</sup>, based on spell casts in this Exile ",
+		},
+	},
+	Enchant = "Idle bonus +20%"
+}
+items["Symbol Of Authority"] = {
+	ID = 208,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Summoning efficiency +0.0035 * Character Level, based on character level",
+			Cost = {0, 200, 0, 0}
+		},
+		{
+			Desc = "Summoning efficiency +0.006 * Character Level, based on character level",
+			Cost = {0, 400, 0, 0}
+		},
+		{
+			Desc = "Summoning efficiency +0.012 * Character Level, based on character level",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Summoning efficiency +0.025 * Character Level, based on character level",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Summoning efficiency +0.05 * Character Level, based on character level",
+		},
+	},
+	Enchant = "Summoning efficiency +5%"
+}
+items["Habitstone"] = {
+	ID = 209,
+	Slot = "Offhand",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Incantation duration is divided +1 + 0.1* log<sub>10</sub>(Accumulated Spells + 1), based on accumulated and persistent spell casts in this Exile ",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Arcane Accelerator"] = {
+	ID = 210,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +0.005 * (Catalysts + 1)<sup>0.1</sup>, based on catalyst shards collected ",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Evocation efficiency +0.0075 * (Catalysts + 1)<sup>0.15</sup>, based on catalyst shards collected ",
+			Cost = {0, 0, 400, 0}
+		},
+		{
+			Desc = "Evocation efficiency +0.01 * (Catalysts + 1)<sup>0.2</sup>, based on catalyst shards collected ",
+			Cost = {0, 0, 1000, 0}
+		},
+		{
+			Desc = "Evocation efficiency +0.012 * (Catalysts + 1)<sup>0.3</sup>, based on catalyst shards collected ",
+			Cost = {0, 0, 2000, 0}
+		},
+		{
+			Desc = "Evocation efficiency +0.15 * (Catalysts + 1)<sup>0.4</sup>, based on catalyst shards collected ",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Commissar's Torn Sleeve"] = {
+	ID = 211,
+	Slot = "Offhand",
+	Quality = 6,
+	Requirements = {
+		Intelligence = 200,
+		Mastery = 200,
+		Empathy = 200,
+	},
+	Tiers = {
+		{
+			Desc = "all attributes +0.08 * Pet Level, based on pet level",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Recaller Stone"] = {
+	ID = 212,
+	Slot = "Offhand",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Divides summoning duration by log<sub>10</sub>(Autoclicks + 1)<sup>0.7</sup> * 0.05 + 1",
+			Cost = {0, 0, 200, 0}
+		},
+		{
+			Desc = "Divides summoning duration by log<sub>10</sub>(Autoclicks + 1)<sup>0.8</sup> * 0.10 + 1",
+			Cost = {0, 0, 400, 0}
+		},
+		{
+			Desc = "Divides summoning duration by log<sub>10</sub>(Autoclicks + 1)<sup>0.9</sup> * 0.25 + 1",
+			Cost = {0, 0, 1000, 0}
+		},
+		{
+			Desc = "Divides summoning duration by log<sub>10</sub>(Autoclicks + 1)<sup>1.0</sup> * 0.35 + 1",
+			Cost = {0, 0, 2000, 0}
+		},
+		{
+			Desc = "Divides summoning duration by log<sub>10</sub>(Autoclicks + 1)<sup>1.2</sup> * 0.50 + 1",
+		},
+	},
+	Enchant = "Mysteries power +20%"
+}
+items["Destabilized Evocations"] = {
+	ID = 300,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+		},
+		{
+			Desc = "Evocation efficiency +200%",
+		},
+		{
+			Desc = "Evocation efficiency +500%",
+		},
+		{
+			Desc = "Evocation efficiency +1000%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Incantations Restructuring"] = {
+	ID = 301,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Incantation efficiency +4%",
+		},
+		{
+			Desc = "Incantation efficiency +8%",
+		},
+		{
+			Desc = "Incantation efficiency +15%",
+		},
+		{
+			Desc = "Incantation efficiency +30%",
+		},
+		{
+			Desc = "Incantation efficiency +60%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Acclimatized Summons"] = {
+	ID = 302,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Summoning efficiency +4%",
+		},
+		{
+			Desc = "Summoning efficiency +8%",
+		},
+		{
+			Desc = "Summoning efficiency +15%",
+		},
+		{
+			Desc = "Summoning efficiency +30%",
+		},
+		{
+			Desc = "Summoning efficiency +60%",
+		},
+	},
+	Enchant = "Summoning efficiency +4%"
+}
+items["Holidays"] = {
+	ID = 303,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Offline bonus +25%",
+		},
+		{
+			Desc = "Offline bonus +50%",
+		},
+		{
+			Desc = "Offline bonus +200%",
+		},
+		{
+			Desc = "Offline bonus +500%",
+		},
+		{
+			Desc = "Offline bonus +1000%",
+		},
+	},
+	Enchant = "Offline bonus +35%"
+}
+items["Spell Shards Fractalization"] = {
+	ID = 304,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Passive shards generation +25%",
+		},
+		{
+			Desc = "Passive shards generation +50%",
+		},
+		{
+			Desc = "Passive shards generation +200%",
+		},
+		{
+			Desc = "Passive shards generation +500%",
+		},
+		{
+			Desc = "Passive shards generation +1000%",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +20%"
+}
+items["Efficient Minion Tactics"] = {
+	ID = 305,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick profit +25%",
+		},
+		{
+			Desc = "Autoclick profit +50%",
+		},
+		{
+			Desc = "Autoclick profit +200%",
+		},
+		{
+			Desc = "Autoclick profit +500%",
+		},
+		{
+			Desc = "Autoclick profit +1000%",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Servants Overclocking"] = {
+	ID = 306,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Idle bonus +10%",
+		},
+		{
+			Desc = "Idle bonus +20%",
+		},
+		{
+			Desc = "Idle bonus +50%",
+		},
+		{
+			Desc = "Idle bonus +100%",
+		},
+		{
+			Desc = "Idle bonus +200%",
+		},
+	},
+	Enchant = "Idle bonus +20%"
+}
+items["Daemonics Reverse-Engineering"] = {
+	ID = 307,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+		},
+		{
+			Desc = "Pet ability power +50%",
+		},
+		{
+			Desc = "Pet ability power +200%",
+		},
+		{
+			Desc = "Pet ability power +500%",
+		},
+		{
+			Desc = "Pet ability power +900%",
+		},
+	},
+	Enchant = "Pet ability power +20%"
+}
+items["Self-Reflection"] = {
+	ID = 308,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%",
+		},
+		{
+			Desc = "Character ability power +50%",
+		},
+		{
+			Desc = "Character ability power +200%",
+		},
+		{
+			Desc = "Character ability power +500%",
+		},
+		{
+			Desc = "Character ability power +900%",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Void Sampling"] = {
+	ID = 309,
+	Slot = "Research",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per entity +25%",
+		},
+		{
+			Desc = "Void Mana per entity +50%",
+		},
+		{
+			Desc = "Void Mana per entity +200%",
+		},
+		{
+			Desc = "Void Mana per entity +500%",
+		},
+		{
+			Desc = "Void Mana per entity +900%",
+		},
+	},
+	Enchant = "Void Mana per entity +20%"
+}
+items["Collection Of Samples"] = {
+	ID = 400,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "All profits +20%",
+		},
+		{
+			Desc = "All profits +50%",
+		},
+		{
+			Desc = "All profits +200%",
+		},
+		{
+			Desc = "All profits +500%, Grimoires profit +100%",
+		},
+		{
+			Desc = "All profits +900%, Grimoires profit +300%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Pheromone Gland"] = {
+	ID = 401,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Pet ability power +20%",
+		},
+		{
+			Desc = "Pet ability power +50%",
+		},
+		{
+			Desc = "Pet ability power +100%, autoclick profit +50%",
+		},
+		{
+			Desc = "Pet ability power +200%, autoclick profit +125%",
+		},
+		{
+			Desc = "Pet ability power +300%, autoclick profit +150%, Circle of Power profit +300% ",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Intact Carapace"] = {
+	ID = 402,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Autoclick profit +20%",
+		},
+		{
+			Desc = "Autoclick profit +50%",
+		},
+		{
+			Desc = "Autoclick profit +100%, summoning efficiency +10%",
+		},
+		{
+			Desc = "Autoclick profit +200%, summoning efficiency +15%",
+		},
+		{
+			Desc = "Autoclick profit +300%, summoning efficiency +20%, Spell Fountains profit +900% ",
+		},
+	},
+	Enchant = "Summoning efficiency +4%"
+}
+items["Fossil Seeds"] = {
+	ID = 403,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Offline bonus +20%",
+		},
+		{
+			Desc = "Offline bonus +50%",
+		},
+		{
+			Desc = "Offline bonus +100%, pet ability power +50%",
+		},
+		{
+			Desc = "Offline bonus +200%, pet ability power +100%",
+		},
+		{
+			Desc = "Offline bonus +400%, pet ability power +150%, Dimensional Rift profit +900% ",
+		},
+	},
+	Enchant = "Offline bonus +30%"
+}
+items["Mutated Mycelium"] = {
+	ID = 404,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Idle bonus +0.012 * Expedition Level (1.2% per Expedition Level)",
+		},
+		{
+			Desc = "Idle bonus +0.0162 * Expedition Level (1.62% per Expedition Level)",
+		},
+		{
+			Desc = "Idle bonus +0.021 * Expedition Level (2.7% per Expedition Level)",
+		},
+		{
+			Desc = "Idle bonus +0.027 * Expedition Level (2.7% per Expedition Level)",
+		},
+		{
+			Desc = "Idle bonus +0.0324 * Expedition Level (3.24% per Expedition Level)",
+		},
+	},
+	Enchant = "Idle bonus +13.5%"
+}
+items["Arcane Engine"] = {
+	ID = 405,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +0.012 * Expedition Level (1.2% per Expedition Level)",
+		},
+		{
+			Desc = "Evocation efficiency +0.024 * Expedition Level (2.4% per Expedition Level)",
+		},
+		{
+			Desc = "Evocation efficiency +0.048 * Expedition Level (4.8% per Expedition Level)",
+		},
+		{
+			Desc = "Evocation efficiency +0.09 * Expedition Level (9% per Expedition Level)",
+		},
+		{
+			Desc = "Evocation efficiency +0.132 * Expedition Level (13.2% per Expedition Level)",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Binding Sigil"] = {
+	ID = 406,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Summoning efficiency +0.0036 * Expedition Level (0.36% per Expedition Level)",
+		},
+		{
+			Desc = "Summoning efficiency +0.0072 * Expedition Level (0.72% per Expedition Level)",
+		},
+		{
+			Desc = "Summoning efficiency +0.012 * Expedition Level (1.2% per Expedition Level)",
+		},
+		{
+			Desc = "Summoning efficiency +0.0144 * Expedition Level (1.44% per Expedition Level)",
+		},
+		{
+			Desc = "Summoning efficiency +0.0192 * Expedition Level (1.92% per Expedition Level)",
+		},
+	},
+	Enchant = "Summoning efficiency +4%"
+}
+items["Anomalous Essence"] = {
+	ID = 407,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +20%",
+		},
+		{
+			Desc = "Void Mana per Entity +50%",
+		},
+		{
+			Desc = "Void Mana per Entity +100%, character ability power +50%",
+		},
+		{
+			Desc = "Void Mana per Entity +200%, character ability power +100%",
+		},
+		{
+			Desc = "Void Mana per Entity +300%, character ability power +150%, Nexus profit +500% ",
+		},
+	},
+	Enchant = "Void Mana per entity +20%"
+}
+items["Necrotic Powerstone"] = {
+	ID = 408,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Void Mana profits +20%",
+		},
+		{
+			Desc = "Void Mana profits +50%",
+		},
+		{
+			Desc = "Void Mana profits +100%, idle bonus +50%",
+		},
+		{
+			Desc = "Void Mana profits +200%, idle bonus +75%",
+		},
+		{
+			Desc = "Void Mana profits +300%, idle bonus +100%, Mana Gem profit +300% ",
+		},
+	},
+	Enchant = "Void Mana profit +20%"
+}
+items["Heart of the Storm"] = {
+	ID = 409,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Character ability power +20%",
+		},
+		{
+			Desc = "Character ability power +50%",
+		},
+		{
+			Desc = "Character ability power +100%, Incantation efficiency +10%",
+		},
+		{
+			Desc = "Character ability power +200%, Incantation efficiency +15%",
+		},
+		{
+			Desc = "Character ability power +300%, Incantation efficiency +20%, Alchemy Desk profit +300% ",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Empowered Water"] = {
+	ID = 410,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Character ability power +20%",
+		},
+		{
+			Desc = "Character ability power +50%",
+		},
+		{
+			Desc = "Character ability power +100%, Evocation efficiency +50%",
+		},
+		{
+			Desc = "Character ability power +200%, Evocation efficiency +100%",
+		},
+		{
+			Desc = "Character ability power +300%, Evocation efficiency +150%, Enchanted Tree profit +300% ",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Anima Core"] = {
+	ID = 411,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Incantation efficiency +0.0036 * Expedition Level (0.36% per Expedition Level)",
+		},
+		{
+			Desc = "Incantation efficiency +0.0072 * Expedition Level (0.72% per Expedition Level)",
+		},
+		{
+			Desc = "Incantation efficiency +0.012 * Expedition Level (1.2% per Expedition Level)",
+		},
+		{
+			Desc = "Incantation efficiency +0.0144 * Expedition Level (1.44% per Expedition Level)",
+		},
+		{
+			Desc = "Incantation efficiency +0.0192 * Expedition Level (1.92% per Expedition Level)",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Insidious Lure"] = {
+	ID = 412,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +10%, Liquid Shadows Entites spawn rate +10%",
+		},
+		{
+			Desc = "Void Mana per Entity +25%, Liquid Shadows Entites spawn rate +25%",
+		},
+		{
+			Desc = "Void Mana per Entity +50%, Liquid Shadows Entites spawn rate +50%",
+		},
+		{
+			Desc = "Void Mana per Entity +100%, Liquid Shadows Entites spawn rate +100%",
+		},
+		{
+			Desc = "Void Mana per Entity +200%, Liquid Shadows Entites spawn rate +200%",
+		},
+	},
+	Enchant = "Void Mana per entity +22.5%"
+}
+items["Abnormal Voidmass"] = {
+	ID = 413,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Void Mana profits +25%, enchanting dust income +5%",
+		},
+		{
+			Desc = "Void Mana profits +50%, enchanting dust income +10%",
+		},
+		{
+			Desc = "Void Mana profits +100%, enchanting dust income +20%",
+		},
+		{
+			Desc = "Void Mana profits +200%, enchanting dust income +35%",
+		},
+		{
+			Desc = "Void Mana profits +500%, enchanting dust income +50%",
+		},
+	},
+	Enchant = "Void Mana profit +22.5%"
+}
+items["Beholding Eye"] = {
+	ID = 414,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Character ability power +25%, maximum resources in jars (base) +100",
+		},
+		{
+			Desc = "Character ability power +50%, maximum resources in jars (base) +250",
+		},
+		{
+			Desc = "Character ability power +100%, maximum resources in jars (base) +500",
+		},
+		{
+			Desc = "Character ability power +200%, maximum resources in jars (base) +1000",
+		},
+		{
+			Desc = "Character ability power +500%, maximum resources in jars (base) +2000",
+		},
+	},
+	Enchant = "Character ability power +22.5%"
+}
+items["Charged Fin-Wing"] = {
+	ID = 415,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%, Gods' experience bonus +5%",
+		},
+		{
+			Desc = "Pet ability power +50%, Gods' experience bonus +10%",
+		},
+		{
+			Desc = "Pet ability power +100%, Gods' experience bonus +25%",
+		},
+		{
+			Desc = "Pet ability power +200%, Gods' experience bonus +35%",
+		},
+		{
+			Desc = "Pet ability power +500%, Gods' experience bonus +50%",
+		},
+	},
+	Enchant = "Pet ability power +22.5%"
+}
+items["Temporal Scabbard"] = {
+	ID = 90,
+	Slot = "Legs",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Weapon charging speed +100%",
+		},
+	},
+	Enchant = "Charge-based spell charging speed +10%"
+}
+items["Spellweaving Kilt"] = {
+	ID = 91,
+	Slot = "Legs",
+	Quality = 1,
+	Requirements = {
+		Spellcraft = 250,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +25%",
+			Cost = {400, 0, 600, 0}
+		},
+		{
+			Desc = "Evocation efficiency +50%",
+			Cost = {800, 0, 1000, 0}
+		},
+		{
+			Desc = "Evocation efficiency +75%, Incantation efficiency +10%",
+			Cost = {800, 0, 1400, 200}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +20%",
+			Cost = {1000, 0, 1600, 400}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Incantation efficiency +40%",
+		},
+	},
+	Enchant = "Incantation efficiency +4%"
+}
+items["Folds of Magma"] = {
+	ID = 92,
+	Slot = "Legs",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 80,
+		Spellcraft = 120,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +35%",
+			Cost = {100, 50, 60, 100}
+		},
+		{
+			Desc = "Evocation efficiency +80%",
+			Cost = {200, 100, 120, 200}
+		},
+		{
+			Desc = "Evocation efficiency +125%",
+			Cost = {400, 200, 250, 400}
+		},
+		{
+			Desc = "Evocation efficiency +150%, Incantation efficiency +25%",
+			Cost = {800, 500, 650, 800}
+		},
+		{
+			Desc = "Evocation efficiency +250%, Incantation efficiency +50%",
+		},
+	},
+	Enchant = "Evocation efficiency +20%"
+}
+items["Vita Bulwark"] = {
+	ID = 93,
+	Slot = "Legs",
+	Quality = 1,
+	Requirements = {
+		Dominance = 200,
+	},
+	Tiers = {
+		{
+			Desc = "Critical rating +50%",
+			Cost = {0, 400, 0, 100}
+		},
+		{
+			Desc = "Critical rating +100%",
+			Cost = {0, 800, 0, 200}
+		},
+		{
+			Desc = "Click Profit + 100%, critical rating +100%",
+			Cost = {0, 1200, 100, 500}
+		},
+		{
+			Desc = "Click profit +150%, Critical rating +150%",
+			Cost = {0, 1500, 200, 1200}
+		},
+		{
+			Desc = "Click profit +200%, Critical profit +200%, Critical rating +200%",
+		},
+	},
+	Enchant = "Critical rating +20%"
+}
+items["Tribal Dressing"] = {
+	ID = 94,
+	Slot = "Legs",
+	Quality = 1,
+	Requirements = {
+		Patience = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +50%",
+			Cost = {240, 0, 0, 0}
+		},
+		{
+			Desc = "Profits +100%",
+			Cost = {420, 40, 40, 20}
+		},
+		{
+			Desc = "Profits +200%",
+			Cost = {800, 80, 80, 100}
+		},
+		{
+			Desc = "Profits +220%, Idle bonus +50%",
+			Cost = {1400, 300, 300, 200}
+		},
+		{
+			Desc = "Profits +250%, Idle bonus +125%",
+		},
+	},
+	Enchant = "Idle bonus +12.5%"
+}
+items["Mesmerizing Pants"] = {
+	ID = 95,
+	Slot = "Legs",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+		Intelligence = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Profits +50%",
+			Cost = {200, 0, 0, 200}
+		},
+		{
+			Desc = "Profits +100%",
+			Cost = {400, 0, 100, 200}
+		},
+		{
+			Desc = "Profits +200%",
+			Cost = {800, 100, 300, 400}
+		},
+		{
+			Desc = "Profits +250%, character ability power +25%",
+			Cost = {1500, 200, 600, 600}
+		},
+		{
+			Desc = "Profits +275%, character ability power +100%",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Falconer's Bottoms"] = {
+	ID = 96,
+	Slot = "Legs",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+		Empathy = 125,
+		Intelligence = 100,
+		Patience = 50,
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +25%",
+			Cost = {240, 0, 0, 0}
+		},
+		{
+			Desc = "Pet ability power +75%",
+			Cost = {400, 50, 50, 20}
+		},
+		{
+			Desc = "Pet ability power +100%, pet experience gained +40%",
+			Cost = {800, 100, 100, 60}
+		},
+		{
+			Desc = "Pet ability power +150%, pet experience gained +80%",
+			Cost = {1400, 200, 200, 120}
+		},
+		{
+			Desc = "Pet ability power +200%, pet experience gained +100%, profits +50%",
+		},
+	},
+	Enchant = "Pet ability power +15%"
+}
+items["Empowering Legguards"] = {
+	ID = 97,
+	Slot = "Legs",
+	Set = "Power Armor",
+	Quality = 2,
+	Requirements = {
+		Spellcraft = 150,
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +75%",
+			Cost = {0, 0, 400, 100}
+		},
+		{
+			Desc = "Evocation efficiency +150%",
+			Cost = {0, 0, 700, 450}
+		},
+		{
+			Desc = "Evocation efficiency +175%, Accumulated spells' starting casts amount +500.",
+			Cost = {100, 0, 1350, 600}
+		},
+		{
+			Desc = "Evocation efficiency +200%, Accumulated spells' starting casts amount +1000, Spellcraft +25.",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +15%"
+}
+items["Conjured Painguards"] = {
+	ID = 98,
+	Slot = "Legs",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+		Mastery = 20,
+		Empathy = 20,
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +25%",
+			Cost = {0, 10, 10, 100}
+		},
+		{
+			Desc = "Character ability power +50%",
+			Cost = {0, 20, 20, 200}
+		},
+		{
+			Desc = "Character ability power +100%",
+			Cost = {0, 50, 50, 350}
+		},
+		{
+			Desc = "Character ability power +100%, pet ability power +75%",
+			Cost = {0, 200, 200, 700}
+		},
+		{
+			Desc = "Character ability power +100%, pet ability power +150%",
+		},
+	},
+	Enchant = "Character ability power +15%"
+}
+items["Nether Barrier"] = {
+	ID = 99,
+	Slot = "Legs",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+		Mastery = 20,
+		Empathy = 20,
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +25%",
+			Cost = {80, 80, 50, 20}
+		},
+		{
+			Desc = "Void Mana per Entity +50%",
+			Cost = {180, 150, 100, 50}
+		},
+		{
+			Desc = "Void Mana per Entity +115%",
+			Cost = {230, 230, 180, 160}
+		},
+		{
+			Desc = "Void Mana per Entity +125%, Void Mana profit (base) +3%",
+			Cost = {650, 650, 300, 200}
+		},
+		{
+			Desc = "Void Mana per Entity +200%, Void Mana profit (base) +5%",
+		},
+	},
+	Enchant = "Void Mana per entity +15%"
+}
+items["Inquisitive Eye"] = {
+	ID = 416,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Spell Fountain +50%, Dimensional Rift profit +50%",
+		},
+		{
+			Desc = "Spell Fountain +100%, Dimensional Rift profit +100%",
+		},
+		{
+			Desc = "Spell Fountain +300%, Dimensional Rift profit +300%",
+		},
+		{
+			Desc = "Spell Fountain +500%, Dimensional Rift profit +500%",
+		},
+		{
+			Desc = "Spell Fountain +1000%, Dimensional Rift profit +1000%",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +25.5%"
+}
+items["Anointed Ashes"] = {
+	ID = 417,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Mana Gem +50%, Circle Of Power profit +50%",
+		},
+		{
+			Desc = "Mana Gem +100%, Circle Of Power profit +100%",
+		},
+		{
+			Desc = "Mana Gem +400%, Circle Of Power profit +400%",
+		},
+		{
+			Desc = "Mana Gem +900%, Circle Of Power profit +900%",
+		},
+		{
+			Desc = "Mana Gem +2000%, Circle Of Power profit +2000%",
+		},
+	},
+	Enchant = "Incantation efficiency +4.5%"
+}
+items["Warbanner Fragment"] = {
+	ID = 418,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Grimoire +50%, Enchanted Tree profit +50%",
+		},
+		{
+			Desc = "Grimoire +100%, Enchanted Tree profit +100%",
+		},
+		{
+			Desc = "Grimoire +400%, Enchanted Tree profit +400%",
+		},
+		{
+			Desc = "Grimoire +900%, Enchanted Tree profit +900%",
+		},
+		{
+			Desc = "Grimoire +2000%, Enchanted Tree profit +2000%",
+		},
+	},
+	Enchant = "Summoning efficiency +6.5%"
+}
+items["Blessed Armor Scales"] = {
+	ID = 419,
+	Slot = "Trophy",
+	Quality = 1,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Alchemy Desk +50%, The Nexus profit +50%",
+		},
+		{
+			Desc = "Alchemy Desk +100%, The Nexus profit +100%",
+		},
+		{
+			Desc = "Alchemy Desk +400%, The Nexus profit +400%",
+		},
+		{
+			Desc = "Alchemy Desk +900%, The Nexus profit +900%, Trial of Innovation completion speed +50%",
+		},
+		{
+			Desc = "Alchemy Desk +2000%, The Nexus profit +2000%, Trial of Innovation completion speed +100%",
+		},
+	},
+	Enchant = "Profits +25%"
+}
+items["Branch of the Great Cycle"] = {
+	ID = 1001,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click.",
+			Cost = {0, 300, 0, 0}
+		},
+		{
+			Desc = "Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click.",
+			Cost = {0, 600, 0, 0}
+		},
+		{
+			Desc = "Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click.",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click.",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click.",
+		},
+	},
+	Enchant = "Summoning efficiency +7.5%"
+}
+items["Cataclysm"] = {
+	ID = 1002,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period.",
+			Cost = {400, 0, 0, 0}
+		},
+		{
+			Desc = "Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period.",
+			Cost = {800, 0, 0, 0}
+		},
+		{
+			Desc = "Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period.",
+			Cost = {1200, 0, 0, 0}
+		},
+		{
+			Desc = "Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period.",
+			Cost = {2500, 0, 0, 0}
+		},
+		{
+			Desc = "Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period.",
+		},
+	},
+	Enchant = "Pet ability power +25%"
+}
+items["Heart of the Grave"] = {
+	ID = 1003,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent.",
+			Cost = {0, 400, 0, 0}
+		},
+		{
+			Desc = "Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent.",
+			Cost = {0, 850, 0, 0}
+		},
+		{
+			Desc = "Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent.",
+			Cost = {0, 1400, 0, 0}
+		},
+		{
+			Desc = "Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent.",
+			Cost = {0, 2700, 0, 0}
+		},
+		{
+			Desc = "Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent.",
+		},
+	},
+	Enchant = "Idle bonus +20%"
+}
+items["Thunderbird"] = {
+	ID = 1004,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants an augmentation ability charged by casting Lightning Bolt. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and Arcanasprings, expend a charge each time they are cast.",
+			Cost = {0, 0, 400, 0}
+		},
+		{
+			Desc = "Grants an augmentation ability charged by casting Lightning Bolt. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and Arcanasprings, expend a charge each time they are cast.",
+			Cost = {0, 0, 600, 0}
+		},
+		{
+			Desc = "Grants an augmentation ability charged by casting Lightning Bolt. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and Arcanasprings, expend a charge each time they are cast.",
+			Cost = {0, 0, 1200, 0}
+		},
+		{
+			Desc = "Grants an augmentation ability charged by casting Lightning Bolt. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and Arcanasprings, expend a charge each time they are cast.",
+			Cost = {0, 0, 2000, 0}
+		},
+		{
+			Desc = "Grants an augmentation ability charged by casting Lightning Bolt. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and Arcanasprings, expend a charge each time they are cast.",
+		},
+	},
+	Enchant = "Profits +30%"
+}
+items["Reality Prism"] = {
+	ID = 1005,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a passive ability which increases Kelphior's Black Beam efficiency each time it is cast, capped by current Ley Apexes amount.",
+			Cost = {200, 0, 300, 0}
+		},
+		{
+			Desc = "Grants a passive ability which increases Kelphior's Black Beam efficiency each time it is cast, capped by current Ley Apexes amount.",
+			Cost = {300, 0, 400, 0}
+		},
+		{
+			Desc = "Grants a passive ability which increases Kelphior's Black Beam efficiency each time it is cast, capped by current Ley Apexes amount.",
+			Cost = {600, 0, 800, 0}
+		},
+		{
+			Desc = "Grants a passive ability which increases Kelphior's Black Beam efficiency each time it is cast, capped by current Ley Apexes amount.",
+			Cost = {1000, 0, 1000, 0}
+		},
+		{
+			Desc = "Grants a passive ability which increases Kelphior's Black Beam efficiency each time it is cast, capped by current Ley Apexes amount.",
+		},
+	},
+	Enchant = "Incantation efficiency +5%"
+}
+items["Shard Of A Lost Dimension"] = {
+	ID = 1006,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants an ability which increases Void Mana per Entity for a short duration. Charges by casting Void Bolt.",
+			Cost = {0, 100, 400, 0}
+		},
+		{
+			Desc = "Grants an ability which increases Void Mana per Entity for a short duration. Charges by casting Void Bolt.",
+			Cost = {0, 200, 600, 0}
+		},
+		{
+			Desc = "Grants an ability which increases Void Mana per Entity for a short duration. Charges by casting Void Bolt.",
+			Cost = {0, 400, 1000, 0}
+		},
+		{
+			Desc = "Grants an ability which increases Void Mana per Entity for a short duration. Charges by casting Void Bolt.",
+			Cost = {0, 600, 1800, 0}
+		},
+		{
+			Desc = "Grants an ability which increases Void Mana per Entity for a short duration. Charges by casting Void Bolt.",
+		},
+	},
+	Enchant = "Void Mana profit +20%"
+}
+items["Redeemer"] = {
+	ID = 1007,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.",
+			Cost = {0, 0, 0, 400}
+		},
+		{
+			Desc = "Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.",
+			Cost = {0, 0, 0, 800}
+		},
+		{
+			Desc = "Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.",
+			Cost = {0, 0, 0, 1200}
+		},
+		{
+			Desc = "Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.",
+			Cost = {0, 0, 0, 2000}
+		},
+		{
+			Desc = "Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.",
+		},
+	},
+	Enchant = "Autoclick profit +20%"
+}
+items["Temporal Stabilizer"] = {
+	ID = 1008,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a passive ability which stops Timewarps <i>(not the Market item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.",
+			Cost = {100, 0, 400, 0}
+		},
+		{
+			Desc = "Grants a passive ability which stops Timewarps <i>(not the Market item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.",
+			Cost = {200, 0, 600, 0}
+		},
+		{
+			Desc = "Grants a passive ability which stops Timewarps <i>(not the Market item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.",
+			Cost = {300, 0, 1000, 0}
+		},
+		{
+			Desc = "Grants a passive ability which stops Timewarps <i>(not the Market item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.",
+			Cost = {400, 0, 1400, 0}
+		},
+		{
+			Desc = "Grants a passive ability which stops Timewarps <i>(not the Market item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.",
+		},
+	},
+	Enchant = "Incantation efficiency +5%"
+}
+items["Black Blade"] = {
+	ID = 1009,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants an ability charged by spending Liquid Shadow in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to Void Mana.",
+			Cost = {100, 0, 0, 300}
+		},
+		{
+			Desc = "Grants an ability charged by spending Liquid Shadow in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to Void Mana.",
+			Cost = {200, 0, 0, 500}
+		},
+		{
+			Desc = "Grants an ability charged by spending Liquid Shadow in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to Void Mana.",
+			Cost = {300, 0, 0, 1000}
+		},
+		{
+			Desc = "Grants an ability charged by spending Liquid Shadow in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to Void Mana.",
+			Cost = {500, 0, 0, 1500}
+		},
+		{
+			Desc = "Grants an ability charged by spending Liquid Shadow in any way. When active, it grants all Liquid Shadow the ability to increase profits akin to Void Mana.",
+		},
+	},
+	Enchant = "Offline bonus +20%"
+}
+items["Philosopher's Stone"] = {
+	ID = 1010,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).",
+			Cost = {100, 200, 100, 0}
+		},
+		{
+			Desc = "Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).",
+			Cost = {200, 400, 200, 0}
+		},
+		{
+			Desc = "Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).",
+			Cost = {300, 800, 300, 0}
+		},
+		{
+			Desc = "Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).",
+			Cost = {400, 1200, 400, 0}
+		},
+		{
+			Desc = "Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).",
+		},
+	},
+	Enchant = "Character ability power +20%"
+}
+items["Berzerker"] = {
+	ID = 1011,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a passive ability which makes Furious Strike grant Spellcasts for Incantation spells.",
+			Cost = {0, 200, 0, 400}
+		},
+		{
+			Desc = "Grants a passive ability which makes Furious Strike grant Spellcasts for Incantation spells.",
+			Cost = {0, 200, 0, 600}
+		},
+		{
+			Desc = "Grants a passive ability which makes Furious Strike grant Spellcasts for Incantation spells.",
+			Cost = {0, 400, 0, 800}
+		},
+		{
+			Desc = "Grants a passive ability which makes Furious Strike grant Spellcasts for Incantation spells.",
+			Cost = {0, 600, 0, 1000}
+		},
+		{
+			Desc = "Grants a passive ability which makes Furious Strike grant Spellcasts for Incantation spells.",
+		},
+	},
+	Enchant = "Character ability power +25%"
+}
+items["Spellstealer"] = {
+	ID = 1012,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity.",
+			Cost = {100, 100, 100, 100}
+		},
+		{
+			Desc = "Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity.",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity.",
+			Cost = {400, 400, 400, 400}
+		},
+		{
+			Desc = "Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity.",
+			Cost = {600, 600, 600, 600}
+		},
+		{
+			Desc = "Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity.",
+		},
+	},
+	Enchant = "Evocation efficiency +25%"
+}
+items["Enchanting Membrane"] = {
+	ID = 1020,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants a bonus to enchanting dust received, can be activated to earn additional enchanting dust after experiments.",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Grants a bonus to enchanting dust received, can be activated to earn additional enchanting dust after experiments.",
+			Cost = {350, 350, 350, 350}
+		},
+		{
+			Desc = "Grants a bonus to enchanting dust received, can be activated to earn additional enchanting dust after experiments.",
+			Cost = {600, 600, 600, 600}
+		},
+		{
+			Desc = "Grants a bonus to enchanting dust received, can be activated to earn additional enchanting dust after experiments.",
+			Cost = {900, 900, 900, 900}
+		},
+		{
+			Desc = "Grants a bonus to enchanting dust received, can be activated to earn additional enchanting dust after experiments.",
+		},
+	},
+	Enchant = "All Enchanting Dust (with exception of Trials) gains +1%"
+}
+items["Chiropteric Rod"] = {
+	ID = 1021,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants passive bonus to profits, based on amount of bats collected in this Exile. Can be activated to spawn a Bat. Bats spawned this way do not reset the timer and cannot grant Crafting Dust or Runes.",
+			Cost = {200, 200, 200, 200}
+		},
+		{
+			Desc = "Grants passive bonus to profits, based on amount of bats collected in this Exile. Can be activated to spawn a Bat. Bats spawned this way do not reset the timer and cannot grant Crafting Dust or Runes.",
+			Cost = {350, 350, 350, 350}
+		},
+		{
+			Desc = "Grants passive bonus to profits, based on amount of bats collected in this Exile. Can be activated to spawn a Bat. Bats spawned this way do not reset the timer and cannot grant Crafting Dust or Runes.",
+			Cost = {600, 600, 600, 600}
+		},
+		{
+			Desc = "Grants passive bonus to profits, based on amount of bats collected in this Exile. Can be activated to spawn a Bat. Bats spawned this way do not reset the timer and cannot grant Crafting Dust or Runes.",
+			Cost = {900, 900, 900, 900}
+		},
+		{
+			Desc = "Grants passive bonus to profits, based on amount of bats collected in this Exile. Can be activated to spawn a Bat. Bats spawned this way do not reset the timer and cannot grant Crafting Dust or Runes.",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["The Accumulator"] = {
+	ID = 1022,
+	Slot = "Weapon",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts.",
+			Cost = {200, 100, 400, 100}
+		},
+		{
+			Desc = "Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts.",
+			Cost = {400, 200, 600, 200}
+		},
+		{
+			Desc = "Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts.",
+			Cost = {600, 400, 800, 400}
+		},
+		{
+			Desc = "Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts.",
+			Cost = {1000, 800, 1200, 800}
+		},
+		{
+			Desc = "Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts.",
+		},
+	},
+	Enchant = "Incantation efficiency +5%"
+}
+items["Shadow-Scryer's Crystal Ball"] = {
+	ID = 1023,
+	Slot = "Weapon",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Grants passive ability to reduce active spell duration on each Evocation cast.",
+		},
+	},
+	Enchant = "Passive Spell Shards generation rate +20%"
+}
+items["Head Of The All-Eater"] = {
+	ID = 1024,
+	Slot = "Weapon",
+	Quality = 6,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Gives an ability which converts most of your current Exile's stats into a passive bonus to Profits.",
+		},
+	},
+	Enchant = "Profits +20%"
+}
+items["Zenith, The Champion's Steed"] = {
+	ID = 2001,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Maximum cast rate of Spells attainable per second +10%",
+		},
+	},
+	Enchant = "Evocation efficiency +10%"
+}
+items["Warp Basilisk"] = {
+	ID = 2002,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Evocation duration divisor 2, Incantation duration divisor 2",
+		},
+	},
+	Enchant = "Pet ability power +8%"
+}
+items["The Rubedo Engine"] = {
+	ID = 2003,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "All Accumulated and Persistents Spells' casts are counted twice for the purpose of Spells' cast count (both active and passive part for Persistents).",
+		},
+	},
+	Enchant = "Profits +12.5%"
+}
+items["Fey Glider"] = {
+	ID = 2004,
+	Slot = "Mount",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Enchanting Dust income +10%",
+			Cost = {300, 500, 1000, 200}
+		},
+		{
+			Desc = "Enchanting Dust income +15%",
+			Cost = {500, 700, 1500, 400}
+		},
+		{
+			Desc = "Enchanting Dust income +20%",
+			Cost = {700, 900, 2000, 600}
+		},
+		{
+			Desc = "Enchanting Dust income +30%",
+			Cost = {1000, 1000, 3000, 1000}
+		},
+		{
+			Desc = "Enchanting Dust income +40%",
+		},
+	},
+	Enchant = "Autoclick profit +12%"
+}
+items["Blessed Tapestry"] = {
+	ID = 2005,
+	Slot = "Mount",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Attribute gain speed +25%",
+			Cost = {300, 300, 300, 1000}
+		},
+		{
+			Desc = "Attribute gain speed +100%",
+			Cost = {600, 600, 600, 1500}
+		},
+		{
+			Desc = "Attribute gain speed +200%",
+			Cost = {800, 1200, 600, 2000}
+		},
+		{
+			Desc = "Attribute gain speed +400%",
+			Cost = {1200, 1400, 800, 2800}
+		},
+		{
+			Desc = "Attribute gain speed +900%",
+		},
+	},
+	Enchant = "Idle bonus +8%"
+}
+items["Nulldragon, The Anomaly"] = {
+	ID = 2006,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "Ascension forms experience gain +150%",
+		},
+	},
+	Enchant = "Character ability power +10%"
+}
+items["Ritual Disk"] = {
+	ID = 2007,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Non-craftable",
+	Tiers = {
+		{
+			Desc = "All Augment spell casts are counted twice for the purpose of Spells' cast count. Affects all sources of excess casts as well.",
+		},
+	},
+	Enchant = "Incantation efficiency +2%"
+}
+items["Broomstaff Of Klevdariah"] = {
+	ID = 2008,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Event-only",
+    Tiers = {
+		{
+			Desc = "Total Time (in weeks) of all Buffs, for calculating their bonuses, is now <sup>2</sup>.",
+		},
+	},
+	Enchant = "Mysteries power +8%"
+}
+items["Paukan, The Spider"] = {
+	ID = 2009,
+	Slot = "Mount",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet experience gain +1+0.05*(Autoclicks+1)<sup>0.3</sup>, based on currently performed Autoclicks per second.",
+			Cost = {300, 300, 300, 1000}
+		},
+		{
+			Desc = "Pet experience gain +1+0.06*(Autoclicks+1)<sup>0.35</sup>, based on currently performed Autoclicks per second.",
+			Cost = {600, 600, 600, 1500}
+		},
+		{
+			Desc = "Pet experience gain +1+0.08*(Autoclicks+1)<sup>0.4</sup>, based on currently performed Autoclicks per second.",
+			Cost = {600, 1200, 800, 2000}
+		},
+		{
+			Desc = "Pet experience gain +1+0.1*(Autoclicks+1)<sup>0.45</sup>, based on currently performed Autoclicks per second.",
+			Cost = {800, 1400, 1200, 2800}
+		},
+		{
+			Desc = "Pet experience gain +1+0.2*(Autoclicks+1)<sup>0.5</sup>, based on currently performed Autoclicks per second.",
+		},
+	},
+	Enchant = "Summoning efficiency +2%"
+}
+items["Crystallized Echo"] = {
+	ID = 2010,
+	Slot = "Mount",
+	Quality = 6,
+	Requirements = {
+	},
+	Acquisition = "Event-only",
+	Tiers = {
+		{
+			Desc = "Amount of Echoes held by Echo traps +100%",
+		},
+	},
+	Enchant = "Void Mana per Entity +5%"
+}
+items["Bold Azure Phylactery"] = {
+	ID = 3002,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Character ability power +0.70%, decreases Pet ability power +0.50%. Scales multiplicatively from Character level.",
+			Cost = {100, 300, 100, 500}
+		},
+		{
+			Desc = "Character ability power +1%, decreases Pet ability power +0.60%. Scales multiplicatively from Character level.",
+			Cost = {200, 400, 200, 700}
+		},
+		{
+			Desc = "Character ability power +1.2%, decreases Pet ability power +0.65%. Scales multiplicatively from Character level.",
+			Cost = {300, 600, 300, 800}
+		},
+		{
+			Desc = "Character ability power +1.5%, decreases Pet ability power +0.70%. Scales multiplicatively from Character level.",
+			Cost = {500, 800, 500, 1200}
+		},
+		{
+			Desc = "Character ability power +1.9%, decreases Pet ability power +0.75%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Character ability power +10%"
+}
+items["Devious Violet Phylactery"] = {
+	ID = 3006,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per entity +0.30%. Scales multiplicatively from Character level.",
+			Cost = {300, 150, 600, 150}
+		},
+		{
+			Desc = "Void Mana per entity +0.50%. Scales multiplicatively from Character level.",
+			Cost = {500, 200, 900, 200}
+		},
+		{
+			Desc = "Void Mana per entity +0.70%. Scales multiplicatively from Character level.",
+			Cost = {600, 300, 1200, 300}
+		},
+		{
+			Desc = "Void Mana per entity +1%. Scales multiplicatively from Character level.",
+			Cost = {1000, 700, 1600, 700}
+		},
+		{
+			Desc = "Void Mana per entity +1.5%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Void Mana per entity +10%"
+}
+items["Inert Jade Phylactery"] = {
+	ID = 3004,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Idle bonus +0.80%, decreases Autoclick profit +0.44%. Scales multiplicatively from Character level.",
+			Cost = {100, 500, 300, 100}
+		},
+		{
+			Desc = "Idle bonus +1.10%, decreases Autoclick profit +0.50%. Scales multiplicatively from Character level.",
+			Cost = {200, 700, 400, 200}
+		},
+		{
+			Desc = "Idle bonus +1.40%, decreases Autoclick profit +0.55%. Scales multiplicatively from Character level.",
+			Cost = {300, 800, 600, 300}
+		},
+		{
+			Desc = "Idle bonus +1.80%, decreases Autoclick profit +0.60%. Scales multiplicatively from Character level.",
+			Cost = {500, 1200, 800, 500}
+		},
+		{
+			Desc = "Idle bonus +2.30%, decreases Autoclick profit +0.66%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Idle bonus +8%"
+}
+items["Intricate Crimson Phylactery"] = {
+	ID = 3001,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Incantation efficiency +0.10%, decreases Evocation efficiency +0.50%. Scales multiplicatively from Character level.",
+			Cost = {500, 100, 300, 100}
+		},
+		{
+			Desc = "Incantation efficiency +0.14%, decreases Evocation efficiency +0.55%. Scales multiplicatively from Character level.",
+			Cost = {700, 200, 400, 200}
+		},
+		{
+			Desc = "Incantation efficiency +0.20%, decreases Evocation efficiency +0.60%. Scales multiplicatively from Character level.",
+			Cost = {800, 300, 600, 300}
+		},
+		{
+			Desc = "Incantation efficiency +0.25%, decreases Evocation efficiency +0.65%. Scales multiplicatively from Character level.",
+			Cost = {1200, 500, 800, 500}
+		},
+		{
+			Desc = "Incantation efficiency +0.36%, decreases Evocation efficiency +0.75%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Incantation efficiency +2%"
+}
+items["Robust Tangerine Phylactery"] = {
+	ID = 3005,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries power +0.50%. Scales multiplicatively from Character level.",
+			Cost = {300, 300, 300, 300}
+		},
+		{
+			Desc = "Mysteries power +0.80%. Scales multiplicatively from Character level.",
+			Cost = {500, 500, 500, 500}
+		},
+		{
+			Desc = "Mysteries power +1.2%. Scales multiplicatively from Character level.",
+			Cost = {700, 700, 700, 700}
+		},
+		{
+			Desc = "Mysteries power +1.7%. Scales multiplicatively from Character level.",
+			Cost = {1000, 1000, 1000, 1000}
+		},
+		{
+			Desc = "Mysteries power +2.3%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Profits +10%"
+}
+items["Smooth Amber Phylactery"] = {
+	ID = 3003,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet ability power +0.50%, decreases Void Mana per entity +0.50%. Scales multiplicatively from Character level.",
+			Cost = {100, 500, 100, 300}
+		},
+		{
+			Desc = "Pet ability power +0.70%, decreases Void Mana per entity +0.60%. Scales multiplicatively from Character level.",
+			Cost = {200, 700, 200, 400}
+		},
+		{
+			Desc = "Pet ability power +0.90%, decreases Void Mana per entity +0.65%. Scales multiplicatively from Character level.",
+			Cost = {300, 800, 300, 600}
+		},
+		{
+			Desc = "Pet ability power +1.2%, decreases Void Mana per entity +0.70%. Scales multiplicatively from Character level.",
+			Cost = {500, 1200, 500, 800}
+		},
+		{
+			Desc = "Pet ability power +1.5%, decreases Void Mana per entity +0.75%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Pet ability power +10%"
+}
+items["Eerie Turquoise Phylactery"] = {
+	ID = 3007,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick amount from spells +0.1%. Scales multiplicatively from Character level.",
+			Cost = {100, 100, 300, 500}
+		},
+		{
+			Desc = "Autoclick amount from spells +0.2%. Scales multiplicatively from Character level.",
+			Cost = {200, 200, 400, 700}
+		},
+		{
+			Desc = "Autoclick amount from spells +0.3%. Scales multiplicatively from Character level.",
+			Cost = {300, 300, 600, 800}
+		},
+		{
+			Desc = "Autoclick amount from spells +0.4%. Scales multiplicatively from Character level.",
+			Cost = {500, 500, 800, 1200}
+		},
+		{
+			Desc = "Autoclick amount from spells +0.5%. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Charge-based spell charging speed +4%"
+}
+items["Hectic Lime Phylactery"] = {
+	ID = 3008,
+	Slot = "Phylactery",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Divides summoning duration +1.006. Scales multiplicatively from Character level.",
+			Cost = {100, 300, 100, 500}
+		},
+		{
+			Desc = "Divides summoning duration +1.007. Scales multiplicatively from Character level.",
+			Cost = {200, 500, 200, 600}
+		},
+		{
+			Desc = "Divides summoning duration +1.008. Scales multiplicatively from Character level.",
+			Cost = {300, 700, 300, 700}
+		},
+		{
+			Desc = "Divides summoning duration +1.009. Scales multiplicatively from Character level.",
+			Cost = {500, 900, 500, 1100}
+		},
+		{
+			Desc = "Divides summoning duration +1.01. Scales multiplicatively from Character level.",
+		},
+	},
+	Enchant = "Summoning efficiency +2%"
+}
+
+
+items["Crown of the First Realm"] = {
+	ID = "Crown of the First Realm",
+	Slot = "Head",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Character Ability Power +60.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Endtimes Visor"] = {
+	ID = "Endtimes Visor",
+	Slot = "Head",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Void Mana per Entity +75.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Godflesh Heart"] = {
+	ID = "Godflesh Heart",
+	Slot = "Chest",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Evocation Efficiency +80.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Endtimes Armor"] = {
+	ID = "Endtimes Armor",
+	Slot = "Chest",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> This Item's Enchantment Level +2" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Power of the First Realm"] = {
+	ID = "Power of the First Realm",
+	Slot = "Hands",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> All Attributes +4" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Godflesh Grasp"] = {
+	ID = "Godflesh Grasp",
+	Slot = "Hands",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Idle Bonus +25.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Realmwalkers"] = {
+	ID = "Realmwalkers",
+	Slot = "Feet",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> All Mana Sources +35" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Endtimes Gear"] = {
+	ID = "Endtimes Gear",
+	Slot = "Feet",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Incantation Efficiency +10.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Mantle of the First Realm"] = {
+	ID = "Mantle of the First Realm",
+	Slot = "Shoulder",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Pet Ability Power +60.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Godflesh Dominion"] = {
+	ID = "Godflesh Dominion",
+	Slot = "Shoulder",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Summoning Efficiency +10.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Embrace of the Erased"] = {
+	ID = "Embrace of the Erased",
+	Slot = "Waist",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> All Evocation Spell Memetic Level +1" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Endtimes Failsafe"] = {
+	ID = "Endtimes Failsafe",
+	Slot = "Waist",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Character Level +20" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Voice of the Erased"] = {
+	ID = "Voice of the Erased",
+	Slot = "Wrist",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Maximum cast rate of Spells attainable +10" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Godflesh Appendages"] = {
+	ID = "Godflesh Appendages",
+	Slot = "Wrist",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Major Gods' main Ability Power +7.50%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Burden of the Erased"] = {
+	ID = "Burden of the Erased",
+	Slot = "Back",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Shoulder Items Enchantment Level +3" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["The Starmap"] = {
+	ID = "The Starmap",
+	Slot = "Back",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Versatility per-point attribute bonus' power (base) +0.03%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Pillars of the First Realm"] = {
+	ID = "Pillars of the First Realm",
+	Slot = "Legs",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Breakthroughs' bonus per point +100.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Godflesh Veil"] = {
+	ID = "Godflesh Veil",
+	Slot = "Legs",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Summoning duration divisor +1.50" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Pride of the First Realm"] = {
+	ID = "Pride of the First Realm",
+	Slot = "Neck",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Exhibits' bonus per point +100.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Legacy of the Erased"] = {
+	ID = "Legacy of the Erased",
+	Slot = "Neck",
+	Quality = 7,
+	Requirements = {
+	},
+	Acquisition = "Forged",
+	Tiers = {
+		{
+			Desc = "<b>Inherent:</b> Phylacteries' slot efficiency +60.00%" .. p.mythicDescription,
+		},
+	},
+	Enchant = p.mythicEnchant
+}
+items["Book Of Litanies"] = {
+	ID = 501,
+	Slot = "Accessory",
+	Set = "Justice Of The Seventh",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Critical Profit +50.00%",
+			Cost = {0, 0, 0, 500}
+		},
+		{
+			Desc = "Critical Profit +50.00%, Character Ability Power +10.00%",
+			Cost = {0, 0, 0, 1000}
+		},
+		{
+			Desc = "Critical Profit +100.00%, Character Ability Power +15.00%",
+			Cost = {0, 0, 0, 1500}
+		},
+		{
+			Desc = "Critical Chance +2.00%, Critical Profit +150.00%, Character Ability Power +25.00%",
+			Cost = {0, 0, 0, 2000}
+		},
+		{
+			Desc = "Critical Chance +5.00%, Critical Profit +200.00%, Character Ability Power +50.00%",
+		},
+	},
+	Enchant = "Critical Profit 25%"
+}
+items["Conjured Strangleash"] = {
+	ID = 502,
+	Slot = "Accessory",
+	Set = "Conjurer's Chains",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Character Ability Power +25.00%",
+			Cost = {500, 0, 0, 0}
+		},
+		{
+			Desc = "Character Ability Power +35.00%, Pet Ability Power +35.00%",
+			Cost = {1000, 0, 0, 0}
+		},
+		{
+			Desc = "Character Ability Power +50.00%, Pet Ability Power +50.00%",
+			Cost = {1500, 0, 0, 0}
+		},
+		{
+			Desc = "Character Ability Power +75.00%, Pet Ability Power +75.00%, Evocation Efficiency +25.00%",
+			Cost = {2000, 0, 0, 0}
+		},
+		{
+			Desc = "Character Ability Power +100.00%, Pet Ability Power +100.00%, Evocation Efficiency +50.00%",
+		},
+	},
+	Enchant = "Character Ability Power 15%"
+}
+items["Auxtrap Backpack"] = {
+	ID = 503,
+	Slot = "Accessory",
+	Set = "Nether's Embrace",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +25.00%",
+			Cost = {0, 0, 500, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +40.00%, Void Mana Profit (base) +5.00%",
+			Cost = {0, 0, 1000, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +50.00%, Void Mana Profit (base) +10.00%",
+			Cost = {0, 0, 1500, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +75.00%, Void Mana Profit (base) +15.00%, Insight +5",
+			Cost = {0, 0, 2000, 0}
+		},
+		{
+			Desc = "Void Mana per Entity +100.00%, Void Mana Profit (base) +20.00%, Insight +10",
+		},
+	},
+	Enchant = "Void Mana per Entity 15%"
+}
+items["Empowering Managuard"] = {
+	ID = 504,
+	Slot = "Accessory",
+	Set = "Power Armor",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Profits +25.00%",
+			Cost = {0, 0, 500, 0}
+		},
+		{
+			Desc = "Profits +30.00%, Evocation Efficiency +50.00%",
+			Cost = {0, 0, 1000, 0}
+		},
+		{
+			Desc = "Profits +50.00%, Evocation Efficiency +75.00%",
+			Cost = {0, 0, 1500, 0}
+		},
+		{
+			Desc = "Profits +75.00%, Evocation Efficiency +100.00%, Incantation Efficiency +20.00%",
+			Cost = {0, 0, 2000, 0}
+		},
+		{
+			Desc = "Profits +100.00%, Evocation Efficiency +150.00%, Incantation Efficiency +30.00%",
+		},
+	},
+	Enchant = "Evocation Efficiency 25%"
+}
+items["Bag Of Tricks"] = {
+	ID = 505,
+	Slot = "Accessory",
+	Set = "Jester's Privilege",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Profits +50.00%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Profits +100.00%",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Profits +150.00%, Character Ability Power +50.00%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Profits +200.00%, Character Ability Power +100.00%",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Profits +250.00%, Character Ability Power +150.00%",
+		},
+	},
+	Enchant = "Profits 25%"
+}
+items["Falconer's Treats"] = {
+	ID = 506,
+	Slot = "Accessory",
+	Set = "Falconer's Trust",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Pet Ability Power +25.00%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Pet Ability Power +40.00%, Pet Experience +15.00%",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Pet Ability Power +50.00%, Pet Experience +50.00%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Profits +20.00%, Pet Ability Power +70.00%, Pet Experience +70.00%",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Profits +50.00%, Pet Ability Power +100.00%, Pet Experience +100.00%",
+		},
+	},
+	Enchant = "Pet Ability Power 15%"
+}
+items["Burial Urn"] = {
+	ID = 507,
+	Slot = "Accessory",
+	Set = "Ancient Bones",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Idle Bonus +25.00%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Idle Bonus +50.00%, Summoning Efficiency +10.00%",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Idle Bonus +60.00%, Summoning Efficiency +15.00%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Profits +75.00%, Idle Bonus +75.00%, Summoning Efficiency +25.00%",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Profits +100.00%, Idle Bonus +100.00%, Summoning Efficiency +35.00%",
+		},
+	},
+	Enchant = "Idle Bonus 15%"
+}
+items["Ethereal Veil"] = {
+	ID = 508,
+	Slot = "Accessory",
+	Set = "Raiments Of The Perfect Mind",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Incantation Efficiency +10.00%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Mysteries Power (base) +5.00%, Incantation Efficiency +20.00%",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Mysteries Power (base) +10.00%, Incantation Efficiency +30.00%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Mysteries Power (base) +20.00%, Incantation Efficiency +40.00%, Intelligence +10",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Mysteries Power (base) +25.00%, Incantation Efficiency +50.00%, Intelligence +20",
+		},
+	},
+	Enchant = "Profits 25%"
+}
+items["Spell Vault"] = {
+	ID = 509,
+	Slot = "Accessory",
+	Set = "The Eastern Tale",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Evocation Efficiency +50.00%",
+			Cost = {0, 500, 0, 0}
+		},
+		{
+			Desc = "Evocation Efficiency +100.00%, Incantation Efficiency +5.00%",
+			Cost = {0, 1000, 0, 0}
+		},
+		{
+			Desc = "Evocation Efficiency +125.00%, Incantation Efficiency +10.00%",
+			Cost = {0, 1500, 0, 0}
+		},
+		{
+			Desc = "Evocation Efficiency +150.00%, Incantation Efficiency +15.00%, Spellcraft +10",
+			Cost = {0, 2000, 0, 0}
+		},
+		{
+			Desc = "Evocation Efficiency +200.00%, Incantation Efficiency +20.00%, Spellcraft +20",
+		},
+	},
+	Enchant = "Incantation Efficiency 4%"
+}
+items["Mother's Gift"] = {
+	ID = 510,
+	Slot = "Accessory",
+	Set = "Blessing Of The Forest",
+	Quality = 1,
+	Requirements = {
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick Profit +35.00%",
+			Cost = {0, 0, 0, 500}
+		},
+		{
+			Desc = "Autoclick Profit +50.00%, Critical Rating +20.00%",
+			Cost = {0, 0, 0, 1000}
+		},
+		{
+			Desc = "Autoclick Profit +100.00%, Critical Rating +30.00%",
+			Cost = {0, 0, 0, 1500}
+		},
+		{
+			Desc = "Autoclick Profit +150.00%, Critical Rating +40.00%, Dominance +10",
+			Cost = {0, 0, 0, 2000}
+		},
+		{
+			Desc = "Autoclick Profit +200.00%, Critical Rating +50.00%, Dominance +20",
+		},
+	},
+	Enchant = "Autoclick Profit 25%"
+}
+
+local sets = {}
+sets["Justice Of The Seventh"] = {
+	Items = {
+		Head = "Brightwing Helmet",
+		Hands = "Faithful Fists",
+		Chest = "Burning Heart Breastplate",
+		Feet = "Valiant Greaves",
+		Neck = "Fist Brooch",
+		Accessory = "Book Of Litanies",
+	},
+	Tiers = {
+		{
+			Desc = "Critical Rating +10000"
+		},
+		{
+			Desc = "Critical Profit +700%"
+		},
+		{
+			Desc = "Critical Rating +1400%"
+		},
+		{
+			Desc = "Dominance +50"
+		},
+	}
+}
+sets["Conjurer's Chains"] = {
+	Items = {
+		Head = "Conjured Ragecrown",
+		Hands = "Conjured Claws",
+		Chest = "Conjured Thornmail",
+		Feet = "Conjured Spiked Stompers",
+		Shoulder = "Conjured Razorspaulders",
+		Wrist = "Conjured Sawrings",
+		Legs = "Conjured Painguards",
+		Accessory = "Conjured Strangleash",
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +100%"
+		},
+		{
+			Desc = "Pet Ability Power +150%"
+		},
+		{
+			Desc = "Character Ability Power +200%"
+		},
+		{
+			Desc = "Pet Ability Power +250%"
+		},
+		{
+			Desc = "Incantation efficiency +30%"
+		},
+		{
+			Desc = "Empathy +40"
+		},
+	}
+}
+sets["Nether's Embrace"] = {
+	Items = {
+		Head = "The Bright Beacon",
+		Hands = "Netherfist",
+		Chest = "Nethershell",
+		Shoulder = "Ebon Mantle",
+		Neck = "Nether Chain",
+		Finger = "Netherloop",
+		Legs = "Nether Barrier",
+		Accessory = "Auxtrap Backpack",
+	},
+	Tiers = {
+		{
+			Desc = "Void Mana per Entity +300"
+		},
+		{
+			Desc = "Void Mana per Entity +25%"
+		},
+		{
+			Desc = "Void Mana Profit +25%"
+		},
+		{
+			Desc = "Incantation efficiency +25%"
+		},
+		{
+			Desc = "Void Mana per Entity +35%"
+		},
+		{
+			Desc = "Insight +20"
+		},
+	}
+}
+sets["Power Armor"] = {
+	Items = {
+		Head = "Empowering Headguard",
+		Hands = "Empowering Handguards",
+		Chest = "Empowering Chestguard",
+		Feet = "Empowering Ankleguards",
+		Shoulder = "Empowering Shoulderguard",
+		Waist = "Empowering Waistguard",
+		Legs = "Empowering Legguards",
+		Accessory = "Empowering Managuard",
+	},
+	Tiers = {
+		{
+			Desc = "Evocation efficiency +50%"
+		},
+		{
+			Desc = "Incantation efficiency +25%"
+		},
+		{
+			Desc = "Evocation efficiency +100%"
+		},
+		{
+			Desc = "Intelligence +15"
+		},
+		{
+			Desc = "Incantation efficiency +40%"
+		},
+		{
+			Desc = "Finger Items Enchantment level +4"
+		},
+	}
+}
+sets["Jester's Privilege"] = {
+	Items = {
+		Hands = "Talented Gloves",
+		Chest = "Pompous Tunic",
+		Shoulder = "Strange Spaulders",
+		Waist = "Colourful Belt",
+		Back = "Fancy Cape",
+		Legs = "Mesmerizing Pants",
+		Accessory = "Bag Of Tricks",
+	},
+	Tiers = {
+		{
+			Desc = "Profits +50%"
+		},
+		{
+			Desc = "Character Ability Power +50%"
+		},
+		{
+			Desc = "Pet Ability Power +100%"
+		},
+		{
+			Desc = "Profits +200%"
+		},
+		{
+			Desc = "All Attributes +5"
+		},
+	}
+}
+sets["Falconer's Trust"] = {
+	Items = {
+		Head = "Falconer's Ranger Hat",
+		Hands = "Falconer's Gloves",
+		Chest = "Falconer's Furcoat",
+		Shoulder = "Falconer's Leather Wrappings",
+		Back = "Falconer's Warm Cape",
+		Finger = "Companionship Ring",
+		Legs = "Falconer's Bottoms",
+		Accessory = "Falconer's Treats",
+	},
+	Tiers = {
+		{
+			Desc = "Pet Ability Power +15%"
+		},
+		{
+			Desc = "Pet Experience (base) +100"
+		},
+		{
+			Desc = "Pet Experience +15%"
+		},
+		{
+			Desc = "Character Ability Power +25%"
+		},
+		{
+			Desc = "Empathy +20"
+		},
+		{
+			Desc = "Summoning efficiency +900%"
+		},
+	}
+}
+sets["Ancient Bones"] = {
+	Items = {
+		Chest = "The Ribcage",
+		Feet = "Lordic Greaves",
+		Shoulder = "Mantle Of The Crypt",
+		Waist = "Encircling Trophies",
+		Finger = "Morbid Loop",
+		Accessory = "Burial Urn",
+	},
+	Tiers = {
+		{
+			Desc = "Summoning efficiency +35%"
+		},
+		{
+			Desc = "Idle bonus +50%"
+		},
+		{
+			Desc = "Character Ability Power +50%"
+		},
+		{
+			Desc = "Summoning efficiency +60%"
+		},
+	}
+}
+sets["Time-traveler Gear"] = {
+	Items = {
+		Hands = "The Clockcarers",
+		Shoulder = "Stabilizing Pauldrons",
+		Wrist = "Precise Wristband",
+		Back = "Timeshroud",
+		Finger = "Chronoboost Ring",
+	},
+	Tiers = {
+		{
+			Desc = "Incantation efficiency +10%"
+		},
+		{
+			Desc = "Evocation efficiency +100%"
+		},
+		{
+			Desc = "Incantation efficiency +25%"
+		},
+		{
+			Desc = "Character Ability Power +100%"
+		},
+	}
+}
+sets["Regalia Of Shadow"] = {
+	Items = {
+		Hands = "Darklight Claws",
+		Chest = "Darklight Tunic",
+		Neck = "Shadow Tendril",
+		Waist = "Umbral Coil",
+		Back = "Darklight Mantle",
+		Finger = "Shadowflame Loop",
+		Finger1 = "Seeping Shadow Signet",
+	},
+	Tiers = {
+		{
+			Desc = "Liquid Shadow per Clot +15%"
+		},
+		{
+			Desc = "Shadow Clots spawnrate +25%"
+		},
+		{
+			Desc = "Pet Ability Power +35%"
+		},
+		{
+			Desc = "Character Ability Power +40%"
+		},
+		{
+			Desc = "Incantation efficiency +25%"
+		},
+		{
+			Desc = "Spellcraft +30"
+		},
+	}
+}
+sets["Blessing Of The Forest"] = {
+	Items = {
+		Head = "Earthen Cowl",
+		Chest = "Forest's Embrace",
+		Neck = "Radiant Leaf Pendant",
+		Back = "Embrace Of The Grove",
+		Finger = "Hoop Of Branches",
+		Accessory = "Mother's Gift",
+	},
+	Tiers = {
+		{
+			Desc = "Autoclick Profit +100%"
+		},
+		{
+			Desc = "Summoning efficiency +60%"
+		},
+		{
+			Desc = "Character Ability Power +100%"
+		},
+		{
+			Desc = "Summoning efficiency +150%"
+		},
+	}
+}
+sets["Raiments Of The Perfect Mind"] = {
+	Items = {
+		Head = "Circlet Of Deep Thoughts",
+		Chest = "Seclusion Shell",
+		Feet = "Boots Of Concentration",
+		Shoulder = "Tranquil Spaulders",
+		Wrist = "Focusing Bracers",
+		Back = "Concealing Shroud",
+		Accessory = "Ethereal Veil",
+	},
+	Tiers = {
+		{
+			Desc = "Mysteries Power +50%"
+		},
+		{
+			Desc = "Character Ability Power +75%"
+		},
+		{
+			Desc = "Mysteries Power +200%"
+		},
+		{
+			Desc = "Incantation efficiency +40%"
+		},
+		{
+			Desc = "Hands Items Enchantment level +8"
+		},
+	}
+}
+sets["The Eastern Tale"] = {
+	Items = {
+		Feet = "Boots Of Eastern Blessings",
+		Neck = "Torc Of Privilege",
+		Waist = "Sash of Luxury",
+		Wrist = "Rich Bands",
+		Accessory = "Spell Vault",
+	},
+	Tiers = {
+		{
+			Desc = "Accumulated Spells' starting casts amount +4000"
+		},
+		{
+			Desc = "Accumulated Spells' starting casts amount +100%"
+		},
+		{
+			Desc = "Accumulated casts gain +40%"
+		},
+	}
+}
+
+local IDs = {}
+IDs[-1] = ""
+IDs[0] = "The Artificer's Crown"
+IDs[1] = "Circlet Of Deep Thoughts"
+IDs[2] = "Easymind Hat"
+IDs[3] = "Brightwing Helmet"
+IDs[4] = "Casque Of Learning"
+IDs[5] = "The Bright Beacon"
+IDs[6] = "Conjured Ragecrown"
+IDs[7] = "Empowering Headguard"
+IDs[8] = "Earthen Cowl"
+IDs[9] = "Falconer's Ranger Hat"
+IDs[10] = "Faithful Fists"
+IDs[11] = "Fiery Grips"
+IDs[12] = "Grasp Of The Grave"
+IDs[13] = "Falconer's Gloves"
+IDs[14] = "The Clockcarers"
+IDs[15] = "Netherfist"
+IDs[16] = "Talented Gloves"
+IDs[17] = "Conjured Claws"
+IDs[18] = "Empowering Handguards"
+IDs[19] = "Darklight Claws"
+IDs[20] = "The Ribcage"
+IDs[21] = "Forest's Embrace"
+IDs[22] = "Burning Heart Breastplate"
+IDs[23] = "Empowering Chestguard"
+IDs[24] = "Conjured Thornmail"
+IDs[25] = "Nethershell"
+IDs[26] = "Darklight Tunic"
+IDs[27] = "Falconer's Furcoat"
+IDs[28] = "Pompous Tunic"
+IDs[29] = "Seclusion Shell"
+IDs[30] = "Legacy"
+IDs[31] = "The Great Journey"
+IDs[32] = "Boots Of Eastern Blessings"
+IDs[33] = "Lordic Greaves"
+IDs[34] = "Gemshoes"
+IDs[35] = "Boots Of Harsh Trials"
+IDs[36] = "Boots Of Concentration"
+IDs[37] = "Valiant Greaves"
+IDs[38] = "Conjured Spiked Stompers"
+IDs[39] = "Empowering Ankleguards"
+IDs[40] = "Artificer's Shoulderpads"
+IDs[41] = "Stabilizing Pauldrons"
+IDs[42] = "WrathSeed"
+IDs[43] = "Falconer's Leather Wrappings"
+IDs[44] = "Empowering Shoulderguard"
+IDs[45] = "Strange Spaulders"
+IDs[46] = "Conjured Razorspaulders"
+IDs[47] = "Mantle Of The Crypt"
+IDs[48] = "Tranquil Spaulders"
+IDs[49] = "Ebon Mantle"
+IDs[50] = "Light Of Eighth Star"
+IDs[51] = "Radiant Leaf Pendant"
+IDs[52] = "Fist Brooch"
+IDs[53] = "Shadow Tendril"
+IDs[54] = "Lucky Amulet"
+IDs[55] = "Nether Chain"
+IDs[56] = "Torc Of Privilege"
+IDs[57] = "Hollow Eye Pendant"
+IDs[58] = "Searing Gaze"
+IDs[59] = "Miniaturized Accelerator"
+IDs[60] = "Empowering Waistguard"
+IDs[61] = "Chemical Toolbelt"
+IDs[62] = "Colourful Belt"
+IDs[63] = "Umbral Coil"
+IDs[64] = "Gravemoss Waistband"
+IDs[65] = "Encircling Trophies"
+IDs[66] = "Endless Pouches"
+IDs[67] = "Collar Of Obedience"
+IDs[68] = "Sash of Luxury"
+IDs[69] = "Architectural Databelt"
+IDs[70] = "Precise Wristband"
+IDs[71] = "Focusing Bracers"
+IDs[72] = "Rich Bands"
+IDs[73] = "Rugged Wristcoat"
+IDs[74] = "Nomadic Wrists"
+IDs[75] = "Spirit's Guidance"
+IDs[76] = "Bite Sleeves"
+IDs[77] = "Perfected Kata Bracers"
+IDs[78] = "Nethershackles"
+IDs[79] = "Conjured Sawrings"
+IDs[80] = "Embrace Of The Grove"
+IDs[81] = "Darklight Mantle"
+IDs[82] = "Fancy Cape"
+IDs[83] = "Flaming Cape"
+IDs[84] = "The Amplifier"
+IDs[85] = "Timeshroud"
+IDs[86] = "Concealing Shroud"
+IDs[87] = "Falconer's Warm Cape"
+IDs[88] = "The Magnifier"
+IDs[89] = "Chaos Mantle"
+IDs[90] = "Temporal Scabbard"
+IDs[91] = "Spellweaving Kilt"
+IDs[92] = "Folds of Magma"
+IDs[93] = "Vita Bulwark"
+IDs[94] = "Tribal Dressing"
+IDs[95] = "Mesmerizing Pants"
+IDs[96] = "Falconer's Bottoms"
+IDs[97] = "Empowering Legguards"
+IDs[98] = "Conjured Painguards"
+IDs[99] = "Nether Barrier"
+IDs[100] = "Fiery Ring"
+IDs[101] = "Frosty Ring"
+IDs[102] = "Shadowflame Loop"
+IDs[103] = "Seeping Shadow Signet"
+IDs[104] = "Chronoboost Ring"
+IDs[105] = "Symbiotic Loop"
+IDs[106] = "Companionship Ring"
+IDs[107] = "Spell Helix"
+IDs[108] = "Morbid Loop"
+IDs[109] = "The Bond"
+IDs[110] = "Hoop Of Branches"
+IDs[111] = "Netherloop"
+IDs[112] = "Whiplash"
+IDs[113] = "Resonator Ring"
+IDs[114] = "Voidstrike Seal"
+IDs[115] = "Cold-blooded Ring"
+IDs[200] = "Scales of Appraisal"
+IDs[201] = "Enigmatic Parchment"
+IDs[202] = "Pitch-black Cage"
+IDs[203] = "Simple Memento"
+IDs[204] = "Ceaseless Hunger"
+IDs[206] = "Black Vortex"
+IDs[207] = "Murmuring Spellbook"
+IDs[208] = "Symbol Of Authority"
+IDs[209] = "Habitstone"
+IDs[210] = "Arcane Accelerator"
+IDs[211] = "Commissar's Torn Sleeve"
+IDs[212] = "Recaller Stone"
+IDs[300] = "Destabilized Evocations"
+IDs[301] = "Incantations Restructuring"
+IDs[302] = "Acclimatized Summons"
+IDs[303] = "Holidays"
+IDs[304] = "Spell Shards Fractalization"
+IDs[305] = "Efficient Minion Tactics"
+IDs[306] = "Servants Overclocking"
+IDs[307] = "Daemonics Reverse-Engineering"
+IDs[308] = "Self-Reflection"
+IDs[309] = "Void Sampling"
+IDs[400] = "Collection Of Samples"
+IDs[401] = "Pheromone Gland"
+IDs[402] = "Intact Carapace"
+IDs[403] = "Fossil Seeds"
+IDs[404] = "Mutated Mycelium"
+IDs[405] = "Arcane Engine"
+IDs[406] = "Binding Sigil"
+IDs[407] = "Anomalous Essence"
+IDs[408] = "Necrotic Powerstone"
+IDs[409] = "Heart of the Storm"
+IDs[410] = "Empowered Water"
+IDs[411] = "Anima Core"
+IDs[412] = "Insidious Lure"
+IDs[413] = "Abnormal Voidmass"
+IDs[414] = "Beholding Eye"
+IDs[415] = "Charged Fin-Wing"
+IDs[416] = "Inquisitive Eye"
+IDs[417] = "Anointed Ashes"
+IDs[418] = "Warbanner Fragment"
+IDs[419] = "Blessed Armor Scales"
+IDs[501] = "Book Of Litanies"
+IDs[502] = "Conjured Strangleash"
+IDs[503] = "Auxtrap Backpack"
+IDs[504] = "Empowering Managuard"
+IDs[505] = "Bag Of Tricks"
+IDs[506] = "Falconer's Treats"
+IDs[507] = "Burial Urn"
+IDs[508] = "Ethereal Veil"
+IDs[509] = "Spell Vault"
+IDs[510] = "Mother's Gift"
+IDs[1001] = "Branch of the Great Cycle"
+IDs[1002] = "Cataclysm"
+IDs[1003] = "Heart of the Grave"
+IDs[1004] = "Thunderbird"
+IDs[1005] = "Reality Prism"
+IDs[1006] = "Shard Of A Lost Dimension"
+IDs[1007] = "Redeemer"
+IDs[1008] = "Temporal Stabilizer"
+IDs[1009] = "Black Blade"
+IDs[1010] = "Philosopher's Stone"
+IDs[1011] = "Berzerker"
+IDs[1012] = "Spellstealer"
+IDs[1020] = "Enchanting Membrane"
+IDs[1021] = "Chiropteric Rod"
+IDs[1022] = "The Accumulator"
+IDs[1023] = "Shadow-Scryer's Crystal Ball"
+IDs[1024] = "Head Of The All-Eater"
+IDs[2001] = "Zenith, The Champion's Steed"
+IDs[2002] = "Warp Basilisk"
+IDs[2003] = "The Rubedo Engine"
+IDs[2004] = "Fey Glider"
+IDs[2005] = "Blessed Tapestry"
+IDs[2006] = "Nulldragon, The Anomaly"
+IDs[2007] = "Ritual Disk"
+IDs[2008] = "Broomstaff Of Klevdariah"
+IDs[2009] = "Paukan, The Spider"
+IDs[2010] = "Crystallized Echo"
+IDs[3001] = "Intricate Crimson Phylactery"
+IDs[3002] = "Bold Azure Phylactery"
+IDs[3003] = "Smooth Amber Phylactery"
+IDs[3004] = "Inert Jade Phylactery"
+IDs[3005] = "Robust Tangerine Phylactery"
+IDs[3006] = "Devious Violet Phylactery"
+IDs[3007] = "Eerie Turquoise Phylactery"
+IDs[3008] = "Hectic Lime Phylactery"
+
+p.items = items
+p.sets = sets
+p.IDs = IDs
+
+return p
+--</nowiki>
+--[[Category:Lua]]

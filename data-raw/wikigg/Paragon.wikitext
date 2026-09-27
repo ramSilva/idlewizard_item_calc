@@ -1,0 +1,741 @@
+__FORCETOC__
+'''Paragon''', which is found in the Journal ("J"), provides a list of global tasks which give additional bonuses upon completion. Each level must be unlocked in order to obtain the rewards. There are two types, one are called Paragon and have to be reclaimed after every [[Change Realms|Realm Change]], the other is called Legacy and stays even after a Realm Change.
+
+== Paragon ==
+{| class="article-table"
+|-
+!Paragon
+!Requirements
+!Reward
+|-
+| id="paragon-1" |1
+|Earn 1e10 [[Mysteries]]
+|Unlocks [[Attributes]]
+|-
+| id="paragon-2" |2
+|Earn 1e12 [[Mysteries]]
+|Unlocks [[Challenges]]
+|-
+| id="paragon-3" |3
+|Earn 1e20 [[Mysteries]]
+|Unlocks [[Trials]]
+|-
+| id="paragon-4" |4
+|Earn 1e30 [[Mysteries]]
+|Unlocks [[Expeditions|Expedition]]
+|-
+| id="paragon-5" |5
+|Earn 1e40 [[Mysteries]]
+|Unlocks [[Attributes|Mastery]] attribute
+|-
+| id="paragon-6" |6
+|Earn 1e50 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 125)
+|-
+| id="paragon-7" |7
+|Earn 1e60 [[Mysteries]]
+|Unlocks [[:Category:Tier_2_Pets|Tier 2 Pets]]
+|-
+| id="paragon-8" |8
+|Earn 1e70 [[Mysteries]]
+|Unlocks [[Attributes|Empathy]] attribute
+|-
+| id="paragon-9" |9
+|Earn 1e80 [[Mysteries]]
+|Unlocks [[Items|Item]] Crafting<br/>([[:Category:Head|Head]], [[:Category:Chest|Chest]], [[:Category:Hands|Hands]], [[:Category:Feet|Feet]], [[:Category:Research|Research]], [[Trophy|Trophy]] item slots)
+|-
+| id="paragon-10" |10
+|Earn 1e100 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 150)
+|-
+| id="paragon-11" |11
+|Earn 1e120 [[Mysteries]]
+|Unlocks [[:Category:Shoulder|Shoulder]] item slot
+|-
+| id="paragon-12" |12
+|Earn 1e130 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 175)
+|-
+| id="paragon-13" |13
+|Earn 1e140 [[Mysteries]]
+|Unlocks [[:Category:Waist|Waist]] item slot
+|-
+| id="paragon-14" |14
+|Earn 1e150 [[Mysteries]]
+|Unlocks [[:Category:Finger|Fingers]] item slot
+|-
+| id="paragon-15" |15
+|Earn 1e160 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 200)
+|-
+| id="paragon-16" |16
+|Earn 1e180 [[Mysteries]]
+|Unlocks [[:Category:Neck|Neck]] item slot
+|-
+| id="paragon-17" |17
+|Earn 1e200 [[Mysteries]]
+|Unlocks [[Items#Experiments & Enchanting|Enchantments and Experiments]]
+|-
+| id="paragon-18" |18
+|Earn 1e220 [[Mysteries]]
+|Unlocks [[:Category:Back|Back]] item slot
+|-
+| id="paragon-19" |19
+|Earn 1e240 [[Mysteries]]
+|Unlocks [[:Category:Wrist|Wrist]] item slot
+|-
+| id="paragon-20" |20
+|Earn 1e260 [[Mysteries]]
+|Unlocks [[:Category:Weapon|Weapon]] item slot
+|-
+| id="paragon-21" |21
+|Earn 1e280 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 225)
+|-
+| id="paragon-22" |22
+|Earn 1e300 [[Mysteries]]
+|Unlocks [[:Category:Tier 2 Classes|Tier 2 Classes]]
+|-
+| id="paragon-23" |23
+|Earn 1e320 [[Mysteries]]
+|Unlocks [[:Category:Offhand|Offhand]] item slot
+|-
+| id="paragon-24" |24
+|Earn 1e340 [[Mysteries]]
+|Increases [[Attributes|Attribute]] cap by 25 (to 250)
+|-
+| id="paragon-25" |25
+|Earn 1e360 [[Mysteries]]
+|Unlocks [[:Category:Legs|Legs]] item slot
+|-
+| id="paragon-26" |26
+|Earn 1e380 [[Mysteries]]
+|Unlocks [[Mount|Mount]] item slot
+|-
+| id="paragon-27" |27
+|Earn 1e400 [[Mysteries]]
+|Unlocks [[Realm|Realms]]
+|-
+| id="paragon-28" |28
+|Earn 1e425 [[Mysteries]]
+|Unlocks [[:Category:Accessory|Accessory]] item slot
+|-
+| id="paragon-29" |29
+|Earn 1e450 [[Mysteries]]
+|Unlocks [[:Category:Phylactery|Phylactery]] item slot
+|-
+| id="paragon-30" |30
+|Earn 1e475 [[Mysteries]]
+|Unlocks [[Familiars]]
+|-
+| id="paragon-31" |31
+|Earn 1e500 [[Mysteries]]
+|Unlocks [[Pantheon]]
+|-
+| id="paragon-32" |32
+|Earn 1e525 [[Mysteries]]
+|Unlocks [[Fractured Realms]]
+|-
+| id="paragon-33" |33
+|Earn 1e550 [[Mysteries]]
+|Unlocks [[:Category:Tier 3 Pets|Tier 3 Pets]]
+|-
+|34
+|Earn 1e575 [[Mysteries]]
+|Unlocks [[Town]]
+|-
+| id="paragon-34" |35
+|Earn 1e600 [[Mysteries]]
+|Unlocks 3 more [[Pantheon#Major Gods|Gods]] in [[Pantheon]]
+|-
+| id="paragon-35" |36
+|Earn 1e650 [[Mysteries]]
+|Unlock [[Memetics#Void Memetics|Void Memetics]] and [[Expeditions|Key-locked Expeditions]]
+|-
+| id="paragon-36" |37
+|Earn 1e700 [[Mysteries]]
+|Unlocks [[Pantheon#Major Gods|Gods<nowiki>'</nowiki>]] Second abilities
+|-
+| id="paragon-37" |38
+|Earn 1e725 [[Mysteries]]
+|Unlocks [[Attributes|Versatility]] attribute
+|-
+| id="paragon-38" |39
+|Earn 1e750 [[Mysteries]]
+|Unlock [[Memetics#Catalyst Memetics|Catalyst Memetics]]
+|-
+| id="paragon-39" |40
+|Earn 1e800 [[Mysteries]]
+|Unlocks 7th [[Pantheon#Major Gods|God]] in the [[Pantheon]]
+|-
+| id="paragon-40" |41
+|Earn 1e850 [[Mysteries]]
+|Unlocks [[Memetics#Source Memetics|Mana Source Memetics]]
+|-
+| id="paragon-41" |42
+|Earn 1e900 [[Mysteries]]
+|Unlocks 8th [[Pantheon#Major Gods|God]] in the [[Pantheon]]
+|-
+| id="paragon-42" |43
+|Earn 1e950 [[Mysteries]]
+|Unlocks [[Memetics#Spell Memetics|Spell Memetics]]
+|-
+| id="paragon-43" |44
+|Earn 1e1000 [[Mysteries]]
+|Unlocks [[Pantheon#Minor Gods|Minor Gods]] in the [[Pantheon]]
+|-
+| id="paragon-44" |45
+|Earn 1e1050 [[Mysteries]]
+|Unlocks [[Mythic Forge|Forge]]
+|-
+| id="paragon-45" |46
+|Earn 1e1100 [[Mysteries]]
+|Unlocks [[Ascension Forms]]
+|-
+| id="paragon-46" |47
+|Earn 1e1200 [[Mysteries]]
+|Unlocks [[Mythic Imbuement|Imbuement]]
+|-
+| id="paragon-47" |48
+|Earn 1e1300 [[Mysteries]]
+|Unlocks [[Proficiency]]
+|-
+| id="paragon-48" |49
+|Earn 1e1400 [[Mysteries]]
+|Unlocks [[Masterwork|Masterworking]]
+|-
+| id="paragon-49" |50
+|Earn 1e1500 [[Mysteries]]
+|Unlocks [[Pantheon Memetics]]
+|-
+|}
+
+== Legacy ==
+{| class="article-table"
+!Legacy
+!Requirement
+!Reward
+|-
+| id="legacy-1" |1
+|Earn '''50''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-2" |2
+|Complete '''12''' [[Challenges]]
+|Increases [[Mysteries]] Power by '''50'''%
+|-
+| id="legacy-3" |3
+|Unlock '''300''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-4" |4
+|Earn '''4000''' [[Achievements|Achievement Points]]
+|Increases red [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-5" |5
+|Reach [[Experience#Wizard Experience|Character Level]] '''110'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''50'''%
+|-
+| id="legacy-6" |6
+|Complete '''15''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''5'''% (additive)
+|-
+| id="legacy-7" |7
+|Earn '''300''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-8" |8
+|Collect '''100''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-9" |9
+|Collect '''100''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''2.5'''% (additive)
+|-
+| id="legacy-10" |10
+|Unlock '''400''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-11" |11
+|Collect '''10000''' [[Items|Crafting Dust]]
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-12" |12
+|Unlock '''5''' [[Items]]
+|Increase crafting dust cap by '''10k''' (additive)
+|-
+| id="legacy-13" |13
+|Complete '''30''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''5'''% (additive)
+|-
+| id="legacy-14" |14
+|Unlock '''500''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''20'''% (additive)
+|-
+| id="legacy-15" |15
+|Complete '''60''' [[Challenges]]
+|Increases blue [[Catalyst]] multiplier by '''0.25'''% (additive)
+|-
+| id="legacy-16" |16
+|Unlock '''4''' [[Items]] of at least '''<span style="color:#1EFF00;">Uncommon</span>''' quality
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-17" |17
+|Collect '''250''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''2.5'''% (additive)
+|-
+| id="legacy-18" |18
+|Reach [[Experience#Wizard Experience|Character Level]] '''130'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''50'''%
+|-
+| id="legacy-19" |19
+|Collect '''1200''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-20" |20
+|Earn '''500''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-21" |21
+|Unlock '''600''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''20'''% (additive)
+|-
+| id="legacy-22" |22
+|Unlock '''2''' [[Items]] of at least '''<span style="color:#A335EE;">Epic</span>''' quality
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-23" |23
+|Earn '''11000''' [[Achievements|Achievement Points]]
+|Increases red [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-24" |24
+|Collect '''2000''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''5'''% (additive)
+|-
+| id="legacy-25" |25
+|Reach [[Experience#Wizard Experience|Character Level]] '''150'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''50'''%
+|-
+| id="legacy-26" |26
+|Collect '''600''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-27" |27
+|Earn '''700''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-28" |28
+|Unlock '''6''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-29" |29
+|Unlock '''700''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''30'''% (additive)
+|-
+| id="legacy-30" |30
+|Collect '''5000''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-31" |31
+|Reach [[Experience#Wizard Experience|Character Level]] '''175'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''50'''%
+|-
+| id="legacy-32" |32
+|Complete '''60''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-33" |33
+|Complete '''100''' [[Challenges]]
+|Increases blue [[Catalyst]] multiplier by '''0.25'''% (additive)
+|-
+| id="legacy-34" |34
+|Collect '''1e5''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''5'''% (additive)
+|-
+| id="legacy-35" |35
+|Earn '''14000''' [[Achievements|Achievement Points]]
+|Increases red [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-36" |36
+|Unlock '''90''' [[Items]] of at least '''<span style="color:#1EFF00;">Uncommon</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-37" |37
+|Reach [[Experience#Wizard Experience|Character Level]] '''200'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''50'''%
+|-
+| id="legacy-38" |38
+|Complete '''120''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-39" |39
+|Unlock '''25''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-40" |40
+|Collect '''1000''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-41" |41
+|Earn '''15000''' [[Achievements|Achievement Points]]
+|Increases red [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-42" |42
+|Reach [[Experience#Wizard Experience|Character Level]] '''220'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''100'''%
+|-
+| id="legacy-43" |43
+|Collect '''35000''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-44" |44
+|Complete '''200''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-45" |45
+|Collect '''7.5e5''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-46" |46
+|Unlock '''50''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-47" |47
+|Unlock '''800''' [[Achievements]]
+|Increases green [[Catalysts|Catalyst]] power by '''30'''% (additive)
+|-
+| id="legacy-48" |48
+|Collect '''1500''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-49" |49
+|Reach [[Experience#Wizard Experience|Character Level]] '''240'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''100'''%
+|-
+| id="legacy-50" |50
+|Collect '''2e5''' [[Items|Crafting Dust]]
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-51" |51
+|Reach [[Pantheon#Major Gods|God]] Level '''5'''
+|Increases [[Pantheon|Gods XP]] gain by '''5'''% (additive)
+|-
+| id="legacy-52" |52
+|Earn '''16000''' [[Achievements|Achievement Points]]
+|Increases red [[Catalysts|Catalyst]] power by '''10'''% (additive)
+|-
+| id="legacy-53" |53
+|Unlock '''75''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-54" |54
+|Collect '''1e5''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-55" |55
+|Collect '''2.5e6''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-56" |56
+|Earn '''1400''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-57" |57
+|Complete '''300''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-58" |58
+|Reach [[Pantheon#Major Gods|God]] Level '''10'''
+|Increases [[Pantheon|Gods XP]] gain by '''5'''% (additive)
+|-
+| id="legacy-59" |59
+|Earn '''17000''' [[Achievements|Achievement Points]]
+|Increases blue [[Catalyst]] multiplier by '''0.25'''% (additive)
+|-
+| id="legacy-60" |60
+|Reach [[Experience#Wizard Experience|Character Level]] '''260'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''100'''%
+|-
+| id="legacy-61" |61
+|Unlock '''120''' [[Items]] of at least '''<span style="color:#0070FF;">Rare</span>''' quality
+|Increase crafting dust cap by '''10k''' (additive)
+|-
+| id="legacy-62" |62
+|Collect '''1e6''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''5'''% (additive)
+|-
+| id="legacy-63" |63
+|Collect '''5e5''' [[Items|Crafting Dust]]
+|Increases [[Items#Gathering|Jar]] capacity by '''500''' (additive)
+|-
+| id="legacy-64" |64
+|Earn '''1600''' [[Attributes|Attribute Points]]
+|Increases [[Experience#Sources_of_experience|Character XP from Sources]] by '''5'''% (additive)
+|-
+| id="legacy-65" |65
+|Collect '''1e7''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-66" |66
+|Unlock '''110''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-67" |67
+|Collect '''2000''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-68" |68
+|Complete '''400''' [[Trials]]
+|Increases blue [[Catalyst]] multiplier by '''0.25'''% (additive)
+|-
+| id="legacy-69" |69
+|Reach [[Pantheon#Major Gods|God]] Level '''15'''
+|Increases [[Pantheon|Gods XP]] gain by '''5'''% (additive)
+|-
+| id="legacy-70" |70
+|Collect '''1e7''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-71" |71
+|Unlock '''900''' [[Achievements]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-72" |72
+|Reach [[Experience#Wizard Experience|Character Level]] '''270'''
+|Increases [[Experience#Sources_of_experience|Character XP from actions]] by '''100'''%
+|-
+| id="legacy-73" |73
+|Reach [[Pantheon#Major Gods|God]] Level '''20'''
+|Increases [[Pantheon|Gods XP]] gain by '''10'''% (additive)
+|-
+| id="legacy-74" |74
+|Complete '''600''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-75" |75
+|Collect '''4e7''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-76" |76
+|Collect '''1e8''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-77" |77
+|Collect '''4000''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-78" |78
+|Reach [[Memetics#Void Memetics|Echo Trap]] Level '''10''' 
+|Increases [[Memetics#Void Memetics|Echo Trap]] XP gain by '''5'''% (additive)
+|-
+| id="legacy-79" |79
+|Earn '''18000''' [[Achievements|Achievement Points]]
+|Increases blue [[Catalyst]] multiplier by '''0.25'''% (additive)
+|-
+| id="legacy-80" |80
+|Earn '''1e6''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-81" |81
+|Reach [[Pantheon#Major Gods|God]] Level '''25'''
+|Increases [[Pantheon|Gods XP]] gain by '''10'''% (additive)
+|-
+| id="legacy-82" |82
+|Unlock '''950''' [[Achievements]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-83" |83
+|Collect '''1e8''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-84" |84
+|Reach [[Memetics#Void Memetics|Echo Trap]] Level '''25''' 
+|Increases [[Memetics#Void Memetics|Echo Trap]] XP gain by '''5'''% (additive)
+|-
+| id="legacy-85" |85
+|Unlock '''130''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by '''10k''' (additive)
+|-
+| id="legacy-86" |86
+|Complete '''750''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-87" |87
+|Perform '''7500''' [[Items#Experiments_.26_Enchanting|Experiments]]
+|Increases [[Items#Gathering|Crafting Dust]] income by '''1'''% (additive)
+|-
+| id="legacy-88" |88
+|Earn '''2.5e6''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-89" |89
+|Reach [[Pantheon#Major Gods|God]] Level '''35'''
+|Increases [[Pantheon|Gods XP]] gain by '''10'''% (additive)
+|-
+| id="legacy-90" |90
+|Collect '''6000''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-91" |91
+|Collect '''1e9''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-92" |92
+|Collect '''5e8''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-93" |93
+|Unlock '''1000''' [[Achievements]]
+|Increase Minor Gods ability power by '''1'''% (additive)
+|-
+| id="legacy-94" |94
+|Unlock '''150''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-95" |95
+|Complete '''1200''' [[Trials]]
+|Increases [[Trials|Trial]] rewards by '''10'''% (additive)
+|-
+| id="legacy-96" |96
+|Earn '''5e6''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-97" |97
+|Reach [[Pantheon#Minor Gods|Minor Gods]] level '''20'''
+|Increases Minor Gods experience bonus by '''12'''% (additive). (Applies after the drain from Major God)
+|-
+| id="legacy-98" |98
+|Perform '''10000''' [[Items#Experiments_.26_Enchanting|Experiments]]
+|Increases [[Items#Gathering|Crafting Dust]] income by '''1'''% (additive)
+|-
+| id="legacy-99" |99
+|Collect '''10000''' [[Collectibles|bats]]
+|Increase [[Collectibles|bat]] spawn rate by '''5'''% (additive)
+|-
+| id="legacy-100" |100
+|Collect '''5e9''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-101" |101
+|Unlock '''1050''' [[Achievements]]
+|Increase Minor Gods ability power by '''1'''% (additive)
+|-
+| id="legacy-102" |102
+|Unlock '''160''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by 10k (additive)
+|-
+| id="legacy-103" |103
+|Reach [[Pantheon#Minor Gods|Minor Gods]] level '''25'''
+|Increases Minor Gods experience bonus by '''13'''% (additive). (Applies after the drain from Major God)
+|-
+| id="legacy-104" |104
+|Collect '''1e9''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increases [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-105" |105
+|Reach character level '''285'''
+|Increase character experience gain from actions by '''100'''%
+|-
+| id="legacy-106" |106
+|Reach [[Pantheon#Major Gods|God]] Level '''45'''
+|Increases Gods experience bonus by '''10'''% (additive).
+|-
+| id="legacy-107" |107
+|Earn '''1e7''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-108" |108
+|Reach any Spell Memetic level to '''20'''
+|Reduce Ink cost by '''5''' (additive)
+|-
+| id="legacy-109" |109
+|Earn '''20''' [[Delusions]]
+|Increases Ascension Ability Power by '''10'''%
+|-
+| id="legacy-110" |110
+|Reach Ascension Form level '''30'''
+|Increases Ascension Form experience bonus by '''20'''% (additive)
+|-
+| id="legacy-111" |111
+|Reach [[Pantheon#Minor Gods|Minor Gods]] level '''35'''
+|Increases Minor Gods experience bonus by '''15'''% (additive). (Applies after the drain from Major God)
+|-
+| id="legacy-112" |112
+|Unlock '''1100''' [[Achievements]]
+|Increase Minor Gods ability power by '''1'''% (additive)
+|-
+| id="legacy-113" |113
+|Collect '''1e11''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-114" |114
+|Collect '''1e10''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increase [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-115" |115
+|Unlock '''170''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by '''10k''' (additive)
+|-
+| id="legacy-116" |116
+|Reach any Spell Memetic level to '''30'''
+|Reduce Ink cost by '''5''' (additive)
+|-
+| id="legacy-117" |117
+|Reach Ascension Form level '''50'''
+|Increases Ascension Form experience bonus by '''30'''% (additive)
+|-
+| id="legacy-118" |118
+|Reach Character level '''300'''
+|Increase character experience gain from actions by '''100'''%
+|-
+| id="legacy-119" |119
+|Collect '''1e11''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increase [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-120" |120
+|Earn '''2e7''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-121" |121
+|Unlock '''180''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by '''10k''' (additive)
+|-
+| id="legacy-122" |122
+|Earn '''50''' [[Delusions]]
+|Increases Ascension Ability Power by '''10'''%
+|-
+| id="legacy-123" |123
+|Reach Ascension Form level '''60'''
+|Increases Ascension Forms experience bonus by '''30'''% (additive)
+|-
+| id="legacy-124" |124
+|Collect '''1e12''' [[Catalyst]] Shards
+|Increases all [[Catalyst]] income by '''10'''% (additive)
+|-
+| id="legacy-125" |125
+|Collect '''1e12''' [[Items#Experiments_.26_Enchanting|Enchanting Dust]]
+|Increase [[Items#Experiments_.26_Enchanting|Enchanting Dust]] income by '''10'''% (additive)
+|-
+| id="legacy-126" |126
+|Unlock '''190''' [[Items]] of at least '''<span style="color:#FF8000;">Legendary</span>''' quality
+|Increase crafting dust cap by '''20k''' (additive)
+|-
+| id="legacy-127" |127
+|Reach Ascension Form level '''70'''
+|Increases Ascension Forms experience bonus by '''30'''% (additive)
+|-
+| id="legacy-128" |128
+|Unlock '''1200''' [[Achievements]]
+|Increase Minor Gods ability power by '''1'''% (additive)
+|-
+| id="legacy-129" |129
+|Earn '''1e8''' [[Memories]]
+|Increases [[Memetics|Memetic Splinter]] income by '''5'''%
+|-
+| id="legacy-130" |130
+|Earn '''80''' [[Delusions]]
+|Increases Ascension Ability Power by '''10'''%
+|}
+
+{{SiteNav}}
+[[Category:Mechanics]]

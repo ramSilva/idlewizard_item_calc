@@ -1,0 +1,36 @@
+{{PetInfobox
+|selection=Character level 20
+|unlock=60 Upgrades bought
+|description=''Powerful servant, brought to life by magic.''
+}}
+
+== Description ==
+Increases sources' profits based on character experience and pet level.
+
+Gains [[Experience#Pet Experience|experience]] passively based on the number of upgrades bought, even when offline.
+
+A true jack-of-all-trades, the Golem is suitable for almost any class. Before the [[Patch Notes#v0.2x "VoidStorm"|VoidStorm update]], it was mostly associated with the [[Arcanist]] and the [[Prodigy]].
+
+== Pet Ability ==
+
+Multiplies profits by:
+<br><math>X^{0.32} \times L \times P \times 0.0065 + 1</math>
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>X = \text{Total Character Experience}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Golem gains experience each second, equal to:
+<br><math>\left(\frac{U^{0.45}}{2} + F\right) \times M</math>
+
+where:
+* <math>U = \text{Bought Upgrades}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

@@ -1,0 +1,20 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Unlocking==
+This Mount ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+It is unlocked by performing [[Expeditions]] and winning encounters, and progress is only counted when the Mount slot is unlocked ([[Paragon]] 26 or 1e380 [[Mysteries]]).
+
+The amount of progress each winning Expedition encounter is affected by Monster Level and Wizard's Expedition Level. Progress is determined as follows:
+<pre>
+({Monster Level} / {Wizard's Expedition Level} * 0.2)% per winning encounter.
+
+Winning encounter's progress only counts if {Monster Level} is greater than or equal to {Wizard's Expedition Level - 10}
+
+Unlocks when the sum is 100%
+</pre>
+
+<small>''NOTE: Credit for detailed information above goes to the relevant community members from the game's [https://discord.gg/DuqkuJfhTz Discord].''</small>
+
+[[Category:Items]]
+[[Category:Mount]]

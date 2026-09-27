@@ -1,0 +1,157 @@
+
+'''Attributes''' are a set of skills that you unlock after achieving [[Paragon]] Level 1. You can access the Attributes page by clicking the yellow plus sign that appears on the Character portrait, or by clicking the Character portrait and then clicking the table listing Attribute names and values, or by using the Open Attributes ''("O")'' [[Tips, Tricks, and Help|Hotkey]].
+
+==Gaining Attribute Points==
+
+You receive '''Attribute points''' according to a timer, shown in the bottom left of the Attributes page.  The time to gain one Attribute point is
+
+<div style="font-size:150%"><math>\quad\max\left(10,\ 1.25^{\min(50,\ A - 0.2 \times L - 1.75 \times \log_{10} M)} \times 60\right)\ \text{seconds},</math></div>
+
+where
+*<math>A</math> = Attribute points already gained from timer
+*<math>L</math> = Character level
+*<math>M</math> = [[Mysteries]] collected
+
+Attribute points can also be gained through completing some [[Challenges]]. These points do not affect the timer.
+
+Each assigned Attribute point gives a percentage boost, applied multiplicatively.  This yields a total percentage boost of
+
+<div style="font-size:125%"><math>\quad\left(1 + \frac{B}{100%}\right)^X \times 100% - 100%\,,</math></div>
+
+where
+* <math>B</math> = Bonus as percentage (e.g. 2.2% for Insight)
+* <math>X</math> = Attribute points assigned
+
+Every 25 points assigned to an Attribute grants an additional perk, detailed [[#Attribute Skill Trees|below]].
+
+==Resetting Attribute Points==
+
+Resetting Attribute points refunds all your points, and allows you to spend them again in a different way.  '''You can reset your Attribute points for free upon each Exile''', as long as you mark the "Reset Attributes?" checkbox.
+
+The "Reset" button on the Attributes page also refunds all spent points but costs three [[Nullifier Core]]s, useful only if you need to reassign your points mid-run.
+
+==Item Requirements==
+
+Some [[Items]] have minimum Attribute requirements, and their effects will not be available until these requirements are met.  Using the "Fill" button on the Attributes page will automatically assign free points to meet these requirements.
+
+Note: If an item has Attribute requirements '''and''' grants an Attribute bonus (such as {{ItemTooltip|Legacy}}), the bonus will apply only after the "Fill" button has spent points needed to meet the requirements for all equipped items.  This can cause overspending if that Attribute bonus would help meet the requirements for another item (such as {{ItemTooltip|Ebon Mantle}}).
+
+== Attribute Skill Trees ==
+
+=== Intelligence ===
+Increases [[Mysteries]] power by 2.5% (Multiplier)
+* ''25 points'' - Increases Mysteries power by 2% (total of 5% Mystery profit)
+* ''50 points'' - Increases Mysteries power by 2% (total of 7% Mystery profit)
+* ''75 points'' - Reduces Level requirements by 1
+* ''100 points'' - Increases Mysteries power by 3% (total of 10% Mystery profit)
+* ''125 points'' - Increases Mysteries' power by 5% (total of 15% Mystery profit)
+* ''150 points'' - Increases profits for 0.5% per trained attribute point
+* ''175 points'' - Increases Mysteries power by 10% (total of 25% Mystery profit)
+* ''200 points'' - Increases profits for 1.5% per unlocked Achievement
+* ''225 points'' - Increases Mysteries power by 10% (total of 35% Mystery profit)
+* ''250 points'' - Increases profits by <math>0.65\% \times \text{Bought upgrades}</math>
+
+=== Insight ===
+Increases [[Void Entities|Void mana]] per Entity by by 2.5%
+* ''25 points'' - Increases Void Mana profit by 12% (additive)
+* ''50 points'' - Increases Void Mana profit by 10% (multiplier)
+* ''75 points'' - Increases Void Mana profit  by 15% (additive)
+* ''100 points'' - Collecting a Void Entity makes the next one appear 2 seconds sooner
+* ''125 points'' - Reduces Void Mana degeneration by 50%
+* ''150 points'' - Increases profits by: <math>\log_{10}(\text{Void Entities collected this Exile} + 1) \times 80\%</math>
+* ''175 points'' - Increases Void Mana profit by 20% (multiplier)
+* ''200 points'' - Increases Void Mana per Entity by: <math>\log_{10}(\text{Void Entity life time (sec)}) \times 250\%</math>
+* ''225 points'' - Increases Void Mana profit by 20% (multiplier)
+* ''250 points'' - Increases Void Mana per Entity by: <math>\log_{10}(\text{Void Entity spawnrate}) \times 250\%</math>
+
+=== Spellcraft ===
+Increases Evocation efficiency by 3.00%
+* ''25 points'' - Increases incantation efficiency by 15%
+* ''50 points'' - Increases summoning efficiency by 25%
+* ''75 points'' - Increases incantation efficiency by 20%
+* ''100 points'' - Increases summoning efficiency by 20%
+* ''125 points'' - Increases incantation efficiency by 25%
+* ''150 points'' - Increases profits by <math>50\% \times \log_{10}(\text{Spells cast this Exile}+1)</math>
+* ''175 points'' - Increases summoning efficiency by 30%
+* ''200 points'' - Increases evocation efficiency by <math>150\%\times\log_{10}(\text{Accumulated and Persistent spells cast this Exile}+1)</math>
+* ''225 points'' - Increases incantation efficiency by 25%
+* ''250 points'' - Increases profits by <math>100\%\times\log_{10}(\text{Spells cast this Exile}+1)^{1.05}</math>
+
+=== Wisdom ===
+Increases passive Spell Shards generation by 2.5%
+* ''25 points'' - Reduces Spell costs by 10%
+* ''50 points'' - Increases Spell Shards earned per click by 10%
+* ''75 points'' - Increases Shard Pool efficiency by 10%
+* ''100 points'' - Reduces Spell costs by 10%
+* ''125 points'' - Increases Shard Pool efficiency by 10%
+* ''150 points'' - Increases profits by <math>150\%\times\log_{10}(\text{Spell Shards collected this Exile}+1)^{1.2}</math>
+* ''175 points'' - Increases Spell Shards earned per click by 100%
+* ''200 points'' - Increases incantation efficiency by <math>15\%\times\log_{10}(\text{Evocation Spells cast this Exile}+1)^{1.25}</math>
+* ''225 points'' - Reduces Spell costs by 10%
+* ''250 points'' - Increases profits by <math>125\%\times\log_{10}(\text{Passive Spell Shards generation}+1)^{1.25}</math>
+
+=== Dominance===
+Increases autoclick profit by 3.0%
+* ''25 points'' - Increases critical profit by 100%
+* ''50 points'' - Increases critical chance by 5
+* ''75 points'' - Increases critical profit by 200%
+* ''100 points'' - Increases critical chance by 5
+* ''125 points'' - Increases critical rating by 500
+* ''150 points'' - Increases profits by <math>40\%\times\log_{10}(\text{Autoclicks this Exile}+1)</math>
+* ''175 points'' - Increases critical profit by 300%
+* ''200 points'' - Increases autoclick profits by <math>78\%\times\log_{10}(\text{Autoclicks this Exile}+1)</math>
+* ''225 points'' - Increases critical profit by 300%
+* ''250 points'' - Increases profits by <math>80\%\times\log_{10}(\text{Autoclicks this Exile}+1)^{1.1}</math>
+
+=== Patience ===
+Increases [[Idle Mode|Idle bonus]] by 2.5%
+* ''25 points'' - Reduces time  without clicks before Idle mode activates by 5 sec
+* ''50 points'' - First 3 click while in Idle mode don't reset Idle mode. This ability doesn't replenish
+* ''75 points'' - Grants 1 autoclick per second
+* ''100 points'' - Ability to click without resetting Idle mode now replenishes once every minute
+* ''125 points'' - Reduces charging Spells' cost by 10%
+* ''150 points'' - Increases profits by <math>0.017\%\times\text{total amount of sources}</math>
+* ''175 points'' - Reduces charging Spells' cost by 15%
+* ''200 points'' - Increases idle bonus by <math>100\%\times\log_{1.6}(\text{Idle time this Exile, in seconds} \times 0.00025 + 1)</math>
+* ''225 points'' - Increases green catalysts power by 25% (additive)
+* ''250 points'' - Increases profits by <math>0.0289\%\times\text{total amount of sources}</math>
+
+=== Mastery ===
+Increases character ability power by 2.5%
+<br>Unlocks at Paragon 5
+* ''25 points'' - Increases character ability power growth rate by 25%
+* ''50 points'' - Increases character experience gained from actions by 50%
+* ''75 points'' - Increases character experience from sources by 15%
+* ''100 points'' - Increases character ability power growth rate by 50%
+* ''125 points'' - Reduces Level requirements by 1
+* ''150 points'' - Increases profits by <math>1.5\%\times\text{character level}</math>
+* ''175 points'' - Increases character experience from sources by 25%
+* ''200 points'' - Increases character ability power by <math>0.075\%\times\text{achievement points}</math>
+* ''225 points'' - Increases character experience from sources by 25%
+* ''250 points'' - Increases profits by <math>3\%\times\text{character level}</math>
+
+=== Empathy ===
+Increases pet ability power by 2.5%
+<br>Unlocks at Paragon 8
+* ''25 points'' - Increases pet experience gained by 100 (additively)
+* ''50 points'' - Increases pet experience gained by 30%
+* ''75 points'' - Increases pet ability charging speed by 5%
+* ''100 points'' - Increases pet experience gained by 30%
+* ''125 points'' - Increases pet ability charging speed by 10%
+* ''150 points'' - Increases profits by <math>1.25\%\times\text{pet level}</math>
+* ''175 points'' - Increases pet experience gained by 30%
+* ''200 points'' - Increases pet ability power by <math>100\%\times\log_{1.6}(\text{current pet time}\times 0.0005+1)</math>
+* ''225 points'' - Increases pet ability charging speed by 15%
+* ''250 points'' - Increases profits by <math>2.5\%\times\text{pet level}</math>
+
+=== Versatility ===
+Increases profits by 1.80%
+<br>Unlocks at Paragon 38
+
+Versatility doesn't have any perks.
+
+==Strategy==
+The best way to assign Attribute points depends on Character Class, Mysteries, and Items.  See the [[Guides#Classes|Class Guides]] for more detailed guidelines on Attribute point spending.
+
+{{SiteNav}}
+[[Category:Mechanics]]

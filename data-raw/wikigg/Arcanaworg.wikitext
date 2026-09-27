@@ -1,0 +1,53 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 90
+*20 [[Attributes#Intelligence|Intelligence]]
+*50 [[Attributes#Spellcraft|Spellcraft]]
+|unlock=
+*Spell shards collected 1e6
+*{{PetTooltip|Spellhound}} level 100
+|description=''Since the Void has become accessible for exploration and study, many wizards have been traveling between the dimensions for extended periods alongside their loyal pets. The Spellhounds proved to be susceptible to Void's perverse influence and many of them have become victims to various mutations. The Arcanaworg is one of the stable examples, which has adapted to the harsh environment and grown stronger, smarter, and more powerful in the process.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Spellhound}}. Increases profits with pet level and passive shards accumulation rate. Yields [[Spells|spell shards]] each second, after charging the ability, depending on level.
+
+Gains [[Experience#Pet_Experience|experience]] with each spell cast.
+
+== Pet Ability ==
+
+Multiplies profits by:
+<br><math>S \times P \times L^{1.2} \times 0.025 + 1</math>
+
+
+Charges its ability over:
+<br><math>10 - \frac{L}{20}</math>
+<br>seconds (minimum 0).
+
+On ability activation, grants spell shards each second, for 10 seconds, equal to:
+<br><math>P \times L^{1.25} \times 3.8</math>
+<br>If it would give more than <math>10^7</math> shards, it instead gives
+<br><math>(P \times L^{1.25} \times 3.8 - 10^7)^{0.25} + 10^7</math>
+
+where:
+* <math>S = \text{Spell Shards per Second}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Accrues experience for each shard-based spell cast, equal to:
+<br><math>(S + F) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>S = \text{Spell Shard Cost}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

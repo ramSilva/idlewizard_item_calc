@@ -1,0 +1,52 @@
+{{TODO}}
+==Overview==
+'''Elixirs''' provide a passive bonus while active.
+
+Elixirs are only available to {{ClassTooltip|class_name=Alchemist}} and {{ClassTooltip|class_name=Desolator}}.
+
+The type of elixir activated is a result of selecting the required "ingredients" from the "recipe" for the desired elixir. An "ingredient" may be added by casting a specific type of Spell, or by pressing the relevant hotkey or clicking the button that corresponds to the type of Spell.
+
+==Recipes==
+{| class="wikitable"
+!Elixir
+!Spells required
+!Key Combination
+|-
+|Evocation
+|Incantation, Incantation, Evocation, Summoning, Summoning
+|99800
+|-
+|Summoning
+|Evocation, Incantation, Summoning, Incantation, Evocation
+|89098
+|-
+|Pet
+|Incantation, Evocation, Summoning, Summoning, Evocation
+|98008
+|-
+|Shadow
+|Evocation, Summoning, Incantation, Evocation, Summoning
+|80980
+|}
+
+==Types==
+===Evocation===
+{{ElixirTooltip|Elixir_name=Evocation}} elixir increases Evocation efficiency when active for:
+* [[Alchemist#Hero Abilities|Alchemist]]
+* [[Desolator#Hero Ability|Desolator]]
+
+===Pet===
+{{ElixirTooltip|Elixir_name=Pet}} elixir increases Pet Ability Power when active for:
+* [[Alchemist#Hero Abilities|Alchemist]]
+* [[Desolator#Hero Ability|Desolator]]
+
+===Summoning===
+{{ElixirTooltip|Elixir_name=Summoning}} elixir increases Summoning efficiency when active for:
+* [[Alchemist#Hero Abilities|Alchemist]]
+* [[Desolator#Hero Ability|Desolator]]
+
+===Shadow===
+{{ElixirTooltip|Elixir_name=Shadow}} elixir increases [[Liquid Shadow]] Power when active for:
+* [[Desolator#Hero Ability|Desolator]]
+
+[[Category:Mechanics]]

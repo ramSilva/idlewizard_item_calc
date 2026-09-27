@@ -1,0 +1,7 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}}
+
+==Lore==
+While the shoulder pieces are a tribute to a craftsman's diligence and hard work, the Crown is passed on from person to person as a symbol of achievement. It's awarded for the most exquisite work of art annually, and the owner of the Crown is granted discounts and lucrative deals for any materials and resources they need.
+
+[[Category:Items]]
+[[Category:Head]]

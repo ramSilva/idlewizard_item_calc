@@ -1,0 +1,48 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 88
+*40 [[Attributes#Intelligence|Intelligence]]
+*10 [[Attributes#Wisdom|Wisdom]]
+|unlock=
+*450 [[Upgrades]] bought
+*Craft resources collected 5000
+*{{PetTooltip|Golem}} level 100
+|description=''The Anima is an enigmatic force that infuses all creatures of the world with life. With a twisted combination of necromancy, artificery and long infusion rituals, it can be used to create extremely powerful golems, powered by reservoirs of Life energies. These constructs allow users to draw additional power into their incantations.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Golem}}.
+
+Increases profits with [[Experience#Wizard_Experience|character experience]] and amount of [[Exile|Exiles]]. Increases [[:Category:Incantation Spells|Incantation]] efficiency.
+
+Experience gained per second depends on number of [[upgrades]] bought.
+
+== Pet Ability ==
+
+Multiplies profits by:
+<br><math>X^{0.34} \times L \times P \times (E^{0.1} + 1) \times 0.065 + 1</math>
+
+
+Multiplies Incantation efficiency by:
+<br><math>L \times 0.025 + 1</math>
+
+
+where:
+*<math>X = \text{Total Character Experience}</math>
+*<math>L = \text{Pet Level}</math>
+*<math>P = \text{Pet Ability Power}</math>
+*<math>E = \text{Total Exiles}</math>
+
+== Experience Gain ==
+Gains gains experience each second, equal to:
+<br><math>\left( U^{0.5} \times 0.5 + F \right) \times M</math>
+<br>where:
+*<math>U = \text{Bought Upgrades}</math>
+*<math>F = \text{Fixed Pet XP Bonus}</math>
+*<math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]
+[[Category:Wizard]]

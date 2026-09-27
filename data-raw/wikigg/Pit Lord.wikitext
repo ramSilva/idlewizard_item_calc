@@ -1,0 +1,38 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 86
+*25 [[Attributes#Wisdom|Wisdom]]
+*25 [[Attributes#Spellcraft|Spellcraft]]
+|unlock=
+*Reach Character level 100
+*{{PetTooltip|Daemon}} level 100
+|description=''Mighty Lords of the Pit answer to the call of only the strongest Demonologists. They are far more sadistic, powerful and bulky than common demons, and grow in power even faster.''
+}}
+
+== Description ==
+Just as the lesser {{PetTooltip|pet_name=Daemon}}, vastly increases Mana profits based on their level and experience, yield Mana periodically and gain [[Experience#Pet Experience|experience]] only through {{ClassTooltip|class_name=Demonologist}} spells. Also increases the efficiency of Evocation spells.
+
+== Pet Abilities ==
+
+Multiplies profits by:
+<br><math>\log_{10}^{2}(X+1) \times P \times L^{2.5} \times 50\,000 + 1</math>
+
+
+Generates mana every 30 seconds equal to:
+<br><math>M^{1.01} \times \left( 75 \times \log_{10}(P) + 30 \right)</math>
+
+Multiplies Evocation efficiency by:
+<br><math>\log_{10}(P + 1) \times L \times 0.025 + 1</math>
+
+
+where:
+* <math>X = \text{Total Pet Experience}</math>
+* <math>P = \text{Pet Abilty Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>M = \text{Mana per Sec}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]
+[[Category:Wizard]]

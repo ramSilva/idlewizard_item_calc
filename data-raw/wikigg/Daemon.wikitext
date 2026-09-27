@@ -1,0 +1,34 @@
+{{PetInfobox
+|selection=Character level 15
+|unlock=25 Circles of Power
+|description=''A wicked fiend, summoned directly from Hell.''
+}}
+
+== Description ==
+Massively increases sources' profits based on pet level. Yields mana every 10 seconds based on mana/sec.
+
+Can only gain [[Experience#Pet Experience|experience]] from [[Demonologist]] spells.
+
+While limited to only one class, the Daemon is the sole reason Demonologist works well in early on. Its massive source income bonus easily outclasses that of the Golem.
+
+A brand new, level 1 Daemon freshly summoned onto a level 18 [[Demonologist]] has a mana generation rate equal to your Mana Per Second, just in 10-second batches. It only skyrockets from there, since the boost it gets from the Demonologist affects both the passive source bonus AND the mana generation rate, effectively multiplying with itself.
+
+== Pet Abilities ==
+
+Multiplies profits by:
+<br><math>\log_{10}^{1.15}\left(X + 1\right) \times P \times \frac{L}{4} + 1</math>
+
+
+Generates mana every 10 seconds equal to:
+<br><math>(3 \times M)^{0.98} \times P \times 10</math>
+
+where:
+* <math>X = \text{Total Pet Experience}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Abilty Power}</math>
+* <math>M = \text{Mana per Sec}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

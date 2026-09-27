@@ -1,0 +1,66 @@
+{{PetInfobox
+|selection={{ClassTooltip|Abolisher}} only
+|description=''The Doppelganger is the Abolisher's signature Pet. It is a creature from the negative plane, and is, technically, a direct opposite of a soul. It and its master exist in an eternal struggle for control over their host body. Should both collide, their essence would cancel each other out, and the more robust one will be the only one left, though severely weakened. Thus, it is essential for the Abolisher to keep its influence at bay at all times, and grow stronger alongside the creature.''
+}}
+
+== Description ==
+Available only to the {{ClassTooltip|class_name=Abolisher}} class. Bestows a lot of different bonuses, unlocking more as it reaches higher level.
+
+Gains [[Experience#Pet Experience|experience]] through spells only, depending on Summoning Efficiency. When {{SpellTooltip|spell_name=Materialise Doppelganger}} is not assigned to a spell scroll, loses 1/3 level each second.
+
+== Pet Abilities ==
+
+On ability activation (every 1 second), grants 1 [[Sources|mana source]] whose cost must not exceed:
+<br><math>1000 \times M</math>
+
+From level 40, multiplies Shards Pool capacity by:
+<br><math>P^{0.02} \times L^3 \times 10000 + 1</math>
+
+
+From level 60, autoclicks once per 2 seconds.
+
+From level 80, multiplies spell shards per click by:
+<br><math>P^{0.25} \times L \times 0.1 + 1</math>
+
+From level 100, multiplies spell shards per second by:
+<br><math>P^{0.2} \times L \times 0.5 + 1</math>
+
+From level 120, multiplies profits by:
+<br><math>P^{0.25} \times L \times C \times 0.1 + 1</math>
+
+From level 140, multiplies Evocation efficiency by:
+<br><math>P^{0.25} \times L \times S^{0.3} \times 0.1 + 1</math>
+
+From level 160, multiplies Incantation efficiency by:
+<br><math>P^{0.1} \times L \times 0.1 + 1</math>
+
+From level 180, multiplies Mysteries power by:
+<br><math>P^{0.2} \times L \times (D + 1) + 1</math>
+
+
+where:
+* <math>M = \text{All Mana this Realm}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>C = \text{Character Level}</math>
+* <math>S = \text{Spells Cast this Exile}</math>
+* <math>D = \text{Enchanting Dust Collected this Exile}</math>
+
+== Experience Gain ==
+Loses experience each second, while {{SpellTooltip|spell_name=Materialise Doppelganger}} is '''not''' on the spell panel, equal to:
+<br><math>\frac{N}{3}</math>
+
+''Note: There is a 2 second buffer after removing {{SpellTooltip|spell_name=Materialise Doppelganger}} before XP loss resumes.''
+
+Accrues experience through {{SpellTooltip|spell_name=Materialise Doppelganger}}. This is disbursed at a maximum rate per second, equal to:
+<br><math>N \times 2</math>
+
+where:
+* <math>N = \text{Pet Experience Needed for Next Level}</math>
+
+
+''Note: Doppelganger's experience needed for next level is the same as other T1 pets.''
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]

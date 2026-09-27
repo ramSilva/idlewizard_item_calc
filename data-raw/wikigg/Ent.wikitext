@@ -1,0 +1,49 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 80
+*30 [[Attributes#Dominance|Dominance]]
+|unlock=
+*Reach 1e5 autoclicks
+*{{PetTooltip|Pixie}} level 100
+|description=''A towering forest dweller, created by druids to protect the Wild.''
+}}
+
+== Description ==
+The upgraded version of [[Pixie]], with increased click profits and summoning efficiency based on level.
+
+Gains [[Experience#Pet Experience|experience]] through his autoclicks, even when offline.
+
+Easier unlock: Use the [[Void Milking]] challenge.
+
+== Pet Abilities ==
+
+Autoclicks:
+* <math>1 + \left\lfloor\frac{L}{20}\right\rfloor</math> times per second
+* with <math>\text{Click Profit}\ =\ 2^N \times \text{Hero Click Profit}</math>
+* with <math>\text{Crit Chance}\ =\ \text{Hero Crit Chance}</math>
+* with <math>\text{Crit Profit}\ =\ \text{Hero Crit Profit}</math><br><br>
+Multiplies Click Profit by:
+<br><math>2^{L/24} \times P^{0.85} \times L \times 12.5 + 1</math>
+
+
+Multiplies Summoning efficiency by:
+<br><math>\left(\frac{L}{2} \times P^{0.3} + 1 \right)^{0.5} + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>N = \text{Active Summoning Spells}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Gains experience from his autoclicks, earning this amount per click:
+<br><math>(1 + F) \times M</math>
+<br>where:
+*<math>F = \text{Fixed Pet XP Bonus}</math>
+*<math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]
+[[Category:Wizard]]

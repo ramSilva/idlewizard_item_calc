@@ -1,0 +1,14 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Weapon Effects==
+The following [[Weapons]] receive the bonus charging speed effect when equipped alongside {{PAGENAME}}:
+* {{ItemTooltip|Black Blade}}
+* {{ItemTooltip|Branch of the Great Cycle}}
+* {{ItemTooltip|Chiropteric Rod}}
+* {{ItemTooltip|Reality Prism}}
+* {{ItemTooltip|Redeemer}}
+* {{ItemTooltip|The Accumulator}}
+* {{ItemTooltip|Thunderbird}}
+
+[[Category:Items]]
+[[Category:Legs]]

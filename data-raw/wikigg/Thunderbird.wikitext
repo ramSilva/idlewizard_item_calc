@@ -1,0 +1,32 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants an augmentation ability charged by casting {{SpellTooltip|spell_name=Lightning Bolt}}. When used, Evocation spells gain increased Evocation Efficiency based on amount of charges and [[Sources#Arcanaspring_-_Arcanist|Arcanasprings]], and expend a charge each time they are cast.
+
+==Details==
+
+Multiplies Evocation efficiency by:
+<br><math>\frac{(C^{1.5} \times B + 1)^R}{5} + 1</math>
+
+
+Each {{SpellTooltip|spell_name=Lightning Bolt}} cast grants: 
+
+<math>5 \times (1 + R)</math> charges. 
+
+Can hold up to 10000 charges. Each Evocation cast (except {{SpellTooltip|spell_name=Lightning Bolt}}) consumes 1 charge.
+
+where:
+* <math>B = \text{Current Amount of Arcanasprings}</math>
+* <math>C = \text{Weapon Charges}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

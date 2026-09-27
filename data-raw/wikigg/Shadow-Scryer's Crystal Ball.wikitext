@@ -1,0 +1,13 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}}
+
+==Description==
+Grants passive ability to reduce active spell duration on each evocation cast.
+
+==Details==
+Every evocation cast skips 50% of the remaining duration of all active spells.
+
+==Lore==
+Many crystal balls are simple glass, novelties for the masses or raw material for practitioners of the arts to weave their own enchantments upon. However, when an Ebonsand Behemoth's master falls in battle, a few grains of sand that once made it up are imbued with a portion of its essence - and the last vengeful commandments of its fallen master. Crystal balls made from this sand have a shred of sentience of their own and tend to show those foolhardy enough to gaze into them gruesome visions of their own demise. Most mages have better things to do than argue with the capricious spirits that occupy these orbs. However, those who call themselves shadow-scryers prize such rarities. Scryers spend months at a time learning each new orb's peculiarities until they can tame it and enlist its aid. The orbs can aid spellcasting, demonstrating a myriad of forgotten techniques to hasten spellcasting, saving a heartbeat here and a syllable there. Those who gaze long enough find themselves weaving whole alphabets of arcane language effortlessly as one spell compounds upon the next.
+
+[[Category:Items]]
+[[Category:Weapon]]

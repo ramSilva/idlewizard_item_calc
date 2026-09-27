@@ -1,0 +1,3 @@
+{{ItemPage|{{PAGENAME}}}}
+[[Category:Research]]
+[[Category:Items]]

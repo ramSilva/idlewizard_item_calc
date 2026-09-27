@@ -1,0 +1,33 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated.
+
+==Details==
+For 10 seconds, each manual consumes all available Hallowed Clicks, granting the sum of their profit, equal to:
+
+<math>P_{C} \times (1 + C_{C} \times C_{P} / 100) \times P_{H} \times N^H</math>
+
+Each evocation cast charges by:
+
+<math>(R + 1) \times 5\%</math>
+
+where:
+* <math>P_{C} = \text{Click Profit}</math>
+* <math>P_{H} = \text{Hallowed Click Profit}</math>
+* <math>C_{C} = \text{Crit Chance}</math>
+* <math>C_{P} = \text{Crit Profit}</math>
+* <math>N = \text{Hallowed Clicks Consumed}</math>
+* <math>H = 1 + 3 \times R^2</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

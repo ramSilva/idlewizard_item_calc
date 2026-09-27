@@ -1,0 +1,59 @@
+{{PetInfobox
+|title = Mechanos Apexis
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 170
+*100 [[Attributes#Intelligence|Intelligence]]
+*200 [[Attributes#Mastery|Mastery]]
+|unlock =
+* 1e5 Enchanting Dust collected this [[Exile]]
+* Reach 1e12 [[Skipped Time]] this [[Exile]]
+*Any level 100 [[:Category:Wizard#T2_Pets|Tier 2 Pet]] among
+**{{PetTooltip|Anima Construct}}
+**{{PetTooltip|Archivist}}
+|description = ''Golem is a strong but simple servant; Simulacrum is a science project on artificial mind; Anima Construct is a source of power - all focused on some sort of support aspect or tertiary purpose. Mechanos Apexis is a bit different. It's an engine of war, complete with the best technology, materials, tactical data and designed with nothing but battle in mind. As high as a wizard tower, clad in alloys created with facilities from far future and armed with the iconic Black Beam, this might be the one ally of mankind that can fight the unimaginable horrors all around.''
+}}
+
+== Description ==
+Increases evocation efficiency, based on pet time. Increases incantation spells efficiency. Autocasts {{SpellTooltip|spell_name=Kelphior's Black Beam}} on its own even if it's not selected on the spell panel.
+
+Experience gained per second depends on number of upgrades bought and time the pet is active.
+
+== Pet Ability ==
+
+Multiplies Evocation efficiency by:
+<br><math>P \times L^{1.25} \times (T + 1)^4 \times 0.05 + 1</math>
+<br>After 3 days:
+<br><math>P \times L^{1.25} \times \left( (T - 2)^{5.25} + 256 \right) \times 0.05 + 1</math>
+
+
+Multiplies Incantation efficiency by:
+<br><math>L \times 0.25 + 1</math>
+
+
+Casts {{SpellTooltip|spell_name=Kelphior's Black Beam}} (if available) on ability activation, every:
+<br><math>\operatorname{floor}\left((1 - T)^3 \times 64\right) + 1</math>
+<br>seconds (minimum 1).
+* Activation speed is '''not''' affected by Time Distortion (see {{SpellTooltip|spell_name=Temporal Distortion}}).
+* Activation speed '''is''' affected by Pet Abilty Charging Speed (see {{ItemTooltip|item_name=Collar Of Obedience}}, {{ItemTooltip|item_name=Whiplash}}).
+* Timeskips (see {{SpellTooltip|spell_name=Refined Wormhole}}) will simulate casts with base activation speed (i.e. no collar/whip/TD).
+
+
+where:
+* <math>T = \frac{\text{Real Pet Time, in Seconds}}{86400} = \text{Real Pet Time, in Days (Unrounded)}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>\left(U^T + F \right) \times M</math>
+
+where:
+* <math>U = \text{Bought Upgrades}</math>
+* <math>T = 0.04 \leq \text{Real Pet Time, in Days} \leq 1</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

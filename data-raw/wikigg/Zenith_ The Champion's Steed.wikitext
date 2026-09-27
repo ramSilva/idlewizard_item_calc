@@ -1,0 +1,18 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}}
+
+==Unlocking==
+This Mount ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+It is unlocked by performing [[Trials]], and progress is only counted when the Mount slot is unlocked ([[Paragon]] 26 or 1e380 [[Mysteries]]).
+
+The amount of progress each Trial contributes varies based on its type. Progress is determined as follows:
+<pre>
+({Patience trial count} + {Skill trial count} * 0.5 + {Valor trial count} * 0.3 + {Talent trial count} * 0.25 + {Innovation trial count} * 0.1) / 10
+
+Unlocks when quotient is greater than or equal to 1
+</pre>
+
+<small>''NOTE: Credit for detailed information above goes to the relevant community members from the game's [https://discord.gg/DuqkuJfhTz Discord].''</small>
+
+[[Category:Items]]
+[[Category:Mount]]

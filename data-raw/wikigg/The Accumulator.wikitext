@@ -1,0 +1,31 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Adds the {{SpellTooltip|spell_name = Ritual Of Potency}} spell to your spellbook. On activation increase the amount of {{SpellTooltip|spell_name = Ritual Of Potency}} casts.
+
+==Details==
+The {{SpellTooltip|spell_name = Ritual Of Potency}} spell is available in your spellbook.
+
+On activation, consumes all charges to increase {{SpellTooltip|spell_name = Ritual Of Potency}} casts by:
+
+<math>C</math>
+
+Each spell cast grants:
+
+<math>(R \times 4)^2 \times 0.1 - 0.009</math>
+<br>weapon charges.
+
+where:
+* <math>C = \text{Weapon Charges}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

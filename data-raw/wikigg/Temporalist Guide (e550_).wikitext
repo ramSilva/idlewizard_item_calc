@@ -1,0 +1,378 @@
+{{Guides}}
+{{ClassOverview
+| class = Temporalist
+| difficulty = 3
+| exilelength = 3
+| itemreq = 3}}
+
+{{VersionUpdated|1.61}}
+{{GuideIntroClass|Temporalist}}
+
+Rough range for this guide: e550 and higher [[Mysteries]].
+
+==Introduction==
+This guide is specifically for after e550 Mysteries, meaning that you have {{PetTooltip|Mechanos Apexis}} unlocked and can use it. It has many changes from the [[Temporalist Guide (e300-e550)|pre-e550]] version.
+
+{| class=wikitable
+|-
+! The Good !! The Bad !! The Ugly
+|-
+| * Best time scaling in the game <br> * Very good at gaining character levels, and autoclicks/VEs/spells cast for achievements <br> || * Very low base power, needs longer exiles than other classes to get large profits <br> * Doesn't have great offline scaling || * Without enough skipped time, character ability falls victim to significant +1s due to huge divisors <br> 
+|}
+
+{{Warning|Legendary {{ItemTooltip|item_name =Temporal Stabilizer}} is ''very strongly recommended''. As with the previous guide, and as mentioned in the table above, Temporalist has a large divisor in its character ability, and you need to reach a certain point of skipped time in order to make the +1 not significant, so having more skipped time is very important. Even besides that, more skipped time is a strong bonus by itself, and worth getting.}}
+
+==Attribute Points==
+Your starting attributes should be :
+* Intelligence : 155
+* Insight : 140 (+60 from {{ItemTooltip|Legacy}} and {{ItemTooltip|Netherfist}}, 200 total)
+* Spellcraft : 250
+* '''*Wisdom : 200*'''
+* Dominance : 0
+* Patience : 150
+* Mastery : 250
+* Empathy : 175 (+75 from {{ItemTooltip|Bite Sleeves}}, although if you don't have it legendary then don't bother getting to 250 until much later)
+
+{{Note|If moving from the pre-e550 Tempo guide, you will notice that we have 200 WIS now. When we move to {{PetTooltip|Mechanos Apexis}}, we lose the shard pool efficiency from {{PetTooltip|pet_name=Risen Giant}}, gain extra incantation scaling and cast a lot of total spells.}}
+
+Next priorities are 250 MAS, then INT in 25-point intervals until you get 230 (+20 from {{ItemTooltip|Circlet Of Deep Thoughts}}). Then, 50 more INS (to get 250 during VM). Then, get PAT 250. If you don't have EMP 250 from Bite Sleeves, get that next.
+
+Now, you have all relevant perks during burst. Before dumping into VERS, make sure to put points into every att besides WIS/DOM until you cannot put any more into them (250). 
+
+Once you have 250 (240 with maxed Innate Aptitude) VERS, reallocate it into DOM. The DOM150+250 perks are worth more than the VERS you're losing, unless you have Unnatural Talents (in which case it can be close and you'll have to assess for yourself). You do not need to max WIS/DOM - if you have maxed Innate Aptitude, for example, you only need 240 in those two, unlike the other 6 attributes in which you want 250 anyway.
+
+==Phase Scaling==
+Here's a scalings table, updated as of v1.67. These scalings are the result of the strategies in this guide, and do not include all possible variations in progress (for example, Spell Mastery 10/20/30/40), but are, generally speaking, close enough. Most values are rounded, and many are based on approximations of logarithms at least in part.
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! Stat !! Burst !! Void Mana !! Buildup !! Pet Leveling
+|-
+| Evocation Eff || 1 || 0 || 0.028 || 0
+|-
+| Incantation Eff || 4 || 1.27 || 0.028 (with {{SpellTooltip|Primal Power|display_name=PP}})|| 0
+|-
+| Summon Eff || 0 || 0 || 0 || 0.003
+|-
+| CAP || 1 || 0 || 0.014 || 0
+|-
+| PAP || 1 || 0 || 0.028 || 0
+|-
+| VPE || 0 || 1 || 0 || 0
+|-
+| Idle Bonus/Void Profit || 1 || 0 || 0 || 0
+|-
+| Char EXP* || 1.34 || 0.17 || 0.12 || 0.003
+|}
+<nowiki>*</nowiki>Char EXP scaling (except in burst, as Tempo has a unique scaling) is reliant on getting to full new levels, so only char EXP increases with a total CEXP increase in increments of 1.09x will actually do anything. It is also worth noting that Char EXP here means ''total'' character EXP increase - which is not the same as Source EXP or Action EXP. There are no pure sources of CEXP in items in the game at the moment.  To approximate, Source EXP is essentially ^.85 to real CEXP gain, while Action EXP is logged and usually not very notable.
+
+Some other numbers:
+* Total PEXP scaling: ~0.08
+
+Let's begin!
+
+{{SummarizeGuideBoxSets}}
+
+==Phases==
+===Overview===
+We start the run by using {{SpellTooltip|Refined Wormhole}} to maximize some pet effects, as pets "keep going" during the skipped time. We do this with {{PetTooltip|Greater Chimaera}} to max sources (which only takes a few seconds) and {{PetTooltip|pet_name=Pixie}} to generate a lot of autoclicks (usually 5-10min). We also cast {{SpellTooltip|Synthetic Entity}} for Void Entities during this time.
+
+Then, we switch to {{PetTooltip|Mechanos Apexis}} and begin our main buildup. We stack {{SpellTooltip|Quasi-incantation}}, skipped time, and {{SpellTooltip|Ley Overdrive}}/{{SpellTooltip|True Sorcery}}. We also devote a portion of our time to {{SpellTooltip|Conjure Primal Elemental}} for its large Pet EXP bonus.
+
+Then, we begin our burst: Void Mana, then snapping {{SpellTooltip|Stabilize The Flow}}, followed by {{SpellTooltip|Gem Resonance}}, and then finally swapping to our burst bar, where we can have 6 incantations because MA casts {{SpellTooltip|Kelphior's Black Beam}}.
+
+===Step 1: Setting Up the Run===
+
+{{GuideBox|pet=Greater Chimaera|pet1=pixie|
+spells=#0#CharLVL@61,2;93,2;65,2;71,2;110,2;67,1|
+items=#0#CharLVL@106;104;0;23;14;35;41;60;58;85;70;1008;210;300;410;405;90;2007;3007;504}}
+
+'''Goals:''' 
+
+* Max our sources with {{PetTooltip|Greater Chimaera}}
+* Build up Void Entities and autoclicks for character EXP
+
+Before we begin our main buildup, we want to build up some character experience, because Tempo scales its profits based on character exp (and also skips more time based on level). At the very start of the exile go to {{PetTooltip|Greater Chimaera}} to immediately max out your sources - it will take no time at all due to {{SpellTooltip|Refined Wormhole}}. After sources are maxed, swap to {{PetTooltip|Pixie}} to get autoclicks. 
+
+This gear is not worth upgrading until EVERYTHING else is done.
+
+Character experience from VE/clicks are logged, so you don't want to spend more than 5-10 minutes in this phase, or maybe 20 minutes for especially long exiles. Early on, this can result in ~1e9 VEs and ~1e14 ACs, whereas by the time you're approaching ascensions it might be more like 1e10 VEs and 1e15 ACs. Don't spend too long in this phase just to reach a certain number.
+
+{{Note|If you still don't have enough character experience to reach Refined Wormhole near-immediately, then you may want to spend a small amount of time on {{ClassTooltip|class_name=Chronomancer}} with this gear set and a similar spell set (Singularity beam + SE + Wormhole, Pixie) to get some character experience to unlock Refined Wormhole. By the time you get to this guide, though, that should be unnecessary.}} 
+
+===Step 2: Buildup===
+
+{{GuideBox|pet=Mechanos Apexis|
+spells=#1#PP/LO@57,2;61,2;93,2;65,2;110,2;67,1|
+spells1=#2#CPE@25,2;61,2;93,2;65,2;110,2;67,1|
+t-spells=Accum Buildup|
+t-spells1=CPE Buildup|
+itemtab=PP/LO Items|
+items=#1#PP/LO@101;113;6;24;14;32;41;68;56;85;77;1008;209;300;415;405;90;2007;3007;509|
+itemtab1=CPE Items|
+items1=#2#CPE@101;115;6;24;12;32;41;68;56;85;77;1008;212;300;415;405;90;2007;3008;509}}
+
+'''Goals:'''
+
+* Cast {{SpellTooltip|Quasi-incantation}} as MUCH as possible, as it is our best source of time scaling. This thing is insane. Just trust me.
+* Increase our skipped time with {{SpellTooltip|Refined Wormhole|display_name=Wormhole}}, to scale our class ability
+* Have {{PetTooltip|pet_name=Mechanos Apexis}} active, since it scales on real pet time
+* Split up our buildup between different spells in our flex slot (see note on Cast Ratios below).
+
+* {{SpellTooltip|Refined Wormhole|display_name=Wormhole}} is log(Evo), so more Evo Eff doesn't help a ton.
+* {{ItemTooltip|Temporal Scabbard|display_name=Spacepants}} and {{ItemTooltip|Eerie Turquoise Phylactery|display_name=Eerie}} should be enchanted to roughly 7-10 to keep up with QI/Wormhole costs. With spell memetics, you'll likely need more.
+
+'''Gear Replacements:''' 
+* {{ItemTooltip|Stabilizing Pauldrons}} and {{ItemTooltip|Timeshroud}}, are '''especially important to upgrade''', because they increase max Time Distortion, which directly increases your time skipped, and also massively increases profits from {{SpellTooltip|Stabilize The Flow}}. Prioritize them over any other gear in this set.{{ItemTooltip|Temporal Stabilizer}} is also equally, if not more, important, if you don't already have it maxed.
+* If you don't have {{ItemTooltip|Charged Fin-Wing}}, use {{ItemTooltip|Empowered Water}}.
+* If you don't have {{ItemTooltip|Ritual Disk}}, you can use {{ItemTooltip|Zenith, The Champion's Steed|display_name=Zenith}}. Disk is far better, though - prioritize completing the Brain Fog triumph if you plan to play Temporalist in the future.
+
+Switch to {{PetTooltip|pet_name=Mechanos Apexis}}, and begin our main buildup. This will last for the vast majority of the exile. Temporalist enjoys longer exiles, because it has incredible time scaling, and MA's cast rate of KBB doesn't max out until 24h. However, you can still succeed with shorter runs; see what works for you. You lose nothing by bursting, besides the time spent not casting our buildup spells. For the majority of our exile, we use mostly the same spell and gear set as before, with some minor differences.
+
+'''Cast Ratios''': In the second spell slot, we spend ~90% of the exile on {{SpellTooltip|Ley Overdrive}}, and the remaining 10% of the time on {{SpellTooltip|Conjure Primal Elemental}}. If you have low Evo Eff, meaning {{SpellTooltip|Primal Power}} increases your skipped time per wormhole by a significant (generally >30%) amount, then you should also spend some time on that. However, in this range, if you have full legendary gear, then that generally doesn't happen.
+
+{{Note|Before spending too much time on buildup, do a quick burst (Steps 3-5) in order to get more upgrades (potentially more evocation efficiency, and more experience for MA).}} 
+ 
+
+===Step 2.5: Offline Buildup===
+
+{{GuideBox|pet=Mechanos Apexis|
+spells=#8#OfflineScry@61,2;57,2;25,2;93,2;65,2;67,2|
+items=#8#OfflineScry@115;101;6;24;14;32;41;68;56;88;77;1023;209;300;415;414;90;2007;3008;509}}
+
+'''Goals:'''
+
+* Maximize buildup while offline
+
+'''This section of the guide was written before Wormhole applied offline (v1.58, June 2024). As of v1.77 (Oct 2025), Wormhole is, to my knowledge, still slightly bugged to not work fully while offline, but this may be fixed in the future. Right now, we still need to do this offline phase to make the most of it, but at some point in the future we will not have to.'''
+
+This section of the guide only applies if you go OFFLINE (e.g. closing the game). Spell effects do not happen while offline, meaning that staying in our normal buildup set will only give us TS and QI casts. In order to squeeze a bit more out of our time while offline, we're going to scry our spells!
+
+'''Gear Replacements/Notes:''' 
+
+* If you don't have {{ItemTooltip|Ritual Disk}}, {{ItemTooltip|The Rubedo Engine|display_name=Rubedo}} is a replacement (although still significantly worse). {{ItemTooltip|Warp Basilisk}} can be a replacement of Rubedo, too, although it doesn't affect {{SpellTooltip|Conjure Primal Elemental|display_name=CPE}}.
+* {{ItemTooltip|The Magnifier|display_name=Magnifier}} is here to multiply TS active casts by 2. Using {{ItemTooltip|Timeshroud}} could theoretically improve cast rates because of the increased max of time distortion, but in testing I didn't notice any difference, so go with Magnifier. 
+* {{ItemTooltip|Stabilizing Pauldrons}} is in a similar vein to Timeshroud, except there's nothing else in the slot that matters. You should have these maxed anyways, but you can drop them for seemingly minimal effect.
+* {{ItemTooltip|Temporal Scabbard|display_name=Spacepants}} is here to increase QI casts/s. Nothing else matters in their slot. 
+* {{ItemTooltip|Eerie Turquoise Phylactery|display_name=Eerie}} can be used in place of {{ItemTooltip|Hectic Lime Phylactery|display_name=Lime}} if you can't sustain QI without it, but ideally you use Lime.
+* {{ItemTooltip|Charged Fin-Wing}} is just here for the increased god EXP. If you don't have it, you can leave the slot empty.
+* If a slot is empty, the items in it don't matter. Additionally, anything beyond this point can be ignored if you don't have it; they don't actively do anything to increase casts or benefit buildup.
+* {{ItemTooltip|Light Of Eighth Star}} and {{ItemTooltip|Beholding Eye}} are just here for increased jar caps, because this is an offline set.
+* Similarly, {{ItemTooltip|Spell Shards Fractalization}} is just here for shard gain because scrying can often be shard-intensive. This is especially helpful post-spell memes - you might even want to add in a couple other shard items in free slots, like {{ItemTooltip|Easymind Hat}}. These shard items are also the only reason is here.}}
+
+
+It's not worth stacking {{SpellTooltip|Superposition}} very much, but we don't cast it anywhere else, so it may be worth swapping out {{SpellTooltip|Conjure Primal Elemental|display_name=CPE}} for some time (i.e. like 10 minutes total in a days-long exile. Seriously, not much).
+
+This setup is simply '''maximizing''' offline profits. This is still '''significantly worse than being online''', and if you're playing Tempo, you should be trying to keep the game open as much as possible.
+
+===Step 3: Pet XP Phase===
+
+{{GuideBox|
+pet=Mechanos Apexis|
+spells=#9#PetXP@26,2;21,2;25,2;110,2;65,2;67,1|
+items=#9#PetXP@115;106;9;27;13;31;41;66;57;87;70;1008;203;300;406;415;96;2009;3007;506}}
+
+'''Goals:'''
+
+* Gain as much Pet XP as possible!
+
+===Step 4: Void Mana Phase===
+
+{{GuideBox|
+pet=Mechanos Apexis|
+spells=#3#VM@30,2;34,2;65,1;67,1;3,0;61,0|
+items=#3#VM@111;113;5;25;15;30;49;68;55;89;78;1005;202;309;412;407;99;2010;3006;503}}
+
+'''Goals:'''
+
+* Gain as much Void Mana as possible! 
+
+We use {{SpellTooltip|Void Radiance}} because we can't swap off of MA without losing a ton of bonuses from time. This phase should last anywhere from 1-5 minutes, and not more than that.
+
+* If you don't have {{ItemTooltip|Crystallized Echo}}, you can use {{ItemTooltip|Ritual Disk}}. Nothing else will help here. <br>* I put KBB and TS on the bar here as reckless autocasting. After reaching spell memetics, this isn't really sustainable without shard gear, so you can just make them not cast. The only point of KBB is to quickly stack up Reality Prism to max (which will happen anyways, and is only actually needed for the first burst), and TS is only here for its passive to boost your phylactery.
+
+===Step 5: Snap Phase===
+'''Goals:'''
+
+* Snap {{SpellTooltip|Stabilize The Flow}} and {{SpellTooltip|Gem Resonance}}.
+
+Temporalist has 2 different spells it can snap: {{SpellTooltip|Stabilize The Flow|display_name=StF}} and {{SpellTooltip|Gem Resonance|display_name=GR}}. In this game, "snap" means that a spell will "snapshot" the incantation efficiency you had when you cast the spell, and retain that for its entire duration. You can utilize this by equipping as much incantation efficiency as possible, casting these spells, and then swapping to burst gear. StF and GR require slightly different sets to snap, because StF also snaps how much time distortion it consumes. We first snap StF, as it has a longer duration:
+
+{{GuideBox|
+pet=Mechanos Apexis|
+spells=#4#TD-Charge@65,2;67,2;3,2;17,0;69,0;4,0|
+itemtab=TD Charge|items=#4#TD-Charge@100;113;7;23;18;32;41;68;56;85;72;1005;209;301;411;409;91;2007;3001;509|
+itemtab1=StF Snap|items1=#5#STF-Snap@100;113;7;23;18;32;41;68;56;85;72;1005;209;301;411;409;91;2007;3001;509|spells1=#5#StF-Snap@68,1;73,0;61,0;17,0;69,2;4,0|spells2=#6#Gem-Snap@68,1;57,2;61,2;17,2;69,0;4,2|items2=#6#Gem-Snap@100;113;7;23;18;32;40;68;56;84;72;1005;209;301;411;409;91;2007;3001;509|itemtab2=Gem Snap|t-spells=TD Charge|t-spells1=StF Snap|t-spells2=Gem Snap}}
+
+These spell sets are the pre-burst setup, though this specific type of setup is also known as a [[Snap|"Snap"]]. Here's how it goes in this case: 
+# Swap to TD Charge and wait for 30x TD. KBB is on the bar so that your weapon charges up, if necessary. 
+# Swap to StF Snap. This will automatically cast Stabilize The Flow for you, with the snapped x30 TD value. Revert is active to ensure it doesn't run out, and other burst spells are added to charge them up with shards, if needed
+# Swap to Gem Snap. This will automatically cast Gem Resonance with all of your incantation efficiency bonuses. Revert is active here for the same reason as above.
+# Swap to Burst and enjoy the profits. If needed, you can swap back to the Gem Snap loadout to activate revert, which will refresh the duration of both Stabilize The Flow and Gem resonance.
+'''Gear Replacements''':
+
+* At enchant 34+5, {{ItemTooltip|Anointed Ashes}} is better than {{ItemTooltip|Heart of the Storm}}.
+* {{ItemTooltip|Empowering Chestguard}} and {{ItemTooltip|Chronoboost Ring}} do not need enchants.
+
+This seems complicated, but I promise it isn't actually that hard! You will have to get used to doing this, though.
+
+===Step 6: Burst Phase===
+'''Goals:''' 
+
+* Maximize profit!
+* {{PetTooltip|pet_name=Mechanos Apexis|display_name=MA}} will cast KBB, so we can have 6 incants on the bar!
+
+Burst time! If desired, you can use {{SpellTooltip|Revert}} to refresh StF and GR to burst for a longer period of time (replacing any of the first 4 spells in this spell set will work just fine)
+
+{{GuideBox|
+pet=Mechanos Apexis|
+spells=#7#Burst@73,2;57,2;61,2;17,2;69,2;4,2|
+itemtab=Enchant 11+5|items=#7#Burst11+5@104;113;6;29;11;34;48;67;59;83;76;1005;207;300;411;408;92;2003;3005;508|
+itemtab1=Enchant 15+5|items1=#7#Burst15+5@104;113;1;29;11;34;48;67;59;83;76;1005;207;300;411;408;92;2003;3005;508|
+itemtab2=Enchant 22+5|items2=#7#Burst22+5@104;113;1;29;14;36;48;67;59;83;76;1005;207;300;411;408;92;2003;3005;508|
+itemtab3=Enchant 34+5|items3=#7#Burst34+5@104;113;1;29;14;36;48;67;59;84;76;1005;207;300;411;408;92;2003;3005;508}}
+
+* {{ItemTooltip|Lucky Amulet}} is often better than {{ItemTooltip|Miniaturized Accelerator}} unless you are doing longer realms and have a lot of catalysts. The formula being roughly: 1.4e8*(1.25/1.2)<sup>(Ench*10/3)</sup> catalysts needed for Lucky to win. This happens at 1.6e8 (enchant 1) - 3.2e10 (enchant 40) cats.
+* Assuming you can reach Empathy 250 without {{ItemTooltip|Bite Sleeves}} then {{ItemTooltip|Focusing Bracers}} will be better. This is true until you level the Obscure Talents Heritage to level 9, at which point {{ItemTooltip|Bite Sleeves}} wins with or without Empathy 250.
+* If you don't have {{ItemTooltip|The Rubedo Engine|display_name=Rubedo}}, you can use {{ItemTooltip|Zenith, The Champion's Steed|display_name=Zenith}}.
+* When prioritizing what to upgrade, focus on high-enchant gear. Enchant 22 isn't ''that'' high, and there's often only a very minor loss when you're at "too low" of an enchant level. Absolutely do not upgrade things that are below the 11+5 or even 15+5 mark, is my recommendation.
+
+==Enchant Priority==
+How to read this: -0 is your highest bonus(es). Whatever enchant level you get those item(s) to, all other tiers are based on that. For example, if Reality Prism is enchant level 20+5, then The Rubedo Engine should be 16+5. The number in the parentheses next to each item is their exact profit bonus per enchant.
+
+The first column is only including BiS items at highest enchants. None of the items below 15+5 are included, and the ones in between that and the highest are in the Conditional column, with a note as to when they are in that priority tier.
+
+If you want more exact assignments, that can account for only being able to level up some of the items, then use this spreadsheet: https://docs.google.com/spreadsheets/d/1rN-1hM4csPTn9KcIcIPmHsEDNR-552syJroEFleJd-U/edit?usp=sharing
+
+{| class=wikitable
+|-
+! Priority !! Items !! Conditional items
+|-
+| -0 || {{ItemTooltip|Reality Prism}} (42.92%) || 
+|-
+| -1 || {{ItemTooltip|The Clockcarers}} (30%), {{ItemTooltip|Chronoboost Ring}} (30%) ||
+|-
+| -2 || {{ItemTooltip|Tranquil Spaulders}} (25%), {{ItemTooltip|Bite Sleeves}} (20%), {{ItemTooltip|Destabilized Evocations}} (20%), {{ItemTooltip|Collar Of Obedience}} (20%), {{ItemTooltip|Circlet Of Deep Thoughts}} (25%), {{ItemTooltip|Seclusion Shell}} (25%), {{ItemTooltip|Folds of Magma}} (20%), {{ItemTooltip|Boots Of Concentration}} (25%), {{ItemTooltip|Flaming Cape}} (20%), {{ItemTooltip|Murmuring Spellbook}} (20%), {{ItemTooltip|Necrotic Powerstone}} (20%), {{ItemTooltip|Lucky Amulet}} (25%)/{{ItemTooltip|Miniaturized Accelerator}} (20%), {{ItemTooltip|Pitch-black Cage}} (20%), {{ItemTooltip|Void Sampling}} (20%), {{ItemTooltip|Anomalous Essence}} (20%), {{ItemTooltip|Insidious Lure}} (22.5%) || {{ItemTooltip|Gemshoes}} (20%)/{{ItemTooltip|Fiery Grips}} (20%)/{{ItemTooltip|Arcane Engine}} (20%) if using, {{ItemTooltip|The Amplifier}} (28.38%) if it's used in burst (34+5 or higher)
+|-
+| -3 || {{ItemTooltip|Nethershackles}} (15%), {{ItemTooltip|Sash of Luxury}} (17.58%), {{ItemTooltip|The Bright Beacon}} (15%), {{ItemTooltip|Nethershell}} (15%), {{ItemTooltip|Nether Barrier}} (15%), {{ItemTooltip|Chaos Mantle}} (15%), {{ItemTooltip|Netherfist}} (15%), {{ItemTooltip|Nether Chain}} (15%), {{ItemTooltip|Netherloop}} (15%) ||
+|-
+| -4 || {{ItemTooltip|The Rubedo Engine}} (12.5%), {{ItemTooltip|Robust Tangerine Phylactery}} (10%), {{ItemTooltip|Ebon Mantle}} (10%), {{ItemTooltip|Devious Violet Phylactery}} (10%), {{ItemTooltip|Legacy}} (10%), {{ItemTooltip|Rich Bands}} (8.67%), {{ItemTooltip|Incantations Restructuring}} (8.67%), {{ItemTooltip|Spellweaving Kilt}} (8.67%), {{ItemTooltip|Empowering Handguards}} (8.67%), {{ItemTooltip|Habitstone}} (8.67%), {{ItemTooltip|Anima Core}} (8.67%), {{ItemTooltip|Heart of the Storm}} (8.67%), {{ItemTooltip|Torc Of Privilege}} (8.67%), {{ItemTooltip|Fiery Ring}} (8.67%) ||
+|-
+| -5 || {{ItemTooltip|Empowering Headguard}} (6.47%) ||
+|-
+| -6 || {{ItemTooltip|Artificer's Shoulderpads}} (4.49%), {{ItemTooltip|Intricate Crimson Phylactery}} (4.29%), {{ItemTooltip|Ritual Disk}} (4.29%), {{ItemTooltip|Crystallized Echo}} (5%) || {{ItemTooltip|The Amplifier}} (5.62%) - if not used in burst (below 34+5 enchants). 
+|}
+
+Also, 30% evocation items in buildup should be about -13, while 15% or 20% evocation items should be about -14. This is approximate, and changes depending on the exact amount of evocation efficiency you have, but around -14 is good enough and costs you almost nothing.
+
+{{ItemTooltip|Temporal Scabbard}} and {{ItemTooltip|Eerie Turquoise Phylactery}} should be enchanted to ~7-10+5 before spell memes. Scabbard should be higher than Eerie by a decent bit, because you can't use Eerie during our CPE buildup and it will need to sustain QI/wormhole on its own then.
+
+==Pantheon==
+With only the primary abilities unlocked (and so Chaos is also locked):
+
+Altermutus >> Procreogenus = Ardourium = Tempoaeverum (Veritallos and Animataelia's primary abilities are worthless for Temporalist)
+
+After unlocking everything:
+
+Cerebros > Altermutus >> Procreogenus > Chaos >> Ardourium = Tempoaeverum >>> Animataelia >> Veritallos
+
+> Means the gods should be kept somewhat close in level, with preference to the one on the left
+
+>> Means the one on the left should be kept fairly higher than the one on the right
+
+= Means the god effect is essentially equal. There is some *small* preference to Ardourium over Tempoaeverum due to the small benefit to buildup, but no more than 1 level worth over Tempoaeverum
+
+Animataelia and Veritallos have such small effects on Temporalist that they are hardly worth levelling at all (Animataelia is slightly worthwhile for a couple levels, the shard efficieny on Veritallos is an incredibly small scaling that only impacts the Wisdom profit perks).
+
+==Memetics==
+===Source Memetics===
+{{SourceMemes
+|class=Temporalist
+|gem=gild
+|grimoire=
+|fountain=inc
+|tree=exp
+|desk=evo
+|circle=cap
+|rift=pap
+|nexus=ac
+}}
+
+Rough priority is CAP = PAP > Incant > Evo >>>> cEXP.  Leave Autoclick at 1.
+
+Putting Autoclick profit on LTS means you end up with slightly more of them, increasing the effect of {{SpellTooltip|Ley Overdrive}} and {{ItemTooltip|Temporal Stabilizer}}, as well as some of the extra "profit based on nexi" upgrades Tempo gets.
+
+To calculate the ideal ingot distribution, use the following stat scalings with [[Spreadsheets#Source_Memes_Calculator|Muninn's Source Meme Calculator]]
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+!Stat !! Scaling
+|-
+| Incantation || 7.390
+|-
+| Character Ability Power || 1.008
+|-
+| Autoclick || 0
+|-
+| Evocation || 1.016
+|- 
+| Summoning || 0
+|-
+| Pet Ability Power || 1.016
+|-
+| Character Experience || 1.60
+|-
+| '''Additional Source Scaling to Nexus''' || 2.14
+|}
+These scalings and the above distribution assume 0 spell mastery. The Spell Mastery scalings may change the distribution of sources if you use it.
+
+===Spell Memetics===
+For use specifically with [[Spreadsheets#Spell Meme Calculator|Merp's spell meme spreadsheet]]. Find it in the Discord, and bug me to add it here later but the captcha hates me rn. If "Other" says "Cast rate", then check the "Cast rate matters?" box for that spell, and similarly for "Autoclick" -> "Autoclick profit?"
+
+Efficiency is the increase in profit per level. To do this manually, simply compare the values of <math> \text{Eff}^{(1/\text{Cost})} </math> - whichever is highest is the best. Accounting for casts scaling is a bit more involved, and probably shouldn't be done manually, but casts scaling is the power you raise the increase in casts to.
+
+{| class=wikitable
+|-
+! Spell !! Efficiency !! Cast scaling !! AC amt scaling !! AC profit !! Cast amt !! Cast rate
+|-
+| {{SpellTooltip|Kelphior's Black Beam|icon=hidden}} || 1.5 || 1 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Converge Timelines|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Void Radiance|icon=hidden}} || 1.244 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|True Sorcery|icon=hidden}} || 1.2 || 0.85 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ley Overdrive|icon=hidden}} || 1.2 || 0.75 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Quasi-incantation|icon=hidden}} || 1 || 11.1 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|Stabilize The Flow|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Stabilize The Flow (Enhanced)|icon=hidden}} || 1.245 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Superposition|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Gem Resonance|icon=hidden}} || 1.228 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Refined Wormhole|icon=hidden}} || 1.0098 || 3.43 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|Void Lure|icon=hidden}} || 1.0115 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Conjure Primal Elemental|icon=hidden}} || 1.0013 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| colspan="7" | For spells marked with a '''^''', replace the line above if you have it, do not add both.
+|-
+|}
+
+Always make sure you level your shard pool enough! This just requires testing - after leveling some memes a bit, try your buildup phase and see if they're casting properly.
+
+{{SpellTooltip|Quasi-incantation}} and {{SpellTooltip|Refined Wormhole}} are weird - QI has incredibly strong casts scaling, so it can be worth it to level it (with multiples of 2 or 3 only) to almost the same level as some of your burst spells, and RWH is also decently strong. However, you need to make sure that you can sustain it at the max cast rate, whatever that is for you, which relies entirely on the enchants of {{ItemTooltip|Eerie Turquoise Phylactery}} and {{ItemTooltip|Temporal Scabbard}}. It's worth noting that for QI specifically, it's also an option to down-level it during the exile, and then level it back up during VM/snap/burst because the increased cast amount every 3 levels is retroactive, although this won't affect the cast rate, which is also relevant.
+
+Leave the summon table in the top right empty.
+
+==Ascension Forms==
+{{ClassTooltip|Temporalist}} has access to two [[Ascension Forms]] at e1100 mysteries, {{ClassTooltip|Demiurge}} and {{ClassTooltip|Dread}}.
+
+Guides for each form continue here:
+* {{ClassTooltip|Demiurge|link=Demiurge Temporalist Guide|display_name=Demiurge Temporalist}}, with access to a ninth mana source.
+* {{ClassTooltip|Dread|link=Dread Temporalist Guide|display_name=Dread Temporalist}}, with access to a second pet.

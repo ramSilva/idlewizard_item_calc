@@ -1,0 +1,41 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants passive bonus to profits, based on amount of [[Collectibles|bats]] collected in this Exile, and can be activated to spawn a bat.
+
+The Bat Hunter upgrade [[Market]] purchase will automatically attempt to activate {{PAGENAME}} whenever a bat is caught.
+
+Sometimes referred to as "Batstick".
+
+The restriction on what can drop from bats created by {{ItemTooltip|Chiropteric Rod}} is stronger than the description implies. The things that are still dropable are Void Mana, Mana and Spellshards.
+
+== Details ==
+
+Multiplies profits by:
+<br><math>B^R + 1</math>
+
+
+Activate to spawn a bat.
+
+Charges passively over:
+<br><math>\frac{50}{\text{Tier} + 1}</math>
+<br>minutes.
+
+
+
+where:
+* <math>B = \text{Bats Collected This Exile}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4} + 1</math>
+
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+
+[[Category:Items]]
+[[Category:Weapon]]

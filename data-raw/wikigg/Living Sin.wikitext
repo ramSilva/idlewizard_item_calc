@@ -1,0 +1,33 @@
+{{PetInfobox|title = Living Sin
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 165
+*200 [[Attributes#Empathy|Empathy]]
+|unlock=
+* Reach highest pet level 1000 this [[Exile]]
+*{{PetTooltip|Pit Lord}} level 100
+|description=''Even the mighty Pit Lords are just servants of higher powers, and can be bound to do a summoner's bidding. These beings, called Living Sins by the demonology scholars, answer to no one. Ruling class of Hell, they command lesser demons and plot endlessly against both mankind and each other. As the Oni have re-emerged and grown powerful, intelligent and resourceful, the Sins have agreed to sign pacts of collaboration with the strongest among them. One should not mistake their sleek, lithe for a sign of physical weakness - when willing, these beings slice stone buildings and chop off tips of the mountains with a single gesture, or melt it into bubbling lava with nothing more than a stare.''}}
+
+== Description ==
+Increases profits based on pet's experience. Increases Evocation spells efficiency.
+
+Doesn't receive experience passively. Depends on Demonologist spells to learn.
+
+== Pet Ability ==
+
+Multiplies profits by:
+<br><math>\log_{10}^{5}(X + 1) \times P \times L^{4} \times 2 + 1</math>
+
+
+Multiplies evocation efficiency by:
+<br><math>P^{0.35} \times L^{2} \times 0.001 + 1</math>
+
+
+where:
+* <math>X = \text{Total Pet Experience}</math>
+* <math>P = \text{Pet Abilty Power}</math>
+* <math>L = \text{Pet Level} </math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

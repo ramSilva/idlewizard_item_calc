@@ -1,0 +1,44 @@
+{{PetInfobox
+|selection=Character level 30
+|unlock=Reach 1e5 Void Mana
+|description=''An aggressive and predatory denizen of the Void.''
+}}
+
+== Description ==
+Periodically yields void mana based on pet level and the void mana a single entity earns. Increases the effectiveness of void mana based on pet level and void mana earned per run.
+
+Gains [[Experience#Pet Experience|experience]] from entities collected. Doesn't work offline.
+
+This devious creature is mostly seen as the familiar of a [[Voidmancer]], as it synergizes really well with the massive amounts of [[Void Entities|void mana]] he can amass. It can work fairly well with the other classes as well.
+
+== Pet Abilities ==
+
+Yields Void Mana every 10 seconds equal to:
+<br><math>E \times P^{0.7} \times \frac{L}{220}</math>
+
+Multiplies Void Mana Profit by:
+<br><math>(V + 1)^{0.18} \times P^{0.5} \times L \times 0.00625 + 2</math>
+
+
+where:
+* <math>E = \text{Void Mana per Entity}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>V = \text{All Void Mana this Exile}</math>
+
+== Experience Gain ==
+Voidfiend accrues experience for each Void Entity collected:
+<br><math>(800 + F) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

@@ -1,0 +1,24 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Gives an ability which converts most of your current Exile's stats into a passive bonus to Profits.
+
+==Details==
+
+
+Grants a passive bonus which multiplies profits by:
+<br><math>\left(\log_{10}(M + 1) \times 0.025 + 1 \right) \times \left( \log_{10} \left( V^{0.85} + 1 \right) + 1 \right) \times \left( \log_{10}^2 \left( A^{1.8} + S^{1.5} + E^2 + 1 \right) + 1 \right)</math>
+
+
+where:
+* <math>M = \text{Maximum Mana Accrued}</math>
+* <math>V = \text{Void Mana Accrued}</math>
+* <math>A = \text{Autoclicks Accrued}</math>
+* <math>S = \text{Spellcasts Accrued}</math>
+* <math>E = \text{Void Entities Accrued}</math>
+
+==Lore==
+The first Hungerer ever brought to material plane proved to be quite a menace. Its owner thought it harmless when starved of magical energy, but he couldn't be more wrong. While he was asleep, the creature fed upon everything else it found in the town. Next morning, the owner woke up only to find himself upon his bed, amidst an empty crater, with his pet sleeping peacefully by his side - the Hungerer didn't harm him, clearly still loyal to its master. In the end, with heavy heart, he had to fight and kill it before it could cause any more destruction. But due to the creature's immense power and infusion by the Void, its skull seems to have some semblance of life on its own - still consuming whatever is fed to it. Having no body, though, it gives it back in form of pure energy. Perhaps, in some form, the Hungerer's still alive in the Void, thinking it's its master that feeds him on material plane.
+
+[[Category:Items]]
+[[Category:Weapon]]

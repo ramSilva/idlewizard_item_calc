@@ -1,0 +1,123 @@
+{{ClassInfobox
+|level=
+*[[Paragon]] level 22
+*Any level 120
+**{{ClassTooltip|Apprentice}}
+**{{ClassTooltip|Prodigy}}
+**{{ClassTooltip|Chronomancer}}
+|unlock=
+*Reach Character level 160
+*Use 1e4 {{SpellTooltip|Spell Focus}}
+|source=Ley Temporal Singleton
+}}
+==Description==
+
+Increase profits with time spent as this class, time skipped and with experience gained, increase evocation efficiency with time skipped and time spent as this class. Has access to powerful spells and upgrades directly affecting profits. Possesses upgrades that decrease basic costs of sources. Has access to Compressed Time resource, used for spells with time distortion effects.
+
+Unique [[Sources|Source]]: Ley Temporal Singleton, a combination of {{ClassTooltip|Prodigy|display_name=Prodigy's}} Ley Apex and {{ClassTooltip|Chronomancer|display_name=Chronomancer's}} Temporal Anchor, both of which replaces The Nexus.
+
+Upon reaching [[Paragon]] 42, Temporalist may take on either [[Ascension Forms]]: {{ClassTooltip|Demiurge}} or {{ClassTooltip|Dread}}.
+
+==Basic Design==
+Temporalist combines the insane timeskips of [[Chronomancer]] with the high numbers and profits of [[Prodigy]]. As a result, Temporalist is the king of buildup, with such combinations as the source cost reduction upgrades of prodigy and the ability to use {{SpellTooltip|spell_name = Refined Wormhole}} to rapidly max those sources with [[Simulacrum]], or using [[Pixie]] to rapidly build up autoclicks. Combine these with charging {{SpellTooltip|spell_name = Synthetic Entity}} faster than it can be cast (which can also be boosted by {{SpellTooltip|spell_name = Primal Power}}!), and Temporalist can collect every form of character XP at an insane rate.
+
+Temporalist also trades in {{SpellTooltip|spell_name = Wormhole}} for {{SpellTooltip|spell_name = Refined Wormhole}}, which doesn't clear active spells.{{SpellTooltip|spell_name = Refined Wormhole}} charges based on your current time distortion, encouraging you to use {{SpellTooltip|spell_name = Temporal Distortion|display_name = Temporal Distortion}} to maximize your time distortion. These can be combined to stack [[Prodigy|Prodigy's]] incantations much faster, such as {{SpellTooltip|spell_name = True Sorcery}} and {{SpellTooltip|spell_name = Quasi-incantation}}.
+
+While bursting, Temporalist can leverage his high level, number of sources, and time skipped to boost incantations such as {{SpellTooltip|spell_name = Alter The Laws}}, {{SpellTooltip|spell_name = Primal Power}}, {{SpellTooltip|spell_name = Converge Timelines}}, {{SpellTooltip|spell_name = Ley Overdrive}}, and {{SpellTooltip|spell_name = Superposition}}, which all benefit from stacks of {{SpellTooltip|spell_name = Quasi-incantation}}. He can also boost his level with {{SpellTooltip|spell_name = True Sorcery}}, which scales off casts this exile. This is an excess of powerful incantations, leaving Temporalist with more options than he can even cast on once! And that's without even including weaker incantations such as {{SpellTooltip|spell_name = Ritual Of Power}}, or evocations such as {{SpellTooltip|spell_name = Kelphior's Black Beam}}, {{SpellTooltip|spell_name = Singularity Beam}}, or {{SpellTooltip|spell_name = Refined Wormhole}}.
+
+Overall, Temporalist is a powerful class, with incredible versatility and more options than he can even leverage at once. He's undeniably the strongest class for collecting [[Achievements]], and for pushing to higher character levels, while also being potent for earning profits if you can balance his many talents.
+
+==Guides==
+* [[Temporalist Guide (e300-e550)|Temporalist Guide before T3 Pets]] (e300 - e550 [[Mysteries]])
+* [[Temporalist Guide (e550+)|Temporalist Guide with T3 Pets]] (e550+ [[Mysteries]])
+* {{ClassTooltip|Demiurge|link=Demiurge Temporalist Guide|display_name=Demiurge Temporalist}} ([[Ascension Forms|Ascension Form]])
+* {{ClassTooltip|Dread|link=Dread Temporalist Guide|display_name=Dread Temporalist}} ([[Ascension Forms|Ascension Form]])
+
+''To learn about writing your own guides, please see the [[Guide to Guides]].''
+
+==Hero Ability==
+
+Multiplies profits by:
+<br><math>\left( T^{2.15} \times \left( S \times \frac{G}{16000} \right)^{1.78} + 1 \right) \times \left( \frac{X}{10^{7}} + 1 \right) \times C^{0.5} \times \frac{L}{10^{10}} + 1</math>
+
+Multiplies Evocation efficiency by:
+<br><math>\left(\frac{T^{0.5}}{40} \times \left( S \times \frac{G}{16000} \right)^{1.15} + 1 \right) \times C^{0.5} \times \frac{L}{5\,000\,000} + 1</math>
+
+where:
+* <math>S = \text{Skipped time, in Years}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+* <math>X = \text{Total Character Experience}</math>
+* <math>C = \text{Character Ability Power}</math>
+* <math>L = \text{Character Level}</math>
+* <math>T = \text{Character Time, in Hours}</math>
+After 30 days:
+* <math>T = 720 + \left( \text{Character Time, in Hours} - 719 \right)^{0.9}</math>
+
+==Compressed Time==
+Compressed Time is a resource unique to {{ClassTooltip|class_name=Chronomancer}} and {{ClassTooltip|class_name=Temporalist}}. It is generated over time, and by casting {{SpellTooltip|spell_name=Singularity Beam}}. 
+
+It has a maximum capacity of:
+<math>L \times 7.5</math>
+
+It is required to cast certain spells: {{SpellGallery |title=Compressed Time Spells |add_cost=Compressed Time }}
+
+==Time Distortion==
+
+Time Distortion is a unique resource. increases the game's timescaling; the rate at which the game processes time per real second. It is only available to {{ClassTooltip|class_name=Chronomancer}} and {{ClassTooltip|class_name=Temporalist}}. Time Distortion is gained by casting {{SpellTooltip|spell_name=Temporal Distortion}}. It degenerates by 0.1x per real second, and is consumed entirely by {{SpellTooltip|spell_name=Stabilize The Flow}}. Time Distortion has a maximum of 10x, which can be increased up to 30x through items and an upgrade.
+
+{| class="wikitable"
+! colspan="2" | Time Distortion
+|-
+! Time Distortion does affect:
+! It does not affect:
+|-
+|
+* Bonus granted by {{SpellTooltip|spell_name=Stabilize The Flow}}
+* Time skipped with {{ItemTooltip|item_name=Temporal Stabilizer}}
+* Charge speed of {{SpellTooltip|spell_name=Refined Wormhole}}
+* The speed of some text
+* Christmas Tree animations
+* Spell durations
+* Played game time
+* [[Skipped Time]]
+* Character Quote display timers
+
+|
+* Source-granting ability of {{PetTooltip|pet_name=Doppelganger}} in [[Absorption]]
+* [[Attributes#Gaining_attribute_points|AP generation]]
+* Auto-buy source frequency
+* [[Market#Buffs|Buff]] durations
+* Frequency of tooltip updates
+* [[Weekly Bonus]]
+* [[Expeditions]]
+* [[Compressed Time]] generation
+* [[Trials]]
+* FPS
+* Played real time
+* {{PetTooltip|pet_name=Mechanos Apexis}} ability frequency
+* [[Collectibles]] speed
+* New Year's Tree animations
+* Audio
+* [[:Category:Weapon|Weapon]] charge times
+* Dust gathering rates
+* [[Pantheon]] Experience
+* Void echo spawn rate
+|}
+
+==[[Spells]]==
+{{SpellList}}
+
+==[[Upgrades]]==
+{| class="mw-collapsible mw-collapsed wikitable" width="100%" data-expandtext="Reveal" data-collapsetext="Conceal"
+! colspan="50" |Upgrades
+|-
+|{{UpgradeList}}
+|}
+
+==Lore==
+{{Lore|After the initial discovery of time-travel by first Prodigies led by Kelphior, some time has passed before now-Chronomancers realized both the danger of their craft and the grim fate that awaited mankind, should it fail to prepare properly. Gathering all the knowledge and inventions they could, they've fled the unstable timelines and returned to the present. Reuniting both with ones who stayed behind and shaving their knowledge to ones not yet aware, these wizards became known in Realm as Temporalists - keepers of the time itself. Combining more refined and accurate time-traveling techniques, whatever scientific progress could be salvaged from the devastated future timelines and their intrinsic prowess as Prodigies, they may be humanity's only hope at surviving the day.}}
+
+{{SiteNav}}
+[[Category:Classes]]
+[[Category:Wizard]]
+[[Category:Tier 2 Classes]]

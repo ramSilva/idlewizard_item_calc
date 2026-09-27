@@ -1,0 +1,41 @@
+{{PetInfobox
+|selection=Character level 50
+|unlock=
+*180 [[Attributes|Attribute]] points
+*Spells cast 5e4
+|description=''Though a spirit of Light, the Interrogator can hardly be called benevolent or kind. Commonly a companion for [[Exorcist]]s roaming the land, these spirits can probe and invade minds of most beings, very useful both for questioning and battling an opponent. Knowing one's weaknesses allows the Interrogator's master to use his spells with more efficiency.''
+}}
+
+== Description ==
+Increases the duration of Incantation spells and efficiency of Evocation spells.
+
+Gains [[Experience#Pet Experience|experience]] every second depending on the amount of currently active spells.
+
+This box synergizes very well with all classes using Evocation spells.
+
+== Pet Abilities ==
+
+Multiplies Evocation efficiency by:
+<br><math>L^{1.06} \times P \times 0.73 + 1</math>
+
+Multiplies Incantation duration by:
+<br><math>log_{10}(L^{2} \times P) \times 0.025 + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>\left(S^2 \times 5 + F\right) \times M</math>
+
+where:
+* <math>S = \text{Active Spells}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Wizard]]
+[[Category:Tier 1 Pets]]

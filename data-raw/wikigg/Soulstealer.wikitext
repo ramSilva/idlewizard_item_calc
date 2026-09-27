@@ -1,0 +1,103 @@
+{{PetInfobox
+|selection={{ClassTooltip|Archon}} only
+|description=''The soulstealer is the signature pet of the Archon. It is a creature from the negative plane, and is, tehcnically, a direct opposite of a soul. Created by a strange phenomena of fusing an Abolisher's soul into another person's body, it is a Doppelganger existing as an opposite of two souls as once. Traditionally, the role of the new host is bestowed upon the most potent Arcanists as ones being the best candidates, being able to both hold the amount of power the resulting creature bestows and to utilize magic while under influence of an Abolisher.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Doppelganger}}. Available only to the {{ClassTooltip|class_name=Archon}} class. Bestows a lot of different bonuses, unlocking more as it reaches higher level.
+
+Gains [[Experience#Pet Experience|experience]] each second based on [[Experience#Wizard_Experience|character experience]].
+
+== Pet Abilities ==
+
+On ability activation (every 1 second), grants 1 [[Sources|mana source]] whose cost must not exceed:
+<br><math>10\,000 \times M</math>
+
+From level 30, multiplies Shards Pool capacity by:
+<br><math>P^{0.02} \times L^2 \times 100\,000 + 1</math>
+
+
+From level 50, multiplies spell shards per click by:
+<br><math>P^{0.2} \times L \times 0.25 + 1</math>
+
+
+From level 75, autoclicks:
+<br><math>P^{0.015} \times \frac{L-75}{25} + 1</math>
+<br>times each second, with:
+<br><math>\textbf{Click Profit}\ =\ \text{Hero Click Profit}</math>
+<br><math>\textbf{Crit Chance}\ =\ \text{Hero Crit Chance}</math>
+<br><math>\textbf{Crit Profit}\ =\ \text{Hero Crit Profit}</math>
+
+From level 100, multiplies spell shards per second by:
+<br><math>P^{0.2} \times L \times 0.5 + 1</math>
+
+From level 125, multiplies profits by:
+<br><math>P^{0.2} \times L^{0.5} \times C \times 0.01 + 1</math>
+
+From level 150, multiplies Evocation efficiency by:
+<br><math>P^{0.15} \times L^{0.5} \times S^{0.15} \times 0.1 + 1</math>
+
+From level 175, multiplies Incantation efficiency by:
+<br><math>P^{0.05} \times L \times 0.01 + 1</math>
+
+From level 200, multiplies Mysteries power by:
+<br><math>P^{0.1} \times L \times (D + 1) + 1</math>
+
+From level 225, multiplies Void Profit by:
+<br><math>P^{0.1} \times L \times 0.025 + 1</math>
+
+From level 250, multiplies Void Entity lifetime by:
+<br><math>P^{0.21} \times L \times 0.01 + 1</math>
+<br>And Void Entity spawn rate by:
+<br><math>P^{0.05} \times L \times 0.001 + 1</math>
+
+From level 275, multiplies Character Ability Power by:
+<br><math>P^{0.13} \times (L - 274) \times 0.05 + 1</math>
+
+From level 300, multiplies Pet Ability Power by:
+<br><math>\left( \log_{10}(Y) - 474 \right) \times (L - 290) \times 0.75 + 1</math>
+<br>''Note: Grants no bonus below 1e475 Mysteries.''
+
+
+From level 325, can evolve into {{PetTooltip|Psychic Cacophony}} if available.
+
+
+where:
+* <math>M = \text{All Mana this Realm}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>C = \text{Character Level}</math>
+* <math>S = \text{Spells Cast this Exile}</math>
+* <math>D = \text{Enchanting Dust Collected this Exile}</math>
+* <math>Y = \text{Current Amount of Mysteries}</math>
+
+== Experience Gain ==
+
+Accrues experience each second, equal to:
+<br><math>\left(X^K \times 0.3 + F \right) \times M</math>
+
+<!-- removed in v1.20.0a?
+This is disbursed at a maximum rate per second, equal to:
+<br><math>N_{L} \times 2</math>
+-->
+
+The XP needed for the next level is multiplied by 1.14 per level:
+<br><math>N_{L} = 100 \times 1.14^{L-1}</math>
+<br>''Note: This is lower than even T1 pets (1.16).''
+
+
+where:
+* <math>X = \text{Total Character Experience}</math>
+* <math>K =\begin{cases}
+0.05 + 0.1\times\left(\frac{\widetilde{C}}{100}\right)^3, &\text{if } \widetilde{C} < 300, \text{ and} \\
+0.05 + 0.1\times 27 \times \left(\frac{\widetilde{C}}{100} - 2\right), &\text{else}.
+\end{cases}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>\widetilde{C} = \max\{101,\ \text{Character Level}\}</math>
+* <math>N_{L} = \text{XP from Pet Level}\ (L-1)\ \text{to}\ L</math>
+* <math>L = \text{Pet Level}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

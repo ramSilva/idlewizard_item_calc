@@ -1,0 +1,7 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Unlocking==
+In addition to this item being obtained through [[Items#Crafting|Item Crafting]], this is rewarded at the start of the [[Anniversary]] event for free.
+
+[[Category:Items]]
+[[Category:Neck]]

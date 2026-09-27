@@ -1,0 +1,25 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Augments {{SpellTooltip|spell_name=Plague Zombie}} by increasing Played time whenever a certain amount of {{SpellTooltip|spell_name=Plague Zombie}} is spent.
+
+==Details==
+Adds 1 second of Pet's Played game time per every time at least
+
+<math>5 - \text{Tier}</math>
+
+charges of {{SpellTooltip|spell_name=Plague Zombie}} are spent.
+
+''Note: This is capped at 1 second per {{SpellTooltip|spell_name=Plague Zombie}} cast.''
+
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

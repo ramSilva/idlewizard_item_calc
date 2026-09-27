@@ -1,0 +1,602 @@
+[
+	{
+		"ID": 1,
+		"Name": "Octahedron",
+		"Family": "Construct",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Evocation efficiency",
+			"Amount": 1.1
+		},
+		"Perks": [
+			{
+				"Type": "Pet Experience",
+				"Amount": 0.2
+			},
+			{
+				"Type": "Spellcraft",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 2,
+		"Name": "Leech",
+		"Family": "Eldritch",
+		"Quality": "Legendary",
+		"MainEffect": {
+			"Type": "Void Mana per Entity",
+			"Amount": 1.1
+		},
+		"Perks": [
+			{
+				"Type": "Void Entities lifetime",
+				"Amount": 0.2
+			},
+			{
+				"Type": "Intelligence",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 3,
+		"Name": "Lamp",
+		"Family": "Spirit",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Mysteries Power",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Critical Chance",
+				"Amount": 0.1
+			},
+			{
+				"Type": "Wisdom",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 4,
+		"Name": "Frog",
+		"Family": "Natural",
+		"Quality": "Epic",
+		"MainEffect": {
+			"Type": "Summoning efficiency",
+			"Amount": 1.02
+		},
+		"Perks": [
+			{
+				"Type": "Character Experience from actions",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Pet Ability Charge Speed",
+				"Amount": 0.5
+			}
+		]
+	},
+	{
+		"ID": 5,
+		"Name": "Gloom",
+		"Family": "Eldritch",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Offline bonus",
+			"Amount": 1.12
+		},
+		"Perks": [
+			{
+				"Type": "Characters' starting Level",
+				"Amount": 10
+			},
+			{
+				"Type": "Shadow Clots spawnrate",
+				"Amount": 0.2
+			}
+		]
+	},
+	{
+		"ID": 6,
+		"Name": "Mist",
+		"Family": "Spirit",
+		"Quality": "Epic",
+		"MainEffect": {
+			"Type": "Pet Ability Power",
+			"Amount": 1.06
+		},
+		"Perks": [
+			{
+				"Type": "Accumulated Spells' starting casts amount",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Patience",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 7,
+		"Name": "Pebble",
+		"Family": "Natural",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Mana Sources cost reduction",
+			"Amount": 1.2
+		},
+		"Perks": [
+			{
+				"Type": "Incantation duration divisor",
+				"Amount": 0.35
+			},
+			{
+				"Type": "Character Ability Power growth rate",
+				"Amount": 0.25
+			}
+		]
+	},
+	{
+		"ID": 8,
+		"Name": "Phantom",
+		"Family": "Psychic",
+		"Quality": "Epic",
+		"MainEffect": {
+			"Type": "Character Ability Power",
+			"Amount": 1.05
+		},
+		"Perks": [
+			{
+				"Type": "Evocation duration divisor",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Versatility",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 9,
+		"Name": "Shroom",
+		"Family": "Natural",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Charge-based Spells charging speed",
+			"Amount": 1.05
+		},
+		"Perks": [
+			{
+				"Type": "Summoning efficiency",
+				"Amount": 0.2
+			},
+			{
+				"Type": "Mastery",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 10,
+		"Name": "Swarm",
+		"Family": "Eldritch",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Shards Pool capacity",
+			"Amount": 1.1
+		},
+		"Perks": [
+			{
+				"Type": "Persistent casts gain",
+				"Amount": 0.2
+			},
+			{
+				"Type": "Insight",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 11,
+		"Name": "Condenser",
+		"Family": "Construct",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Passive Spell Shards",
+			"Amount": 1.07
+		},
+		"Perks": [
+			{
+				"Type": "Void Entities spawnrate",
+				"Amount": 1
+			},
+			{
+				"Type": "Dominance",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 12,
+		"Name": "Anima Mundi",
+		"Family": "Spirit",
+		"Quality": "Legendary",
+		"MainEffect": {
+			"Type": "Incantation efficiency",
+			"Amount": 1.02
+		},
+		"Perks": [
+			{
+				"Type": "Charge-based Spells charging speed",
+				"Amount": 0.4
+			},
+			{
+				"Type": "Versatility",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 13,
+		"Name": "Void Snare",
+		"Family": "Construct",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Void Mana Profit",
+			"Amount": 1.1
+		},
+		"Perks": [
+			{
+				"Type": "Shards Pool capacity",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Liquid Shadow from all sources",
+				"Amount": 0.5
+			}
+		]
+	},
+	{
+		"ID": 14,
+		"Name": "Leafy",
+		"Family": "Natural",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Idle bonus",
+			"Amount": 1.03
+		},
+		"Perks": [
+			{
+				"Type": "Character Experience from actions",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Augment casts gain (including External)",
+				"Amount": 0.2
+			}
+		]
+	},
+	{
+		"ID": 15,
+		"Name": "Cornerstone",
+		"Family": "Construct",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Profits",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Mana Sources cost reduction",
+				"Amount": 2
+			},
+			{
+				"Type": "All Attributes",
+				"Amount": 2
+			}
+		]
+	},
+	{
+		"ID": 16,
+		"Name": "Beastial Mind",
+		"Family": "Psychic",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Pet Experience",
+			"Amount": 1.1
+		},
+		"Perks": [
+			{
+				"Type": "Summoning duration divisor",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Profits",
+				"Amount": 0.5
+			}
+		]
+	},
+	{
+		"ID": 17,
+		"Name": "Lost Memories",
+		"Family": "Psychic",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Void Mana per Entity",
+			"Amount": 1.08
+		},
+		"Perks": [
+			{
+				"Type": "Character Experience gained",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Empathy",
+				"Amount": 10
+			}
+		]
+	},
+	{
+		"ID": 18,
+		"Name": "Ravenling",
+		"Family": "Natural",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Autoclick Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Level Requirements Reduction",
+				"Amount": 5
+			},
+			{
+				"Type": "Persistent casts gain",
+				"Amount": 0.5
+			}
+		]
+	},
+	{
+		"ID": 19,
+		"Name": "Cherub",
+		"Family": "Spirit",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Critical Rating",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Passive Spell Shards",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Incantation efficiency",
+				"Amount": 0.2
+			}
+		]
+	},
+	{
+		"ID": 20,
+		"Name": "Dark Tentacle",
+		"Family": "Eldritch",
+		"Quality": "Rare",
+		"MainEffect": {
+			"Type": "Critical Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Accumulated casts gain",
+				"Amount": 0.2
+			},
+			{
+				"Type": "Mysteries Power",
+				"Amount": 0.5
+			}
+		]
+	},
+	{
+		"ID": 21,
+		"Name": "Geodite",
+		"Family": "Natural",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Green Catalysts Power",
+			"Amount": 1.05
+		},
+		"Perks": [
+			{
+				"Type": "Evocation efficiency",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Idle bonus",
+				"Amount": 0.2
+			}
+		]
+	},
+	{
+		"ID": 22,
+		"Name": "Sanity Worm",
+		"Family": "Psychic",
+		"Quality": "Epic",
+		"MainEffect": {
+			"Type": "Profits",
+			"Amount": 1.12
+		},
+		"Perks": [
+			{
+				"Type": "Charge-based Spells charging speed",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Pet Experience",
+				"Amount": 0.25
+			}
+		]
+	},
+	{
+		"ID": 23,
+		"Name": "Gembug",
+		"Family": "Construct",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Mana Gems Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Incantation duration divisor",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Wisdom",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 24,
+		"Name": "Haunted Book",
+		"Family": "Eldritch",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Grimoires Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Summoning duration divisor",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Intelligence",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 25,
+		"Name": "Water Spirit",
+		"Family": "Spirit",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Spell Fountains Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Evocation duration divisor",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Dominance",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 26,
+		"Name": "Sapling",
+		"Family": "Natural",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Enchanted Trees Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Accumulated casts starting casts amount",
+				"Amount": 0.5
+			},
+			{
+				"Type": "Patience",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 27,
+		"Name": "Bottled Soul",
+		"Family": "Psychic",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Alchemy Desks Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Accumulated casts gain",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Mastery",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 28,
+		"Name": "Imp",
+		"Family": "Spirit",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Circles of Power Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Augment casts gain (including External)",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Empathy",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 29,
+		"Name": "Rift Dweller",
+		"Family": "Eldritch",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Dimensional Rifts Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Persistent casts gain",
+				"Amount": 0.25
+			},
+			{
+				"Type": "Insight",
+				"Amount": 5
+			}
+		]
+	},
+	{
+		"ID": 30,
+		"Name": "Prism",
+		"Family": "Construct",
+		"Quality": "Uncommon",
+		"MainEffect": {
+			"Type": "Nexi Profit",
+			"Amount": 1.11
+		},
+		"Perks": [
+			{
+				"Type": "Maximum cast rate of Spells attainable",
+				"Amount": 5
+			},
+			{
+				"Type": "Spellcraft",
+				"Amount": 5
+			}
+		]
+	}
+]

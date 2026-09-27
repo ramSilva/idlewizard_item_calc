@@ -1,0 +1,9 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Unlocking==
+This Mount ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+It is unlocked by successfully completing the [[Achievements#Triumphs|Triumph]] '''Brain Fog''' (Reach 1e550 Mysteries without using any Heritage or Paramnesic upgrades).
+
+[[Category:Items]]
+[[Category:Mount]]

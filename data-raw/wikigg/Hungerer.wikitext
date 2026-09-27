@@ -1,0 +1,56 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 94
+*50 [[Attributes#Intelligence|Intelligence]]
+*25 [[Attributes#Empathy|Empathy]]
+|unlock=
+*Spell shards collected 5e5
+*Challenge [[Insatiable Hunger II]] completed
+*{{PetTooltip|Devourer}} level 100
+|description=''The Hungerer is a deviation of the Devourer, the result of bringing those from the Void into the physical plane. When enough adaptation took place, the creatures discovered that almost everything made from mana can be consumed as a food source, grown in size and appetite. These consume spellshards, but also manasources, and grow faster and stronger.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|Devourer}}.
+
+Increase Mysteries power percentage based on Pet experience and multiplied by Pet level.
+
+Periodically consumes shards from active spells, depending on average value of passive generation of shards from EACH spell. Periodically consumes mana sources. Gains experience based on number of Spell Shards or mana sources consumed.
+
+== Pet Ability ==
+
+Multiplies Mysteries power by:
+<br><math>X^{0.4} \times L \times P^{0.9} \times 100 + 1.5</math>
+
+
+Each second, eats spell shards from each spell slot containing a shard-based spell:
+<br><math>S \times 0.3</math>
+
+
+Each second, consumes mana sources randomly from among those owned, totalling:
+<br><math>\left \lceil \frac{L}{40} \right \rceil </math>
+
+where:
+* <math>X = \text{Total Pet Experience}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>S = \text{Spell Shards per Second}</math>
+
+== Experience Gain ==
+Accrues experience based on spell shards and sources consumed:
+<br><math>((D + F) + (1000 + F) \times B) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>D = \text{Spell Shards Devoured}</math>
+* <math>B = \text{Mana Sources Consumed}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

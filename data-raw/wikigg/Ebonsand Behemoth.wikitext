@@ -1,0 +1,45 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 98
+*50 [[Attributes#Intelligence|Intelligence]]
+*50 [[Attributes#Mastery|Mastery]]
+|unlock=*[[Liquid Shadow]] collected 1e6
+*{{PetTooltip|Shadow Stalker}} level 100
+|description=''A powerful vassal of the Umbramancers, these towering monstrosities are used by them for a sole purpose - casting a pitch-black, engulfing shadow across entire cities, amplifying their already potent skills to new heights.''
+}}
+
+==Description==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Shadow Stalker}}. Increases offline production. Charges non-shard spells. While [[Idle Mode]] is off, increases profits with time spent in Idle Mode.
+
+Gains [[Experience#Pet Experience|experience]] each second, more if Idle Mode is off. Doesn't gain experience offline.
+
+== Pet Abilities ==
+
+Charges all non-shard spells by 2% every 5 seconds.
+
+Multiplies Offline production by:
+<br><math>L^{1.35} \times P \times 1.5 + 1</math>
+
+
+While Idle mode is Off, multiplies profits by:
+<br><math>\left( \log_{10}(T \times 0.5 + 1) + 1 \right)^{2.5} \times P^{0.5} + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>T = \text{Idle Time this Exile, in Hours}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>(2 + F) \times M \times I</math>
+
+where:
+* <math>I = 5 \iff \text{Idle Mode Off}\  \and\  I = 1 \iff \text{Idle Mode On}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

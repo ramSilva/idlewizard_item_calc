@@ -1,0 +1,38 @@
+{{PetInfobox
+|selection=Character level 60
+|unlock=
+*250 [[Attributes|Attribute]] points
+*[[Liquid Shadow]] collected 1e4
+|description=''A semi-mindless, but cunning and agile hunter from the deepest reaches of the desert. These usually serve as thralls of the Umbramancers, acting as scouts, gatherers and assassins while their master slumbers in the dark, helping him to gather his strength.''
+}}
+
+== Description ==
+Offline production increases, charge all non-shards spells by 1%
+
+Gains experience every second, more if idle mode is off. Doesn't gain experience offline.
+
+== Pet Abilities ==
+
+Charges all non-shard spells by 1% every 10 seconds.
+
+Multiplies Offline production by:
+<br><math>L^{1.29} \times P \times 5 + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>(2 + F) \times M \times I</math>
+
+where:
+* <math>I = 5 \iff \text{Idle Mode Off}\  \and\  I = 1 \iff \text{Idle Mode On}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

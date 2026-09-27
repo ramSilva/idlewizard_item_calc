@@ -1,0 +1,27 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants a passive ability which stops Timewarps <i>(not the [[Market]] item)</i> from disrupting active spells and boosts Time Skipped by Wormhole.
+
+==Details==
+
+{{SpellTooltip|spell_name=Wormhole}} no longer disables active spells.
+
+Multiplies time skipped by {{SpellTooltip|spell_name=Wormhole}} and {{SpellTooltip|spell_name=Refined Wormhole}} by:
+<br><math>B^{R} \times TD^{R + 1} \times 0.01 + 1</math>
+
+where:
+* <math>B = \text{Current Amount of Temporal Anchors}</math>
+* <math>TD = \text{Current Time Distortion}</math>
+* <math>R = \frac{3 + 0.25 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

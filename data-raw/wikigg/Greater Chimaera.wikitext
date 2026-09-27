@@ -1,0 +1,68 @@
+{{PetInfobox
+|title=Greater Chimaera
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 190
+*100 [[Attributes#Intelligence|Intelligence]]
+*75 [[Attributes#Spellcraft|Spellcraft]]
+|unlock=
+* 5e4 total [[Sources|Mana Sources]]
+* Spell shards collected 5e7
+*Any level 100 [[:Category:Wizard#T2_Pets|Tier 2 Pet]] among
+**{{PetTooltip|Simulacrum}}
+**{{PetTooltip|Arcanaworg}}
+**{{PetTooltip|Ley Keeper}}
+|description=''As advanced knowledge and technology fell into wrong hands, more and more obscure experiments are being performed. This atrocity, dubbed Chimaera, is a wild mix of mutated creatures of the Realm, Ley energies and artificial humanoids. They do not live long, nor are they stable, but during their short span of life they can be of tremendous use.''}}
+
+== Description ==
+Increases profits. Grants a [[Sources|Mana Source]] and Spell Shards periodically with period based on number of sources owned. Passively increases your attributes.
+
+Gains experience each second, depending on Character's level.
+
+== Pet Ability ==
+
+
+Multiplies profits by:
+<br><math>P \times L \times 5 + 1</math>
+
+
+increases all attributes (except Versatility) by:
+<br><math>\left\lfloor 2 \times \frac{L}{3} \right\rceil + 1</math>
+<br>If over 150, instead increases by:
+<br><math>\left\lfloor \left( \left\lfloor 2 \times \frac{L}{3} \right\rceil - 149 \right)^{0.5} \right\rceil + 150</math>
+
+Ability activates every:
+<br><math>\left\lfloor \frac{S^{0.45}}{P} \right\rceil</math>
+<br>seconds (minimum 1).
+
+On ability activation, grants 1 source whose cost does not exceed:
+<br><math>M \times 1\,000</math>
+<br>''Note: Chooses from sources with at least one manual purchase.''
+
+On ability activation, grants spell shards equal to:
+<br><math>P \times L^{1.35} \times 2</math>
+<br>If it would grant more than <math>10^7</math> shards, it instead grants:
+<br><math>\left( P \times L^{1.35} \times 2 - 10^7 \right)^{0.25} + 10^7</math>
+
+where:
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>S = \text{Bought Mana Sources}</math>
+* <math>M = \text{All Mana this Realm}</math>
+
+== Experience Gain ==
+Accrues experience each second, equal to:
+<br><math>\left( \frac{C}{100} + F + 1 \right) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>C = \text{Character Level}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

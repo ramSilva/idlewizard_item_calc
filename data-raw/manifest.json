@@ -1,0 +1,2816 @@
+{
+  "fetchedAt": "2026-09-27T01:10:37.543Z",
+  "pages": [
+    {
+      "title": "Abnormal Voidmass",
+      "resolvedTitle": "Abnormal Voidmass",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Abnormal_Voidmass",
+      "revid": 14514,
+      "revisionTimestamp": "2020-08-14T12:19:51Z",
+      "file": "wikigg/Abnormal Voidmass.wikitext"
+    },
+    {
+      "title": "Acclimatized Summons",
+      "resolvedTitle": "Acclimatized Summons",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Acclimatized_Summons",
+      "revid": 7838,
+      "revisionTimestamp": "2019-07-18T19:07:53Z",
+      "file": "wikigg/Acclimatized Summons.wikitext"
+    },
+    {
+      "title": "Anima Construct",
+      "resolvedTitle": "Anima Construct",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Anima_Construct",
+      "revid": 31448,
+      "revisionTimestamp": "2026-09-25T14:06:25Z",
+      "file": "wikigg/Anima Construct.wikitext"
+    },
+    {
+      "title": "Anima Core",
+      "resolvedTitle": "Anima Core",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Anima_Core",
+      "revid": 1818,
+      "revisionTimestamp": "2019-11-06T19:28:35Z",
+      "file": "wikigg/Anima Core.wikitext"
+    },
+    {
+      "title": "Anointed Ashes",
+      "resolvedTitle": "Anointed Ashes",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Anointed_Ashes",
+      "revid": 4799,
+      "revisionTimestamp": "2021-12-18T18:31:41Z",
+      "file": "wikigg/Anointed Ashes.wikitext"
+    },
+    {
+      "title": "Anomalous Essence",
+      "resolvedTitle": "Anomalous Essence",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Anomalous_Essence",
+      "revid": 13720,
+      "revisionTimestamp": "2019-11-06T19:29:42Z",
+      "file": "wikigg/Anomalous Essence.wikitext"
+    },
+    {
+      "title": "Arcanaworg",
+      "resolvedTitle": "Arcanaworg",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Arcanaworg",
+      "revid": 31452,
+      "revisionTimestamp": "2026-09-25T14:06:33Z",
+      "file": "wikigg/Arcanaworg.wikitext"
+    },
+    {
+      "title": "Arcane Accelerator",
+      "resolvedTitle": "Arcane Accelerator",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Arcane_Accelerator",
+      "revid": 9383,
+      "revisionTimestamp": "2019-03-25T18:01:50Z",
+      "file": "wikigg/Arcane Accelerator.wikitext"
+    },
+    {
+      "title": "Arcane Engine",
+      "resolvedTitle": "Arcane Engine",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Arcane_Engine",
+      "revid": 11982,
+      "revisionTimestamp": "2019-11-06T19:30:07Z",
+      "file": "wikigg/Arcane Engine.wikitext"
+    },
+    {
+      "title": "Architectural Databelt",
+      "resolvedTitle": "Architectural Databelt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Architectural_Databelt",
+      "revid": 9174,
+      "revisionTimestamp": "2020-11-16T17:13:31Z",
+      "file": "wikigg/Architectural Databelt.wikitext"
+    },
+    {
+      "title": "Archivist",
+      "resolvedTitle": "Archivist",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Archivist",
+      "revid": 31455,
+      "revisionTimestamp": "2026-09-25T14:06:39Z",
+      "file": "wikigg/Archivist.wikitext"
+    },
+    {
+      "title": "Artificer's Shoulderpads",
+      "resolvedTitle": "Artificer's Shoulderpads",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Artificer's_Shoulderpads",
+      "revid": 2911,
+      "revisionTimestamp": "2019-03-25T18:02:06Z",
+      "file": "wikigg/Artificer's Shoulderpads.wikitext"
+    },
+    {
+      "title": "Attributes",
+      "resolvedTitle": "Attributes",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Attributes",
+      "revid": 30764,
+      "revisionTimestamp": "2026-08-25T08:23:46Z",
+      "file": "wikigg/Attributes.wikitext"
+    },
+    {
+      "title": "Auxtrap Backpack",
+      "resolvedTitle": "Auxtrap Backpack",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Auxtrap_Backpack",
+      "revid": 24361,
+      "revisionTimestamp": "2025-09-16T18:43:30Z",
+      "file": "wikigg/Auxtrap Backpack.wikitext"
+    },
+    {
+      "title": "Bag Of Tricks",
+      "resolvedTitle": "Bag Of Tricks",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Bag_Of_Tricks",
+      "revid": 24363,
+      "revisionTimestamp": "2025-09-16T18:44:47Z",
+      "file": "wikigg/Bag Of Tricks.wikitext"
+    },
+    {
+      "title": "Basic Mechanics",
+      "resolvedTitle": "Basic Mechanics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Basic_Mechanics",
+      "revid": 31648,
+      "revisionTimestamp": "2026-09-26T20:37:24Z",
+      "file": "wikigg/Basic Mechanics.wikitext"
+    },
+    {
+      "title": "Beholding Eye",
+      "resolvedTitle": "Beholding Eye",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Beholding_Eye",
+      "revid": 745,
+      "revisionTimestamp": "2020-08-14T12:20:51Z",
+      "file": "wikigg/Beholding Eye.wikitext"
+    },
+    {
+      "title": "Berzerker",
+      "resolvedTitle": "Berzerker",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Berzerker",
+      "revid": 19533,
+      "revisionTimestamp": "2025-01-10T08:26:28Z",
+      "file": "wikigg/Berzerker.wikitext"
+    },
+    {
+      "title": "Binding Sigil",
+      "resolvedTitle": "Binding Sigil",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Binding_Sigil",
+      "revid": 3882,
+      "revisionTimestamp": "2019-11-06T19:30:32Z",
+      "file": "wikigg/Binding Sigil.wikitext"
+    },
+    {
+      "title": "Bite Sleeves",
+      "resolvedTitle": "Bite Sleeves",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Bite_Sleeves",
+      "revid": 7332,
+      "revisionTimestamp": "2019-05-03T13:16:04Z",
+      "file": "wikigg/Bite Sleeves.wikitext"
+    },
+    {
+      "title": "Black Blade",
+      "resolvedTitle": "Black Blade",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Black_Blade",
+      "revid": 31598,
+      "revisionTimestamp": "2026-09-25T14:22:50Z",
+      "file": "wikigg/Black Blade.wikitext"
+    },
+    {
+      "title": "Black Vortex",
+      "resolvedTitle": "Black Vortex",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Black_Vortex",
+      "revid": 5229,
+      "revisionTimestamp": "2019-03-25T18:02:42Z",
+      "file": "wikigg/Black Vortex.wikitext"
+    },
+    {
+      "title": "Blessed Armor Scales",
+      "resolvedTitle": "Blessed Armor Scales",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Blessed_Armor_Scales",
+      "revid": 9240,
+      "revisionTimestamp": "2021-12-18T18:31:54Z",
+      "file": "wikigg/Blessed Armor Scales.wikitext"
+    },
+    {
+      "title": "Blessed Tapestry",
+      "resolvedTitle": "Blessed Tapestry",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Blessed_Tapestry",
+      "revid": 19563,
+      "revisionTimestamp": "2025-01-10T08:58:19Z",
+      "file": "wikigg/Blessed Tapestry.wikitext"
+    },
+    {
+      "title": "Bold Azure Phylactery",
+      "resolvedTitle": "Bold Azure Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Bold_Azure_Phylactery",
+      "revid": 9736,
+      "revisionTimestamp": "2023-10-02T19:14:45Z",
+      "file": "wikigg/Bold Azure Phylactery.wikitext"
+    },
+    {
+      "title": "Book Of Litanies",
+      "resolvedTitle": "Book Of Litanies",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Book_Of_Litanies",
+      "revid": 24348,
+      "revisionTimestamp": "2025-09-16T15:27:58Z",
+      "file": "wikigg/Book Of Litanies.wikitext"
+    },
+    {
+      "title": "Boots Of Concentration",
+      "resolvedTitle": "Boots Of Concentration",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Boots_Of_Concentration",
+      "revid": 19497,
+      "revisionTimestamp": "2025-01-10T07:39:34Z",
+      "file": "wikigg/Boots Of Concentration.wikitext"
+    },
+    {
+      "title": "Boots Of Eastern Blessings",
+      "resolvedTitle": "Boots Of Eastern Blessings",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Boots_Of_Eastern_Blessings",
+      "revid": 19498,
+      "revisionTimestamp": "2025-01-10T07:43:47Z",
+      "file": "wikigg/Boots Of Eastern Blessings.wikitext"
+    },
+    {
+      "title": "Boots Of Harsh Trials",
+      "resolvedTitle": "Boots Of Harsh Trials",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Boots_Of_Harsh_Trials",
+      "revid": 19499,
+      "revisionTimestamp": "2025-01-10T07:43:52Z",
+      "file": "wikigg/Boots Of Harsh Trials.wikitext"
+    },
+    {
+      "title": "Branch of the Great Cycle",
+      "resolvedTitle": "Branch of the Great Cycle",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Branch_of_the_Great_Cycle",
+      "revid": 28527,
+      "revisionTimestamp": "2026-04-25T09:51:25Z",
+      "file": "wikigg/Branch of the Great Cycle.wikitext"
+    },
+    {
+      "title": "Brightwing Helmet",
+      "resolvedTitle": "Brightwing Helmet",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Brightwing_Helmet",
+      "revid": 2538,
+      "revisionTimestamp": "2019-03-25T18:03:32Z",
+      "file": "wikigg/Brightwing Helmet.wikitext"
+    },
+    {
+      "title": "Broomstaff Of Klevdariah",
+      "resolvedTitle": "Broomstaff Of Klevdariah",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Broomstaff_Of_Klevdariah",
+      "revid": 28528,
+      "revisionTimestamp": "2026-04-25T09:52:09Z",
+      "file": "wikigg/Broomstaff Of Klevdariah.wikitext"
+    },
+    {
+      "title": "Burden of the Erased",
+      "resolvedTitle": "Burden of the Erased",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Burden_of_the_Erased",
+      "revid": 21550,
+      "revisionTimestamp": "2025-06-04T17:33:07Z",
+      "file": "wikigg/Burden of the Erased.wikitext"
+    },
+    {
+      "title": "Burial Urn",
+      "resolvedTitle": "Burial Urn",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Burial_Urn",
+      "revid": 24365,
+      "revisionTimestamp": "2025-09-16T18:57:08Z",
+      "file": "wikigg/Burial Urn.wikitext"
+    },
+    {
+      "title": "Burning Heart Breastplate",
+      "resolvedTitle": "Burning Heart Breastplate",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Burning_Heart_Breastplate",
+      "revid": 8618,
+      "revisionTimestamp": "2019-03-25T18:03:48Z",
+      "file": "wikigg/Burning Heart Breastplate.wikitext"
+    },
+    {
+      "title": "Casque Of Learning",
+      "resolvedTitle": "Casque Of Learning",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Casque_Of_Learning",
+      "revid": 11098,
+      "revisionTimestamp": "2019-03-25T18:04:51Z",
+      "file": "wikigg/Casque Of Learning.wikitext"
+    },
+    {
+      "title": "Cataclysm",
+      "resolvedTitle": "Cataclysm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Cataclysm",
+      "revid": 28529,
+      "revisionTimestamp": "2026-04-25T09:54:20Z",
+      "file": "wikigg/Cataclysm.wikitext"
+    },
+    {
+      "title": "Ceaseless Hunger",
+      "resolvedTitle": "Ceaseless Hunger",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ceaseless_Hunger",
+      "revid": 14110,
+      "revisionTimestamp": "2019-03-25T18:05:30Z",
+      "file": "wikigg/Ceaseless Hunger.wikitext"
+    },
+    {
+      "title": "Chaos Mantle",
+      "resolvedTitle": "Chaos Mantle",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Chaos_Mantle",
+      "revid": 4860,
+      "revisionTimestamp": "2020-11-16T17:07:56Z",
+      "file": "wikigg/Chaos Mantle.wikitext"
+    },
+    {
+      "title": "Charged Fin-Wing",
+      "resolvedTitle": "Charged Fin-Wing",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Charged_Fin-Wing",
+      "revid": 15412,
+      "revisionTimestamp": "2020-08-14T12:21:32Z",
+      "file": "wikigg/Charged Fin-Wing.wikitext"
+    },
+    {
+      "title": "Chemical Toolbelt",
+      "resolvedTitle": "Chemical Toolbelt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Chemical_Toolbelt",
+      "revid": 9559,
+      "revisionTimestamp": "2019-03-25T18:05:06Z",
+      "file": "wikigg/Chemical Toolbelt.wikitext"
+    },
+    {
+      "title": "Chiropteric Rod",
+      "resolvedTitle": "Chiropteric Rod",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Chiropteric_Rod",
+      "revid": 31464,
+      "revisionTimestamp": "2026-09-25T14:06:57Z",
+      "file": "wikigg/Chiropteric Rod.wikitext"
+    },
+    {
+      "title": "Chronoboost Ring",
+      "resolvedTitle": "Chronoboost Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Chronoboost_Ring",
+      "revid": 19513,
+      "revisionTimestamp": "2025-01-10T08:07:05Z",
+      "file": "wikigg/Chronoboost Ring.wikitext"
+    },
+    {
+      "title": "Chronomancer",
+      "resolvedTitle": "Chronomancer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Chronomancer",
+      "revid": 31465,
+      "revisionTimestamp": "2026-09-25T14:06:59Z",
+      "file": "wikigg/Chronomancer.wikitext"
+    },
+    {
+      "title": "Circlet Of Deep Thoughts",
+      "resolvedTitle": "Circlet Of Deep Thoughts",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Circlet_Of_Deep_Thoughts",
+      "revid": 8120,
+      "revisionTimestamp": "2019-03-25T18:06:48Z",
+      "file": "wikigg/Circlet Of Deep Thoughts.wikitext"
+    },
+    {
+      "title": "Cold-blooded Ring",
+      "resolvedTitle": "Cold-blooded Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Cold-blooded_Ring",
+      "revid": 19514,
+      "revisionTimestamp": "2025-01-10T08:07:11Z",
+      "file": "wikigg/Cold-blooded Ring.wikitext"
+    },
+    {
+      "title": "Collar Of Obedience",
+      "resolvedTitle": "Collar Of Obedience",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Collar_Of_Obedience",
+      "revid": 14501,
+      "revisionTimestamp": "2019-06-07T16:30:53Z",
+      "file": "wikigg/Collar Of Obedience.wikitext"
+    },
+    {
+      "title": "Collection Of Samples",
+      "resolvedTitle": "Collection Of Samples",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Collection_Of_Samples",
+      "revid": 8429,
+      "revisionTimestamp": "2019-11-06T19:30:46Z",
+      "file": "wikigg/Collection Of Samples.wikitext"
+    },
+    {
+      "title": "Colourful Belt",
+      "resolvedTitle": "Colourful Belt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Colourful_Belt",
+      "revid": 15232,
+      "revisionTimestamp": "2019-03-25T18:06:54Z",
+      "file": "wikigg/Colourful Belt.wikitext"
+    },
+    {
+      "title": "Commissar's Torn Sleeve",
+      "resolvedTitle": "Commissar's Torn Sleeve",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Commissar's_Torn_Sleeve",
+      "revid": 28531,
+      "revisionTimestamp": "2026-04-25T09:56:02Z",
+      "file": "wikigg/Commissar's Torn Sleeve.wikitext"
+    },
+    {
+      "title": "Companionship Ring",
+      "resolvedTitle": "Companionship Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Companionship_Ring",
+      "revid": 19515,
+      "revisionTimestamp": "2025-01-10T08:07:17Z",
+      "file": "wikigg/Companionship Ring.wikitext"
+    },
+    {
+      "title": "Concealing Shroud",
+      "resolvedTitle": "Concealing Shroud",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Concealing_Shroud",
+      "revid": 7343,
+      "revisionTimestamp": "2019-03-25T18:07:13Z",
+      "file": "wikigg/Concealing Shroud.wikitext"
+    },
+    {
+      "title": "Conjured Claws",
+      "resolvedTitle": "Conjured Claws",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Claws",
+      "revid": 11064,
+      "revisionTimestamp": "2019-03-25T18:07:20Z",
+      "file": "wikigg/Conjured Claws.wikitext"
+    },
+    {
+      "title": "Conjured Painguards",
+      "resolvedTitle": "Conjured Painguards",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Painguards",
+      "revid": 19552,
+      "revisionTimestamp": "2025-01-10T08:41:30Z",
+      "file": "wikigg/Conjured Painguards.wikitext"
+    },
+    {
+      "title": "Conjured Ragecrown",
+      "resolvedTitle": "Conjured Ragecrown",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Ragecrown",
+      "revid": 13044,
+      "revisionTimestamp": "2019-03-25T18:07:25Z",
+      "file": "wikigg/Conjured Ragecrown.wikitext"
+    },
+    {
+      "title": "Conjured Razorspaulders",
+      "resolvedTitle": "Conjured Razorspaulders",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Razorspaulders",
+      "revid": 15069,
+      "revisionTimestamp": "2019-03-25T18:07:31Z",
+      "file": "wikigg/Conjured Razorspaulders.wikitext"
+    },
+    {
+      "title": "Conjured Sawrings",
+      "resolvedTitle": "Conjured Sawrings",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Sawrings",
+      "revid": 6934,
+      "revisionTimestamp": "2020-11-16T17:14:21Z",
+      "file": "wikigg/Conjured Sawrings.wikitext"
+    },
+    {
+      "title": "Conjured Spiked Stompers",
+      "resolvedTitle": "Conjured Spiked Stompers",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Spiked_Stompers",
+      "revid": 19500,
+      "revisionTimestamp": "2025-01-10T07:43:58Z",
+      "file": "wikigg/Conjured Spiked Stompers.wikitext"
+    },
+    {
+      "title": "Conjured Strangleash",
+      "resolvedTitle": "Conjured Strangleash",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Strangleash",
+      "revid": 24360,
+      "revisionTimestamp": "2025-09-16T18:42:47Z",
+      "file": "wikigg/Conjured Strangleash.wikitext"
+    },
+    {
+      "title": "Conjured Thornmail",
+      "resolvedTitle": "Conjured Thornmail",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Conjured_Thornmail",
+      "revid": 17519,
+      "revisionTimestamp": "2024-04-24T14:33:29Z",
+      "file": "wikigg/Conjured Thornmail.wikitext"
+    },
+    {
+      "title": "Crown of the First Realm",
+      "resolvedTitle": "Crown of the First Realm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Crown_of_the_First_Realm",
+      "revid": 21536,
+      "revisionTimestamp": "2025-06-04T17:18:59Z",
+      "file": "wikigg/Crown of the First Realm.wikitext"
+    },
+    {
+      "title": "Crystallized Echo",
+      "resolvedTitle": "Crystallized Echo",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Crystallized_Echo",
+      "revid": 28532,
+      "revisionTimestamp": "2026-04-25T09:56:41Z",
+      "file": "wikigg/Crystallized Echo.wikitext"
+    },
+    {
+      "title": "Daemon",
+      "resolvedTitle": "Daemon",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Daemon",
+      "revid": 31473,
+      "revisionTimestamp": "2026-09-25T14:07:16Z",
+      "file": "wikigg/Daemon.wikitext"
+    },
+    {
+      "title": "Daemonics Reverse-Engineering",
+      "resolvedTitle": "Daemonics Reverse-Engineering",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Daemonics_Reverse-Engineering",
+      "revid": 14299,
+      "revisionTimestamp": "2019-07-18T19:07:45Z",
+      "file": "wikigg/Daemonics Reverse-Engineering.wikitext"
+    },
+    {
+      "title": "Darklight Claws",
+      "resolvedTitle": "Darklight Claws",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Darklight_Claws",
+      "revid": 12222,
+      "revisionTimestamp": "2020-11-16T17:09:42Z",
+      "file": "wikigg/Darklight Claws.wikitext"
+    },
+    {
+      "title": "Darklight Mantle",
+      "resolvedTitle": "Darklight Mantle",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Darklight_Mantle",
+      "revid": 10397,
+      "revisionTimestamp": "2019-03-25T18:07:55Z",
+      "file": "wikigg/Darklight Mantle.wikitext"
+    },
+    {
+      "title": "Darklight Tunic",
+      "resolvedTitle": "Darklight Tunic",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Darklight_Tunic",
+      "revid": 10976,
+      "revisionTimestamp": "2019-03-25T18:08:02Z",
+      "file": "wikigg/Darklight Tunic.wikitext"
+    },
+    {
+      "title": "Destabilized Evocations",
+      "resolvedTitle": "Destabilized Evocations",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Destabilized_Evocations",
+      "revid": 14736,
+      "revisionTimestamp": "2019-07-18T19:37:46Z",
+      "file": "wikigg/Destabilized Evocations.wikitext"
+    },
+    {
+      "title": "Devious Violet Phylactery",
+      "resolvedTitle": "Devious Violet Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Devious_Violet_Phylactery",
+      "revid": 15305,
+      "revisionTimestamp": "2023-10-02T19:15:26Z",
+      "file": "wikigg/Devious Violet Phylactery.wikitext"
+    },
+    {
+      "title": "Devourer",
+      "resolvedTitle": "Devourer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Devourer",
+      "revid": 31479,
+      "revisionTimestamp": "2026-09-25T14:07:43Z",
+      "file": "wikigg/Devourer.wikitext"
+    },
+    {
+      "title": "Doppelganger",
+      "resolvedTitle": "Doppelganger",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Doppelganger",
+      "revid": 31480,
+      "revisionTimestamp": "2026-09-25T14:07:48Z",
+      "file": "wikigg/Doppelganger.wikitext"
+    },
+    {
+      "title": "Earthen Cowl",
+      "resolvedTitle": "Earthen Cowl",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Earthen_Cowl",
+      "revid": 6229,
+      "revisionTimestamp": "2019-03-25T18:08:19Z",
+      "file": "wikigg/Earthen Cowl.wikitext"
+    },
+    {
+      "title": "Easymind Hat",
+      "resolvedTitle": "Easymind Hat",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Easymind_Hat",
+      "revid": 13622,
+      "revisionTimestamp": "2019-03-25T18:08:29Z",
+      "file": "wikigg/Easymind Hat.wikitext"
+    },
+    {
+      "title": "Ebon Mantle",
+      "resolvedTitle": "Ebon Mantle",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ebon_Mantle",
+      "revid": 14723,
+      "revisionTimestamp": "2020-11-16T17:13:07Z",
+      "file": "wikigg/Ebon Mantle.wikitext"
+    },
+    {
+      "title": "Ebonsand Behemoth",
+      "resolvedTitle": "Ebonsand Behemoth",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ebonsand_Behemoth",
+      "revid": 31485,
+      "revisionTimestamp": "2026-09-25T14:08:38Z",
+      "file": "wikigg/Ebonsand Behemoth.wikitext"
+    },
+    {
+      "title": "Eerie Turquoise Phylactery",
+      "resolvedTitle": "Eerie Turquoise Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Eerie_Turquoise_Phylactery",
+      "revid": 10256,
+      "revisionTimestamp": "2023-11-15T20:52:48Z",
+      "file": "wikigg/Eerie Turquoise Phylactery.wikitext"
+    },
+    {
+      "title": "Efficient Minion Tactics",
+      "resolvedTitle": "Efficient Minion Tactics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Efficient_Minion_Tactics",
+      "revid": 9960,
+      "revisionTimestamp": "2019-07-18T19:38:04Z",
+      "file": "wikigg/Efficient Minion Tactics.wikitext"
+    },
+    {
+      "title": "Elixir",
+      "resolvedTitle": "Elixir",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Elixir",
+      "revid": 29508,
+      "revisionTimestamp": "2026-05-30T16:32:12Z",
+      "file": "wikigg/Elixir.wikitext"
+    },
+    {
+      "title": "Embrace of the Erased",
+      "resolvedTitle": "Embrace of the Erased",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Embrace_of_the_Erased",
+      "revid": 21546,
+      "revisionTimestamp": "2025-06-04T17:30:13Z",
+      "file": "wikigg/Embrace of the Erased.wikitext"
+    },
+    {
+      "title": "Embrace Of The Grove",
+      "resolvedTitle": "Embrace Of The Grove",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Embrace_Of_The_Grove",
+      "revid": 11712,
+      "revisionTimestamp": "2019-03-25T18:08:34Z",
+      "file": "wikigg/Embrace Of The Grove.wikitext"
+    },
+    {
+      "title": "Empowered Water",
+      "resolvedTitle": "Empowered Water",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowered_Water",
+      "revid": 6635,
+      "revisionTimestamp": "2019-11-06T19:31:22Z",
+      "file": "wikigg/Empowered Water.wikitext"
+    },
+    {
+      "title": "Empowering Ankleguards",
+      "resolvedTitle": "Empowering Ankleguards",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Ankleguards",
+      "revid": 19501,
+      "revisionTimestamp": "2025-01-10T07:44:05Z",
+      "file": "wikigg/Empowering Ankleguards.wikitext"
+    },
+    {
+      "title": "Empowering Chestguard",
+      "resolvedTitle": "Empowering Chestguard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Chestguard",
+      "revid": 13818,
+      "revisionTimestamp": "2019-03-25T18:08:40Z",
+      "file": "wikigg/Empowering Chestguard.wikitext"
+    },
+    {
+      "title": "Empowering Handguards",
+      "resolvedTitle": "Empowering Handguards",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Handguards",
+      "revid": 8916,
+      "revisionTimestamp": "2019-03-25T18:08:46Z",
+      "file": "wikigg/Empowering Handguards.wikitext"
+    },
+    {
+      "title": "Empowering Headguard",
+      "resolvedTitle": "Empowering Headguard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Headguard",
+      "revid": 13552,
+      "revisionTimestamp": "2019-03-25T18:08:53Z",
+      "file": "wikigg/Empowering Headguard.wikitext"
+    },
+    {
+      "title": "Empowering Legguards",
+      "resolvedTitle": "Empowering Legguards",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Legguards",
+      "revid": 19553,
+      "revisionTimestamp": "2025-01-10T08:41:34Z",
+      "file": "wikigg/Empowering Legguards.wikitext"
+    },
+    {
+      "title": "Empowering Managuard",
+      "resolvedTitle": "Empowering Managuard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Managuard",
+      "revid": 24362,
+      "revisionTimestamp": "2025-09-16T18:44:15Z",
+      "file": "wikigg/Empowering Managuard.wikitext"
+    },
+    {
+      "title": "Empowering Shoulderguard",
+      "resolvedTitle": "Empowering Shoulderguard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Shoulderguard",
+      "revid": 7376,
+      "revisionTimestamp": "2019-03-25T18:09:00Z",
+      "file": "wikigg/Empowering Shoulderguard.wikitext"
+    },
+    {
+      "title": "Empowering Waistguard",
+      "resolvedTitle": "Empowering Waistguard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Empowering_Waistguard",
+      "revid": 2762,
+      "revisionTimestamp": "2019-03-25T18:09:05Z",
+      "file": "wikigg/Empowering Waistguard.wikitext"
+    },
+    {
+      "title": "Enchanting Membrane",
+      "resolvedTitle": "Enchanting Membrane",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Enchanting_Membrane",
+      "revid": 31489,
+      "revisionTimestamp": "2026-09-25T14:08:46Z",
+      "file": "wikigg/Enchanting Membrane.wikitext"
+    },
+    {
+      "title": "Enchantments",
+      "resolvedTitle": "Enchantments",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Enchantments",
+      "revid": 29725,
+      "revisionTimestamp": "2026-06-15T02:24:51Z",
+      "file": "wikigg/Enchantments.wikitext"
+    },
+    {
+      "title": "Encircling Trophies",
+      "resolvedTitle": "Encircling Trophies",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Encircling_Trophies",
+      "revid": 18327,
+      "revisionTimestamp": "2024-08-13T20:11:44Z",
+      "file": "wikigg/Encircling Trophies.wikitext"
+    },
+    {
+      "title": "Endless Pouches",
+      "resolvedTitle": "Endless Pouches",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Endless_Pouches",
+      "revid": 1199,
+      "revisionTimestamp": "2019-03-25T18:09:17Z",
+      "file": "wikigg/Endless Pouches.wikitext"
+    },
+    {
+      "title": "Endtimes Armor",
+      "resolvedTitle": "Endtimes Armor",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Endtimes_Armor",
+      "revid": 21539,
+      "revisionTimestamp": "2025-06-04T17:22:56Z",
+      "file": "wikigg/Endtimes Armor.wikitext"
+    },
+    {
+      "title": "Endtimes Failsafe",
+      "resolvedTitle": "Endtimes Failsafe",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Endtimes_Failsafe",
+      "revid": 21547,
+      "revisionTimestamp": "2025-06-04T17:30:50Z",
+      "file": "wikigg/Endtimes Failsafe.wikitext"
+    },
+    {
+      "title": "Endtimes Gear",
+      "resolvedTitle": "Endtimes Gear",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Endtimes_Gear",
+      "revid": 21543,
+      "revisionTimestamp": "2025-06-04T17:26:22Z",
+      "file": "wikigg/Endtimes Gear.wikitext"
+    },
+    {
+      "title": "Endtimes Visor",
+      "resolvedTitle": "Endtimes Visor",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Endtimes_Visor",
+      "revid": 21537,
+      "revisionTimestamp": "2025-06-04T17:20:30Z",
+      "file": "wikigg/Endtimes Visor.wikitext"
+    },
+    {
+      "title": "Enigmatic Parchment",
+      "resolvedTitle": "Enigmatic Parchment",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Enigmatic_Parchment",
+      "revid": 15079,
+      "revisionTimestamp": "2019-07-31T14:31:06Z",
+      "file": "wikigg/Enigmatic Parchment.wikitext"
+    },
+    {
+      "title": "Ent",
+      "resolvedTitle": "Ent",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ent",
+      "revid": 31491,
+      "revisionTimestamp": "2026-09-25T14:08:50Z",
+      "file": "wikigg/Ent.wikitext"
+    },
+    {
+      "title": "Ethereal Veil",
+      "resolvedTitle": "Ethereal Veil",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ethereal_Veil",
+      "revid": 24366,
+      "revisionTimestamp": "2025-09-16T18:57:36Z",
+      "file": "wikigg/Ethereal Veil.wikitext"
+    },
+    {
+      "title": "Faithful Fists",
+      "resolvedTitle": "Faithful Fists",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Faithful_Fists",
+      "revid": 5245,
+      "revisionTimestamp": "2019-03-25T18:09:45Z",
+      "file": "wikigg/Faithful Fists.wikitext"
+    },
+    {
+      "title": "Falconer's Bottoms",
+      "resolvedTitle": "Falconer's Bottoms",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Bottoms",
+      "revid": 19554,
+      "revisionTimestamp": "2025-01-10T08:41:39Z",
+      "file": "wikigg/Falconer's Bottoms.wikitext"
+    },
+    {
+      "title": "Falconer's Furcoat",
+      "resolvedTitle": "Falconer's Furcoat",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Furcoat",
+      "revid": 21830,
+      "revisionTimestamp": "2025-06-24T16:40:12Z",
+      "file": "wikigg/Falconer's Furcoat.wikitext"
+    },
+    {
+      "title": "Falconer's Gloves",
+      "resolvedTitle": "Falconer's Gloves",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Gloves",
+      "revid": 4784,
+      "revisionTimestamp": "2019-03-25T18:09:50Z",
+      "file": "wikigg/Falconer's Gloves.wikitext"
+    },
+    {
+      "title": "Falconer's Leather Wrappings",
+      "resolvedTitle": "Falconer's Leather Wrappings",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Leather_Wrappings",
+      "revid": 10124,
+      "revisionTimestamp": "2019-03-25T18:09:55Z",
+      "file": "wikigg/Falconer's Leather Wrappings.wikitext"
+    },
+    {
+      "title": "Falconer's Ranger Hat",
+      "resolvedTitle": "Falconer's Ranger Hat",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Ranger_Hat",
+      "revid": 3023,
+      "revisionTimestamp": "2019-03-25T18:10:34Z",
+      "file": "wikigg/Falconer's Ranger Hat.wikitext"
+    },
+    {
+      "title": "Falconer's Treats",
+      "resolvedTitle": "Falconer's Treats",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Treats",
+      "revid": 24364,
+      "revisionTimestamp": "2025-09-16T18:56:24Z",
+      "file": "wikigg/Falconer's Treats.wikitext"
+    },
+    {
+      "title": "Falconer's Warm Cape",
+      "resolvedTitle": "Falconer's Warm Cape",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Falconer's_Warm_Cape",
+      "revid": 8959,
+      "revisionTimestamp": "2019-06-07T16:33:34Z",
+      "file": "wikigg/Falconer's Warm Cape.wikitext"
+    },
+    {
+      "title": "Fancy Cape",
+      "resolvedTitle": "Fancy Cape",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fancy_Cape",
+      "revid": 3744,
+      "revisionTimestamp": "2019-03-25T18:10:44Z",
+      "file": "wikigg/Fancy Cape.wikitext"
+    },
+    {
+      "title": "Fey Glider",
+      "resolvedTitle": "Fey Glider",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fey_Glider",
+      "revid": 19566,
+      "revisionTimestamp": "2025-01-10T08:58:36Z",
+      "file": "wikigg/Fey Glider.wikitext"
+    },
+    {
+      "title": "Fiery Grips",
+      "resolvedTitle": "Fiery Grips",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fiery_Grips",
+      "revid": 10895,
+      "revisionTimestamp": "2019-03-25T18:10:49Z",
+      "file": "wikigg/Fiery Grips.wikitext"
+    },
+    {
+      "title": "Fiery Ring",
+      "resolvedTitle": "Fiery Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fiery_Ring",
+      "revid": 19516,
+      "revisionTimestamp": "2025-01-10T08:07:22Z",
+      "file": "wikigg/Fiery Ring.wikitext"
+    },
+    {
+      "title": "Fist Brooch",
+      "resolvedTitle": "Fist Brooch",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fist_Brooch",
+      "revid": 2963,
+      "revisionTimestamp": "2019-03-25T18:10:58Z",
+      "file": "wikigg/Fist Brooch.wikitext"
+    },
+    {
+      "title": "Flaming Cape",
+      "resolvedTitle": "Flaming Cape",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Flaming_Cape",
+      "revid": 4852,
+      "revisionTimestamp": "2020-02-07T02:26:43Z",
+      "file": "wikigg/Flaming Cape.wikitext"
+    },
+    {
+      "title": "Focusing Bracers",
+      "resolvedTitle": "Focusing Bracers",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Focusing_Bracers",
+      "revid": 11377,
+      "revisionTimestamp": "2019-03-25T18:11:07Z",
+      "file": "wikigg/Focusing Bracers.wikitext"
+    },
+    {
+      "title": "Folds of Magma",
+      "resolvedTitle": "Folds of Magma",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Folds_of_Magma",
+      "revid": 19555,
+      "revisionTimestamp": "2025-01-10T08:41:43Z",
+      "file": "wikigg/Folds of Magma.wikitext"
+    },
+    {
+      "title": "Forest's Embrace",
+      "resolvedTitle": "Forest's Embrace",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Forest's_Embrace",
+      "revid": 5277,
+      "revisionTimestamp": "2020-04-20T14:15:25Z",
+      "file": "wikigg/Forest's Embrace.wikitext"
+    },
+    {
+      "title": "Fossil Seeds",
+      "resolvedTitle": "Fossil Seeds",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Fossil_Seeds",
+      "revid": 2685,
+      "revisionTimestamp": "2019-11-06T19:31:38Z",
+      "file": "wikigg/Fossil Seeds.wikitext"
+    },
+    {
+      "title": "Frosty Ring",
+      "resolvedTitle": "Frosty Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Frosty_Ring",
+      "revid": 19517,
+      "revisionTimestamp": "2025-01-10T08:07:26Z",
+      "file": "wikigg/Frosty Ring.wikitext"
+    },
+    {
+      "title": "Gemshoes",
+      "resolvedTitle": "Gemshoes",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Gemshoes",
+      "revid": 19502,
+      "revisionTimestamp": "2025-01-10T07:46:21Z",
+      "file": "wikigg/Gemshoes.wikitext"
+    },
+    {
+      "title": "Geode",
+      "resolvedTitle": "Geode",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Geode",
+      "revid": 27053,
+      "revisionTimestamp": "2026-01-05T06:24:31Z",
+      "file": "wikigg/Geode.wikitext"
+    },
+    {
+      "title": "Godflesh Appendages",
+      "resolvedTitle": "Godflesh Appendages",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Godflesh_Appendages",
+      "revid": 21549,
+      "revisionTimestamp": "2025-06-04T17:32:24Z",
+      "file": "wikigg/Godflesh Appendages.wikitext"
+    },
+    {
+      "title": "Godflesh Dominion",
+      "resolvedTitle": "Godflesh Dominion",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Godflesh_Dominion",
+      "revid": 21545,
+      "revisionTimestamp": "2025-06-04T17:29:27Z",
+      "file": "wikigg/Godflesh Dominion.wikitext"
+    },
+    {
+      "title": "Godflesh Grasp",
+      "resolvedTitle": "Godflesh Grasp",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Godflesh_Grasp",
+      "revid": 21541,
+      "revisionTimestamp": "2025-06-04T17:24:51Z",
+      "file": "wikigg/Godflesh Grasp.wikitext"
+    },
+    {
+      "title": "Godflesh Heart",
+      "resolvedTitle": "Godflesh Heart",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Godflesh_Heart",
+      "revid": 21538,
+      "revisionTimestamp": "2025-06-04T17:22:11Z",
+      "file": "wikigg/Godflesh Heart.wikitext"
+    },
+    {
+      "title": "Godflesh Veil",
+      "resolvedTitle": "Godflesh Veil",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Godflesh_Veil",
+      "revid": 21553,
+      "revisionTimestamp": "2025-06-04T17:36:00Z",
+      "file": "wikigg/Godflesh Veil.wikitext"
+    },
+    {
+      "title": "Golem",
+      "resolvedTitle": "Golem",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Golem",
+      "revid": 31615,
+      "revisionTimestamp": "2026-09-25T15:28:08Z",
+      "file": "wikigg/Golem.wikitext"
+    },
+    {
+      "title": "Grasp Of The Grave",
+      "resolvedTitle": "Grasp Of The Grave",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Grasp_Of_The_Grave",
+      "revid": 10136,
+      "revisionTimestamp": "2019-03-25T18:11:34Z",
+      "file": "wikigg/Grasp Of The Grave.wikitext"
+    },
+    {
+      "title": "Gravemoss Waistband",
+      "resolvedTitle": "Gravemoss Waistband",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Gravemoss_Waistband",
+      "revid": 3775,
+      "revisionTimestamp": "2019-03-25T18:11:40Z",
+      "file": "wikigg/Gravemoss Waistband.wikitext"
+    },
+    {
+      "title": "Greater Chimaera",
+      "resolvedTitle": "Greater Chimaera",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Greater_Chimaera",
+      "revid": 31500,
+      "revisionTimestamp": "2026-09-25T14:09:10Z",
+      "file": "wikigg/Greater Chimaera.wikitext"
+    },
+    {
+      "title": "Habitstone",
+      "resolvedTitle": "Habitstone",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Habitstone",
+      "revid": 3362,
+      "revisionTimestamp": "2019-03-25T18:11:53Z",
+      "file": "wikigg/Habitstone.wikitext"
+    },
+    {
+      "title": "Head Of The All-Eater",
+      "resolvedTitle": "Head Of The All-Eater",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Head_Of_The_All-Eater",
+      "revid": 31502,
+      "revisionTimestamp": "2026-09-25T14:09:14Z",
+      "file": "wikigg/Head Of The All-Eater.wikitext"
+    },
+    {
+      "title": "Heart of the Grave",
+      "resolvedTitle": "Heart of the Grave",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Heart_of_the_Grave",
+      "revid": 30894,
+      "revisionTimestamp": "2026-09-12T13:31:46Z",
+      "file": "wikigg/Heart of the Grave.wikitext"
+    },
+    {
+      "title": "Heart of the Storm",
+      "resolvedTitle": "Heart of the Storm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Heart_of_the_Storm",
+      "revid": 13534,
+      "revisionTimestamp": "2019-11-06T19:31:59Z",
+      "file": "wikigg/Heart of the Storm.wikitext"
+    },
+    {
+      "title": "Hectic Lime Phylactery",
+      "resolvedTitle": "Hectic Lime Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Hectic_Lime_Phylactery",
+      "revid": 19196,
+      "revisionTimestamp": "2024-11-16T14:11:46Z",
+      "file": "wikigg/Hectic Lime Phylactery.wikitext"
+    },
+    {
+      "title": "Herald of Rot",
+      "resolvedTitle": "Herald of Rot",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Herald_of_Rot",
+      "revid": 31504,
+      "revisionTimestamp": "2026-09-25T14:09:19Z",
+      "file": "wikigg/Herald of Rot.wikitext"
+    },
+    {
+      "title": "Holidays",
+      "resolvedTitle": "Holidays",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Holidays",
+      "revid": 15393,
+      "revisionTimestamp": "2019-07-18T19:38:11Z",
+      "file": "wikigg/Holidays.wikitext"
+    },
+    {
+      "title": "Hollow Eye Pendant",
+      "resolvedTitle": "Hollow Eye Pendant",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Hollow_Eye_Pendant",
+      "revid": 9271,
+      "revisionTimestamp": "2019-06-07T16:32:55Z",
+      "file": "wikigg/Hollow Eye Pendant.wikitext"
+    },
+    {
+      "title": "Homunculus",
+      "resolvedTitle": "Homunculus",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Homunculus",
+      "revid": 31506,
+      "revisionTimestamp": "2026-09-25T14:09:24Z",
+      "file": "wikigg/Homunculus.wikitext"
+    },
+    {
+      "title": "Hoop Of Branches",
+      "resolvedTitle": "Hoop Of Branches",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Hoop_Of_Branches",
+      "revid": 19518,
+      "revisionTimestamp": "2025-01-10T08:09:59Z",
+      "file": "wikigg/Hoop Of Branches.wikitext"
+    },
+    {
+      "title": "Hungerer",
+      "resolvedTitle": "Hungerer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Hungerer",
+      "revid": 31507,
+      "revisionTimestamp": "2026-09-25T14:09:26Z",
+      "file": "wikigg/Hungerer.wikitext"
+    },
+    {
+      "title": "Idle Mode",
+      "resolvedTitle": "Basic Mechanics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Basic_Mechanics",
+      "revid": 31648,
+      "revisionTimestamp": "2026-09-26T20:37:24Z",
+      "file": "wikigg/Basic Mechanics.wikitext"
+    },
+    {
+      "title": "Incantations Restructuring",
+      "resolvedTitle": "Incantations Restructuring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Incantations_Restructuring",
+      "revid": 7163,
+      "revisionTimestamp": "2019-07-18T19:38:22Z",
+      "file": "wikigg/Incantations Restructuring.wikitext"
+    },
+    {
+      "title": "Inert Jade Phylactery",
+      "resolvedTitle": "Inert Jade Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Inert_Jade_Phylactery",
+      "revid": 4229,
+      "revisionTimestamp": "2023-10-02T19:15:59Z",
+      "file": "wikigg/Inert Jade Phylactery.wikitext"
+    },
+    {
+      "title": "Inquisitive Eye",
+      "resolvedTitle": "Inquisitive Eye",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Inquisitive_Eye",
+      "revid": 4971,
+      "revisionTimestamp": "2021-12-18T18:32:02Z",
+      "file": "wikigg/Inquisitive Eye.wikitext"
+    },
+    {
+      "title": "Insidious Lure",
+      "resolvedTitle": "Insidious Lure",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Insidious_Lure",
+      "revid": 14647,
+      "revisionTimestamp": "2020-08-14T12:22:07Z",
+      "file": "wikigg/Insidious Lure.wikitext"
+    },
+    {
+      "title": "Intact Carapace",
+      "resolvedTitle": "Intact Carapace",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Intact_Carapace",
+      "revid": 3844,
+      "revisionTimestamp": "2019-11-06T19:32:13Z",
+      "file": "wikigg/Intact Carapace.wikitext"
+    },
+    {
+      "title": "Interrogator",
+      "resolvedTitle": "Interrogator",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Interrogator",
+      "revid": 31508,
+      "revisionTimestamp": "2026-09-25T14:09:28Z",
+      "file": "wikigg/Interrogator.wikitext"
+    },
+    {
+      "title": "Intricate Crimson Phylactery",
+      "resolvedTitle": "Intricate Crimson Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Intricate_Crimson_Phylactery",
+      "revid": 11190,
+      "revisionTimestamp": "2023-10-02T19:16:28Z",
+      "file": "wikigg/Intricate Crimson Phylactery.wikitext"
+    },
+    {
+      "title": "Items",
+      "resolvedTitle": "Items",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Items",
+      "revid": 30594,
+      "revisionTimestamp": "2026-08-17T23:17:08Z",
+      "file": "wikigg/Items.wikitext"
+    },
+    {
+      "title": "Legacy",
+      "resolvedTitle": "Legacy",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Legacy",
+      "revid": 28733,
+      "revisionTimestamp": "2026-05-10T08:50:05Z",
+      "file": "wikigg/Legacy.wikitext"
+    },
+    {
+      "title": "Legacy of the Erased",
+      "resolvedTitle": "Legacy of the Erased",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Legacy_of_the_Erased",
+      "revid": 22907,
+      "revisionTimestamp": "2025-07-16T16:40:07Z",
+      "file": "wikigg/Legacy of the Erased.wikitext"
+    },
+    {
+      "title": "Ley Keeper",
+      "resolvedTitle": "Ley Keeper",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ley_Keeper",
+      "revid": 31512,
+      "revisionTimestamp": "2026-09-25T14:09:37Z",
+      "file": "wikigg/Ley Keeper.wikitext"
+    },
+    {
+      "title": "Light Of Eighth Star",
+      "resolvedTitle": "Light Of Eighth Star",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Light_Of_Eighth_Star",
+      "revid": 28536,
+      "revisionTimestamp": "2026-04-25T11:24:32Z",
+      "file": "wikigg/Light Of Eighth Star.wikitext"
+    },
+    {
+      "title": "Living Sin",
+      "resolvedTitle": "Living Sin",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Living_Sin",
+      "revid": 31514,
+      "revisionTimestamp": "2026-09-25T14:09:40Z",
+      "file": "wikigg/Living Sin.wikitext"
+    },
+    {
+      "title": "Lordic Greaves",
+      "resolvedTitle": "Lordic Greaves",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Lordic_Greaves",
+      "revid": 19504,
+      "revisionTimestamp": "2025-01-10T07:46:35Z",
+      "file": "wikigg/Lordic Greaves.wikitext"
+    },
+    {
+      "title": "Lucky Amulet",
+      "resolvedTitle": "Lucky Amulet",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Lucky_Amulet",
+      "revid": 13111,
+      "revisionTimestamp": "2019-03-25T18:12:41Z",
+      "file": "wikigg/Lucky Amulet.wikitext"
+    },
+    {
+      "title": "Mantle Of The Crypt",
+      "resolvedTitle": "Mantle Of The Crypt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mantle_Of_The_Crypt",
+      "revid": 5097,
+      "revisionTimestamp": "2019-03-25T18:12:53Z",
+      "file": "wikigg/Mantle Of The Crypt.wikitext"
+    },
+    {
+      "title": "Mantle of the First Realm",
+      "resolvedTitle": "Mantle of the First Realm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mantle_of_the_First_Realm",
+      "revid": 21544,
+      "revisionTimestamp": "2025-06-04T17:28:46Z",
+      "file": "wikigg/Mantle of the First Realm.wikitext"
+    },
+    {
+      "title": "Mechanos Apexis",
+      "resolvedTitle": "Mechanos Apexis",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mechanos_Apexis",
+      "revid": 31518,
+      "revisionTimestamp": "2026-09-25T14:09:55Z",
+      "file": "wikigg/Mechanos Apexis.wikitext"
+    },
+    {
+      "title": "Mesmerizing Pants",
+      "resolvedTitle": "Mesmerizing Pants",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mesmerizing_Pants",
+      "revid": 19556,
+      "revisionTimestamp": "2025-01-10T08:41:47Z",
+      "file": "wikigg/Mesmerizing Pants.wikitext"
+    },
+    {
+      "title": "Miniaturized Accelerator",
+      "resolvedTitle": "Miniaturized Accelerator",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Miniaturized_Accelerator",
+      "revid": 8885,
+      "revisionTimestamp": "2020-12-29T02:53:24Z",
+      "file": "wikigg/Miniaturized Accelerator.wikitext"
+    },
+    {
+      "title": "Module:BiS",
+      "resolvedTitle": "Module:BiS",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3ABiS",
+      "revid": 8518,
+      "revisionTimestamp": "2023-01-16T08:13:26Z",
+      "file": "wikigg/Module__BiS.wikitext"
+    },
+    {
+      "title": "Module:Data/Classes",
+      "resolvedTitle": "Module:Data/Classes",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AData%2FClasses",
+      "revid": 27196,
+      "revisionTimestamp": "2026-01-20T08:57:25Z",
+      "file": "wikigg/Module__Data__Classes.wikitext"
+    },
+    {
+      "title": "Module:Data/Familiars",
+      "resolvedTitle": "Module:Data/Familiars",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AData%2FFamiliars",
+      "revid": 28825,
+      "revisionTimestamp": "2026-05-15T20:15:01Z",
+      "file": "wikigg/Module__Data__Familiars.wikitext"
+    },
+    {
+      "title": "Module:Data/Items",
+      "resolvedTitle": "Module:Data/Items",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AData%2FItems",
+      "revid": 30983,
+      "revisionTimestamp": "2026-09-16T13:26:15Z",
+      "file": "wikigg/Module__Data__Items.wikitext"
+    },
+    {
+      "title": "Module:Data/ManaSources",
+      "resolvedTitle": "Module:Data/ManaSources",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AData%2FManaSources",
+      "revid": 29862,
+      "revisionTimestamp": "2026-06-23T21:40:58Z",
+      "file": "wikigg/Module__Data__ManaSources.wikitext"
+    },
+    {
+      "title": "Module:Data/Spells",
+      "resolvedTitle": "Module:Data/Spells",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AData%2FSpells",
+      "revid": 30840,
+      "revisionTimestamp": "2026-09-01T17:34:58Z",
+      "file": "wikigg/Module__Data__Spells.wikitext"
+    },
+    {
+      "title": "Module:Items",
+      "resolvedTitle": "Module:Items",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3AItems",
+      "revid": 31244,
+      "revisionTimestamp": "2026-09-22T17:45:46Z",
+      "file": "wikigg/Module__Items.wikitext"
+    },
+    {
+      "title": "Module:Spells",
+      "resolvedTitle": "Module:Spells",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Module%3ASpells",
+      "revid": 31254,
+      "revisionTimestamp": "2026-09-23T10:11:16Z",
+      "file": "wikigg/Module__Spells.wikitext"
+    },
+    {
+      "title": "Morbid Loop",
+      "resolvedTitle": "Morbid Loop",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Morbid_Loop",
+      "revid": 19519,
+      "revisionTimestamp": "2025-01-10T08:10:03Z",
+      "file": "wikigg/Morbid Loop.wikitext"
+    },
+    {
+      "title": "Mother's Gift",
+      "resolvedTitle": "Mother's Gift",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mother's_Gift",
+      "revid": 24368,
+      "revisionTimestamp": "2025-09-16T18:58:50Z",
+      "file": "wikigg/Mother's Gift.wikitext"
+    },
+    {
+      "title": "Murmuring Spellbook",
+      "resolvedTitle": "Murmuring Spellbook",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Murmuring_Spellbook",
+      "revid": 9874,
+      "revisionTimestamp": "2019-03-25T18:13:06Z",
+      "file": "wikigg/Murmuring Spellbook.wikitext"
+    },
+    {
+      "title": "Mutated Mycelium",
+      "resolvedTitle": "Mutated Mycelium",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Mutated_Mycelium",
+      "revid": 11046,
+      "revisionTimestamp": "2019-11-06T19:32:26Z",
+      "file": "wikigg/Mutated Mycelium.wikitext"
+    },
+    {
+      "title": "Mysteries",
+      "resolvedTitle": "Basic Mechanics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Basic_Mechanics",
+      "revid": 31648,
+      "revisionTimestamp": "2026-09-26T20:37:24Z",
+      "file": "wikigg/Basic Mechanics.wikitext"
+    },
+    {
+      "title": "Necrotic Powerstone",
+      "resolvedTitle": "Necrotic Powerstone",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Necrotic_Powerstone",
+      "revid": 4278,
+      "revisionTimestamp": "2019-11-06T19:32:40Z",
+      "file": "wikigg/Necrotic Powerstone.wikitext"
+    },
+    {
+      "title": "Nether Barrier",
+      "resolvedTitle": "Nether Barrier",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nether_Barrier",
+      "revid": 19557,
+      "revisionTimestamp": "2025-01-10T08:43:54Z",
+      "file": "wikigg/Nether Barrier.wikitext"
+    },
+    {
+      "title": "Nether Chain",
+      "resolvedTitle": "Nether Chain",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nether_Chain",
+      "revid": 11068,
+      "revisionTimestamp": "2019-03-25T18:13:12Z",
+      "file": "wikigg/Nether Chain.wikitext"
+    },
+    {
+      "title": "Netherfist",
+      "resolvedTitle": "Netherfist",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Netherfist",
+      "revid": 6181,
+      "revisionTimestamp": "2019-03-25T18:13:19Z",
+      "file": "wikigg/Netherfist.wikitext"
+    },
+    {
+      "title": "Netherloop",
+      "resolvedTitle": "Netherloop",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Netherloop",
+      "revid": 19520,
+      "revisionTimestamp": "2025-01-10T08:10:05Z",
+      "file": "wikigg/Netherloop.wikitext"
+    },
+    {
+      "title": "Nethershackles",
+      "resolvedTitle": "Nethershackles",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nethershackles",
+      "revid": 3011,
+      "revisionTimestamp": "2020-11-16T17:14:36Z",
+      "file": "wikigg/Nethershackles.wikitext"
+    },
+    {
+      "title": "Nethershell",
+      "resolvedTitle": "Nethershell",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nethershell",
+      "revid": 11638,
+      "revisionTimestamp": "2019-03-25T18:13:28Z",
+      "file": "wikigg/Nethershell.wikitext"
+    },
+    {
+      "title": "Nix-Instability",
+      "resolvedTitle": "Nix-Instability",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nix-Instability",
+      "revid": 31523,
+      "revisionTimestamp": "2026-09-25T14:10:05Z",
+      "file": "wikigg/Nix-Instability.wikitext"
+    },
+    {
+      "title": "Nomadic Wrists",
+      "resolvedTitle": "Nomadic Wrists",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nomadic_Wrists",
+      "revid": 7083,
+      "revisionTimestamp": "2019-03-25T18:13:33Z",
+      "file": "wikigg/Nomadic Wrists.wikitext"
+    },
+    {
+      "title": "Nulldragon, The Anomaly",
+      "resolvedTitle": "Nulldragon, The Anomaly",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Nulldragon%2C_The_Anomaly",
+      "revid": 28537,
+      "revisionTimestamp": "2026-04-25T11:25:48Z",
+      "file": "wikigg/Nulldragon_ The Anomaly.wikitext"
+    },
+    {
+      "title": "Oni",
+      "resolvedTitle": "Oni",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Oni",
+      "revid": 31603,
+      "revisionTimestamp": "2026-09-25T14:40:25Z",
+      "file": "wikigg/Oni.wikitext"
+    },
+    {
+      "title": "Oni Guide",
+      "resolvedTitle": "Oni Guide",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Oni_Guide",
+      "revid": 31631,
+      "revisionTimestamp": "2026-09-26T13:56:28Z",
+      "file": "wikigg/Oni Guide.wikitext"
+    },
+    {
+      "title": "Paragon",
+      "resolvedTitle": "Paragon",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Paragon",
+      "revid": 30485,
+      "revisionTimestamp": "2026-08-09T19:47:54Z",
+      "file": "wikigg/Paragon.wikitext"
+    },
+    {
+      "title": "Paukan, The Spider",
+      "resolvedTitle": "Paukan, The Spider",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Paukan%2C_The_Spider",
+      "revid": 19568,
+      "revisionTimestamp": "2025-01-10T09:01:54Z",
+      "file": "wikigg/Paukan_ The Spider.wikitext"
+    },
+    {
+      "title": "Perfected Kata Bracers",
+      "resolvedTitle": "Perfected Kata Bracers",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Perfected_Kata_Bracers",
+      "revid": 11718,
+      "revisionTimestamp": "2019-06-07T16:30:28Z",
+      "file": "wikigg/Perfected Kata Bracers.wikitext"
+    },
+    {
+      "title": "Pheromone Gland",
+      "resolvedTitle": "Pheromone Gland",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pheromone_Gland",
+      "revid": 14253,
+      "revisionTimestamp": "2019-11-06T19:32:53Z",
+      "file": "wikigg/Pheromone Gland.wikitext"
+    },
+    {
+      "title": "Philosopher's Stone",
+      "resolvedTitle": "Philosopher's Stone",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Philosopher's_Stone",
+      "revid": 31529,
+      "revisionTimestamp": "2026-09-25T14:10:17Z",
+      "file": "wikigg/Philosopher's Stone.wikitext"
+    },
+    {
+      "title": "Pillars of the First Realm",
+      "resolvedTitle": "Pillars of the First Realm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pillars_of_the_First_Realm",
+      "revid": 21552,
+      "revisionTimestamp": "2025-06-04T17:34:33Z",
+      "file": "wikigg/Pillars of the First Realm.wikitext"
+    },
+    {
+      "title": "Pit Lord",
+      "resolvedTitle": "Pit Lord",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pit_Lord",
+      "revid": 31530,
+      "revisionTimestamp": "2026-09-25T14:10:19Z",
+      "file": "wikigg/Pit Lord.wikitext"
+    },
+    {
+      "title": "Pitch-black Cage",
+      "resolvedTitle": "Pitch-black Cage",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pitch-black_Cage",
+      "revid": 28539,
+      "revisionTimestamp": "2026-04-25T11:28:20Z",
+      "file": "wikigg/Pitch-black Cage.wikitext"
+    },
+    {
+      "title": "Pixie",
+      "resolvedTitle": "Pixie",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pixie",
+      "revid": 31617,
+      "revisionTimestamp": "2026-09-25T15:39:23Z",
+      "file": "wikigg/Pixie.wikitext"
+    },
+    {
+      "title": "Pompous Tunic",
+      "resolvedTitle": "Pompous Tunic",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pompous_Tunic",
+      "revid": 13174,
+      "revisionTimestamp": "2019-03-25T18:13:56Z",
+      "file": "wikigg/Pompous Tunic.wikitext"
+    },
+    {
+      "title": "Power of the First Realm",
+      "resolvedTitle": "Power of the First Realm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Power_of_the_First_Realm",
+      "revid": 21540,
+      "revisionTimestamp": "2025-06-04T17:23:49Z",
+      "file": "wikigg/Power of the First Realm.wikitext"
+    },
+    {
+      "title": "Precise Wristband",
+      "resolvedTitle": "Precise Wristband",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Precise_Wristband",
+      "revid": 3165,
+      "revisionTimestamp": "2019-03-25T18:14:01Z",
+      "file": "wikigg/Precise Wristband.wikitext"
+    },
+    {
+      "title": "Pride of the First Realm",
+      "resolvedTitle": "Pride of the First Realm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Pride_of_the_First_Realm",
+      "revid": 22906,
+      "revisionTimestamp": "2025-07-16T16:39:59Z",
+      "file": "wikigg/Pride of the First Realm.wikitext"
+    },
+    {
+      "title": "Psychic Cacophony",
+      "resolvedTitle": "Psychic Cacophony",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Psychic_Cacophony",
+      "revid": 31538,
+      "revisionTimestamp": "2026-09-25T14:10:35Z",
+      "file": "wikigg/Psychic Cacophony.wikitext"
+    },
+    {
+      "title": "Radiant Leaf Pendant",
+      "resolvedTitle": "Radiant Leaf Pendant",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Radiant_Leaf_Pendant",
+      "revid": 7115,
+      "revisionTimestamp": "2019-03-25T18:14:05Z",
+      "file": "wikigg/Radiant Leaf Pendant.wikitext"
+    },
+    {
+      "title": "Reality Prism",
+      "resolvedTitle": "Reality Prism",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Reality_Prism",
+      "revid": 31618,
+      "revisionTimestamp": "2026-09-25T15:43:15Z",
+      "file": "wikigg/Reality Prism.wikitext"
+    },
+    {
+      "title": "Realmwalkers",
+      "resolvedTitle": "Realmwalkers",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Realmwalkers",
+      "revid": 21542,
+      "revisionTimestamp": "2025-06-04T17:25:47Z",
+      "file": "wikigg/Realmwalkers.wikitext"
+    },
+    {
+      "title": "Recaller Stone",
+      "resolvedTitle": "Recaller Stone",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Recaller_Stone",
+      "revid": 17762,
+      "revisionTimestamp": "2024-05-02T19:22:22Z",
+      "file": "wikigg/Recaller Stone.wikitext"
+    },
+    {
+      "title": "Redeemer",
+      "resolvedTitle": "Redeemer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Redeemer",
+      "revid": 28541,
+      "revisionTimestamp": "2026-04-25T11:30:11Z",
+      "file": "wikigg/Redeemer.wikitext"
+    },
+    {
+      "title": "Resonator Ring",
+      "resolvedTitle": "Resonator Ring",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Resonator_Ring",
+      "revid": 19521,
+      "revisionTimestamp": "2025-01-10T08:10:09Z",
+      "file": "wikigg/Resonator Ring.wikitext"
+    },
+    {
+      "title": "Rich Bands",
+      "resolvedTitle": "Rich Bands",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Rich_Bands",
+      "revid": 2164,
+      "revisionTimestamp": "2019-03-25T18:14:17Z",
+      "file": "wikigg/Rich Bands.wikitext"
+    },
+    {
+      "title": "Risen Giant",
+      "resolvedTitle": "Risen Giant",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Risen_Giant",
+      "revid": 31544,
+      "revisionTimestamp": "2026-09-25T14:10:46Z",
+      "file": "wikigg/Risen Giant.wikitext"
+    },
+    {
+      "title": "Ritual Disk",
+      "resolvedTitle": "Ritual Disk",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ritual_Disk",
+      "revid": 28542,
+      "revisionTimestamp": "2026-04-25T11:30:46Z",
+      "file": "wikigg/Ritual Disk.wikitext"
+    },
+    {
+      "title": "Robust Tangerine Phylactery",
+      "resolvedTitle": "Robust Tangerine Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Robust_Tangerine_Phylactery",
+      "revid": 7472,
+      "revisionTimestamp": "2023-10-02T19:16:48Z",
+      "file": "wikigg/Robust Tangerine Phylactery.wikitext"
+    },
+    {
+      "title": "Rugged Wristcoat",
+      "resolvedTitle": "Rugged Wristcoat",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Rugged_Wristcoat",
+      "revid": 3158,
+      "revisionTimestamp": "2019-03-25T18:14:22Z",
+      "file": "wikigg/Rugged Wristcoat.wikitext"
+    },
+    {
+      "title": "Sash of Luxury",
+      "resolvedTitle": "Sash of Luxury",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Sash_of_Luxury",
+      "revid": 9768,
+      "revisionTimestamp": "2020-11-16T17:13:53Z",
+      "file": "wikigg/Sash of Luxury.wikitext"
+    },
+    {
+      "title": "Scales of Appraisal",
+      "resolvedTitle": "Scales of Appraisal",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Scales_of_Appraisal",
+      "revid": 5140,
+      "revisionTimestamp": "2019-03-25T18:14:40Z",
+      "file": "wikigg/Scales of Appraisal.wikitext"
+    },
+    {
+      "title": "Searing Gaze",
+      "resolvedTitle": "Searing Gaze",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Searing_Gaze",
+      "revid": 2299,
+      "revisionTimestamp": "2020-11-16T17:10:30Z",
+      "file": "wikigg/Searing Gaze.wikitext"
+    },
+    {
+      "title": "Seclusion Shell",
+      "resolvedTitle": "Seclusion Shell",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Seclusion_Shell",
+      "revid": 2288,
+      "revisionTimestamp": "2020-11-16T17:09:22Z",
+      "file": "wikigg/Seclusion Shell.wikitext"
+    },
+    {
+      "title": "Seeping Shadow Signet",
+      "resolvedTitle": "Seeping Shadow Signet",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Seeping_Shadow_Signet",
+      "revid": 19522,
+      "revisionTimestamp": "2025-01-10T08:12:20Z",
+      "file": "wikigg/Seeping Shadow Signet.wikitext"
+    },
+    {
+      "title": "Self-Reflection",
+      "resolvedTitle": "Self-Reflection",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Self-Reflection",
+      "revid": 4438,
+      "revisionTimestamp": "2019-07-18T19:38:47Z",
+      "file": "wikigg/Self-Reflection.wikitext"
+    },
+    {
+      "title": "Servants Overclocking",
+      "resolvedTitle": "Servants Overclocking",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Servants_Overclocking",
+      "revid": 9369,
+      "revisionTimestamp": "2019-07-18T19:38:53Z",
+      "file": "wikigg/Servants Overclocking.wikitext"
+    },
+    {
+      "title": "Shadow Stalker",
+      "resolvedTitle": "Shadow Stalker",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shadow_Stalker",
+      "revid": 31548,
+      "revisionTimestamp": "2026-09-25T14:10:56Z",
+      "file": "wikigg/Shadow Stalker.wikitext"
+    },
+    {
+      "title": "Shadow Tendril",
+      "resolvedTitle": "Shadow Tendril",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shadow_Tendril",
+      "revid": 7296,
+      "revisionTimestamp": "2019-03-25T18:14:50Z",
+      "file": "wikigg/Shadow Tendril.wikitext"
+    },
+    {
+      "title": "Shadow-Scryer's Crystal Ball",
+      "resolvedTitle": "Shadow-Scryer's Crystal Ball",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shadow-Scryer's_Crystal_Ball",
+      "revid": 28543,
+      "revisionTimestamp": "2026-04-25T11:31:55Z",
+      "file": "wikigg/Shadow-Scryer's Crystal Ball.wikitext"
+    },
+    {
+      "title": "Shadowflame Loop",
+      "resolvedTitle": "Shadowflame Loop",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shadowflame_Loop",
+      "revid": 19523,
+      "revisionTimestamp": "2025-01-10T08:12:24Z",
+      "file": "wikigg/Shadowflame Loop.wikitext"
+    },
+    {
+      "title": "Shaman",
+      "resolvedTitle": "Shaman",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shaman",
+      "revid": 31605,
+      "revisionTimestamp": "2026-09-25T14:50:53Z",
+      "file": "wikigg/Shaman.wikitext"
+    },
+    {
+      "title": "Shaman Guide",
+      "resolvedTitle": "Shaman Guide",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shaman_Guide",
+      "revid": 31642,
+      "revisionTimestamp": "2026-09-26T17:44:17Z",
+      "file": "wikigg/Shaman Guide.wikitext"
+    },
+    {
+      "title": "Shard Of A Lost Dimension",
+      "resolvedTitle": "Shard Of A Lost Dimension",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Shard_Of_A_Lost_Dimension",
+      "revid": 31552,
+      "revisionTimestamp": "2026-09-25T14:11:04Z",
+      "file": "wikigg/Shard Of A Lost Dimension.wikitext"
+    },
+    {
+      "title": "Simple Memento",
+      "resolvedTitle": "Simple Memento",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Simple_Memento",
+      "revid": 1940,
+      "revisionTimestamp": "2023-07-19T14:48:53Z",
+      "file": "wikigg/Simple Memento.wikitext"
+    },
+    {
+      "title": "Simulacrum",
+      "resolvedTitle": "Simulacrum",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Simulacrum",
+      "revid": 31555,
+      "revisionTimestamp": "2026-09-25T14:11:10Z",
+      "file": "wikigg/Simulacrum.wikitext"
+    },
+    {
+      "title": "Smooth Amber Phylactery",
+      "resolvedTitle": "Smooth Amber Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Smooth_Amber_Phylactery",
+      "revid": 9370,
+      "revisionTimestamp": "2023-10-02T19:17:10Z",
+      "file": "wikigg/Smooth Amber Phylactery.wikitext"
+    },
+    {
+      "title": "Soulstealer",
+      "resolvedTitle": "Soulstealer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Soulstealer",
+      "revid": 31556,
+      "revisionTimestamp": "2026-09-25T14:11:12Z",
+      "file": "wikigg/Soulstealer.wikitext"
+    },
+    {
+      "title": "Spell Helix",
+      "resolvedTitle": "Spell Helix",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spell_Helix",
+      "revid": 19524,
+      "revisionTimestamp": "2025-01-10T08:12:29Z",
+      "file": "wikigg/Spell Helix.wikitext"
+    },
+    {
+      "title": "Spell Shards Fractalization",
+      "resolvedTitle": "Spell Shards Fractalization",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spell_Shards_Fractalization",
+      "revid": 14836,
+      "revisionTimestamp": "2019-07-18T19:38:59Z",
+      "file": "wikigg/Spell Shards Fractalization.wikitext"
+    },
+    {
+      "title": "Spell Vault",
+      "resolvedTitle": "Spell Vault",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spell_Vault",
+      "revid": 24367,
+      "revisionTimestamp": "2025-09-16T18:58:02Z",
+      "file": "wikigg/Spell Vault.wikitext"
+    },
+    {
+      "title": "Spellhound",
+      "resolvedTitle": "Spellhound",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spellhound",
+      "revid": 18872,
+      "revisionTimestamp": "2024-09-24T08:11:16Z",
+      "file": "wikigg/Spellhound.wikitext"
+    },
+    {
+      "title": "Spellstealer",
+      "resolvedTitle": "Spellstealer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spellstealer",
+      "revid": 31620,
+      "revisionTimestamp": "2026-09-25T15:51:00Z",
+      "file": "wikigg/Spellstealer.wikitext"
+    },
+    {
+      "title": "Spellweaving Kilt",
+      "resolvedTitle": "Spellweaving Kilt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spellweaving_Kilt",
+      "revid": 19558,
+      "revisionTimestamp": "2025-01-10T08:43:58Z",
+      "file": "wikigg/Spellweaving Kilt.wikitext"
+    },
+    {
+      "title": "Spirit's Guidance",
+      "resolvedTitle": "Spirit's Guidance",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Spirit's_Guidance",
+      "revid": 7712,
+      "revisionTimestamp": "2019-03-25T18:15:13Z",
+      "file": "wikigg/Spirit's Guidance.wikitext"
+    },
+    {
+      "title": "Stabilizing Pauldrons",
+      "resolvedTitle": "Stabilizing Pauldrons",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Stabilizing_Pauldrons",
+      "revid": 8780,
+      "revisionTimestamp": "2019-03-25T18:15:17Z",
+      "file": "wikigg/Stabilizing Pauldrons.wikitext"
+    },
+    {
+      "title": "Stance",
+      "resolvedTitle": "Stance",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Stance",
+      "revid": 20143,
+      "revisionTimestamp": "2025-03-02T14:01:31Z",
+      "file": "wikigg/Stance.wikitext"
+    },
+    {
+      "title": "Strange Spaulders",
+      "resolvedTitle": "Strange Spaulders",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Strange_Spaulders",
+      "revid": 2227,
+      "revisionTimestamp": "2019-03-25T18:15:23Z",
+      "file": "wikigg/Strange Spaulders.wikitext"
+    },
+    {
+      "title": "Symbiotic Loop",
+      "resolvedTitle": "Symbiotic Loop",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Symbiotic_Loop",
+      "revid": 19525,
+      "revisionTimestamp": "2025-01-10T08:12:35Z",
+      "file": "wikigg/Symbiotic Loop.wikitext"
+    },
+    {
+      "title": "Symbol Of Authority",
+      "resolvedTitle": "Symbol Of Authority",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Symbol_Of_Authority",
+      "revid": 1930,
+      "revisionTimestamp": "2019-03-25T18:15:35Z",
+      "file": "wikigg/Symbol Of Authority.wikitext"
+    },
+    {
+      "title": "Talented Gloves",
+      "resolvedTitle": "Talented Gloves",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Talented_Gloves",
+      "revid": 9248,
+      "revisionTimestamp": "2019-03-25T18:15:53Z",
+      "file": "wikigg/Talented Gloves.wikitext"
+    },
+    {
+      "title": "Temporal Paradox",
+      "resolvedTitle": "Temporal Paradox",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporal_Paradox",
+      "revid": 31622,
+      "revisionTimestamp": "2026-09-25T16:04:25Z",
+      "file": "wikigg/Temporal Paradox.wikitext"
+    },
+    {
+      "title": "Temporal Scabbard",
+      "resolvedTitle": "Temporal Scabbard",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporal_Scabbard",
+      "revid": 27789,
+      "revisionTimestamp": "2026-03-17T03:16:00Z",
+      "file": "wikigg/Temporal Scabbard.wikitext"
+    },
+    {
+      "title": "Temporal Stabilizer",
+      "resolvedTitle": "Temporal Stabilizer",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporal_Stabilizer",
+      "revid": 31623,
+      "revisionTimestamp": "2026-09-25T16:07:16Z",
+      "file": "wikigg/Temporal Stabilizer.wikitext"
+    },
+    {
+      "title": "Temporalist",
+      "resolvedTitle": "Temporalist",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporalist",
+      "revid": 31607,
+      "revisionTimestamp": "2026-09-25T14:54:37Z",
+      "file": "wikigg/Temporalist.wikitext"
+    },
+    {
+      "title": "Temporalist Guide (e300-e550)",
+      "resolvedTitle": "Temporalist Guide (e300-e550)",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporalist_Guide_(e300-e550)",
+      "revid": 31100,
+      "revisionTimestamp": "2026-09-20T04:39:15Z",
+      "file": "wikigg/Temporalist Guide (e300-e550).wikitext"
+    },
+    {
+      "title": "Temporalist Guide (e550+)",
+      "resolvedTitle": "Temporalist Guide (e550+)",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Temporalist_Guide_(e550%2B)",
+      "revid": 31632,
+      "revisionTimestamp": "2026-09-26T14:03:03Z",
+      "file": "wikigg/Temporalist Guide (e550_).wikitext"
+    },
+    {
+      "title": "The Accumulator",
+      "resolvedTitle": "The Accumulator",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Accumulator",
+      "revid": 28547,
+      "revisionTimestamp": "2026-04-25T11:35:58Z",
+      "file": "wikigg/The Accumulator.wikitext"
+    },
+    {
+      "title": "The Amplifier",
+      "resolvedTitle": "The Amplifier",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Amplifier",
+      "revid": 825,
+      "revisionTimestamp": "2019-03-25T18:16:00Z",
+      "file": "wikigg/The Amplifier.wikitext"
+    },
+    {
+      "title": "The Artificer's Crown",
+      "resolvedTitle": "The Artificer's Crown",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Artificer's_Crown",
+      "revid": 28548,
+      "revisionTimestamp": "2026-04-25T11:38:49Z",
+      "file": "wikigg/The Artificer's Crown.wikitext"
+    },
+    {
+      "title": "The Bond",
+      "resolvedTitle": "The Bond",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Bond",
+      "revid": 19526,
+      "revisionTimestamp": "2025-01-10T08:14:12Z",
+      "file": "wikigg/The Bond.wikitext"
+    },
+    {
+      "title": "The Bright Beacon",
+      "resolvedTitle": "The Bright Beacon",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Bright_Beacon",
+      "revid": 5525,
+      "revisionTimestamp": "2019-03-25T18:16:11Z",
+      "file": "wikigg/The Bright Beacon.wikitext"
+    },
+    {
+      "title": "The Clockcarers",
+      "resolvedTitle": "The Clockcarers",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Clockcarers",
+      "revid": 11464,
+      "revisionTimestamp": "2019-03-25T18:16:23Z",
+      "file": "wikigg/The Clockcarers.wikitext"
+    },
+    {
+      "title": "The Great Journey",
+      "resolvedTitle": "The Great Journey",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Great_Journey",
+      "revid": 19505,
+      "revisionTimestamp": "2025-01-10T07:46:40Z",
+      "file": "wikigg/The Great Journey.wikitext"
+    },
+    {
+      "title": "The Magnifier",
+      "resolvedTitle": "The Magnifier",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Magnifier",
+      "revid": 3421,
+      "revisionTimestamp": "2020-11-16T17:08:11Z",
+      "file": "wikigg/The Magnifier.wikitext"
+    },
+    {
+      "title": "The Ribcage",
+      "resolvedTitle": "The Ribcage",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Ribcage",
+      "revid": 9202,
+      "revisionTimestamp": "2019-03-25T18:16:34Z",
+      "file": "wikigg/The Ribcage.wikitext"
+    },
+    {
+      "title": "The Rubedo Engine",
+      "resolvedTitle": "The Rubedo Engine",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Rubedo_Engine",
+      "revid": 29339,
+      "revisionTimestamp": "2026-05-25T00:42:14Z",
+      "file": "wikigg/The Rubedo Engine.wikitext"
+    },
+    {
+      "title": "The Starmap",
+      "resolvedTitle": "The Starmap",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/The_Starmap",
+      "revid": 21551,
+      "revisionTimestamp": "2025-06-04T17:33:41Z",
+      "file": "wikigg/The Starmap.wikitext"
+    },
+    {
+      "title": "Thunderbird",
+      "resolvedTitle": "Thunderbird",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Thunderbird",
+      "revid": 31578,
+      "revisionTimestamp": "2026-09-25T14:11:56Z",
+      "file": "wikigg/Thunderbird.wikitext"
+    },
+    {
+      "title": "Timeshroud",
+      "resolvedTitle": "Timeshroud",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Timeshroud",
+      "revid": 8170,
+      "revisionTimestamp": "2019-03-25T18:16:42Z",
+      "file": "wikigg/Timeshroud.wikitext"
+    },
+    {
+      "title": "Torc Of Privilege",
+      "resolvedTitle": "Torc Of Privilege",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Torc_Of_Privilege",
+      "revid": 2327,
+      "revisionTimestamp": "2019-03-25T18:16:47Z",
+      "file": "wikigg/Torc Of Privilege.wikitext"
+    },
+    {
+      "title": "Tranquil Spaulders",
+      "resolvedTitle": "Tranquil Spaulders",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Tranquil_Spaulders",
+      "revid": 15254,
+      "revisionTimestamp": "2019-03-25T18:16:53Z",
+      "file": "wikigg/Tranquil Spaulders.wikitext"
+    },
+    {
+      "title": "Tribal Dressing",
+      "resolvedTitle": "Tribal Dressing",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Tribal_Dressing",
+      "revid": 19560,
+      "revisionTimestamp": "2025-01-10T08:44:05Z",
+      "file": "wikigg/Tribal Dressing.wikitext"
+    },
+    {
+      "title": "Umbral Coil",
+      "resolvedTitle": "Umbral Coil",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Umbral_Coil",
+      "revid": 14721,
+      "revisionTimestamp": "2019-03-25T18:17:03Z",
+      "file": "wikigg/Umbral Coil.wikitext"
+    },
+    {
+      "title": "Valiant Greaves",
+      "resolvedTitle": "Valiant Greaves",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Valiant_Greaves",
+      "revid": 19506,
+      "revisionTimestamp": "2025-01-10T07:46:45Z",
+      "file": "wikigg/Valiant Greaves.wikitext"
+    },
+    {
+      "title": "Vita Bulwark",
+      "resolvedTitle": "Vita Bulwark",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Vita_Bulwark",
+      "revid": 19561,
+      "revisionTimestamp": "2025-01-10T08:44:11Z",
+      "file": "wikigg/Vita Bulwark.wikitext"
+    },
+    {
+      "title": "Voice of the Erased",
+      "resolvedTitle": "Voice of the Erased",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Voice_of_the_Erased",
+      "revid": 21548,
+      "revisionTimestamp": "2025-06-04T17:31:45Z",
+      "file": "wikigg/Voice of the Erased.wikitext"
+    },
+    {
+      "title": "Void Mana",
+      "resolvedTitle": "Basic Mechanics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Basic_Mechanics",
+      "revid": 31648,
+      "revisionTimestamp": "2026-09-26T20:37:24Z",
+      "file": "wikigg/Basic Mechanics.wikitext"
+    },
+    {
+      "title": "Void Sampling",
+      "resolvedTitle": "Void Sampling",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Void_Sampling",
+      "revid": 5001,
+      "revisionTimestamp": "2019-07-18T19:39:08Z",
+      "file": "wikigg/Void Sampling.wikitext"
+    },
+    {
+      "title": "Voidfiend",
+      "resolvedTitle": "Voidfiend",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Voidfiend",
+      "revid": 31590,
+      "revisionTimestamp": "2026-09-25T14:12:20Z",
+      "file": "wikigg/Voidfiend.wikitext"
+    },
+    {
+      "title": "Voidlight Amalgam",
+      "resolvedTitle": "Voidlight Amalgam",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Voidlight_Amalgam",
+      "revid": 31592,
+      "revisionTimestamp": "2026-09-25T14:12:24Z",
+      "file": "wikigg/Voidlight Amalgam.wikitext"
+    },
+    {
+      "title": "Voidstrike Seal",
+      "resolvedTitle": "Voidstrike Seal",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Voidstrike_Seal",
+      "revid": 19527,
+      "revisionTimestamp": "2025-01-10T08:14:17Z",
+      "file": "wikigg/Voidstrike Seal.wikitext"
+    },
+    {
+      "title": "Voidterror",
+      "resolvedTitle": "Voidterror",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Voidterror",
+      "revid": 31594,
+      "revisionTimestamp": "2026-09-25T14:12:29Z",
+      "file": "wikigg/Voidterror.wikitext"
+    },
+    {
+      "title": "Warbanner Fragment",
+      "resolvedTitle": "Warbanner Fragment",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Warbanner_Fragment",
+      "revid": 12016,
+      "revisionTimestamp": "2021-12-18T18:32:10Z",
+      "file": "wikigg/Warbanner Fragment.wikitext"
+    },
+    {
+      "title": "Warp Basilisk",
+      "resolvedTitle": "Warp Basilisk",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Warp_Basilisk",
+      "revid": 27676,
+      "revisionTimestamp": "2026-03-02T18:29:33Z",
+      "file": "wikigg/Warp Basilisk.wikitext"
+    },
+    {
+      "title": "Whiplash",
+      "resolvedTitle": "Whiplash",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Whiplash",
+      "revid": 19528,
+      "revisionTimestamp": "2025-01-10T08:14:22Z",
+      "file": "wikigg/Whiplash.wikitext"
+    },
+    {
+      "title": "WrathSeed",
+      "resolvedTitle": "WrathSeed",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/WrathSeed",
+      "revid": 5069,
+      "revisionTimestamp": "2019-03-25T18:17:18Z",
+      "file": "wikigg/WrathSeed.wikitext"
+    },
+    {
+      "title": "Zenith, The Champion's Steed",
+      "resolvedTitle": "Zenith, The Champion's Steed",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Zenith%2C_The_Champion's_Steed",
+      "revid": 27677,
+      "revisionTimestamp": "2026-03-02T18:30:17Z",
+      "file": "wikigg/Zenith_ The Champion's Steed.wikitext"
+    },
+    {
+      "title": "Zombie",
+      "resolvedTitle": "Zombie",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Zombie",
+      "revid": 31596,
+      "revisionTimestamp": "2026-09-25T14:12:33Z",
+      "file": "wikigg/Zombie.wikitext"
+    }
+  ],
+  "missing": []
+}

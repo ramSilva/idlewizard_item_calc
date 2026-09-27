@@ -1,0 +1,51 @@
+{{PetInfobox
+|selection=Character level 40
+|unlock=Use 10 {{SpellTooltip|Void Lure}}
+|description=''A creature made manifest by humanity's fears. While normally feeding on dreams and nightmares, brought to reality it consumes spell shards instead.''
+}}
+
+== Description ==
+Increases [[Mysteries]] power based on pet experience and pet level.
+
+Periodically consumes shards from the shards pool, depending on the average value of passive shards generation, to gain [[Experience#Pet Experience|experience]].
+
+Doesn't work offline.
+
+While this nightmarish creature can massively increase your mana output, it makes spell casting much harder. Nevertheless, the [[Arcanist]] can make fairly good use of it, just do not forget to maximize your scroll charges before summoning this pet.
+
+Sustaining spell casting in the face of a Devourer requires the use of shard-generating spells like {{SpellTooltip|Spell Focus}} and/or multiple Autoclick spells.
+
+== Pet Ability ==
+
+Multiplies Mysteries power by:
+<br><math>X^{0.315} \times L \times P \times 0.05 + 1.25</math>
+
+
+Over time, consumes spell shards directly from the shards pool, up to this amount per second:
+<br><math>N\times S \times 0.45</math>
+
+
+where:
+* <math>X = \text{Total Pet Experience}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>S = \text{Spell Shards per Second}</math>
+* <math>N = \text{Number of non-empy Spell Scrolls}</math>
+
+== Experience Gain ==
+Accrues experience based on spell shards devoured:
+<br><math>\left(\frac{D}{14} + F\right) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>D = \text{Spell Shards Devoured}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

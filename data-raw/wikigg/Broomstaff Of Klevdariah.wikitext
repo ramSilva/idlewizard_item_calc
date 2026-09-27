@@ -1,0 +1,14 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Unlocking==
+This Mount ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+Initially made available as a free drop during the 2023 '''Anniversary''' [[Event]]. It is now available for unlock during other annual events by redeeming with a specific amount of event currency.
+
+Event Mounts alternate between this and {{ItemTooltip|Crystallized Echo}}. This mount may be obtained during the following [[Events|events]]:
+* [[Eggplague]]
+* [[Harvest]]
+* [[Christmas]]
+
+[[Category:Items]]
+[[Category:Mount]]

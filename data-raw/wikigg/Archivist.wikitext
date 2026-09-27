@@ -1,0 +1,48 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 96
+*75 [[Attributes#Spellcraft|Spellcraft]]
+|unlock=
+*Spells cast 1e5
+*425 [[Achievements]] unlocked
+*{{PetTooltip|Interrogator}} level 100
+|description=''While Interrogator is a cruel being, designed to accompany Exorcists on the battlefield and in hunt for the target, the Archivist is hardly a malevolent construct. It's purpose is to provide insight into any and every topic the Exorcist might require, by accessing the great libraries of the Seventh Star's church, located far away.''
+}}
+
+== Description ==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Interrogator}}. Increases Incantation spells duration and efficiency of Evocation spells and profits with amount of unlocked achievements.
+
+Gains [[Experience#Pet Experience|experience]] each second depending on the amount of currently active spells.
+
+== Pet Abilities ==
+
+Multiplies Evocation efficiency by:
+<br><math>P \times L^{1.125} \times 25 + 1</math>
+
+
+Multiplies Incantation duration by:
+<br><math>log_{10}(L^{2} \times P) \times (1 + \frac{L}{500}) \times 0.025 + 1</math>
+
+
+Multiplies profits by:
+<br><math>A^{0.65} \times \left( P^{0.15} \times \frac{L}{50} + 1 \right) \times 0.25 + 1</math>
+
+
+where:
+* <math>P = \text{Pet Ability Power} </math>
+* <math>L = \text{Pet Level} </math>
+* <math>A = \text{Achievements Unlocked} </math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>\left( S^3 \times 10 + F \right) \times M  </math>
+
+where:
+* <math>S = \text{Active Spells} </math>
+* <math>F = \text{Fixed Pet XP Bonus} </math>
+* <math>M = \text{Pet XP Multiplier} </math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

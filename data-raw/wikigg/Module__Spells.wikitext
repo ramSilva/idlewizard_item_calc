@@ -1,0 +1,651 @@
+--<nowiki>
+--Note that the syntax highlighting in the Module page can be broken, you can click on 'Edit' to see the code with proper highlighting.
+local p = {}
+
+local all_spells = require("Module:Data/Spells").spells
+
+local spellset_template = [=[{{SpellSlot | spell_name=%s | autocast=%s}}]=]
+
+function p.FromCodes(frame)
+	local result = ""
+	local spellset_code = frame.args[1]
+	local class = frame.args[2]
+	if spellset_code ~= nil then
+		for i, a in pairs(TokenizeSpellCode(spellset_code)) do
+			-- Check for values of -1 and change to 1000 (empty spellslot)
+			if id == '-1' then
+			id = '1000' 
+     	end
+			result = result .. SpellLookup(a[1], a[2], class, frame)
+		end
+	end
+
+	return result
+end
+
+function SpellLookup(id, autoMode, class, frame)
+    local name = 'None'
+    local autocast = 'Reckless'
+	if id ~= nil then
+		local spell_code = tonumber(id)
+		for spell_name, spell in pairs(all_spells) do
+			if spell.ID == tonumber(spell_code) == true then
+				name = spell_name
+				break	
+			end
+		end
+	end
+	
+	local autoNum = tonumber(autoMode)
+	if autoNum == 0 then autocast = 'None'
+	elseif autoNum == 1 then autocast = 'Careful'
+	elseif autoNum == 2 then autocast = 'Reckless'
+	end
+	
+	return frame:expandTemplate{ title = 'SpellSlot', args = { spell_name = name, autocast = autocast}
+		}
+end
+
+function Duration(spell)
+    if type(spell.Duration) == "string" then
+        return spell.Duration
+    elseif spell.Duration == 0 then
+        return "Instant"
+    elseif spell.Duration >= 60 then
+        m = spell.Duration / 60
+        s = spell.Duration % 60
+        if s == 0 then
+            return m .. "m"
+        else
+            return string.format("%dm %02ds", m, s)
+        end
+    else
+        return spell.Duration .. "s"
+    end
+end
+
+function Cost(spell)
+    local regular = spell.Cost and spell.Cost .. " Shards" or spell.Charge
+    
+    if spell.AdditionalCost then
+        return regular .. " " .. spell.AdditionalCost.Amount .. " " .. spell.AdditionalCost.Type
+    else
+        return regular
+    end
+end
+
+function TooltipCost(spell)
+    local regular = spell.Cost and spell.Cost .. " Shards" or spell.Charge
+    
+    if spell.Charge and #spell.Charge > 15 then
+        regular = "Charges (view page for info)"
+    end
+    
+    if spell.AdditionalCost then
+        return regular .. " " .. spell.AdditionalCost.Amount .. " " .. spell.AdditionalCost.Type
+    else
+        return regular
+    end
+end
+
+function SpellList()
+    local spells = {}
+    for spell_name, spell in pairs(all_spells) do
+        if not spell.Unreleased then
+            spell.Name = spell_name
+            table.insert(spells, spell)
+        end
+    end
+    table.sort(spells, function(a, b) 
+    	if (type(a.Level) == type(b.Level)) then 
+    		-- Both same type so sort as normal
+    		return a.Level < b.Level 
+    	else 
+    		-- One is not a number so return the numeric value as lower
+    		return tonumber(a.Level) 
+    	end 
+    end)
+    return spells
+end
+
+function FilterByClass(spells, class)
+    if class then
+        for i, spell in pairs(spells) do
+            if not spell.Classes[class] then
+                spells[i] = nil
+            end
+        end
+    end
+end
+
+function FilterBySchool(spells, school)
+    if school then
+        for i, spell in pairs(spells) do
+            if spell.School ~= school then
+                spells[i] = nil
+            end
+        end
+    end
+end
+
+function FilterByBehavior(spells, behavior)
+    if behavior then
+    	for i, spell in pairs(spells) do
+    		if spell.Behavior ~= behavior then
+    			spells[i] = nil
+    		end
+    	end
+    end
+end
+
+function FilterByAdditionalCost(spells, cost)
+	if cost then
+		for i, spell in pairs(spells) do
+			if spell.AdditionalCost ~= nil then
+				if spell.AdditionalCost.Type ~= cost then
+					spells[i] = nil
+				end
+			else
+				spells[i] = nil
+			end
+		end
+	end
+end
+
+function FilterByPriority(spells, prio)
+	if prio ~= nil then
+		for i, spell in pairs(spells) do
+			if spell.Priority ~= tonumber(prio) then
+				spells[i] = nil
+			end
+		end
+	end
+end
+
+function KeepOnlyAccumulated(spells)
+    for i, spell in pairs(spells) do
+        if not spell.Accumulated then
+            spells[i] = nil
+        end
+    end
+end
+
+function KeepOnlyPersistent(spells)
+    for i, spell in pairs(spells) do
+        if not spell.Persistent then
+            spells[i] = nil
+        end
+    end
+end
+
+function KeepOnlyCharging(spells)
+	for i, spell in pairs(spells) do
+		if not spell.Charge then
+			spells[i] = nil
+		end
+	end
+end
+
+function TokenizeSpellCode(code)
+	
+	-- no trailing comma allowed
+	if code:sub(-1) == ";" then
+		return error("Invalid spell code, last spell entry has a trailing ';'")
+	end
+	
+	local spell_id = 1000
+	local autocast = 0
+	--tokenize and grab relevant substrings
+	local spells = {}
+	for id, mode in (code .. ";"):gmatch("(%-?%d+),(%d);") do
+	
+		table.insert(spells, {id, mode})
+	end
+	return spells
+end
+
+function p.NameLookup(frame)
+    local name = 'None'
+	local spell_code = frame.args[1]
+	local spell_number = frame.args[2]
+		
+	if spell_code ~= nil then
+		if spell_number ~= nil then
+			--spell_id is actually an export string
+			spell_list = TokenizeSpellCode(spell_code)
+			if spell_list ~= nil and tonumber(spell_number) <= table.getn(spell_list) then
+				parsed_id = spell_list[tonumber(spell_number)][1]
+			end
+			if parsed_id ~= nil then
+				spell_code = tonumber(parsed_id)
+			end
+		end
+		for spell_name, spell in pairs(all_spells) do
+			if spell.ID == tonumber(spell_code) then
+				name = spell_name
+			end
+		end
+	end
+	return name
+end
+
+function p.IDLookup(frame)
+    local name = frame.args[1]
+	if all_spells[name] == nil then return 1000 end
+	return '' .. all_spells[name].ID
+end
+
+function p.resolveAutocast(frame)
+	local autoMode = string.lower(frame.args[1])
+	if autoMode == 'none' then return 0
+		elseif autoMode == 'careful' then return 1
+		elseif autoMode == 'reckless' then return 2
+	else return 2
+	end
+end
+
+function p.lookupAutocast(frame)
+	local autoMode = frame.args[1]
+	local spell_number = frame.args[2]
+	
+	if spell_number ~= nil then
+		--autoMode is actually an export string
+		spell_list = TokenizeSpellCode(autoMode)
+		parsed_mode = spell_list[tonumber(spell_number)][2]
+		if parsed_mode ~= nil then
+			autoMode = parsed_mode
+		end
+	end
+	if autoMode ~=nil then autoMode = tonumber( autoMode ) end
+	if autoMode == 0 then return 'None'
+		elseif autoMode == 1 then return 'Careful'
+		elseif autoMode == 2 then return 'Reckless'
+	else return 'Reckless'
+	end
+end
+
+function p.spellPersist(frame)
+	local spell_name = frame.args[1]
+    local spell = all_spells[spell_name]
+	local spellpersist
+	
+	if spell.Accumulated then
+		spellpersist = 'Accumulated'
+		elseif spell.Persistent then 
+			spellpersist = 'Persistent'
+		elseif spell.Behavior == 'Augment' then
+			spellpersist = 'Augment'
+		else 
+			spellpersist = ''
+	end		
+return spellpersist
+end
+
+local infobox_template = [=[{{SpellInfobox
+|name=%s
+|icon=Spell_%s.png
+|school=%s
+|accumulated=%s
+|persistent=%s
+|level=%s
+|cost=%s
+|duration=%s
+|behavior=%s
+|description=%s
+}}<!--
+-->{{#if:{{NAMESPACE}} | |%s}}<!--
+-->]=]
+function p.Infobox(frame)
+    local spell_name = frame.args[1] or mw.title.getCurrentTitle().text
+    local spell = all_spells[spell_name]
+    if spell == nil then
+        mw.log(spell_name)
+        return "''Spell infobox data not found for \"" .. spell_name .. "\". Check the parameter or add the data to [[Module:Data/Spells]].''"
+    end
+
+    local category = "[[Category:Spells]]"
+    category = category .. "[[Category:" .. spell.School .. " Spells]]"
+    if spell.Accumulated then
+        category = category .. "[[Category: Accumulated Spells]]"
+    end
+    if spell.Persistent then
+        category = category .. "[[Category: Persistent Spells]]"
+    end
+    for cat, _ in pairs(spell.Classes) do
+        category = category .. "[[Category: " .. cat .. " Spells]]"
+    end
+    
+    local priority = ""
+    if spell.Priority ~= nil then
+    	priority = "|priority=" .. spell.Priority
+    end
+
+    return frame:preprocess(string.format(infobox_template,
+        spell_name,
+        spell_name,
+        spell.School,
+        spell.Accumulated and "Yes" or "No",
+        spell.Persistent and "Yes" or "No",
+        spell.Level,
+        Cost(spell),
+        Duration(spell),
+        spell.Behavior,
+        spell.Description,
+        category
+    ))
+end
+
+function p.Tooltip(frame)
+	local spell_name = frame.args[1]
+	local spell = all_spells[spell_name]
+
+	if spell_name == 'None' then
+		return ''
+	end
+
+	if spell == nil then
+		mw.log(spell_name)
+
+		local root = mw.html.create('div')
+			:addClass('tooltip spell')
+			:wikitext("''Spell tooltip data not found for \"" .. spell_name ..
+				"\". Check the parameter or add the data to [[Module:Data/Spells]].''"
+			)
+
+		return tostring(root)
+	end
+
+
+	-- Subtitle
+	local subtitle = ""
+	local spelltype = p.spellPersist(frame)
+	if spell.Level ~= nil then
+		subtitle = "LVL: " .. spell.Level .. " / DUR: " .. string.upper(Duration(spell))
+	end
+
+	if spelltype ~= '' then
+		subtitle = subtitle .. " / " .. spelltype
+	end
+
+	-- Root tooltip container
+	local root = mw.html.create('div')
+		:addClass('tooltip spell')
+		:addClass(spell.School)
+
+	-- Bar for additional pills of info
+	local bar = root:tag('div'):addClass('tt-bar')
+
+	local spell_cost = TooltipCost(spell)
+	local spelltype = p.spellPersist(frame)
+
+	bar:tag('span')
+		:wikitext("Lv: " .. spell.Level)
+
+	bar:tag('span')
+		:wikitext(Duration(spell))
+
+	if spelltype ~= '' then
+		bar:tag('span')
+			:wikitext(spelltype)
+	end
+
+
+	if spell_cost and spell_cost ~= "None" then
+		bar:tag('span')
+			:wikitext(spell_cost)
+	end
+
+
+	local contentWrapper = root:tag('div'):addClass('tt-content-wrapper')
+
+	local content = contentWrapper:tag('div'):addClass('tt-content')
+
+	-- Title
+	local title = content:tag('div'):addClass('tt-title')
+		:wikitext(string.format('%s [[File:%s.png|25x25px]]', spell_name, spell.School))
+
+	-- Icon
+	contentWrapper:tag('div')
+		:addClass('tt-icon')
+		:wikitext(string.format('[[File:Spell_%s.png|100x100px]]', spell_name))
+
+
+
+	-- EFFECT Section
+	local desc = spell.Description
+	if desc then
+		local effect = content:tag('div')
+			:addClass('tt-effect')
+
+		local content = effect:tag('div'):addClass('tt-effect-info')
+		content:tag('div')
+			:addClass('tt-effect-line')
+			:tag('p')
+			:wikitext(desc)
+	end
+
+	-- FORMULA Section
+	if spell.Math and spell.Math ~= '' then
+		local formula = root:tag('div')
+			:addClass('tt-formula')
+			:tag('div')
+			:addClass('formula-text')
+
+
+		local lines = mw.text.split(spell.Math, "\n")
+		for _, line in ipairs(lines) do
+			line = mw.text.trim(line)
+			if line ~= "" then
+				formula:wikitext(
+					frame:extensionTag {
+						name = "math",
+						content = line,
+						args = { display = "block" }
+					}
+				)
+			end
+		end
+	end
+
+	return tostring(root)
+end
+
+
+
+-- Used for class specific spell lists, on class pages
+function p.List(frame)
+	local class = frame.args[1] or mw.title.getCurrentTitle().text
+	local spells = SpellList()
+	FilterByClass(spells, class)
+
+	local table = mw.html.create('table')
+		:addClass('sortable')
+		:addClass('wikitable')
+		:attr('id', 'Spells')
+
+	local headerNames = {
+		'Icon',
+		'Name',
+		'School',
+		'Accumulated?',
+		'Persistent?',
+		'Level',
+		'Cost',
+		'Duration',
+		'Description'
+	}
+
+	local header = table:tag('tr')
+
+	for _, title in ipairs(headerNames) do
+		header:tag('th')
+			:wikitext(title)
+	end
+
+	for _, spell in pairs(spells) do
+		local row = table:tag('tr')
+
+		local values = {
+			'[[File:Spell_' .. spell.Name .. '.png|50x50px]]',
+			frame:expandTemplate { title = 'SpellTooltip', args = { spell_name = spell.Name, icon = 'hidden' } },
+			spell.School,
+			spell.Accumulated and 'x' or '',
+			spell.Persistent and 'x' or '',
+			spell.Level,
+			Cost(spell),
+			Duration(spell),
+			spell.Description
+		}
+
+		for _, value in ipairs(values) do
+			row:tag('td')
+				:wikitext(value)
+		end
+	end
+
+	-- Details for collapsible
+	local details = mw.html.create('details')
+
+	details:tag('summary')
+		:wikitext(class .. ' Spell List')
+
+	details:tag('div')
+		:node(table)
+
+	return tostring(details)
+end
+
+
+-- used on Template.GlobalSpellList
+function p.GlobalList(frame)
+	local spells = SpellList()
+
+	local table = mw.html.create('table')
+		:addClass('sortable')
+		:addClass('wikitable')
+		:attr('id', 'Spells')
+
+	local header = table:tag('tr')
+
+	local headerNames = {
+		'Icon',
+		'Name',
+		'School',
+		'Accumulated?',
+		'Persistent?',
+		'Level',
+		'Cost',
+		'Duration',
+	}
+
+	for _, title in ipairs(headerNames) do
+		header:tag('th')
+			:wikitext(title)
+	end
+
+	for _, spell in pairs(spells) do
+		local row = table:tag('tr')
+
+		local values = {
+			'[[File:Spell_' .. spell.Name .. '.png|50x50px]]',
+			frame:expandTemplate { title = 'SpellTooltip', args = { spell_name = spell.Name, icon = 'hidden' } },
+			spell.School,
+			spell.Accumulated and 'x' or '',
+			spell.Persistent and 'x' or '',
+			spell.Level,
+			Cost(spell),
+			Duration(spell),
+		}
+
+		for _, value in ipairs(values) do
+			row:tag('td')
+				:wikitext(value)
+		end
+	end
+	return tostring(table)
+end
+
+-- Used on GameID Page
+function p.IDList(frame)
+	local spells = SpellList()
+
+	local table = mw.html.create('table')
+		:addClass('sortable')
+		:addClass('wikitable')
+		:attr('id', 'Spells')
+
+	local header = table:tag('tr')
+
+	header:tag('th')
+		:attr('colspan', '2')
+		:wikitext('Spells')
+
+	local row = table:tag('tr')
+
+	row:tag('th')
+		:attr('scope', 'col')
+		:attr('data-sort-type', 'number')
+		:wikitext('ID')
+
+	row:tag('th')
+		:attr('scope', 'col')
+		:attr('data-sort-type', 'text')
+		:wikitext('Spell Name')
+
+	for _, spell in ipairs(spells) do
+		local row = table:tag('tr')
+
+		row:tag('td')
+			:wikitext(spell.ID)
+
+		row:tag('td')
+			:wikitext(frame:expandTemplate { title = 'SpellTooltip', args = { spell_name = spell.Name } })
+	end
+
+	return tostring(table)
+end
+
+
+function p.Gallery(frame)
+	if frame == mw.getCurrentFrame() then
+		args = frame:getParent().args
+	else
+		args = frame
+	end
+	local spells = SpellList()
+	if args.accumulated then
+		KeepOnlyAccumulated(spells)
+	end
+	if args.persistent then
+		KeepOnlyPersistent(spells)
+	end
+	if args.charging then
+		KeepOnlyCharging(spells)
+	end
+	FilterByClass(spells, args.class)
+	FilterBySchool(spells, args.school)
+	FilterByAdditionalCost(spells, args.add_cost)
+	FilterByBehavior(spells, args.behavior)
+	FilterByPriority(spells, args.priority)
+
+	local gallery = ''
+
+	for i, spell in pairs(spells) do
+		gallery = gallery .. frame:expandTemplate {
+			title = 'SpellTooltip',
+			args = { spell.Name }
+		}
+	end
+
+	local galleryDiv = mw.html.create('div')
+	galleryDiv:addClass('spell-gallery')
+		:wikitext(gallery)
+		:tag('div')
+
+	return tostring(galleryDiv)
+end
+
+
+return p
+--</nowiki>
+--[[Category:Lua]]

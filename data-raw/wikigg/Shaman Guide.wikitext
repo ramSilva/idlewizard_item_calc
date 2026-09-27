@@ -1,0 +1,380 @@
+{{Guides}}
+{{VersionUpdated|1.75.3}}
+{{GuideIntroClass|Shaman}}
+
+==Introduction==
+{{ClassTooltip|class_name = Shaman}} is a fairly simple class that has the greater time scaling of all classes and the best enchantment scaling pre-ascension, by a large margin, only getting beaten by Dread Heretic after ascensions is reached. Its main profits come from idle bonus (main one) and summon efficiency (second in order of importance). 
+
+While the class excels at long runs, it is still viable with shorter exiles early in the realm. It demonstrates its true power after e550 mysts with access to T3 pets and as one of the myst pushing powerhouses during the lategame.
+
+Pros
+* Easy to learn and play
+* Low AP dependency
+* Can burst multiple times with short weapon re-stacking phase
+* Best scaling with enchants pre-ascension in the whole game
+* Excellent time and enchant scaling
+
+Cons
+* Item requirements (ideally all required sets at legendary quality for enchantments)
+* Expensive to min-max due to high value per enchant
+
+===Attribute Points===
+{{ClassTooltip|class_name = Shaman}} is pretty lucky compared to other classes since the bare minimum points needed are only 815
+
+* Intelligence 150
+* Insight 90 (with {{ItemTooltip|item_name=Legacy}} and {{ItemTooltip|item_name=Netherfist}} to reach all VM items requisites)
+* Spellcraft 150 (175 if you don't have legendary {{ItemTooltip|item_name=Boots Of Harsh Trials}})
+* Patience 200
+* Mastery 150 (200 if you don't own legendary {{ItemTooltip|item_name=Rugged Wristcoat}})
+* Empathy 0 (75 if you don't own legendary {{ItemTooltip|item_name = Bite Sleeves}})
+
+<br />After that try to reach these goals
+# Emp 100 (to reach 175 with {{ItemTooltip|item_name = Bite Sleeves}} equipped, so you can use both {{ItemTooltip|item_name = Falconer's Warm Cape}} and {{ItemTooltip|item_name = Hollow Eye Pendant}})
+# dom 135 (150 if you don't own legendary {{ItemTooltip|item_name=Rugged Wristcoat}})
+# emp 200 (dom down to 100)
+# dom 185 (200 if you don't own legendary {{ItemTooltip|item_name=Rugged Wristcoat}})
+
+===E550 myst variation===
+We assume the following initial AP distribution:
+
+* 150 Intelligence
+* 90 Insight (which becomes 150 with legendary {{ItemTooltip|item_name = Netherfist}} and {{ItemTooltip|item_name=Legacy}} equipped)
+* 175 Spellcraft (to equip gear)
+* 0 Wisdom
+* 75 Dominance (if there aren't enough points, drop Dominance)
+* 200 Patience (which becomes 250 with legendary {{ItemTooltip|item_name=Encircling Trophies}} equipped)
+* 100 Mastery
+* 175 Empathy (which becomes 250 with legendary {{ItemTooltip|item_name=Bite Sleeves}} equipped)
+
+Now distribute points according to the following priority list (you need to achieve the requested value at a point in order to go to the following):
+
+# 200 Mastery
+# 160 Insight (which becomes 250 with the VM set)
+# 250 Mastery
+# 100 Dominance (which becomes 250 with legendary {{ItemTooltip|item_name=Voidstrike Seal}})
+# 250 Intelligence
+# Dump: Patience > Empathy > Dominance > Insight > Versatility
+# 250 Spellcraft exactly (take points out of Versatility to reach)
+# ''Optional'': If Wisdom 150 perk gives more than 1.3e3 profits on your exiles, push your Versatility points into it
+# 250 Wisdom exactly (take points out of Versatility to reach)
+
+dumps: pat > mas > emp > dom > int > ins > ver
+
+===Run Scalings===
+These scalings are the result of the strategies in this guide, and do not include all possible variations in progress (for example, Spell Mastery 10/20/30/40), but are, generally speaking, close enough. Most values are rounded, and many are based on approximations of logarithms at least in part.
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+! Stat !! Burst !! Void Mana !! Pet Leveling
+|-
+| Evocation Eff || 0 || 0 || 0
+|-
+| Incantation Eff || 0.92 || 1.27 || 0
+|-
+| Summon Eff || 7.76 || 0 || 0.003
+|-
+| CAP || 1.997 || 0 || 0.0005
+|-
+| PAP || 1.676 || 0 || 0.0003
+|-
+| Idle Bonus || 2.62 || 0 || 0
+|-
+| VPE || 0 || 1 || 0
+|-
+| Void/Autoclick/Click/Crit Profit || 1 || 0 || 0
+|-
+| Char EXP* || 0.88 || 0.17 || 0.002
+|}
+<nowiki>*</nowiki>Char EXP scaling is reliant on getting to full new levels, so only char EXP increases with a total CEXP increase in increments of 1.09x will actually do anything. It is also worth noting that Char EXP here means ''total'' character EXP increase - which is not the same as Source EXP or Action EXP. There are no pure sources of CEXP in items in the game at the moment.  To approximate, Source EXP is essentially ^.85 to real CEXP gain, while Action EXP is logged and usually not very notable.
+
+Some other numbers:
+* Total PEXP scaling: ~0.1
+
+Buildup's only relevant scaling is Char EXP, of which it ends up at around ~^0.4 because of {{ItemTooltip|item_name=Eerie Turquoise Phylactery}} (level reduction also counts for this purpose).
+
+==Basics==
+
+=== Short and Long Exiles ===
+*Shaman has two ways they can approach their exiles, depending on how much time they intend to spend on it.
+**Short Exiles last about 5 hours at most, and most of your time will be spent AC stacking. Before T3 pets, this is the preferred way to play Shaman.
+**Long Exiles last over 6 hours, and most of your time will be spent stacking time on {{PetTooltip|pet_name=Herald of Rot}}. Depending on your {{SpellTooltip|spell_name=Plague Zombie}} cast rate, you might need to spend more or less time in order to take over Short Exiles.
+*General rule of thumb is to play short exiles before T3 pets, then once your profits start to drop on them, switch to longer exiles. If you leave the game for a long time, always try to set up a long exile.
+
+===Softcaps===
+*The class ability is softcapped at 7e7(70 million) autoclicks, and 30 days class game time for the idle bonus part.
+*The T3 pet, {{PetTooltip|pet_name=Herald of Rot}}, has a first softcap at 14 pet real time days and a second softcap at 200 pet game time days.
+**200 days pet game time includes time skipped with {{ItemTooltip|Heart of the Grave}}
+*Timescaling before any softcaps is around t^12 and after hitting softcaps goes down to a minimum of around t^8. 
+**14 days real time; -3 to exponent
+**30 days real time; -0.2 to exponent 
+**200 days pet time; -0.5 to exponent
+**7e7 autoclicks; ~-0.2 to exponent
+
+===Offline===
+If going offline for any part of buildup, make sure to equip {{ItemTooltip|Light Of Eighth Star}}.
+*[[#Pet Exp]] does not work offline.
+*[[#Spell Stacking buildup]] will work offline at near 100% efficiency.
+*[[#Pet Time stacking]] efficiency depends on {{ItemTooltip|Heart of the Grave}} quality. (20% > 25% > 33% > 50% > 100%, from common to legendary)
+
+{{SummarizeGuideBoxSets}}
+
+==Phases==
+===Pet Exp===
+{{GuideBox|pet=Ley Keeper|pet1=Herald of Rot|
+spells=#0#PetXP@18,2;25,2;92,2;26,2;70,2;23,2|
+itemtab=Items|items=#0#PetXP@106;115;4;27;13;31;43;66;57;87;74;1001;203;302;418;415;96;2009;3007;506|}}
+
+Standard Pet xp phase to level Ley Keeper or burst pet.  Level until it slows down, no more than a minute.
+
+===Spell Stacking buildup===
+{{GuideBox|pet=Ley Keeper|
+spells=#1#Scry@16,2;25,2;70,2;72,2;71,2;104,2|
+itemtab=Items|items=#1#Scry@115;101;4;24;12;31;43;64;57;85;77;1023;212;304;414;415;90;2003;3008;504|}}
+
+Stack {{SpellTooltip|spell_name=Conjure Primal Elemental}} for a bit before swapping to {{SpellTooltip|spell_name=Summon Centipede Swarm}} to get more clicks.
+
+This phase should last however long your exile is planned on being, minus about 3 days. Then, those final 3 days should be in the following pet time stacking phase. For shorter exiles, spend about 10% of the exile on this phase, then move on to Autoclick Stacking on short exiles, or Pet Time Stacking on long exiles.
+
+''note: The order of spells matters here.''
+
+''note: Early in the realm it might be a good idea to use {{SpellTooltip|spell_name=Conjure Greater Elemental}} in order to help charge spells (like {{SpellTooltip|spell_name=Nightfall}}). Swap out {{SpellTooltip|spell_name=Conjure Primal Elemental}}.''
+
+===Pet time stacking===
+{{GuideBox|pet=Herald of Rot|pet1=Risen Giant|
+spells=#2#PetTimeStack@18,2;21,2;92,2;72,2;59,2;58,2|
+itemtab=Items|items=#2#PetTimeStack@115;113;7;23;18;39;44;60;57;88;77;1003;208;302;414;415;90;2001;3007;504|}}
+
+This set is to Boost {{PetTooltip|pet_name=Herald of Rot}} and {{PetTooltip|pet_name=Risen Giant}} game time and increase their profits
+
+At around 60 casts per sec of plague zombies you reach HoR's game time soft cap of 200 days after 80 hours of this phase.  RG's softcap of 14 days can be reached in a bit over 5 and a half hours, however, RG's time scaling is weaker and generally not done for long periods of time.
+
+If you play shorter exiles, spend up to 1-2 minutes on this phase with RG after the VM phase, then level the pet a bit before bursting. This should give you more profit than just moving onto burst out of the VM phase.
+
+===<span style="color:yellow">Optional Phase: Autoclick Stacking</span>===
+{{GuideBox|pet=Ley Keeper|
+spells=#3#AClickStack@26,2;25,2;18,2;92,2;16,2;104,2|
+itemtab=Autoclick Stacking|items=#3#AClickStack@115;113;7;23;18;31;44;60;57;88;74;1023;212;302;415;406;97;2003;3007;504}}
+
+As detailed in the Voidmana phase, it is worth spending most of your time during shorter exiles stacking autoclicks, which is done during this phase. This is because you only stack Pet time for a few minutes after gathering VM, and as mentioned before, stacking spells isn't worth on short exiles to begin with. Items used solely in this phase aren't enchanted, as their enchants don't provide any value. 
+===Branch Charging===
+The goal here is to stack up charges (through autoclicks) on {{ItemTooltip|item_name=Branch of the Great Cycle}}. Because {{SpellTooltip|spell_name=Summon Centipede Swarm}} scales the number of autoclicks on Summon efficiency, we maximize that (and, when we can't, we do CAP because CAP^.155 = Summon eff).
+
+{{GuideBox|pet=Herald of Rot|pet1=Ley Keeper|
+spells=#4#Branch@18,2;92,2;26,2;23,2;25,2;70,2|
+itemtab=Items|items=#4#Branch@115;113;7;23;18;31;44;60;57;88;74;1001;208;302;418;406;97;2009;3007;504|
+note=If you don't have the second trophy swap it out with {{ItemTooltip|item_name=Intact Carapace}}.}}
+
+Note: if you have the Ingot Shortage Triumph you can try to see if {{ItemTooltip|item_name=Recaller Stone}} in the offhand, {{ItemTooltip|item_name=Seclusion Shell}} in the body slot and {{ItemTooltip|item_name=Concealing Shroud}} in the back slot are worth more total clicks compared to the suggested items and change accordingly as character levels should be worth more than summon efficiency in this phase thanks to {{ItemTooltip|item_name=Eerie Turquoise Phylactery}}. {{PetTooltip|pet_name=Ley Keeper}} can make this phase much faster on shorter exiles.
+
+===Void Mana===
+There's two ways to go about VM gathering, depending on the length of your exile: 
+
+Option 1: We use {{SpellTooltip|spell_name = Void Radiance}} to gather VM on longer exiles since we don't want to lose all that stacked time on our burst pet, so all the items we use gives more VM per entity or incantation efficiency.
+
+Option 2: We use {{PetTooltip|pet_name=Voidterror|display_name=Voidterror}} to gather VM, and then follow that up by stacking pet time on our burst pet of choice immediately after, for about 2 minutes. This is generally superior when you're early into the realm, and it works great for faster exiles. However, this will eventually be outclassed on longer exiles purely from the time scaling of {{PetTooltip|pet_name=Herald of Rot}} and {{PetTooltip|pet_name=Risen Giant}}. If you decide to go with this method for faster exiles, spend some time stacking autoclicks with the optional Autoclick Stacking phase that was mentioned before. 
+
+{{GuideBox|pet=Herald of Rot|pet1=Voidterror|
+spells=#5#VM@18,2;92,2;105,2;23,2;34,2;30,2|
+itemtab=RG/HoR|items=#5#VM@111;113;5;25;15;30;49;68;55;89;78;1005;202;309;407;412;99;2010;3006;503|
+note=After you unlock source memetics at e850 mysteries change {{SpellTooltip|spell_name = Summon Spider Swarm}} in the spell set for {{SpellTooltip|spell_name = Gem Resonance}}.|items1=#5#VT-VM@112;113;5;25;15;30;49;67;55;89;76;1002;202;309;407;412;99;2002;3006;503|itemtab1=VT}}
+
+Make sure to replace one of the clicking spells for {{SpellTooltip|spell_name=Gem Resonance}} once you reach Mana Sources Memetics (e850) and apply Incantation efficiency to Mana Gems. 
+
+=== Burst ===
+{{GuideBox|pet=Herald of Rot|pet1=Risen Giant|
+spells=#6#burst@18,2;92,2;105,2;16,2;23,2;7,2|
+itemtab=Burst|items=#6#Burst@108;113;4;20;12;33;47;65;59;87;76;1001;206;306;418;406;94;2005;3004;507|
+itemtab1=Enchant 20+5|items1=#6#Burst20+5@108;113;4;20;12;33;47;61;59;87;73;1001;206;306;418;406;94;2005;3004;507|
+itemtab2=Enchant 28+5|items2=#6#Burst28+5@108;113;4;20;12;33;47;61;59;88;73;1001;206;306;418;406;94;2005;3004;507|
+note={{ItemTooltip|item_name=Voidstrike Seal}} wins over Morbid Loop until enchant 33+5 with maxed Obscure Talents.
+<br>Before maxing out their respective attributes, {{ItemTooltip|item_name=Voidstrike Seal}}, {{ItemTooltip|item_name=Encircling Trophies}} and {{ItemTooltip|item_name=Bite Sleeves}} are the best in their slots.
+<br>If you're missing {{ItemTooltip|item_name=Warbanner Fragment}}, replace it with {{ItemTooltip|item_name=Mutated Mycelium}}.}}
+
+Swap to your sets and use branch active ability, if you want to use get myst do that after branch active have finished and charge it again for a new burst since it's not a huge time sink like before. bursting a single time without GM is enough as when i tested multiple bursts the additional myst gain wasn't enough (~e1 more myst at max) to justify charging branch again.
+
+==Refinement==
+===Item Stats Priority===
+There are a few things that impact on your total profit. This is what to prioritize before you have fully upgraded all the items suggested by the guide, so you can make an educated decision on what to swap. Remember that set bonuses usually take priority over other non-upgraded items.
+
+*Idle Bonus > Summoning Efficiency = Character Ability Power(CAP) > Pet Ability Power(PAP) > Click/ Autoclick Profit > Profit
+
+*Idle Bonus is the strongest stat you can ever get with shaman as everything you do scales it (Patience, CAP, PAP, Summon Eff).
+
+*Summoning Efficiency is the second strongest stat for burst as you have 5 summons on the bar, giving it a x5 relevance, '''BUT''' CAP scales both Idle Bonus and Summon Eff so it's above it in the scale of things.
+
+*While {{PetTooltip|Herald of Rot}} PAP scaling is kinda low, it has 3 relevant profit abilities and one of them is Summon Eff. With {{PetTooltip|Risen Giant}} swap the priority of PAP and Click Profit as PAP has a lower value, apart from a few cases where you get a ton of it (like {{ItemTooltip|Bite Sleeves}}).
+
+*Finally you have Click/Autoclick Profit and Profit, the first getting prioritised as usually the items with it have other more useful stats for the class, ideally you only want to see {{ItemTooltip|item_name=Resonator Ring}} with these stats, but {{ItemTooltip|item_name=Embrace Of The Grove}} is better than {{ItemTooltip|item_name=Falconer's Warm Cape}} with {{PetTooltip|pet_name=Risen Giant}} before ench where {{ItemTooltip|item_name=The Magnifier}} take priority.
+
+===Resource Spending===
+Here are some tips on how to spend your dust to upgrade and improve your gear as a new Shaman.
+
+* Get {{ItemTooltip|item_name=Branch of the Great Cycle}} > {{ItemTooltip|item_name=Cold-blooded Ring}} > {{ItemTooltip|item_name=Resonator Ring}} to '''legendary'''. Branch and cbr have the biggest priority. {{ItemTooltip|item_name=Heart of the Grave}} is useful to upgrade if you plan to go offline during pet time stacking.
+* Farm Shattered Reality, Eye of Chaos and Cathedral in expedition to get and upgrade {{ItemTooltip|item_name=Charged Fin-Wing}}, {{ItemTooltip|item_name=Insidious Lure}} and {{ItemTooltip|item_name=Warbanner Fragment}} to '''legendary'''. Spend unstable keys on lower level zones first as they're cheaper.
+* Useful legendary items: {{ItemTooltip|item_name=Perfected Kata Bracers}}, {{ItemTooltip|item_name=Frosty Ring}} and {{ItemTooltip|item_name=Artificer's Shoulderpads}}, they're a real boon to longer runs.
+* Get a few enchants on {{ItemTooltip|item_name=Temporal Scabbard}} to help out with the stacking.
+* Burst items have the upgrade priority, followed by vm gen and branch stacking after you have your legendary weapons.
+
+===Enchanting priority===
+#{{ItemTooltip|item_name = Servants Overclocking}}
+#{{ItemTooltip|item_name = Branch of the Great Cycle}}
+#{{ItemTooltip|item_name=Warbanner Fragment}}
+# Remaining 10-15% idle bonus burst items
+# (Under this should be 1 lower than branch)
+# 20% CAP burst items
+#Remaining summon eff burst items
+#(Under this should be 3 lower than branch)
+# {{ItemTooltip|item_name = Morbid Loop}} / {{ItemTooltip|item_name = Cold-blooded Ring}}
+#{{ItemTooltip|item_name=Falconer's Warm Cape}} (burst)
+#{{ItemTooltip|item_name = Blessed Tapestry}} / {{ItemTooltip|item_name = Inert Jade Phylactery}}
+#{{ItemTooltip|item_name = Voidstrike Seal}}
+# {{ItemTooltip|item_name = Black Vortex}}
+# {{ItemTooltip|item_name = Void Sampling}}/{{ItemTooltip|item_name = Pitch-black Cage}}/{{ItemTooltip|item_name=Insidious Lure}}/{{ItemTooltip|item_name=Anomalous Essence}}
+# (Row under this should be 4 lower than branch)
+# Remaining VMPE VM set items 
+# (Under this should be 7 lower than branch)
+# {{ItemTooltip|item_name=Sash of Luxury}}/{{ItemTooltip|item_name = Reality Prism}} or {{ItemTooltip|item_name = Temporal Stabilizer}} (For the Incantation Efficiency enchant, not their Weapon effects)
+# Remaining VM set inc eff items
+# (Under this should be 10 lower than branch)
+#{{ItemTooltip|item_name=Acclimatized Summons}}/{{ItemTooltip|item_name=Intact Carapace}}/{{ItemTooltip|item_name=Symbol Of Authority}}/{{ItemTooltip|item_name=The Magnifier}}(not on burst)/{{ItemTooltip|item_name=Beholding Eye}}(not on burst)/{{ItemTooltip|item_name=Conjured Thornmail}}/{{ItemTooltip|item_name=Conjured Razorspaulders}}
+#{{ItemTooltip|item_name=Warp Basilisk}}/{{ItemTooltip|item_name = Nulldragon, The Anomaly}}
+#Evo eff Items.
+
+{{ItemTooltip|item_name=Temporal Scabbard}} is a jolly, enchant it as much as you want, but try to keep it at least 1-2 enchants from SO until 20 enchantments, after that you can decide for yourself.
+
+==Pantheon==
+When you only have the first ability available, the list of best to worst god is (Chaos is still unavailable at this stage):
+
+Animatelia > Tempoaeverum > Procreogenus  > Veritallios >> Altermutus > Ardourium
+
+When you have both abilities and Chaos unlocked, the list is:
+
+Cerebros > Animatelia > Temporaverum > Procreogenus > Chaos => Veritallios >> Ardourium >= Altermutus
+
+where the ''>='' symbol means the god on the left is so minimally better than the one on the right that you can consider them to be on equal footing'', ''the symbol ''>'' means that the god on the left is definitely better than the one on the right, and ''>>'' means the god on the left is considerably better than the one on the right.
+
+''Note: ''Ardourium is mainly useful for {{SpellTooltip|spell_name = Synthetic Entity}}, which in turn is only relevant for the Insight 150 perk and as a source of character experience.
+
+''Note:'' profit wise (when applied directly to the computation of profits), both Altermutus and Ardourium provide no profit (Ardourium first ability) or very little profit (Ardourium second ability or Altermutus with either one or both).
+
+==Memetics==
+===Source Memetics===
+Here is the assignment of source memetics that works best for Shaman:
+
+{{SourceMemes
+|class=Shaman
+|gem=inc
+|grimoire=gild
+|fountain=exp
+|tree=
+|desk=ac
+|circle=cap
+|rift=pap
+|nexus=summon
+}}
+Rough priority is CAP >= PAP > Autoclick > Summon >> Incant >>> cEXP
+
+Evocation efficiency should be left unassigned, as we absolutely do not want to reduce our number of Trees of Life, as that would decrease our autoclicks on {{SpellTooltip|spell_name=Summon Evergrowing Forest}}. 
+
+Character experience is also a bit weird, but it's definitely worth it for Shaman, as it benefits phylacteries (of which Shaman gets a lot out of), as well as Shaman itself having good level scaling.
+
+For more exact numbers, consult [[Spreadsheets#Source_Memes_Calculator|Muninn's Source Meme Calculator]], with the following scalings:
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+!Stat !! Scaling
+|-
+| Incantation || 2.1895
+|-
+| Character Ability Power || 1.9978
+|-
+| Autoclick || 1
+|-
+| Evocation || 0
+|- 
+| Summoning || 7.8433
+|-
+| Pet Ability Power || 1.6843
+|-
+| Character Experience || 1
+|}
+These scalings and the above source distribution assumes 0 Spell Mastery.  The distribution of sources will change if you use the Spell Mastery field.
+
+===Spell Memetics===
+For use with [[Spreadsheets#Spell Meme Calculator|Merp's Spell Meme Sheet.]] Make sure to put in the summon table to the sheet as well.
+
+{| class=wikitable
+|-
+! Spell !! Efficiency !! Cast scaling !! AC amt scaling !! AC profit !! Cast amt !! Cast rate
+|-
+| {{SpellTooltip|spell_name=Summon Unholy Avatar|icon=hidden}} || 1.733 || 0 || 0 || {{CheckboxT}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Summon Spider Swarm|icon=hidden}} || 1.444 || 0 || 0 || {{CheckboxT}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Summon Evergrowing Forest|icon=hidden}} || 1.266 || 0 || 6.7 || {{CheckboxT}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Summon Deepwood Stalker|icon=hidden}} || 1.266 || 0 || 6.7 || {{CheckboxT}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Summon Centipede Swarm|icon=hidden}} || 1.279 || 0 || 0 || {{CheckboxT}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Void Radiance|icon=hidden}} || 1.245 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Dreaded Script Of Harvest|icon=hidden}} || 1.183 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Void Lure|icon=hidden}} || 1.011 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Rules Of Nature|icon=hidden}} || 1 || 0.1 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|spell_name=Rules Of Nature (Enhanced)|icon=hidden}} || 1 || ? || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Conjure Primal Elemental|icon=hidden}} || 1.001 || 0 || 6.7 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| colspan="7" | For spells marked with a '''^''', replace the line above if you have it, do not add both.
+|-
+|}
+
+NOTE: as a minor optimization for pet exp you can spend the leftover ink on rules of nature, while the max level you can level it to and still gain enough spell charges for stacking is 6 the % increase casts is a dynamic bonus applied to the total casts instead of casts/s, so for pet exp you can increase the level to max since it doesn't need to be active to receive the bonus and reduce it for stacking and branch charging.
+
+Clear out the summon table from anything that was there before, put in the "Class Pet XP Scaling" as 0.1, and put this in the summon table:
+
+{| class=wikitable
+|+ Any column not mentioned should be left blank/unchecked.
+|-
+! Spell !! Base clicks !! % of buildup !! % w/ Eerie !! % of Eerie w/ LK !! Used w/ Paukan? !! Used in shaman burst?
+|-
+| {{SpellTooltip|spell_name=Conjure Primal Elemental|icon=hidden}} || 15 || 100% || 90%** || || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|spell_name=Summon Evergrowing Forest|icon=hidden}} || 80* || 90%** || 100% || || {{CheckboxT}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|spell_name=Summon Deepwood Stalker|icon=hidden}} || 0.5 || 10%** || 0% || || {{CheckboxF}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|spell_name=Summon Spider Swarm|icon=hidden}} || 6 || 0% || 0% || || {{CheckboxF}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|spell_name=Summon Centipede Swarm|icon=hidden}} || 76* || 0% || 0% || || {{CheckboxF}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|spell_name=Summon Unholy Avatar|icon=hidden}} || 16 || 0% || 0% || || {{CheckboxF}} || {{CheckboxT}}
+|}
+<nowiki>*</nowiki>Click amounts for {{SpellTooltip|spell_name=Summon Evergrowing Forest|display_name=SEF}} and {{SpellTooltip|spell_name=Summon Centipede Swarm|display_name=SCS}} depend on your current stats/mysts. These numbers shouldn't be that far off from your numbers, but if you want to refine it a little, check the autoclick numbers you get in burst (and make sure to divide the number you see by 1.1 to remove the multiplier from challenges). This has had some inconsistencies for me, though, so if you want to make sure it's consistent with the other numbers, use their formulas for click amounts. Copy and paste these formulas into the cell for click numbers, and replace the capitalized words with the relevant number. SEF: =FORESTS*.004 , SCS: =log(SUMMON EFF)*2.5+1 .
+
+<nowiki>**</nowiki>The % of exile you spend on scrying vs. pet time stacking varies wildly because of the HoR pet time softcaps. I tried to go for a middle ground here, and it probably doesn't make a huuuge difference either way, but you can put in your own ratio here for whatever it ends up being for you.
+
+==Advanced Optimizations==
+===Botanist boosting===
+Botanist is the {{ClassTooltip|class_name=Druid}}/{{ClassTooltip|class_name=Necromancer}} [[Triumph]] and it grant summoning efficency based on total autoclicks this realm (not exile), so {{ClassTooltip|class_name=Temporalist}} is obviously the best choice for that, run it once and wait to have at least 1e12 total autoclicks.
+
+{{GuideBox|
+pet=Ley Keeper|
+spells=#9#PetXP@65,2;67,1;26,2;21,2;25,2;110,2|
+items=#9#PetXP@115;106;9;27;13;31;41;66;57;87;70;1008;203;300;406;415;96;2009;3007;506}}
+
+==Ascension (T3) classes==
+After you reach e1100 Mysteries Shaman have access to two [[Ascension_Forms|Ascension Forms]] they can pick from: [[Demiurge]] and [[Defiance]].
+
+===Demiurge===
+[[Demiurge]] gives access to an additional mana source with a very powerful unique memetic and catalysts based on the highest number of catalysts you have on a source, reduced mana cost for sources based on ascension level and access to 3 more spells: {{SpellTooltip|spell_name=Primal Power}}, {{SpellTooltip|spell_name=Conjure Void Elemental}} and {{SpellTooltip|spell_name=Forge Empyreal Vassal}}. While the first is mostly useless due to the nature of shaman, {{SpellTooltip|spell_name=Conjure Void Elemental}} is incredibly powerful thanks to the incredible amount of summon efficiency shaman can get and the fact that it can be pre-buffed by {{PetTooltip|pet_name=Voidterror}} before switching to {{PetTooltip|pet_name=Herald of Rot}} instead of relying on just {{SpellTooltip|spell_name=Void Lure}} + {{SpellTooltip|spell_name=Void Radiance}}. Finally {{SpellTooltip|spell_name=Forge Empyreal Vassal}} is a permanent incantation (the bonuses last until exile and  the spell itself does not need to be on the spellbar for them to be applied) that increase your pet ability power, mostly for {{PetTooltip|pet_name=Voidterror}} and {{PetTooltip|pet_name=Herald of Rot}}.
+
+The full guide can be found here: [[Demiurge Shaman Guide]]
+
+===Defiance===
+[[Defiance]] has a '''Transcendant''' form that provides different bonuses depending on if it is charging or activated. While charging, it increases your void mana per entity by a huge amount. Once activated, it increases your click profit and your summoning efficiency instead (if you want to use it with other classes don't worry, this bonus changes based on the T2 you're playing as). It also gives you access to 3 more spells: {{SpellTooltip|spell_name=Unclean Knowledge}}, {{SpellTooltip|spell_name=Nullzone}} and {{SpellTooltip|spell_name=Employ Celestial Countermeasures}}. While {{SpellTooltip|spell_name=Nullzone}} suffers from the same fate as {{SpellTooltip|spell_name=Primal Power}}, {{SpellTooltip|spell_name=Unclean Knowledge}} partially changes the way {{PetTooltip|pet_name=Herald of Rot}} is leveled while also slightly increasing shaman's time and enchant scaling, finally {{SpellTooltip|spell_name=Employ Celestial Countermeasures}} is another permanent incantation, this time increasing evocation and summoning efficiency. While the first part is only nice for {{SpellTooltip|spell_name=Synthetic Entity}} the second part is shaman's bread and butter.
+
+The full guide can be found here: [[Defiance Shaman Guide]]

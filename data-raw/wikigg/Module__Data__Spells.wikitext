@@ -1,0 +1,3466 @@
+--<nowiki>
+--Note that the syntax highlighting in the Module page can be broken, you can click on 'Edit' to see the code with proper highlighting.
+local p = {}
+
+--[=[
+[Field]        [Type]         [Description]
+ID             Int64          The spell's internal identification refererence.
+School         String         The school of the spell (Evocation, Summoning, Incantation).
+Accumulated    Boolean        If the spell is accumulated, omit or set to false for non accumulated
+Persistent     Boolean        If the spell is persistent, omit or set to false for non persistent.
+Level          Int64          The level required to cast the spell.
+Cost           Int64          The spell's shard cost, omit for a spell not using shards.
+AdditionalCost {Type, Amount} Any additional cost the spell has.
+Charge         String         The way the spell charges if it does not use shards.
+Duration       Int64          The spell's duration, in seconds.
+Description    String         The spell's description.
+Math           String         The spell's Math.
+
+Written as:
+Math = [[Formula 1
+Formula 2
+Formula 3]]
+
+Outputted as: 
+<math>Formula 1</math>
+<math>Formula 2</math>
+<math>Formula 3</math>
+
+Behavior       String         The way the spell's effects are applied over time.
+Priority       Int64          The spell's ranking for gaining spell shards, omit or set to 0 for most spells.
+Classes        Set<String>    The classes that can use the spell.
+Unreleased     Boolean        If the spell is actually in the game, omit or set to false for most spells.
+]=]
+
+local spells = {}
+spells["Magic Missile"] = {
+    ID = 0,
+    School = "Evocation",
+    Level = 1,
+    Cost = 125,
+    Duration = 0,
+    Description = "Instantly earns 30 sec of production, granting Mana.",
+    Math = [[{\textbf{Mana}} = \text{Evocation} \times \text {Mana/s} \times 30]],
+    Behavior = "Instant",
+    Classes = {
+        Apprentice = true,
+        Necromancer = true,
+        Arcanist = true,
+        Prodigy = true,
+        Abolisher = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Spell Focus"] = {
+    ID = 104,
+    School = "Evocation",
+    Level = 7,
+    Cost = 25,
+    Duration = 0,
+    Description = "Instantly grants Spell Shards. Doesn't earn Spell Shards on itself.",
+    Math = [[{\textbf{Shards}} = (\text {CharLvl} \times 1.25 + 25) \times \text{Evocation}^{0.075}]],
+    Behavior = "Instant",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Exorcist = true,
+        Chronomancer = true,
+        Shaman = true,
+        Heretic = true
+    }
+}
+spells["Lightning Bolt"] = {
+    ID = 1,
+    School = "Evocation",
+    Level = 34,
+    Cost = 500,
+    Duration = 0,
+    Description = "Instantly earns 80 sec of production, granting Mana and Spell Shards. Doesn't earn Spell Shards on itself.",
+    Math = [[{\textbf{Mana}} = \text{Mana/s} \times \text{Evocation} \times 80
+{\textbf{Spell Shards}} = (\text {CharLvl} \times 4 + 100) \times \text{(Evocation)}^{0.075}]],
+    Behavior = "Instant",
+    Classes = {
+        Arcanist = true,
+        Archon = true
+    }
+}
+spells["Fire Ball"] = {
+    ID = 2,
+    School = "Evocation",
+    Level = 16,
+    Cost = 250,
+    Duration = 6,
+    Description = "Instantly earns 30 sec of production, granting Mana. Autoclicks 4 times per second, earning pet experience.",
+    Math = [[{\textbf{ManaCast}} = \text{Mana/s} \times \text{Evocation} \times 30
+{\textbf{ManaClick}} = \text{ClickProfit} \times \log_{10}(\text{Evocation} \times 0.01 + 1) \times \text{AutoclickProfit}
+{\textbf{PetXp}} = (1 + \text{FixedXp}) \times \text{PetXpMultiplier}]],
+    Behavior = "Periodic",
+    Classes = {
+        Demonologist = true,
+        Oni = true
+    }
+}
+spells["Kelphior's Black Beam"] = {
+    ID = 3,
+    School = "Evocation",
+    Level = 52,
+    Cost = 500,
+    Duration = 0,
+    Description = "Instantly earns 228 sec of production, granting Mana, based on character level.",
+    Math = [[{\textbf{Mana}} = (\text{Char lvl} + 2.5) \times \text{Evocation} \times \text{Mana/s} \times 8 ]],
+    Behavior = "Instant",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true
+    }
+}
+spells["Conjure Lesser Elemental"] = {
+    ID = 10,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 9,
+    Cost = 1800,
+    Duration = 45,
+    Description = "Autoclicks 5 times per second, with 0% Crit Chance. Increases Shard Pool capacity based on casts this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 5 \times \text{AclickMultiplier}
+ \text{ShardPoolCap}=1 + (1 + 0.8 \times \log_{10}(\text{Summon})) \times (\frac{\text{CastsThisExile}}{10000})^{0.45}]],
+    Behavior = "Periodic",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Umbramancer = true,
+        Ironsoul = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Temporalist = true,
+        Desolator = true
+    }
+}
+spells["Summon Infernal Thrasher"] = {
+    ID = 11,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 36,
+    Cost = 2250,
+    Duration = 66,
+    Description = "Autoclicks 8 times per second, earning pet experience. Increases pet experience gained based on casts this exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 8 \times \text{AclickMultiplier}
+{\textbf{PetXp}} = (1 + \text{FixedXp}) \times \text{PetXpMultiplier}
+{\textbf{PetEXPMult}}=\text{CastsThisExile}^{0.4} \times (1+\log_{10}(\text{Summon})/2)]],
+    Behavior = "Periodic",
+    Classes = {
+        Demonologist = true,
+        Oni = true
+    }
+}
+spells["Summon Woodland Creatures"] = {
+    ID = 12,
+    School = "Summoning",
+    Level = 15,
+    Cost = 3000,
+    Duration = 150,
+    Description = "Autoclicks 9 times per second with character crit stats.Increases Crit Rating, based on total amount of autoclicks during this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 9 \times \text{AclickMultiplier}
+{\textbf{CritRating}} = \text{AClicksExile} \times \text{Summon}^{0.9} \times 0.001]],
+    Behavior = "Periodic",
+    Classes = {
+        Druid = true
+    }
+}
+spells["Animate Skeletal Minions"] = {
+    ID = 13,
+    School = "Summoning",
+    Level = 14,
+    Cost = 2000,
+    Duration = 120,
+    Description = "Autoclicks 6 times per second, with 6% Crit Chance and 200% Crit Profit. Increases profits.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 6 \times \text{AclickMultiplier}
+{\textbf{Profit}} = \text{Summon}^{0.9} \times 1.5]],
+    Behavior = "Periodic",
+    Classes = {
+        Necromancer = true
+    }
+}
+spells["Conjure Greater Elemental"] = {
+    ID = 21,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 21,
+    Cost = 3000,
+    Duration = 60,
+    Description = "Autoclicks 10 times per second, with 5% Crit Chance and 750% Crit Profit. Increases charge-based Spells' charging speed based on total casts this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 10 \times \text{AclickMultiplier}
+{\textbf{ChargeSpeed}}=1+ (1 + 0.5 \times \log_{10}(\text{Summon})) \times (\text{CastsThisExile}/1000)^{0.35} ]],
+    Behavior = "Periodic",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Umbramancer = true,
+        Ironsoul = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Temporalist = true,
+        Desolator = true
+    }
+}
+spells["Summon Guardian Of The Canopies"] = {
+    ID = 22,
+    School = "Summoning",
+    Level = 36,
+    Cost = 4500,
+    Duration = 360,
+    Description = "Autoclicks 12 times per second with character Crit stats. Increases character Crit Chance.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 12 \times \text{AclickMultiplier}
+{\textbf{CritChance}} = \left( \log_{10}(\text{Summon}) \times 0.075 + 1 \right) \times 20]],
+    Behavior = "Periodic",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Summon Unholy Avatar"] = {
+    ID = 23,
+    School = "Summoning",
+    Level = 64,
+    Cost = 3000,
+    Duration = 100,
+    Description = "Autoclicks 16 times per second, with 15% Crit Chance and 400% Crit Profit. Increases Idle bonus.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 16 \times \text{AclickMultiplier}
+{\textbf{Idle}} = \text{Summon}^{0.8} \times 1.5]],
+    Behavior = "Periodic",
+    Classes = {
+        Necromancer = true,
+        Shaman = true,
+    }
+}
+spells["Summon Winged Night"] = {
+    ID = 24,
+    School = "Summoning",
+    Level = 62,
+    Cost = 7800,
+    Duration = 300,
+    Description = "Autoclicks each second, based on your Max Void Mana, with x3 Click Profit. Every second also collects one bonus Void Entity.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit} \times 3
+{\textbf{ClicksPerSec}} = \left\lfloor \log_{10}(\text{MaxExileVM} + 1) + 1 \right\rceil \times \text{AclickMultiplier}
+{\textbf{EntitiesPerSec}} = \left\lfloor 1 + 2 * \log_{10}(\text{Summon}) \right\rceil]],
+    Behavior = "Periodic",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true
+    }
+}
+spells["Void Lure"] = {
+    ID = 30,
+    School = "Incantation",
+    Level = 5,
+    Cost = 975,
+    Duration = 300,
+    Description = "Void Entities spawn more often and remain longer.",
+    Math = [[{\textbf{SpawnRate}} = \text{Incantation}^{0.9} + 1
+{\textbf{Duration}} = \text{Incantation}^{0.5} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Arcanist = true,
+        Prodigy = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Void Prison"] = {
+    ID = 31,
+    School = "Incantation",
+    Level = 50,
+    Cost = 1750,
+    Duration = 300,
+    Description = "Void Entities spawn more often, remain longer, and grant more Void Mana.",
+    Math = [[{\textbf{SpawnRate}} = \text{Incantation} \times 2
+{\textbf{Duration}} = \text{Incantation} \times 10
+{\textbf{Vpe}} = \text{Incantation}^{1.2} \times 3]],
+    Behavior = "Buff",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true
+    }
+}
+spells["Void Syphon"] = {
+    ID = 32,
+    School = "Evocation",
+    Level = 69,
+    Cost = 2500,
+    Duration = 0,
+    Description = "Instantly earns Void Entities.",
+    Math = [[{\textbf{Entities}} = \left\lfloor (\log_{10}(\text{Evocation}) \times 2 + 1) \times 5 \right\rfloor]],
+    Behavior = "Instant",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true
+    }
+}
+spells["Magical Weapon"] = {
+    ID = 40,
+    School = "Incantation",
+    Level = 17,
+    Cost = 1250,
+    Duration = 60,
+    Description = "Increases character Crit Chance, Crit Profit and Click Profit.",
+    Math = [[{\textbf{ClickProfit}} = \text{Incantation} + 1
+{\textbf{CritChance}} = (\log_{10}(\text{Incantation}) \times 0.9 + 1) \times 3\%
+{\textbf{CritProfit}} = \text{Incantation} \times 0.5 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Necromancer = true,
+        Prodigy = true,
+        Umbramancer = true,
+        Abolisher = true,
+        Shaman = true,
+        Desolator = true
+    }
+}
+spells["Sword Of Anklah"] = {
+    ID = 41,
+    School = "Incantation",
+    Level = 60,
+    Cost = 6000,
+    Duration = 120,
+    Description = "Increases character Crit Chance, Crit Profit and Click Profit.",
+    Math = [[{\textbf{CritChance}} = \log_{10}(\text{Incantation}) + 5
+{\textbf{CritProfit}} = \text{Incantation} \times 2
+{\textbf{ClickProfit}} = \text{Incantation} \times 3 ]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true
+    }
+}
+spells["Spellstaff Of Chamaon"] = {
+    ID = 42,
+    School = "Incantation",
+    Level = 46,
+    Cost = 2625,
+    Duration = 60,
+    Description = "Increases Spell Shards on clicks and autoclicks. Increases Evocation efficiency.",
+    Math = [[{\textbf{ShardsFromClicks}} = \text{Incantation} \times 2 + 1
+{\textbf{Evocation}} = \text{Incantation}^{0.8} \times 2 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Arcanist = true,
+        Archon = true
+    }
+}
+spells["Ebon Truncheon"] = {
+    ID = 43,
+    School = "Incantation",
+    Level = 80,
+    Cost = 3500,
+    Duration = 20,
+    Description = "Increases Void Mana per Entity, based on total amount of autoclicks this Exile.",
+    Math = [[{\textbf{Vpe}} = (\text{AClicksExile} + 1)^{0.45} \times \text{Incantation} \times 0.23 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Voidmancer = true
+    }
+}
+spells["Empower"] = {
+    ID = 50,
+    School = "Incantation",
+    Level = 28,
+    Cost = 3250,
+    Duration = 20,
+    Description = "Increases profits, based on total amount of sources.",
+    Math = [[{\textbf{Profit}} = ((\text{BoughtSources} + 1) \times 0.1)^{0.34} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Demonologist = true,
+        Necromancer = true,
+        Exorcist = true,
+        Umbramancer = true,
+        Ironsoul = true,
+        Shaman = true,
+        Heretic = true,
+        Desolator = true
+    }
+}
+spells["Karnaphen's Spellshroud"] = {
+    ID = 51,
+    School = "Incantation",
+    Level = 58,
+    Cost = 6000,
+    Duration = 20,
+    Description = "Increases profits, based on total amount of sources and total amount of spells cast this Exile.",
+    Math = [[\begin{aligned}{\textbf{Profit}} = &\left( \left( (\text{AllCastsThisExile} + 1) \times 0.0075 \right)^{0.25} + 1 \right) \\&\quad\times \left( (\text{BoughtSources} + 1)^{0.45} \times \text{Incantation} + 1 \right)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+        Arcanist = true,
+        Archon = true
+    }
+}
+spells["Alter The Laws"] = {
+    ID = 52,
+    School = "Incantation",
+    Level = 59,
+    Cost = 5000,
+    Duration = 20,
+    Description = "Increases profits, based on total amount of sources.",
+    Math = [[{\textbf{Profit}} = \left( (\text{BoughtSources} + 1) \times 0.5 \right)^{0.45} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true
+    }
+}
+spells["Ritual Of Power"] = {
+    ID = 60,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 48,
+    Cost = 5500,
+    Duration = 10,
+    Description = "Increases profits, based on total amount of times cast this Exile.",
+    Math = [[{\textbf{Profits}} = ((\text{CastsThisExile} + 1) \times 0.9)^{0.45} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Arcanist = true,
+        Voidmancer = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true,
+        Desolator = true
+    }
+}
+spells["True Sorcery"] = {
+    ID = 61,
+    School = "Incantation",
+    Persistent = true,
+    Level = 70,
+    Cost = 8000,
+    Duration = 5,
+    Description = "<b>Active:</b> Increases profits, based on total amount of times cast this Exile.<br><b>Passive:</b> Increases character experience gained from sources.",
+    Math = [[{\textbf{Profit}} = \left( \text{CastsThisExile} + 1 \right)^{0.85} \times \text{Incantation} + 1
+{\textbf{CXPFromSources}} = \left( \frac{\text{CastsThisRealm} + 1}{1000} \right)^{0.35} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true,
+        Dread = true
+    }
+}
+spells["Gem Resonance"] = {
+    ID = 4,
+    School = "Incantation",
+    Level = 2,
+    Cost = 900,
+    Duration = 15,
+    Description = "Increases amount of Mana Gems temporarily.",
+    Math = [[{\textbf{TemporaryGems}} = \left\lfloor G \times (\log_{10}(\text{Incantation}) \times 1.6 + 1) \right\rceil
+{\textbf{G}} = \text{Max}( \left\lfloor 250 - \log_{10}(\text{Mysteries} + 1) \times 3.5 \right\rceil ; 100 )]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Necromancer = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Conjure Primal Elemental"] = {
+    ID = 25,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 59,
+    Cost = 5250,
+    Duration = 90,
+    Description = "Autoclicks 15 times per second, with 10% Crit Chance and 1200% Crit Profit. Increases Pet experience gain based on casts this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 15 \times \text{AclickMultiplier}
+{\textbf{PetEXPMultiplier}}=1+ (1+0.95 \times \log_{10}(\text{Summon})) \times (\text{CastsThisExile}/100)^{0.5}]],
+    Behavior = "Periodic",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Umbramancer = true,
+        Ironsoul = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Temporalist = true,
+        Desolator = true
+    }
+}
+spells["Void Automaton"] = {
+    ID = 33,
+    School = "Summoning",
+    Level = 51,
+    Cost = 4300,
+    Duration = 360,
+    Description = "Automatically collects Void Entities, with period based on highest pet level this Exile.",
+    Math = [[{\textbf{TimePerCollection}} = F_{MaxPetLvl} \times \frac{1}{1+\log \left(1+\frac{\text{CastsThisExile}}{10000}\right)}
+F_{(MaxPetLvl \le 130)} = (40 - \text{MaxPetlvlExile} \times 0.3)
+F_{(MaxPetLvl > 130)} = \max\left(\left(0.95^{\left(\frac{\text{MaxPetlvlExile} - 130}{20}\right)}\right); \quad 0.05\right)]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Synthetic Entity"] = {
+    ID = 71,
+    School = "Evocation",
+    Level = 88,
+    Charge = "Charges automatically. Charging speed based on total Charges available, slowing down the more Charges you have. Can have up to 1e9 charges.",
+    Duration = 1,
+    Description = "Instantly earns Void Entities, based on charges. Consumes 2% of current charges on use.",
+    Math = [[{\textbf{Entities}} = \left\lfloor \left( \log_{10}(\text{Evocation}) \times 2 + 1 \right) \right\rfloor \times \left( \left\lfloor \text{Charges} \times 0.02 \right\rceil + 1 \right)]],
+    Behavior = "Instant",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Force Of Nature"] = {
+    ID = 5,
+    School = "Incantation",
+    Level = 73,
+    Cost = 7500,
+    Duration = 12,
+    Description = "Increases Trees of Life profit, based on total amount of autoclicks during this Exile.",
+    Math = [[{\textbf{TreeProduction}} = (\text{AClicksThisExile} + 1)^{0.5} \times \text{Incantation}^{1.2} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Rules Of Nature"] = {
+    ID = 70,
+    School = "Incantation",
+    Persistent = true,
+    Level = 85,
+    Charge = "Charges from Crit autoclicks.",
+    Duration = 10,
+    Description = "<b>Active:</b> Increases Autoclick Profit, based on times cast this Exile.<br><b>Passive:</b> Increases bonus pet experience (additively).",
+    Math = [[{\textbf{AClickProfit}} = (\text{Incantation} \times 0.2) \times \text{CastsThisExile} + 1
+{\textbf{PetXp}} = \text{CastsThisRealm} \times 0.02]],
+    Behavior = "Buff",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Dreaded Script Of Harvest"] = {
+    ID = 7,
+    School = "Incantation",
+    Level = 76,
+    Cost = 2900,
+    Duration = 15,
+    Description = "Increases Forbidden Tomes profit, based on Idle Bonus.",
+    Math = [[{\textbf{ForbiddenTomeProfit}} = (\text{IdleBonusMulti} + 1)^{0.43} \times \text{Incantation}^{0.92} \times 0.85 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Necromancer = true,
+        Shaman = true
+    }
+}
+spells["Nightfall"] = {
+    ID = 72,
+    School = "Incantation",
+    Persistent = true,
+    Level = 93,
+    Charge = "Charges in Idle Mode with each spell cast and over time, based on time spent as Necromancer this Exile.",
+    Duration = 25,
+    Description = "<b>Active:</b> Increase profits, based on times cast this Exile.<br><b>Passive:</b> Increases Charging Speed.",
+    Math = [[{\textbf{Profit}} = \left( \text{CastsThisExile} + 1 \right)^{0.85} \times \text{Incantation} \times 0.75 + 1
+{\textbf{ChargeSpeed}} = \left( (\text{CastsThisRealm} + 1) \times 0.001 \right)^{0.5} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Necromancer = true,
+        Shaman = true,
+        Defiance = true
+    }
+}
+spells["Goblet Of Fire"] = {
+    ID = 6,
+    School = "Incantation",
+    Level = 66,
+    Cost = 2500,
+    Duration = 10,
+    Description = "Increases Hellholes profit, based on pet level.",
+    Math = [[{\textbf{HellholeProfit}} = ((\text{CurrentPetlvl} + 1) \times 0.25)^{1.25} \times \text{Incantation}^{1.6} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Demonologist = true,
+        Oni = true
+    }
+}
+spells["Unclean Knowledge"] = {
+    ID = 63,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 72,
+    Cost = 3100,
+    Duration = 6,
+    Description = "Increases pet experience gains, based on times cast this Exile.",
+    Math = [[{\textbf{PetXpMultiplier}} = (\text{CastsThisExile} + 1)^{0.41} \times \text{Incantation} \times 0.55 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Demonologist = true,
+        Oni = true,
+        Defiance = true
+    }
+}
+spells["Reap What You Sow"] = {
+    ID = 80,
+    School = "Incantation",
+    Level = 83,
+    Cost = 8250,
+    Duration = 18,
+    Description = "Consumes 40% of total Pet XP. Increases profits based on amount consumed.",
+    Math = [[{\textbf{PetXpConsumed}} = \text{CurrentPetXp} \times 0.4
+{\textbf{Profit}} = (\text{CurrentPetXp} \times 0.4 + 1)^{0.46} \times \text{Incantation} \times 0.16 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Demonologist = true
+    }
+}
+spells["Hellrage"] = {
+    ID = 62,
+    School = "Incantation",
+    Level = 32,
+    Cost = 7500,
+    Duration = 30,
+    Description = "Increases Pet Ability Power, based on amount of Hellholes.",
+    Math = [[{\textbf{PAP}} = (\text{Hellholes} + 1)^{0.27} \times \text{Incantation} \times 0.8 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Demonologist = true
+    }
+}
+spells["Meditative Fury"] = {
+    ID = 117,
+    School = "Incantation",
+    Level = 200,
+    Cost = 25000,
+    Duration = 20,
+    Description = "Increases Pet Ability Power, based on amount of Hellholes. 10 times a second earns 4 sec of production, granting Mana, based on amount of Mysteries.",
+    Math = [[{\textbf{PAP}} = (\text{Hellholes} + 1)^{0.3} \times \text{Incantation}^{0.75} \times 0.9 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Oni = true,
+    }
+}
+spells["Radiant Pools"] = {
+    ID = 8,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 86,
+    Cost = 5200,
+    Duration = 10,
+    Description = "Increases Arcanasprings profit, based on times cast this Exile.",
+    Math = [[{\textbf{SpringsProfit}} = (\text{CastsThisExile} + 1)^{0.81} \times \text{Incantation} \times 2.15 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Arcanist = true,
+        Archon = true
+    }
+}
+spells["Jas'Aham's Missile Storm"] = {
+    ID = 81,
+    School = "Evocation",
+    Persistent = true,
+    Level = 91,
+    Cost = 6250,
+    Duration = 0,
+    Description = "<b>Active:</b> Casts magical projectiles, granting Mana, based on times cast this Exile.<br><b>Passive:</b> On cast, increases casts this Exile of a random spell (excluding other Persistent spells) on panel.",
+    Math = [[{\textbf{MMAmount}} = \left\lfloor (\text{CastsThisExile} \times 0.001 + 1)^{1.3} \right\rfloor + 10
+{\textbf{Mana}} = \text{Mana/s} \times \left( \left\lfloor (\text{CastsThisExile} \times 0.001 + 1)^{1.3} \right\rfloor + 11 \right) \times \text{Evocation} \times 30
+{\textbf{Fake casts}} = \left( \text{CastsThisRealm} \times 0.05 \right)^{0.8} \times 0.01 + 1]],
+    Behavior = "Instant",
+    Classes = {
+        Arcanist = true,
+        Archon = true
+    }
+}
+spells["Primal Power"] = {
+    ID = 90,
+    School = "Incantation",
+    Level = 63,
+    Cost = 7250,
+    Duration = 5,
+    Description = "Increases evocation efficiency, based on character level.",
+    Math = [[{\textbf{Evocation}} = (\text{Charlvl} + 1)^{1.28} \times \text{Incantation} \times 0.25 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true,
+        Demiurge =true
+    }
+}
+spells["Void Radiance"] = {
+    ID = 34,
+    School = "Incantation",
+    Level = 92,
+    Cost = 4750,
+    Duration = 30,
+    Description = "Earns Void Mana every second, based on active Void Traps and Void Mana per Entity.",
+    Math = [[{\textbf{Void Mana}} = \text{Incantation}^{1.2} \times \text{Active traps} \times \frac{\text{Vpe}}{30}]],
+    Behavior = "Buff",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Demonologist = true,
+        Necromancer = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Chronomancer = true,
+        Alchemist = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true
+    }
+}
+spells["Animate Festering Abomination"] = {
+    ID = 27,
+    School = "Summoning",
+    Level = 95,
+    Cost = 4000,
+    Duration = 90,
+    Description = "Autoclicks 18 times per second, with 18% Crit Chance and 500% Crit Profit. Increases Character Ability Power.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 18 \times \text{AclickMultiplier}
+{\textbf{CAP}} = \text{Summon}^{0.92} \times 1.5]],
+    Behavior = "Periodic",
+    Classes = {
+        Necromancer = true
+    }
+}
+spells["Summon Horned Incinerator"] = {
+    ID = 28,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 96,
+    Cost = 3300,
+    Duration = 99,
+    Description = "Autoclicks 14 times per second, earning pet experience. Increase evocation efficiency, based on casts this exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 14 \times \text{AclickMultiplier}
+{\textbf{PetXp}} = (1 + \text{FixedXp}) \times \text{PetXpMultiplier}
+{\textbf{EvocationEff}}=(\text{CastsThisExile}/1000)^{1.1} \times \text{Summon}]],
+    Behavior = "Periodic",
+    Classes = {
+        Demonologist = true,
+        Oni = true
+    }
+}
+spells["Conjure Manabeast"] = {
+    ID = 26,
+    School = "Summoning",
+    Level = 94,
+    Cost = 4250,
+    Duration = 75,
+    Description = "Autoclicks 16 times per second, with 10% Crit Chance and 900% Crit Profit. Increases passive shard gains.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 16 \times \text{AclickMultiplier}
+{\textbf{ShardGen}} = \text{Summon}^{0.2} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Apprentice = true,
+        Druid = true,
+        Arcanist = true,
+        Prodigy = true,
+        Voidmancer = true,
+        Exorcist = true,
+        Chronomancer = true,
+        Umbramancer = true,
+        Ironsoul = true,
+        Abolisher = true,
+        Shaman = true,
+        Heretic = true,
+        Oni = true,
+        Archon = true,
+        Temporalist = true,
+        Desolator = true
+    }
+}
+spells["Templar Brothers"] = {
+    ID = 15,
+    School = "Summoning",
+    Level = 50,
+    Cost = 5250,
+    Duration = 90,
+    Description = "Autoclicks 15 times per second, with character Crit stats.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 15 \times \text{AclickMultiplier}]],
+    Behavior = "Periodic",
+    Classes = {
+        Exorcist = true,
+        Heretic = true,
+    }
+}
+spells["Smite"] = {
+    ID = 9,
+    School = "Evocation",
+    Level = 40,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Instantly earns profit equal to 1 Hallowed Clicks. Can be critical.",
+    Math = [[{\textbf{PerformedHC}} = (\text{Evocation}^{0.1} + 1) \times 2
+{\textbf{Mana}} = \text{ClickProfit} \times (\text{Evocation}^{0.1} + 1) \times 2]],
+    Behavior = "Instant",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Hallowed Writings"] = {
+    ID = 53,
+    School = "Incantation",
+    Level = 75,
+    Cost = 10000,
+    Duration = 60,
+    Description = "Increases profits, based on amount of Librams.",
+    Math = [[{\textbf{Profit}} = \text{Librams} \times \text{Incantation} \times 0.15 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Relentlessness"] = {
+    ID = 54,
+    School = "Incantation",
+    Level = 65,
+    Cost = 8000,
+    Duration = 30,
+    Description = "Increases Hallowed click generation speed.",
+    Math = [[{\textbf{HCGenSpeed}} = \text{Incantation}^{0.5} \times 2]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Holy Fervor"] = {
+    ID = 82,
+    School = "Evocation",
+    Level = 71,
+    Cost = 2500,
+    Duration = 0,
+    Description = "Instantly grants 2 Hallowed Clicks. Can Crit, yielding 10 Hallowed Clicks.",
+    Math = [[{\textbf{CritChance}} = (\log_{10}(\text{Evocation}) \times 1.25 + 1) \times 10\% ]],
+    Behavior = "Instant",
+    Classes = {
+        Exorcist = true
+    }
+}
+spells["Chaotic Fervor"] = {
+    ID = 115,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 71,
+    Cost = 5000,
+    Duration = 0,
+    Description = "Instantly grants Hallowed Clicks. Can Crit, yielding more Hallowed Clicks.",
+    Math = [[{\textbf{HCGranted}} = \left\lfloor \left( \frac{\text{CastsThisExile}}{100000} + 1 \right)^{0.4} \times 2 \right\rceil
+{\textbf{CritChance}} = (\log_{10}(\text{Evocation}) \times 1.25 + 1) \times 10\% 
+{\textbf{HCGrantedCrit}} = \left\lfloor \left( \frac{\text{CastsThisExile}}{100000} + 1 \right)^{0.4} \times 10 \right\rceil]],
+    Behavior = "Instant",
+    Classes = {
+        Heretic = true
+    }
+}
+spells["Divine Ally"] = {
+    ID = 14,
+    School = "Summoning",
+    Level = 80,
+    Cost = 4500,
+    Duration = 60,
+    Description = "Autoclicks 5 times per second, with character Crit stats. Gives all autoclicks a 4% chance to grant 1 Hallowed Click.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 5 \times \text{AclickMultiplier}]],
+    Behavior = "Periodic",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Power Of Sacrifice"] = {
+    ID = 55,
+    School = "Incantation",
+    Level = 100,
+    Cost = 12000,
+    Duration = 45,
+    Description = "Consumes all Hallowed Clicks available. Increases Click Profit, based on Hallowed Clicks consumed.",
+    Math = [[{\textbf{ClickProfit}} = 1.2^{\text{HCConsumed}} \times \text{Incantation}^{0.65} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Shattering Strike"] = {
+    ID = 56,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 105,
+    Cost = 3000,
+    Duration = 15,
+    Description = "Increases Character Ability Power, based on times cast this Exile.",
+    Math = [[{\textbf{CAP}} = \text{CastsThisExile} \times \text{Evocation} \times 0.005 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true
+    }
+}
+spells["Ley Overdrive"] = {
+    ID = 57,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 102,
+    Cost = 9000,
+    Duration = 20,
+    Description = "Increases profits, based on total amount of Ley Apexes and times cast this Exile.",
+    Math = [[{\textbf{Profit}} = \left( \frac{\text{LeyApexes} \times \text{Incantation} \times 3}{4000} + 1 \right) \times \left( \left(\frac{\text{CastsThisExile} + 1}{10} \right)^{0.75} + 1 \right)]],
+    Behavior = "Buff",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true
+    }
+}
+spells["Quasi-incantation"] = {
+    ID = 93,
+    School = "Incantation",
+    Level = 162,
+    Charge = "Charges over time, based on character level.",
+    Duration = 0,
+    Description = "Increases Incantation Efficiency until Exile. Isn't affected by Incantation Efficiency.",
+    Math = [[{\textbf{Incantation}} = \left( \frac{\text{CastsThisExile} + 1}{400} \right)^{1.5} + 1]],
+    Behavior = "Augment",
+    Classes = {
+        Prodigy = true,
+        Temporalist = true
+    }
+}
+spells["Summon Deepwood Stalker"] = {
+    ID = 16,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 108,
+    Cost = 5150,
+    Duration = 300,
+    Description = "Autoclicks once every 2 seconds, with character Crit stats and x10 Click Profit. Increases Autoclick Profit.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit} \times 10
+{\textbf{ClicksPerSec}} = 0.5 \times \text{AclickMultiplier}
+{\textbf{AutoclickProfit}} = \left(\text{CastsThisExile} \times 0.1 + 1\right) \times (\text{Charlvl} \times \text{Summon}^{0.9} \times 1.5 + 1)]],
+    Behavior = "Periodic",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Voracious Plague"] = {
+    ID = 58,
+    School = "Incantation",
+    Level = 103,
+    Cost = 3800,
+    Duration = 18,
+    Description = "Increases Evocation Efficency, based on character level. Every second may also grant a charge of [[Plague Zombie]], based on current [[Plague Zombie]] charges.",
+    Math = [[{\textbf{Evocation}} = \text{Charlvl} \times \text{Incantation}^{1.2} \times 0.028 + 1
+{\textbf{PZChargesGranted}} = \frac{2}{\text{PZCurrentCharges} + 1}\times\text{random}(0.5, 1.5)]],
+    Behavior = "Buff",
+    Classes = {
+        Necromancer = true,
+        Shaman = true,
+        Demiurge =true
+    }
+}
+spells["Plague Zombie"] = {
+    ID = 59,
+    School = "Evocation",
+    Level = 103,
+    Charge = "Charges from [[Voracious Plague]]",
+    Duration = 0,
+    Description = "Instantly earns 20 sec of production, granting Mana, based on charges. Consumes 15% of charges left on use.",
+    Math = [[{\textbf{Mana}} = \left( \left\lfloor 0.15 \times (\text{Charges} - 1) \right\rfloor + 1 \right) \times \text{Evocation} \times 20]],
+    Behavior = "Instant",
+    Classes = {
+        Necromancer = true,
+        Shaman = true
+    }
+}
+spells["Hellstorm"] = {
+    ID = 64,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 111,
+    Cost = 4900,
+    Duration = 9,
+    Description = "Every second earns 20 sec of production, granting Mana, based on times cast this Exile. Also grants pet experience.",
+    Math = [[{\textbf{Mana}} = \text{Mana/s} \times \text{Evocation} \times (\text{CastsThisExile} \times 0.01 + 1) \times 20
+{\textbf{PetXp}} = \left( \text{CharLvL} \times \left( \text{Evocation}^{0.5} + 1 \right) + \text{FixedXp} \right) \times \text{PetXpMultiplier}]],
+    Behavior = "Periodic",
+    Classes = {
+        Demonologist = true,
+        Oni = true
+    }
+}
+spells["Spirit Of Valor"] = {
+    ID = 44,
+    School = "Incantation",
+    Level = 121,
+    Cost = 4300,
+    Duration = 125,
+    Description = "Autoclicks 15 times per second, with x3 Click Profit and character Crit stats. Increases Crit Rating, based on character level.",
+    Math = [[{\textbf{Mana}} =\text{ClickProfit} \times \text{Incantation} \times \text{AutoclickProfit} \times 3
+{\textbf{ClicksPerSec}} = 15 \times \text{AclickMultiplier}
+{\textbf{CritRating}} = \text{Charlvl} \times \text{Incantation} \times 0.3 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Battle Trance"] = {
+    ID = 102,
+    School = "Incantation",
+    Level = 141,
+    Cost = 12000,
+    Duration = 15,
+    Description = "Increases Hallowed Click Profit, based on excess Hallowed Clicks this Exile.",
+    Math = [[{\textbf{HCProfit}} = \text{ExcessHC} \times \text{Incantation} \times 1.8 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Exorcist = true,
+        Heretic = true
+    }
+}
+spells["Reality Warping"] = {
+    ID = 35,
+    School = "Incantation",
+    Level = 112,
+    Cost = 1000,
+    Duration = 52,
+    Description = "Consumes most Void Mana. Grants Spell Shards every second, based on amount consumed.",
+    Math = [[{\textbf{Shards}} = \text{VMConsumed}^{0.26} \times 2]],
+    Behavior = "Buff",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true
+    }
+}
+spells["Conjure Void Elemental"] = {
+    ID = 85,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 146,
+    Cost = 10000,
+    Duration = 30,
+    Description = "Autoclicks 9 times per second with character Crit stats. Increases Void Mana Profit, based on max amount of Void Mana this Exile, and total casts in this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 9 \times \text{AclickMultiplier}
+{\textbf{VoidProfit}} = (\text{MaxVMExile} + 1)^{0.4} \times \text{Summon}^{0.65} \times (\text{CastsThisExile}+1)+ 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true,
+        Demiurge =true
+    }
+}
+spells["Arcane Infusion"] = {
+    ID = 100,
+    School = "Incantation",
+    Level = 120,
+    Cost = 500000,
+    Duration = 0,
+    Description = "Increases Character Ability Power until Exile. Gains Spell Shards last.",
+    Math = [[{\textbf{CAP}} = (\text{CastsThisExile} + 1)^{1.15} \times \left( \log_{10}(\text{Incantation}) \times 2 + 1 \right) \times 0.2 + 1]],
+    Behavior = "Augment",
+    Priority = -1,
+    Classes = {
+        Arcanist = true
+    }
+}
+spells["Singularity Beam"] = {
+    ID = 65,
+    School = "Evocation",
+    Level = 53,
+    Cost = 1500,
+    Duration = 0,
+    Description = "Instantly earns 1260 sec of production, granting Mana, based on character level.  Also grants Compressed Time.",
+    Math = [[{\textbf{Mana}} = (\text{Charlvl} + 10) \times \text{Evocation} \times \text{Mana/s} \times 20
+	{\textbf{CompressedTime}} = (\text{Charlvl} \times 0.2 + 100)]],
+    Behavior = "Instant",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Wormhole"] = {
+    ID = 66,
+    School = "Evocation",
+    Level = 67,
+    Cost = 3900,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 100
+    },
+    Duration = 0,
+    Description = "Instantly skips time.",
+    Math = [[{\textbf{TimeSkipped}} = \left( \log_{10}(\text{Evocation}) \times 0.75 + 1 \right) \times \text{Charlvl} \times 0.5 + 10]],
+    Behavior = "Instant",
+    Classes = {
+        Chronomancer = true
+    }
+}
+spells["Refined Wormhole"] = {
+    ID = 110,
+    School = "Evocation",
+    Level = 202,
+    Charge = "Gains charges over time, based on Time Distortion.",
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 100
+    },
+    Duration = 0,
+    Description = "Instantly skips time.",
+    Math = [[{\textbf{TimeSkipped}} = \left( \log_{10}(\text{Evocation}) \times 0.5 + 1 \right) \times \text{Charlvl} \times 0.5 + 20]],
+    Behavior = "Instant",
+    Classes = {
+        Temporalist = true
+    }
+}
+spells["Temporal Distortion"] = {
+    ID = 67,
+    School = "Evocation",
+    Level = 97,
+    Cost = 3200,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 125
+    },
+    Duration = 0,
+    Description = "Increase Time Distortion.",
+    Math = [[{\textbf{TimeDistortion}} = \log_{10}(\text{Evocation}) \times 0.05 + 0.25]],
+    Behavior = "Instant",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Generate Paradox"] = {
+    ID = 29,
+    School = "Summoning",
+    Level = 86,
+    Cost = 5000,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 150
+    },
+    Duration = 120,
+    Description = "Autoclicks 10 times per second with character Crit stats. Increases Shard Pool efficiency.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 5 \times \text{AclickMultiplier}
+{\textbf{ShardPoolEfficiency}} = \text{Summon} \times 5]],
+    Behavior = "Periodic",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Time Helix"] = {
+    ID = 101,
+    School = "Incantation",
+    Level = 118,
+    Cost = 10000,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 400
+    },
+    Duration = 0,
+    Description = "Resets Character Experience, Mana, Void Mana, and various Exile statistics. Increases profits until Exile.",
+    Math = [[{\textbf{Profit}} = \text{CastsThisExile} \times \left( \log_{10}(\text{Incantation}) \times 0.95 + 1 \right) \times 0.9 + 1]],
+    Behavior = "Augment",
+    Classes = {
+        Chronomancer = true
+    }
+}
+spells["Converge Timelines"] = {
+    ID = 73,
+    School = "Incantation",
+    Level = 85,
+    Cost = 6000,
+    Duration = 30,
+    Description = "Increases Character Ability Power, based on amount of Temporal Anchors.",
+    Math = [[{\textbf{Cap}} = \text{TemporalAnchors} \times \text{Incantation} \times 0.15 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Revert"] = {
+    ID = 68,
+    School = "Evocation",
+    Level = 106,
+    Cost = 9000,
+    Duration = 0,
+    Description = "Instantly refreshes the duration on all active spells.",
+--  Math = [[\text{not applicable}]],
+    Behavior = "Instant",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Stabilize The Flow"] = {
+    ID = 69,
+    School = "Incantation",
+    Level = 113,
+    Cost = 4600,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 25
+},
+    Duration = 60,
+    Description = "Consumes current Time Distortion. Increases profits, based on amount consumed.",
+    Math = [[{\textbf{Profit}} = \text{TDConsumed}^{1 + 0.1 \times \text{TDConsumed}} \times \text{Incantation} \times 2.5 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Superposition"] = {
+    ID = 17,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 115,
+    Cost = 5700,
+    Duration = 20,
+    Description = "Increases profits, based on time skipped and times cast this Exile.",
+    Math = [[\begin{aligned}{\textbf{Profit}} =  &\left(((\text{Skipped Time in seconds * 60} + 1) \times 1.25)^{0.5} \times \text{Incantation} + 1 \right) \\&\quad\times \left( \log^{0.85}_{10}(\text{CastsThisExile} + 1) + 1 \right)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+        Chronomancer = true,
+        Temporalist = true
+    }
+}
+spells["Summon Evergrowing Forest"] = {
+    ID = 18,
+    School = "Summoning",
+    Level = 17,
+    Cost = 2850,
+    Duration = 25,
+    Description = "Autoclicks each second (based on amount of Trees of Life) with character Crit stats. Increases profits, based on amount of Trees of Life.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = \left \lfloor \text{TreesOfLife} \times 0.004 \right\rceil \times \text{AclickMultiplier} 
+{\textbf{Profit}} = (\text{TreesOfLife} + 1)^{0.74} \times \text{Summon}^{0.9} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Summon Centipede Swarm"] = {
+    ID = 92,
+    School = "Summoning",
+    Level = 145,
+    Cost = 9000,
+    Duration = 40,
+    Description = "Autoclicks with character click stats. Increases Click Profit, based on production and autoclicks this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = \left\lfloor \log_{10}(\text{Summon} + 1) \times 2.5 + 1 \right\rfloor \times \text{AclickMultiplier}
+\begin{aligned}{\textbf{ClickProfit}} =& \text{Mana/s} \times \text{ClickProfitPerManaProduction} \\&\quad\times \left( \text{AclicksExile} \times \text{Summon}^{0.9} \times 0.0001 \right)\end{aligned}]],
+    Behavior = "Periodic",
+    Classes = {
+        Druid = true,
+        Shaman = true
+    }
+}
+spells["Flash Fire"] = {
+    ID = 45,
+    School = "Evocation",
+    Level = 55,
+    Charge = "Shadow Spell (1000)",
+    Duration = 0,
+    Description = "Instantly earns 40 sec of production, granting Mana, based on amount of Shadow Coals. Can Crit for more Mana, based on Crit Profit and pet level. Shadow Spell - Uses Liquid Shadow to cast.",
+    Math = [[{\textbf{Mana}} = \left( \frac{\text{ShadowCoals}}{100} + 20 \right) \times \text{Mana/s} \times \text{Evocation} \times 2
+{\textbf{CritChance}} = \text{CritChance}
+{\textbf{ManaW/Crit}} = \begin{aligned}&\left( \frac{\text{ShadowCoals}}{100} + 20 \right) \times \text{Mana/s} \times \text{Evocation} \\&\quad\times 2 \times (\text{CritProfit} ^ {1.5} + 1) \times \text{Petlvl}\end{aligned}]],
+    Behavior = "Instant",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Critical Mass"] = {
+    ID = 46,
+    School = "Incantation",
+    Level = 61,
+    Charge = "Shadow Spell (2000)",
+    Duration = 10,
+    Description = "Increases Shadow Coals profit, based on amount of Shadow Coals.",
+    Math = [[{\textbf{SCoalsProduction}} = (\text{ShadowCoals} + 1)^{1.01} \times \frac{\text{Incantation}}{4000} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Condensing Shadows"] = {
+    ID = 36,
+    School = "Incantation",
+    Level = 68,
+    Charge = "Shadow Spell (3000)",
+    Duration = 300,
+    Description = "Shadow Entities spawn more often, remain longer, and grant more Liquid Shadow.",
+    Math = [[{\textbf{ClotSpawnRate}} = \log_{10}(\text{Incantation}) + 1.25
+{\textbf{ClotLifetime}} = \log_{10}(\text{Incantation}) \times 0.15 + 1.5
+{\textbf{LS/entity}} = \log_{10}(\text{Incantation}) + 2]],
+    Behavior = "Buff",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Onyx Hound"] = {
+    ID = 19,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 74,
+    Cost = 6000,
+    Duration = 120,
+    Description = "Autoclicks 4 times per second with character click stats. Increases all Liquid Shadow income, based on amount of Shadow Coals. Automatically collects Shadow Entities, based on highest pet level this Exile. Drains 250 Liquid Shadow each second.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 4 \times \text{AclickMultiplier}
+{\textbf{LSIncome}} = \begin{aligned}&(\text{ShadowCoals} + 1)^{0.6} \times (\text{Summon}^{0.1} \times 0.1 + 1) \\&\quad\times (\text{CastsThisExile}^{0.5} + 1) \times 0.015 + 1\end{aligned}]],
+    Behavior = "Periodic",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Day Into Night"] = {
+    ID = 47,
+    School = "Evocation",
+    Level = 77,
+    Cost = 4000,
+    Duration = 0,
+    Description = "Instantly earns Mana, based on production and Offline Bonus. Grants Liquid Shadow, based on character level.",
+    Math = [[\begin{aligned}{\textbf{Mana}} =& (\text{Charlvl} \times 0.1 + 10) \times \left( \log_{10}(\text{Evocation}) \times 0.1 + 1 \right)\\&\quad \times \text{OfflineMultiplier}^{0.53} \times \text{Mana/s}\end{aligned}
+{\textbf{LS}} = (\text{Charlvl} \times 0.1 + 10) \times \left( \log_{10}(\text{Evocation}) \times 0.5 + 1 \right) \times \text{LSIncomeMultiplier}]],
+    Behavior = "Instant",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Dancing Flame"] = {
+    ID = 20,
+    School = "Summoning",
+    Level = 81,
+    Cost = 5400,
+    Duration = 120,
+    Description = "Autoclicks 5 times per second with character click stats. Each autoclick grants Liquid Shadow.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 5 \times \text{AclickMultiplier}
+{\textbf{LS}} = (\text{LSIncomeBonus + 1}) \times 15]],
+    Behavior = "Periodic",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Seethe In Shadows"] = {
+    ID = 48,
+    School = "Evocation",
+    Level = 84,
+    Charge = "Shadow Spell (2000)",
+    Duration = 0,
+    Description = "Instantly earns Mana, based on Autoclick Profit, amount of Shadow Coals, and Liquid Shadow.",
+    Math = [[\begin{aligned}{\textbf{Mana}} =& \left( \text{ShadowCoals}^{0.6} \times 0.1 + 1 \right) \times \left( \text{LiquidShadow}^{0.75} + 1 \right) \\&\quad\times\left( \text{Evocation} \times \text{ClickProfit} \times \text{AutoclickProfit} \times 20\right)\end{aligned}]],
+    Behavior = "Instant",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Umbral Rage"] = {
+    ID = 49,
+    School = "Incantation",
+    Level = 87,
+    Charge = "Shadow Spell (5000)",
+    Duration = 5,
+    Description = "Increases Evocation Efficiency and extends duration, based on Evocation casts while active. Increases spell costs over time, reset by manual click.",
+    Math = [[{\textbf{Evocation}} = (\text{EvoCastsWhileActive} + 2)^{0.35} \times \text{Incantation} \times 18 + 1
+{\textbf{SpellCostIncrease}} = 1.25^{\text{Time Since Last Click - 1}}]],
+    Behavior = "Buff",
+    Classes = {
+        Umbramancer = true
+    }
+}
+spells["Eclipse"] = {
+    ID = 37,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 98,
+    Cost = 4800,
+    Duration = 10,
+    Description = "Increases Offline Bonus, based on times cast this Exile. Drains 250 Liquid Shadow per second.",
+    Math = [[{\textbf{OfflineProfit}} = (\text{CastsThisExile} + 1)^{0.9} \times \text{Incantation} \times 2.5 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Shadows Of The Void"] = {
+    ID = 38,
+    School = "Evocation",
+    Level = 104,
+    Charge = "Shadow Spell (4500)",
+    Duration = 30,
+    Description = "Increases profits, based on Void Mana Profit and Void Mana per Entity.",
+    Math = [[{\textbf{Profit}} = \left( \left( \log_{10}(\text{Evocation}) \times 0.5 + 1 \right) \times \text{Vpe} \times 0.002 + 1 \right) \times (\text{VMProfit} + 1)]],
+    Behavior = "Buff",
+    Classes = {
+        Umbramancer = true,
+        Desolator = true
+    }
+}
+spells["Void Fission"] = {
+    ID = 112,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 177,
+    Charge = "Shadow Spell (10000)",
+    Duration = 20,
+    Description = "Increases profits, based on Void Mana Profit, Void Mana per Entity, and times cast this Exile. Increases Click Profits, based on Liquid Shadow and times cast this Exile.",
+    Math = [[\begin{aligned}{\textbf{Profit}} =& \left( (\text{Vpe} + 1)^{0.71} \times \frac{\log_{10}(\text{Incantation}) + 2}{10} + 1 \right) \times \\&\quad\left( (\text{VoidManaProfit} + 1)^{0.71} + 1 \right) \times \left( \left(\frac{\text{CastsThisExile} + 1}{100} \right)^{1.05} + 1 \right)\end{aligned}
+\begin{aligned}{\textbf{ClickProfit}} = &\left( (\text{LiquidShadow} + 1)^{0.62} \times \left( \log_{10}(\text{Incantation}) \times 0.5 + 1 \right) + 1 \right)\\&\quad \times \left( (\text{CastsThisExile} + 1)^{1.1} + 1 \right)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+        Desolator = true
+    }
+}
+spells["Transmute"] = {
+    ID = 74,
+    School = "Evocation",
+    Level = 76,
+    Cost = 2000,
+    AdditionalCost = {
+        Type = "Mana Gems",
+        Amount = 100
+    },
+    Duration = 0,
+    Description = "Instantly transforms Mana Gems into other random Sources.",
+    Math = [[{\textbf{SoucesGiveSingleType}} = A + \left\lfloor \log_{10}\left(\frac{\text{AllManaRealm}}{C_{S} * 100} + 1 \right) \right\rceil
+{\textbf{A}} = \left\lfloor \log_{10}(\text{Evocation}) + 100 \right\rceil
+C_{S} = \text{SourceBaseCost} \times {\text{SourceGrowthCost}}^{\text{SourceCurrentAmount} + A}]],
+    Behavior = "Instant",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Draught Of Midas"] = {
+    ID = 75,
+    School = "Incantation",
+    Level = 79,
+    Cost = 6000,
+    Duration = 30,
+    Description = "While active, gaining Sources grants Mana Gems, based on current and maximum amount of Mana Gems this Exile.",
+    Math = [[{\textbf{GemsGained}} = (\text{MaxPossibleGemsExile} - \text{CurrentGems}) \times 0.2]],
+    Behavior = "Buff",
+    Classes = {
+        Alchemist = true
+    }
+}
+spells["Dark Draught Of Midas"] = {
+    ID = 113,
+    School = "Incantation",
+    Level = 79,
+    Cost = 6000,
+    Duration = 30,
+    Description = "While active, gaining Sources grants Mana Gems, based on Mana this exile.",
+    Math = [[{\textbf{Gems}} = \left\lfloor N \times 0.2 \right\rfloor
+{\textbf{N}} = \left\lfloor \log_{1.16}\left( \text{AllManaExile} \times \frac{4}{1.16^{\text{CurrentGems}} \times 375} \right) \right\rfloor]],
+    Behavior = "Buff",
+    Classes = {
+        Desolator = true
+    }
+}
+spells["Void Decompression"] = {
+    ID = 39,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 82,
+    Cost = 4000,
+    AdditionalCost = {
+        Type = "Dimensional Rift",
+        Amount = 200
+    },
+    Duration = 0,
+    Description = "Instantly earns Void Mana, based on times cast this Exile.",
+    Math = [[{\textbf{VoidMana}} = (\text{CastsThisExile}^5 \times 50 + 1) \times (\log_{10}(\text{Evocation}) \times 0.5 + 1) \times 1000]],
+    Behavior = "Instant",
+    Classes = {
+        Alchemist = true
+    }
+}
+spells["Crystallization"] = {
+    ID = 76,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 91,
+    Cost = 1000,
+    AdditionalCost = {
+        Type = "Spell Fountain",
+        Amount = 150
+    },
+    Duration = 0,
+    Description = "Instantly earns Spell Shards, based on times cast this Exile. Doesn't earn Spell Shards on itself.",
+    Math = [[{\textbf{SpellShards}} = \left(\text{CastsThisExile} + 100\right) \times \text{Evocation}^{0.1}]],
+    Behavior = "Instant",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Condensed Energy"] = {
+    ID = 77,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 104,
+    Cost = 5500,
+    AdditionalCost = {
+        Type = "The Nexus",
+        Amount = 500
+    },
+    Duration = 10,
+    Description = "Increases Character Ability Power, based on times cast this Exile.",
+    Math = [[{\textbf{Cap}} = (\text{CastsThisExile} + 1)^{0.45} \times \text{Incantation} \times 0.001 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Denaturation"] = {
+    ID = 78,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 108,
+    Cost = 4200,
+    AdditionalCost = {
+        Type = "Enchanted Tree",
+        Amount = 400
+    },
+    Duration = 10,
+    Description = "Increases Autoclick Profit, based on times cast this Exile.",
+    Math = [[{\textbf{AutoclickProfit}} = (\text{CastsThisExile} + 1)^{0.6} \times \text{Incantation} \times 0.01 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Artificial Muse"] = {
+    ID = 83,
+    School = "Summoning",
+    Level = 126,
+    Cost = 9000,
+    Duration = 120,
+    Description = "Autoclicks 10 times per second with character click stats. Increases Mysteries Power, based on crafting dust collected this Exile. Increases Evocation efficiency, based on spells cast this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 10 \times \text{AclickMultiplier}
+{\textbf{MystPower}} = ((\text{CDustCollectedExile} + 1) \times 0.1)^{0.4} \times \text{Summon}^{0.4} + 1
+{\textbf{Evocation}} = (\text{SpellsCastExile} + 1)^{0.225} \times \text{Summon}^{0.65} \times 0.0125 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Alchemist = true,
+        Desolator = true,
+        Tempest = true,
+        Dread = true
+    }
+}
+spells["Automatise"] = {
+    ID = 84,
+    School = "Summoning",
+    Level = 131,
+    Cost = 10000,
+    Duration = 120,
+    Description = "Autoclicks 10 times per second with character click stats. Increases profits, based on amount of Laboratories. Increases Void Mana Profit.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 10 \times \text{AclickMultiplier}
+{\textbf{Profit}} = \text{Laboratories} \times \text{Summon}^{0.7} \times 0.0125 + 1
+{\textbf{VoidManaProfit}} = \text{Summon}^{0.75} \times 1.251]],
+    Behavior = "Periodic",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Anima Synteta"] = {
+    ID = 79,
+    School = "Evocation",
+    Level = 142,
+    Cost = 50000,
+    Duration = 0,
+    Description = "Instantly earns Mana, based on production.",
+    Math = [[{\textbf{Mana}} = \text{Evocation} \times \text{Mana/s} \times 20]],
+    Behavior = "Instant",
+    Classes = {
+        Alchemist = true,
+        Desolator = true
+    }
+}
+spells["Furious Strike"] = {
+    ID = 86,
+    School = "Evocation",
+    Level = 88,
+    Charge = "Charges over time in Meditation stance, based on current charges. Gains charges from [[Temper The Steel]].",
+    Duration = 1,
+    Description = "Instantly earns Mana, based on charges. Consumes 10% of charges left on use. Can have up to 1e9 charges.",
+    Math = [[{\textbf{Mana}} = \left( \left\lfloor 0.1 \times (\text{Charges} - 1) \right\rfloor + 1 \right) \times \text{Evocation} \times \text{Mana/s} \times 100]],
+    Behavior = "Instant",
+    Classes = {
+        Ironsoul = true,
+        Oni = true
+    }
+}
+spells["Temper The Steel"] = {
+    ID = 87,
+    School = "Evocation",
+    Persistent = true,
+    Level = 96,
+    Charge = "Charges over while in Meditation stance, based on current charges.",
+    Duration = 10,
+    Description = "<b>Active:</b> Grants [[Furious Strike]] charges each second, based on times cast this Exile. While active, gains casts with each charge-based evocation spell cast and charges all such spells on panel, based on times cast this Exile. Can have up to 1e9 charges.<br><b>Passive:</b> Increases Character Ability Power.",
+    Math = [[{\textbf{FSPercentGiven}} = \text{CastsThisExile} \times 0.1\% + \log_{10}(\text{Evocation}) \times 1.5\% + 1\%
+{\textbf{Cap}} = \text{CastsThisRealm} \times 0.01 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+        Ironsoul = true,
+        Oni = true
+    }
+}
+spells["Force Of Will"] = {
+    ID = 91,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 101,
+    Charge = "Charges over time while in Meditation stance, based on current charges.",
+    Duration = 4,
+    Description = "Grants Spell Shards each second, based on times cast this Exile. Can have up to 1e9 charges.",
+    Math = [[{\textbf{SpellShards}} = (\text{CastsThisExile} + 1000) \times \text{Evocation}^{0.1}]],
+    Behavior = "Buff",
+    Classes = {
+        Ironsoul = true,
+        Oni = true
+    }
+}
+spells["Enhanced Strength"] = {
+    ID = 89,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 116,
+    Charge = "Charges over time while in Meditation stance, based on current charges.",
+    Duration = 60,
+    Description = "Increases profits, based on times cast this Exile.  Can have up to 1e9 charges.",
+    Math = [[{\textbf{Profit}} = ((\text{CastsThisExile} + 1) \times 0.005)^{1.2} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Ironsoul = true,
+        Oni = true
+    }
+}
+spells["Iron Blood"] = {
+    ID = 88,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 137,
+    Charge = "Charges over time while in Meditation stance, based on current charges.",
+    Duration = 90,
+    Description = "Increases Character Ability Power, based on times cast this Exile. Can have up to 1e9 charges.",
+    Math = [[{\textbf{Cap}} = ((\text{CastsThisExile} + 1) \times 0.005)^{1.18} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Ironsoul = true,
+        Oni = true
+    }
+}
+spells["Counterspell"] = {
+    ID = 94,
+    School = "Evocation",
+    Level = 90,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Instantly earns Mana, based on production and character level.",
+    Math = [[{\textbf{Mana}} = (\text{Charlvl} + 1) \times \text{Evocation} \times \text{Mana/s} \times 10]],
+    Behavior = "Instant",
+    Classes = {
+        Abolisher = true,
+        Archon = true
+    }
+}
+spells["Materialise Doppelganger"] = {
+    ID = 96,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 99,
+    Cost = 20000,
+    Duration = 60,
+    Description = "Autoclicks 4 times per second with character click stats. Each autoclick grants Pet XP, based on Character XP. Passive = Halts Doppelganger XP drain while on panel.",
+    Math = [[{\textbf{PetXp}} = ( \text{TotalCXP}^{K}\times(1+\text{Summon}^{1.5}) \times (1+\frac{1}{10}\text{CastsThisExile}^{0.5})+\text{FixedXp})\times \text{PetXpMultiplier}
+{\textbf{K}} = \frac{\text{Character Level}^2}{100000} + 0.05\text{ if Character Level}>100\text{ or }\ 0.15201\text{ otherwise}]],
+    Behavior = "Periodic",
+    Classes = {
+        Abolisher = true
+    }
+}
+spells["Syphon Power"] = {
+    ID = 99,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 111,
+    Cost = 12000,
+    Duration = 8,
+    Description = "Increases passive Spell Shard generation, based on times cast this Exile.",
+    Math = [[{\textbf{ShardGen}} = ((\text{CastsThisExile} + 1) \times 0.5)^{0.85} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Abolisher = true,
+        Archon = true
+    }
+}
+spells["Nullzone"] = {
+    ID = 97,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 132,
+    Cost = 50000,
+    Duration = 10,
+    Description = "Increases evocation efficiency, based on amount of Anti-magic Domes and times cast this Exile.",
+    Math = [[\begin{align}{\textbf{Evocation}} =& \left( {\big((\text{CastsThisExile} + 1) \times 5 \big)}^{0.9} \times \text{Incantation} + 1 \right) \\&\times \left( {\big((\text{AntiMagicDomes} + 1) \times 0.5 \big)}^{0.95} + 1 \right)\end{align}]],
+    Behavior = "Buff",
+    Classes = {
+        Abolisher = true,
+        Archon = true,
+        Defiance = true
+    }
+}
+spells["Fire with Fire"] = {
+    ID = 98,
+    School = "Incantation",
+    Level = 143,
+    Cost = 10000,
+    Duration = 20,
+    Description = "Increases profits, based on passive Spell Shard generation.",
+    Math = [[{\textbf{Profit}} = \left(\frac{\text{ShardGen} + 1}{1000}\right)^{1.4} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Abolisher = true,
+        Archon = true,
+        Tempest = true
+    }
+}
+spells["Debilitate"] = {
+    ID = 95,
+    School = "Evocation",
+    Level = 150,
+    Cost = 5000,
+    Duration = 0,
+    Description = "Instantly earns Mana, based on production and quality of equipped items.",
+    Math = [[\begin{aligned}{\textbf{Mana}} = &\left( \text{ItemQualitySum}^2 \times 0.25 + \text{ItemQualitySum} \times 25.2 + 20 \right) \\&\quad\times \text{Evocation} \times \text{Mana/s}\end{aligned}]],
+    Behavior = "Instant",
+    Classes = {
+        Abolisher = true,
+        Archon = true
+    }
+}
+spells["Silence"] = {
+    ID = 103,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 161,
+    Cost = 10000,
+    Duration = 60,
+    Description = "Increases Spell Shard costs, based on times cast this Exile. Isn't affected by incantation efficiency.",
+    Math = [[{\textbf{SpellCostIncrease}} = \text{CastsThisExile} \times 1.5 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Abolisher = true
+    }
+}
+spells["Summon Spider Swarm"] = {
+    ID = 105,
+    School = "Summoning",
+    Level = 151,
+    Cost = 6000,
+    Duration = 150,
+    Description = "Autoclicks 6 times per second with character Crit stats. Increases Crit Rating, based on autoclicks this Exile. Increases profits.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 6 \times \text{AclickMultiplier}
+{\textbf{CritRating}} = (\text{AclicksExile} + 1)^{0.75} \times \text{Summon}^{0.7} + 1
+{\textbf{Profit}} = \text{Summon}^{0.7} \times 1.5]],
+    Behavior = "Periodic",
+    Classes = {
+        Shaman = true
+    }
+}
+spells["Voidbolt"] = {
+    ID = 106,
+    School = "Evocation",
+    Level = 33,
+    Cost = 250,
+    Duration = 1,
+    Description = "Instantly earns 93 sec of production, granting Mana. Increases character ability power.",
+    Math = [[{\textbf{Mana}} = (\text{Char lvl} + 30) \times \text{Evocation} \times \text{Mana/s} \times 2 
+{\textbf{Cap}} = \left(\log_{10}\left(\text{Evocation}\right)\times 2 + 1\right)\times \text{Char lvl} \times 4 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Voidmancer = true,
+        Heretic = true,
+        Dread = true
+    }
+}
+spells["Voidforged Armaments"] = {
+    ID = 108,
+    School = "Incantation",
+    Level = 152,
+    Cost = 3000,
+    Duration = 30,
+    Description = "Increases max Hallowed Clicks temporarily, based on current Void Mana. Increases Click Profit. Increases Void Mana Profit, based on total Hallowed Clicks Performed.",
+    Math = [[{\textbf{TempMaxHC}} = \left\lfloor \log_{10}(\text{VoidMana} + 1) + \log_{10}(\text{Incantation}) \right\rfloor
+{\textbf{ClickProfit}} = \text{Incantation}^{0.5} \times 2.5
+{\textbf{VoidManaProfit}} = (\text{HCRealm} + 1)^{0.5} \times \text{Incantation}^{0.5} \times 0.023 + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Heretic = true,
+    }
+}
+spells["Possessed Blade"] = {
+    ID = 107,
+    School = "Incantation",
+    Level = 136,
+    Charge = "Charges over time, based on current charges.",
+    Duration = 30,
+    Description = "Increases Evocation Efficiency, based on Max Pet Level this Exile. Can have up to 1e9 charges.",
+    Math = [[{\textbf{Evocation}} = (\text{MaxPetlvl} + 1)^{0.8} \times \text{Incantation}^{1.3} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Oni = true,
+        Tempest = true
+    }
+}
+spells["Tempered Arcanomancy"] = {
+    ID = 109,
+    School = "Incantation",
+    Level = 171,
+    Cost = 100000,
+    Duration = 0,
+    Description = "Increases Character Ability Power until Exile. Increases Spell Shard costs while any incantation is active. Gains Spell Shards last.",
+    Math = [[{\textbf{Cap}} = \left(\frac{\text{CastsThisExile} + 1}{10000}\right)^{1.45} \times \text{Incantation}^{0.25} + 1
+{\textbf{SpellCostIncrease}} = \text{CastsThisExile} \times 0.05 + 1]],
+    Behavior = "Augment",
+    Priority = -1,
+    Classes = {
+        Archon = true
+    }
+}
+spells["Ritual Of Potency"] = {
+    ID = 111,
+    School = "Incantation",
+    Accumulated = false,
+    Level = 50,
+    Cost = 6000,
+    Duration = 10,
+    Description = "Increases profits, based on real amount of times this Spell was cast this Exile.",
+    Math = [[{\textbf{Profit}} = (\text{RealCastsThisExile} + 1)^{0.8} \times \text{Incantation} \times 0.5 + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Forsaken Glory"] = {
+    ID = 114,
+    School = "Incantation",
+    Level = 180,
+    Cost = 5000,
+    Duration = 30,
+    Description = "Increases Click Profit, based on spells cast this Exile. Increases Autoclick Profit, based on autoclicks this Exile.",
+    Math = [[{\textbf{AutoclickProfit}} = \left( \frac{\text{AclicksExile} + 1}{200\,000} \right)^{1.25} \times \text{Incantation}^{0.65} + 1
+{\textbf{ClickProfit}} = \left( \frac{\text{SpellsCastExile} + 1}{80\,000} \right)^{1.15} \times \text{Incantation}^{0.65} + 1]],
+    Behavior = "Buff",
+    Classes = {
+        Heretic = true
+    }
+}
+spells["Burn All That Burns"] = {
+    ID = 116,
+    School = "Evocation",
+    Level = 210,
+    Cost = 10000,
+    Duration = 0,
+    Description = "Spends Liquid Shadows.",
+    Math = [[{\textbf{SpendsLS}} = \frac{\text{LiquidShadow} \times \log_{10}(\text{Evocation})}{10\,000}]],
+    Behavior = "Instant",
+    Classes = {
+        Desolator = true
+    }
+}
+spells["Materialize Cosmic Conduit"] = {
+    ID = 118,
+    School = "Summoning",
+    Level = 240,
+    Cost = 1000000,
+    Duration = 1,
+    Description = "Increases passive Spell Shards generation until Exile.",
+    Math = [[{\textbf{ShardGen}} = \text{Summon}^{0.5} \times \frac{\text{CastsThisExile}}{5}]],
+    Behavior = "Augment",
+    Classes = {
+        Tempest = true
+    }
+}
+spells["Forge Empyreal Vassal"] = {
+    ID = 119,
+    School = "Incantation",
+    Level = 241,
+    Cost = 10000,
+    Duration = 1,
+    Description = "Increases Pet Ability Power until Exile. Isn't affected by Incantation Efficiency.",
+    Math = [[{\textbf{PAP}} = \left( \frac{\text{CastsThisExile} + 1}{50} \right)^{1.25} + 1]],
+    Behavior = "Augment",
+    Classes = {
+        Demiurge = true
+     }
+    }
+spells["Manifest Twisted Reality"] = {
+    ID = 120,
+    School = "Evocation",
+    Level = 243,
+    Cost = 200000,
+    Duration = 0,
+    Description = "Increases Character Ability Power and Idle bonus until Exile.",
+    Math = [[ {\textbf{CAP and Idle}} = (\text{CastsThisExile} + 1) ^ {0.75} \times 0.5 + 1]],
+    Behavior = "Augment",
+    Classes = {
+     Dread = true
+    }
+}
+ spells["Employ Celestial Countermeasures"] = {
+    ID = 121,
+    School = "Incantation",
+    Level = 242,
+    Cost = 100000,
+    Duration = 1,
+    Description = "Increases Evocation and summoning efficiency until Exile. Isn't affected by Incantation Efficiency.",
+    Math = [[{\textbf{Evocation}} = \text{CastsThisExile} \times\frac{1}{5}
+{\textbf{Summon}} = \left( \frac{\text{CastsThisExile} + 1}{1000} \right)^{.44} + 1]],
+    Behavior = "Augment",
+    Classes = {
+        Defiance = true
+     }
+}
+spells["Combustive Plague"] = {
+    ID = 200,
+    School = "Incantation",
+    Level = 103,
+    Cost = 2400,
+    Duration = 20,
+    Description = "Increases Evocation Efficency, based on character level. Every second may also grant a random amount of charge of  [[Corpse Explosion]].",
+    Math = [[{\textbf{Evocation}} = \text{Charlvl} \times \text{Incantation}^{1.2} \times 0.028 + 1
+{\textbf{CEChargesGained}} = \frac{2}{\text{CECharges} + 1}\times\text{random}(0.2, 1.8)]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Corpse Explosion"] = {
+    ID = 201,
+    School = "Evocation",
+    Level = 103,
+    Charge = "Charges from [[Combustive Plague]]",
+    Duration = 0,
+    Description = "Instantly earns 100 sec of production, granting Mana, based on charges. Consumes 10% of charges left on use.",
+    Math = [[{\textbf{Mana}} = \left( \left\lfloor 0.15 \times (\text{Charges} - 1) \right\rfloor + 1 \right) \times \text{Evocation}^ {2.5} \times 100]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Jas'Aham's Thunderous Swarm"] = {
+    ID = 202,
+    School = "Evocation",
+    Persistent = true,
+    Level = 91,
+    Cost = 1,
+    Duration = 0,
+    Description = "<b>Active:</b> Casts magical projectiles, granting Mana, based on times cast this Exile.<br><b>Passive:</b> On cast, increases casts this Exile of a random spell (excluding other Persistent spells) on panel.",
+    Math = [[{\textbf{ChargesUsed}} =  \left\lfloor(\text{Charges} - 1) * 0.1\right\rfloor + 1
+{\textbf{MMAmount}} = (\frac{\text{CastsThisExile}} {1000} + 1) ^ {1.3} + 100
+{\textbf{Mana}} = \text{Mana/s} \times \text{Evocation} \times \text{ChargesSpent} \times \text{MMAmount} \times 30
+{\textbf{Fakecasts}} =  ((\text{CastsThisRealm} \times 0.05) ^ {0.8} \times 0.01 + 1)]],
+    Behavior = "Instant",
+    Classes = {
+     }
+}
+spells["Nurturing Flame"] = {
+    ID = 203,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 66,
+    Cost = 666,
+    Duration = 6,
+    Description = "Every second earns 20 sec of production, granting Mana, based on times cast this Exile. Also grants pet experience with high Evocation Scaling.",
+    Math = [[{\textbf{Mana}} = \text{Mana/s} \times \text{Evocation} \times (\text{CastsThisExile} \times 0.1 + 1) \times 20
+{\textbf{PetXp}} = \left( \text{CharLvL} \times \left( \text{Evocation}^{1.5} + 1 \right) + \text{FixedXp} \right) \times \text{PetXpMultiplier}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Time Fork"] = {
+    ID = 208,
+    School = "Incantation",
+    Level = "Pet Level",
+    Cost = 10000,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 100
+    },
+    Duration = 0,
+    Description = "Resets Character Experience, Mana, Void Mana, and various Exile statistics. Increases profits until Exile.",
+    Math = [[{\textbf{Profit}} = (\text{CastsThisExile} \times 1.5) \times \left( \log_{10}(\text{Incantation}) \times 0.95 + 1 \right) \times 0.9 + 1]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Templar Legion"] = {
+    ID = 204,
+    School = "Summoning",
+    Level = 40,
+    Cost = 5000,
+    Duration = 90,
+    Description = "Autoclicks x times per second (Scales with Excess HC), with character Crit stats. Summon Efficiency is applied at a 50% higher rate",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon}^{1.5} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = \text{AclickMultiplier} \times (15 + \text{ExcessHC})]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Divine Reinforcements"] = {
+    ID = 205,
+    School = "Summoning",
+    Level = 60,
+    Cost = 4500,
+    Duration = 60,
+    Description = "Autoclicks 5 times per second, with character Crit stats. Increase Critical Profit",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 5 \times \text{AclickMultiplier}
+{\textbf{CritProfit}} = \text{Summon} \times 0.1 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Vessel Of Valor"] = {
+    ID = 207,
+    School = "Summoning",
+    Level = 90,
+    Cost = 5000,
+    Duration = 125,
+    Description = "Autoclicks 20 times per second, with x3 Click Profit and character Crit stats. Increases Crit Rating, based on character level.",
+    Math = [[{\textbf{Mana}} =\text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit} \times 3 
+{\textbf{ClicksPerSec}} = 20 \times \text{AclickMultiplier} 
+  {\textbf{CritRating}} = \text{Charlvl} \times \text{Summon} \times 0.35 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Beast Of Light"] = {
+    ID = 206,
+    School = "Summoning",
+    Level = 50,
+    Cost = 4250,
+    Duration = 75,
+    Description = "Autoclicks 16 times per second, with 10% Crit Chance and 900% Crit Profit. Increases passive shard gains. Increase Autoclick Profit.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 16 \times \text{AclickMultiplier}
+{\textbf{ShardGen}} = \log_{10}(\text{Summon}) \times 0.1 + 2  
+{\textbf{AutoclickProfit}} = \text{Summon} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Concoct Mana Potion"] = {
+    ID = 300,
+    School = "Evocation",
+    Level = 1,
+    Cost = 1000,
+    Duration = "Instant",
+    Description = "Charge Mana potion by 1 point with Power based on Void Profit, Character Ability Power, and amount of Spell casts this Exile ",
+    Math = [[{\textbf{ChargePower}} = \text{VMProfit} ^ {0.75} \times \text{CAP} ^ {0.75} \times (\text{SpellsCastExile} + 1) ^ {2}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Synthesize Void Potion"] = {
+    ID = 301,
+    School = "Evocation",
+    Level = 2,
+    Cost = 1000,
+    Duration = "Instant",
+    Description = "Charge Void Mana potion by 1 point with Power based on evocation efficiency, Mysteries Power and amount of Autoclicks performed this Exile",
+    Math = [[{\textbf{ChargePower}} = \text{Evocation} ^ {0.75} \times \text{MysteriesPower} \times (\text{AClicksExile} + 1) ^ {2}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Distill Empowerment Potion"] = {
+    ID = 302,
+    School = "Evocation",
+    Level = 3,
+    Cost = 1000,
+    Duration = "Instant",
+    Description = "Charge Empowerment potion by 1 point with Power based on Autoclick profit, Void mana per entity and Void Entities collected this exile",
+    Math = [[{\textbf{ChargePower}} = \text{AutoclickProfit} ^ {0.75} \times \text{Vpe} ^ {0.75} \times (\text{EntitiesCollectedExile} + 1) ^ {2}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Chaotic Equations"] = {
+    ID = 303,
+    School = "Incantation",
+    Level = 40,
+    Cost = 5000,
+    Duration = 2,
+    Description = "Increases Void Mana per Entity, based on total amount of times this spell was cast this Exile",
+    Math = [[{\textbf{Vpe}} = \text{Incantation} \times (\text{CastsThisExile} + 1) + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Potentia Synteta"] = {
+    ID = 304,
+    School = "Incantation",
+    Level = 50,
+    Cost = 6000,
+    Duration = 2,
+    Description = "Increases Evocation Efficiency, based on total amount of times this spell was cast this Exile",
+    Math = [[{\textbf{Evocation}} = \text{Incantation} \times (\text{CastsThisExile} + 1) + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Umbral Focus"] = {
+    ID = 209,
+    School = "Incantation",
+    Level = 87,
+    Cost = 10000,
+    Duration = 30,
+    Description = "Increases Evocation efficiency. Each Evocation cast while Umbral Focus is active increases its duration and exponentially increases Evocation bonus, but also exponentially increases every Spell cost. Shadow Spell - Uses Liquid Shadow to cast",
+    Math = [[{\textbf{Evocation}} = \text{Incantation} \times 1.2 ^ {\text{EvoCastsWhileActive}} + 1
+{\textbf{SpellCostIncrease}} = 1.25 ^ {\text{EvoCastsWhileActive}}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Shape Lesser Efreet"] = {
+    ID = 211,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 9,
+    Cost = 2000,
+    Duration = 10,
+    Description = "Autoclicks 5 times per second, with no critical chance. Increases Liquid Shadow gain, based on total amount of times this spell was cast this exile.",
+    Math = [[{\textbf{LSIncome}} = \text{Summon} ^ {0.1} \times (\text{CastsThisExile} + 1) + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Shape Greater Efreet"] = {
+    ID = 212,
+    School = "Summoning",
+    Level = 21,
+    Cost = 4000,
+    Duration = 30,
+    Description = "Autoclicks 10 times per second, with 5% critical chance and 750% critical profit. Increases Liquid Shadow gain, based on Shadow Clot spawn rate and lifetime.",
+    Math = [[{\textbf{LSIncome}} = (\text{Summon} ^ {0.1} \times (\text{ClotSpawnRate} + 1) + 1) \times (\text{ClotDuration} + 2)]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Shape Primal Efreet"] = {
+    ID = 213,
+    School = "Summoning",
+    Level = 59,
+    Cost = 9000,
+    Duration = 60,
+    Description = "Autoclicks 15 times per second, with 10% critical chance and 1200% critical profit. Increases Liquid Shadow gain, based on you current Idle bonus.",
+    Math = [[{\textbf{LSIncome}} = \text{Summon} ^ {0.1} \times (1.2 \times (\text{Idle} + 1)) ^ {0.1} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Consuming Flame"] = {
+    ID = 210,
+    School = "Summoning",
+    Level = 81,
+    Cost = 5400,
+    Duration = 120,
+    Description = "Autoclicks 5 times per second with Character click stats. Each autoclick grants Liquid Shadow.",
+    Math = [[{\textbf{LS}} = \text{Summon} ^ {0.1} \times 300 \times \text{LSIncomeBonus}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Permafrost"] = {
+    ID = 215,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 132,
+    Cost = 50000,
+    Duration = 10,
+    Description = "Increases Evocation efficiency by x, based on amount of Frozen Springs and total amount of times this spell was cast this Exile",
+    Math = [[\begin{aligned}{\textbf{Evocation}} = &\left(1 + (5 \times \text{CastsThisExile}) ^{0.9} \times \text{Incantation}\right)\\&\quad \times \left(1 + (0.005 \times \text{FrozenSprings}) ^ {0.95}\right)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Blizzard"] = {
+    ID = 216,
+    School = "Incantation",
+    Level = 143,
+    Cost = 10000,
+    Duration = 20,
+    Description = "Increases profits by x, based on Temperature Reduction",
+    Math = [[{\textbf{Profit}} = (1 + \text{CurrentTemp} \times \text{Incantation})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Still Arcana"] = {
+    ID = 217,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 161,
+    Cost = 10000,
+    Duration = 60,
+    Description = "Increases Spell Shard costs by x, based on Temperature Reduction and total amount of times this spell was cast this Exile. <i>Isn't affected by Incantation efficiency.</i>",
+    Math = [[{\textbf{SpellCostIncrease}} = (1 + 1.5 \times \text{CastsThisExile}) \times (1 + \text{CurrentTemp} ^ {0.5})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Heat Exchange"] = {
+    ID = 214,
+    School = "Evocation",
+    Accumulated = true,
+    Level = 91,
+    Cost = 10,
+    Duration = 0,
+    Description = "Instantly earns x Spell Shards, based on total amount of times this spell was cast this Exile. Increase Temperature Reduction by 0.1% of the difference between it's cap and current amount",
+    Math = [[{\textbf{Shards}} = 100 \times (1 + 0.01 \times \text{CastsThisExile}) \times \text{Evocation} ^ {0.1}
+{\textbf{TempReduction}} =  0.001 \times (\text{MaxTempReduction} - \text{CurrentTemp})]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Flash Freeze"] = {
+    ID = 122,
+    School = "Evocation",
+    Level = 61,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Instantly earns xt of production, granting x Mana. <i>Increased scale from Evocation efficiency.</i>",
+    Math = [[{\textbf{Mana}} = 2 * \text{Mana/s} \times \text{Evocation} ^ {1.2}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Shatter Magic"] = {
+    ID = 123,
+    School = "Evocation",
+    Level = 101,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Instantly earns xt of production, granting x Mana. All active spells skip 1 second of their remaining duration",
+    Math = [[{\textbf{Mana}} = 2 \times \text{Mana/s} \times \text{Evocation}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Infused Glacial Formations"] = {
+    ID = 124,
+    School = "Incantation",
+    Level = 155,
+    Cost = 100,
+    Duration = 20,
+    Description = "Increases Shards Pool capacity by x",
+    Math = [[{\textbf{ShardPoolCapacity}} = 1 + 1.2 \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Conjure Freezing Mist"] = {
+    ID = 125,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 151,
+    Cost = 10000,
+    Duration = 40,
+    Description = "Autoclicks x times per second, with Character critical stats. Increases Void profits by x, based on total amount of times this spell was cast this Exile. Activates Idle mode when cast. <i>This spell retains the Summoning efficiency used at the moment of cast for its entire duration.</i>",
+    Math = [[{\textbf{VoidManaProfit}} = 1 + 0.001 \times \text{CastsThisExile} \times \text{Summon}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Expel Soulstealer"] = {
+    ID = 126,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 129,
+    Cost = 20000,
+    Duration = 60,
+    Description = "Autoclicks x times per second with Character critical stats. Increases Pet experience gains by x, based on total amount of times this spell was cast this Exile. Increases Pet Ability power by x, based on total amount of times this spell was cast this Exile. Increases the maximum amount of charges your Spell Scrolls can have by xa",
+    Math = [[{\textbf{PetEXPMult}}=1+ (\text{CastsThisExile}/100000)^{0.4} \times (1 + \log_{10}(\text{Summon})/2)
+{\textbf{PAP}}=1+ (\text{CastsThisExile}/100000)^{0.5} \times (1 + \log_{10}(\text{Summon})/2)
+{\textbf{ChargeCap}}=\operatorname{round}\left(1 + \log_{10}(\text{Summon} + 1) \times 0.4\right)]],
+    Behavior = "Periodic",
+    Classes = {
+        Archon = true
+    }
+}
+spells["Summon Leeches"] = {
+    ID = 226,
+    School = "Summoning",
+    Level = 41,
+    Cost = 1000,
+    Duration = 30,
+    Description = "Clicks 20 times per second with Character click stats. Each click Earns 1 Blood.",
+    Math = "",
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Conjure Dark Swarm"] = {
+    ID = 223,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 62,
+    Cost = 5000,
+    Duration = 20,
+    Description = "Clicks 4 times per second with Character click stats. Increases spawn rate of Shadow Clots by x. Increases Liquid Shadow gain by x, based on the total amount of times this spell was cast this Exile.",
+    Math = [[{\textbf{Clot}}~{\textbf{Rate}}= 1.5 \times \left ( 1 + 0.9 \times log_{10} \left ( \text{Summon} \right ) \right )
+{\textbf{Shadow}}~{\textbf{Income}}= \left ( \frac{\text{Casts}}{1000} \right )^{1.05} \times \text{Summon}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Ancient Evil"] = {
+    ID = 232,
+    School = "Incantation",
+    Level = 71,
+    Charge = "Shadow Spell (2000)",
+    Duration = 9,
+    Description = "Increases profits by x, based on Offline bonus.",
+    Math = [[{\textbf{Profits}}= \text{Offline}/1000 \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Track The Prey"] = {
+    ID = 231,
+    School = "Incantation",
+    Level = 82,
+    Charge = "Shadow Spell (5000)",
+    Duration = 15,
+    Description = "Increases Hunting Grounds profit by x, based on amount of Hunting Grounds.",
+    Math = [[{\textbf{Profits}}= \text{Amount}^2 \times (\text{Incantation}^{1.25})/100000]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Shadowclad Armor"] = {
+    ID = 224,
+    School = "Evocation",
+    Level = 93,
+    Charge = "Shadow Spell (10000)",
+    Duration = 0,
+    Description = "Increases Character Ability Power. Effect lasts until Exile.",
+    Math = [[{\textbf{CAP}}= (\text{Casts}/10)^{1.01}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Feast"] = {
+    ID = 229,
+    School = "Evocation",
+    Level = 103,
+    Cost = 100,
+    AdditionalCost = {
+        Type = "Blood",
+        Amount = 1000
+    },
+    Duration = 0,
+    Description = "Instantly earns profits.",
+    Math = [[{\textbf{Profits}}= 120 \times \text{Profit per sec} \times \text{Evocation}^{1.05}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Infuse Minion"] = {
+    ID = 228,
+    School = "Evocation",
+    Level = 114,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Consumes 10% of Blood. Earns x Pet experience, based on Blood consumed.",
+    Math = [[{\textbf{Pexp}}= (\text{Blood}/\text{1e7} \times \text{Evocation}^{0.1} + \text{additive pexp}) \times \text{pexp mult}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Blood Moon"] = {
+    ID = 225,
+    School = "Incantation",
+    Level = 121,
+    Cost = 10000,
+    Duration = 20,
+    Description = "Increase Blood income by x, based on amount of Liquid Shadows.",
+    Math = [[{\textbf{Blood}}= (\text{Liquid Shadows}/10000)^{0.75} \times \text{Incantation}^{0.25}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Sanguine Rage"] = {
+    ID = 230,
+    School = "Incantation",
+    Level = 121,
+    Cost = 10000,
+    Duration = 20,
+    Description = "Increases profits by x, based on current amount of Blood.",
+    Math = [[{\textbf{Profits}}= \text{Blood} \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Summon Blood Hunters"] = {
+    ID = 227,
+    School = "Summoning",
+    Level = 133,
+    Cost = 20000,
+    Duration = 120,
+    Description = "Clicks 1 times per second with Character click stats. Each click Earns 50 Blood.",
+    Math = "",
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Vampiric Aberration"] = {
+    ID = 233,
+    School = "Incantation",
+    Level = 141,
+    Cost = 8000,
+    Duration = 20,
+    Description = "Increases Pet Ability Power by x, based on amount of collected Bats.",
+    Math = [[{\textbf{PAP}}= 0.01 \times \text{Bats}^{1.1} \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Void Lure (Enhanced)"] = {
+    ID = 400,
+    School = "Incantation",
+    Level = 5,
+    Cost = 800,
+    Duration = 400,
+    Description = "Increases the spawnrate of Void Entities. Increases Void Entities lifetime. Void Entities grant more Void Mana per Entity, based on spawnrate and lifetime.",
+    Math = [[{\textbf{SpawnRate}} = \text{Incantation} + 1
+{\textbf{Duration}} =  \text{Incantation} ^ {0.7} \times 3 + 1
+\begin{aligned}{\textbf{Vpe}} =& ((\log_{10}(\text{Incantation}) \times 0.5 + 1)\\&\quad \times (\text{SpawnRate} + 1) ^ {0.05} + 1) \times ((\text{Duration} + 1) ^ {0.05} + 1)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Ritual Of Power (Enhanced)"] = {
+    ID = 401,
+    School = "Incantation",
+    Accumulated = true,
+    Level = 48,
+    Cost = 4000,
+    Duration = 10,
+    Description = "Increases profits, based on amount of Evocation casts and total amount of times this Spell was cast this Exile.",
+    Math = [[\begin{aligned}{\textbf{Profit}} =& (\text{Incantation} \times (\text{CastsThisExile} + 1) ^ {0.55} + 1)\\&\quad \times ((\text{EvoCastsThisExile} + 1) ^ {0.1} + 1)\end{aligned}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Rules Of Nature (Enhanced)"] = {
+    ID = 402,
+    School = "Incantation",
+    Persistent = true,
+    Level = 85,
+    Charge = "Charges from Crit autoclicks.",
+    Duration = 10,
+    Description = "<b>Active:</b> Increases Autoclick Profit, based on times cast this Exile and Summon Efficiency.<br><b>Passive:</b> Increases bonus pet experience (additively).",
+    Math = [[{\textbf{ClickProfit}} = (\text{Incantation} \times \text{CastsThisExile} \times 0.2 + 1) \times ((\text{Summon} + 1) ^ {0.2} + 1)
+{\textbf{AdditivePetXp}} =  (\text{CastsThisRealm} + 1) ^ {1.1} \times 0.1 ]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Fire Ball (Enhanced)"] = {
+    ID = 403,
+    School = "Evocation",
+    Level = 16,
+    Cost = 100,
+    Duration = 2,
+    Description = "Instantly earns 66 sec of production, granting Mana. Autoclicks 26 times per second. Creates its own PetXp Multiiplier.",
+    Math = [[{\textbf{ManaCast}} = \text{Mana/s} \times \text{Evocation} \times 66
+{\textbf{ManaClick}} = \text{ClickProfit} \times \log_{10}(\text{Evocation} \times 0.1 + 1) \times \text{AutoclickProfit}
+{\textbf{PetXpMultiiplier}} =  \text{Evocation} ^ {0.05} * \log_{10}(\text{AClicksThisExile} + 1) ^ {2} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Corporeal Form"] = {
+    ID = 234,
+    School = "Summoning",
+    Level = 99,
+    Cost = 20000,
+    Duration = 60,
+    Description = "Gives XP to cruelty, treachery, or deception(depending on which is selected).",
+    Math = [[\begin{align}{\textbf{StanceXp}} &=& 1+&\left(1+\log_{10}\left(1+\frac{\text{AClicksExile}}{5\times 10^5}\right)\right) \times \left(1+\log_{10}\left(1+\frac{\text{SpellsCastExile}}{10^5}\right)\right) \\ &&&\times \left(1+\log_{10}\left(1+\frac{\text{EntitiesCollected}}{10^4}\right)\right) \times \big(1+\log_{10}(\text{Summon})\big) \\ &&&\times \text{max}\left(1, 1+\frac{\text{Charlvl}-100}{50}\right)\end{align}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Jas'Aham's Missile Storm (Enhanced)"] = {
+    ID = 404,
+    School = "Evocation",
+    Persistent = true,
+    Level = 91,
+    Cost = 3000,
+    Duration = 0,
+    Description = "<b>Active:</b> Casts magical projectiles, granting Mana, based on times cast this Exile. Spend 20% of its charges on cast.<br><b>Passive:</b> On cast, increases casts this Exile of a random spell (excluding other Persistent spells) on panel.",
+    Math = [[{\textbf{MMAmount}} = (\frac{\text{CastsThisExile}} {1000} + 1) ^ {1.35} + 100
+{\textbf{Mana}} = \text{Mana/s} \times \text{Evocation} \times \text{ChargesSpent} \times \text{MMAmount} \times 30
+{\textbf{Fakecasts}} =  \text{ChargesSpent} \times ((\text{CastsThisRealm} \times 0.05) ^ {0.8} \times 0.01 + 1)]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Nightfall (Enhanced)"] = {
+    ID = 405,
+    School = "Incantation",
+    Persistent = true,
+    Level = 93,
+    Charge = "Charges in Idle Mode with each spell cast and over time, based on time spent as Necromancer this Exile.",
+    Duration = 25,
+    Description = "<b>Active:</b> Increase profits, based on times cast this Exile and idle bonus.<br><b>Passive:</b> Increases Charging Speed.",
+    Math = [[\begin{aligned}{\textbf{Profit}} =& (\text{Incantation} \times (\text{CastsThisExile} + 1) ^ {0.9} * 0.8 + 1)\\&\quad \times ((\text{IdleBonusMulti} + 1) ^ {0.1} + 1)\end{aligned}
+{\textbf{ChargeSpeed}} = ((\text{CastsThisRealm} + 1) \times 0.002) ^ {0.5} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Primal Power (Enhanced)"] = {
+    ID = 406,
+    School = "Incantation",
+    Level = 63,
+    Cost = 5000,
+    Duration = 5,
+    Description = "Increases evocation efficiency, based on character level. Creates an AutoClick Multiplier.",
+    Math = [[{\textbf{Evocation}} = \text{Incantation} \times (\text{Charlvl} + 1) ^ {2} \times 0.5 + 1
+{\textbf{AClickMultiplier}} =  \text{Charlvl} \times 0.015 + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Serene Fervor"] = {
+    ID = 220,
+    School = "Evocation",
+    Persistent = true,
+    Level = 96,
+    Charge = "Charges over time while in Meditation stance.",
+    Duration = 0,
+    Description = "<b>Active:</b> Instantly grants Hallowed Clicks, based on times cast this Exile.<br><b>Passive:</b> Increases Character Ability Power.",
+    Math = [[{\textbf{HCGranted}} = (\log_{10}(\text{Evocation}) / 2 + 1) \times (\text{CastsThisExile} + 1) / 100 + 1
+{\textbf{CAP}} = 1 + (\text{CastsThisRealm} + 1)^{2} ]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Piety"] = {
+    ID = 219,
+    School = "Evocation",
+    Level = 61,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Increases max Hallowed Clicks until Exile.",
+    Math = [[{\textbf{MaxHC}} = \text{CastsThisExile}^{1.1}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Revelation"] = {
+    ID = 218,
+    School = "Summoning",
+    Level = 89,
+    Cost = 10000,
+    Duration = 60,
+    Description = "Each second consumes all Hallowed clicks and gives casts to each Incantation spell on the panel, separately calculated. depends on consumed Hallowed Clicks and spell duration",
+    Math = [[{\textbf{RealCasts}} = \text{HCConsumed} \times \frac{(\log_{10}(\text{Summon}) \times 0.8 + 1)} {\text{SpellDuration}} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Absolution"] = {
+    ID = 221,
+    School = "Incantation",
+    Level = 111,
+    Cost = 12000,
+    Duration = 45,
+    Description = "Consumes all Hallowed Clicks available. Increases AutoClick Profit, based on Hallowed Clicks consumed.",
+    Math = [[{\textbf{ClickProfit}} = 1 + \text{Incantation} \times \text{HCConsumed}^{2}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Ancestral Scriptures"] = {
+    ID = 222,
+    School = "Incantation",
+    Level = 151,
+    Cost = 20000,
+    Duration = 10,
+    Description = "Increases Crit  Rating, based on amount of Monuments",
+    Math = [[{\textbf{CritRating}} = \text{Incantation} \times \text{Monuments} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Conjure Void Elemental (Enhanced)"] = {
+    ID = 407,
+    School = "Summoning",
+    Accumulated = true,
+    Level = 146,
+    Cost = 2000,
+    Duration = 30,
+    Description = "Autoclicks 12 times per second with character Crit stats. Increases Void Mana Profit, based on max amount of Void Mana this Exile, and total casts in this Exile. Increases Profit, based on void mana per entity",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 12 \times \text{AclickMultiplier}
+{\textbf{VoidProfit}} = (\text{MaxVMExile} + 1)^{0.4} \times \text{Summon}^{0.65} \times (\text{CastsThisExile}+1)+ 1
+{\textbf{Profit}} = (1 + \text{Vpe}^{0.1} \times (1 + \log_{10}(\text{Summon})/2))]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Spirit Of Valor (Enhanced)"] = {
+    ID = 408,
+    School = "Incantation",
+    Level = 121,
+    Cost = 3000,
+    Duration = 125,
+    Description = "Autoclicks 30 times per second, with x3 Click Profit and character Crit stats. Increases Crit Rating, based on character level and Summon Efficiency.",
+    Math = [[{\textbf{Mana}} =\text{ClickProfit} \times \text{Incantation} \times \text{AutoclickProfit} \times 3
+{\textbf{ClicksPerSec}} = 30 \times \text{AclickMultiplier}
+{\textbf{CritRating}} = (1 +  1.5 \times \text{Charlvl} \times \text{Incantation}) \times (1 + \text{Summon}^{1.5})]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Void Fission Reactor"] = {
+    ID = 235,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 20,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 20,
+    Description = "Reactor. Generate Energy, based on Void Mana per Entity. <i>Isn't affected by Incantation efficiency.</i>",
+    Math = [[{\textbf{Energy}} = 10 \times (1 + \text{Vpe} ^ {0.3})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Spell-Catalyzed Reactor"] = {
+    ID = 236,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 20,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 20,
+    Description = "Reactor. Generate Energy, based on Incantation efficiency.",
+    Math = [[{\textbf{Energy}} = 10 \times (1 + \text{Incantation} ^ {1.2})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Shadow Combustion Engine"] = {
+    ID = 237,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 30,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 10,
+    Description = "Engine. Increases Evocation efficiency, based on current Energy.",
+    Math = [[{\textbf{Evocation}} = (\text{Energy} + 1) \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Time-Bending Motor"] = {
+    ID = 238,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 30,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 10,
+    Description = "Engine. Increases Profit, based on current Energy.",
+    Math = [[{\textbf{Profit}} = (\text{Energy} + 1) \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Animated Brain"] = {
+    ID = 239,
+    School = "Incantation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 100,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 5,
+    Description = "Processor. Increases Mysteries Power, based on total amount of times this Spell was cast this Exile.",
+    Math = [[{\textbf{MystPower}} = (\text{CastsThisExile} + 1) ^ {1.05} \times \text{Incantation} ^ {1.2} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Daemonic Circuitry"] = {
+    ID = 240,
+    School = "Incantation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 100,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 5,
+    Description = "Processor. Increases Pet Ability Power, based on total amount of times this Spell was cast this Exile.",
+    Math = [[{\textbf{PAP}} = (\text{CastsThisExile} + 1) ^ {1.05} \times \text{Incantation} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Chaotic Coating"] = {
+    ID = 241,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 80,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 60,
+    Description = "Hull. Increases Void Mana per Entity, based on current Parts.",
+    Math = [[{\textbf{Vpe}} = 1.25 \times \text{Incantation} ^ {0.5} \times \text{Parts} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Spell-Laden Alloys"] = {
+    ID = 242,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 80,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 6,
+    Description = "Hull. Increases Incantation duration divisor.",
+    Math = [[{\textbf{Divisor}} = 0.05 \times \text{Incantation} ^ {0.1} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Resonator Hull"] = {
+    ID = 243,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 80,
+    Charge = "Component - uses Parts to charge, ignores Charging Speed.",
+    Duration = 120,
+    Description = "Hull. Increases Void Profits, based on current Parts.",
+    Math = [[{\textbf{VoidManaProfit}} = 1.25 \times \text{Incantation} ^ {0.5} \times \text{Parts}+ 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Combat Functionality"] = {
+    ID = 244,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 40,
+    Cost = 5000,
+    Duration = 0,
+    Description = "Function. Instantly earns Mana, based on current Energy. <i>Increased scale from Incantation efficiency.</i>",
+    Math = [[{\textbf{Mana}} = 10 \times \text{Mana/s} \times \text{Energy} ^ {1.2} \times \text{Incantation}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Void Extractor"] = {
+    ID = 245,
+    School = "Evocation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 40,
+    Cost = 2000,
+    Duration = 0,
+    Description = "Function. Instantly earns Void Mana, based on current Energy.",
+    Math = [[{\textbf{VoidMana}} =\text{Vpe} ^ {0.8} \times \text{Energy} \times \text{Evocation} ^ {0.2}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Self-Replication"] = {
+    ID = 246,
+    School = "Evocation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 40,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Function. Instantly earns Parts, based on current Energy. <i>Isn't affected by Evocation efficiency.</i>",
+    Math = [[{\textbf{Parts}} = (\text{Energy} \times 0.001) ^ {0.2}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Tinker"] = {
+    ID = 247,
+    School = "Evocation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 1,
+    Cost = 100,
+    Duration = 0,
+    Description = "Instantly earns 1 Part. <i>Isn't affected by Evocation efficiency.</i>",
+    Math = "",
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["High-Tech Sorcery"] = {
+    ID = 248,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 120,
+    Cost = 10000,
+    Duration = 0,
+    Description = "Increases Profits. Effect lasts until Exile.",
+    Math = [[{\textbf{Profit}} = (\text{CastsThisExile} \times 0.001 + 1) ^ {1.05} + 1]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Nullzone (Enhanced)"] = {
+    ID = 409,
+    School = "Incantation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 132,
+    Cost = 50000,
+    Duration = 10,
+    Description = "Increases Evocation efficiency, based on amount of Anti-magic Domes and times cast this Exile. Increases Void Mana per Entity.",
+    Math = [[\begin{align}{\textbf{Evocation}} =& \left(1 + \text{Incantation}  \times {\big(5 \times (\text{CastsThisExile} + 1)\big)} \right) \\&\times \left(1 + {\big(1.5 \times (\text{AntiMagicDomes} + 1)\big)} \right)\end{align}
+{\textbf{Vpe}} = (1 + \text{Incantation} ^ {0.1})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Stabilize The Flow (Enhanced)"] = {
+    ID = 410,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 113,
+    Cost = 4600,
+    AdditionalCost = {
+        Type = "Compressed Time",
+        Amount = 25
+    },
+    Duration = 240,
+    Description = "Consumes current Time Distortion. Increases Profits, based on amount consumed. <i>Increased scale from Incantation efficiency.</i>",
+    Math = [[{\textbf{Profit}} = (1 + 10 \times \text{Incantation} ^ {1.2} \times \text{TDConsumed} ^ {(1 + \text{TDConsumed}/10)})]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Eagle's Splendor"] = {
+    ID = 250,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 41,
+    Charge = "Charges from [[Nurture]]",
+    Duration = 0,
+    Description = "Increases Evocation efficiency. Effect lasts until Exile.",
+    Math = [[{\textbf{Evocation}} = (\text{CastsThisExile} / 10000) ^ {1.05}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Eagle Eye"] = {
+    ID = 251,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 71,
+    Charge = "Charges from [[Nurture]]",
+    Duration = 0,
+    Description = "Increases Character Ability Power. Effect lasts until Exile.",
+    Math = [[{\textbf{CAP}} = (\text{CastsThisExile} / 1000) ^ {1.05}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Capacitor Scales"] = {
+    ID = 252,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 71,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Increases Accumulated Spells' starting casts amount. Effect lasts until Exile.",
+    Math = [[{\textbf{StartingCasts}} = (\text{CastsThisExile} / 1000) ^ {0.75}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Maul"] = {
+    ID = 253,
+    School = "Evocation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 1,
+    Cost = 100,
+    Duration = 0,
+    Description = "Instantly earns T seconds of production, granting M Mana, based on total amount of times this Spell was cast this Exile.",
+    Math = [[{\textbf{Mana}} = (1 + \text{CastsThisExile} / 100) \times \text{Evocation}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Primal Rage"] = {
+    ID = 254,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 152,
+    Cost = 500,
+    Duration = 0,
+    Description = "Instantly casts N Maul Spells at once, granting M Mana. The amount of casts depends on Incantation efficiency with reduced scale.",
+    Math = [[{\textbf{Mana}} = 10 \times \text{Maul} \times \text{Incantation} ^ {0.1}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Lycanthropy"] = {
+    ID = 255,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 50,
+    Cost = 200,
+    Duration = 10,
+    Description = "Increases Profits by P, based on Idle bonus.",
+    Math = [[{\textbf{Profit}} = (\text{Idle} / 1e5) \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Feast On Secrets"] = {
+    ID = 256,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 80,
+    Cost = 200,
+    Duration = 10,
+    Description = "Increases Profits by P, based on Mysteries Power.",
+    Math = [[{\textbf{Profit}} = (\text{MysteriesPower} ^ {1.2} / 1e3) \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Well-Fed"] = {
+    ID = 257,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 110,
+    Cost = 200,
+    Duration = 10,
+    Description = "Increases Profits by P, based on Satiety.",
+    Math = [[{\textbf{Profit}} = (\text{Satiety} ^ {0.53} /1e3) \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Invoke The Spirits"] = {
+    ID = 258,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 140,
+    Cost = 200,
+    Duration = 10,
+    Description = "Increases Profits by P, based on the amount of Totemic Circles.",
+    Math = [[{\textbf{Profit}} = (\text{Circles} ^ {1.1} /1e3) \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Procure Sustenance"] = {
+    ID = 259,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 70,
+    Cost = 100,
+    Duration = 0,
+    Description = "Generate N Satiety.",
+    Math = [[{\textbf{Satiety}} = 1 \times \text{Incantation} \times \text{SatietyIncome}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Ornithology"] = {
+    ID = 260,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 130,
+    Cost = 500,
+    Duration = 10,
+    Description = "Increase Satiety Income by P, based on Idle bonus.",
+    Math = [[{\textbf{SatietyIncome}} = \text{Incantation} \times 0.1 \times (\text{Idle} + 1) ^ {0.5} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Common Ancestry"] = {
+    ID = 261,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 170,
+    Cost = 500,
+    Duration = 10,
+    Description = "Increase Satiety Income by P, based on total amount of Void Mana in this Exile.",
+    Math = [[{\textbf{SatietyIncome}} = \text{Incantation} \times 0.01 \times (\text{TotalVMExile} + 1) ^ {0.5} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Treacherous Venom"] = {
+    ID = 262,
+    School = "Summoning",
+    Accumulated = false,
+    Persistent = false,
+    Level = 60,
+    Cost = 4000,
+    Duration = 60,
+    Description = "Autoclicks N times per second, based on Satiety.",
+    Math = [[{\textbf{ClicksPerSec}}= 1 + \log_{10}(\text{Satiety})]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Nurture"] = {
+    ID = 263,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 41,
+    Cost = 1000,
+    Duration = 0,
+    Description = "Grants 10% charge to all Charge-based spells on the panel.",
+    Math = "",
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Luring The Prey"] = {
+    ID = 264,
+    School = "Evocation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 100,
+    Cost = 600,
+    Duration = 10,
+    Description = "Increases Void Mana per Entity by P.",
+    Math = [[{\textbf{Vpe}} = 1.5 \times \text{Evocation} ^ {0.75}]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Snatch"] = {
+    ID = 265,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 100,
+    Cost = 100,
+    Duration = 0,
+    Description = "Instantly earns N Void Entities.",
+    Math = [[{\textbf{Entities}} = 1.2 \times \log_{10}(\text{Incantation})]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Uncover Fossils"] = {
+    ID = 266,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 90,
+    Cost = 5000,
+    Duration = 60,
+    Description = "Every 0.1 second increase the level of a random Mana Source by 1. At least 1 Mana Source of that type must be purchased. Buying cost mustn't exceed M Mana, based on Satiety.",
+    Math = [[{\textbf{ManaCost}} = \text{TotalManaRealm} \times (1 + \text{Satiety} ^ {0.1})]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Paleontology"] = {
+    ID = 267,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 140,
+    Cost = 600,
+    Duration = 10,
+    Description = "Increases Void Mana per Entity by P, based on Idle bonus.",
+    Math = [[{\textbf{Vpe}} = \text{Idle} ^ {0.8} \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Critical Mass (Enhanced)"] = {
+    ID = 411,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 61,
+    Charge = "Shadow Spell (1275)",
+    Duration = 10,
+    Description = "Increases Shadow Coals profit, based on amount of Shadow Coals.",
+    Math = [[{\textbf{SCoalsProduction}} = (\text{ShadowCoals} + 1)^{2.5} \times \frac{\text{Incantation}}{400} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Artificial Muse (Enhanced)"] = {
+    ID = 412,
+    School = "Summoning",
+    Accumulated = false,
+    Persistent = false,
+    Level = 126,
+    Cost = 5000,
+    Duration = 120,
+    Description = "Autoclicks 10 times per second with character click stats. Increases Mysteries Power, based on crafting dust collected this Exile. Increases Evocation efficiency, based on spells cast this Exile.",
+    Math = [[{\textbf{Mana}} = \text{ClickProfit} \times \text{Summon} \times \text{AutoclickProfit}
+{\textbf{ClicksPerSec}} = 10 \times \text{AclickMultiplier}
+{\textbf{MystPower}} = ((\text{CDustCollectedExile} + 1) \times 0.1)^{0.5} \times \text{Summon}^{0.5} + 1
+{\textbf{Evocation}} = (\text{SpellsCastExile} + 1)^{0.5} \times \text{Summon}^{0.8} \times 0.015 + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Temper The Steel (Enhanced)"] = {
+    ID = 413,
+    School = "Evocation",
+    Accumulated = false,
+    Persistent = true,
+    Level = 96,
+    Charge = "Charges over while in Meditation stance, based on current charges.",
+    Duration = 8,
+    Description = "<b>Active:</b> Grants [[Furious Strike]] charges each second, based on times cast this Exile. While active, gains casts with each charge-based evocation spell cast and charges all such spells on panel, based on times cast this Exile. Can have up to 1e9 charges.<br><b>Passive:</b> Increases Character Ability Power.",
+    Math = [[{\textbf{FSPercentGiven}} = \text{CastsThisExile} \times 0.1\% + \log_{10}(\text{Evocation}) \times 1.5\% + 1\%
+{\textbf{Cap}} = \frac{\text{CastsThisRealm} ^ {1.5}}{100} + 1]],
+    Behavior = "Periodic",
+    Classes = {
+    }
+}
+spells["Draw the Bowstring"] = {
+    ID = 270,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 1,
+    Charge = "Charges automatically.",
+    Duration = 1,
+    Description = "Give P progress of Tension, based on Evocation efficiency. Grants 1 charge to all Shot spells.",
+    Math = [[{\textbf{Tension}} = 10 \times \log_{10}(\text{Evocation})^{1.5}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Training Shot"] = {
+    ID = 271,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 20,
+    Charge = "Charges from [[Draw the Bowstring]]",
+    Duration = 1,
+    Description = "Perform N training Shots. The amount of Shots scales with Autoclicks performed by Spells.",
+    Math = [[{\textbf{NumberOfclicks}} = 3 \times \text{ClicksFromSpellsmultiplier}^{2}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Tracer Shot"] = {
+    ID = 272,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 60,
+    Charge = "Charges from [[Draw the Bowstring]]",
+    Duration = 1,
+    Description = "Perform N special Shots. Gives P progress of Accuracy bar, based on Summoning efficiency. The amount of Shots scales with Autoclicks performed by spells.",
+    Math = [[{\textbf{Accuracy}} = 10 \times \text{ClicksFromSpells} \times (1 + \text{Summon})]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Exposing Shot"] = {
+    ID = 273,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 90,
+    Charge = "Charges from [[Draw the Bowstring]]",
+    Duration = 1,
+    Description = "Perform N special Shots. Gives P progress of Vulnerability bar, based on Accuracy and Void Mana per Entity. The amount of Shots scales with Autoclicks performed by spells.",
+    Math = [[{\textbf{Vulnerability}} = \text{ClicksFromSpells} \times \text{Accuracy} \times (1 + \text{Vpe})]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Deadly Shot"] = {
+    ID = 274,
+    School = "Typeless",
+    Accumulated = false,
+    Persistent = false,
+    Level = 30,
+    Charge = "Charges from [[Draw the Bowstring]]",
+    Duration = 1,
+    Description = "Perform N Shots, with Profits increased by P based on Accuracy and Vulnerability bonuses. The amount of Shots scales with Autoclicks performed by Spells.",
+    Math = [[{\textbf{Profit}} = \text{ClicksFromSpells} \times \text{Accuracy} \times \text{Vulnerability}]],
+    Behavior = "Instant",
+    Classes = {
+    }
+}
+spells["Inner Sight"] = {
+    ID = 275,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 160,
+    Cost = 45000,
+    Duration = 10,
+    Description = "Increases Accuracy by P.",
+    Math = [[{\textbf{Accuracy}} = 1.2 \times \text{Incantation}^{0.5}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Silver Moonlight"] = {
+    ID = 276,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 110,
+    Cost = 25000,
+    Duration = 10,
+    Description = "Increases Character Ability Power by P, based on Passive Spell Shards generation.",
+    Math = [[{\textbf{CAP}} = (\text{PassiveMana/s}/10)^{1.5} \times \text{Incantation}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Aim at the Neck"] = {
+    ID = 277,
+    School = "Incantation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 140,
+    Cost = 40000,
+    Duration = 10,
+    Description = "Increases Critical Profits by P, based on total amount of times this Spell was cast this Exile. <i>Increased scale from Incantation efficiency.</i>",
+    Math = [[{\textbf{CritProfit}} = (\text{CastsThisExile}/2)^{1.05} \times \text{Incantation}^{1.5}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Blessed Arrow"] = {
+    ID = 278,
+    School = "Incantation",
+    Accumulated = true,
+    Persistent = false,
+    Level = 180,
+    Cost = 50000,
+    Duration = 10,
+    Description = "Increases Autoclick Profit by P, based on total amount of times this Spell was cast this Exile. <i>Increased scale from Incantation efficiency.</i>",
+    Math = [[{\textbf{AutoclickProfit}} = (\text{CastsThisExile}/2)^{1.05} \times \text{Incantation}^{1.5}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Mana Infusion"] = {
+    ID = 279,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 120,
+    Cost = 25000,
+    Duration = 10,
+    Description = "Increases Profits by P, based on the amount of Lunar Arcs. <i>Increased scale from Incantation efficiency.</i>",
+    Math = [[{\textbf{Profit}} = \text{LunarArcs}/2 \times \text{Incantation} ^{2}]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+spells["Mighty Bow"] = {
+    ID = 280,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 40,
+    Cost = 5000,
+    Duration = 1,
+    Description = "Increases Evocation efficiency. Effect lasts until Exile.",
+    Math = [[{\textbf{Evocation}} = (\text{CastsThisExile} \times 10)^{1.5} \times \text{Incantation}^{0.5}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Multishot"] = {
+    ID = 281,
+    School = "Summoning",
+    Accumulated = false,
+    Persistent = false,
+    Level = 80,
+    Cost = 5000,
+    Duration = 1,
+    Description = "Increases Autoclicks performed by Spells. Effect lasts until Exile. <i>Isn't affected by Summoning efficiency.</i>",
+    Math = [[{\textbf{ClicksFromSpellsmultiplier}} = (\text{CastsThisExile} /1e4)^{0.7}]],
+    Behavior = "Augment",
+    Classes = {
+    }
+}
+spells["Fetch"] = {
+    ID = 282,
+    School = "Incantation",
+    Accumulated = false,
+    Persistent = false,
+    Level = 100,
+    Cost = 10000,
+    Duration = 10,
+    Description = "Increases Pet Ability Power by P, based on Accuracy.",
+    Math = [[{\textbf{PAP}} = ((\text{Accuracy} +1) \times .001)^{0.5} \times \text{Incantation}^{0.25} + 1]],
+    Behavior = "Buff",
+    Classes = {
+    }
+}
+
+p.spells = spells
+return p
+--</nowiki>
+--[[Category:Lua]]

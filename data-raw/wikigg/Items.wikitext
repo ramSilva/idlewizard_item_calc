@@ -1,0 +1,595 @@
+{{TODO}}
+{{for|a full item list|Items/Full Item List}}
+{{for|a full filterable list of max level items|Items/Max Quality Item List}}
+
+After you have unlocked [[Paragon|Paragon level 9]] ''(1e80 [[Mysteries]])''; you will unlock the ability to collect [[Resources]] (also known as [[Crafting Dust]]) from the colored Resource Jars, which are located in the background along with the Void Traps. Click on the jars in order to collect their resources. These resources are used to craft and upgrade [[Items]].
+
+This page will explain the mechanics of dusts, items, and crafting. For an article on the general strategy of crafting and upgrading items, see the [[Item Guide]].
+
+==Item Quality==
+All items fall into various qualities:
+* '''<span style="color:#9D9D9D;">Common</span>'''
+* '''<span style="color:#1EFF00;">Uncommon</span>'''
+* '''<span style="color:#0070FF;">Rare</span>'''
+* '''<span style="color:#A335EE;">Epic</span>'''
+* '''<span style="color:#FF8000;">Legendary</span>'''
+* '''<span style="color:#00CCFF;">Unique</span>'''
+Most items have a starting quality from '''<span style="color:#9D9D9D;">Common</span>''' to '''<span style="color:#0070FF;">Rare</span>'''. Each upgrade increases its quality to the next tier, up to '''<span style="color:#FF8000;">Legendary</span>''', and further increases the bonuses it grants.
+
+'''<span style="color:#00CCFF;">Unique</span>''' items start out at maximum quality.
+
+When you equip an item, if you do not have the required [[Attributes]] to use the item, it will be red and its effects will not work.
+
+==Gathering==
+[[File:Skill jar.png|left]]
+Increases resource jars accumulation and Enchanting Dust passive speed collection by 3% per level.
+
+Gathering starts at level 0 and requires 1000 experience to level up, increasing by 20% per level. Each resource collected grants 0.05 gathering experience points.
+{{Clear}}
+Each of the 4 Resource Jar makes its own color of Resources:
+* [[File:Resource Red.png|x32px]] Red
+* [[File:Resource Green.png|x32px]] Green
+* [[File:Resource Blue.png|x32px]] Blue
+* [[File:Resource Gold.png|x32px]] Yellow
+
+The base '''average''' earn rate '''for each jar''' is:
+<br><math>0.022\times 0.6369\times 2.352\approx 0.033</math>
+<br>per second (<math>118.64</math> per hour, <math>2847.38</math> per day)
+
+All but Legacy and Trial Milestones modifiers are multiplicative. The actual accumulation uses a sine function that will average out to all jars gathering at the same rate, but at any give time it will appear that some jars are gathering faster than others. The initial maximum for each jar is 2000 (increased by up to 10000 through [[Trials|Trial perks]] and [[Paragon#Legacy|Legacy perks]], also increased by 2000 from {{ItemTooltip|item_name =Beholding Eye}}, and multiplied by 3 if you wear {{ItemTooltip|item_name =Light Of Eighth Star}}. Online, jars will earn variable amounts based on total time played; Offline they will be uniform.
+
+Resources may be traded at a 3:1 rate, by clicking on the scale icon. Use the up/down arrows to select which colors & how much to exchange. Ctrl-click:10, Shift-click:100, Alt-click 1000, and Ctrl+Shift click is all. (Thank you, darkhemming!)
+
+{| class="wikitable"
+!Resource modifier
+!Multiplier
+|-
+|Gathering level
+|1 + 0.03 × gathering level
+|-
+|[[Market|Renown 4 / 5 / 6]]
+|1.1 / 1.15 / 1.2
+|-
+|[[Weekly Bonus|Week of Artisanry]]
+|1.4
+|-
+|Offline
+|1~
+|-
+|[[Trials|Trials Milestones]]
+|up to 1.25
+|-
+|[[Memories|Reclaimed Methods]]
+|up to 2
+|}
+
+==Crafting==
+[[File:Skill crafting.png|left]]
+Increases progress earned when crafting or upgrading an item, and increases Enchanting Dust earned from Experiments. The bonus is 5% per level.
+
+Crafting starts at level 0, and requires 1000 experience to level up, increasing by 20% per level. Increasing your Crafting level increases the progress gained from each action by 5% per level (additively).
+{{Clear}}
+Items are crafted and upgraded incrementally by spending various amounts of the four crafting dusts. Each crafting or upgrade operation adds a predetermined amount of progress towards the next item or upgrade level. When crafting new items, progress beyond 100% will overflow into the next item. When upgrading items, if the progress of the next upgrade would reach 98% you get the rest for free and will fully upgrade the item.
+
+Additional crafting progress per action can be given by the following items: {{ItemTooltip|item_name=The Artificer's Crown}}, {{ItemTooltip|item_name=Artificer's Shoulderpads}} and {{ItemTooltip|item_name=Scales of Appraisal}}.
+
+The following table displays the rates at which crafting XP is gained, and the amounts of resources consumed by different actions. Note that the crafting bonus in the table is the effect from crafting levels multiplied by the crafting efficiency from items.
+
+{|class="wikitable" style="80%80%"
+!Crafting action
+!Cost
+!Progress earned
+!Experience earned
+|-
+|Invest in a new item
+|Random(200~400) of each dust
+|Random(20~50)% × (1 + crafting bonus)
+|1 per 1% progress
+|-
+|Invest in upgrading an item
+|(Specific to the item)
+|8% × (1 + crafting bonus)
+|10/1.65 per 1% progress (approx 6.06)
+|-
+|Invest in experiment
+|(Specific to the experiment)
+|Earn an experiment
+|cost/48
+|}
+
+Technical details: The implementation of the Random(20~50)% when crafting a new item is such that there is a 75% chance of 20% to 40%, while the remaining 25% of the time you'll get 50%, with an upper limit of 100% after including crafting bonus.
+
+Note: [[:Category:Research|Research]], [[:Category:Trophy|Trophy]], and some [[:Category:Mount|Mount]] items are not crafted nor upgraded using crafting dusts. Research items are gained and upgraded by completing the [[Trial of Innovation]]. Trophy items are gained and upgraded through [[Expeditions]]. See [[:Category:Mount|Mounts]] for specific conditions of obtaining individual Mounts.
+
+===Rune Progress (General)===
+Any action that spends [[Crafting Dust]], such as crafting items or performing experiments, gradually fills the progress bar at the bottom of the Crafting screen. When the bar is filled, it will reset while rewarding a free [[File:TrialKey.png|x32px]] [[Rune]] - allowing you to continuously refill the bar and earn free Runes as you keep spending Crafting Dust.
+
+The Crafting Dust cost of each action performed contributes to the progress bar as follows:
+
+<math>P = C \times 0.045 \div 1200,</math>
+
+where
+* <math>P</math> is the progress you will earn
+* <math>C</math> is the [[Crafting Dust]] cost of said action
+
+==Experiments & Enchanting==
+===Enchanting===
+<div><small>''See also: [[Enchantments]]''</small></div>
+After unlocking [[Paragon]] level 17 ''(1e200 [[Mysteries]])'', Legendary and Unique items can be Enchanted, to give them an additional bonus. Initially, each item can be enchanted up to 20 times, but this limit can be increased increased 25 levels by use of [[Realm Upgrades#Heritage|Heritage]] upgrades, and a further 10 levels by [[Realm Upgrades#Paramnesics|Paramnesics]] upgrades, giving a maximum enchant level of 55. Enchantment level bonuses stack multiplicatively.
+
+[[File:Powder v2 ench.png|x32px]] Enchanting Dust is earned passively over time, at a base rate of ~836.35 Enchanting dust per 24 hours (one every 1 minute, 43 seconds). Its collection rate is not affected by [[Crafting Dust]] collection modifiers, but has its own modifiers that increase it. Enchanting Dust can also be earned from [[Trials]], investing in Experiments (see below), or as a rare drop from [[Collectibles|Bats]].
+
+Item Enchantments start at level 0, and initially cost 100 Enchanting dust to level up, increased by 50% per level.
+
+There are certain effects which can give 'Bonus Enchantment Levels', which give a number of free levels (up to 5) to all Enchantments on all items equipped. (However, in order for these bonus levels to be applied, the items must have at least 1 level of Enchantment.)
+
+If you have an enchanted item you don't want anymore, you can spend a [[Nullifier Core]] (That you can buy in the [[Market]], occasionally obtain after a [[Trials|Trial ]] or from a Nullifiers [[Items#Experiments|Experiment]]) to get back all the enchanting dust spent on the item, while losing all the enchant levels on it.
+
+You can also disenchant all of your items at once by spending 10 [[Nullifier Core|Nullifier Cores]].
+
+All Enchanting Dust, both spent and stockpiled, is lost upon changing [[Realm]]s. However, the lost Enchanting Dust is converted into [[Memories]].
+
+===Experiments===
+Also at [[Paragon]] level 17, '''Experiments''' are unlocked. Experiments are a way to spend Crafting Dusts, once all items in the game have been crafted. Experiments are primarily a source of Enchanting Dust, however there are several other useful resources or rewards they can give.
+
+Experiment reward tables and costs:
+
+====Enchanting Dust====
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|
+|400
+|
+|-
+|Maximum
+|
+|
+|530
+|
+|}
+{| class="wikitable"
+!Occurrence
+!Minimum EDust
+!Maximum EDust
+|-
+|10%
+|280
+|350
+|-
+|20%
+|140
+|210
+|-
+|70%
+|70
+|105
+|}
+
+====Catalyst Shards====
+<div><small>''See also: [[Catalysts]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|1000
+|
+|
+|-
+|Maximum
+|
+|1600
+|
+|
+|}
+{| class="wikitable"
+!Catalyst
+!Occurrence
+|-
+| [[File:BlueCatalystShard.png|x32px]] Blue
+|12.5%
+|-
+| [[File:RedCatalystShard.png|x32px]] Red
+|25%
+|-
+| [[File:GreenCatalystShard.png|x32px]] Green
+|62.5%
+|}
+
+====Random 2hr Buff====
+<div><small>''See also: [[Buffs]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|
+|
+|600
+|-
+|Maximum
+|
+|
+|
+|1100
+|}
+{| class="wikitable"
+!Buff Type
+!Occurrence
+|-
+| [[File:Buff Production.png|x32px]] Profit
+|20%
+|-
+| [[File:Buff Attributes.png|x32px]] Attribute
+|20%
+|-
+| [[File:Buff Crit.png|x32px]] Click
+|20%
+|-
+| [[File:Buff Void.png|x32px]] Void Void
+|20%
+|-
+| [[File:Buff Shards.png|x32px]] Spellshard
+|20%
+|}
+
+You will always get a buff you do not currently have running before time is added to an existing one.
+
+====Rune progress====
+<div><small>''See also: [[Rune]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|1000
+|
+|
+|
+|-
+|Maximum
+|3000
+|
+|
+|
+|}
+
+Only when performing this specific experiment, the [[#Rune Progress (General)|Rune Progress]] formula becomes:
+
+<math>P = \left(C \times 0.045 \div 1200\right) \times E \times 2,</math>
+
+where
+* <math>P</math> is the progress you will earn
+* <math>C</math> is the [[Crafting Dust]] cost of said action
+* <math>E</math> is your Experiment Efficiency
+
+Experiment efficency is increased by {{ItemTooltip|Artificer's Shoulderpads}}, {{ItemTooltip|The Artificer's Crown}}, and {{ItemTooltip|Scales of Appraisal}}
+
+====Nullifiers====
+<div><small>''See also: [[Nullifier Core]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|
+|
+|600
+|-
+|Maximum
+|
+|
+|
+|1200
+|}
+{| class="wikitable"
+!Occurrence
+!Amount
+|-
+|10%
+|<math>\lfloor 5 \times \text{experiment efficency}\rfloor</math>
+|-
+|30%
+|<math>\lfloor 3 \times \text{experiment efficency}\rfloor</math>
+|-
+|60%
+|<math>\lfloor 2 \times \text{experiment efficency}\rfloor</math>
+|}
+
+====Location Keys====
+<div><small>''See also: [[Key-Locked Expeditions]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|800
+|
+|
+|-
+|Maximum
+|
+|1200
+|
+|
+|}
+
+Grants between 5 and 25 keys (inclusive) of the selected type; except Unstable Keys (10 to 52).
+{| class="wikitable"
+! Key Type !! Chance
+|-
+| [[File:LocationKey Fragment.png|x32px]] Unstable || 42%
+|-
+| [[File:LocationKey Fragment.png|x32px]] Unstable x2 || 12%
+|-
+| [[File:LocationKey Fragment.png|x32px]] Unstable x3 || 6%
+|-
+| [[File:LocationKey Void 1.png|x32px]] Shattered || 15%
+|-
+| [[File:LocationKey Void 2.png|x32px]] Chaos || 12%
+|-
+| [[File:LocationKey Exo 1.png|x32px]] Cathedral || 8%
+|-
+| [[File:LocationKey Exo 2.png|x32px]] Altar || 5%
+|-
+|}
+
+====Memetic Splinter====
+<div><small>''See also: [[Memetics]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|
+|
+|
+|600
+|-
+|Maximum
+|
+|
+|
+|900
+|}
+{| class="wikitable"
+!Occurrence
+!Minimum Splinters
+!Maximum Splinters
+|-
+|10%
+|100
+|200
+|-
+|20%
+|60
+|90
+|-
+|70%
+|15
+|35
+|}
+
+====Proficiency====
+<div><small>''See also: [[Proficiency]]''</small></div>
+{| class="wikitable"
+! Cost
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Red.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Green.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Blue.png|x32px]]
+! style="text-align:center; padding:0; min-width:50px;" | [[File:Resource Gold.png|x32px]]
+|-
+|Minimum
+|2000
+|
+|
+|
+|-
+|Maximum
+|3000
+|
+|
+|
+|}
+{| class="wikitable"
+!Occurrence
+!Minimum Proficiency shards
+!Maximum Proficiency shards
+|-
+|10%
+|<math>250 \times \text{experiment efficency}</math>
+|<math>350 \times \text{experiment efficency}</math>
+|-
+|30%
+|<math>150 \times \text{experiment efficency}</math>
+|<math>250 \times \text{experiment efficency}</math>
+|-
+|60%
+|<math>50 \times \text{experiment efficency}</math>
+|<math>150 \times \text{experiment efficency}</math>
+|}
+
+====Optimizing edust experiment====
+You should aim to max out the Timeless Fame and Phantom Reputation [[Realm Upgrades]] and do at least 1 [[Trials|Trial]] for the 160 milestone, ideally wait for 250 or 330 (can do multiple edust phases, a smaller at the start of the realm).
+
+Restored Rituals + Timeless Frame + Phantom Reputation + Forgotten Might + Foreseeable Results + Fundamental Distortions + Overblown Aspirations if you have edust trial perks higher than 400. Forbidden Might lvl 1 if getting 1e10+ edust.
+
+Equip {{ItemTooltip|item_name=Enchanting Membrane}}, {{ItemTooltip|item_name=Artificer's Shoulderpads}}, {{ItemTooltip|item_name=The Artificer's Crown}}, {{ItemTooltip|item_name=Scales of Appraisal}}, {{ItemTooltip|item_name=Abnormal Voidmass}}, {{ItemTooltip|item_name=Fey Glider}} and {{ItemTooltip|item_name=Resonator Ring}}.
+
+==Item List==
+There are currently 203 total items in 20 Slots in the following pattern. This does not account for [[Mythic Forge|Mythic]] items.
+{| class="wikitable"
+!Slot
+!Number of Items
+!<span style="color:#00CCFF">Uniques</span> in pool
+![[Mythic Forge|Mythics]]
+!Unlocks at [[Paragon]]
+![[Proficiency]] enabled
+|-
+|[[:Category:Head|Head]]
+|10
+|1
+|2
+|9
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Chest|Chest]]
+|10
+|0
+|2
+|9
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Hands|Hands]]
+|10
+|1
+|2
+|9
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Feet|Feet]]
+|10
+|1
+|2
+|9
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Research|Research]]
+|10
+|0
+|0
+|9<ref group="item-list" name="item-list-research"/>
+|<span style="color:red">No</span>
+|-
+|[[:Category:Trophy|Trophy]] <small>(x2)</small>
+|20
+|0
+|0
+|9<ref group="item-list" name="item-list-trophy"/>
+|<span style="color:red">No</span>
+|-
+|[[:Category:Shoulder|Shoulder]]
+|10
+|0
+|2
+|11
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Waist|Waist]]
+|10
+|2
+|2
+|13
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Finger|Finger]] <small>(x2)</small>
+|16
+|2
+|0
+|14
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Neck|Neck]]
+|10
+|2
+|2
+|16
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Back|Back]]
+|10
+|2
+|2
+|18
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Wrist|Wrist]]
+|10
+|0
+|2
+|19
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Weapon|Weapon]]
+|17
+|2
+|0
+|20
+|<span style="color:red">No</span>
+|-
+|[[:Category:Offhand|Offhand]]
+|12
+|2
+|0
+|23
+|<span style="color:red">No</span>
+|-
+|[[:Category:Legs|Legs]]
+|10
+|1
+|2
+|25
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Mount|Mount]]
+|10
+|7
+|0
+|26
+|<span style="color:red">No</span>
+|-
+|[[:Category:Accessory|Accessory]]
+|10
+|0
+|0
+|28
+|<span style="color:green">Yes</span>
+|-
+|[[:Category:Phylactery|Phylactery]]
+|8
+|0
+|0
+|29
+|<span style="color:red">No</span>
+|}
+
+Notes:
+<references group="item-list">
+<ref name="item-list-research">Slot appears when at least 1 Research item earned from [[Trial of Innovation]].</ref>
+<ref name="item-list-trophy">Slot appears when at least 1 Trophy item earned from [[Expeditions]].</ref>
+</references>
+
+===Item ID===
+''See [[/Item ID/]].''
+
+{{SiteNav}}
+[[Category:Mechanics]]

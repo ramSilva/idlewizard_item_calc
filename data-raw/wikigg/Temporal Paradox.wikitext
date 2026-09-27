@@ -1,0 +1,41 @@
+{{TODO}}
+{{PetInfobox
+|title = Temporal Paradox
+|selection=
+*{{ClassTooltip|Chronomancer}} only
+*[[Quasi-Realms|Quasi-Realm]]: [[Quasi-Realms#In Over Your Head|In Over Your Head]]
+|description=''(Quasi-Realm unique pet for Chronomancer)''}}
+
+==Description==
+This pet is exclusive and is the only one available to {{ClassTooltip|Chronomancer}} during the [[Quasi-Realms#In Over Your Head|In Over Your Head Quasi-Realm]].
+
+It increases [[Compressed Time]] per tick, and periodically yields Mana.
+
+Cannot gain experience.
+
+==Pet Ability==
+
+Increases [[Compressed Time]] per tick by
+
+<math>CT = \left(1 + \frac{\log_{10}(P)}{3}\right)\cdot\left(1 + \frac{L-1}{10}\right).</math>
+
+Yields <math>A</math> mana per activation, with
+
+<math> A = 100 \cdot M \cdot P^2 \cdot \left(1 + \frac{(L - 1) ^ 4}{ 100}\right),</math>
+
+where
+* <math>CT = \text{Increase to Compressed Time gain per tick},</math>
+* <math>P = \text{Pet Ability Power},</math> 
+* <math>L = \text{Pet Level},</math>
+* <math>A = \text{Mana granted per pet ability activation},</math>
+* <math>M = \text{Mana per second}.</math>
+
+The ability activates once per second. Can be reduced by {{ItemTooltip|Whiplash}},{{ItemTooltip|Collar Of Obedience}} and empathy perks.
+
+==Experience Gain==
+This pet, unlike others, ''cannot'' earn experience.
+
+It gains 1 level for every cast of {{SpellTooltip|Time Fork}} while {{SpellTooltip|Generate Paradox}} is active.
+
+{{SiteNav}}
+[[Category:Pets]]

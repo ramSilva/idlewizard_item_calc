@@ -1,0 +1,26 @@
+{{ItemPage|{{PAGENAME}}}}
+
+== Description ==
+Grants a passive ability which makes {{SpellTooltip|spell_name=Furious Strike}} grant Spellcasts for incantation spells.
+
+== Details ==
+Every {{SpellTooltip|spell_name=Furious Strike}} cast grants:
+<br><math>B^R + 1</math>
+spellcasts for each incantation spell on the panel.
+<br>In Defense Stance:
+<br><math>B^R \times 3 + 3</math>
+
+where :
+* <math>B = \text{Current Amount of Monuments}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4} \times 0.4</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

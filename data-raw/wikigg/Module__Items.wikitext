@@ -1,0 +1,598 @@
+--<nowiki>
+local p = {}
+
+local data = require("Module:Data/Items")
+local all_items = data.items
+local all_sets = data.sets
+local qualities = data.qualities
+local mythicDescription = data.mythicDescription
+local mythicEnchant = data.mythicEnchant
+local colors = {'#9D9D9D', '#1EFF00', '#0070FF', '#A335EE', '#FF8000', '#00CCFF','#F60E53'}
+
+local link_patterns = {}
+link_patterns['Criticals'] = {'[Cc]rit [Rr]ating', '[Cc]ritical [Rr]ating'}
+link_patterns['Experience'] = {'[Ee]xperience', '[Ll]evel'}
+link_patterns['Idle_Mode'] = {'[Ii]dle [Bb]onus'}
+link_patterns['Mysteries'] = {'[Mm]ysteries'}
+link_patterns['Void_Entities'] = {'[Vv]oid [Mm]ana', '[Vv]oid [Ee]ntities'}
+link_patterns['Chronomancer'] = {'[Cc]ompressed [Tt]ime'}
+link_patterns['Temporal_Distortion'] = {'[Tt]ime [Dd]istortion'}
+link_patterns[':Category:Evocation_Spells'] = {'[Ee]vocations?'}
+link_patterns[':Category:Incantation_Spells'] = {'[Ii]ncantations?'}
+link_patterns[':Category:Summoning_Spells'] = {'[Ss]ummon', '[Ss]ummoning'}
+link_patterns[':Category:Accumulated_Spells'] = {'[Aa]ccumulated [Ss]pells?'}
+
+---------------------------------------- Item Count
+function p.ItemCount()
+    local c = 0
+    for i in pairs(all_items) do
+        c = c + 1
+    end
+    return c
+end
+
+---------------------------------------- Set Info
+local set_tooltip = "<span class=\"advanced-tooltip\" style=\"background:#1a1f21; border-bottom:1px dotted;text-decoration:none\">%s<div class=\"tooltip-contents\">%s</div></span>"
+
+function SetInfo(set)
+    if set == nil then
+        return "-"
+    end
+    local set_info = ""
+    for slot, item in pairs(all_sets[set].Items) do
+        set_info = set_info .. "[[File:Item " .. item .. ".png|32px]] " .. item .. " (" .. slot:gsub("2$", "") .. ")<br>"
+    end
+    for i, tier in ipairs(all_sets[set].Tiers) do
+        set_info = set_info .. "<br>" .. i + 1 .. " - " .. tier.Desc
+    end
+    return set_tooltip:format(set, set_info)
+end
+
+---------------------------------------- Requirements
+function Requirements(item)
+    if next(item.Requirements) == nil then
+        return "None"
+    end
+    local requirements = {}
+    for attribute, value in pairs(item.Requirements) do
+        table.insert(requirements, value .. " " .. attribute)
+    end
+    return table.concat(requirements, " ")
+end
+-- New function made for use with tooltip,will refactor later
+function RequirementsList(item)
+    local reqs = {}
+
+    if next(item.Requirements) == nil then
+        return reqs -- return empty table
+    end
+
+    for attribute, value in pairs(item.Requirements) do
+    	
+    	local abbr = string.sub(attribute, 1, 3):upper()
+
+			if abbr == "SPE" then
+			    abbr = "SPC"
+			end
+
+		table.insert(reqs, value .. " " .. abbr)
+    	
+    end
+
+    return reqs
+end
+
+---------------------------------------- Description
+function Description(tier)
+    local desc = tier.Desc
+    for link, patterns in pairs(link_patterns) do
+        for _, pat in ipairs(patterns) do
+            local a, b = string.find(desc, pat)
+            if a then
+                desc = desc:sub(1, a - 1) .. '[[' .. link .. '|' .. desc:sub(a, b) .. ']]' .. desc:sub(b + 1, string.len(desc))
+                break
+            end
+        end
+    end
+    return desc
+end
+
+------------------------------------ Tooltip Decription
+function Descriptiontt(desc)
+    if not desc or desc:match("^%s*$") then 
+        return desc or ""
+    end
+
+    -- Skip parsing and return desc (original full text) if there's <sup> or formula-like characters (* or /)
+    if desc:match("<sup>") or desc:match("[%*/]") then
+        return desc
+    end
+
+    local stats = {}
+    local stat_count = 0
+
+    -- Count stat-like patterns: (Name) + (number/percentage), if it finds a pattern it detects stat count as +1
+    for _ in desc:gmatch("([A-Za-z][%a%s'%-%(%)]+)%s+([%+%-]?[%d%.%%%(%)]+)") do
+        stat_count = stat_count + 1
+    end
+
+    -- If it counts 0 or 1 stat count, return original desc text, usually this fits the description for weapons where we want the full text. 
+    if stat_count < 2 then
+        return desc
+    end
+
+    -- Parse and capitalize stats
+    for part in desc:gmatch("[^,]+") do
+        part = part:match("^%s*(.-)%s*$") -- trim spaces
+
+        for stat, value in part:gmatch("([A-Za-z][%a%s'%-%(%)]+)%s+([%+%-]?[%d%.%%%(%)]+)") do
+            stat = stat:gsub("(%a)([%w_']*)", function(first, rest)
+                return first:upper() .. rest:lower()
+            end)
+            table.insert(stats, stat .. " " .. value)
+        end
+    end
+
+    if #stats == 0 then
+        return desc
+    end
+
+    return stats
+end
+
+
+---------------------------------------- Tooltip
+function p.Tooltip(frame)
+    local item_name = frame.args[1]
+    local item = all_items[item_name]
+    
+    if item == nil then
+        mw.log(item_name)
+        return "''Item tooltip data not found for \"" .. item_name .. "\". Check the parameter ''"
+    end
+    
+    -- Root tooltip container
+    -- check if the quality is to be unique or mythic for custom.css
+    local qualityClass = ""
+	    if qualities[item.Quality] == "Mythic" then
+	    	qualityClass = "mythic"
+		elseif qualities[item.Quality] == "Unique" then
+		    qualityClass = "unique"
+		end
+    local root = mw.html.create('div')
+        :addClass('tooltip item')
+        :addClass(qualityClass)    
+        
+    local bar = root:tag('div'):addClass('tt-bar')
+    local leftbar = bar:tag('div'):addClass('tt-bar-left')
+    local rightbar = bar:tag('div'):addClass('tt-bar-right')
+	    
+		leftbar:tag('span')
+		:wikitext(item.Slot)
+		
+		if item.Set then
+			leftbar:tag('span')
+			:wikitext(item.Set)
+		end
+		
+	local item_reqs = RequirementsList(item)
+		for _, req in ipairs(item_reqs) do
+		    rightbar:tag('span')
+		       :addClass('req')
+		       :wikitext(req)
+		end
+    
+    local item_acquisition = item.Acquisition
+        if (item_acquisition == "")  or (item_acquisition == nil) then
+            item_acquisition = 'Craftable'
+        end
+        rightbar:tag('span')
+            :addClass('req')
+            :wikitext(item_acquisition)
+            
+	local contentWrapper = root:tag('div'):addClass('tt-content-wrapper')	
+	local content = contentWrapper:tag('div'):addClass('tt-content')
+
+	    -- Title 
+	    local title = content:tag('div'):addClass('tt-title')
+	        :wikitext(item_name)
+	        
+		
+		-- Icon
+	   contentWrapper:tag('div')
+	        :addClass('tt-icon')
+	        :wikitext(string.format('[[File:Item_%s.png|64x64px]]', item_name))
+    
+   
+
+        local effect = content:tag('div')
+            :addClass('tt-effect')
+            
+        local label = effect:tag('div'):addClass('tt-label')
+        label:tag('div')
+            :wikitext("Max Effect")
+            
+            
+         -- Max Effect
+	    local max_tier = item.Tiers[#item.Tiers]
+	    local max_desc = max_tier and max_tier.Desc or "None"
+	  
+	     -- Ensure desc_lines is always a table (single entries will not be tables)
+		local desc_lines = Descriptiontt(max_desc)
+		if type(desc_lines) ~= "table" then
+	    	desc_lines = { desc_lines }
+		end
+		
+		local info = effect:tag('div'):addClass('tt-effect-info')
+		
+		-- Loop for each desc line. 
+		 for i = 1, #desc_lines do
+        local line = desc_lines[i]
+        if line and line:match("%S") then --for each line append the html into max_effect_html, it can repeat however many times it needs. 
+	        info:tag('div')
+	            :addClass('tt-effect-line')
+	            :tag('p')
+	            :wikitext(line)      
+        end
+		 end
+
+        local effect1 = content:tag('div')
+            :addClass('tt-enchant')
+            
+         local label = effect1:tag('div'):addClass('tt-label')
+        label:tag('div')
+            :wikitext("Enchant")
+            
+
+
+	    -- enchant section
+	    local enchantSection = effect1:tag('div'):addClass('tt-enchant-info')
+	   -- enchant text
+	   
+	    local enchantText = enchantSection:tag('div'):addClass('enchant-text')
+	    enchantText:tag('p')
+	        :wikitext(item.Enchant)
+	        
+	return tostring(root)
+end
+
+---------------------------------------- Infobox
+local infobox_template = [=[
+{{ItemInfobox
+|title=%s
+|icon=%s
+|slot=%s
+|set=%s
+|requirement=%s
+|quality=%s
+|max_effect=%s
+|enchant=%s
+}}]=]
+
+function p.Infobox(frame)
+    local item_name = frame.args[1]
+    local item = all_items[item_name]
+    return frame:preprocess(infobox_template:format(
+        item_name,
+        '[[File:Item_' .. item_name .. '.png]]',
+        item.Slot,
+        SetInfo(item.Set),
+        Requirements(item),
+        qualities[item.Quality],
+        Description(item.Tiers[#item.Tiers]),
+        item.Enchant
+    ))
+end
+
+---------------------------------------- Quality Table
+local qualities_headers = [=[
+{| class="wikitable"
+! style="text-align:center" | Quality
+! style="text-align:center; padding:0;" | [[File:Resource Red.png|24px]]
+! style="text-align:center; padding:0;" | [[File:Resource Green.png|24px]]
+! style="text-align:center; padding:0;" | [[File:Resource Blue.png|24px]]
+! style="text-align:center; padding:0;" | [[File:Resource Gold.png|24px]]
+! style="text-align:center" | Effect
+]=]
+
+local qualities_row = [=[
+|-
+| style="color: %s" | %s
+| style="padding: 0px 6px; text-align: center;" | %s
+| style="padding: 0px 6px; text-align: center;" | %s
+| style="padding: 0px 6px; text-align: center;" | %s
+| style="padding: 0px 6px; text-align: center;" | %s
+| style="padding: 0px 6px; text-align: center;" | %s
+]=]
+
+function p.QualityTable(frame)
+    local item_name = frame.args[1]
+
+    local item = all_items[item_name]
+    local rows = {}
+    
+    for key, tier in pairs(item.Tiers) do
+         rows[#rows+1] = qualities_row:format(
+            colors[   item.Quality + key - 1], 
+            qualities[item.Quality + key - 1],
+
+            tier.Cost and tier.Cost[1] or '-',
+            tier.Cost and tier.Cost[2] or '-',
+            tier.Cost and tier.Cost[3] or '-',
+            tier.Cost and tier.Cost[4] or '-',
+            Description(tier)
+         )
+    end
+    
+    return frame:preprocess(
+        qualities_headers ..
+        table.concat(rows) ..
+        '|}'
+    )
+end
+
+---------------------------------------- Item List
+function ItemList()
+    local items = {}
+    for item_name, item in pairs(all_items) do
+        item.Name = item_name
+        table.insert(items, item)
+    end
+    table.sort(items, function(a, b) return a.Slot == b.Slot and a.Name < b.Name or a.Slot < b.Slot end)
+    return items
+end
+
+---------------------------------------- Main Table
+local table_head = [=[
+{| id="item-table" class="wikitable sortable sticky-header-multi"
+! style="text-align:center" class="unsortable" | Icon
+! style="text-align:center" | Name
+! style="text-align:center" | Slot
+! style="text-align:center" | Set
+! style="text-align:center" class="unsortable" | Requirements
+! style="text-align:center; padding:0" | Quality
+! style="text-align:center; padding:0" class="unsortable" | [[File:Resource Red.png|24px]]
+! style="text-align:center; padding:0" class="unsortable" | [[File:Resource Green.png|24px]]
+! style="text-align:center; padding:0" class="unsortable" | [[File:Resource Blue.png|24px]]
+! style="text-align:center; padding:0" class="unsortable" | [[File:Resource Gold.png|24px]]
+! style="text-align:center" class="unsortable" | Effect
+]=]
+
+local table_row = [=[
+|-
+|rowspan="%s" | [[File:Item_%s.png|link=%s]]
+|rowspan="%s" | [[%s]]
+|rowspan="%s" | %s
+|rowspan="%s" | %s
+|rowspan="%s" | %s
+]=]
+
+local tier_row = [=[
+|data-sort-value="%s" style="padding:0; color:%s"| %s
+|style="padding:0;" | %s
+|style="padding:0;" | %s
+|style="padding:0;" | %s
+|style="padding:0;" | %s
+| %s
+]=]
+
+function p.List(frame)
+    local list = table_head
+    for _, item in pairs(ItemList()) do
+        local tier_count = table.getn(item.Tiers)
+        list = list .. table_row:format(
+            tier_count, item.Name, item.Name,
+            tier_count, item.Name,
+            tier_count, item.Slot,
+            tier_count, SetInfo(item.Set),
+            tier_count, Requirements(item)
+        )
+        for i, tier in pairs(item.Tiers) do
+            list = list .. tier_row:format(
+                item.Quality + i - 1, colors[item.Quality + i - 1], qualities[item.Quality + i - 1],
+                tier.Cost and tier.Cost[1] or '-',
+                tier.Cost and tier.Cost[2] or '-',
+                tier.Cost and tier.Cost[3] or '-',
+                tier.Cost and tier.Cost[4] or '-',
+                Description(tier)
+            )
+            if i < tier_count then
+                list = list .. "|-\n"
+            end
+        end
+    end
+    return list .. "|}"
+end
+
+---------------------------------------- Max Quality Table
+
+
+local max_quality_table_head = [=[
+{| id="item-table" class="wikitable sortable sticky-header-multi"
+! style="text-align:center" class="unsortable" | Icon
+! style="text-align:center" | Name
+! style="text-align:center" | Slot
+! style="text-align:center" | Set
+! style="text-align:center" | Requirements
+! style="text-align:center" class="unsortable" | Effect
+! style="text-align:center;min-width:150px" | Enchant
+! style="text-align:center" | ID
+]=]
+
+local max_quality_table_row = [=[
+|-
+| [[File:Item_%s.png]]
+| [[%s]]
+| %s
+| %s
+| %s
+| %s
+| %s
+| %s
+]=]
+
+function p.MaxQualityList(frame)
+    local list = max_quality_table_head
+    for _, item in pairs(ItemList()) do
+        list = list .. max_quality_table_row:format(
+            item.Name,
+            item.Name,
+            item.Slot,
+            SetInfo(item.Set),
+            Requirements(item),
+            Description(item.Tiers[#item.Tiers]),
+            item.Enchant,
+            item.ID
+        )
+    end
+    list = list .. '|}'
+    return list
+end
+
+---------------------------------------- Utility
+function TokenizeItemCode(code)
+	
+		-- no trailing comma allowed
+	if code:sub(-1) == ";" then
+		return error("Invalid item set code, last item entry has a trailing ';'")
+	end
+	
+	local item_id = nil
+	--tokenize and grab relevant substrings
+	local items = {}
+	for id in (code .. ";"):gmatch("([-]?%d+);") do
+		table.insert(items, id)
+	end
+	return items
+end
+
+local itempreset_template = [=[<td>{{ItemIcon | item_name=%s | item_quality=%s}}</td>]=]
+
+function p.FromCodes(frame)
+	local result = ""
+	local itempreset_code = frame.args[1]
+
+	if itempreset_code == nil then
+		for i = 1, 20 do
+			result = result .. string.format(itempreset_template, '', 'Legendary')
+		end
+	else
+		local itemstokenized = TokenizeItemCode(itempreset_code)
+		for i = 1, 20 do
+			result = result .. ItemLookup(itemstokenized[i], frame)
+		end
+	end
+	
+	return result
+end
+
+function ItemLookup(id, frame)
+    local name = ''
+    local quality = 'Legendary'
+	
+	if id ~= nil then
+		name = data.IDs[tonumber(id)]
+		if name ~= '' then
+			if all_items[name].Quality == 6 then
+				quality = 'Unique'
+			end
+		end
+	end
+	
+	return '<td>' .. frame:expandTemplate{ title = 'ItemIcon', args = { item_name = name, item_quality = quality }
+	} .. '</td>'
+
+end
+
+function p.ItemLookup(frame)
+    local id = frame.args[1]
+    local name = ''
+    
+    if id ~= nil then
+        name = data.IDs[tonumber(id)]
+    end
+    
+    return string.format(name)
+end
+
+function p.IDLookup(frame)
+	local name = frame.args[1]
+	local result = '-1'
+	if name ~= '' then
+		result = all_items[name].ID
+	end
+	return result
+end
+
+---------------------------------------- ItemSet (aka Set Info for templates)
+function p.ItemSet(frame)
+	local args = frame.args
+    if not args.set or args.set == "" then
+        args = frame:getParent().args
+    end
+    
+    local set = args.set
+    
+    if set == nil or set == "" or all_sets == nil or all_sets[set] == nil then
+        return "-"
+    end
+    
+    return SetInfo(set)
+end
+
+function p.IDList(frame)
+    local items = ItemList()
+
+    local function createTable(title)
+        local table = mw.html.create('table')
+            :addClass('sortable')
+            :addClass('wikitable')
+
+        local header = table:tag('tr')
+
+        header:tag('th')
+            :attr('colspan', '2')
+            :wikitext(title)
+
+        local row = table:tag('tr')
+
+        row:tag('th')
+            :attr('scope', 'col')
+            :attr('data-sort-type', 'number')
+            :wikitext('ID')
+
+        row:tag('th')
+            :attr('scope', 'col')
+            :attr('data-sort-type', 'text')
+            :wikitext('Item Name')
+
+        return table
+    end
+
+    local table = createTable('Items')
+    local no_id_table = createTable('Items without ID')
+
+    for _, item in ipairs(items) do
+        local id = tonumber(item.ID)
+        local target = id and table or no_id_table
+
+        local row = target:tag('tr')
+
+        row:tag('td')
+            :wikitext(id or '')
+
+        row:tag('td')
+            :wikitext(frame:expandTemplate{
+                title = 'ItemTooltip',
+                args = { item_name = item.Name }
+            })
+    end
+
+    return tostring(table) .. tostring(no_id_table)
+end
+
+
+return p
+--</nowiki>
+
+--[[Category:Lua]]

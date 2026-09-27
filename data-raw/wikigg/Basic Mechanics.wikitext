@@ -1,0 +1,1130 @@
+==Criticals==
+[[File:Crit.png|thumb|247x247px|The critical chance (left), and critical profit (right) stats]]
+You can collect Mana with each click (<span class="iw-zoom-hover">[[File:Click damage.png|32px]]</span>), whenever you click the orb, or an autoclick is made. With each click there is a certain chance that this click will be '''Critical'''.
+
+Critical clicks earn more mana than regular ones, and are distinguishable by the red text in floating, as opposed to the normal white text of normal clicks, and with a white flash from the Orb. The chance to perform a critical click equals your crit chance (<span class="iw-zoom-hover">[[File:Click critchance.png|32px]]</span>), while your crit profit (<span class="iw-zoom-hover">[[File:Click crit.png|32px]]</span>) stat determines how much your critical clicks will earn. These two statistics can be increased in various ways, including certain [[upgrades]], Critical rating, and some [[spells]] (only for the duration of the spell, though).
+
+Certain pets, such as the {{PetTooltip|Pixie}} & {{PetTooltip|Ent}}, as well as the majority of the summoning spells, benefit from your critical stats. Of the available classes, the {{ClassTooltip|Druid}}, has the best synergy with critical clicks, alongside the {{ClassTooltip|Exorcist}} and his [[Hallowed Clicks]].
+
+Most of the information about Criticals can be found in the More Statistics Page ''("Shift + S")''. These numbers will show the current power, including when spells & upgrades are currently affecting it. ''([[Tips, Tricks, and Help|Hotkeys]])''
+
+===Critical Rating===
+This 3rd statistic directly increases critical chance and critical profit.
+
+If <code>R</code> is your Critical Rating:
+# Increases critical chance (additively) by  <code>log<sub>10</sub>(R) × 1%</code>
+# Increases base critical profit (before multiplication by [[spells]] or [[Attributes#Dominance|Dominance]]), by <code>R%</code>.
+
+==Wizard Experience==
+[[File:Level86 void.png|thumb|150x150px|A Level 86 [[Voidmancer]]]]
+Many of your actions in Idle Wizard earns you '''Experience'''. Experience is accumulated through various means. When your experience meets a certain threshold, you level up. Experience and level are indicated under your character portrait. An increased level has several advantages, and many things have certain level requirements.
+
+Advantages:
+* Many [[classes]] have a passive ability that scales with character level.
+* Some [[pets]] benefit from character experience
+* Some [[Achievements]] are granted when a level is reached with a particular class or pet.
+* Certain [[spells]] have a level requirement, or get stronger based on character level.
+* Unlocking some [[Challenges]], classes or pets might require a certain level.
+
+[[Market#VIP|Renown]] levels and some [[Attributes]] perks, [[Challenges]], [[Items]], and even [[Pets]] can reduce the level requirements of spells, classes and pets.
+
+===XP Sources===
+Experience is gathered from 5 different pools: 2 passive, and 3 active. Wizard Experience is ''dynamically'' calculated, so XP (and levels) can be ''lost'' if a pool is somehow reduced:
+* Mana (passive): Gathering Mana
+* Mana Sources (passive): Building [[sources]]
+* Click (active): Clicks and Autoclicks
+* Clickables (active): Collecting [[Void Entities]], [[Hallowed Clicks|Excess Hallowed Clicks]], and spending [[Umbramancer|Liquid Shadow]]
+* Spells (active): Casting [[spells]]
+
+All of these actions have diminishing returns, so it is usually better to increasing all pools rather than focus too strongly on one. [[Legacy|Legacies]], [[Challenges]], [[Attributes|Attribute]] perks, and [[Items]] can increase XP gained from active actions, multiplying the amount of actions in active pools. Increased XP from Mana Sources similarly multiplies the XP from mana sources.
+
+Increases to starting level (e.g. from [[Market#VIP|Renown]] and some [[Challenges]]) simply adds a flat amount of XP to your total.
+
+===Character XP Calculation===
+Character XP is calculated as:
+<br><math>(\log_{10}(C \times Y + 1) + 1)</math>
+<math>\times \left( \frac{\ln(S \times Y + 1)}{4} + 1 \right)</math>
+<math>\times (\log_{10}(M + 1) + 1)</math>
+<math>\times \left( \frac{\ln(V \times Y + 1)}{2} + 1 \right)</math>
+<math>\times ((B \times Z + 1)^{0.855} + 100)</math>
+<math>\times H + X - 101</math>
+
+{{ClassTooltip|class_name=Desolator}} instead uses:
+<br><math>(\log_{10}(C \times Y + 1) + 1)</math>
+<math>\times \left( \frac{\ln(S \times Y + 1)}{4} + 1 \right)</math>
+<math>\times (\log_{10}(M + 1) + 1)</math>
+<math>\times \left( \frac{\log_{10}(V \times Y + 1)}{2} + 1 \right)</math>
+<math>\times ((B \times Z + 1)^{0.855} + 100)</math>
+<math>\times H + X - 101</math>
+
+where:
+* <math>C = \text{Clicks This Exile} + \text{Autoclicks This Exile}</math>
+* <math>S = \text{Spells Cast This Exile}</math>
+* <math>M = \text{Mana This Exile}</math>
+* <math>V = \text{Void Entities Collected This Exile}</math><math>\, +\, \text{Excess Hallowed Clicks This Exile}</math><math>\, +\, \frac{\text{Liquid Shadow Spent This Exile}}{1000}</math>
+* <math>B = \text{Bought Mana Sources}</math>
+* <math>Y = \text{Action XP Boost}</math>
+* <math>Z = \text{Source XP Boost}</math>
+* <math>H = \text{Character XP Multiplier}</math>
+* <math>X = \text{XP From Starting Level}</math>
+
+===XP to Level===
+Your wizard initially needs '''1500''' XP to reach level 2. This requirement is multiplied by '''1.09''' for every subsequent level.
+
+XP to reach next level:
+<br><math>1.09^{L - 1} \times 1500</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.09^{n-1} - 1 \right) \times \frac{50\,000}{3}</math>
+<br>where:
+<br><math>L = \text{Current Level}</math>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="Wizard XP needed" width="100%"
+! colspan="3" style="text-align:center;"|Wizard XP needed
+|-
+! scope="col"|To Reach Level
+! scope="col"|From Previous Level
+! scope="col"|Total
+|-
+|2
+|1500
+|1500
+|-
+|3
+|1635
+|3135
+|-
+|4
+|1782
+|4917
+|-
+|10
+|2989
+|1.95e4
+|-
+|20
+|7078
+|6.90e4
+|-
+|30
+|1.68e4
+|1.86e5
+|-
+|40
+|3.97e4
+|4.64e5
+|-
+|50
+|9.39e4
+|1.12e6
+|-
+|60
+|2.22e5
+|2.67e6
+|-
+|70
+|5.26e5
+|6.36e6
+|-
+|80
+|1.25e6
+|1.51e7
+|-
+|90
+|2.95e6
+|3.57e7
+|-
+|100
+|6.98e6
+|8.45e7
+|-
+|110
+|1.65e7
+|2.00e8
+|-
+|120
+|3.91e7
+|4.74e8
+|-
+|130
+|9.26e7
+|1.12e9
+|-
+|140
+|2.19e8
+|2.66e9
+|-
+|150
+|5.19e8
+|6.29e9
+|-
+|160
+|1.23e9
+|1.49e10
+|-
+|170
+|2.91e9
+|3.52e10
+|-
+|180
+|6.89e9
+|8.34e10
+|-
+|190
+|1.63e10
+|1.97e11
+|-
+|200
+|3.86e10
+|4.67e11
+|-
+|210
+|9.14e10
+|1.11e12
+|-
+|220
+|2.16e11
+|2.62e12
+|-
+|230
+|5.12e11
+|6.20e12
+|-
+|240
+|1.21e12
+|1.47e13
+|-
+|250
+|2.87e12
+|3.48e13
+|-
+|260
+|6.79e12
+|8.23e13
+|-
+|270
+|1.61e13
+|1.95e14
+|-
+|280
+|3.81e13
+|4.61e14
+|-
+|290
+|9.01e13
+|1.09e15
+|-
+|300
+|2.13e14
+|2.58e15
+|}
+
+===Ascension Form Experience===
+Ascension forms have their own experience pool that scales slightly differently than the base classes. They need a slightly lower '''1000''' XP to reach level 2, but this requirement scales a little faster and is multiplied by '''1.2''' for every subsequent level.
+
+XP to reach next level:
+<br><math>1.2^{L - 1} \times 1000</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.2^{n-1} - 1 \right) \times 5000</math>
+<br>where:
+<br><math>L = \text{Current Level}</math>
+
+===Ascension XP Sources===
+In addition to having their own experience pool, each Ascension form gains experience differently.
+
+{{ClassTooltip|Tempest}}:
+
+Gains experience for each cast Evocation and over time for each active Incantation and Summoning Spell.
+
+Gain <br><math>0.13 \times \text{H} \times \text{E}</math> XP per second
+
+Gain <br><math>8 \times \text{H} \times \text{IS}</math> XP per second
+
+Where:
+<br><math>\text{H} = \text{Ascension form Experience Bonus}</math>
+<br><math>\text{E} = \text{Total Evocation casts per second}</math>
+<br><math>\text{IS} = \text{Total number of active Incantations and Summons}</math>
+
+Note: For evocations cast, this is based on the real cast rate of the spell and is not affected by multipliers. If your spell, such as {{SpellTooltip|Jas'Aham's Missile Storm}}, has multipliers boosting its displayed cast rate you will need to confirm what it's base maximum cast rate is. By opening your Spellbook and looking in the 3rd tab, you can find your current maximum cast rate for spells. Add to this the bonus cast rate from spell memetics levels on the individual evocations (+1 cast rate per 2 levels) and you will have your base maximum cast rate for the Exp Formula.
+
+{{ClassTooltip|Demiurge}}:
+
+Gains experience over time based on your T2 Character Class's Level. 
+
+Gain <br><math>\frac{ \left( \text{L} - 200 \right)}{10} \times \text{H} \times 4</math> XP per second. 
+
+Where:
+<br><math>\text{H} = \text{Ascension form Experience Bonus}</math>
+
+Notes: 
+If XP value is below 1, round up to 1. Actually gains exp 4x a second, but for simplicity the formula has been adjusted for XP/sec.
+
+{{ClassTooltip|Dread}}:
+
+Gains experience over time based on both pet's levels.
+
+Gain <br><math>\left( \text{P1} ^{0.5} + \text{P2} ^{0.5} \right) \times \text{H} \times 1.36</math> XP per second
+
+Where:
+<br><math>\text{H} = \text{Ascension form Experience Bonus}</math>
+<br><math>\text{P1 and P2} = \text{Level of each Pet}</math>
+
+{{ClassTooltip|Defiance}}:
+
+Gains experience over time based on autoclicks performed per second.
+
+Gain <br><math>\text{A} ^{0.5} \times \text{H} \times 3</math> XP per second
+
+Where
+<br><math>\text{H} = \text{Ascension form Experience Bonus}</math>
+<br><math>\text{A} = \text{Autoclicks performed in the last second}</math>
+Note: If XP value is below 1, round up to 1.
+
+==Pet Experience==
+[[Pets]], just like your character, can accumulate experience and level up. Unlike your character, however, pets accumulate experience in various different means. Pet experience is unrelated to character experience: earning one doesn't necessarily increase the other. Pets become stronger as they level up, and some even scale from the experience they have.
+
+Pet experience gained can be increased by various [[Upgrades]], as well as by the passive ability and certain spells of the {{ClassTooltip|class_name = Demonologist}} and {{ClassTooltip|class_name = Oni}}.
+
+===Tier 1 Pets===
+The experience needed by Tier 1 Pets to reach the next level starts at 100 to reach level 2, and is multiplied by 1.16 every subsequent level.
+
+XP to reach next level:
+<br><math>1.16^{L - 1} \times 100</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.16^{n-1} - 1 \right) \times 625</math>
+<br>where:
+<br><math>L = \text{Current Level}</math>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="Tier 1 Pet XP needed" width="100%"
+! colspan="3" style="text-align:center;" |Tier 1 Pet XP needed
+|-
+! scope="col" |To Reach Level
+! scope="col" |From Previous Level
+! scope="col" |Total
+|-
+|2
+|100
+|100
+|-
+|3
+|116
+|216
+|-
+|4
+|135
+|351
+|-
+|10
+|328
+|1752
+|-
+|20
+|1446
+|9860
+|-
+|30
+|6380
+|4.56e4
+|-
+|40
+|2.81e4
+|2.03e5
+|-
+|50
+|1.24e5
+|9.00e5
+|-
+|60
+|5.48e5
+|3.97e6
+|-
+|70
+|2.42e6
+|1.75e7
+|-
+|80
+|1.07e7
+|7.73e7
+|-
+|90
+|4.70e7
+|3.41e8
+|-
+|100
+|2.07e8
+|1.50e9
+|-
+|110
+|9.15e8
+|6.63e9
+|-
+|120
+|4.04e9
+|2.93e10
+|-
+|130
+|1.78e10
+|1.29e11
+|-
+|140
+|7.86e10
+|5.7e11
+|-
+|150
+|3.47e11
+|2.51e12
+|-
+|160
+|1.53e12
+|1.11e13
+|-
+|170
+|6.74e12
+|4.89e13
+|-
+|180
+|2.98e13
+|2.16e14
+|-
+|190
+|1.31e14
+|9.52e14
+|-
+|200
+|5.79e14
+|4.2e15
+|-
+|210
+|2.55e15
+|1.85e16
+|}
+
+===Tier 2 Pets===
+Tier 2 Pets need more experience to level up, starting at 100 to reach level 2, and is multiplied by 1.2 every subsequent level.
+
+XP to reach next level:
+<br><math>1.2^{L - 1} \times 100</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.2^{n-1} - 1 \right) \times 500</math>
+<br>where:
+<br><math>L = \text{Current Level}</math>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="Tier 2 Pet XP needed" width="100%"
+! colspan="3" style="text-align:center;" |Tier 2 Pet XP needed
+|-
+! scope="col" |To Reach Level
+! scope="col" |From Previous Level
+! scope="col" |Total
+|-
+|2
+|100
+|100
+|-
+|3
+|120
+|220
+|-
+|4
+|144
+|364
+|-
+|10
+|430
+|2080
+|-
+|20
+|2662
+|1.55e4
+|-
+|30
+|1.65e4
+|9.84e4
+|-
+|40
+|1.02e5
+|6.12e5
+|-
+|50
+|6.32e5
+|3.79e6
+|-
+|60
+|3.91e6
+|2.35e7
+|-
+|70
+|2.42e7
+|1.45e8
+|-
+|80
+|1.50e8
+|9.00e8
+|-
+|90
+|9.29e8
+|5.57e9
+|-
+|100
+|5.75e9
+|3.45e10
+|-
+|110
+|3.56e10
+|2.14e11
+|-
+|120
+|2.20e11
+|1.32e12
+|-
+|130
+|1.37e12
+|8.19e12
+|-
+|140
+|8.45e12
+|5.07e13
+|-
+|150
+|5.23e13
+|3.14e14
+|-
+|160
+|3.24e14
+|1.94e15
+|-
+|170
+|2.01e15
+|1.2e16
+|-
+|180
+|1.24e16
+|7.45e16
+|-
+|190
+|7.69e16
+|4.62e17
+|-
+|200
+|4.76e17
+|2.86e18
+|-
+|210
+|2.95e18
+|1.77e19
+|}
+
+===Tier 3 Pets===
+Tier 3 Pets need more experience to level up, starting at 100 to reach level 2, and is multiplied by 1.24 every subsequent level.
+
+XP to reach next level:
+<br><math>1.24^{L - 1} \times 100</math>
+<br>Total XP to reach Level '''n''':
+<br><math>\left( 1.24^{n-1} - 1 \right) \times \frac{1250}{3}</math>
+<br>where:
+<br><math>L = \text{Current Level}</math>
+
+==Ability Power==
+Each [[Classes|Class]], [[Pet]], and [[Ascension Forms|Ascension Form]] has an Ability unique to them.  These abilities may be seen in the tooltip, by mousing over the portraits.  Each ability typically has multiple sources of scaling, but almost always include their own '''Ability Power'''.
+*Character Ability Power is abbreviated as '''CAP'''.
+*Pet Ability Power is abbreviated as '''PAP'''.
+*Ascension Ability Power is abbreviated as '''AAP'''.
+
+Ability Power can be increased by [[Upgrades]], [[Items]], [[Spells]], [[Gods]], and a few other, lategame, features.
+
+Refer to individual Class, Pet, and Ascension pages to see their abilities and the formulas involved.
+
+==Idle Mode==
+[[File:IdleBar back.png|thumb|right]]
+[[File:IdleBar Progress.png|thumb|right]]
+[[File:IdleBar Full.png|thumb|right]]
+'''Idle mode '''is a mechanic in the game that rewards the player for not clicking the orb. Idle mode activates if the orb hasn't been clicked for 30 seconds, found to the left of the Character portrait, indicated with black & orange for Charging, and blue when Activated. Once Idle mode activates, and you get a bonus to your production to Mana.
+
+The Idle mode production bonus can be increased by certain [[upgrades]] and the [[Attributes]] in Patience attribute.
+
+The class ability of the {{ClassTooltip|Necromancer}} also increases your Idle bonus, and he also has access to spells capable of further increasing it. [[Spells]] such as {{SpellTooltip|Nightfall}} & {{SpellTooltip|Synthetic Entity}} can only gain charges while in Online Idle mode.
+
+The {{PetTooltip|Zombie}}'s and the {{PetTooltip|Risen Giant}}'s abilities further increase your income based on your Idle bonus, and their autoclicks can claim your manual click shard pool without the need to leave Idle mode.
+
+Idle mode is a huge boost for spellburst combos, and thus it is highly recommended in almost all cases to activate it before unleashing your spells.
+
+''(You should ALWAYS set off your combos while in '''Idle Mode''' with as much '''[[Void Entities|Void mana]]''' as you can)''
+
+==Void Entities==
+
+'''Void Entities''' are glowing forms of energy that are summoned through the Void Traps within your room. When clicked, they give [[Experience]] and Void Mana, which temporarily gives a large boost to your mana production. The Void Entities can only be contained within the Void Traps for a short amount of time, so you have to be diligent to click them quickly. There are [[Upgrades]] that are used to increase duration in traps, and when combined with {{SpellTooltip|Void Lure}} (or {{SpellTooltip|Void Prison}}), can result in having multiple Void Entities on screen in order to collect more Void Mana, which is very important in making spell combos stronger.
+
+The {{ClassTooltip|Voidmancer}} uses the power of the Void to benefit his spells and power by summoning more strength and utility through having Void Mana. He also has the added ability to become stronger while there are unused Void Entities still in traps.
+
+The {{PetTooltip|Voidfiend}} gains experience through collecting Void Entities. It also creates Void Mana every 10 seconds.
+
+Spells can also collect and create Void Mana:
+* {{SpellTooltip|Void Radiance}}, which works by generating mana based on Void Entities left within the Void Traps.
+* {{SpellTooltip|Synthetic Entity}} creates a Void Entity within an open Void Trap after 10 minutes of charging.
+* {{SpellTooltip|Void Syphon}} (Voidmancer) creates multiple Void Entities which are automatically collected ''(they also give experience)''.
+
+Void Entities are also boosted through '''Insight''' [[Attributes|Attribute]] points.
+
+Info upon Void Entities can be found by '''Hovering''' over the Void Mana next to the Hero and within the '''More Statistics''' ''("S")'' page, providing: Current void mana, Void mana per entity, Entities spawn rate (%), Entities life time, Increase profit by point (%), and Degeneration rate.
+
+There are also [[Achievements]] ("A") that can be earned through collecting Void Mana and Void Entities.
+
+===Spawn Rate===
+Void Entities have an ''average'' base spawn time of 300 seconds. The range at which they can spawn is between .65 - 1.35 (a range of .35); thus Void Entities can spawn anywhere from 195 ~ 405 seconds.
+
+The rate at which Void Entities spawn can be altered through some [[Upgrades]] and through using the spells {{SpellTooltip|Void Lure}} & {{SpellTooltip|Void Prison}}.
+
+===Degeneration Rate===
+Every second, Void Mana decreases by '''1%''' of its current value, and by 2'''.5'''.
+
+Both of these values are affected by the Degeneration rate found in the Statistics. For example, a {{ClassTooltip|Voidmancer}} with the [[Upgrades#Voidmancer|Void Stability Upgrade]] (total 32.5% Degeneration rate) will lose 0.325% of his current Void Mana and a further 1.1375 every second.
+
+Some examples:
+{|class="mw-collapsible mw-collapsed wikitable" style="width:100%;" id="Degeneration examples" border="0" cellpadding="10"
+!colspan="9"|Degeneration examples
+|-
+|style="border:none" rowspan="2"|&nbsp;
+|style="border:none" rowspan="2"|&nbsp;
+!rowspan="2"|Degen rate
+!colspan="3"|After 1 second
+!colspan="3"|After 10 seconds
+|-
+!100%
+!50%
+!32.5%
+!100%
+!50%
+!32.5%
+|-
+!rowspan="5"|Void Mana
+|colspan="2"|1,000,000
+|989,996.50
+|994,998.25
+|996,748.86
+|904,348.61
+|951,093.02
+|967,960.00
+|-
+|colspan="2"|100,000
+|98,996.50
+|99,498.25
+|99,673.86
+|90,404.74
+|95,093.90
+|96,785.91
+|-
+|colspan="2"|10,000
+|9,896.50
+|9,948.25
+|9,966.36
+|9,010.35
+|9,493.99
+|9,668.50
+|-
+|colspan="2"|1,000
+|986.50
+|993.25
+|995.61
+|870.92
+|934.00
+|956.76
+|-
+|colspan="2"|100
+|95.50
+|97.75
+|98.54
+|56.97
+|78.00
+|85.59
+|}
+
+==Exile==
+[[File:Exile Window Updated.png|thumb|332x332px|The Exile window]]
+After a while in a run you will face a point where you can barely increase your mana anymore. In this case the best way to progress might be to soft reset by going into '''Exile'''. Doing so will erase some of your progress, but in turn will award you [[Mysteries]] based on mana earned in your current run. These Mysteries are used to boost your subsequent runs. Exiling is recommended if you can substantially increase your starting Mysteries, or if you can earn at least 1e4~1e6 on your first run.
+
+''' How to Exile? '''
+You can access the Exile menu bottom of the left side of the screen, or by pressing E. Doing so will bring up a menu with the option to Exile, as well as the Journal button which allows you to access [[Challenges]]. Below these, you can see detailed information on your current Mysteries, the Mysteries you would earn by going into Exile, and the percentage bonus each of your Mysteries provide.
+
+
+[[File:Scroll Exile.png]]
+
+''' What happens when you Exile? '''
+[[File:Exilecomic.png|thumb|332x332px|The Exile comic]]
+Exiling will reset some of your progress including:
+* Your [[Classes|Class]] and [[Pets|Pet]]
+* Your [[Experience]] and pet experience
+* Your [[Sources]]
+* All [[Upgrades]] bought
+* Other run-specific progress such as the increase in class abilities, {{SpellTooltip|spell_name = Ritual Of Power}} progress etc.
+
+However, you will keep your:
+* [[Mysteries]] (they will potientially increase instead)
+* [[Achievements]]
+* [[Attributes]]
+* Unlocks
+* Persistent spells (Such as {{SpellTooltip|spell_name = True Sorcery}}, {{SpellTooltip|spell_name = Nightfall}} and {{SpellTooltip|spell_name = Jas'Aham's Missile Storm}}
+
+==Mysteries==
+[[File:Mysteries.png|thumb|165x165px|Mysteries, as they appear in the upper left corner of the game window]]
+
+<div style="position:absolute; z-index=5; top:-32px; right:0;" class="iw-easter-egg">[[File:Myst.png|Easter Egg <nowiki>|</nowiki> {Souls}]]</div>
+
+To progress further in the game you will have to collect '''Mysteries''', which you earn through collecting a bunch of [[Sources|Mana]]. After you have collected 1e12 Mana you will unlock your very first Mystery, as well as unlocking the ability [[Exile]]; starting over while collecting all the Mysteries you've required from that run. For each Mystery that you collect, you will increase the profit of all your [[Sources]] by a base bonus of 3% per Mystery. [[Attributes|Attribute Points]] in Intelligence can increase that bonus to 35%. Additionally, the {{PetTooltip|Devourer}} can massively increase the profit bonus of the Mysteries as it levels up from eating the Shards from all Spells.
+
+<span style="color:#63DB2C;">''The in-game help recommends a first exile at around 100 mysteries.''</span>
+
+Mysteries are calculated by the following formula:
+<br><math>\text{Mysteries} = \sqrt{\frac{\text{All Mana This Realm}}{5\mathrm{e}11}}</math>
+<br>This can be rearranged for Mana:
+<br><math>\text{Mana Required} = (\text{Current Mysteries} \times 2 + \text{Mysteries To Earn} + 1) \times \text{Mysteries To Earn} \times 5\mathrm{e}11</math>
+
+'' New Mysteries won't appearing until you are within 1e12 Mysteries from your current Mysteries. E.g.: With 1e30 Mysteries, Mysteries earned after exiling will display 0.00 until you've collected enough Mana to gain 1e18 Mysteries or more.''
+
+[[File:Chart Mysteries.svg]]
+
+==Upgrades==
+{{For|list of various upgrades|Upgrades|Upgrades (T2 classes and others)}}
+
+==Achievements==
+{{Main|Achievements}}
+
+==Sources==
+The way to make mana in Idle Wizard. Depending on the class, a source can change to match it. <small>(Ex: The Enchanted Tree is the Tree of Life for Druid)</small>
+
+===Standard Sources===
+The standard 8 sources are:
+
+====Mana Gems====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_ManaGem.png]]</div>
+<div>''Bread and butter of any wizard.''
+Initial cost: 3 Mana
+
+Initial profit: 0.25 Mana/sec
+
+Cost multiplier: 1.16</div>
+</div>
+
+'''Shadow Coal - [[Umbramancer]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_ShadowCoal.png]]</div>
+<div>''Compressed and coalescent shadows, often used by Umbramancer as a raw fuel for the shadow-flames. Shadow Coals benefit from all affects affecting Mana Gems.''
+Initial cost: 2 Mana
+
+Initial profit: 0.35 Mana/sec
+
+Cost multiplier: 1.16</div>
+</div>
+
+'''Soul Shard - [[Heretic]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_SoulShard.png]]</div>
+<div>''All Heretics' souls are slowly torn out from their mortal bodies, their beliefs eroded and corrupted. To preserve what's left of their humanity and former power, they utilize Soul Shards. storing fractures of their essence in chaotic patterns, resistant to the perversive nature of the Void. Soul Shards benefit from all affects affecting Mana Gems.''
+Initial cost: 2 Mana
+
+Initial profit: 0.5 Mana/sec
+
+Cost multiplier: 1.16</div>
+</div>
+
+====Grimoires====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Grimoire.png]]</div>
+<div>''The more you know - the stronger you become.''
+Initial cost: 40 Mana
+
+Initial profit: 2.5 Mana/sec
+
+Cost multiplier: 1.17</div>
+</div>
+
+'''Forbidden Tome - [[Necromancer]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_ForbiddenTome.png]]</div>
+<div>''Tomes imbued with secrets of dark arts. Merely touching can wither the flesh. Forbidden Tomes benefit from all effects affecting Grimoires.''
+Initial cost: 30 Mana
+
+Initial profit: 4 Mana/sec
+
+Cost multiplier: 1.169</div>
+</div>
+
+'''Libram - [[Exorcist]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Libram.png]]</div>
+<div>''Exorcists purify and collect grimoires and dark tomes, imbuing them with holy power. Librams benefit from all effects affecting Grimoires.''
+Initial cost: 35 Mana
+
+Initial profit: 3.5 Mana/sec
+
+Cost multiplier: 1.168</div>
+</div>
+
+====Spell Fountains====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_SpellFountain.png]]</div>
+<div>''A nice place to relax, take a bath and regain some mana.''
+Initial cost: 460 Mana
+
+Initial profit: 14 Mana/sec
+
+Cost multiplier: 1.18</div>
+</div>
+
+'''Arcanaspring - [[Arcanist]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Arcanaspring.png]]</div>
+<div>''An empowered source of magic power. Only Arcanists have the knowledge and skills to tap into them. Arcanasprings benefit from all effects affecting Spell Fountains.''
+Initial cost: 400 Mana
+
+Initial profit: 20 Mana/sec
+
+Cost multiplier: 1.179</div>
+</div>
+
+'''Monument - [[Ironsoul]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Monument.png]]</div>
+<div>''Adepts of Ironsoul have long been building Monuments to honor the strength and spirit of their ancestors, mentors and heroes, drawing power from raw inspiration, emanating from those statues. Monuments benefit from all effects affecting Spell Fountains.''
+Initial cost: 450 Mana
+
+Initial profit: 21 Mana/sec
+
+Cost multiplier: 1.178</div>
+</div>
+
+====Enchanted Trees====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_EnchantedTree.png]]</div>
+<div>''Mana fruits replenish your mana very quickly.''
+Initial cost: 7.00e3 Mana
+
+Initial profit: 126 Mana/sec
+
+Cost multiplier: 1.19</div>
+</div>
+
+'''Tree Of Life - [[Druid]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_TreeOfLife.png]]</div>
+<div>''Druids draw great strength from symbiotic bond with the forests. Trees Of Life benefit from all effects affecting Enchanted Trees.''
+Initial cost: 6.00e3 Mana
+
+Initial profit: 150 Mana/sec
+
+Cost multiplier: 1.188</div>
+</div>
+
+'''Grim Trophy - [[Oni]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_GrimTrophy.png]]</div>
+<div>''Each Oni has his own collection of trophies, from humans and beasts to demons and abominations. They proudly hand these wherever they go as a display of their dominance and bragging rights. Grim Trophies benefit from all effects affecting Enchanted Trees.''
+Initial cost: 6.00e3 Mana
+
+Initial profit: 150 Mana/sec
+
+Cost multiplier: 1.188</div>
+</div>
+
+'''Scorched Earth - [[Desolator]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_ScorchedEarth.png]]</div>
+<div>''Desolators convert everything they come across into more fuel for their neverending quest of destruction. A barren wasteland is all that's left after the process is finished. Scorched Earth benefits from all effects affecting Enchanted Trees.''
+Initial cost: 6.50e3 Mana
+
+Initial profit: 180 Mana/sec
+
+Cost multiplier: 1.188</div>
+</div>
+
+====Alchemy Desks====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_AlchemyDesk.png]]</div>
+<div>''It's good for many things - primarily for mana potions, obviously.''
+Initial cost: 1.30e5 Mana
+
+Initial profit: 1.468e3 Mana/sec
+
+Cost multiplier: 1.20</div>
+</div>
+
+'''Laboratory - [[Alchemist]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Laboratory.png]]</div>
+<div>''A simple alchemy desk is more than enough for most dabblers, but isn't nearly enough for an experienced Alchemist. They employ large, well equipped laboratories for their everyday work and studies. Laboratories benefit from all effects affecting Alchemy Desks.''
+Initial cost: 1.15e5 Mana
+
+Initial profit: 2e3 Mana/sec
+
+Cost multiplier: 1.197</div>
+</div>
+
+'''Witching Cauldron - [[Shaman]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_WitchingCauldron.png]]</div>
+<div>''Shamans have their own view of preparing potions and elixirs. They set up huge, ever-bubbling Cauldrons, feeding them a wide variety of grotesque ingredients. Witching Cauldrons benefit from all effects affecting Alchemy Desks.''
+Initial cost: 1e5 Mana
+
+Initial profit: 1.6e3 Mana/sec
+
+Cost multiplier: 1.197</div>
+</div>
+
+====Circles Of Power====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_CircleOfPower.png]]</div>
+<div>''Directs flows of mana from the surrounding matter - into you.''
+Initial cost: 2.80e7 Mana
+
+Initial profit: 1.656e4 Mana/sec
+
+Cost multiplier: 1.21</div>
+</div>
+
+'''Hellhole - [[Demonologist]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Hellhole.png]]</div>
+<div>''A portal to hell which Demonologist uses to invoke infernal powers directly. Hellholes benefit from all effects affecting Circles Of Power.''
+Initial cost: 2e7 Mana
+
+Initial profit: 1.9e4 Mana/sec
+
+Cost multiplier: 1.209</div>
+</div>
+
+'''Anti-magic Dome - [[Abolisher]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_AntimagicDome.png]]</div>
+<div>''Abolishers spread these magic circles across the land, negating the effects of other mages' Circles of Power by drawing and trapping magical energies inside them. Anti-magic Domes benefit from all effects affecting Circles Of Power.''
+Initial cost: 2.50e7 Mana
+
+Initial profit: 2e4 Mana/sec
+
+Cost multiplier: 1.207</div>
+</div>
+
+====Dimensional Rifts====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_DimensionalRift.png]]</div>
+<div>''Open doors to new dimensions - filled with mana!''
+Initial cost: 5.60e8 Mana
+
+Initial profit: 1.4234e5 Mana/sec
+
+Cost multiplier: 1.22</div>
+</div>
+
+'''Voidgate - [[Voidmancer]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_Voidgate.png]]</div>
+<div>''These gates allow Voidmancers to engulf the reality with Void energies and beings at will. Voidgates benefit from all effects affecting Dimensional Rifts.''
+Initial cost: 2e8 Mana
+
+Initial profit: 2e5 Mana/sec
+
+Cost multiplier: 1.217</div>
+</div>
+
+'''Arcane Anomaly- [[Archon]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_ArcaneAnomaly.png]]</div>
+<div>''Archons' power constantly shifts between different polarities, creating zones where usual laws of spellcasting no longer apply. These anomalies actually benefit the Archon, even further reducing the boundaries of his abilities. Arcane Anomalies benefit from all effects affecting Dimensional Rifts.''
+Initial cost: 5.60e8 Mana
+
+Initial profit: 1.65 Mana/sec
+
+Cost multiplier: 1.217</div>
+</div>
+
+====Nexi====
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_TheNexus.png]]</div>
+<div>''Tap into ley lines, supplying you with rich, primordial mana.''
+Initial cost: 1.80e10 Mana
+
+Initial profit: 1.29857e6 Mana/sec
+
+Cost multiplier: 1.23</div>
+</div>
+
+'''Ley Apex - [[Prodigy]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_LeyApex.png]]</div>
+<div>''Mastery over magical energies allows Prodigy to find and connect even more potent ley focuses, further fueling their power. Ley Apexes benefit from all effects affecting Nexi.''
+Initial cost: 1.7e10 Mana
+
+Initial profit: 1.5e6 Mana/sec
+
+Cost multiplier: 1.226</div>
+</div>
+
+'''Temporal Anchor - [[Chronomancer]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building Temporal Anchor.png]]</div>
+<div>''While the Nexi are already a powerful source of energy for every sorcerer, they are especially useful to Chronomancers. Converted to Temporal Anchors, they serve as a universal focal points across timelines, allowing navigation through the flows of time. Temporal Anchors ''benefit from all effects affecting Nexi.'
+Initial cost: 1.6e10 Mana
+
+Initial profit: 1.7e6 Mana/sec
+
+Cost multiplier: 1.226</div>
+</div>
+
+'''Ley Temporal Singleton - [[Temporalist]]'''
+<div style="display: flex; align-items: center;">
+<div>[[File:Building_LeyTemporalSingleton.png]]</div>
+<div>''A result of combining ley-lines mastery of Prodigies and time-stabilizing constructs of Chronomancers, these structures utilize ley energy to create fields of temporal singularity, which exist across all of the timelines at once. Ley Temporal Singletons benefit from all effects affecting Nexi.''
+Initial cost: 1.2e10 Mana
+
+Initial profit: 2e6 Mana/sec
+
+Cost multiplier: 1.226</div>
+</div>
+
+===Unique Sources===
+====Pocket universe - [[Demiurge]]====
+<div style="display: flex; align-items: center;">
+<div>[[file:PocketUniverse.png]]</div>
+<div>''Demiurge creates these compact self-contained universes to experiment and observe. A mortal mind might be better off not knowing what is happening inside of these''
+Initial cost: 100 Mana
+
+Initial profit: 10 Mana/sec
+
+Cost multiplier: 1.175
+
+This source doesn't have a global modifier instead it has a built in source memetic that, per 25 mana source bought, increases:
+* idle bonus by 1.1% for {{ClassTooltip|Shaman}}
+* void mana per entity by 2.5% for {{ClassTooltip|Heretic}}
+* mysteries power by 4% for {{ClassTooltip|Temporalist}}</div>
+</div>
+
+===Goal Modifiers===
+After so many sources are gathered, a bonus modifier is added to the source.
+{| class="article-table"
+!Sources amount
+!Production multiplier
+|-
+|10
+|x1.10
+|-
+|25
+|x1.20
+|-
+|50
+|x1.30
+|-
+|75
+|x1.40
+|-
+|100
+|x1.50
+|-
+|Every +25
+|x1.50
+|}
+
+==Spells==
+{{For|the list of all spells|:Category:Spells}}
+
+Special actions usually boosting income, '''Spells''' are a fundamental part of the gameplay. Most spells cost spell shards, but some might acquire charges by other methods. Each class has its own set of spells. Some spells occur through the spectrum of multiple classes, some are unique to one class only. Many spells have a [[Experience|level requirement]] that needs to be met in order to equip and use the spell.
+
+===Scrolls and Charges===
+Before a spell can be cast, it needs to be placed on a Spell Scroll. A player can have up to 6 Scrolls, with the final upgrade becoming available on level 60.
+
+Spells cannot be cast without being charged. Spells usually charge by collecting spell shards, with the amount of shards required depending on the spell. With certain upgrades, Spell Scrolls can hold more than one charge. The amount of charges a Scroll can hold varies with classes and upgrades; and some spells can even have (nearly) unlimited charges. Spells retain their shards and charges if removed from the Scrolls.
+
+Spell scrolls using shards get filled at a rate of 10 times per second, using the shards currently in the shards pool. As a result, you can cast a shard spell at most 10 times your max scroll charges per second. With 6 scroll charges, available, this means a restriction of 60 casts/sec. This can be circumvented by filling scrolls faster that the shard pool would, for instance by using {{spellTooltip|Spell Focus}}. Note that this restriction is NOT the maximum cast rate statistic, meaning that a spell's cast rate is limited by both said statistic and its number of scroll charges.
+
+The default maximum cast rate of spells is 60/sec, whichwill be modified by various bonuses in the game. To see yours, check the info tab of the spellbook.
+
+===Spell Shards===
+Most spells require shards to charge. Shards can be acquired from four main sources:
+# Shards are passively generated every second, based on the ''Passive Spell Shards generation'' Statistic.
+# The Orb. The blue bar under the orb is the Manual Click Shard Pool, which fills over time and is emptied by clicking the orb. Doing so spawns a shard from the Orb, which can be collected by hovering over the shard with the mouse. Spawned shards are also auto-collected after a short amount of time, or are collected immediately if the ''Shards Drop'' Option is turned off. The fill rate of the manual click shard pool is based on the ''Shards from clicks'' Statistic, and the maximum size of the shard pool (denoted by the ''Pool time'' Statistic) scales from 10 to 25 seconds based on upgrades.
+# Shards can be earned from Autoclicks. Every autoclick has a 20% chance to generate spell shards, based on the ''Shards from clicks'' Statistic.
+# Certain spells such as {{SpellTooltip|spell_name=Spell Focus}} can be cast to instantly generate additional shards. Shard generation spells like Spell Focus always give many, many more shards than they would cost to cast, and are excellent at recharging or sustaining other spells.
+
+Whenever Shards are earned, they are assigned to the shard pool. Shard pool efficiency increases this amount. The shard pool evenly distributes 10% of its current shards among all non-full spell scrolls, 10 times per second. If a spell distributes shards among other spells (like {{SpellTooltip|Spell Focus}}), the shards are evenly split across all other equipped spells (which are not fully charged).
+
+[[Attributes#Wisdom|Wisdom]] increases ''Passive Spell Shards generation'', and contains various perks which increase shard generation from clicks and autoclicks, and decrease the costs of spells.
+
+Certain [[Pets]] can interact with your spell shards. The {{PetTooltip|pet_name=Zombie}} can claim your manual click shard pool automatically, removing the need to leave Idle Mode to do so, the {{PetTooltip|pet_name=Spellhound}} generates shard automatically every 10 seconds based on its level, whereas the {{PetTooltip|pet_name=Devourer}} consumes shards from spells to level up and increase the profit multiplier of [[Mysteries]] in return.
+
+Alongside the bonuses from the Pets, the {{ClassTooltip|class_name=Arcanist}} also has multiple upgrades and spells enhancing shard generation; and the {{ClassTooltip|class_name=Abolisher}} gains increased profits from collecting shards, and has spells to increase both shard generation rate and spell shard costs (to allow for greater collection rates).
+
+===Non-Shard Spells===
+{{For|the list of Charge-based spells|:Category:Charging Spells}}
+
+Certain spells do not use Shards to charge. Most of these spells gain charges passively over time, however certain classes interact with them in other ways. In particular, the {{ClassTooltip|class_name=Ironsoul}} can enhance the charge rate of non-shard spells, and the {{ClassTooltip|class_name=Umbramancer}} uses a unique 'Liquid Shadow' resource to charge many of its spells. Furthermore, the {{PetTooltip|pet_name=Shadow Stalker}} and {{PetTooltip|pet_name=Ebonsand Behemoth}} pets will charge non-shard spells on their own, and some [[Attributes#Patience|Patience]] perks decrease the charge time of non-shard spells.
+
+===Casting Spells===
+To set a spell ready, just click any of the empty boxes at the bottom of the main screen. To cast a spell, just click the picture of the spell. To change or remove a spell, click the black triangle above respective spell.
+
+===Autocasting===
+[[File:Careful and Careless casting.JPG|thumb|250x250px|Careful and Reckless autocasting]]
+Certain upgrades enable to set a number of selected spell to autocast. Purchasing upgrades can increase the number of spells that can be autocast. Two different types of autocasting can be used. These are known as Careful and Reckless autocasting.
+* '''Careful (Blue)''': Spell will autocast when it acquires its last charge. This can be used to cast cheap spells automatically while other spells are charging, for the purpose of experience/other bonuses, but in a way that when all spells are charged the player can unleash a combo almost immediately. Careful autocasting can be activated by Alt-clicking on the desired spell or pressing the associated number while holding Alt down.
+* '''Reckless (Red)''': Spell will be casted as soon as it acquires a charge. Reckless autocasting can be activated by Shift-clicking on the desired spell or pressing the associated number while holding Shift down.
+
+There is a hard limit on how fast spells can be (auto)cast, and a fixed order in which they are cast: Spells which are instant have a cast limit of once every 2 frames, Spells with a duration have a cast limit of once every 3 frames, and when spells are cast, all spells which are set to autocast will try to be cast in the same frame, across the bar in order from left to right. This casting order (left->right) means that the order of spells matters for things like Shard Generation spells or {{ItemTooltip|item_name=Shadow-Scryer's Crystal Ball}} (as you will want your Evocation Spells on the right-side of the bar, and any Shard Generation spells in the rightmost slot so as to recharge all spells which had just been cast). This "once every X frames" limit means that in some circumstances (such as playing as {{ClassTooltip|Archon}}), reduced framerates (either from computer CPU issues, visual effects, or browser performance limits when playing on Kongregate) can reduce spell casting speeds; and because the game's framerate is capped at 120-121 FPS, the maximum spell casting rate is 60 casts/spell/second for instant Spells, and 40 casts/spell/second for spells with a duration.
+
+===Spell Categories===
+Spells can vary greatly, but much of their behaviour can be described by certain categories. Spells can belong to multiple categories, and some have multiple effects belonging to different categories.
+
+===Spell Types===
+All spells come in one of three types.
+* [[Evocation]] spells: Often instant-cast, and often grant a single large amount of Mana or another resource. Many classes will be built around achieving large profits from a single, powerful Evocation.
+* [[Incantation]] spells: Often short-duration, and grant large bonuses to other effects. Many classes benefit from casting many Incantations together and combining their effects.
+* [[Summoning]] spells: All long-duration, and often granting Autoclicks over their duration. Many classes have Summons, and can benefit from the Spell Shard generation of Autoclicks, but certain classes can also gain significant profits from these autoclicks alone.
+
+Each of the three spell types can be improved by its Efficiency statistic. Evocation spells often scale at either 1:1, or based on the log of efficiency. Incantation spells often scale at either ^1.0, or at an exponent of efficiency. Summoning Spells sometimes scale with an exponent of efficiency, but may not visibly scale with efficiency. However, the profit of autoclicks provided by summon spells scales 1:1 with summoning efficiency.
+
+Furthermore, Summoning spells can have their durations increased by [[Upgrades]] and [[Items]], and Incantation spells can have their durations increased or decreased by Items and certain [[Pets]]. Both increased and decreased spell durations can be desirable in different circumstances.
+
+Efficiency and Duration statistics for spells are visible in the spell selection window, in the Info tab.
+
+===Spell Duration===
+The effects of spells only last for a period of time, determined by their duration. This also affects how rapidly they can be cast; the shorter their duration, the sooner they end and thus the quicker they can be recast. There is a minimum delay of 1 frame (1/120 seconds at max FPS) between casts.<br>
+If a (non-instant) spell has a tooltip duration of lower than 1 second then several things happen: It's true duration in the game (before {{ItemTooltip|Shadow-Scryer's Crystal Ball}} and similar effects) will be 1 second. Then, it will gain casts proportional to it's tooltip duration, for example with a duration of 0.49 it will give 2 (=floor(1/0.49)) real casts per cast. Lastly, any real casts gained this way will additionally be multiplied by (maximum cast rate)/(base maximum cast rate).
+* [[:Category:Instant Spells|Instant]] Spells grant their effects on cast, and only last one frame. Their tooltip will lack a ''Duration'', and the description will often use ''Instantly''. They take 1 frame to cast; with 1 frame delay between casts, this gives a maximum cast rate of 60 casts per second. These are often Evocations such as {{SpellTooltip|spell_name=Magic Missile}}.
+* [[:Category:Periodic Spells|Periodic]] Spells  grant their effects at discrete intervals while active. Their tooltip often specify the frequency with ''each <X> seconds''. Effects that reduce duration (e.g. {{ItemTooltip|item_name=Shadow-Scryer's Crystal Ball}}), affect timescaling (e.g. {{SpellTooltip|spell_name=Temporal Distortion}}) or skip time (e.g. {{SpellTooltip|spell_name=Wormhole}}) may interfere with (or even prevent!) the application of Periodic effects. These spells are usually summons like {{SpellTooltip|spell_name=Void Automaton}}.
+* [[:Category:Continuous Spells|Continuous]] Spells grant their effects continuously while active. Their tooltip will specify the ''Duration'' of their effects. Often these are incantations e.g. {{SpellTooltip|spell_name=Void Lure}}.
+* [[:Category:Permanent Spells|Augment]] Spells grant their effects continuously, ''even while inactive or not on the spell panel!'' There are only 8 augment spells: {{SpellTooltip|spell_name=Arcane Infusion}}, {{SpellTooltip|spell_name=Time Helix}}, {{SpellTooltip|spell_name=Tempered Arcanomancy}}, {{SpellTooltip|spell_name=Quasi-incantation}} , {{SpellTooltip|spell_name=Materialize Cosmic Conduit}}, {{SpellTooltip|spell_name=Forge Empyreal Vassal}}, {{SpellTooltip|spell_name=Manifest Twisted Reality}}, and {{SpellTooltip|spell_name=Employ Celestial Countermeasures}} (as of v1.41.0a | 2023-6-02).
+
+===Accumulated Spells===
+[[:Category:Accumulated Spells|Accumulated]] spells are an additional category of spells which become more powerful each time they are cast. Many classes benefit greatly from stacking casts of multiple accumulated spells, as does the [[Attributes#Spellcraft|SPC 200]] perk.
+
+Their tooltip will specify ''Type: <X> (Accumulated)'', and note their cast counts in the form ''Times used:'' 
+
+''Real casts: <Actual> (actual casts per second)''
+
+''Total casts: <Effective> (effective casts per second)''
+
+The rate at which their bonus grows can be increased by [[Memories#Memory_Upgrades|Muscle Memory]], and additional casts can be added with {{SpellTooltip|spell_name=Jas'Aham's_Missile_Storm}} or {{ItemTooltip|item_name=Berzerker}}. Furthermore, some [[items]] and [[Challenges]] increase the starting cast count of Accumulated spells, giving them significant power without deliberate stacking time. The cast count of accumulated spells is reset on [[Exile]].
+
+===Persistent Spells===
+[[:Category:Persistent Spells|Persistent]] spells are a longer-term version of Accumulated spells. While Persistent spells gain more power with each cast, this is split into two parts, commonly referred to as the '''Active''' and the '''Passive'''.
+* The '''Active''' effect of a Persistent spell is granted on cast. The effect becomes stronger with more casts, and is reset on Exile. This behaviour resembles an Accumulated spell, but does ''not'' benefit from any bonuses to Accumulated spells (as it isn't, technically, Accumulated). However, it does benefit from {{ItemTooltip|item_name=The Magnifier}}.
+* The '''Passive''' effect is a separate (and possibly unrelated) bonus granted while the spell is on the panel, even while inactive. It also scales with casts, but is only reset on [[Realm]] rather than [[Exile]]. The rate at which this effect grows can be increased with [[Memories#Memory_Upgrades|Forefathers' Work]] and [[Weekly_Bonus|Week of Persistence]].
+
+===Low-Priority Spells===
+[[:Category:Low-Priority Spells|Low-Priority]] spells only gain charges while all other spells on the panel are full. There are only 2 Low-Priority spells: {{SpellTooltip|spell_name=Arcane Infusion}} and {{SpellTooltip|spell_name=Tempered Arcanomancy}} (as of v1.15.0b | 2021-10-03).
+
+===Spell Costs===
+''See [[#Spell Shards|Spell Shards]] above.''
+
+Most spells require one charge per cast, gained by collecting a number of Spell Shards. However, spells may instead gain charges through other means, spend additional charges on cast, or even require additional costs like [[Sources]] or [[Liquid Shadow]].
+
+===Spell Casts Scaling and Fake Casts===
+Some attributes, spells, and items in the game scale with the amount of spells cast of either a specific or any type. There are also some methods of multiplying how many casts one receives with certain actions like {{ItemTooltip|Berzerker}}, or {{SpellTooltip|Jas'Aham's Missile Storm}}, or the Forefather's Work and Muscle Memory [[Memories]].
+
+Forefather's and Muscle Memory do not affect anything that scales with amount of spells cast, other than the passive/accumulated part of the spell respectively.
+
+"Fake" casts from sources like {{ItemTooltip|Berzerker}} and {{SpellTooltip|Jas'Aham's Missile Storm}} will only affect stats that scale off the total amount of spells cast this exile (typically worded "based on amount of spell casts this exile") but will not affect stats that scale off a specific type of spell (like Wisdom 200's "based on amount of evocation spell casts in this exile"). This means that Spellcraft 150 and 250 are affected while Spellcraft 200 and Wisdom 200 are not.
+
+===Spell Snap===
+Some spells specify in their descriptions that they "''retain the efficiency used at the moment of cast for its entire duration''". What this means, in practice, is that we can utilize a full item loadout to maximize that spell's efficiency, and then have it retain those bonuses while we use it in a different phase, with different items. This is called a "[[Snap]]", and its dedicated page discusses the mechanics more in-depth.
+
+The most commonly used snappable spell is {{SpellTooltip|spell_name=Gem Resonance}}, due to the simple fact that it is present in multiple classes' spellbooks. As a simple example: let's imagine a scenario where we normally utilize Gem Resonance while bursting, and it grants 400 mana gems while it is active on that phase. We could, before bursting, snap that spell with an item loadout full of incantation efficiency items, increasing the mana gems that the spell provides to 800. Then, once we switch to the burst loadout, the spell would continue to grant 800 mana gems for the full 15 seconds of its base duration.
+
+There's one important factor when snapping a spell, however: its position in the bar must remain fixed when switching loadouts. As an example: if you snap {{SpellTooltip|spell_name=Gem Resonance}} while it is currently in the 3rd slot, you must make sure that when you switch to your burst loadout, {{SpellTooltip|spell_name=Gem Resonance}} also occupies the 3rd slot in that loadout. This is because if the spell switches positions, the game will re-cast the spell at the new position rather than retain the same cast that was done prior to switching loadouts. 
+
+{{SiteNav}}
+[[Category:Mechanics]]

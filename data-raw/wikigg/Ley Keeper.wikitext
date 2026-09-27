@@ -1,0 +1,70 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 96
+*75 [[Attributes#Intelligence|Intelligence]]
+*25 [[Attributes#Spellcraft|Spellcraft]]
+|unlock=
+*200 [[Attributes|Attribute]] points
+*20 [[Items]] created
+*{{PetTooltip|Geode}} level 100
+|description=''The Ley Keepers are the ancient guardian spirits of the Nexi, existing between planes and watching over the world's balance of Ley energies. A skilled wizard can utilize their abilities to attain power unavailable to him otherwise.''
+}}
+
+==Description==
+The [[:Category:Tier_2_Pets|Tier 2]] version of {{PetTooltip|pet_name=Geode}}. After charging the ability, temporarily increases [[Attributes]]. Increases level reduction. Increases profits with amount of sources with smallest production.
+
+Gains [[Experience#Pet Experience|experience]] with each activation of the ability, depending on total amount of attribute points.
+
+== Pet Ability ==
+
+Reduces level requirements by:
+<br><math>L_M \times 0.45</math>
+
+If level reduction is greater than 50 (when <math>L >= 112</math>), instead reduces level requirements by:
+<br><math>50 + (L_M \times .45 - 50)^{0.75}</math>
+
+Multiplies profits by:
+<br><math>B^{0.5} \times P^{0.25} + 1</math>
+
+
+Ability charges over:
+<br><math>\frac{30}{P^{0.15} + L^{0.5} + 1}+1</math>
+<br>seconds.
+
+On ability activation, increases all attributes (except Versatility) by:
+<br><math>X = \Bigg \lfloor \frac{10 \times L}{11} \Bigg \rceil + 1</math>
+
+If the above formula results into more than 150 attribute points (when <math>L >= 164</math>), then the formula changes into:
+<br><math>X = \left\lfloor \left( \left \lfloor  \frac{10 \times L}{11} \right\rceil - 150\right)^{0.5}\right\rceil + 150</math>
+<br>The chosen attribute additionally receives:
+<br><math>\big\lfloor X \times 0.75\big\rfloor</math>
+
+The ability stays active for:
+<br><math>\frac{L}{12} + 4</math>
+<br>seconds (max 30).
+
+where:
+* <math>L_M = \text{Max Ley Keeper Level}</math>
+** ''N.B. This is reset on changing Pet, [[Exile]], or [[Realm]]''
+* <math>B = \text{Amount of Least Profitable Source}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+
+== Experience Gain ==
+Accrues experience on ability activation, equal to:
+<br><math>(D^2 \times \frac{A}{100} + F) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>D = \text{Ability Duration}</math>
+* <math>A = \text{Total Attribute Points}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]

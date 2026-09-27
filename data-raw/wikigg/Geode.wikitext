@@ -1,0 +1,59 @@
+{{PetInfobox
+|selection=Character level 55
+|unlock=
+*200 [[Attributes|Attribute]] points
+*2 [[Items|Items]] created
+|description=''The Geode is a semi-intelligent piece of rock formation, usually found within ruins of ancient magical structures. Traveling forth in time allowing them to be discovered in large quantities, and now they're being utilized to amplify a sorcerer's abilities.''
+}}
+
+==Description==
+After charging the ability, temporarily increases [[attributes]].
+
+Gains experience with each activation of the ability, depending on amount of attribute points available or allocated.
+
+== Pet Ability ==
+Geode reduces level requirements by:
+<br><math>L_M \times 0.4</math>
+
+If level reduction is greater than 50, instead reduces level requirements by:
+<br><math>50 + (L_M \times 0.4 - 50)^{0.7}</math>
+
+Geode's ability charges over:
+<br><math>\frac{30}{P^{0.15} + 1}</math>
+<br>seconds (minimum 1).
+
+On activation, Geode increases all attributes (except Versatility) by:
+<br><math>X = \Bigg \lfloor L^{0.75}\times 0.8 \Bigg \rceil + 1</math>
+<br>If over 100, instead increases by:
+<br><math>X = \left(\Bigg \lfloor L^{0.75}\times 0.8 \Bigg \rceil - 100\right)^{0.5} + 100</math>
+<br>The chosen attribute additionally receives:
+<br><math>\frac{X}{2}</math>
+
+The ability stays active for:
+<br><math>\frac{L}{10} + 2</math>
+<br>seconds (max 30).
+
+where:
+* <math>L_M = \text{Max Geode Level}</math>
+** ''N.B. This is reset on changing Pet, [[Exile]], or [[Realm]]''
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+
+== Experience Gain ==
+Geode accrues experience on ability activation, equal to:
+<br><math>(D^2 \times \frac{A}{100} + F) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>D = \text{Ability Duration}</math>
+* <math>A = \text{Total Attribute Points}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

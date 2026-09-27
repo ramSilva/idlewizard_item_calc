@@ -1,0 +1,604 @@
+local p = {}
+
+
+
+
+----------------------------------- Used to Generate class-specific manasource list
+local displayName = {
+	gem = "Mana Gem",
+	grimoire= "Grimoire",
+	fountain = "Spell Fountain",
+	tree = "Enchanted Tree",
+	desk = "Alchemy Desk",
+	circle = "Circle of Power",
+	rift = "Dimensional Rift",
+	nexus = "Nexus",
+	
+	vg = "Voidgate",
+	li = "Libram",
+	hh = "Hellhole",
+	mo = "Monument",
+	as = "Arcanaspring",
+	lab = "Laboratory",
+	tol = "Tree Of Life",
+	ft = "Forbidden Tome",
+	ad = "Anti-magic Dome",
+	la = "Ley Apex",
+	ta = "Temporal Anchor",
+	sc = "Shadow Coal",
+	wc = "Witching Cauldron",
+	ss = "Soul Shard",
+	gt = "Grim Trophy",
+	aa = "Arcane Anomaly",
+	lts = "Ley Temporal Singleton",
+	se = "Scorched Earth",
+	fs = "Frozen Spring",
+	hg = "Hunting Ground",
+	tc = "Totemic Circle",
+	luar = "Lunar Arc",
+	fa = "Factory"
+}
+
+local sourceImages = {
+  gem = "Building ManaGem.png",
+  grimoire = "Building Grimoire.png",
+  fountain = "Building SpellFountain.png",
+  tree = "Building EnchantedTree.png",
+  desk = "Building AlchemyDesk.png",
+  circle = "Building CircleOfPower.png",
+  rift = "Building DimensionalRift.png",
+  nexus = "Building TheNexus.png",
+  
+	vg = "Building Voidgate.png",
+	li = "Building Libram.png",
+	hh = "Building Hellhole.png",
+	mo = "Building Monument.png",
+	as = "Building Arcanaspring.png",
+	lab = "Building Laboratory.png",
+	tol = "Building TreeOfLife.png",
+	ft = "Building ForbiddenTome.png",
+	ad = "Building AntimagicDome.png",
+	la = "Building LeyApex.png",
+	ta = "Building Temporal Anchor.png",
+	sc = "Building ShadowCoal.png",
+	wc = "Building WitchingCauldron.png",
+	ss = "Building SoulShard.png",
+	gt = "Building GrimTrophy.png",
+	aa = "Building ArcaneAnomaly.png",
+	lts = "Building LeyTemporalSingleton.png",
+	se = "Building ScorchedEarth.png",
+	fs = "Building FrozenSpring.png",
+	hg = "Building HuntingGrounds.png",
+	tc = "Building TotemicCircles.png",
+	luar = "Building LunarArcs.png",
+	fa = "Building Factory.png"
+}
+
+local upgradeImages = {	
+  gild = "ManaTot.png",
+  inc = "IncantationEfficiency5.png",
+  cap = "AbilityPower5.png",
+  ac = "Autoclick5.png",
+  evo = "SorceryEfficiency5.png",
+  summon = "SummonEfficiency5.png",
+  pap = "PetPower5.png",
+  exp = "Achievement Challenge6.png",
+}
+
+local manaSources = {
+  "gem",
+  "grimoire",
+  "fountain",
+  "tree",
+  "desk",
+  "circle",
+  "rift",
+  "nexus",
+}
+
+
+local classes = {
+	-- T1 Classes
+	Druid = {
+		replaces = {
+			tree = "tol",
+		}
+	},
+	Necromancer = {
+		replaces = {
+			grimoire = "ft"
+		}
+	},
+	Voidmancer = {
+		replaces = {
+			rift = "vg"
+		}
+	},
+	Exorcist = {
+		replaces = {
+			grimoire = "li"
+		}
+	},
+	Demonologist = {
+		replaces = {
+			circle = "hh"
+		}
+	},
+	Ironsoul = {
+		replaces = {
+			fountain = "mo"
+		}
+	},
+	Arcanist = {
+		replaces = {
+			fountain = "as"
+		}
+	},
+	Abolisher = {
+		replaces = {
+			circle = "ad"
+		}
+	},
+	Prodigy = {
+		replaces = {
+			nexus = "la"
+		}
+	},
+	Chronomancer = {
+		replaces = {
+			nexus = "ta"
+		}
+	},
+	Umbramancer = {
+		replaces = {
+			gem = "sc",
+		}
+	},
+	Alchemist = {
+		replaces = {
+			desk = "lab"
+		}
+	},
+
+	--T2 Classes 
+	Shaman = { 
+	  	combines = {"Druid", "Necromancer"},
+		replaces = { desk = "wc"
+		},
+	},
+	Heretic = { 
+	  	combines = {"Voidmancer", "Exorcist"},
+		replaces = { gem = "ss",
+		},
+	},
+	Oni = { 
+	  	combines = {"Demonologist", "Ironsoul"},
+		replaces = { tree = "gt"
+		},
+	},
+	Archon = { 
+	  	combines = {"Arcanist", "Abolisher"},
+		replaces = { rift = "aa"
+		},
+	},
+	Temporalist = { 
+	  	combines = {"Prodigy", "Chronomancer"},
+		replaces = { nexus = "lts"
+		},
+	},
+	Desolator = { 
+	  	combines = {"Umbramancer", "Alchemist"},
+		replaces = { tree = "se"
+		},
+	},
+	Demiurge = {
+		adds = {
+			universe = "after:nexus"
+		}
+	},
+	--Quasi Classes
+	Cryomancer = {
+		replaces = {
+			fountain = "fs"
+		}
+	},
+	Nosferatu = {
+		replaces = {
+			tree = "hg"
+		}
+	},
+	Artificer = {
+		replaces = {
+			desk = "fa"
+		}
+	},
+	Shapeshifter = {
+		replaces = {
+			circle = "tc"
+		}
+	},
+	Ranger = {
+		replaces = {
+			desk = "luar"
+		}
+	},
+	Prodigyburden = {
+		combines = { "Necromancer", "Druid", "Alchemist", "Demonologist", "Prodigy" }
+	}
+}
+
+local manasource = {}
+
+manasource["Mana Gem"] = {
+    Class = nil,
+    Image = "Building ManaGem.png",
+    Lore = "Bread and butter of any wizard.",
+    InitialCost = 3,
+    InitialProfit = 0.25,
+    CostMultiplier = 1.16,
+}
+
+manasource["Shadow Coal"] = {
+    Class = "Umbramancer",
+    Image = "Building ShadowCoal.png",
+    Lore = "Compressed and coalescent shadows, often used by Umbramancer as a raw fuel for the shadow-flames. Shadow Coals benefit from all effects affecting Mana Gems.",
+    InitialCost = 2,
+    InitialProfit = 0.35,
+    CostMultiplier = 1.16,
+}
+
+manasource["Soul Shard"] = {
+    Class = "Heretic",
+    Image = "Building SoulShard.png",
+    Lore = "All Heretics' souls are slowly torn out from their mortal bodies, their beliefs eroded and corrupted. To preserve what's left of their humanity and former power, they utilize Soul Shards, storing fractures of their essence in chaotic patterns, resistant to the perversive nature of the Void. Soul Shards benefit from all effects affecting Mana Gems.",
+    InitialCost = 2,
+    InitialProfit = 0.5,
+    CostMultiplier = 1.16,
+}
+
+manasource["Grimoire"] = {
+    Class = nil,
+    Image = "Building Grimoire.png",
+    Lore = "The more you know - the stronger you become.",
+    InitialCost = 40,
+    InitialProfit = 2.5,
+    CostMultiplier = 1.17,
+}
+
+manasource["Forbidden Tome"] = {
+    Class = "Necromancer",
+    Image = "Building ForbiddenTome.png",
+    Lore = "Tomes imbued with secrets of dark arts. Merely touching them can wither the flesh. Forbidden Tomes benefit from all effects affecting Grimoires.",
+    InitialCost = 30,
+    InitialProfit = 4,
+    CostMultiplier = 1.169,
+}
+
+manasource["Libram"] = {
+    Class = "Exorcist",
+    Image = "Building Libram.png",
+    Lore = "Exorcists purify and collect grimoires and dark tomes, imbuing them with holy power. Librams benefit from all effects affecting Grimoires.",
+    InitialCost = 35,
+    InitialProfit = 3.5,
+    CostMultiplier = 1.1675,
+}
+
+manasource["Spell Fountain"] = {
+    Class = nil,
+    Image = "Building SpellFountain.png",
+    Lore = "A nice place to relax, take a bath and regain some mana.",
+    InitialCost = 460,
+    InitialProfit = 14,
+    CostMultiplier = 1.18,
+}
+
+manasource["Arcanaspring"] = {
+    Class = "Arcanist",
+    Image = "Building Arcanaspring.png",
+    Lore = "An empowered source of magic power. Only Arcanists have the knowledge and skills to tap into them. Arcanasprings benefit from all effects affecting Spell Fountains.",
+    InitialCost = 400,
+    InitialProfit = 20,
+    CostMultiplier = 1.179,
+}
+
+manasource["Monument"] = {
+    Class = "Ironsoul",
+    Image = "Building Monument.png",
+    Lore = "Adepts of the Ironsoul way have long been building Monuments to honor the strength and spirit of their ancestors, mentors and heroes, drawing power from raw inspiration, emanating from those statues. Monuments benefit from all effects affecting Spell Fountains.",
+    InitialCost = 450,
+    InitialProfit = 21,
+    CostMultiplier = 1.1775,
+}
+
+manasource["Enchanted Tree"] = {
+    Class = nil,
+    Image = "Building EnchantedTree.png",
+    Lore = "Mana fruits replenish your mana very quickly.",
+    InitialCost = 7.00e3,
+    InitialProfit = 126,
+    CostMultiplier = 1.18,
+}
+
+manasource["Tree Of Life"] = {
+    Class = "Druid",
+    Image = "Building TreeOfLife.png",
+    Lore = "Druids draw great strength from their symbiotic bond with the forests. Trees Of Life benefit from all effects affecting Enchanted trees.",
+    InitialCost = 6.00e3,
+    InitialProfit = 150,
+    CostMultiplier = 1.1875,
+}
+
+manasource["Grim Trophy"] = {
+    Class = "Oni",
+    Image = "Building GrimTrophy.png",
+    Lore = "Each Oni has their own collection of trophies, from humans and beasts to demons and abominations. They proudly hang these wherever they go as a display of their dominance and bragging rights. Grim Trophies benefit from all effects affecting Enchanted Trees.",
+    InitialCost = 6.00e3,
+    InitialProfit = 150,
+    CostMultiplier = 1.1875,
+}
+
+manasource["Scorched Earth"] = {
+    Class = "Desolator",
+    Image = "Building ScorchedEarth.png",
+    Lore = "Desolators convert everything they come across into more fuel for their neverending quest of destruction. A barren wasteland is all that's left after the process is finished. Scorched Earth benefits from all effects affecting Enchanted Trees.",
+    InitialCost = 6.50e3,
+    InitialProfit = 180,
+    CostMultiplier = 1.1875,
+}
+
+manasource["Alchemy Desk"] = {
+    Class = nil,
+    Image = "Building AlchemyDesk.png",
+    Lore = "It's good for many things - primarily for mana potions, obviously.",
+    InitialCost = 1.30e5,
+    InitialProfit = 1.468e3,
+    CostMultiplier = 1.20,
+}
+
+manasource["Laboratory"] = {
+    Class = "Alchemist",
+    Image = "Building Laboratory.png",
+    Lore = "A simple alchemy desk is more than enough for most dabblers, but isn't nearly enough for an experienced Alchemist. They employ large, well equipped laboratories for their everyday work and studies. Laboratories benefit from all effects affecting Alchemy Desks.",
+    InitialCost = 1.15e5,
+    InitialProfit = 2e3,
+    CostMultiplier = 1.1975,
+}
+
+manasource["Witching Cauldron"] = {
+    Class = "Shaman",
+    Image = "Building WitchingCauldron.png",
+    Lore = "Shamans have their own view of preparing potions and elixirs. They set up huge, ever-bubbling Cauldrons, feeding them a wide variety of grotesque ingredients. Witching Cauldrons benefit from all effects affecting Alchemy Desks.",
+    InitialCost = 1e5,
+    InitialProfit = 1.6e3,
+    CostMultiplier = 1.1975,
+}
+
+manasource["Circle of Power"] = {
+    Class = nil,
+    Image = "Building CircleOfPower.png",
+    Lore = "Directs flows of mana from the surrounding matter - into you.",
+    InitialCost = 2.80e7,
+    InitialProfit = 1.656e4,
+    CostMultiplier = 1.21,
+}
+
+manasource["Hellhole"] = {
+    Class = "Demonologist",
+    Image = "Building Hellhole.png",
+    Lore = "A portal to hell which Demonologists use to invoke infernal powers directly. Hellholes benefit from all effects affecting Circles Of Power.",
+    InitialCost = 2e7,
+    InitialProfit = 1.9e4,
+    CostMultiplier = 1.209,
+}
+
+manasource["Anti-magic Dome"] = {
+    Class = "Abolisher",
+    Image = "Building AntimagicDome.png",
+    Lore = "Abolishers spread these magic circles across the land, negating the effect of other mages' Circles of Power by drawing and trapping magical energies inside them. Anti-magic Domes benefit from all effects affecting Circles of Power.",
+    InitialCost = 2.50e7,
+    InitialProfit = 2e4,
+    CostMultiplier = 1.207,
+}
+
+manasource["Dimensional Rift"] = {
+    Class = nil,
+    Image = "Building DimensionalRift.png",
+    Lore = "Open doors to new dimensions - filled with mana!",
+    InitialCost = 5.60e8,
+    InitialProfit = 1.4234e5,
+    CostMultiplier = 1.22,
+}
+
+manasource["Voidgate"] = {
+    Class = "Voidmancer",
+    Image = "Building Voidgate.png",
+    Lore = "TThese gates allow Voidmancers to engulf the reality with Void energies and beings at will. Voidgates benefit from all effects affecting Dimensional Rifts.",
+    InitialCost = 2e8,
+    InitialProfit = 2e5,
+    CostMultiplier = 1.217,
+}
+
+manasource["Arcane Anomaly"] = {
+    Class = "Archon",
+    Image = "Building ArcaneAnomaly.png",
+    Lore = "Archons' powers constantly shift between different polarities, creating zones where usual laws of spellcasting no longer apply. These anomalies actually benefit the Archon, even further reducing the boundaries of his abilities. Arcane Anomalies benefit from all effects affecting Dimensional Rifts.",
+    InitialCost = 5.60e8,
+    InitialProfit = 1.60e5,
+    CostMultiplier = 1.217,
+}
+
+manasource["Nexus"] = {
+    Class = nil,
+    Image = "Building TheNexus.png",
+    Lore = "Tap into ley lines, supplying you with rich, primordial mana.",
+    InitialCost = 1.80e10,
+    InitialProfit = 1.29857e6,
+    CostMultiplier = 1.23,
+}
+
+manasource["Ley Apex"] = {
+    Class = "Prodigy",
+    Image = "Building LeyApex.png",
+    Lore = "Mastery over magical energies allows Prodigy to find and connect even more potent ley focuses, further fueling their power. Ley Apexes benefit from all effects affecting Nexi.",
+    InitialCost = 1.7e10,
+    InitialProfit = 1.5e6,
+    CostMultiplier = 1.226,
+}
+
+manasource["Temporal Anchor"] = {
+    Class = "Chronomancer",
+    Image = "Building Temporal Anchor.png",
+    Lore = "While the Nexi are already a powerful source of energy for every sorcerer, they are especially useful to Chronomancers. Converted to Temporal Anchors, they serve as a universal focal points across timelines, allowing navigation through the flows of time. Temporal Anchors benefit from all effects affecting Nexi.",
+    InitialCost = 1.6e10,
+    InitialProfit = 1.7e6,
+    CostMultiplier = 1.226,
+}
+
+manasource["Ley Temporal Singleton"] = {
+    Class = "Temporalist",
+    Image = "Building LeyTemporalSingleton.png",
+    Lore = "A result of combining ley-lines mastery of Prodigies and time-stabilizing constructs of Chronomancers, these structures utilize ley energy to create fields of temporal singularity, which exist across all of the timelines at once. Ley Temporal Singletons benefit from all effects affecting Nexi.",
+    InitialCost = 1.2e10,
+    InitialProfit = 2e6,
+    CostMultiplier = 1.226,
+}
+
+manasource["Frozen Spring"] = {
+    Class = "Cryomancer",
+    Image = "Building FrozenSpring.png",
+    Lore = "Water is especially useful to Cryomancers as a source of power and a tool through which heat can be manipulated, or even weaponized. They make great use of the Spell Fountains found all over the Realm, claiming them as their own. Frozen Springs benefit from all effects affecting Spell Fountains.",
+    InitialCost = 420,
+    InitialProfit = 16,
+    CostMultiplier = 1.1775,
+}
+
+manasource["Hunting Ground"] = {
+    Class = "Nosferatu",
+    Image = "Building HuntingGrounds.png",
+    Lore = "Nosferatu quite often own a vast domain corrupted by their influence and inhabited by all sorts of vile creatures. Any poor soul who ventures there is almost guaranteed to be found, captured and consumed by the denizens. Hunting Grounds benefit from all effects affecting Enchanted Trees.",
+    InitialCost = 5e3,
+    InitialProfit = 135,
+    CostMultiplier = 1.1875,
+}
+
+manasource["Totemic Circle"] = {
+    Class = "Shapeshifter",
+    Image = "Building TotemicCircles.png",
+    Lore = "Shapeshifters are drawn to these circles, especially during the full moon, as if something's calling out to them from these stone monuments. They seem to grow stronger, more feral, while in the presence of the totems.",
+    InitialCost = 5e3,
+    InitialProfit = 2.1e4,
+    CostMultiplier = 1.207,
+}
+
+manasource["Factory"] = {
+    Class = "Artificer",
+    Image = "Building Factory.png",
+    Lore = "Artificers utilize huge factories to construct a variety of mechanisms. These factories churn out machines that can perform almost any task required, utilizing all sorts of magic and energies.",
+    InitialCost = 1.10e5,
+    InitialProfit = 2e3,
+    CostMultiplier = 1.1975,
+}
+
+manasource["Lunar Arc"] = {
+    Class = "Ranger",
+    Image = "Building LunarArcs.png",
+    Lore = "Lunar Arcs are a marvel of Moonfolk architecture. The structure itself forms, focuses and guides Ley energies, making it much easier to use.",
+    InitialCost = 1.10e5,
+    InitialProfit = 4e3,
+    CostMultiplier = 1.1975,
+}
+
+manasource["Pocket Universe"] = {
+    Class = "Demiurge",
+    Image = "Building PocketUniverse.png",
+    Lore = "Demiurges create these compact, self-contained Universes to experiment and observe. A mortal mind might be better off not knowing what is happening inside these.",
+    InitialCost = 10,
+    InitialProfit = 1e12,
+    CostMultiplier = 1.175,
+}
+
+local upgrade = {}
+
+upgrade["gild"] = {
+    DisplayName = "Gild",
+    Image = "ManaTot.png",
+    Math = "Sets Source Cost Growth to (B - 1.14) * 0.964176^(Level - 1) + 1.14 where B is the base Source Cost Growth.",
+    InitialCost = 10,
+    InitialProfit = 1.2,
+    CostMultiplier = 'Variable',
+}
+
+upgrade["inc"] = {
+    DisplayName = "Incantation Efficiency",
+    Image = "IncantationEfficiency5.png",
+    Math = "Increases Incantation Efficiency by 7% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e14,
+    InitialProfit = 0,
+    CostMultiplier = 1.35,
+}
+
+upgrade["cap"] = {
+    DisplayName = "Character Ability Power",
+    Image = "AbilityPower5.png",
+    Math = "Increases Character Ability Power by 15% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e10,
+    InitialProfit = 0,
+    CostMultiplier = 1.21,
+}
+
+upgrade["ac"] = {
+    DisplayName = "Autoclick Profit",
+    Image = "Autoclick5.png",
+    Math = "Increases Autoclick Profit by 14% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e9,
+    InitialProfit = 0,
+    CostMultiplier = 1.19,
+}
+
+upgrade["evo"] = {
+    DisplayName = "Evocation Efficiency",
+    Image = "SorceryEfficiency5.png",
+    Math = "Increases Evocation Efficiency by 15% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e12,
+    InitialProfit = 0,
+    CostMultiplier = 1.23,
+}
+
+upgrade["summon"] = {
+    DisplayName = "Summoning Efficiency",
+    Image = "SummonEfficiency5.png",
+    Math = "Increases Summoning Efficiency by 7% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e14,
+    InitialProfit = 0,
+    CostMultiplier = 1.35,
+}
+
+upgrade["pap"] = {
+    DisplayName = "Pet Ability Power",
+    Image = "PetPower5.png",
+    Math = "Increases Pet Ability Power by 15% per: 0.95^(Level^0.8 - 1) * 1000 of the chosen Source.",
+    InitialCost = 1e10,
+    InitialProfit = 0,
+    CostMultiplier = 1.20,
+}
+
+upgrade["exp"] = {
+    DisplayName = "Character XP",
+    Image = "Achievement Challenge6.png",
+    Math = "Increases Character XP by 5% per: 0.95^(Level^0.8 - 1) * 1200 of the chosen Source.",
+    InitialCost = 1e15,
+    InitialProfit = 0,
+    CostMultiplier = 1.31,
+}
+
+
+
+p.upgrade = upgrade
+p.manaSource = manasource
+p.displayName = displayName
+p.sourceImages = sourceImages
+p.upgradeImages = upgradeImages
+p.manaSources = manaSources
+p.classes = classes
+
+return p

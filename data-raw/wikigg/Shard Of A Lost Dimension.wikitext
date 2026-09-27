@@ -1,0 +1,28 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants an ability which increases Void Mana per Entity for a short duration.
+
+==Details==
+
+On activation, for 10 seconds, multiplies Void Mana per Entity by:
+<br><math>\left( \left\lfloor \log_{10}(V + 1) \right\rfloor \times R + 1 \right) \times B^R \times 0.0025 + 1</math>
+
+
+Fully charges with each cast of {{SpellTooltip|spell_name=Voidbolt}}, even while active (refreshing the duration).
+
+where:
+* <math>B = \text{Current Amount of Voidgates}</math>
+* <math>V = \text{Void Mana}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

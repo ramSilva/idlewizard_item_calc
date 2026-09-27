@@ -1,0 +1,49 @@
+{{PetInfobox
+|title = Voidlight Amalgam
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 175
+*200 [[Attributes#Insight|Insight]]
+|unlock=
+* 1e9 [[Void Entities]] collected
+* Reach 1e11 total [[Hallowed Clicks]] performed
+*{{PetTooltip|Voidterror}} level 100
+|description=''As the Heretics' mastery of the Void have grown exponentially, they've managed to find a new subspecies of Voidterrors - these serpents have developed a certain type of crystals to store energy, not unlike the way common animals use fat tissue. Initially used for the now-common Soul Shards, which Heretics use to preserve their Souls' essence within the Void. Further experiments proved that infusing the crystals with that same energy without removing the crystals from a Voidterror actually creates a kind of symbiotic bond between the two polar energies within the creature. This new breed, named Voidlight Amalgam, is much more stable and useful both outside the Void and within. Doesn't work offline.''}}
+
+== Description ==
+Periodically yields Void Mana based on Pet level, Hallowed Clicks performed and Void Mana earned from a single Void Entity. Increase Void Mana profits, based on Void Mana earned in this Exile.
+
+Gains experience per second, based on Void Mana profits.
+
+== Pet Ability ==
+
+On ability activation (every 5 seconds), yields Void Mana, equal to:
+<br><math>P^{0.25} \times L^{1.35} \times (\mathrm{pHC} + 1)^{2.5} \times \frac{E^{0.75}}{10}</math>
+
+Multiplies Void Mana Profit by:
+<br><math>(V + 1)^{0.36} \times P^{0.85} \times L^{1.25} \times \frac{1}{1\,500\,000} + 2</math>
+
+
+where:
+* <math>P = \text{Pet Ability Power}</math>
+* <math>L = \text{Pet Level}</math>
+* <math>\mathrm{pHC} = \text{Hallowed Clicks Performed}</math>
+* <math>E = \text{Void Mana per Entity}</math>
+* <math>V = \text{All Void Mana this Exile}</math>
+
+== Experience Gain ==
+Accrues experience each second, equal to:
+<br><math>\left( 120 \times \log_{10}(V) + F \right) \times M</math>
+
+This XP pool is distributed over time, at a rate each second of:
+<br><math>1 + \frac{X}{10}</math>
+
+where:
+* <math>V = \text{Void Mana Profit}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+* <math>X = \text{Accrued Pet XP}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

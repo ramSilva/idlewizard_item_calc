@@ -1,0 +1,43 @@
+{{PetInfobox
+|selection=Character level 3
+|unlock=25 manual clicks
+|description=''A benevolent forest spirit.''
+}}
+
+== Description ==
+Increases click profits depending on level, and autoclicks 1 times per second for each 20 levels.
+
+Gains [[Experience#Pet Experience|experience]] from her autoclicks, even when offline.
+
+A relatively easy pet to unlock early in the game, the Pixie is a perfect companion for the [[Druid]], as they both synergize with autoclicks and [[criticals]].
+
+== Pet Abilities ==
+The Pixie has 2 abilities.
+
+1. Autoclicks:
+
+* <math>1 + \left\lfloor\frac{L}{20}\right\rfloor</math> times per second
+* with <math>\text{Click Profit}\ =\ \text{Hero Click Profit}</math>
+* with <math>\text{Crit Chance} = \frac{ \text{Hero Crit Chance} }{2}</math>
+* with <math>\text{Crit Profit}\ =\ \text{Hero Crit Profit}</math>
+
+where:<br>
+<math>L = \text{Pixie Level}</math>
+
+2. Multiplies click profits by:
+<br><math>L \times P + 1</math>
+<br>where:
+* <math>L = \text{Pixie Level}</math>
+* <math>P = \text{Pet Ability Modifier}</math>
+
+== Experience Gain ==
+The Pixie gains experience from her autoclicks, earning this amount per click:
+<br><math>(1 + F) \times M</math>
+<br>where:
+*<math>F = \text{Fixed Pet XP Bonus}</math>
+*<math>M = \text{Pet XP Multiplier}</math>
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 1 Pets]]
+[[Category:Wizard]]

@@ -1,0 +1,84 @@
+{{PetInfobox
+|title = Herald of Rot
+|selection=
+*[[Paragon]] level 33
+*[[Experience#Wizard_Experience|Character level]] 160
+*200 [[Attributes#Patience|Patience]]
+|unlock=
+*Reach 1e6 autoclicks
+*Any level 100 [[:Category:Wizard#T2_Pets|Tier 2 Pet]] among
+**{{PetTooltip|Ent}}
+**{{PetTooltip|Risen Giant}}
+|description=''These grotesque constructs are commonly mistaken for some sort of weird totems or territory markers. A more knowledgeable wizard knows better, and gets as far away as he can once he spots one of those. Actually a focus of the forest's more sinister powers, these Heralds can even be called alive. Where usually rot and disease occur randomly or at a steady rate, this aberration 'rallies' the organisms, pests and insects into a force that devours every single thing that can be digested, decomposed or rotten at a frightening speed. All the decomposed life is used to fertilize and grow the plague-force even further. Therefore, a Herald is a treasured possession for every Shaman.''}}
+
+== Description ==
+The [[:Category:Tier_3_Pets|Tier 3]] combination of {{PetTooltip|pet_name=Ent}} and {{PetTooltip|pet_name=Risen Giant}}.
+
+Increases profits based on a power function of your idle bonus and pet time. Increase autoclick efficiency boosted exponentially with each Summoning spell active. Increases Summoning efficiency, based on pet time.
+
+Gains [[Experience#Pet Experience|experience]] per second in Idle mode.
+
+== Pet Ability ==
+
+Autoclicks once per second, claiming the shard pool:
+* <math>\text{Click Profit}\;=\;\text{Character Click Profit}</math>
+* <math>\text{Crit Chance}\;=\;\text{Character Crit Chance}</math>
+* <math>\text{Crit Profit}\;=\;\text{Character Crit Profit}</math>
+
+
+Multiplies profits by:
+<br><math>L + 30^{0.69\log_{10}(I)} \times \left(P^{0.5} + 1 \right) \times T_{H}^{6} \times \frac{L}{100\,000} + 1</math>
+
+
+with
+
+<math>T_{H} = \begin{cases}\text{Pet Real Time in Hours},&\text{ if Pet Real Time }\leq\text{ 14 days}\\
+\left(336^6 + (\text{Pet Real Time in Hours} - 336)^{0.5}\right)^\frac{1}{6},&\text{ if Pet Real Time }>\text{ 14 days}\end{cases}</math>
+
+''Note:'' <math>30^{0.69\log_{10}(I)} \approx I^{1.019}</math>
+
+
+Multiplies Autoclick Profit by:
+<br><math>4^{N} \times L \times \left( P^{0.4} + 1 \right) \times \frac{1}{4\,000\,000} + 1</math>
+
+
+
+Multiplies Summoning Efficiency by:
+<br><math>L \times \left( P^{0.1} + 1 \right) \times T_{D} \times \frac{1}{25\,000} + 1</math>
+
+
+with
+
+<math>T_{D} = \begin{cases}\text{Pet Time in Days},&\text{ if Pet Time }\leq\text{ 200 days}\\
+200 + (\text{Pet Time in Days} - 200)^{0.5},&\text{ if Pet Time }>\text{ 200 days}\end{cases}</math>
+
+
+Shards pool efficiency is multiplied by:
+<br><math>L^2 \times 0.1 + 1</math>
+
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>I = 1 + \frac{\text{Idle Profit Bonus}\%}{100}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>N = \text{Active Summoning Spells}</math>
+
+== Experience Gain ==
+Gains experience each time it autoclicks:
+
+<math>(1 + F) \times M</math>
+
+and each second while [[Idle Mode]] is active:
+
+<math>(0.5 + F) \times M</math>
+
+where:
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+==Community Notes==
+Also called "Harold" in the Discord.
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 3 Pets]]

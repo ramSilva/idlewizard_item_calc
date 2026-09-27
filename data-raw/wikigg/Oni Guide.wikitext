@@ -1,0 +1,359 @@
+{{Guides}}
+{{VersionUpdated|1.70.0}}
+{{GuideIntroClass|Oni}}
+
+'''TL;DR''' Requires {{ItemTooltip|Berzerker}}, which does not need to be legendary. Having {{ItemTooltip|Cataclysm}} and {{ItemTooltip|Commissar's Torn Sleeve}} is also very heavily recommended.
+
+==Introduction==
+{{ClassTooltip|Oni}} converts the methodical stacking of {{ClassTooltip|Ironsoul}} and the rapid pet levelling of {{ClassTooltip|Demonologist}} into a complex powerhouse. Though slower than {{ClassTooltip|Heretic}} or {{ClassTooltip|Desolator}}, and less accessible than {{ClassTooltip|Archon}}, {{ClassTooltip|Oni}}'s high scaling makes it a strong mid-game class.
+
+{|class = "wikitable"
+|-
+! scope="col" style="text-align:center; width:33%"|The Good
+! scope="col" style="text-align:center; width:33%"|The Bad
+! scope="col" style="text-align:center; width:33%"|The Ugly
+|-
+|
+* Flexible Exile Length
+* Scales well with most stats
+|
+* Requires key items and upgrades
+* Many Spellsets, itemswaps, pets
+|
+*Complex item upgrade priorities
+*Many areas for optimization
+|}
+
+===[[Attributes|Attribute]] Points===
+<div style="font-size:75%">''Note: This section assumes you have AP-granting items like Legendary {{ItemTooltip|item_name=Bite Sleeves}} to meet requirements, so alter accordingly to what you have.''</div>
+
+{| class ="wikitable" 
+|-
+!  scope="col" style="text-align:center; width:50%" | Minimum
+!  scope="col" style="text-align:center; width:50%" | Spare Points
+|- 
+|
+* 200 [[Attributes#Intelligence|Intelligence]] 
+* 60 [[Attributes#Insight|Insight]]
+* 125 [[Attributes#Spellcraft|Spellcraft]]
+* 50 [[Attributes#Patience|Patience]]
+* 200 [[Attributes#Mastery|Mastery]]
+* 125 (200) [[Attributes#Empathy|Empathy]]
+|
+#[[Attributes#Empathy|Empathy]] 
+#[[Attributes#Spellcraft|Spellcraft]] 
+#[[Attributes#Mastery|Mastery]] 
+#[[Attributes#Patience|Patience]] 
+#[[Attributes#Insight|Insight]]
+#[[Attributes#Intelligence|Intelligence]] 
+#[[Attributes#Insight|Versatility]]
+|}
+
+====Priority====
+Progression depends on how many perks {{ItemTooltip|item_name=Commissar's Torn Sleeve}} gives in burst:
+{| class="wikitable"
+! 0 Perks (0 to 25 AP)
+! 1 Perk (25 to 49 AP)
+! 2 Perk (50 to 74 AP)
+|-
+| style="vertical-align: top;" |
+Needs remaking (outdated)
+# 250 [[Attributes#Spellcraft|Spellcraft]]
+# 175 (250) [[Attributes#Empathy|Empathy]]
+# 250 [[Attributes#Intelligence|Intelligence]]
+# 250 [[Attributes#Mastery|Mastery]]
+# 250 [[Attributes#Insight|Insight]]
+# 250 [[Attributes#Patience|Patience]]
+# 250 [[Attributes#Empathy|Empathy]]
+| style="vertical-align: top;" |
+Needs remaking (outdated)
+# 175 (200) [[Attributes#Spellcraft|Spellcraft]]
+# 150 (250) [[Attributes#Empathy|Empathy]]
+# 225 (250) [[Attributes#Intelligence|Intelligence]]
+# 225 (250) [[Attributes#Spellcraft|Spellcraft]]
+# 225 (250) [[Attributes#Mastery|Mastery]]
+# 225 (250) [[Attributes#Patience|Patience]]
+# 175 (275?) [[Attributes#Empathy|Empathy]]
+# 250 [[Attributes#Insight|Insight]]
+# 250 [[Attributes#Empathy|Empathy]]
+# 250 [[Attributes#Spellcraft|Spellcraft]]
+# 250 [[Attributes#Mastery|Mastery]]
+# 250 [[Attributes#Patience|Patience]]
+# 250 [[Attributes#Intelligence|Intelligence]]
+| style="vertical-align: top;" |
+# 200 (250) [[Attributes#Spellcraft|Spellcraft]]
+# 200 (250) [[Attributes#Patience|Patience]]
+# 250 [[Attributes#Insight|Insight]]
+# 200 (250) [[Attributes#Wisdom|Wisdom]]
+# 250 [[Attributes#Empathy|Empathy]]
+# 250 [[Attributes#Spellcraft|Spellcraft]]
+# 250 [[Attributes#Patience|Patience]]
+# 250 [[Attributes#Mastery|Mastery]]
+# 250 [[Attributes#Intelligence|Intelligence]]
+# Dump Vers until can hit 150 dom. 
+# 100 (150) [[Attributes#Dominance|Dominance]]
+# Dump Vers until can hit 250 dom.
+# 200 (250) [[Attributes#Dominance|Dominance]]
+|}
+Note, dominance and wisdom provide no profit on their own, you should only invest enough that you're able to hit 250 while wearing {{ItemTooltip|Commissar's Torn Sleeve}} during burst.  As you get later in the realm and your burst pet level rises, this amount will go down, so make sure to check every so often.  Having at least 200 wisdom for the incantation efficiency perk is fine.
+
+==Oni Summary==
+Main goals whilst playing Oni
+# Get {{ItemTooltip|Berzerker}} (and preferably {{ItemTooltip|Cataclysm}} as well) before you play Oni. They don't need to be legendary.
+# Cast {{SpellTooltip|Furious Strike}} in a loop whilst in Defense stance (~170% "Furious Strike" charges per second.) 
+# Fast burst
+# Scry summons
+# Stack Incants until you can make profits. 
+# Level up your {{PetTooltip|Interrogator}} to increase {{SpellTooltip|Possessed Blade}}
+# Stack up lots of {{SpellTooltip|Furious Strike}}
+# Charge {{ItemTooltip|Cataclysm}} weapon. 
+# Level {{PetTooltip|Voidterror}} to gather '''Void Mana'''
+# Level Burst Pet to '''Burst'''
+{{SummarizeGuideBoxSets}}
+
+==Phases==
+===Step 1: Scry your Summons===
+Utilize {{ItemTooltip|Shadow-Scryer's Crystal Ball}} and summoning duration reduction to stack {{SpellTooltip|Summon Horned Incinerator}} and {{SpellTooltip|Summon Infernal Thrasher}}, and get some Void Entities at the same time.
+
+Upon initiating a new Exile, remember to switch to {{StanceTooltip|Meditation}} Stance to acquire a single charge for {{SpellTooltip|Temper The Steel}}. After your TTS has sufficient FS charge speed, then switch to {{StanceTooltip|Defense}} Stance.
+
+Once you've unlocked [[Phylactery|Phylacteries]] at [[Paragon]] 29, use {{PetTooltip|Ley Keeper}} to massively boost your phylactery power.  Before then use {{PetTooltip|Archivist}} to boost evocation efficiency on SE. If charge generation is too slow, use {{PetTooltip|Ent}} to boost the effectiveness of {{SpellTooltip|Conjure Greater Elemental}}.
+
+To achieve the required 30 Dominance to equip Ent, you can use {{ItemTooltip|Commissar's Torn Sleeve}} or {{ItemTooltip|Voidstrike Seal}}.
+
+{{GuideBox|pet=Archivist|pet1=Ley Keeper|spells=#0#SummonScry@21,2;28,2;11,2;71,2;86,2;87,2|stance=Defense|itemtab=Items|items=#0#SummonScry@101;115;0;24;12;32;41;64;56;83;72;1023;212;300;414;415;90;2003;3008;509|note= The only enchants that matter are on Pants and Cold Blooded Ring. Items with an Evocation Efficiency enchant can be enchanted once to be left at level 1.}}
+
+This phase only needs a few minutes, until the evo bonus on SHI slows down.
+
+===Step 2: Berzerker Buildup===
+Stack Incants by using Berzerker in Defense with 100% cast rate, variable length.
+
+Do a quick burst (Cataclysm Stacking, Vmana phase, Burst) to gain more sources. Optionally, max out your amount of Monuments using Simulacrum or Greater Chimera with {{ItemTooltip|Collar Of Obedience}} and {{ItemTooltip|Whiplash}}. More Monuments = More Incants from Berzerker. You can easily add those items to the Cataclysm charge item loadout and do it there, since it has an open belt and ring slot.  
+
+Once you have access to {{ItemTooltip|item_name=Temporal Scabbard}} (E360 Mysteries) and can hit 45 casts per second on Furious Strike without {{SpellTooltip|Conjure Greater Elemental}} on the bar, swap it to {{SpellTooltip|Unclean Knowledge}}.   
+
+This phase lasts as long as needed for profits. Pet doesn't particularly matter, so early on Pixie is used for autoclicks, level it with [[#General Pet Levelling|Burst Pet Levelling Set]].  After [[Phylactery|Phylacteries]] are unlocked at e450 mysteries, {{PetTooltip|Ley Keeper}} will provide a slight increase to cast rate, both through its own bonus Mastery and the level reduction increasing Phylactery power. If you are running {{SpellTooltip|Conjure Greater Elemental}} and still cannot hit max cast speed, use {{PetTooltip|Ent}}.
+
+{{GuideBox|pet=Pixie|pet1=Ent|spells=#1#BerzerkerBuildup@60,2;21,2;88,0;89,0;86,2;87,2|stance=Defense|note=Unequip Searing Gaze if it breaks your 100% Defense stacking uptime.|t-spells=without CGE|t-spells1=CGE|items=#1#BerzerkerBuildup@101;113;4;24;17;31;46;69;58;88;77;1011;209;308;414;415;90;2001;3002;502|itemtab=Max CAP}}
+
+====Offline====
+If going offline in this phase, make certain that IB/ES have a non-zero cast rate before saving ('enter' hotkey can be helpful).  If you save at the wrong time, you could potentially return to no casts having been performed.  Potentially make several exports to reduce the chances of getting a dud.  If going offline for longer than a day, don't forget to equip {{ItemTooltip|Light Of Eighth Star}}.
+
+===Step 3: Box Levelling Phase===
+Level{{PetTooltip|pet_name=Interrogator}} high to boost {{SpellTooltip|spell_name=Possessed Blade}}. Refill spells using {{SpellTooltip|spell_name=Force Of Will}} with {{StanceTooltip|Meditation}} as needed. Once leveling speed slows down, simply go to the next step. 
+
+{{GuideBox|pet=Interrogator|t-spells=Meditative Fury|spells=#2#BoxLevel@64,2;63,2;88,2;117,2;107,2;28,2|t-spells1=Force Of Will|spells1=#2#BoxLevel(beforeMF)@64,2;63,2;88,2;91,2;107,2;28,2|stance=Berserk|items=#2#BoxLevel@104;113;6;23;18;32;41;68;57;84;76;1002;211;301;411;405;91;2002;3003;509}}
+
+===Step 4: Stack Furious Strike===
+Use {{SpellTooltip|Temper The Steel}} to stack all the charges of {{SpellTooltip|Furious Strike}} that you'll use in Burst. {{SpellTooltip|Furious Strike|FS}} doesn't need to be on the spellbar for this, so feel free to replace it if needed.
+
+You can also use this phase in Meditation stance to charge up IB, ES and PB at the start of the exile, that way you'll have charges to sustain other phases.
+
+{{GuideBox|pet=Ent|
+spells=#3#FS_Stack@21,2;107,2;88,2;89,0;86,0;87,2|
+items=#3#FS_Stack@106;113;9;27;13;33;43;61;57;87;76;1001;208;302;406;402;90;2009;3007;506|stance=Berserk|note=Only enchant charge speed and summoning efficiency items}}
+To level Ent you can use [[#General Pet Levelling|Levelling Burst Pet]] with {{ItemTooltip|Commissar's Torn Sleeve}} and/or {{ItemTooltip|Voidstrike Seal}} to get the 30 Dominance required.
+
+The evocation scaling of {{SpellTooltip|Temper The Steel}} is additive to the casts scaling, and thus much less effective.  Maximizing Charge Speed and Summoning Efficiency to boost the power of {{SpellTooltip|Conjure Greater Elemental}} are the most noteworthy increases in charge speed.
+
+Stack for up to 10% of your exile, but make sure to check how many charges you have from time to time, it caps at 1 billion charges(1e9). However, Oni executes several bursts in sequence. Accumulating an overabundance of charges prior to the final burst will probably yield no benefit.
+
+===Step 5: Cataclysm Charging Phase===
+Charge Cataclysm as high as possible with Evo/Inc Reduction Items
+
+{{SpellTooltip|spell_name = Meditative Fury}} gives more stacks and scales alongside mysteries earned. Before unlocking {{SpellTooltip|spell_name = Meditative Fury}}, use {{SpellTooltip|spell_name=Iron Blood}} in its place. 
+
+Make sure your {{SpellTooltip|spell_name = Meditative Fury}} usage rate is <1/s by using incant reduction gear, evo reduction increases stacks from amount of Hellstorm casts and fireball.
+
+Pet and items outside of the ones listed should not matter. If the duration of your incantation spells is higher than 1, you can equip any item with Character ability power bonuses and use Ley Keeper or Geode to increase the bonus of the Defense stance. 
+
+You can equip {{ItemTooltip|Collar Of Obedience}} and {{ItemTooltip|Whiplash}} here if you want to have a loadout to max sources with. Just equip {{PetTooltip|pet_name=Simulacrum}} or {{PetTooltip|pet_name=Greater Chimaera}} alongside those items and wait. 
+
+{{GuideBox|t-spells=Meditative Fury|spells=#4#ChargeCataclysm@64,2;2,2;6,2;117,2;28,2;11,2|t-spells1=Iron Blood|spells1=#4#ChargeCataclysm(beforeMF)@64,2;2,2;6,2;88,2;28,2;11,2|stance=Defense|items=#4#ChargeCataclysm@101;-1;-1;-1;-1;-1;-1;-1;58;-1;77;1002;209;-1;-1;-1;-1;2002;-1;-1}}
+
+===Step 6: Void Mana Phase===
+Get as much Void Mana as possible.
+
+==== General Pet Levelling ====
+You can use this set to level up every pet except the Box. Level until it slows down. 
+{{GuideBox|spells=#5#LevelPet@64,2;63,2;88,2;11,2;107,2;28,2|stance=Berserk|
+itemtab1=Other pets 18+5|
+items1=#5#LevelPet(Others18+5)@104;113;7;23;14;32;41;68;58;84;70;1012;211;301;411;405;92;2001;3001;504|
+itemtab2=Living Sin 17+5|
+items2=#5#LevelPet(LS17+5)@104;113;7;23;18;32;41;68;56;84;70;1012;211;301;411;405;91;2001;3001;504|
+itemtab5=Living Sin 35+5|
+items5=#5#LevelPet(LS35+5)@104;113;0;23;14;32;41;68;58;84;70;1012;211;301;411;405;91;2001;3001;504|items=#5#LevelPet(Others12+5)@104;113;7;23;11;32;41;68;58;83;70;1012;211;301;411;405;92;2001;3001;504|items3=#5#LevelPet(LS25+5)@104;113;7;23;18;32;41;68;58;84;70;1012;211;301;411;405;91;2001;3001;504|items4=#5#LevelPet(LS33+5)@104;113;7;23;14;32;41;68;58;84;70;1012;211;301;411;405;91;2001;3001;504|itemtab=Other pets 12+5|itemtab3=Living Sin 25+5|itemtab4=Living Sin 33+5|note=Depending on what level your pets get to and how many Catalyst shards you've collected, Arcane accelerator can beat Commissar's Torn Sleeve. Simply check if your xp/s goes up or down when switching from one to another (while accounting for enchant differences)}}
+
+====Void Mana Generation====
+This phase can take 2-5 minutes for best results. Spend more time on this for your second burst (Emp200). 
+
+Get as much Void Mana from {{PetTooltip|pet_name=Voidterror}} until it slows drastically. {{ItemTooltip|Collar Of Obedience}} and {{ItemTooltip|Whiplash}} are very important items decreasing {{PetTooltip|pet_name=Voidterror}}'s charge speed. As soon as you go to [[#Step_7:_Burst_Phase|Burst]] you will be on a timer since your built up Void Mana will begin to go down slowly. 
+
+{{GuideBox|pet=Voidterror|
+t-spells=Meditative Fury|spells=#6#Voidmana@30,2;26,2;88,2;117,2;107,0;87,2|
+t-spells1=Before Meditative Fury|spells1=#6#Voidmana(beforeMF)@30,2;26,2;88,2;25,2;107,0;87,2|
+stance=Meditation|
+note=It's a good idea to compare {{ItemTooltip|item_name=Pitch-black Cage}} with {{ItemTooltip|item_name=Ceaseless Hunger}}. Though Pitch-black cage is stronger, Ceaseless may have more upfront power in shorter exiles with lower enchants.|items=#6#VoidMana@112;113;5;25;15;30;49;67;55;89;76;1002;202;309;407;412;99;2002;3006;503|itemtab=Best in Slot}}
+
+===Step 7: Burst Phase===
+Get as many mysteries as possible. If you have {{PetTooltip|Living Sin}} unlocked, use it to burst. Otherwise, {{PetTooltip|Hungerer}} is the best choice.
+
+We won’t use {{PetTooltip|Pit Lord}} because its bonus to gains from pet experience is far too low.
+
+Go to Berserk Stance and activate Cataclysm, buy Hellholes and upgrades, then set Furious Strike to reckless, buying Hellholes and upgrades where possible. Once Cataclysm wears off, quickly switch to [[#Step_5:_Cataclysm_Charging_Phase|Cataclysm Charging Phase]] and Defensive Stance to recharge, then back to Burst.  Repeat 2-3 times until {{SpellTooltip|spell_name=Furious Strike}} and Void Mana are too depleted. 
+
+{{GuideBox|pet=Living Sin|pet1=Hungerer|spells=#7#BURST@60,2;6,2;88,2;89,2;107,2;86,0|stance=Berserk|
+itemtab1=Hungerer 18+5|
+items1=#7#BURST(Hungerer18+5)@104;113;1;29;18;32;48;68;54;84;72;1002;211;301;411;417;91;2007;3005;509|
+itemtab2=Living Sin 13+5|
+items2=#7#BURST(LS13+5)@104;113;6;29;18;32;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509|
+itemtab3=Living Sin 17+5|
+items3=#7#BURST(LS17+5)@104;113;1;29;18;32;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509|
+itemtab4=Living Sin 39+5|
+items4=#7#BURST(LS39+5)@104;113;1;29;18;31;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509|
+itemtab5=|items=#7#BURST(Hungerer10+5)@104;113;1;29;11;32;48;68;54;83;76;1002;211;301;411;417;91;2007;3005;509|itemtab=Hungerer 10+5}}
+{| class="wikitable replace"
+! colspan="3" |Early Substitutions:
+|-
+!Best
+!Replacement
+!Condition
+|-
+|{{ItemTooltip|Anointed Ashes}}
+|{{ItemTooltip|Heart of the Storm}}
+|If {{ItemTooltip|Anointed Ashes}} is unavailable.
+|}
+
+===Step 8: Need more mysteries?===
+Simply follow Steps 4-7 again until you have acquired enough mysteries to exile. Meditative Fury provides additional weapon charges past 1E1450 mana,so It's recommended to do at least a second burst if you get more than 1E1450mana or exile isn't short.
+
+==Enchant Priority==
+To get Enchant priority make a copy of [https://docs.google.com/spreadsheets/d/1rN-1hM4csPTn9KcIcIPmHsEDNR-552syJroEFleJd-U/edit?pli=1&gid=1824407751#gid=1824407751 this spreadsheet], select the appropriate items for your total enchant range, fill the rest of the data in, input max dust and it will calculate enchant priority for you. Since it won't calculate VT levelling or Box levelling phases, for VT levelling use the Burst pet set, and for box levelling just make sure the enchants are either the minimum possible or something like -15/-20 your best item. 
+
+==Pantheon==
+Only a general guideline is offered, as the optimal distribution is highly context-dependent.
+*''e500'': Altermutus > Ardourium
+*''e600'': Altermutus > Procreogenus > Ardourium >= Tempoaeverum
+*''e700'': Altermutus > Procreogenus > Ardourium >= Tempoaeverum > Animatealia
+*''e800'': Altermutus > Procreogenus > Chaos > Ardourium >= Tempoaeverum > Animatealia
+*''e900'': Cerebros (On all times) > Altermutus > Procreogenus > Chaos > Ardourium >= Tempoaeverum > Animatealia
+
+==Memetics==
+===Source Memetics===
+{{SourceMemes|class=Oni|gem=exp|grimoire=evo|fountain=|tree=|desk=cap|rift=pap|circle=gild|nexus=inc}}
+
+Priority is PAP > CAP > Incant > Evo, no more than a couple levels difference.    Character exp is an afterthought, should have less than a third of the levels of your highest.
+
+
+Stat scalings for use with [[Spreadsheets#Source_Memes_Calculator|Muninn's Source Meme Calculator]]:
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+!Stat !! Scaling
+|-
+| Incantation || 7.1438
+|-
+| Character Ability Power || 1.5517
+|-
+| Autoclick || 0
+|-
+| Evocation || 1.0421
+|- 
+| Summoning || 0
+|-
+| Pet Ability Power || 2.0614
+|-
+| Character Experience || 0.3923
+|}
+
+===Spell Memetics===
+For use with [[Spreadsheets#Spell Meme Calculator|Merp's spell meme sheet]].
+
+{| class=wikitable
+|-
+! Spell !! Efficiency !! Cast scaling !! AC amt scaling !! AC profit !! Cast amt !! Cast rate
+|-
+| {{SpellTooltip|Furious Strike|icon=hidden}} || 1.5 || 1 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxT}}
+|-
+| {{SpellTooltip|Hellstorm|icon=hidden}} || 1.0414 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Goblet Of Fire|icon=hidden}} || 1.34 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Possessed Blade|icon=hidden}} || 1.298 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Meditative Fury|icon=hidden}} || 1.10 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Enhanced Strength|icon=hidden}} || 1.2 || 1.2 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Iron Blood|icon=hidden}} || 1.32 || 1.29 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Unclean Knowledge|icon=hidden}} || 1.037 || 0.082 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ritual Of Power|icon=hidden}} || 1.2 || 0.45 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Ritual Of Power (Enhanced)|icon=hidden}} || 1.2 || 0.55 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Void Lure|icon=hidden}} || 1.015 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Void Lure (Enhanced)|icon=hidden}} || 1.035 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Summon Horned Incinerator|icon=hidden}} || 1.027 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Conjure Primal Elemental|icon=hidden}} || 1.002 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| colspan="7" | For spells marked with a '''^''', replace the line above if you have it, do not add both.
+|-
+|}
+
+==In-Depth Mechanics==
+===TTS Math===
+<details open>
+<summary>TTS Math</summary>
+<div>
+To maintain the loop, {{SpellTooltip|spell_name=Temper The Steel}} must be fully refunded by casting all granted {{SpellTooltip|spell_name=Furious Strike|display_name=Furious Strikes}}. This is possible when:
+<br><math>C \times R \times 1.1^{S} \geq \frac{N}{T}</math>
+
+E.g. when {{SpellTooltip|spell_name=Temper The Steel}} grants '''170%''' {{SpellTooltip|spell_name=Furious Strike}} charges per second, and casting charge-based evocation spells shares '''11.5%''' of their cost.
+
+{{ItemTooltip|item_name=Searing Gaze}} will '''halve''' {{SpellTooltip|spell_name=Temper The Steel}} duration and thus '''double''' the loop threshold. {{ItemTooltip|item_name=Temporal Scabbard}} will reduce the loop threshold by '''10%''' (multiplicatively) per enchant.
+
+where:
+* <math>C = \text{FS Charges from TTS Each Second}</math>
+* <math>R = \text{TTS Charge Share}\,\%</math>
+* <math>S = \text{Temporal Scabbard Enchant Level}</math>
+* <math>N = \text{Charging Evocations on Panel}</math>
+* <math>T = \text{TTS Duration}</math>
+</div>
+</details>
+
+===Tips===
+*As {{ClassTooltip|class_name=Apprentice}}, get some easy {{PetTooltip|pet_name=Spellhound}} levels with {{SpellTooltip|spell_name=Spell Focus}} and {{SpellTooltip|spell_name=Magic Missile}} before switching to {{ClassTooltip|Oni}}. This can let you quickly cast {{SpellTooltip|spell_name=Unclean Knowledge}} and {{SpellTooltip|spell_name=Ritual Of Power}} to get started.
+* With enough enchants on {{ItemTooltip|item_name=Temporal Scabbard}}, the start phases can be skipped. Don't forget to level a buildup pet!
+*Do an early burst for Upgrades and faster Source Maxing.
+*If using {{PetTooltip|pet_name=Hungerer}} in the [[#Burst_2|Burst]] phase, do ''not'' buy any sources in the [[#Pre-Burst|Pre-Burst]] phase. Before and after your first {{SpellTooltip|spell_name=Furious Strike}}, buy max [[Sources#Hellhole_-_Demonologist|Hellholes]] and any Upgrades. Continue buying Upgrades, but not sources.
+*At 1e780 mana (1e384 [[Mysteries]]), {{SpellTooltip|spell_name=Meditative Fury}} becomes available. Use it in place of {{SpellTooltip|spell_name=Force Of Will}} everywhere, to boost Pet Ability Power and {{ItemTooltip|item_name=Cataclysm}} stacking. At low [[Attributes#Wisdom|Wisdom]], periodic manual casts of {{SpellTooltip|spell_name=Force Of Will}} may still be necessary to refill spells.
+*At higher Memories equip incant/evo duration reducing items during buildup with Muscle Memory to get slightly more RoP/UK/TTS casts
+*After your first burst you can go back to {{PetTooltip|Greater Chimaera}} to build up some sources you couldn't afford during burst
+*If going offline make sure you equip {{ItemTooltip|Light Of Eighth Star}} (Dust cap) and {{ItemTooltip|Blessed Tapestry}} (Attribute speed).
+
+===High Mysteries===
+<!--TODO: split into second guide-->
+At higher [[Mysteries]] we gain access to T3 pets and the [[Pantheon]] ([[Memetics]] will not change our strategy).
+
+{{SpellTooltip|spell_name=Meditative Fury}} improves {{ItemTooltip|item_name=Cataclysm}} stacking further. 
+
+'''Pets'''
+*{{PetTooltip|pet_name=Living Sin}} > {{PetTooltip|pet_name=Hungerer}} burst pet, level for 25 seconds.
+*{{PetTooltip|pet_name=Greater Chimaera}} > {{PetTooltip|pet_name=Simulacrum}} for Source stacking.
+
+'''Build up'''
+*You can get around 10% more RoP and UK casts with maxed Muscle Memory, Kata bracers, Searing Gaze, Frosty ring, Habitstone. Rest of items can be enchanted with CAP to increase it more. If you have plenty of Iron Blood stacks you could use them up to cast more too.
+
+'''Cataclysm''' 
+*You want to make sure you get as many casts as possible of both Fireball and Hellstorm, so equipping items like Searing Gaze, and Warp Basilisk will increase overall stacks. Make sure to try to press Cataclysm when all non summon spells are about to cast at the same time (If you swap spell set, usually after 4 casts of MF & UK they will be decently timed).
+
+==Ascension Forms==
+Oni has access to the {{ClassTooltip|Tempest}} and {{ClassTooltip|Defiance}} [[Ascension Forms]].
+
+Guides for each form continue here:
+* {{ClassTooltip|Tempest|link=Tempest Oni Guide|display_name=Tempest Oni}}
+* {{ClassTooltip|Defiance|link=Defiance Oni Guide|display_name=Defiance Oni}}

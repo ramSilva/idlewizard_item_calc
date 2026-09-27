@@ -1,0 +1,85 @@
+{{ClassInfobox
+|level=
+*[[Paragon]] level 22
+*Any level 110
+**{{ClassTooltip|Apprentice}}
+**{{ClassTooltip|Demonologist}}
+**{{ClassTooltip|Ironsoul}}
+|unlock=
+*Any pet level 150
+*Use 3000 {{SpellTooltip|Empower}}
+|source=Grim Trophy
+}}
+==Description==
+
+Increases pet ability power depending on pet level and pet playtime. Can utilize three different modes, which augment his ability to charge spells, stack buffs, or use profiting spells.
+
+Unique [[Sources|Source]]: Grim Trophy, replacing Enchanted Tree.
+
+In addition, Oni has access to Hellholes (instead of Circles of Power) and Monuments (instead of Spell Fountains), like the {{ClassTooltip|Demonologist}} and the {{ClassTooltip|Ironsoul}}.
+
+Upon reaching [[Paragon]] 42, Oni may take on either [[Ascension Forms]]: {{ClassTooltip|Tempest}} or {{ClassTooltip|Defiance}}.
+
+==Basic Design==
+{{ClassTooltip|class_name = Oni}} is a combination of {{ClassTooltip|class_name = Ironsoul}} and {{ClassTooltip|class_name = Demonologist}} and thus combines high pet levels and well scaling accumalated spells, such as {{SpellTooltip|spell_name = Enhanced Strength}} and {{SpellTooltip|spell_name = Iron Blood}}. Oni also synergizes well with high pet levels with the spell {{SpellTooltip|spell_name = Possessed Blade}} and it's hero abilities both scaling with PetLevel^0.8.
+
+Since Oni has access to {{SpellTooltip|spell_name = Furious Strike}} you can use {{ItemTooltip|item_name = Berzerker}} to stack spells, Oni's defense stance also gives you the ability to greatly increase casts per second even without {{ItemTooltip|item_name = Berzerker}}.
+
+While bursting Oni commonly uses {{SpellTooltip|spell_name = Iron Blood}}, {{SpellTooltip|spell_name = Enhanced Strength}}, {{SpellTooltip|spell_name = Possessed Blade}}, {{SpellTooltip|spell_name = Ritual Of Power}}, {{SpellTooltip|spell_name = Goblet Of Fire}} and uses the evocation spell {{SpellTooltip|spell_name = Furious Strike}}. {{SpellTooltip|spell_name = Furious Strike}} can be charged using {{SpellTooltip|spell_name = Temper The Steel}}. The more charges, the more profit.
+
+This makes for a long-term scaling class with a lot of pet levels.
+
+==Guides==
+* [[Oni Guide]]
+* {{ClassTooltip|Tempest|link=Tempest Oni Guide|display_name=Tempest Oni}} ([[Ascension Forms|Ascension Form]])
+* {{ClassTooltip|Defiance|link=Defiance Oni Guide|display_name=Defiance Oni}} ([[Ascension Forms|Ascension Form]])
+
+''To learn about writing your own guides, please see the [[Guide to Guides]].''
+
+==Hero Ability==
+
+Multiplies pet ability power by:
+<br><math>\left(PetT \times \frac{G}{3600} + 1\right)^{0.5} \times PetL^{0.8} \times C^{0.5} \times \frac{L}{4\,000\,000\,000} + 1</math>
+
+
+Multiplies Incantation efficiency by:
+<br><math>\left(\left(I+1\right) \times L \times \frac{G^{0.5}}{100}\right)^{0.65} \times \frac{1}{250\,000} + 1</math>
+
+===Stances===
+''See: [[Stance]]''
+
+{{StanceTooltip|Meditation}} Stance charges shardless spells each second by:
+<br><math>\log_{10}\left(1 + \left(I+1\right) \times G \times C \times L^2\right) \times 1\% + 6\%</math>
+
+{{StanceTooltip|Defense}} Stance makes {{SpellTooltip|spell_name=Furious Strike}} instant, and divides Incantation duration by:
+<br><math>\log_{10}\left(1 + \left(I+1\right) \times G \times C \times L^2\right) + 1</math>
+
+{{StanceTooltip|Berserk}} Stance multiplies Evocation efficiency by:
+<br><math>\left(I+1\right) \times C^{0.5} \times L \times \frac{G}{10\,000} + 1</math>
+
+
+where:
+* <math>PetT = \text{Pet Time, in Seconds}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+* <math>PetL = \text{Pet Level}</math>
+* <math>C = \text{Character Ability Power}</math>
+* <math>L = \text{Character Level}</math>
+* <math>I = \text{Incantation Spells Cast this Exile}+1</math>
+
+==[[Spells]]==
+{{SpellList}}
+
+==[[Upgrades]]==
+{| class="mw-collapsible mw-collapsed wikitable" width="100%" data-expandtext="Reveal" data-collapsetext="Conceal"
+! colspan="50" |Upgrades
+|-
+|{{UpgradeList}}
+|}
+
+==Lore==
+{{Lore|To any Ironsoul, Oni are both a tale and a warning to never succumb to their rage, to hone their mind and balance as well as their blade. But one should not make the mistake of thinking that failing means becoming weaker - for Oni are more than a force to be reckoned with. As a warrior succumbs to his rage and blood lust, it is not rare that a demonic entity - or a Demonologist, longing for a strong, new body - wishes to overcome and possess them. But indeed rare is the case when the soul of the warrior is strong enough to fight the demon back after letting go of it's humanity - which mostly happens only to Ironsouls, masters of both mind and blade. The Oni are warriors whose desire for warfare and bloodshed has made them seek out demonic power. Bound together with a demonic entity in a single body, they sate its hunger with other living beings, and the demon inside dares not to try and take over the body of the warrior. A towering monstrosity, vaguely resembling an extremely muscular human with demonic features, wielding gigantic weapons, cleaving multiple enemies with each swing of their weapons and laughing maniacally at the same time, they are a true terror to behold. Demons are often as much afraid of them as are others, for Oni do not distinguish between foes, killing for the sake of killing.}}
+
+{{SiteNav}}
+[[Category:Classes]]
+[[Category:Wizard]]
+[[Category:Tier 2 Classes]]

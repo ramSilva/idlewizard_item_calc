@@ -1,0 +1,19 @@
+{{ItemPage|{{PAGENAME}}}}
+
+Note: Rubedo doesn't affect external casts (from {{SpellTooltip| Jas'Aham's Missile Storm|JMS}}, for example).
+==Unlocking==
+This Mount ''cannot'' be obtained through [[Items#Crafting|Item Crafting]].
+
+It is unlocked by performing [[Experiments]], and progress is only counted when the Mount slot is unlocked ([[Paragon]] 26 or 1e380 [[Mysteries]]).
+
+The amount of progress each Experiment contributes varies based on the type (aka color) and amount of [[Crafting Dust]] spent. Progress is determined as follows:
+<pre>
+({Red dust spent} * 2 + {Blue dust spent} * 1.5 + {Green dust spent} + {Orange dust spent}) / 2e5
+
+Unlocks when quotient is greater than or equal to 1
+</pre>
+
+<small>''NOTE: Credit for detailed information above goes to the relevant community members from the game's [https://discord.gg/DuqkuJfhTz Discord].''</small>
+
+[[Category:Items]]
+[[Category:Mount]]

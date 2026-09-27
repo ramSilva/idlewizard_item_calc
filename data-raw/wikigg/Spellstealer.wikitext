@@ -1,0 +1,31 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants a passive ability which makes {{SpellTooltip|spell_name=Counterspell}}  and {{SpellTooltip|spell_name=Debilitate}} more potent, at a higher cost per cast.
+
+==Details==
+
+Multiplies the efficiency of {{SpellTooltip|spell_name=Counterspell}} and {{SpellTooltip|spell_name=Debilitate}} by:
+<br><math>12.5 \times B^{1.05\times R}</math>
+
+Multiplies the shard cost of {{SpellTooltip|spell_name=Counterspell}} and {{SpellTooltip|spell_name=Debilitate}} by:
+<br><math>L^{4\times R} + 1</math>
+
+Multiplies the Shard Pool capacity by:
+<br><math>\left(\frac{C}{1000}\right) ^ R + 1</math>
+
+where:
+* <math>B = \text{Current Amount of Anti-magic Domes}</math>
+* <math>C = \text{Counterspell casts this exile}</math>
+* <math>L = \text{Hero Level}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

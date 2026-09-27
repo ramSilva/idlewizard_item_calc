@@ -1,0 +1,34 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants a passive ability which increases {{SpellTooltip|spell_name=Kelphior's Black Beam}} efficiency each time it is cast, capped by current [[Sources#Ley_Apex_-_Prodigy|Ley Apexes]] amount.
+
+==Details==
+
+Multiplies the efficiency of {{SpellTooltip|spell_name=Kelphior's Black Beam}} by:
+<br><math>C + 1</math>
+
+Each cast of {{SpellTooltip|spell_name=Kelphior's Black Beam}} grants:
+<br><math>C</math>
+<br>charges, up to a maximum of:
+<br><math>B^{2\times R} \times 10 + 1</math>
+
+Each second, loses:
+<br><math>C \times 0.01 + 1</math>
+<br>charges.
+
+where:
+* <math>B = \text{Current Amount of Ley Apexes}</math>
+* <math>C = \text{Weapon Charges}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

@@ -1,0 +1,35 @@
+{{ItemPage|{{PAGENAME}}}}
+
+==Description==
+Grants a summoning ability, which charges with autoclicks while {{SpellTooltip|spell_name=Rules Of Nature}} is active. When used, it autoclicks for a short duration with greatly increased efficiency per click.
+
+== Details ==
+On activation, for 10 seconds, autoclicks:
+* 1 times per second
+* with <math>\left(C \times R \times S^{1+0.5 \times R} \times 100 + 1 \right) \times P_{C} \times P_{A} \times (1 + C_{C} \times C_{P})</math> profit per click
+
+
+While {{SpellTooltip|spell_name=Rules Of Nature}} is active, each autoclick grants:
+<br><math>\left( \frac{A}{1000} \right)^{0.4} \times R</math>
+<br>charges. Has a maximum of 2 000 000 charges. Consumes all charges on use.
+
+where:
+* <math>C = \text{Weapon Charges}</math>
+* <math>S = \text{Summoning Efficiency}</math>
+* <math>A = 1000 \leq \text{Autoclicks This Exile} \leq 1\mathrm{e}8</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4}</math>
+* <math>P_{C} = \text{Click Profit}</math>
+* <math>P_{A} = \text{Autoclick Profit}</math>
+* <math>C_{C} = \text{Crit Chance}</math>
+* <math>C_{P} = \text{Crit Profit}</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+[[Category:Items]]
+[[Category:Weapon]]

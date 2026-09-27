@@ -1,0 +1,37 @@
+{{ItemPage|{{#titleparts:{{PAGENAME}}}}}}
+
+==Description==
+Grants a passive ability which grants an Efficiency bonus for each ingredient present in cauldron, improving the Spell Types which where NOT used for the ingredient creation (e.g. casting an Evocation spell and maintaining its element buffs Incantation and Summoning efficiency).
+
+==Details==
+
+Multiplies Evocation efficiency by:
+<br><math>N^{5 - E}</math>
+
+Multiplies Incantation efficiency by:
+<br><math>N^{5 - I}</math>
+
+Multiplies Summoning efficiency by:
+<br><math>N^{5 - S}</math>
+
+
+where:
+* <math>E = \text{Evocation Ingredients}</math>
+* <math>I = \text{Incantation Ingredients}</math>
+* <math>S = \text{Summoning Ingredients}</math>
+* <math>N = (B+1)^{R}</math>
+* <math>B = \text{Current Amount of Laboratories}</math>
+* <math>R = \frac{1 + 0.75 \times \text{Tier}}{4} \times 0.065</math>
+
+Tiers:
+* <math>\text{Common} = 0</math>
+* <math>\text{Uncommon} = 1</math>
+* <math>\text{Rare} = 2</math>
+* <math>\text{Epic} = 3</math>
+* <math>\text{Legendary} = 4</math>
+* <math>\text{Unique} = 4</math>
+
+Considering that each elixir requires 1 ingredients for one kind and 2 each from the other 2 kinds, it means that you always get <math>N^4</math>for the ingredient less requested in the recipe of an elixir, and <math>N^3</math>for the other two. For Evocation Elixir the former is the Anima (evocation related) component, so you get the best bonus at Evocation Efficiency. Similarly Summon Elixir gets the best bonus in Summoning Efficiency. The two remaining ones, Pet and Shadow Elixir, receive the best bonus in Incantation Efficiency instead.
+
+[[Category:Items]]
+[[Category:Weapon]]

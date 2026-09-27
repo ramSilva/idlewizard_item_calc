@@ -1,0 +1,51 @@
+{{PetInfobox
+|selection=
+*[[Paragon]] level 7
+*Character level 84
+*30 [[Attributes#Intelligence|Intelligence]]
+*10 [[Attributes#Patience|Patience]]
+|unlock=
+* 1.2e4 total [[Sources|Mana Sources]]
+*{{PetTooltip|Homunculus}} level 100
+|description=''Utilizing new knowledge brought about by the age of time traveling, sorcerers around the world began experimenting further with the [[Homunculus|Homunculi]]. These new Simulacrums are much more than the pale copies of human beings the homunculi were - the intelligence they possess sometimes even surpasses those of their creators.''
+}}
+
+== Description ==
+An upgraded version of {{PetTooltip|Homunculus}}, increasing profits and periodically granting [[Sources|mana sources]].
+
+Gains experience based on Character Level.
+
+== Pet Abilities ==
+
+Multiplies profits by:
+<br><math>L \times P \times 5 + 1</math>
+
+
+Grants one mana source every:
+<br><math>\left\lfloor \frac{S^{0.5}}{P} \right\rceil</math>
+<br>seconds (minimum 1),  whose cost does not exceed:
+<br><math>M \times 500</math>
+<br>''Note: Chooses from sources with at least one manual purchase.''
+
+where:
+* <math>L = \text{Pet Level}</math>
+* <math>P = \text{Pet Ability Power}</math>
+* <math>S = \text{Bought Mana Sources}</math>
+* <math>M = \text{All Mana this Realm}</math>
+
+== Experience Gain ==
+Gains experience each second, equal to:
+<br><math>\left(1 + \frac{L}{100} + F\right) \times M</math>
+<br>where:
+* <math>L = \text{Character Level}</math>
+* <math>F = \text{Fixed Pet XP Bonus}</math>
+* <math>M = \text{Pet XP Multiplier}</math>
+
+== Strategy ==
+* Like {{PetTooltip|Homunculus}}, its source maxing ability can be used to meet unlock conditions earlier than otherwise possible.
+* Combine with {{ItemTooltip|Whiplash}} and {{ItemTooltip|Collar Of Obedience}} to quickly max sources at the start of an Exile.
+* From the start of the Exile, buy only one type of mana source. Since its source-granting ability only works on purchased sources (i.e. excludes Red [[Catalysts]]), this is the fastest way to generate a particular mana source. After reaching the target amount, other sources can be purchased.
+
+{{SiteNav}}
+[[Category:Pets]]
+[[Category:Tier 2 Pets]]
