@@ -22,7 +22,7 @@ todos:
     status: completed
   - id: encode-chronomancer
     content: Encode Chronomancer ability, spells and guide pet(s), reading only the setup sections of the Fandom guide (no gear sections)
-    status: pending
+    status: completed
   - id: optimizer
     content: "Implement Web Worker optimizer: relevance filter, per-slot pruning, set-permutation test, branch-and-bound, Resonator/Legion branching, enchant-level sweep"
     status: pending
