@@ -1,0 +1,1179 @@
+Chronomancer with Greater Chimaera, spells 69,4,73,17,60, score production
+Legion on; snapped 69,4; 56 levels in 33.59 s (setup 14 ms)
+Enchant 0: ×7.17e19 vs no items, other branch ×0.251 [34 candidates, 14 searched slots, 0 leaves, 5784 bounds, 129 ms]
+    Head       Conjured Ragecrown                       ×14
+    Hands      Talented Gloves                          ×22.5
+    Chest      Conjured Thornmail                       ×14
+    Feet       Conjured Spiked Stompers                 ×10.7
+    Shoulder   Conjured Razorspaulders                  ×27.9
+    Neck       Lucky Amulet                             ×7.96
+    Waist      Colourful Belt                           ×14.4
+    Wrist      Conjured Sawrings                        ×17.5
+    Back       Fancy Cape                               ×18
+    Legs       Mesmerizing Pants                        ×22.5
+    Offhand    Murmuring Spellbook                      ×67.1
+    Research   Daemonics Reverse-Engineering            ×10
+    Accessory  Bag Of Tricks                            ×26.2
+    Mount      Warp Basilisk                            ×1
+    Phylactery Inert Jade Phylactery                    ×98.8
+    Weapon     The Accumulator                          ×1
+    Finger     Chronoboost Ring                         ×3.98
+    Finger     Morbid Loop                              ×6
+    Trophy     Anima Core                               ×27.4
+    Trophy     Blessed Armor Scales                     ×21
+Enchant 1 (forced: resonator-ring): ×2.11e27 vs no items, other branch ×0.0000163 [35 candidates, 12 searched slots, 2106 leaves, 41478 bounds, 442 ms]
+    Head       Circlet Of Deep Thoughts +1 (6)          ×12.5
+    Hands      Talented Gloves +1 (6)                   ×67.2
+    Chest      Seclusion Shell +1 (6)                   ×45.6
+    Feet       Boots Of Concentration +1 (6)            ×26
+    Shoulder   Tranquil Spaulders +1 (6)                ×55
+    Neck       Lucky Amulet +1 (6)                      ×30.3
+    Waist      Colourful Belt +1 (6)                    ×43.1
+    Wrist      Focusing Bracers +1 (6)                  ×19.5
+    Back       Fancy Cape +1 (6)                        ×53.7
+    Legs       Mesmerizing Pants +1 (6)                 ×67.2
+    Offhand    Murmuring Spellbook +1 (6)               ×200
+    Research   Daemonics Reverse-Engineering +1 (6)     ×29.9
+    Accessory  Bag Of Tricks +1 (6)                     ×100
+    Mount      The Rubedo Engine +1 (6)                 ×2.03
+    Phylactery Robust Tangerine Phylactery +1 (6)       ×175
+    Weapon     The Accumulator +1 (6)                   ×2.46
+    Finger     Morbid Loop +1 (6)                       ×13.9
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +1 (6)                        ×56.2
+    Trophy     Blessed Armor Scales +1 (6)              ×80.1
+Enchant 2 (forced: resonator-ring): ×6.73e28 vs no items, other branch ×0.0000128 [30 candidates, 11 searched slots, 108 leaves, 3274 bounds, 79 ms]
+    Head       Circlet Of Deep Thoughts +2 (7)          ×15.6
+    Hands      Talented Gloves +2 (7)                   ×80.6
+    Chest      Seclusion Shell +2 (7)                   ×56.9
+    Feet       Boots Of Concentration +2 (7)            ×32.5
+    Shoulder   Tranquil Spaulders +2 (7)                ×68.8
+    Neck       Lucky Amulet +2 (7)                      ×37.9
+    Waist      Colourful Belt +2 (7)                    ×51.7
+    Wrist      Focusing Bracers +2 (7)                  ×23.4
+    Back       Fancy Cape +2 (7)                        ×64.5
+    Legs       Mesmerizing Pants +2 (7)                 ×80.6
+    Offhand    Murmuring Spellbook +2 (7)               ×240
+    Research   Daemonics Reverse-Engineering +2 (7)     ×35.8
+    Accessory  Bag Of Tricks +2 (7)                     ×125
+    Mount      The Rubedo Engine +2 (7)                 ×2.28
+    Phylactery Robust Tangerine Phylactery +2 (7)       ×193
+    Weapon     The Accumulator +2 (7)                   ×2.86
+    Finger     Morbid Loop +2 (7)                       ×16
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +2 (7)                        ×63.4
+    Trophy     Blessed Armor Scales +2 (7)              ×100
+Enchant 3 (forced: resonator-ring): ×2.15e30 vs no items, other branch ×0.0000101 [30 candidates, 11 searched slots, 108 leaves, 3709 bounds, 83 ms]
+    Head       Circlet Of Deep Thoughts +3 (8)          ×19.5
+    Hands      Talented Gloves +3 (8)                   ×96.7
+    Chest      Seclusion Shell +3 (8)                   ×71.2
+    Feet       Boots Of Concentration +3 (8)            ×40.6
+    Shoulder   Tranquil Spaulders +3 (8)                ×85.9
+    Neck       Lucky Amulet +3 (8)                      ×47.4
+    Waist      Colourful Belt +3 (8)                    ×62.1
+    Wrist      Focusing Bracers +3 (8)                  ×28.1
+    Back       Fancy Cape +3 (8)                        ×77.4
+    Legs       Mesmerizing Pants +3 (8)                 ×96.7
+    Offhand    Murmuring Spellbook +3 (8)               ×288
+    Research   Daemonics Reverse-Engineering +3 (8)     ×43
+    Accessory  Bag Of Tricks +3 (8)                     ×156
+    Mount      The Rubedo Engine +3 (8)                 ×2.57
+    Phylactery Robust Tangerine Phylactery +3 (8)       ×212
+    Weapon     The Accumulator +3 (8)                   ×3.33
+    Finger     Morbid Loop +3 (8)                       ×18.4
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +3 (8)                        ×71.5
+    Trophy     Blessed Armor Scales +3 (8)              ×125
+Enchant 4 (forced: resonator-ring): ×6.84e31 vs no items, other branch ×0.00000801 [30 candidates, 11 searched slots, 132 leaves, 4183 bounds, 89 ms]
+    Head       Circlet Of Deep Thoughts +4 (9)          ×24.3
+    Hands      Talented Gloves +4 (9)                   ×116
+    Chest      Seclusion Shell +4 (9)                   ×88.9
+    Feet       Boots Of Concentration +4 (9)            ×50.7
+    Shoulder   Tranquil Spaulders +4 (9)                ×107
+    Neck       Lucky Amulet +4 (9)                      ×59.2
+    Waist      Colourful Belt +4 (9)                    ×74.5
+    Wrist      Focusing Bracers +4 (9)                  ×33.7
+    Back       Fancy Cape +4 (9)                        ×92.9
+    Legs       Mesmerizing Pants +4 (9)                 ×116
+    Offhand    Murmuring Spellbook +4 (9)               ×346
+    Research   Daemonics Reverse-Engineering +4 (9)     ×51.6
+    Accessory  Bag Of Tricks +4 (9)                     ×196
+    Mount      The Rubedo Engine +4 (9)                 ×2.89
+    Phylactery Robust Tangerine Phylactery +4 (9)       ×233
+    Weapon     The Accumulator +4 (9)                   ×3.86
+    Finger     Morbid Loop +4 (9)                       ×21.1
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +4 (9)                        ×80.6
+    Trophy     Blessed Armor Scales +4 (9)              ×156
+Enchant 5 (forced: resonator-ring): ×2.18e33 vs no items, other branch ×0.00000672 [30 candidates, 11 searched slots, 144 leaves, 4441 bounds, 91 ms]
+    Head       Circlet Of Deep Thoughts +5 (10)         ×30.4
+    Hands      Talented Gloves +5 (10)                  ×139
+    Chest      Seclusion Shell +5 (10)                  ×111
+    Feet       Boots Of Concentration +5 (10)           ×63.4
+    Shoulder   Tranquil Spaulders +5 (10)               ×134
+    Neck       Lucky Amulet +5 (10)                     ×74
+    Waist      Colourful Belt +5 (10)                   ×89.4
+    Wrist      Focusing Bracers +5 (10)                 ×40.5
+    Back       Fancy Cape +5 (10)                       ×111
+    Legs       Mesmerizing Pants +5 (10)                ×139
+    Offhand    Murmuring Spellbook +5 (10)              ×415
+    Research   Daemonics Reverse-Engineering +5 (10)    ×61.9
+    Accessory  Bag Of Tricks +5 (10)                    ×244
+    Mount      The Rubedo Engine +5 (10)                ×3.25
+    Phylactery Robust Tangerine Phylactery +5 (10)      ×256
+    Weapon     The Accumulator +5 (10)                  ×4.49
+    Finger     Morbid Loop +5 (10)                      ×24.3
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +5 (10)                       ×90.9
+    Trophy     Blessed Armor Scales +5 (10)             ×196
+Enchant 6 (forced: resonator-ring): ×6.95e34 vs no items, other branch ×0.00000773 [30 candidates, 11 searched slots, 168 leaves, 4729 bounds, 94 ms]
+    Head       Circlet Of Deep Thoughts +6 (11)         ×38
+    Hands      Talented Gloves +6 (11)                  ×167
+    Chest      Seclusion Shell +6 (11)                  ×139
+    Feet       Boots Of Concentration +6 (11)           ×79.2
+    Shoulder   Tranquil Spaulders +6 (11)               ×168
+    Neck       Lucky Amulet +6 (11)                     ×92.5
+    Waist      Colourful Belt +6 (11)                   ×107
+    Wrist      Focusing Bracers +6 (11)                 ×48.5
+    Back       Fancy Cape +6 (11)                       ×134
+    Legs       Mesmerizing Pants +6 (11)                ×167
+    Offhand    Murmuring Spellbook +6 (11)              ×498
+    Research   Daemonics Reverse-Engineering +6 (11)    ×74.3
+    Accessory  Bag Of Tricks +6 (11)                    ×306
+    Mount      The Rubedo Engine +6 (11)                ×3.65
+    Phylactery Robust Tangerine Phylactery +6 (11)      ×282
+    Weapon     The Accumulator +6 (11)                  ×5.22
+    Finger     Morbid Loop +6 (11)                      ×27.9
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +6 (11)                       ×103
+    Trophy     Blessed Armor Scales +6 (11)             ×244
+Enchant 7 (forced: resonator-ring): ×2.21e36 vs no items, other branch ×0.00000889 [30 candidates, 11 searched slots, 186 leaves, 5050 bounds, 94 ms]
+    Head       Circlet Of Deep Thoughts +7 (12)         ×47.5
+    Hands      Talented Gloves +7 (12)                  ×201
+    Chest      Seclusion Shell +7 (12)                  ×174
+    Feet       Boots Of Concentration +7 (12)           ×99
+    Shoulder   Tranquil Spaulders +7 (12)               ×209
+    Neck       Lucky Amulet +7 (12)                     ×116
+    Waist      Colourful Belt +7 (12)                   ×129
+    Wrist      Focusing Bracers +7 (12)                 ×58.2
+    Back       Fancy Cape +7 (12)                       ×160
+    Legs       Mesmerizing Pants +7 (12)                ×201
+    Offhand    Murmuring Spellbook +7 (12)              ×598
+    Research   Daemonics Reverse-Engineering +7 (12)    ×89.2
+    Accessory  Bag Of Tricks +7 (12)                    ×382
+    Mount      The Rubedo Engine +7 (12)                ×4.11
+    Phylactery Robust Tangerine Phylactery +7 (12)      ×310
+    Weapon     The Accumulator +7 (12)                  ×6.06
+    Finger     Morbid Loop +7 (12)                      ×32.1
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +7 (12)                       ×116
+    Trophy     Blessed Armor Scales +7 (12)             ×306
+Enchant 8 (forced: resonator-ring): ×7.06e37 vs no items, other branch ×0.0000103 [30 candidates, 11 searched slots, 198 leaves, 5542 bounds, 97 ms]
+    Head       Circlet Of Deep Thoughts +8 (13)         ×59.4
+    Hands      Talented Gloves +8 (13)                  ×241
+    Chest      Seclusion Shell +8 (13)                  ×217
+    Feet       Boots Of Concentration +8 (13)           ×124
+    Shoulder   Tranquil Spaulders +8 (13)               ×262
+    Neck       Lucky Amulet +8 (13)                     ×145
+    Waist      Colourful Belt +8 (13)                   ×154
+    Wrist      Focusing Bracers +8 (13)                 ×69.9
+    Back       Fancy Cape +8 (13)                       ×193
+    Legs       Mesmerizing Pants +8 (13)                ×241
+    Offhand    Murmuring Spellbook +8 (13)              ×718
+    Research   Daemonics Reverse-Engineering +8 (13)    ×107
+    Accessory  Bag Of Tricks +8 (13)                    ×477
+    Mount      The Rubedo Engine +8 (13)                ×4.62
+    Phylactery Robust Tangerine Phylactery +8 (13)      ×341
+    Weapon     The Accumulator +8 (13)                  ×7.04
+    Finger     Morbid Loop +8 (13)                      ×36.9
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +8 (13)                       ×130
+    Trophy     Blessed Armor Scales +8 (13)             ×382
+Enchant 9 (forced: resonator-ring): ×2.25e39 vs no items, other branch ×0.0000134 [30 candidates, 11 searched slots, 222 leaves, 5824 bounds, 99 ms]
+    Head       Circlet Of Deep Thoughts +9 (14)         ×74.2
+    Hands      Talented Gloves +9 (14)                  ×289
+    Chest      Seclusion Shell +9 (14)                  ×271
+    Feet       Boots Of Concentration +9 (14)           ×155
+    Shoulder   Tranquil Spaulders +9 (14)               ×327
+    Neck       Lucky Amulet +9 (14)                     ×181
+    Waist      Colourful Belt +9 (14)                   ×185
+    Wrist      Focusing Bracers +9 (14)                 ×83.8
+    Back       Fancy Cape +9 (14)                       ×231
+    Legs       Mesmerizing Pants +9 (14)                ×289
+    Offhand    Murmuring Spellbook +9 (14)              ×861
+    Research   Daemonics Reverse-Engineering +9 (14)    ×128
+    Accessory  Bag Of Tricks +9 (14)                    ×597
+    Mount      The Rubedo Engine +9 (14)                ×5.2
+    Phylactery Robust Tangerine Phylactery +9 (14)      ×375
+    Weapon     The Accumulator +9 (14)                  ×8.18
+    Finger     Morbid Loop +9 (14)                      ×42.5
+    Finger     Resonator Ring                           ×1.03e6
+    Trophy     Anima Core +9 (14)                       ×147
+    Trophy     Blessed Armor Scales +9 (14)             ×477
+Enchant 10 (forced: resonator-ring): ×7.52e40 vs no items, other branch ×0.0000166 [30 candidates, 11 searched slots, 234 leaves, 5923 bounds, 101 ms]
+    Head       Circlet Of Deep Thoughts +10 (15)        ×92.8
+    Hands      Talented Gloves +10 (15)                 ×347
+    Chest      Seclusion Shell +10 (15)                 ×339
+    Feet       Boots Of Concentration +10 (15)          ×193
+    Shoulder   Tranquil Spaulders +10 (15)              ×409
+    Neck       Lucky Amulet +10 (15)                    ×226
+    Waist      Colourful Belt +10 (15)                  ×222
+    Wrist      Focusing Bracers +10 (15)                ×101
+    Back       Fancy Cape +10 (15)                      ×277
+    Legs       Mesmerizing Pants +10 (15)               ×347
+    Offhand    Murmuring Spellbook +10 (15)             ×1030
+    Research   Daemonics Reverse-Engineering +10 (15)   ×154
+    Accessory  Bag Of Tricks +10 (15)                   ×746
+    Mount      The Rubedo Engine +10 (15)               ×5.85
+    Phylactery Robust Tangerine Phylactery +10 (15)     ×413
+    Weapon     The Accumulator +10 (15)                 ×9.5
+    Finger     Resonator Ring                           ×1.69e6
+    Finger     Spell Helix +10 (15)                     ×51.2
+    Trophy     Anima Core +10 (15)                      ×166
+    Trophy     Blessed Armor Scales +10 (15)            ×597
+Enchant 11 (forced: resonator-ring): ×2.71e42 vs no items, other branch ×0.0000191 [30 candidates, 11 searched slots, 336 leaves, 9844 bounds, 134 ms]
+    Head       Circlet Of Deep Thoughts +11 (16)        ×116
+    Hands      Talented Gloves +11 (16)                 ×416
+    Chest      Seclusion Shell +11 (16)                 ×423
+    Feet       Boots Of Concentration +11 (16)          ×242
+    Shoulder   Tranquil Spaulders +11 (16)              ×511
+    Neck       Lucky Amulet +11 (16)                    ×282
+    Waist      Colourful Belt +11 (16)                  ×267
+    Wrist      Focusing Bracers +11 (16)                ×121
+    Back       Fancy Cape +11 (16)                      ×333
+    Legs       Mesmerizing Pants +11 (16)               ×416
+    Offhand    Murmuring Spellbook +11 (16)             ×1240
+    Research   Daemonics Reverse-Engineering +11 (16)   ×185
+    Accessory  Bag Of Tricks +11 (16)                   ×933
+    Mount      The Rubedo Engine +11 (16)               ×6.58
+    Phylactery Robust Tangerine Phylactery +11 (16)     ×454
+    Weapon     The Accumulator +11 (16)                 ×11
+    Finger     Resonator Ring                           ×1.68e6
+    Finger     Spell Helix +11 (16)                     ×66.5
+    Trophy     Anima Core +11 (16)                      ×187
+    Trophy     Blessed Armor Scales +11 (16)            ×746
+Enchant 12 (forced: resonator-ring): ×1.03e44 vs no items, other branch ×0.0000208 [29 candidates, 10 searched slots, 150 leaves, 2746 bounds, 72 ms]
+    Head       Circlet Of Deep Thoughts +12 (17)        ×145
+    Hands      Talented Gloves +12 (17)                 ×499
+    Chest      Seclusion Shell +12 (17)                 ×532
+    Feet       Boots Of Concentration +12 (17)          ×303
+    Shoulder   Tranquil Spaulders +12 (17)              ×643
+    Neck       Lucky Amulet +12 (17)                    ×354
+    Waist      Colourful Belt +12 (17)                  ×320
+    Wrist      Focusing Bracers +12 (17)                ×145
+    Back       Fancy Cape +12 (17)                      ×399
+    Legs       Mesmerizing Pants +12 (17)               ×499
+    Offhand    Murmuring Spellbook +12 (17)             ×1490
+    Research   Daemonics Reverse-Engineering +12 (17)   ×222
+    Accessory  Bag Of Tricks +12 (17)                   ×1170
+    Mount      The Rubedo Engine +12 (17)               ×7.41
+    Phylactery Robust Tangerine Phylactery +12 (17)     ×500
+    Weapon     The Accumulator +12 (17)                 ×12.9
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +12 (17)                     ×86.5
+    Trophy     Blessed Armor Scales +12 (17)            ×933
+    Trophy     Collection Of Samples +12 (17)           ×222
+Enchant 13 (forced: resonator-ring): ×3.94e45 vs no items, other branch ×0.0000225 [29 candidates, 10 searched slots, 150 leaves, 2563 bounds, 69 ms]
+    Head       Circlet Of Deep Thoughts +13 (18)        ×182
+    Hands      Talented Gloves +13 (18)                 ×599
+    Chest      Seclusion Shell +13 (18)                 ×665
+    Feet       Boots Of Concentration +13 (18)          ×379
+    Shoulder   Tranquil Spaulders +13 (18)              ×803
+    Neck       Lucky Amulet +13 (18)                    ×442
+    Waist      Colourful Belt +13 (18)                  ×384
+    Wrist      Focusing Bracers +13 (18)                ×174
+    Back       Fancy Cape +13 (18)                      ×479
+    Legs       Mesmerizing Pants +13 (18)               ×599
+    Offhand    Murmuring Spellbook +13 (18)             ×1790
+    Research   Daemonics Reverse-Engineering +13 (18)   ×266
+    Accessory  Bag Of Tricks +13 (18)                   ×1460
+    Mount      The Rubedo Engine +13 (18)               ×8.33
+    Phylactery Robust Tangerine Phylactery +13 (18)     ×549
+    Weapon     The Accumulator +13 (18)                 ×15
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +13 (18)                     ×112
+    Trophy     Blessed Armor Scales +13 (18)            ×1170
+    Trophy     Collection Of Samples +13 (18)           ×266
+Enchant 14 (forced: resonator-ring): ×1.51e47 vs no items, other branch ×0.0000243 [29 candidates, 10 searched slots, 150 leaves, 2575 bounds, 69 ms]
+    Head       Circlet Of Deep Thoughts +14 (19)        ×227
+    Hands      Talented Gloves +14 (19)                 ×719
+    Chest      Seclusion Shell +14 (19)                 ×831
+    Feet       Boots Of Concentration +14 (19)          ×473
+    Shoulder   Tranquil Spaulders +14 (19)              ×1000
+    Neck       Lucky Amulet +14 (19)                    ×552
+    Waist      Colourful Belt +14 (19)                  ×461
+    Wrist      Focusing Bracers +14 (19)                ×209
+    Back       Fancy Cape +14 (19)                      ×575
+    Legs       Mesmerizing Pants +14 (19)               ×719
+    Offhand    Murmuring Spellbook +14 (19)             ×2140
+    Research   Daemonics Reverse-Engineering +14 (19)   ×319
+    Accessory  Bag Of Tricks +14 (19)                   ×1820
+    Mount      The Rubedo Engine +14 (19)               ×9.37
+    Phylactery Robust Tangerine Phylactery +14 (19)     ×604
+    Weapon     The Accumulator +14 (19)                 ×17.5
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +14 (19)                     ×146
+    Trophy     Blessed Armor Scales +14 (19)            ×1460
+    Trophy     Collection Of Samples +14 (19)           ×319
+Enchant 15 (forced: resonator-ring): ×5.79e48 vs no items, other branch ×0.0000263 [29 candidates, 10 searched slots, 156 leaves, 2581 bounds, 68 ms]
+    Head       Circlet Of Deep Thoughts +15 (20)        ×284
+    Hands      Talented Gloves +15 (20)                 ×863
+    Chest      Seclusion Shell +15 (20)                 ×1040
+    Feet       Boots Of Concentration +15 (20)          ×592
+    Shoulder   Tranquil Spaulders +15 (20)              ×1250
+    Neck       Lucky Amulet +15 (20)                    ×690
+    Waist      Colourful Belt +15 (20)                  ×553
+    Wrist      Focusing Bracers +15 (20)                ×251
+    Back       Fancy Cape +15 (20)                      ×690
+    Legs       Mesmerizing Pants +15 (20)               ×863
+    Offhand    Murmuring Spellbook +15 (20)             ×2570
+    Research   Daemonics Reverse-Engineering +15 (20)   ×383
+    Accessory  Bag Of Tricks +15 (20)                   ×2280
+    Mount      The Rubedo Engine +15 (20)               ×10.5
+    Phylactery Robust Tangerine Phylactery +15 (20)     ×665
+    Weapon     The Accumulator +15 (20)                 ×20.3
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +15 (20)                     ×190
+    Trophy     Blessed Armor Scales +15 (20)            ×1820
+    Trophy     Collection Of Samples +15 (20)           ×383
+Enchant 16 (forced: resonator-ring): ×2.22e50 vs no items, other branch ×0.0000299 [29 candidates, 10 searched slots, 162 leaves, 2596 bounds, 69 ms]
+    Head       Circlet Of Deep Thoughts +16 (21)        ×355
+    Hands      Talented Gloves +16 (21)                 ×1040
+    Chest      Seclusion Shell +16 (21)                 ×1300
+    Feet       Boots Of Concentration +16 (21)          ×739
+    Shoulder   Tranquil Spaulders +16 (21)              ×1570
+    Neck       Lucky Amulet +16 (21)                    ×863
+    Waist      Colourful Belt +16 (21)                  ×664
+    Wrist      Focusing Bracers +16 (21)                ×301
+    Back       Fancy Cape +16 (21)                      ×828
+    Legs       Mesmerizing Pants +16 (21)               ×1040
+    Offhand    Murmuring Spellbook +16 (21)             ×3090
+    Research   Daemonics Reverse-Engineering +16 (21)   ×460
+    Accessory  Bag Of Tricks +16 (21)                   ×2850
+    Mount      The Rubedo Engine +16 (21)               ×11.9
+    Phylactery Robust Tangerine Phylactery +16 (21)     ×731
+    Weapon     The Accumulator +16 (21)                 ×23.6
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +16 (21)                     ×247
+    Trophy     Blessed Armor Scales +16 (21)            ×2280
+    Trophy     Collection Of Samples +16 (21)           ×460
+Enchant 17 (forced: resonator-ring): ×8.51e51 vs no items, other branch ×0.0000344 [29 candidates, 10 searched slots, 162 leaves, 2602 bounds, 69 ms]
+    Head       Circlet Of Deep Thoughts +17 (22)        ×444
+    Hands      Talented Gloves +17 (22)                 ×1240
+    Chest      Seclusion Shell +17 (22)                 ×1620
+    Feet       Boots Of Concentration +17 (22)          ×924
+    Shoulder   Tranquil Spaulders +17 (22)              ×1960
+    Neck       Lucky Amulet +17 (22)                    ×1080
+    Waist      Colourful Belt +17 (22)                  ×797
+    Wrist      Focusing Bracers +17 (22)                ×361
+    Back       Fancy Cape +17 (22)                      ×994
+    Legs       Mesmerizing Pants +17 (22)               ×1240
+    Offhand    Murmuring Spellbook +17 (22)             ×3700
+    Research   Daemonics Reverse-Engineering +17 (22)   ×552
+    Accessory  Bag Of Tricks +17 (22)                   ×3560
+    Mount      The Rubedo Engine +17 (22)               ×13.3
+    Phylactery Robust Tangerine Phylactery +17 (22)     ×804
+    Weapon     The Accumulator +17 (22)                 ×27.4
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +17 (22)                     ×321
+    Trophy     Blessed Armor Scales +17 (22)            ×2850
+    Trophy     Collection Of Samples +17 (22)           ×552
+Enchant 18 (forced: resonator-ring): ×3.26e53 vs no items, other branch ×0.0000395 [33 candidates, 11 searched slots, 1116 leaves, 36100 bounds, 367 ms]
+    Head       Circlet Of Deep Thoughts +18 (23)        ×554
+    Hands      Talented Gloves +18 (23)                 ×1490
+    Chest      Seclusion Shell +18 (23)                 ×2030
+    Feet       Boots Of Concentration +18 (23)          ×1160
+    Shoulder   Tranquil Spaulders +18 (23)              ×2450
+    Neck       Lucky Amulet +18 (23)                    ×1350
+    Waist      Colourful Belt +18 (23)                  ×956
+    Wrist      Focusing Bracers +18 (23)                ×434
+    Back       Fancy Cape +18 (23)                      ×1190
+    Legs       Mesmerizing Pants +18 (23)               ×1490
+    Offhand    Murmuring Spellbook +18 (23)             ×4440
+    Research   Daemonics Reverse-Engineering +18 (23)   ×662
+    Accessory  Bag Of Tricks +18 (23)                   ×4450
+    Mount      The Rubedo Engine +18 (23)               ×15
+    Phylactery Robust Tangerine Phylactery +18 (23)     ×885
+    Weapon     The Accumulator +18 (23)                 ×31.9
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +18 (23)                     ×418
+    Trophy     Blessed Armor Scales +18 (23)            ×3560
+    Trophy     Collection Of Samples +18 (23)           ×662
+Enchant 19 (forced: resonator-ring): ×1.25e55 vs no items, other branch ×0.0000455 [33 candidates, 11 searched slots, 1116 leaves, 36469 bounds, 366 ms]
+    Head       Circlet Of Deep Thoughts +19 (24)        ×693
+    Hands      Talented Gloves +19 (24)                 ×1790
+    Chest      Seclusion Shell +19 (24)                 ×2530
+    Feet       Boots Of Concentration +19 (24)          ×1440
+    Shoulder   Tranquil Spaulders +19 (24)              ×3060
+    Neck       Lucky Amulet +19 (24)                    ×1680
+    Waist      Colourful Belt +19 (24)                  ×1150
+    Wrist      Focusing Bracers +19 (24)                ×520
+    Back       Fancy Cape +19 (24)                      ×1430
+    Legs       Mesmerizing Pants +19 (24)               ×1790
+    Offhand    Murmuring Spellbook +19 (24)             ×5330
+    Research   Daemonics Reverse-Engineering +19 (24)   ×795
+    Accessory  Bag Of Tricks +19 (24)                   ×5560
+    Mount      The Rubedo Engine +19 (24)               ×16.9
+    Phylactery Robust Tangerine Phylactery +19 (24)     ×973
+    Weapon     The Accumulator +19 (24)                 ×37.1
+    Finger     Resonator Ring                           ×2.16e6
+    Finger     Spell Helix +19 (24)                     ×543
+    Trophy     Blessed Armor Scales +19 (24)            ×4450
+    Trophy     Collection Of Samples +19 (24)           ×795
+Enchant 20 (forced: resonator-ring): ×4.82e56 vs no items, other branch ×0.000052 [33 candidates, 11 searched slots, 1140 leaves, 36802 bounds, 371 ms]
+    Head       Circlet Of Deep Thoughts +20 (25)        ×866
+    Hands      Talented Gloves +20 (25)                 ×2150
+    Chest      Seclusion Shell +20 (25)                 ×3170
+    Feet       Boots Of Concentration +20 (25)          ×1800
+    Shoulder   Tranquil Spaulders +20 (25)              ×3820
+    Neck       Lucky Amulet +20 (25)                    ×2110
+    Waist      Colourful Belt +20 (25)                  ×1380
+    Wrist      Focusing Bracers +20 (25)                ×624
+    Back       Fancy Cape +20 (25)                      ×1720
+    Legs       Mesmerizing Pants +20 (25)               ×2150
+    Offhand    Murmuring Spellbook +20 (25)             ×6400
+    Research   Daemonics Reverse-Engineering +20 (25)   ×954
+    Accessory  Bag Of Tricks +20 (25)                   ×6950
+    Mount      The Rubedo Engine +20 (25)               ×19
+    Phylactery Robust Tangerine Phylactery +20 (25)     ×1070
+    Weapon     The Accumulator +20 (25)                 ×43.1
+    Finger     Resonator Ring                           ×2.35e6
+    Finger     Spell Helix +20 (25)                     ×706
+    Trophy     Beholding Eye +20 (25)                   ×958
+    Trophy     Blessed Armor Scales +20 (25)            ×5560
+Enchant 21 (forced: resonator-ring): ×1.88e58 vs no items, other branch ×0.0000586 [33 candidates, 11 searched slots, 1206 leaves, 37117 bounds, 374 ms]
+    Head       Circlet Of Deep Thoughts +21 (26)        ×1080
+    Hands      Talented Gloves +21 (26)                 ×2580
+    Chest      Seclusion Shell +21 (26)                 ×3960
+    Feet       Boots Of Concentration +21 (26)          ×2260
+    Shoulder   Tranquil Spaulders +21 (26)              ×4780
+    Neck       Lucky Amulet +21 (26)                    ×2630
+    Waist      Colourful Belt +21 (26)                  ×1650
+    Wrist      Focusing Bracers +21 (26)                ×749
+    Back       Fancy Cape +21 (26)                      ×2060
+    Legs       Mesmerizing Pants +21 (26)               ×2580
+    Offhand    Murmuring Spellbook +21 (26)             ×7680
+    Research   Daemonics Reverse-Engineering +21 (26)   ×1140
+    Accessory  Bag Of Tricks +21 (26)                   ×8690
+    Mount      The Rubedo Engine +21 (26)               ×21.4
+    Phylactery Robust Tangerine Phylactery +21 (26)     ×1180
+    Weapon     The Accumulator +21 (26)                 ×50.1
+    Finger     Resonator Ring                           ×2.35e6
+    Finger     Spell Helix +21 (26)                     ×917
+    Trophy     Beholding Eye +21 (26)                   ×1170
+    Trophy     Blessed Armor Scales +21 (26)            ×6950
+Enchant 22 (forced: resonator-ring): ×7.37e59 vs no items, other branch ×0.0000661 [33 candidates, 11 searched slots, 1206 leaves, 35632 bounds, 364 ms]
+    Head       Circlet Of Deep Thoughts +22 (27)        ×1350
+    Hands      Talented Gloves +22 (27)                 ×3090
+    Chest      Seclusion Shell +22 (27)                 ×4950
+    Feet       Boots Of Concentration +22 (27)          ×2820
+    Shoulder   Tranquil Spaulders +22 (27)              ×5970
+    Neck       Lucky Amulet +22 (27)                    ×3290
+    Waist      Colourful Belt +22 (27)                  ×1980
+    Wrist      Focusing Bracers +22 (27)                ×899
+    Back       Fancy Cape +22 (27)                      ×2470
+    Legs       Mesmerizing Pants +22 (27)               ×3090
+    Offhand    Murmuring Spellbook +22 (27)             ×9210
+    Research   Daemonics Reverse-Engineering +22 (27)   ×1370
+    Accessory  Bag Of Tricks +22 (27)                   ×10900
+    Mount      The Rubedo Engine +22 (27)               ×24.1
+    Phylactery Robust Tangerine Phylactery +22 (27)     ×1300
+    Weapon     The Accumulator +22 (27)                 ×58.2
+    Finger     Resonator Ring                           ×2.35e6
+    Finger     Spell Helix +22 (27)                     ×1190
+    Trophy     Beholding Eye +22 (27)                   ×1440
+    Trophy     Blessed Armor Scales +22 (27)            ×8690
+Enchant 23 (forced: resonator-ring): ×2.89e61 vs no items, other branch ×0.0000744 [32 candidates, 11 searched slots, 810 leaves, 22872 bounds, 253 ms]
+    Head       Circlet Of Deep Thoughts +23 (28)        ×1690
+    Hands      Talented Gloves +23 (28)                 ×3710
+    Chest      Seclusion Shell +23 (28)                 ×6180
+    Feet       Boots Of Concentration +23 (28)          ×3520
+    Shoulder   Tranquil Spaulders +23 (28)              ×7470
+    Neck       Lucky Amulet +23 (28)                    ×4110
+    Waist      Colourful Belt +23 (28)                  ×2380
+    Wrist      Focusing Bracers +23 (28)                ×1080
+    Back       Fancy Cape +23 (28)                      ×2970
+    Legs       Mesmerizing Pants +23 (28)               ×3710
+    Offhand    Murmuring Spellbook +23 (28)             ×11100
+    Research   Daemonics Reverse-Engineering +23 (28)   ×1650
+    Accessory  Bag Of Tricks +23 (28)                   ×13600
+    Mount      The Rubedo Engine +23 (28)               ×27.1
+    Phylactery Robust Tangerine Phylactery +23 (28)     ×1430
+    Weapon     The Accumulator +23 (28)                 ×67.6
+    Finger     Resonator Ring                           ×2.35e6
+    Finger     Spell Helix +23 (28)                     ×1550
+    Trophy     Beholding Eye +23 (28)                   ×1760
+    Trophy     Blessed Armor Scales +23 (28)            ×10900
+Enchant 24 (forced: resonator-ring): ×1.13e63 vs no items, other branch ×0.0000842 [32 candidates, 11 searched slots, 864 leaves, 21315 bounds, 242 ms]
+    Head       Circlet Of Deep Thoughts +24 (29)        ×2110
+    Hands      Talented Gloves +24 (29)                 ×4450
+    Chest      Seclusion Shell +24 (29)                 ×7720
+    Feet       Boots Of Concentration +24 (29)          ×4400
+    Shoulder   Tranquil Spaulders +24 (29)              ×9330
+    Neck       Lucky Amulet +24 (29)                    ×5140
+    Waist      Colourful Belt +24 (29)                  ×2860
+    Wrist      Focusing Bracers +24 (29)                ×1290
+    Back       Fancy Cape +24 (29)                      ×3560
+    Legs       Mesmerizing Pants +24 (29)               ×4450
+    Offhand    Murmuring Spellbook +24 (29)             ×13300
+    Research   Daemonics Reverse-Engineering +24 (29)   ×1980
+    Accessory  Bag Of Tricks +24 (29)                   ×17000
+    Mount      The Rubedo Engine +24 (29)               ×30.4
+    Phylactery Robust Tangerine Phylactery +24 (29)     ×1570
+    Weapon     The Accumulator +24 (29)                 ×78.6
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +24 (29)                     ×2020
+    Trophy     Beholding Eye +24 (29)                   ×2160
+    Trophy     Blessed Armor Scales +24 (29)            ×13600
+Enchant 25 (forced: resonator-ring): ×4.42e64 vs no items, other branch ×0.0000976 [32 candidates, 11 searched slots, 882 leaves, 21294 bounds, 244 ms]
+    Head       Circlet Of Deep Thoughts +25 (30)        ×2640
+    Hands      Talented Gloves +25 (30)                 ×5340
+    Chest      Seclusion Shell +25 (30)                 ×9650
+    Feet       Boots Of Concentration +25 (30)          ×5500
+    Shoulder   Tranquil Spaulders +25 (30)              ×11700
+    Neck       Lucky Amulet +25 (30)                    ×6420
+    Waist      Colourful Belt +25 (30)                  ×3430
+    Wrist      Focusing Bracers +25 (30)                ×1550
+    Back       Fancy Cape +25 (30)                      ×4270
+    Legs       Mesmerizing Pants +25 (30)               ×5340
+    Offhand    Murmuring Spellbook +25 (30)             ×15900
+    Research   Daemonics Reverse-Engineering +25 (30)   ×2370
+    Accessory  Bag Of Tricks +25 (30)                   ×21200
+    Mount      The Rubedo Engine +25 (30)               ×34.2
+    Phylactery Robust Tangerine Phylactery +25 (30)     ×1720
+    Weapon     The Accumulator +25 (30)                 ×91.3
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +25 (30)                     ×2620
+    Trophy     Beholding Eye +25 (30)                   ×2640
+    Trophy     Blessed Armor Scales +25 (30)            ×17000
+Enchant 26 (forced: resonator-ring): ×1.73e66 vs no items, other branch ×0.000117 [32 candidates, 11 searched slots, 882 leaves, 21360 bounds, 244 ms]
+    Head       Circlet Of Deep Thoughts +26 (31)        ×3300
+    Hands      Talented Gloves +26 (31)                 ×6410
+    Chest      Seclusion Shell +26 (31)                 ×12100
+    Feet       Boots Of Concentration +26 (31)          ×6880
+    Shoulder   Tranquil Spaulders +26 (31)              ×14600
+    Neck       Lucky Amulet +26 (31)                    ×8030
+    Waist      Colourful Belt +26 (31)                  ×4110
+    Wrist      Focusing Bracers +26 (31)                ×1860
+    Back       Fancy Cape +26 (31)                      ×5130
+    Legs       Mesmerizing Pants +26 (31)               ×6410
+    Offhand    Murmuring Spellbook +26 (31)             ×19100
+    Research   Daemonics Reverse-Engineering +26 (31)   ×2850
+    Accessory  Bag Of Tricks +26 (31)                   ×26500
+    Mount      The Rubedo Engine +26 (31)               ×38.5
+    Phylactery Robust Tangerine Phylactery +26 (31)     ×1900
+    Weapon     The Accumulator +26 (31)                 ×106
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +26 (31)                     ×3410
+    Trophy     Beholding Eye +26 (31)                   ×3240
+    Trophy     Blessed Armor Scales +26 (31)            ×21200
+Enchant 27 (forced: resonator-ring): ×6.77e67 vs no items, other branch ×0.000141 [32 candidates, 11 searched slots, 882 leaves, 21405 bounds, 243 ms]
+    Head       Circlet Of Deep Thoughts +27 (32)        ×4130
+    Hands      Talented Gloves +27 (32)                 ×7690
+    Chest      Seclusion Shell +27 (32)                 ×15100
+    Feet       Boots Of Concentration +27 (32)          ×8600
+    Shoulder   Tranquil Spaulders +27 (32)              ×18200
+    Neck       Lucky Amulet +27 (32)                    ×10000
+    Waist      Colourful Belt +27 (32)                  ×4940
+    Wrist      Focusing Bracers +27 (32)                ×2240
+    Back       Fancy Cape +27 (32)                      ×6150
+    Legs       Mesmerizing Pants +27 (32)               ×7690
+    Offhand    Murmuring Spellbook +27 (32)             ×22900
+    Research   Daemonics Reverse-Engineering +27 (32)   ×3420
+    Accessory  Bag Of Tricks +27 (32)                   ×33100
+    Mount      The Rubedo Engine +27 (32)               ×43.3
+    Phylactery Robust Tangerine Phylactery +27 (32)     ×2090
+    Weapon     The Accumulator +27 (32)                 ×123
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +27 (32)                     ×4430
+    Trophy     Beholding Eye +27 (32)                   ×3970
+    Trophy     Blessed Armor Scales +27 (32)            ×26500
+Enchant 28 (forced: resonator-ring): ×2.65e69 vs no items, other branch ×0.000169 [32 candidates, 11 searched slots, 900 leaves, 21444 bounds, 244 ms]
+    Head       Circlet Of Deep Thoughts +28 (33)        ×5160
+    Hands      Talented Gloves +28 (33)                 ×9230
+    Chest      Seclusion Shell +28 (33)                 ×18800
+    Feet       Boots Of Concentration +28 (33)          ×10700
+    Shoulder   Tranquil Spaulders +28 (33)              ×22800
+    Neck       Lucky Amulet +28 (33)                    ×12500
+    Waist      Colourful Belt +28 (33)                  ×5920
+    Wrist      Focusing Bracers +28 (33)                ×2680
+    Back       Fancy Cape +28 (33)                      ×7380
+    Legs       Mesmerizing Pants +28 (33)               ×9230
+    Offhand    Murmuring Spellbook +28 (33)             ×27500
+    Research   Daemonics Reverse-Engineering +28 (33)   ×4100
+    Accessory  Bag Of Tricks +28 (33)                   ×41400
+    Mount      The Rubedo Engine +28 (33)               ×48.8
+    Phylactery Robust Tangerine Phylactery +28 (33)     ×2300
+    Weapon     The Accumulator +28 (33)                 ×143
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +28 (33)                     ×5760
+    Trophy     Beholding Eye +28 (33)                   ×4860
+    Trophy     Blessed Armor Scales +28 (33)            ×33100
+Enchant 29 (forced: resonator-ring): ×1.04e71 vs no items, other branch ×0.000203 [32 candidates, 11 searched slots, 918 leaves, 21393 bounds, 243 ms]
+    Head       Circlet Of Deep Thoughts +29 (34)        ×6450
+    Hands      Talented Gloves +29 (34)                 ×11100
+    Chest      Seclusion Shell +29 (34)                 ×23600
+    Feet       Boots Of Concentration +29 (34)          ×13400
+    Shoulder   Tranquil Spaulders +29 (34)              ×28400
+    Neck       Lucky Amulet +29 (34)                    ×15700
+    Waist      Colourful Belt +29 (34)                  ×7110
+    Wrist      Focusing Bracers +29 (34)                ×3220
+    Back       Fancy Cape +29 (34)                      ×8860
+    Legs       Mesmerizing Pants +29 (34)               ×11100
+    Offhand    Murmuring Spellbook +29 (34)             ×33000
+    Research   Daemonics Reverse-Engineering +29 (34)   ×4920
+    Accessory  Bag Of Tricks +29 (34)                   ×51800
+    Mount      The Rubedo Engine +29 (34)               ×54.9
+    Phylactery Robust Tangerine Phylactery +29 (34)     ×2520
+    Weapon     The Accumulator +29 (34)                 ×167
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +29 (34)                     ×7480
+    Trophy     Beholding Eye +29 (34)                   ×5950
+    Trophy     Blessed Armor Scales +29 (34)            ×41400
+Enchant 30 (forced: resonator-ring): ×4.05e72 vs no items, other branch ×0.000243 [32 candidates, 11 searched slots, 918 leaves, 21402 bounds, 243 ms]
+    Head       Circlet Of Deep Thoughts +30 (35)        ×8060
+    Hands      Talented Gloves +30 (35)                 ×13300
+    Chest      Seclusion Shell +30 (35)                 ×29400
+    Feet       Boots Of Concentration +30 (35)          ×16800
+    Shoulder   Tranquil Spaulders +30 (35)              ×35500
+    Neck       Lucky Amulet +30 (35)                    ×19600
+    Waist      Colourful Belt +30 (35)                  ×8530
+    Wrist      Focusing Bracers +30 (35)                ×3860
+    Back       Fancy Cape +30 (35)                      ×10600
+    Legs       Mesmerizing Pants +30 (35)               ×13300
+    Offhand    Murmuring Spellbook +30 (35)             ×39600
+    Research   Daemonics Reverse-Engineering +30 (35)   ×5910
+    Accessory  Bag Of Tricks +30 (35)                   ×64700
+    Mount      The Rubedo Engine +30 (35)               ×61.7
+    Phylactery Robust Tangerine Phylactery +30 (35)     ×2780
+    Weapon     The Accumulator +30 (35)                 ×194
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +30 (35)                     ×9730
+    Trophy     Beholding Eye +30 (35)                   ×7290
+    Trophy     Blessed Armor Scales +30 (35)            ×51800
+Enchant 31 (forced: resonator-ring): ×1.59e74 vs no items, other branch ×0.000292 [32 candidates, 11 searched slots, 918 leaves, 21381 bounds, 250 ms]
+    Head       Circlet Of Deep Thoughts +31 (36)        ×10100
+    Hands      Talented Gloves +31 (36)                 ×15900
+    Chest      Seclusion Shell +31 (36)                 ×36800
+    Feet       Boots Of Concentration +31 (36)          ×21000
+    Shoulder   Tranquil Spaulders +31 (36)              ×44400
+    Neck       Lucky Amulet +31 (36)                    ×24500
+    Waist      Colourful Belt +31 (36)                  ×10200
+    Wrist      Focusing Bracers +31 (36)                ×4630
+    Back       Fancy Cape +31 (36)                      ×12800
+    Legs       Mesmerizing Pants +31 (36)               ×15900
+    Offhand    Murmuring Spellbook +31 (36)             ×47500
+    Research   Daemonics Reverse-Engineering +31 (36)   ×7090
+    Accessory  Bag Of Tricks +31 (36)                   ×80900
+    Mount      The Rubedo Engine +31 (36)               ×69.4
+    Phylactery Robust Tangerine Phylactery +31 (36)     ×3060
+    Weapon     The Accumulator +31 (36)                 ×225
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +31 (36)                     ×12600
+    Trophy     Beholding Eye +31 (36)                   ×8930
+    Trophy     Blessed Armor Scales +31 (36)            ×64700
+Enchant 32 (forced: resonator-ring): ×6.20e75 vs no items, other branch ×0.00035 [32 candidates, 11 searched slots, 936 leaves, 21384 bounds, 245 ms]
+    Head       Circlet Of Deep Thoughts +32 (37)        ×12600
+    Hands      Talented Gloves +32 (37)                 ×19100
+    Chest      Seclusion Shell +32 (37)                 ×46000
+    Feet       Boots Of Concentration +32 (37)          ×26200
+    Shoulder   Tranquil Spaulders +32 (37)              ×55500
+    Neck       Lucky Amulet +32 (37)                    ×30600
+    Waist      Colourful Belt +32 (37)                  ×12300
+    Wrist      Focusing Bracers +32 (37)                ×5560
+    Back       Fancy Cape +32 (37)                      ×15300
+    Legs       Mesmerizing Pants +32 (37)               ×19100
+    Offhand    Murmuring Spellbook +32 (37)             ×57000
+    Research   Daemonics Reverse-Engineering +32 (37)   ×8510
+    Accessory  Bag Of Tricks +32 (37)                   ×101000
+    Mount      The Rubedo Engine +32 (37)               ×78.1
+    Phylactery Robust Tangerine Phylactery +32 (37)     ×3360
+    Weapon     The Accumulator +32 (37)                 ×261
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +32 (37)                     ×16400
+    Trophy     Beholding Eye +32 (37)                   ×10900
+    Trophy     Blessed Armor Scales +32 (37)            ×80900
+Enchant 33 (forced: resonator-ring): ×2.43e77 vs no items, other branch ×0.000423 [32 candidates, 11 searched slots, 954 leaves, 21393 bounds, 242 ms]
+    Head       Circlet Of Deep Thoughts +33 (38)        ×15700
+    Hands      Talented Gloves +33 (38)                 ×23000
+    Chest      Seclusion Shell +33 (38)                 ×57500
+    Feet       Boots Of Concentration +33 (38)          ×32800
+    Shoulder   Tranquil Spaulders +33 (38)              ×69400
+    Neck       Lucky Amulet +33 (38)                    ×38300
+    Waist      Colourful Belt +33 (38)                  ×14700
+    Wrist      Focusing Bracers +33 (38)                ×6670
+    Back       Fancy Cape +33 (38)                      ×18400
+    Legs       Mesmerizing Pants +33 (38)               ×23000
+    Offhand    Murmuring Spellbook +33 (38)             ×68500
+    Research   Daemonics Reverse-Engineering +33 (38)   ×10200
+    Accessory  Bag Of Tricks +33 (38)                   ×126000
+    Mount      The Rubedo Engine +33 (38)               ×87.9
+    Phylactery Robust Tangerine Phylactery +33 (38)     ×3700
+    Weapon     The Accumulator +33 (38)                 ×304
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +33 (38)                     ×21400
+    Trophy     Beholding Eye +33 (38)                   ×13400
+    Trophy     Blessed Armor Scales +33 (38)            ×101000
+Enchant 34 (forced: resonator-ring): ×9.50e78 vs no items, other branch ×0.000519 [32 candidates, 11 searched slots, 972 leaves, 21411 bounds, 242 ms]
+    Head       Circlet Of Deep Thoughts +34 (39)        ×19700
+    Hands      Talented Gloves +34 (39)                 ×27600
+    Chest      Seclusion Shell +34 (39)                 ×71800
+    Feet       Boots Of Concentration +34 (39)          ×41000
+    Shoulder   Tranquil Spaulders +34 (39)              ×86700
+    Neck       Lucky Amulet +34 (39)                    ×47800
+    Waist      Colourful Belt +34 (39)                  ×17700
+    Wrist      Focusing Bracers +34 (39)                ×8000
+    Back       Fancy Cape +34 (39)                      ×22000
+    Legs       Mesmerizing Pants +34 (39)               ×27600
+    Offhand    Murmuring Spellbook +34 (39)             ×82100
+    Research   Daemonics Reverse-Engineering +34 (39)   ×12200
+    Accessory  Bag Of Tricks +34 (39)                   ×158000
+    Mount      The Rubedo Engine +34 (39)               ×98.8
+    Phylactery Robust Tangerine Phylactery +34 (39)     ×4070
+    Weapon     The Accumulator +34 (39)                 ×353
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +34 (39)                     ×27800
+    Trophy     Beholding Eye +34 (39)                   ×16400
+    Trophy     Blessed Armor Scales +34 (39)            ×126000
+Enchant 35 (forced: resonator-ring): ×3.72e80 vs no items, other branch ×0.000635 [32 candidates, 11 searched slots, 1026 leaves, 21447 bounds, 245 ms]
+    Head       Circlet Of Deep Thoughts +35 (40)        ×24600
+    Hands      Talented Gloves +35 (40)                 ×33100
+    Chest      Seclusion Shell +35 (40)                 ×89800
+    Feet       Boots Of Concentration +35 (40)          ×51200
+    Shoulder   Tranquil Spaulders +35 (40)              ×108000
+    Neck       Lucky Amulet +35 (40)                    ×59800
+    Waist      Colourful Belt +35 (40)                  ×21200
+    Wrist      Focusing Bracers +35 (40)                ×9600
+    Back       Fancy Cape +35 (40)                      ×26500
+    Legs       Mesmerizing Pants +35 (40)               ×33100
+    Offhand    Murmuring Spellbook +35 (40)             ×98600
+    Research   Daemonics Reverse-Engineering +35 (40)   ×14700
+    Accessory  Bag Of Tricks +35 (40)                   ×197000
+    Mount      The Rubedo Engine +35 (40)               ×111
+    Phylactery Robust Tangerine Phylactery +35 (40)     ×4470
+    Weapon     The Accumulator +35 (40)                 ×410
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +35 (40)                     ×36100
+    Trophy     Beholding Eye +35 (40)                   ×20100
+    Trophy     Blessed Armor Scales +35 (40)            ×158000
+Enchant 36 (forced: resonator-ring): ×1.45e82 vs no items, other branch ×0.000778 [32 candidates, 11 searched slots, 816 leaves, 20799 bounds, 239 ms]
+    Head       Circlet Of Deep Thoughts +36 (41)        ×30700
+    Hands      Talented Gloves +36 (41)                 ×39700
+    Chest      Seclusion Shell +36 (41)                 ×112000
+    Feet       Boots Of Concentration +36 (41)          ×64000
+    Shoulder   Tranquil Spaulders +36 (41)              ×135000
+    Neck       Lucky Amulet +36 (41)                    ×74700
+    Waist      Colourful Belt +36 (41)                  ×25500
+    Wrist      Focusing Bracers +36 (41)                ×11500
+    Back       Fancy Cape +36 (41)                      ×31700
+    Legs       Mesmerizing Pants +36 (41)               ×39700
+    Offhand    Murmuring Spellbook +36 (41)             ×118000
+    Research   Daemonics Reverse-Engineering +36 (41)   ×17600
+    Accessory  Bag Of Tricks +36 (41)                   ×247000
+    Mount      The Rubedo Engine +36 (41)               ×125
+    Phylactery Robust Tangerine Phylactery +36 (41)     ×4920
+    Weapon     The Accumulator +36 (41)                 ×476
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +36 (41)                     ×47000
+    Trophy     Beholding Eye +36 (41)                   ×24600
+    Trophy     Blessed Armor Scales +36 (41)            ×197000
+Enchant 37 (forced: resonator-ring): ×5.69e83 vs no items, other branch ×0.000954 [32 candidates, 11 searched slots, 816 leaves, 20781 bounds, 239 ms]
+    Head       Circlet Of Deep Thoughts +37 (42)        ×38400
+    Hands      Talented Gloves +37 (42)                 ×47600
+    Chest      Seclusion Shell +37 (42)                 ×140000
+    Feet       Boots Of Concentration +37 (42)          ×80000
+    Shoulder   Tranquil Spaulders +37 (42)              ×169000
+    Neck       Lucky Amulet +37 (42)                    ×93400
+    Waist      Colourful Belt +37 (42)                  ×30600
+    Wrist      Focusing Bracers +37 (42)                ×13800
+    Back       Fancy Cape +37 (42)                      ×38100
+    Legs       Mesmerizing Pants +37 (42)               ×47600
+    Offhand    Murmuring Spellbook +37 (42)             ×142000
+    Research   Daemonics Reverse-Engineering +37 (42)   ×21200
+    Accessory  Bag Of Tricks +37 (42)                   ×309000
+    Mount      The Rubedo Engine +37 (42)               ×141
+    Phylactery Robust Tangerine Phylactery +37 (42)     ×5410
+    Weapon     The Accumulator +37 (42)                 ×554
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +37 (42)                     ×61000
+    Trophy     Beholding Eye +37 (42)                   ×30200
+    Trophy     Blessed Armor Scales +37 (42)            ×247000
+Enchant 38 (forced: resonator-ring): ×2.23e85 vs no items, other branch ×0.00117 [32 candidates, 11 searched slots, 816 leaves, 20835 bounds, 240 ms]
+    Head       Circlet Of Deep Thoughts +38 (43)        ×48000
+    Hands      Talented Gloves +38 (43)                 ×57100
+    Chest      Seclusion Shell +38 (43)                 ×175000
+    Feet       Boots Of Concentration +38 (43)          ×100000
+    Shoulder   Tranquil Spaulders +38 (43)              ×212000
+    Neck       Lucky Amulet +38 (43)                    ×117000
+    Waist      Colourful Belt +38 (43)                  ×36700
+    Wrist      Focusing Bracers +38 (43)                ×16600
+    Back       Fancy Cape +38 (43)                      ×45700
+    Legs       Mesmerizing Pants +38 (43)               ×57100
+    Offhand    Murmuring Spellbook +38 (43)             ×170000
+    Research   Daemonics Reverse-Engineering +38 (43)   ×25400
+    Accessory  Bag Of Tricks +38 (43)                   ×386000
+    Mount      The Rubedo Engine +38 (43)               ×158
+    Phylactery Robust Tangerine Phylactery +38 (43)     ×5950
+    Weapon     The Accumulator +38 (43)                 ×643
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +38 (43)                     ×79400
+    Trophy     Beholding Eye +38 (43)                   ×37000
+    Trophy     Blessed Armor Scales +38 (43)            ×309000
+Enchant 39 (forced: resonator-ring): ×8.71e86 vs no items, other branch ×0.00143 [32 candidates, 11 searched slots, 792 leaves, 20868 bounds, 240 ms]
+    Head       Circlet Of Deep Thoughts +39 (44)        ×60000
+    Hands      Talented Gloves +39 (44)                 ×68600
+    Chest      Seclusion Shell +39 (44)                 ×219000
+    Feet       Boots Of Concentration +39 (44)          ×125000
+    Shoulder   Tranquil Spaulders +39 (44)              ×264000
+    Neck       Lucky Amulet +39 (44)                    ×146000
+    Waist      Colourful Belt +39 (44)                  ×44000
+    Wrist      Focusing Bracers +39 (44)                ×19900
+    Back       Fancy Cape +39 (44)                      ×54900
+    Legs       Mesmerizing Pants +39 (44)               ×68600
+    Offhand    Murmuring Spellbook +39 (44)             ×204000
+    Research   Daemonics Reverse-Engineering +39 (44)   ×30500
+    Accessory  Bag Of Tricks +39 (44)                   ×482000
+    Mount      The Rubedo Engine +39 (44)               ×178
+    Phylactery Robust Tangerine Phylactery +39 (44)     ×6550
+    Weapon     The Accumulator +39 (44)                 ×747
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +39 (44)                     ×103000
+    Trophy     Beholding Eye +39 (44)                   ×45300
+    Trophy     Blessed Armor Scales +39 (44)            ×386000
+Enchant 40 (forced: resonator-ring): ×3.41e88 vs no items, other branch ×0.00175 [32 candidates, 11 searched slots, 792 leaves, 20886 bounds, 241 ms]
+    Head       Circlet Of Deep Thoughts +40 (45)        ×75000
+    Hands      Talented Gloves +40 (45)                 ×82300
+    Chest      Seclusion Shell +40 (45)                 ×274000
+    Feet       Boots Of Concentration +40 (45)          ×156000
+    Shoulder   Tranquil Spaulders +40 (45)              ×330000
+    Neck       Lucky Amulet +40 (45)                    ×182000
+    Waist      Colourful Belt +40 (45)                  ×52800
+    Wrist      Focusing Bracers +40 (45)                ×23900
+    Back       Fancy Cape +40 (45)                      ×65800
+    Legs       Mesmerizing Pants +40 (45)               ×82300
+    Offhand    Murmuring Spellbook +40 (45)             ×245000
+    Research   Daemonics Reverse-Engineering +40 (45)   ×36600
+    Accessory  Bag Of Tricks +40 (45)                   ×603000
+    Mount      The Rubedo Engine +40 (45)               ×200
+    Phylactery Robust Tangerine Phylactery +40 (45)     ×7200
+    Weapon     The Accumulator +40 (45)                 ×868
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +40 (45)                     ×134000
+    Trophy     Beholding Eye +40 (45)                   ×55500
+    Trophy     Blessed Armor Scales +40 (45)            ×482000
+Enchant 41 (forced: resonator-ring): ×1.33e90 vs no items, other branch ×0.00215 [32 candidates, 11 searched slots, 768 leaves, 20904 bounds, 242 ms]
+    Head       Circlet Of Deep Thoughts +41 (46)        ×93700
+    Hands      Talented Gloves +41 (46)                 ×98700
+    Chest      Seclusion Shell +41 (46)                 ×342000
+    Feet       Boots Of Concentration +41 (46)          ×195000
+    Shoulder   Tranquil Spaulders +41 (46)              ×413000
+    Neck       Lucky Amulet +41 (46)                    ×228000
+    Waist      Colourful Belt +41 (46)                  ×63400
+    Wrist      Focusing Bracers +41 (46)                ×28700
+    Back       Fancy Cape +41 (46)                      ×79000
+    Legs       Mesmerizing Pants +41 (46)               ×98700
+    Offhand    Murmuring Spellbook +41 (46)             ×294000
+    Research   Daemonics Reverse-Engineering +41 (46)   ×43900
+    Accessory  Bag Of Tricks +41 (46)                   ×753000
+    Mount      The Rubedo Engine +41 (46)               ×225
+    Phylactery Robust Tangerine Phylactery +41 (46)     ×7920
+    Weapon     The Accumulator +41 (46)                 ×1010
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +41 (46)                     ×174000
+    Trophy     Beholding Eye +41 (46)                   ×68000
+    Trophy     Blessed Armor Scales +41 (46)            ×603000
+Enchant 42 (forced: resonator-ring): ×5.21e91 vs no items, other branch ×0.00263 [32 candidates, 11 searched slots, 744 leaves, 20904 bounds, 238 ms]
+    Head       Circlet Of Deep Thoughts +42 (47)        ×117000
+    Hands      Talented Gloves +42 (47)                 ×118000
+    Chest      Seclusion Shell +42 (47)                 ×428000
+    Feet       Boots Of Concentration +42 (47)          ×244000
+    Shoulder   Tranquil Spaulders +42 (47)              ×516000
+    Neck       Lucky Amulet +42 (47)                    ×285000
+    Waist      Colourful Belt +42 (47)                  ×76000
+    Wrist      Focusing Bracers +42 (47)                ×34400
+    Back       Fancy Cape +42 (47)                      ×94800
+    Legs       Mesmerizing Pants +42 (47)               ×118000
+    Offhand    Murmuring Spellbook +42 (47)             ×353000
+    Research   Daemonics Reverse-Engineering +42 (47)   ×52700
+    Accessory  Bag Of Tricks +42 (47)                   ×942000
+    Mount      The Rubedo Engine +42 (47)               ×254
+    Phylactery Robust Tangerine Phylactery +42 (47)     ×8720
+    Weapon     The Accumulator +42 (47)                 ×1170
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +42 (47)                     ×227000
+    Trophy     Beholding Eye +42 (47)                   ×83300
+    Trophy     Blessed Armor Scales +42 (47)            ×753000
+Enchant 43 (forced: resonator-ring): ×2.04e93 vs no items, other branch ×0.00322 [32 candidates, 11 searched slots, 744 leaves, 20916 bounds, 242 ms]
+    Head       Circlet Of Deep Thoughts +43 (48)        ×146000
+    Hands      Talented Gloves +43 (48)                 ×142000
+    Chest      Seclusion Shell +43 (48)                 ×534000
+    Feet       Boots Of Concentration +43 (48)          ×305000
+    Shoulder   Tranquil Spaulders +43 (48)              ×645000
+    Neck       Lucky Amulet +43 (48)                    ×356000
+    Waist      Colourful Belt +43 (48)                  ×91200
+    Wrist      Focusing Bracers +43 (48)                ×41300
+    Back       Fancy Cape +43 (48)                      ×114000
+    Legs       Mesmerizing Pants +43 (48)               ×142000
+    Offhand    Murmuring Spellbook +43 (48)             ×424000
+    Research   Daemonics Reverse-Engineering +43 (48)   ×63200
+    Accessory  Bag Of Tricks +43 (48)                   ×1.18e6
+    Mount      The Rubedo Engine +43 (48)               ×285
+    Phylactery Robust Tangerine Phylactery +43 (48)     ×9590
+    Weapon     The Accumulator +43 (48)                 ×1360
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +43 (48)                     ×295000
+    Trophy     Beholding Eye +43 (48)                   ×102000
+    Trophy     Blessed Armor Scales +43 (48)            ×942000
+Enchant 44 (forced: resonator-ring): ×7.98e94 vs no items, other branch ×0.00395 [32 candidates, 11 searched slots, 720 leaves, 20901 bounds, 267 ms]
+    Head       Circlet Of Deep Thoughts +44 (49)        ×183000
+    Hands      Talented Gloves +44 (49)                 ×171000
+    Chest      Seclusion Shell +44 (49)                 ×668000
+    Feet       Boots Of Concentration +44 (49)          ×381000
+    Shoulder   Tranquil Spaulders +44 (49)              ×806000
+    Neck       Lucky Amulet +44 (49)                    ×445000
+    Waist      Colourful Belt +44 (49)                  ×109000
+    Wrist      Focusing Bracers +44 (49)                ×49500
+    Back       Fancy Cape +44 (49)                      ×137000
+    Legs       Mesmerizing Pants +44 (49)               ×171000
+    Offhand    Murmuring Spellbook +44 (49)             ×509000
+    Research   Daemonics Reverse-Engineering +44 (49)   ×75800
+    Accessory  Bag Of Tricks +44 (49)                   ×1.47e6
+    Mount      The Rubedo Engine +44 (49)               ×321
+    Phylactery Robust Tangerine Phylactery +44 (49)     ×10500
+    Weapon     The Accumulator +44 (49)                 ×1580
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +44 (49)                     ×383000
+    Trophy     Beholding Eye +44 (49)                   ×125000
+    Trophy     Blessed Armor Scales +44 (49)            ×1.18e6
+Enchant 45 (forced: resonator-ring): ×3.12e96 vs no items, other branch ×0.00484 [32 candidates, 11 searched slots, 672 leaves, 20883 bounds, 238 ms]
+    Head       Circlet Of Deep Thoughts +45 (50)        ×229000
+    Hands      Talented Gloves +45 (50)                 ×205000
+    Chest      Seclusion Shell +45 (50)                 ×835000
+    Feet       Boots Of Concentration +45 (50)          ×476000
+    Shoulder   Tranquil Spaulders +45 (50)              ×1.01e6
+    Neck       Lucky Amulet +45 (50)                    ×557000
+    Waist      Colourful Belt +45 (50)                  ×131000
+    Wrist      Focusing Bracers +45 (50)                ×59400
+    Back       Fancy Cape +45 (50)                      ×164000
+    Legs       Mesmerizing Pants +45 (50)               ×205000
+    Offhand    Murmuring Spellbook +45 (50)             ×610000
+    Research   Daemonics Reverse-Engineering +45 (50)   ×91000
+    Accessory  Bag Of Tricks +45 (50)                   ×1.84e6
+    Mount      The Rubedo Engine +45 (50)               ×361
+    Phylactery Robust Tangerine Phylactery +45 (50)     ×11600
+    Weapon     The Accumulator +45 (50)                 ×1840
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +45 (50)                     ×498000
+    Trophy     Beholding Eye +45 (50)                   ×153000
+    Trophy     Blessed Armor Scales +45 (50)            ×1.47e6
+Enchant 46 (forced: resonator-ring): ×1.22e98 vs no items, other branch ×0.00593 [32 candidates, 11 searched slots, 672 leaves, 20880 bounds, 237 ms]
+    Head       Circlet Of Deep Thoughts +46 (51)        ×286000
+    Hands      Talented Gloves +46 (51)                 ×246000
+    Chest      Seclusion Shell +46 (51)                 ×1.04e6
+    Feet       Boots Of Concentration +46 (51)          ×595000
+    Shoulder   Tranquil Spaulders +46 (51)              ×1.26e6
+    Neck       Lucky Amulet +46 (51)                    ×696000
+    Waist      Colourful Belt +46 (51)                  ×158000
+    Wrist      Focusing Bracers +46 (51)                ×71300
+    Back       Fancy Cape +46 (51)                      ×197000
+    Legs       Mesmerizing Pants +46 (51)               ×246000
+    Offhand    Murmuring Spellbook +46 (51)             ×732000
+    Research   Daemonics Reverse-Engineering +46 (51)   ×109000
+    Accessory  Bag Of Tricks +46 (51)                   ×2.30e6
+    Mount      The Rubedo Engine +46 (51)               ×406
+    Phylactery Robust Tangerine Phylactery +46 (51)     ×12800
+    Weapon     The Accumulator +46 (51)                 ×2140
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +46 (51)                     ×647000
+    Trophy     Beholding Eye +46 (51)                   ×188000
+    Trophy     Blessed Armor Scales +46 (51)            ×1.84e6
+Enchant 47 (forced: resonator-ring): ×4.78e99 vs no items, other branch ×0.00726 [32 candidates, 11 searched slots, 648 leaves, 20862 bounds, 237 ms]
+    Head       Circlet Of Deep Thoughts +47 (52)        ×357000
+    Hands      Talented Gloves +47 (52)                 ×295000
+    Chest      Seclusion Shell +47 (52)                 ×1.30e6
+    Feet       Boots Of Concentration +47 (52)          ×744000
+    Shoulder   Tranquil Spaulders +47 (52)              ×1.57e6
+    Neck       Lucky Amulet +47 (52)                    ×869000
+    Waist      Colourful Belt +47 (52)                  ×189000
+    Wrist      Focusing Bracers +47 (52)                ×85500
+    Back       Fancy Cape +47 (52)                      ×236000
+    Legs       Mesmerizing Pants +47 (52)               ×295000
+    Offhand    Murmuring Spellbook +47 (52)             ×879000
+    Research   Daemonics Reverse-Engineering +47 (52)   ×131000
+    Accessory  Bag Of Tricks +47 (52)                   ×2.87e6
+    Mount      The Rubedo Engine +47 (52)               ×457
+    Phylactery Robust Tangerine Phylactery +47 (52)     ×14000
+    Weapon     The Accumulator +47 (52)                 ×2480
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +47 (52)                     ×842000
+    Trophy     Beholding Eye +47 (52)                   ×230000
+    Trophy     Blessed Armor Scales +47 (52)            ×2.30e6
+Enchant 48 (forced: resonator-ring): ×1.87e101 vs no items, other branch ×0.00889 [32 candidates, 11 searched slots, 648 leaves, 20865 bounds, 236 ms]
+    Head       Circlet Of Deep Thoughts +48 (53)        ×447000
+    Hands      Talented Gloves +48 (53)                 ×354000
+    Chest      Seclusion Shell +48 (53)                 ×1.63e6
+    Feet       Boots Of Concentration +48 (53)          ×930000
+    Shoulder   Tranquil Spaulders +48 (53)              ×1.97e6
+    Neck       Lucky Amulet +48 (53)                    ×1.09e6
+    Waist      Colourful Belt +48 (53)                  ×227000
+    Wrist      Focusing Bracers +48 (53)                ×103000
+    Back       Fancy Cape +48 (53)                      ×283000
+    Legs       Mesmerizing Pants +48 (53)               ×354000
+    Offhand    Murmuring Spellbook +48 (53)             ×1.05e6
+    Research   Daemonics Reverse-Engineering +48 (53)   ×157000
+    Accessory  Bag Of Tricks +48 (53)                   ×3.59e6
+    Mount      The Rubedo Engine +48 (53)               ×514
+    Phylactery Robust Tangerine Phylactery +48 (53)     ×15400
+    Weapon     The Accumulator +48 (53)                 ×2880
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +48 (53)                     ×1.09e6
+    Trophy     Beholding Eye +48 (53)                   ×281000
+    Trophy     Blessed Armor Scales +48 (53)            ×2.87e6
+Enchant 49 (forced: resonator-ring): ×7.31e102 vs no items, other branch ×0.0109 [32 candidates, 11 searched slots, 648 leaves, 20856 bounds, 239 ms]
+    Head       Circlet Of Deep Thoughts +49 (54)        ×558000
+    Hands      Talented Gloves +49 (54)                 ×425000
+    Chest      Seclusion Shell +49 (54)                 ×2.04e6
+    Feet       Boots Of Concentration +49 (54)          ×1.16e6
+    Shoulder   Tranquil Spaulders +49 (54)              ×2.46e6
+    Neck       Lucky Amulet +49 (54)                    ×1.36e6
+    Waist      Colourful Belt +49 (54)                  ×272000
+    Wrist      Focusing Bracers +49 (54)                ×123000
+    Back       Fancy Cape +49 (54)                      ×340000
+    Legs       Mesmerizing Pants +49 (54)               ×425000
+    Offhand    Murmuring Spellbook +49 (54)             ×1.27e6
+    Research   Daemonics Reverse-Engineering +49 (54)   ×189000
+    Accessory  Bag Of Tricks +49 (54)                   ×4.49e6
+    Mount      The Rubedo Engine +49 (54)               ×578
+    Phylactery Robust Tangerine Phylactery +49 (54)     ×17000
+    Weapon     The Accumulator +49 (54)                 ×3350
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +49 (54)                     ×1.42e6
+    Trophy     Beholding Eye +49 (54)                   ×345000
+    Trophy     Blessed Armor Scales +49 (54)            ×3.59e6
+Enchant 50 (forced: resonator-ring): ×2.86e104 vs no items, other branch ×0.0133 [32 candidates, 11 searched slots, 648 leaves, 20820 bounds, 235 ms]
+    Head       Circlet Of Deep Thoughts +50 (55)        ×698000
+    Hands      Talented Gloves +50 (55)                 ×510000
+    Chest      Seclusion Shell +50 (55)                 ×2.55e6
+    Feet       Boots Of Concentration +50 (55)          ×1.45e6
+    Shoulder   Tranquil Spaulders +50 (55)              ×3.07e6
+    Neck       Lucky Amulet +50 (55)                    ×1.70e6
+    Waist      Colourful Belt +50 (55)                  ×327000
+    Wrist      Focusing Bracers +50 (55)                ×148000
+    Back       Fancy Cape +50 (55)                      ×408000
+    Legs       Mesmerizing Pants +50 (55)               ×510000
+    Offhand    Murmuring Spellbook +50 (55)             ×1.52e6
+    Research   Daemonics Reverse-Engineering +50 (55)   ×226000
+    Accessory  Bag Of Tricks +50 (55)                   ×5.61e6
+    Mount      The Rubedo Engine +50 (55)               ×651
+    Phylactery Robust Tangerine Phylactery +50 (55)     ×18700
+    Weapon     The Accumulator +50 (55)                 ×3890
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +50 (55)                     ×1.85e6
+    Trophy     Beholding Eye +50 (55)                   ×422000
+    Trophy     Blessed Armor Scales +50 (55)            ×4.49e6
+Enchant 51 (forced: resonator-ring): ×1.12e106 vs no items, other branch ×0.0164 [32 candidates, 11 searched slots, 648 leaves, 20823 bounds, 235 ms]
+    Head       Circlet Of Deep Thoughts +51 (56)        ×872000
+    Hands      Talented Gloves +51 (56)                 ×611000
+    Chest      Seclusion Shell +51 (56)                 ×3.18e6
+    Feet       Boots Of Concentration +51 (56)          ×1.82e6
+    Shoulder   Tranquil Spaulders +51 (56)              ×3.84e6
+    Neck       Lucky Amulet +51 (56)                    ×2.12e6
+    Waist      Colourful Belt +51 (56)                  ×392000
+    Wrist      Focusing Bracers +51 (56)                ×177000
+    Back       Fancy Cape +51 (56)                      ×489000
+    Legs       Mesmerizing Pants +51 (56)               ×611000
+    Offhand    Murmuring Spellbook +51 (56)             ×1.82e6
+    Research   Daemonics Reverse-Engineering +51 (56)   ×272000
+    Accessory  Bag Of Tricks +51 (56)                   ×7.02e6
+    Mount      The Rubedo Engine +51 (56)               ×732
+    Phylactery Robust Tangerine Phylactery +51 (56)     ×20600
+    Weapon     The Accumulator +51 (56)                 ×4520
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +51 (56)                     ×2.40e6
+    Trophy     Beholding Eye +51 (56)                   ×517000
+    Trophy     Blessed Armor Scales +51 (56)            ×5.61e6
+Enchant 52 (forced: resonator-ring): ×4.37e107 vs no items, other branch ×0.02 [32 candidates, 11 searched slots, 648 leaves, 20868 bounds, 238 ms]
+    Head       Circlet Of Deep Thoughts +52 (57)        ×1.09e6
+    Hands      Talented Gloves +52 (57)                 ×734000
+    Chest      Seclusion Shell +52 (57)                 ×3.98e6
+    Feet       Boots Of Concentration +52 (57)          ×2.27e6
+    Shoulder   Tranquil Spaulders +52 (57)              ×4.80e6
+    Neck       Lucky Amulet +52 (57)                    ×2.65e6
+    Waist      Colourful Belt +52 (57)                  ×471000
+    Wrist      Focusing Bracers +52 (57)                ×213000
+    Back       Fancy Cape +52 (57)                      ×587000
+    Legs       Mesmerizing Pants +52 (57)               ×734000
+    Offhand    Murmuring Spellbook +52 (57)             ×2.19e6
+    Research   Daemonics Reverse-Engineering +52 (57)   ×326000
+    Accessory  Bag Of Tricks +52 (57)                   ×8.77e6
+    Mount      The Rubedo Engine +52 (57)               ×824
+    Phylactery Robust Tangerine Phylactery +52 (57)     ×22600
+    Weapon     The Accumulator +52 (57)                 ×5250
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +52 (57)                     ×3.12e6
+    Trophy     Beholding Eye +52 (57)                   ×634000
+    Trophy     Blessed Armor Scales +52 (57)            ×7.02e6
+Enchant 53 (forced: resonator-ring): ×1.71e109 vs no items, other branch ×0.0245 [32 candidates, 11 searched slots, 648 leaves, 20877 bounds, 236 ms]
+    Head       Circlet Of Deep Thoughts +53 (58)        ×1.36e6
+    Hands      Talented Gloves +53 (58)                 ×880000
+    Chest      Seclusion Shell +53 (58)                 ×4.97e6
+    Feet       Boots Of Concentration +53 (58)          ×2.84e6
+    Shoulder   Tranquil Spaulders +53 (58)              ×6.00e6
+    Neck       Lucky Amulet +53 (58)                    ×3.32e6
+    Waist      Colourful Belt +53 (58)                  ×565000
+    Wrist      Focusing Bracers +53 (58)                ×255000
+    Back       Fancy Cape +53 (58)                      ×704000
+    Legs       Mesmerizing Pants +53 (58)               ×880000
+    Offhand    Murmuring Spellbook +53 (58)             ×2.62e6
+    Research   Daemonics Reverse-Engineering +53 (58)   ×391000
+    Accessory  Bag Of Tricks +53 (58)                   ×1.10e7
+    Mount      The Rubedo Engine +53 (58)               ×927
+    Phylactery Robust Tangerine Phylactery +53 (58)     ×24900
+    Weapon     The Accumulator +53 (58)                 ×6100
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +53 (58)                     ×4.06e6
+    Trophy     Beholding Eye +53 (58)                   ×776000
+    Trophy     Blessed Armor Scales +53 (58)            ×8.77e6
+Enchant 54 (forced: resonator-ring): ×6.69e110 vs no items, other branch ×0.0301 [32 candidates, 11 searched slots, 648 leaves, 20895 bounds, 236 ms]
+    Head       Circlet Of Deep Thoughts +54 (59)        ×1.70e6
+    Hands      Talented Gloves +54 (59)                 ×1.06e6
+    Chest      Seclusion Shell +54 (59)                 ×6.21e6
+    Feet       Boots Of Concentration +54 (59)          ×3.55e6
+    Shoulder   Tranquil Spaulders +54 (59)              ×7.49e6
+    Neck       Lucky Amulet +54 (59)                    ×4.14e6
+    Waist      Colourful Belt +54 (59)                  ×678000
+    Wrist      Focusing Bracers +54 (59)                ×306000
+    Back       Fancy Cape +54 (59)                      ×845000
+    Legs       Mesmerizing Pants +54 (59)               ×1.06e6
+    Offhand    Murmuring Spellbook +54 (59)             ×3.15e6
+    Research   Daemonics Reverse-Engineering +54 (59)   ×470000
+    Accessory  Bag Of Tricks +54 (59)                   ×1.37e7
+    Mount      The Rubedo Engine +54 (59)               ×1040
+    Phylactery Robust Tangerine Phylactery +54 (59)     ×27400
+    Weapon     The Accumulator +54 (59)                 ×7080
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +54 (59)                     ×5.28e6
+    Trophy     Beholding Eye +54 (59)                   ×951000
+    Trophy     Blessed Armor Scales +54 (59)            ×1.10e7
+Enchant 55 (forced: resonator-ring): ×2.62e112 vs no items, other branch ×0.0368 [32 candidates, 11 searched slots, 648 leaves, 20895 bounds, 235 ms]
+    Head       Circlet Of Deep Thoughts +55 (60)        ×2.13e6
+    Hands      Talented Gloves +55 (60)                 ×1.27e6
+    Chest      Seclusion Shell +55 (60)                 ×7.76e6
+    Feet       Boots Of Concentration +55 (60)          ×4.43e6
+    Shoulder   Tranquil Spaulders +55 (60)              ×9.37e6
+    Neck       Lucky Amulet +55 (60)                    ×5.18e6
+    Waist      Colourful Belt +55 (60)                  ×814000
+    Wrist      Focusing Bracers +55 (60)                ×367000
+    Back       Fancy Cape +55 (60)                      ×1.01e6
+    Legs       Mesmerizing Pants +55 (60)               ×1.27e6
+    Offhand    Murmuring Spellbook +55 (60)             ×3.78e6
+    Research   Daemonics Reverse-Engineering +55 (60)   ×563000
+    Accessory  Bag Of Tricks +55 (60)                   ×1.71e7
+    Mount      The Rubedo Engine +55 (60)               ×1170
+    Phylactery Robust Tangerine Phylactery +55 (60)     ×30100
+    Weapon     The Accumulator +55 (60)                 ×8230
+    Finger     Resonator Ring                           ×2.34e6
+    Finger     Spell Helix +55 (60)                     ×6.86e6
+    Trophy     Beholding Eye +55 (60)                   ×1.16e6
+    Trophy     Blessed Armor Scales +55 (60)            ×1.37e7
+Excluded items: not-owned 36, no-effect 29
