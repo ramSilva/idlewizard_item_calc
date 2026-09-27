@@ -56,6 +56,13 @@ export const SCORES: readonly ScoreDef[] = [
         : null,
   },
   {
+    id: "chronomancer-burst",
+    label: "Chronomancer burst: Singularity Beam mana per cast",
+    description:
+      "Mana from one Singularity Beam cast (1260+ seconds of production) with the burst incantations active; the burst bar casts it recklessly (Fandom Chronomancer Guide Updated, Phase 4: Bursting).",
+    build: (ctx) => (ctx.manaPerCast.has(65) ? ref(ctx.manaPerCast.get(65)!) : null),
+  },
+  {
     id: "production",
     label: "Mana per second while the selected spells are active",
     description: "Production with every selected spell active; the score for bursts that earn mana over time.",

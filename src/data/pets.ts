@@ -20,6 +20,7 @@ const BINDINGS = {
 const HERALD_REAL_HOURS = "if(lt(Pet.RealTime / 3600, 336), Pet.RealTime / 3600, (336 ^ 6 + max(Pet.RealTime / 3600 - 336, 0) ^ 0.5) ^ (1 / 6))";
 const HERALD_GAME_DAYS = "if(lt(Pet.TimeCurrent / 86400, 200), Pet.TimeCurrent / 86400, 200 + max(Pet.TimeCurrent / 86400 - 200, 0) ^ 0.5)";
 const GIANT_HOURS = "if(lt(Pet.TimeCurrent / 3600, 336), Pet.TimeCurrent / 3600, (336 ^ 2 + max(Pet.TimeCurrent / 3600 - 336, 0) ^ 0.5) ^ 0.5)";
+const ZOMBIE_HOURS = "if(lt(Pet.TimeCurrent / 3600, 336), Pet.TimeCurrent / 3600, 336 + max(Pet.TimeCurrent / 3600 - 336, 0) ^ 0.5)";
 const MECHANOS_DAYS = "Pet.RealTime / 86400";
 
 class PetBuilder {
@@ -172,6 +173,17 @@ export const PETS: readonly PetDef[] = [
         "Pet time is read as game time (the Temporalist e300–e550 guide scales it with skipped time); I is the idle multiplier in effect.",
       )
       .effect("Shards.PoolEfficiency", "mul", "(Spell.SummoningEfficiency ^ 0.2 + 1) * (P ^ 0.01 + 1) * L * 0.05 + 1"),
+  ),
+  pet("Zombie", 1, (b) =>
+    b
+      .clicks("1", "CP / 2 * AP * (1 - 0.2 + 0.2 * 9)")
+      .effect(
+        "Prod.Global",
+        "mul",
+        `L / 5 * (1 + 30 ^ (0.6875 * log10(Idle.Factor)) * (${ZOMBIE_HOURS}) * (P ^ 0.6 + 1)) + 1`,
+        "Pet time is read as game time (the Skipped Time page adds skipped time to pet game time); I is the idle multiplier in effect.",
+      )
+      .skip("Gains experience from autoclicks and each second in Idle Mode: (0.5 + F) × M", "Pet experience isn't part of any burst score."),
   ),
   pet("Ent", 2, (b) =>
     b

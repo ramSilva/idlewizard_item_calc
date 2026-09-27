@@ -273,7 +273,86 @@ export const TEMPORALIST: ClassDef = {
   source: TEMPORALIST_PAGE,
 };
 
-export const CLASSES: readonly ClassDef[] = [ONI, SHAMAN, TEMPORALIST];
+const CHRONOMANCER_PAGE: Source = { url: wiki("Chronomancer"), verified: true };
+const CHRONOMANCER_GUIDE = "https://idle-wizard.fandom.com/wiki/Chronomancer_Guide_Updated";
+const chronomancerSection = (heading: string): string => `${CHRONOMANCER_GUIDE}#${heading.replace(/ /g, "_")}`;
+const CHRONO_ATTRIBUTES = chronomancerSection("Attributes");
+const CHRONO_LEVELS = chronomancerSection("Phase 1: Build up Levels");
+const CHRONO_STACKING = chronomancerSection("Phase 2: Build up Superposition and Ritual of Power");
+const CHRONO_PREBURST = chronomancerSection("Phase 3: PreBurst");
+const CHRONO_BURST = chronomancerSection("Phase 4: Bursting");
+const HOURS_PER_YEAR = 365 * 24;
+
+export const CHRONOMANCER: ClassDef = {
+  id: "chronomancer",
+  name: "Chronomancer",
+  effects: [
+    effect("Prod.Global", `L ^ 2 * C * ((Char.ClassTimeHours + S * ${HOURS_PER_YEAR}) * G) ^ 0.64 * 0.25 + 1`, "Chronomancer hero ability (Sources profit)", {
+      ...CHRONOMANCER_PAGE,
+      verified: false,
+      note: 'The page gives no units for T and S; both are taken in hours, and "Character Play Time" is read as time played as this class this Exile.',
+    }),
+  ],
+  stances: [],
+  stats: [
+    derivedStat("Misc.TemporalAnchors", "Temporal Anchors owned", "Production", f(buildingCount(8)), {
+      source: { ...CHRONOMANCER_PAGE, note: "Temporal Anchor is Chronomancer's unique source and replaces The Nexus." },
+    }),
+  ],
+  augments: [101],
+  pairedPets: ["risen-giant", "archivist", "pixie", "geode", "simulacrum", "zombie"],
+  defaultSpells: [65, 17, 73, 60, 4, 69],
+  defaultPet: "risen-giant",
+  defaultSnapped: [69],
+  defaultScore: "chronomancer-burst",
+  defaults: {
+    ...attributeDefaults(CHRONO_ATTRIBUTES, { Intelligence: 25, Insight: 25, Wisdom: 25, Patience: 40, Mastery: 25 }),
+    ...Object.fromEntries(
+      (["Spellcraft", "Dominance", "Empathy"] as const).map((a) => [attributePoints(a), inferred(CHRONO_ATTRIBUTES, 0, "Not listed in the guide's attribute points.")]),
+    ),
+    [buildingShare(8)]: {
+      value: 1,
+      source: { url: CHRONOMANCER_PAGE.url, verified: false, note: "Assumed: Temporal Anchors (The Nexus's replacement) hold the production; the burst also casts Gem Resonance (Mana Gems)." },
+    },
+    [snappedOf(69, "MaxDistortion")]: inferred(
+      CHRONO_PREBURST,
+      10,
+      "The pre-burst casts Temporal Distortion until Stabilize The Flow is cast; 10x is the class page's base maximum (items and an upgrade raise it to 30x).",
+    ),
+    [snappedOf(69, "IncantationEfficiency")]: placeholder(1e3, "Incantation efficiency of the pre-burst set that casts Stabilize The Flow.", CHRONO_PREBURST),
+    "Char.ClassTimeHours": inferred(CHRONOMANCER_GUIDE, 10, "The guide gives a run duration of 10 minutes to 10 hours; the upper end is used."),
+    "Mysteries.Count": inferred(CHRONOMANCER_GUIDE, 1e150, "The guide covers e90–e220+ Mysteries."),
+    "Time.SkippedYears": placeholder(1, "time skipped with Wormhole in phases 1 and 2.", CHRONO_STACKING),
+    "Pet.TimeCurrent": inferred(
+      CHRONO_STACKING,
+      HOURS_PER_YEAR * 3600,
+      "Risen Giant scales with the pet game time gained from Wormhole, so its pet time matches the skipped-time default.",
+    ),
+    [castsOf(17)]: placeholder(1e5, "Superposition casts stacked in phase 2.", CHRONO_STACKING),
+    [castsOf(60)]: placeholder(1e5, "Ritual Of Power casts stacked in phase 2.", CHRONO_STACKING),
+    [castsOf(101)]: placeholder(100, "Time Helix casts from phase 2's second spell set.", CHRONO_STACKING),
+    "Spell.CastsThisExile": placeholder(1e7, "spells cast this Exile (phases 1 and 2 cast recklessly).", CHRONO_STACKING),
+    "Char.Level": placeholder(1000, "character level after the level buildup.", CHRONO_LEVELS),
+    "Pet.Level": placeholder(300, "Risen Giant level at the burst.", CHRONO_BURST),
+    "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", CHRONO_BURST),
+    "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", CHRONO_BURST),
+    [buildingCount(8)]: placeholder(3000, "Temporal Anchors owned (unlocking the class takes 1500 of The Nexus).", CHRONOMANCER_PAGE.url),
+    "Spell.EvocationEfficiency": placeholder(1e3, "Evocation efficiency from upgrades and other unmodelled sources.", CHRONO_BURST),
+    "Spell.IncantationEfficiency": placeholder(1e3, "Incantation efficiency from upgrades and other unmodelled sources.", CHRONO_BURST),
+    "Void.Mana": placeholder(1e10, "Void mana gathered with Void Radiance in the pre-burst.", CHRONO_PREBURST),
+    "Idle.Bonus": placeholder(100, "idle bonus before items and attributes (the guide's Patience note relies on Risen Giant's idle scaling).", CHRONO_ATTRIBUTES),
+    "Expeditions.Level": placeholder(50, "expedition level.", wiki("Expeditions")),
+  },
+  mainBuilding: 8,
+  buildingNames: { 8: "Temporal Anchors" },
+  unmodelled: [
+    { text: "Compressed Time (maximum L × 5)", note: "Compressed Time isn't modelled." },
+    { text: "Time Distortion speeds up game time (not spell durations or weapon charging)", note: "Time over the run isn't modelled; times are inputs." },
+  ],
+  source: CHRONOMANCER_PAGE,
+};
+
+export const CLASSES: readonly ClassDef[] = [ONI, SHAMAN, TEMPORALIST, CHRONOMANCER];
 
 export function classById(id: string): ClassDef {
   const c = CLASSES.find((x) => x.id === id);

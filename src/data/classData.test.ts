@@ -9,7 +9,7 @@ import { classSpells, spellById, spellKey } from "./spells.ts";
 import { GENERIC_STATS } from "./stats.ts";
 
 const expectSource = (s: Source, where: string) => {
-  expect(s.url, where).toMatch(/^https:\/\/idlewizard\.wiki\.gg\/wiki\//);
+  expect(s.url, where).toMatch(/^https:\/\/(idlewizard\.wiki\.gg|idle-wizard\.fandom\.com)\/wiki\//);
   if (!s.verified) expect(s.note, `${where} is unverified without a note`).toBeTruthy();
 };
 
@@ -22,7 +22,8 @@ describe("spells", () => {
     expect(spellById(93).behavior).toBe("Augment");
   });
 
-  it("encodes every Oni, Shaman and Temporalist spell", () => {
+  it("encodes every spell of every encoded class", () => {
+    expect(CLASSES.map((c) => c.id)).toEqual(["oni", "shaman", "temporalist", "chronomancer"]);
     for (const c of CLASSES) {
       for (const s of classSpells(c.name)) expect(SPELL_BEHAVIOURS.has(s.id), `${c.name}: ${s.name} (${s.id})`).toBe(true);
     }
@@ -65,7 +66,7 @@ describe("pets and classes", () => {
 
   it("sets pet tiers from the category pages", () => {
     const tier = Object.fromEntries(PETS.map((p) => [p.name, p.tier]));
-    expect(tier).toMatchObject({ "Living Sin": 3, "Mechanos Apexis": 3, "Herald of Rot": 3, "Greater Chimaera": 3, Hungerer: 2, "Risen Giant": 2, Interrogator: 1, Pixie: 1 });
+    expect(tier).toMatchObject({ "Living Sin": 3, "Mechanos Apexis": 3, "Herald of Rot": 3, "Greater Chimaera": 3, Hungerer: 2, "Risen Giant": 2, Interrogator: 1, Pixie: 1, Zombie: 1 });
   });
 
   it("only sets defaults for stats that exist", () => {

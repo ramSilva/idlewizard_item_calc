@@ -195,6 +195,10 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
       .manaPerSecond("M * E * (C * 0.01 + 1) * 20")
       .skip("PetXp = (CharLvl × (Evocation^0.5 + 1) + FixedXp) × PetXpMultiplier", PET_XP),
   65: (b) => b.manaPerCast("(L + 10) * E * M * 20").skip("CompressedTime = CharLvl × 0.2 + 100", "Compressed Time isn't modelled."),
+  66: (b) =>
+    b
+      .skip("TimeSkipped = (log10(Evocation) × 0.75 + 1) × Charlvl × 0.5 + 10", "Skipped time is an input.")
+      .skip("Stops all active spells, increasing casts as if completed (Skipped Time page)", "Casts are inputs; Wormhole isn't cast in the scored burst."),
   67: (b) => b.skip("TimeDistortion = log10(Evocation) × 0.05 + 0.25", "Time Distortion gained over the run; Stabilize The Flow uses the maximum."),
   68: (b) => b.skip("Instantly refreshes the duration on all active spells", "Spell durations aren't modelled (every selected spell is assumed active)."),
   71: (b) => b.skip("Entities = ⌊log10(Evocation) × 2 + 1⌋ × (⌊Charges × 0.02⌉ + 1)", "Void Entities collected are an input."),
@@ -291,6 +295,11 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
   89: (b) => b.casts().effect("Prod.Global", "mul", "((C + 1) * 0.005) ^ 1.2 * I + 1"),
   90: (b) => b.effect("Spell.EvocationEfficiency", "mul", "(L + 1) ^ 1.28 * I * 0.25 + 1"),
   93: (b) => b.casts().effect("Spell.IncantationEfficiency", "mul", "((C + 1) / 400) ^ 1.5 + 1"),
+  101: (b) =>
+    b
+      .casts()
+      .effect("Prod.Global", "mul", "C * (log10(I) * 0.95 + 1) * 0.9 + 1", undefined, "Incantation efficiency is read as the current value; the Math doesn't say it's fixed at cast.")
+      .skip("Resets Character Experience, Mana, Void Mana, and various Exile statistics", "Resets over the run aren't modelled; the affected totals are inputs."),
   107: (b) => b.effect("Spell.EvocationEfficiency", "mul", "(Pet.MaxLevelThisExile + 1) ^ 0.8 * I ^ 1.3 + 1"),
   117: (b) =>
     b

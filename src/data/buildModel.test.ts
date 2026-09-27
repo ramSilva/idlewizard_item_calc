@@ -151,6 +151,62 @@ describe("relevance at the guide defaults", () => {
   });
 });
 
+// The Fandom guide's setup sections state no stat scalings and its gear is unread until the blind check, so these tests
+// run without items and pin the scalings the encoded formulas imply.
+describe("chronomancer burst model", () => {
+  const noItems = (m: BuiltModel) => loadoutModifiers(m, [], false);
+
+  it("compiles the guide's burst setup with every required input labelled and defaulted", () => {
+    const m = model("chronomancer");
+    expect(m.selection).toMatchObject({ petId: "risen-giant", spells: [65, 17, 73, 60, 4, 69], snapped: [69], idle: true, scoreId: "chronomancer-burst" });
+    expect(m.effects.some((e) => e.label === "Time Helix")).toBe(true);
+    for (const i of m.graph.inputs) {
+      const s = m.graph.stats[i];
+      expect(s.def.label, s.id).toBeTruthy();
+      expect(Number.isFinite(s.def.input!.default), s.id).toBe(true);
+    }
+    expect(Number.isFinite(new FloatEvaluator(m.graph).scoreLog10(noItems(m)))).toBe(true);
+  });
+
+  it("scales as the burst formulas imply", () => {
+    const m = model("chronomancer");
+    const e = (stat: string) => elasticity(m, stat, noItems(m));
+    expect(e(STAT.Evo)).toBeCloseTo(1, 3);
+    expect(e(STAT.CAP)).toBeCloseTo(1, 3);
+    expect(e(STAT.Inc)).toBeGreaterThan(3);
+    expect(e(STAT.Inc)).toBeLessThan(3.3);
+    expect(e(STAT.PAP)).toBeCloseTo(0.3, 2);
+    expect(e(STAT.Idle)).toBeCloseTo(2.0155, 2);
+  });
+
+  it("adds Stabilize The Flow's Incantation scaling when it isn't snapped", () => {
+    const snapped = model("chronomancer");
+    const live = buildModel({ ...defaultSelection("chronomancer"), snapped: [] }, { relevance: false });
+    const inc = (m: BuiltModel) => elasticity(m, STAT.Inc, noItems(m));
+    expect(inc(live) - inc(snapped)).toBeCloseTo(1, 2);
+  });
+
+  it("hides inputs that scale every set equally", () => {
+    const m = model("chronomancer");
+    for (const id of [
+      "Spell.StabilizeTheFlow.SnappedIncantationEfficiency",
+      "Spell.StabilizeTheFlow.SnappedMaxDistortion",
+      "Spell.EvocationEfficiency",
+      "Hero.AbilityPowerGrowth",
+      "Char.ClassTimeHours",
+      "Mysteries.Count",
+    ]) {
+      expect(shown(m, id), id).toBe(false);
+    }
+    for (const id of ["Building.8.Count", "Spell.TimeHelix.CastsThisExile", "AttrPoints.Patience"]) expect(shown(m, id), id).toBe(true);
+  });
+
+  it("needs Singularity Beam on the bar for its burst score", () => {
+    expect(model("chronomancer").scores.map((s) => s.id)).toEqual(expect.arrayContaining(["chronomancer-burst", "spell:SingularityBeam", "production"]));
+    expect(() => buildModel({ classId: "chronomancer", petId: "risen-giant", spells: [17, 60], scoreId: "chronomancer-burst" })).toThrow(/isn't available/);
+  });
+});
+
 describe("guide-anchored magnitudes and toggles", () => {
   it("gives about 76 Summon Centipede Swarm clicks per second in the Shaman burst preset", () => {
     const m = model("shaman");
