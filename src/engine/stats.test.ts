@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createGenericRegistry, GENERIC_EFFECTS } from "../data/stats.ts";
+import { createGenericRegistry, PRODUCTION_EFFECTS } from "../data/stats.ts";
 import { f } from "./expr.ts";
 import { compileGraph, FloatEvaluator } from "./graph.ts";
 import { inputStat, multiplierStat, StatRegistry } from "./stats.ts";
@@ -32,7 +32,7 @@ describe("generic stats", () => {
       "Void.Mana": 2,
       "Idle.Bonus": 3,
     });
-    const graph = compileGraph({ stats: registry, effects: GENERIC_EFFECTS, score: f("Prod.Total * Click.CritFactor") });
+    const graph = compileGraph({ stats: registry, effects: PRODUCTION_EFFECTS, score: f("Prod.Total * Click.CritFactor") });
     const inputs = graph.inputs.map((i) => graph.stats[i].id).sort();
     expect(inputs).toEqual(
       [

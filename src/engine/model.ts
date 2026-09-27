@@ -84,49 +84,88 @@ export const SLOT_CAPACITY: Record<ItemSlot, number> = Object.fromEntries(
   ITEM_SLOTS.map((s) => [s, s === "Finger" || s === "Trophy" ? 2 : 1]),
 ) as Record<ItemSlot, number>;
 
+/** Same semantics as `Effect`: "mul" values are the factor itself, "add" values are added to the stat's base. */
 export interface ItemEffect {
   stat: string;
   op: "add" | "mul";
   value: number | Expr;
+  /** The clause of the wiki text this effect was read from. */
   text: string;
+  source: Source;
 }
 
-export interface ItemTier {
-  quality: Quality;
+/**
+ * Why a clause has no effect in the model:
+ * - `not-production`: the stat can't change mana production in a scored phase (crafting, jars, offline, …).
+ * - `mechanic`: needs a game mechanic the stat model doesn't have (abilities, building counts, cast counting, …).
+ * - `mythic-random`: Mythic random bonuses and imbuements, which are rolled per item.
+ * - `unparsed`: the text matched no rule; a coverage test lists these.
+ */
+export type UnmodelledReason = "not-production" | "mechanic" | "mythic-random" | "unparsed";
+
+export interface UnmodelledClause {
+  text: string;
+  reason: UnmodelledReason;
+  note?: string;
+}
+
+/** Free enchant levels granted to enchanted items (those with at least 1 real level). */
+export interface BonusEnchant {
+  /** "all" levels count toward the global cap of 5; slot- and self-scoped ones don't (see `resolveLoadout`). */
+  scope: "all" | "self" | ItemSlot;
+  levels: number;
+  text: string;
+  source: Source;
+}
+
+export interface EffectBlock {
   desc: string;
   effects: ItemEffect[];
-  unmodelled: string[];
+  bonusEnchant: BonusEnchant[];
+  unmodelled: UnmodelledClause[];
+}
+
+export interface ItemTier extends EffectBlock {
+  quality: Quality;
 }
 
 export interface EnchantDef {
   desc: string;
+  /** null when the enchant's stat isn't modelled (then `unmodelled` says why). */
   stat: string | null;
-  /** Fractional bonus per level; enchant levels stack multiplicatively: (1 + perLevel)^level. */
+  /** Fractional bonus per level. Levels stack multiplicatively: the stat is multiplied by (1 + perLevel)^level. */
   perLevel: number;
-  /** When set, the per-level factor is `perLevel` applied to this op on the stat instead of a multiplier. */
-  op: "mul" | "add";
+  unmodelled?: UnmodelledClause;
+  source: Source;
 }
 
 export interface ItemDef {
   key: string;
+  /** Preset/guide id from `Module:Data/Items`; Mythic items have none. */
   id: number | null;
   name: string;
   slot: ItemSlot;
   set: string | null;
   startQuality: Quality;
+  maxQuality: Quality;
   requirements: Partial<Record<Attribute, number>>;
   tiers: ItemTier[];
   enchant: EnchantDef | null;
-  enchantText: string | null;
   mythic: boolean;
+  acquisition: string | null;
   details: string | null;
   source: Source;
 }
 
+export interface SetTier extends EffectBlock {
+  pieces: number;
+}
+
 export interface SetDef {
   name: string;
+  /** Item keys. */
   items: string[];
-  tiers: { pieces: number; desc: string; effects: ItemEffect[]; unmodelled: string[] }[];
+  tiers: SetTier[];
   source: Source;
 }
 
