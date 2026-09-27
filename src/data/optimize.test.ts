@@ -9,9 +9,9 @@ import { comparePreset } from "./optimizerReport.ts";
 
 // Guide burst presets (the same ones `buildModel.test.ts` checks scalings against) and their enchant tabs.
 const GUIDE = {
-  oni: { preset: "104;113;1;29;18;32;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509", level: 17 },
-  shaman: { preset: "108;113;4;20;12;33;47;61;59;87;73;1001;206;306;418;406;94;2005;3004;507", level: 20 },
-  temporalist: { preset: "104;113;1;29;11;34;48;67;59;83;76;1005;207;300;411;408;92;2003;3005;508", level: 15 },
+  oni: { preset: "104;113;1;29;18;32;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509", level: 17, shown: ["Weapon.CataclysmCharges", "Pet.Level"] },
+  shaman: { preset: "108;113;4;20;12;33;47;61;59;87;73;1001;206;306;418;406;94;2005;3004;507", level: 20, shown: ["Weapon.BranchCharges", "Hero.AbilityPower"] },
+  temporalist: { preset: "104;113;1;29;11;34;48;67;59;83;76;1005;207;300;411;408;92;2003;3005;508", level: 15, shown: ["Spell.QuasiIncantation.CastsThisExile", "Pet.AbilityPower"] },
 } as const;
 
 const models = new Map<string, BuiltModel>();
@@ -44,6 +44,7 @@ describe.each(Object.keys(GUIDE) as (keyof typeof GUIDE)[])("%s burst optimizer"
     const shown = rel.inputs.filter((i) => i.shown).length;
     expect(shown).toBeLessThan(m.relevance!.inputs.filter((i) => i.shown).length);
     expect(rel.inputs.find((i) => i.id === "Mysteries.Count")?.shown ?? false).toBe(false);
+    for (const id of g.shown) expect(rel.inputs.find((i) => i.id === id)?.shown, id).toBe(true);
   });
 });
 

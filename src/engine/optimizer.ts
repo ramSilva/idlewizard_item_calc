@@ -387,7 +387,7 @@ export class Optimizer {
     for (const b of row.branches) addSet(b.items.map((i) => i.key));
     const bySlot = new Map<ItemSlot, ChosenItem[]>();
     for (const i of row.best.items) bySlot.set(i.slot, [...(bySlot.get(i.slot) ?? []), i]);
-    const swaps: { keys: string[]; score: number }[] = [];
+    const swaps: { keys: string[]; score: number; slot: ItemSlot }[] = [];
     for (const cand of this.pool) {
       const key = cand.item.key;
       if (bestKeys.includes(key) || (cand.allBonus > 0 && !row.best.forced.includes(key))) continue;
@@ -396,10 +396,15 @@ export class Optimizer {
       const out = open > 0 ? null : held.reduce<ChosenItem | null>((w, i) => (!w || i.contributionLog10 < w.contributionLog10 ? i : w), null);
       if (open <= 0 && !out) continue;
       const keys = [...bestKeys.filter((k) => k !== out?.key), key];
-      swaps.push({ keys, score: this.scoreOf(keys, row.level) });
+      swaps.push({ keys, score: this.scoreOf(keys, row.level), slot: cand.slot });
     }
-    swaps.sort((a, b) => b.score - a.score);
-    for (const s of swaps.slice(0, options.maxCandidates ?? 40)) if (Number.isFinite(s.score)) addSet(s.keys);
+    const usable = swaps.filter((s) => Number.isFinite(s.score)).sort((a, b) => b.score - a.score);
+    // The best alternative of every slot is kept, so inputs that only matter to an equipped item's own value
+    // (e.g. Cataclysm's charges) are compared against a set without that item.
+    const bestPerSlot = [...new Map([...usable].reverse().map((s) => [s.slot, s])).values()];
+    const chosen = new Set(bestPerSlot);
+    for (const s of usable) if (chosen.size < Math.max(options.maxCandidates ?? 40, bestPerSlot.length)) chosen.add(s);
+    for (const s of chosen) addSet(s.keys);
     return analyzeRelevance(this.graph, {
       inputs: this.inputs,
       candidates: [...sets.values()].map((k) => this.modifiersFor(k, row.level)),
