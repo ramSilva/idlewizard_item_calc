@@ -3,11 +3,17 @@
 // their subsections), item templates/params/images/lists/tables are stripped, and every item and
 // set name is redacted before anything leaves this process.
 //
-// Usage: node scripts/validation/chronomancer-setup.mjs [--list] [--drop "<heading>"]... [--page <title>] [--file <wikitext> --out <md>]
+// Usage: node scripts/validation/chronomancer-setup.mjs [--list] [--drop "<heading>"]... [--keep "<heading>"]... [--page <title>] [--file <wikitext>] [--out <md>] [--set-headings] [--table-cells]
 //   --list  print the (redacted) heading list and the selection, fetch nothing else
 //   --drop  exclude a selected heading (exact redacted text) and its subsections
-//   --page  Fandom page to read (default: the guide the Fandom class page links)
-//   --file  dry-run the filter on a local wikitext file (e.g. an allowed class guide) instead of Fandom
+//   --keep  keep a section's filtered prose even if most of it was removed as item discussion (exact redacted heading)
+//   --page  Fandom page to read (default: the guide the Fandom class page links); with --file, only names the page
+//   --file  run the filter on a local wikitext file (a saved guide or an allowed class guide) instead of Fandom
+//   --out   output file (default validation/chronomancer/guide-setup.md)
+//   --set-headings  don't treat "Set"/"Sets" in a heading as gear, for guides whose phase subsections are
+//                   named after spell sets ("Burst Set"); item presets inside them are still stripped
+//   --table-cells  keep the cells of item-referencing tables that have no item, gear word or enchant level
+//                  (without it, only their count is printed)
 //   --inventory  print each selected section's markup shape (template names, parameter keys, table sizes) only
 import fs from "node:fs";
 import path from "node:path";
@@ -19,8 +25,9 @@ const DEFAULT_TITLE = "Chronomancer Guide Updated";
 const OUT = path.join(ROOT, "validation/chronomancer/guide-setup.md");
 const MAX_REMOVED_SHARE = 0.5;
 
-const EXCLUDED_HEADING =
-  /gear|items?\b|\bbis\b|best[- ]in[- ]slot|equip|enchant|\bsets?\b|weapon|loadout|mythic|quality|legendary|\bslots?\b|rings?\b|amulet|trophy|trophies|phylacter|artifact|relic|changelog|credits?|see also|references/i;
+const EXCLUDED_HEADING_WORDS =
+  "gear|items?\\b|\\bbis\\b|best[- ]in[- ]slot|equip|enchant|weapon|loadout|mythic|quality|legendary|\\bslots?\\b|rings?\\b|amulet|trophy|trophies|phylacter|artifact|relic|changelog|credits?|see also|references";
+const excludedHeading = (setHeadings) => new RegExp(setHeadings ? EXCLUDED_HEADING_WORDS : `${EXCLUDED_HEADING_WORDS}|\\bsets?\\b`, "i");
 const GEAR_WORDS =
   /\b(enchant\w*|bis|best[- ]in[- ]slot|gear|equip\w*|unequip\w*|loadouts?|items?|mythics?|legendary|uniques?|quality|slots?|chest|feet|shoulders?|neck|waist|wrists?|legs|fingers?|offhand|trophy|trophies|accessory|weapons?|mount|phylactery|phylacteries|rings?|amulets?|boots|gloves|helm\w*|pants|belts?|cloaks?|bracers|pauldrons|sleeves?)\b/i;
 const ITEM_TEMPLATE = /item|bis|gear|equip|enchant|sets?$|preset|loadout/i;
@@ -31,7 +38,18 @@ const SPELL_TEMPLATE = /^Spell/i;
 const ATTRIBUTE_LINE = /^[*#:;]+\s*'*(Intelligence|Insight|Spellcraft|Wisdom|Dominance|Patience|Mastery|Empathy|Versatility)\b/i;
 const ATTRIBUTE_VALUE = /^([*#:;]+)\s*'*(Intelligence|Insight|Spellcraft|Wisdom|Dominance|Patience|Mastery|Empathy|Versatility)'*\s*:?\s*'*(\d[\d.,+\-–~/]*|max(?:ed)?)/i;
 const SPELL_PARAM = /^spell_\d+_(name|autocast)$/i;
+const SPELL_CODE_PARAM = /^spellset_code$/i;
+/** Spell set codes per Module:Spells (TokenizeSpellCode/lookupAutocast): `id,mode;…`, -1 an empty slot, optional `#n#label@` export prefix. */
+const SPELL_CODE = /^(?:#\d*#[^@]*@)?(-?\d+,\d(?:;-?\d+,\d)*)$/;
+const AUTOCAST = ["None", "Careful", "Reckless"];
 const ITEM_PRESET = /#?\d*#?[\w()]*@?-?\d+(?:;-?\d+){9,}/g;
+const ATTRIBUTE_NAMES = ["Intelligence", "Insight", "Spellcraft", "Wisdom", "Dominance", "Patience", "Mastery", "Empathy", "Versatility"];
+/** Stat and setup shorthand that guides capitalise; exempt from the item-abbreviation rule only (masking them would split item names). */
+const GUIDE_ABBREVIATIONS = (
+  "Int Ins SPC SC Spc Wis Dom Pat Mas Emp Vers CAP CaP PAP Pap Inc Evo VpE VM TD TF GR StF Exp Char Idle Profit Profits " +
+  "Mana Void Pet Level Levels Paragon Realm Quasi Exile Mysteries Memes Source Sources Spell Spells Scaling Rules Phase Phases " +
+  "Burst Snap Stack Stacking Goal None Careful Reckless Perks Perk Needs Need Important Rest Overall Valuable Typical Quick"
+).split(" ");
 const SENTINEL = "\u0000ITEM\u0000";
 
 const STOPWORDS = new Set(
@@ -42,6 +60,21 @@ const STOPWORDS = new Set(
 
 function readJson(rel) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
+}
+
+let spellNames;
+/** Returns null unless every entry is a known spell id (or -1), so an item preset can't pass as a spell set. */
+function decodeSpellCode(value) {
+  const m = SPELL_CODE.exec(value.trim());
+  if (!m) return null;
+  spellNames ??= new Map(readJson("src/data/generated/spells.json").spells.map((s) => [s.id, s.name]));
+  const slots = m[1].split(";").map((entry) => {
+    const [id, mode] = entry.split(",").map(Number);
+    if (id === -1) return "(empty)";
+    const name = spellNames.get(id);
+    return name && AUTOCAST[mode] ? `${name} (${id}, ${AUTOCAST[mode]})` : null;
+  });
+  return slots.length <= 6 && slots.every(Boolean) ? slots : null;
 }
 
 function loadDictionary() {
@@ -89,6 +122,7 @@ function buildRedactor() {
     "Berserk",
   ].filter(Boolean);
   const protectedTokens = new Set(protectedNames.flatMap(tokens).map((t) => t.toLowerCase()));
+  const notAbbreviations = new Set([...protectedTokens, ...[...ATTRIBUTE_NAMES, ...GUIDE_ABBREVIATIONS].map((w) => w.toLowerCase())]);
   const protectedAcronyms = new Set(protectedNames.map((n) => initials(n).toLowerCase()));
 
   const names = [...items.map((i) => i.name), ...sets.map((s) => s.name)];
@@ -107,7 +141,26 @@ function buildRedactor() {
   }
   const itemRe = phraseRe(phrases);
   const protectRe = phraseRe(protectedNames);
+  const shortTokens = [
+    ...new Set(
+      names
+        .flatMap(tokens)
+        .map((t) => t.toLowerCase().replace(/'s$/, ""))
+        .filter((t) => t.length >= 3 && !STOPWORDS.has(t) && !protectedTokens.has(t)),
+    ),
+  ];
+  /** Guides shorten item names to a capitalised word or its start ("Kilt", "Amp"), which the phrase list misses. */
+  const isItemAbbreviation = (word) => {
+    const w = word.toLowerCase().replace(/'s$/, "");
+    return !notAbbreviations.has(w) && shortTokens.some((t) => t === w || (t.length >= 5 && t.startsWith(w)));
+  };
   const itemPages = new Set(names.map((n) => n.toLowerCase()));
+  const knownPages = new Set(
+    [...readJson("data-raw/manifest.json").pages.flatMap((p) => [p.title, p.resolvedTitle]), ...protectedNames]
+      .filter(Boolean)
+      .map((t) => t.toLowerCase())
+      .filter((t) => !itemPages.has(t)),
+  );
   const fullNameRe = phraseRe(names);
 
   function redact(text) {
@@ -116,11 +169,16 @@ function buildRedactor() {
       kept.push(m);
       return `\uE000${kept.length - 1}\uE000`;
     });
-    return masked.replace(itemRe, SENTINEL).replace(/\uE000(\d+)\uE000/g, (_, i) => kept[Number(i)]);
+    return masked
+      .replace(itemRe, SENTINEL)
+      .replace(/(?<![\p{L}\p{N}'])\p{Lu}[\p{L}']{2,}(?![\p{L}\p{N}])/gu, (m) => (isItemAbbreviation(m) ? SENTINEL : m))
+      .replace(/\uE000(\d+)\uE000/g, (_, i) => kept[Number(i)]);
   }
   return {
     redact,
     isItemPage: (title) => itemPages.has(title.trim().toLowerCase()),
+    /** Links to pages outside the snapshot could name items renamed or removed since the guide was written. */
+    isUnknownPage: (title) => !knownPages.has(title.trim().replaceAll("_", " ").toLowerCase()),
     countItemNames: (text) => text.replace(protectRe, "").match(fullNameRe)?.length ?? 0,
   };
 }
@@ -201,6 +259,15 @@ function transformTemplate(inner, stats) {
     const setup = kept.filter((p) => p.key && SETUP_PARAM.test(p.key) && !p.value.includes(SENTINEL));
     if (setup.length) stats.boxes.push(render(setup));
   }
+  const spellCode = SPELL_TEMPLATE.test(name) ? named.find((p) => p.key && SPELL_CODE_PARAM.test(p.key)) : undefined;
+  if (spellCode) {
+    stats.markup += inner.length;
+    const slots = decodeSpellCode(spellCode.value);
+    if (!slots) return "[spell set code not decoded]";
+    const box = `{{${name}\n| spells = ${slots.join("; ")}\n}}`;
+    stats.boxes.push(box);
+    return box;
+  }
   if (SPELL_TEMPLATE.test(name) && named.some((p) => p.key && SPELL_PARAM.test(p.key))) {
     const spells = named.filter((p) => p.key && SPELL_PARAM.test(p.key) && !p.value.includes(SENTINEL));
     stats.markup += inner.length;
@@ -215,8 +282,22 @@ function transformTemplate(inner, stats) {
  * `removedShare` counts only dropped prose (sentences, list lines, tables) against the section's
  * text without markup, so long item preset codes don't make a phase section look like item discussion.
  */
-function filterSection(wikitext, { redact, isItemPage }) {
-  const stats = { original: wikitext.length, removed: 0, markup: 0, boxes: [] };
+const ENCHANT_LIKE = /\d+\s*\+\s*\d+|\bE\d+\b|[#@]/i;
+const TABLE_MARKUP = /^\s*(class|style|colspan|rowspan|width|align)\s*=/i;
+
+/** Cells of an item-referencing table that carry text but no item, gear word or enchant-like level ("17+5"). */
+function safeTableCells(inner) {
+  return inner
+    .split("\n")
+    .filter((l) => /^\s*[|!]/.test(l) && !/^\s*\|[-+}]/.test(l))
+    .flatMap((l) => l.replace(/^\s*[|!]/, "").split(/\|\||!!/))
+    .map((c) => (c.includes("|") && TABLE_MARKUP.test(c.split("|")[0]) ? c.slice(c.indexOf("|") + 1) : c).trim())
+    .filter((c) => /\p{L}{3,}/u.test(c) && !TABLE_MARKUP.test(c))
+    .filter((c) => !c.includes(SENTINEL) && !GEAR_WORDS.test(c) && !ENCHANT_LIKE.test(c) && !c.includes("{{"));
+}
+
+function filterSection(wikitext, { redact, isItemPage, isUnknownPage }, { tableCells = false } = {}) {
+  const stats = { original: wikitext.length, removed: 0, markup: 0, salvageable: 0, boxes: [], cells: [] };
   let t = wikitext.replace(/<!--[\s\S]*?-->/g, "");
   t = replaceBalanced(t, "[[", "]]", (inner) => {
     const [target, ...rest] = splitTopLevel(inner);
@@ -228,12 +309,21 @@ function filterSection(wikitext, { redact, isItemPage }) {
       stats.markup += inner.length;
       return SENTINEL;
     }
+    const page = target.split("#")[0];
+    if (page.trim() && !/^\s*(category|template|user|wikipedia|w|special):/i.test(page) && isUnknownPage(page)) return "[unknown page link]";
     return rest.length ? rest.at(-1) : target;
   });
   const templates = (text) => replaceBalanced(text, "{{", "}}", (inner) => transformTemplate(templates(inner), stats));
   t = redact(templates(t));
   t = replaceBalanced(t, "{|", "|}", (inner) => {
     if (inner.includes(SENTINEL) || GEAR_WORDS.test(inner)) {
+      const cells = safeTableCells(inner);
+      stats.salvageable += cells.length;
+      if (tableCells && cells.length) {
+        stats.cells.push(...cells);
+        stats.removed += inner.length - cells.join("").length;
+        return ["[table with item references; cells without items or gear words:]", ...cells.map((c) => `* ${c}`)].join("\n");
+      }
       stats.removed += inner.length;
       return "[table removed: references items]";
     }
@@ -260,7 +350,13 @@ function filterSection(wikitext, { redact, isItemPage }) {
   });
   t = lines.join("\n").replaceAll(SENTINEL, "[item]").replace(/\n{3,}/g, "\n\n").trim();
   const prose = stats.original - stats.markup;
-  return { text: t, boxes: stats.boxes, removedShare: prose > 0 ? Math.min(1, stats.removed / prose) : 0 };
+  return {
+    text: t,
+    boxes: stats.boxes,
+    cells: stats.cells.map((c) => c.replaceAll(SENTINEL, "[item]")),
+    salvageable: stats.salvageable,
+    removedShare: prose > 0 ? Math.min(1, stats.removed / prose) : 0,
+  };
 }
 
 /** Markup shape only (template names, parameter keys, table sizes); never prints values. */
@@ -304,11 +400,14 @@ function cutAtFirstSubheading(wikitext) {
 
 function parseArgs(argv) {
   const drop = [];
+  const keep = [];
   let list = false;
   let file = null;
   let out = OUT;
   let title = DEFAULT_TITLE;
   let shape = false;
+  let setHeadings = false;
+  let tableCells = false;
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--list") list = true;
     else if (argv[i] === "--drop") drop.push(argv[++i]);
@@ -316,12 +415,16 @@ function parseArgs(argv) {
     else if (argv[i] === "--out") out = path.resolve(argv[++i]);
     else if (argv[i] === "--page") title = argv[++i];
     else if (argv[i] === "--inventory") shape = true;
+    else if (argv[i] === "--set-headings") setHeadings = true;
+    else if (argv[i] === "--table-cells") tableCells = true;
+    else if (argv[i] === "--keep") keep.push(argv[++i]);
   }
-  return { list, drop, file, out, title, shape };
+  return { list, drop, keep, file, out, title, shape, setHeadings, tableCells };
 }
 
 async function main() {
-  const { list, drop, file, out, title: TITLE, shape } = parseArgs(process.argv.slice(2));
+  const { list, drop, keep, file, out, title: TITLE, shape, setHeadings, tableCells } = parseArgs(process.argv.slice(2));
+  const EXCLUDED_HEADING = excludedHeading(setHeadings);
   const redactor = buildRedactor();
   const clean = (line) =>
     redactor
@@ -357,33 +460,49 @@ async function main() {
   if (!list) {
     for (const s of sections.filter((x) => !x.reason)) {
       const wikitext = cutAtFirstSubheading(await sectionText(s));
-      const filtered = filterSection(wikitext, redactor);
-      if (filtered.removedShare > MAX_REMOVED_SHARE) {
+      const filtered = filterSection(wikitext, redactor, { tableCells });
+      if (filtered.removedShare > MAX_REMOVED_SHARE && !keep.includes(s.heading)) {
         s.reason = `mostly item content (${Math.round(filtered.removedShare * 100)}% removed)`;
-        s.boxes = filtered.boxes.map((b) => b.replaceAll(SENTINEL, "[item]"));
+        s.boxes = filtered.boxes.map((b) => redactor.redact(b).replaceAll(SENTINEL, "[item]"));
+        s.cells = filtered.cells;
+        s.salvageable = filtered.salvageable;
       } else Object.assign(s, filtered);
     }
   }
 
-  const boxesOnly = (s) => s.boxes?.length > 0;
+  const boxesOnly = (s) => s.boxes?.length > 0 || s.cells?.length > 0;
   const status = (s) => {
     const share = s.removedShare === undefined ? "" : ` (${Math.round(s.removedShare * 100)}% removed)`;
-    if (!s.reason) return `used${share}`;
-    return `excluded: ${s.reason}${boxesOnly(s) ? "; prose dropped, setup boxes (pet/spells/stance) kept" : ""}`;
+    const cells = s.salvageable ? `; ${s.salvageable} item-table cell(s) without items or gear words${tableCells ? " kept" : " (--table-cells keeps them)"}` : "";
+    if (!s.reason) return `used${share}${cells}`;
+    return `excluded: ${s.reason}${boxesOnly(s) ? "; prose dropped, setup boxes (pet/spells/stance) kept" : ""}${cells}`;
   };
   for (const s of sections) console.log(`${"  ".repeat(Math.max(0, s.level - 1))}${s.index}. ${s.heading} — ${status(s)}`);
   if (list) return;
 
   const used = sections.filter((s) => !s.reason || boxesOnly(s));
-  const body = (s) => (s.reason ? ["Prose dropped (mostly item discussion); setup boxes only:", "", ...s.boxes].join("\n") : s.text || "(no text left after filtering)");
+  const body = (s) =>
+    s.reason
+      ? [
+          "Prose dropped (mostly item discussion); setup boxes only:",
+          "",
+          ...s.boxes,
+          ...(s.cells?.length ? ["", "Cells of item tables without items, gear words or enchant levels:", ...s.cells.map((c) => `* ${c}`)] : []),
+        ].join("\n")
+      : s.text || "(no text left after filtering)";
   const leaks = used.reduce((n, s) => n + redactor.countItemNames(body(s)), 0);
   if (leaks > 0) {
     console.error(`Aborting: ${leaks} item name(s) survived filtering; nothing was written.`);
     process.exit(1);
   }
-  const source = file ? path.relative(ROOT, file) : `${pageUrl(FANDOM, TITLE)} (Fandom)`;
+  const pageNamed = TITLE !== DEFAULT_TITLE;
+  const source = !file
+    ? `${pageUrl(FANDOM, TITLE)} (Fandom)`
+    : pageNamed
+      ? `${path.relative(ROOT, file)} (saved copy of ${pageUrl(FANDOM, TITLE)})`
+      : path.relative(ROOT, file);
   const doc = [
-    "# Chronomancer guide: setup sections only",
+    `# ${pageNamed ? TITLE : "Chronomancer guide"}: setup sections only`,
     "",
     `Source: ${source}, fetched ${new Date().toISOString().slice(0, 10)} by \`scripts/validation/chronomancer-setup.mjs\`.`,
     "Item templates, item parameters, images, item lists/tables and sentences about gear, enchants or slots were removed, and item and set names were redacted to `[item]`, before this file was written.",
