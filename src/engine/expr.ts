@@ -28,6 +28,10 @@ export const bin = (op: BinaryOp, a: Expr, b: Expr): Expr => ({ t: "bin", op, a,
 export const mul = (...xs: Expr[]): Expr => xs.reduce((acc, x) => bin("*", acc, x));
 export const add = (...xs: Expr[]): Expr => xs.reduce((acc, x) => bin("+", acc, x));
 export const pow = (a: Expr, b: Expr | number): Expr => bin("^", a, typeof b === "number" ? num(b) : b);
+export const call = (fn: FnName, ...args: Expr[]): Expr => {
+  if (args.length !== FN_ARITY[fn]) throw new Error(`${fn} expects ${FN_ARITY[fn]} arguments`);
+  return { t: "fn", fn, args };
+};
 
 export type Bindings = Record<string, string | Expr>;
 
