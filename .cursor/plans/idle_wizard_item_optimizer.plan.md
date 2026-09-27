@@ -35,6 +35,9 @@ todos:
   - id: chronomancer-blind-check
     content: "Blind confidence check: save tool result for the Chronomancer guide setup first, then read the guide's gear, write the comparison and classify each difference (bug / assumption or outdated / unclear)"
     status: completed
+  - id: chronomancer-blind-check-2
+    content: "Second blind check against the Fandom In Over Your Head Chronomancer Guide (has item presets): part 1 tool result committed (ee64799); part 2 compares the guide's Burst Set presets slot by slot with the pre-declared headline run and classifies differences"
+    status: in_progress
   - id: deploy
     content: Add GitHub Pages Actions workflow, create public repo under ramSilva, and commit/push only after explicit approval
     status: pending
@@ -146,6 +149,8 @@ The point is to test the tool without seeing the answer first.
    - **Unclear:** list it with what would settle it.
    Differences don't automatically get accepted. Each needs a short reason, and exact-match goose chases are avoided.
 5. Report the match rate, the fixes made, and the open differences.
+
+The first guide turned out to name no items, so a second blind check runs the same protocol against the Fandom [In Over Your Head Chronomancer Guide](https://idle-wizard.fandom.com/wiki/In_Over_Your_Head_Chronomancer_Guide), which has item presets per phase. Files go in `validation/chronomancer-ioyh/` (`guide-setup.md`, `tool-result.md` before the gear is read, then `comparison.md`).
 
 ## Repo and deployment
 
