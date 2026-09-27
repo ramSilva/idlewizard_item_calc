@@ -1,4 +1,4 @@
-import { FloatEvaluator, type InputValues } from "../engine/graph.ts";
+import { FloatEvaluator, itemIndependentValue, type InputValues } from "../engine/graph.ts";
 import { unmetRequirements } from "../engine/loadout.ts";
 import type { Quality } from "../engine/model.ts";
 import type { LevelResult, Optimizer, SetResult, SweepResult } from "../engine/optimizer.ts";
@@ -39,6 +39,7 @@ export function comparePreset(opt: Optimizer, model: BuiltModel, row: LevelResul
     items.map((item) => ({ item, enchant: row.level })),
     problem.attributes ?? {},
     SETS,
+    itemIndependentValue(model.graph, inputs),
   );
   const equipped = items.map((item) => ({ item, enchant: ENCHANTABLE.includes(item.maxQuality) && item.enchant?.stat ? row.level : 0 }));
   const presetScore = new FloatEvaluator(model.graph, inputs).scoreLog10(loadoutModifiers(model, equipped, opt.legion));

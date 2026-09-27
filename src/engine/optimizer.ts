@@ -1,4 +1,5 @@
-import { createModifiers, FloatEvaluator, type InputValues, type ItemModifiers, type StatGraph } from "./graph.ts";
+import type { Expr } from "./expr.ts";
+import { createModifiers, FloatEvaluator, itemIndependentValue, type InputValues, type ItemModifiers, type StatGraph } from "./graph.ts";
 import { GLOBAL_BONUS_ENCHANT_CAP, MAX_ENCHANT_LEVEL, type ItemCatalog } from "./loadout.ts";
 import type { Attribute, EffectBlock, ItemDef, ItemSlot, Quality, SetDef } from "./model.ts";
 import { ATTRIBUTES, ITEM_SLOTS, SLOT_CAPACITY } from "./model.ts";
@@ -277,7 +278,8 @@ export class Optimizer {
     this.assigned = Float64Array.from(ATTRIBUTES, (a) => problem.attributes?.[a] ?? attributeInput(graph, this.inputs, a));
     this.work = new Work(graph);
 
-    const block = (b: EffectBlock, label: string): BlockInfo => blockInfo(b, graph, catalog, label);
+    const formulaValue = itemIndependentValue(graph, this.inputs);
+    const block = (b: EffectBlock, label: string): BlockInfo => blockInfo(b, graph, catalog, label, formulaValue);
     this.setInfo = problem.sets.map((def) => {
       const tiers = def.tiers.map((t) => ({ ...block(t, `${def.name} (${t.pieces})`), pieces: t.pieces }));
       return { def, tiers, maxPieces: Math.max(0, ...tiers.map((t) => t.pieces)), favourable: [] };
@@ -1270,16 +1272,17 @@ function attributeInput(graph: StatGraph, inputs: InputValues, a: Attribute): nu
   return s?.base.kind === "input" ? s.base.spec.default : 0;
 }
 
-function blockInfo(b: EffectBlock, graph: StatGraph, catalog: ItemCatalog, label: string): BlockInfo {
+function blockInfo(b: EffectBlock, graph: StatGraph, catalog: ItemCatalog, label: string, formulaValue: (e: Expr) => number | undefined): BlockInfo {
   const delta = emptyDelta();
   let attr: number[] | null = null;
   for (const e of b.effects) {
+    const a = ATTR_INDEX.get(e.stat);
+    const points = a === undefined || e.op !== "add" ? undefined : typeof e.value === "number" ? e.value : formulaValue(e.value);
+    if (a !== undefined && points !== undefined) {
+      attr ??= ATTRIBUTES.map(() => 0);
+      attr[a] += points;
+    }
     if (typeof e.value === "number") {
-      const a = ATTR_INDEX.get(e.stat);
-      if (a !== undefined && e.op === "add") {
-        attr ??= ATTRIBUTES.map(() => 0);
-        attr[a] += e.value;
-      }
       const i = graph.index.get(e.stat);
       if (i === undefined) continue;
       const s = graph.stats[i];

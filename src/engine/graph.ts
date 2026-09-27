@@ -220,6 +220,26 @@ export function exprItemDependent(graph: StatGraph, e: Expr): boolean {
   return false;
 }
 
+/**
+ * Evaluates formulas that no item can change (e.g. an attribute bonus based on pet level) at the given inputs; undefined
+ * for formulas that depend on items or on stats outside the graph.
+ */
+export function itemIndependentValue(graph: StatGraph, inputs: InputValues = {}): (e: Expr) => number | undefined {
+  let ev: FloatEvaluator | null = null;
+  return (e) => {
+    for (const r of refsOf(e)) {
+      const i = graph.index.get(r);
+      if (i === undefined || graph.stats[i].itemDependent) return undefined;
+    }
+    if (!ev) {
+      ev = new FloatEvaluator(graph, inputs);
+      ev.scoreLog10();
+    }
+    const at = ev;
+    return evalDecimalExpr(e, (id) => Decimal.pow(10, at.statLog10(id)).mul(at.statSign(id))).toNumber();
+  };
+}
+
 export function exprInputs(graph: StatGraph, e: Expr, out = new Set<number>()): Set<number> {
   for (const ref of refsOf(e)) graph.stats[graph.index.get(ref)!].inputs.forEach((x) => out.add(x));
   return out;

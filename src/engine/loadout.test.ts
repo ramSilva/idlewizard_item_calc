@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { itemByName, ITEMS, SETS } from "../data/items.ts";
 import { createGenericRegistry, GENERIC_EFFECTS } from "../data/stats.ts";
 import { f } from "./expr.ts";
-import { compileGraph, createModifiers, FloatEvaluator } from "./graph.ts";
+import { compileGraph, createModifiers, FloatEvaluator, itemIndependentValue } from "./graph.ts";
 import { ItemCatalog, resolveLoadout, unmetRequirements, validateLoadout, type EquippedItem } from "./loadout.ts";
 import type { ItemDef } from "./model.ts";
 
@@ -81,6 +81,19 @@ describe("validation and requirements", () => {
     expect(unmetRequirements(equipped, { Insight: 60, Intelligence: 50 }, SETS)).toEqual([]);
     expect(unmetRequirements(equipped, { Insight: 50, Intelligence: 50 }, SETS)).toEqual([
       { item: item("Ebon Mantle").key, attribute: "Insight", required: 100, available: 90 },
+    ]);
+  });
+});
+
+describe("formula attribute bonuses", () => {
+  it("count Commissar's Torn Sleeve's pet-level bonus toward other items' requirements", () => {
+    const graph = compileGraph({ stats: createGenericRegistry(), effects: GENERIC_EFFECTS, items: new ItemCatalog(ITEMS, SETS).spec, score: f("Spell.EvocationEfficiency") });
+    const equipped = [eq("Spellweaving Kilt"), eq("Commissar's Torn Sleeve")];
+    const points = { Spellcraft: 200, Intelligence: 200, Mastery: 200, Empathy: 200 };
+    expect(unmetRequirements(equipped, points, SETS)).toHaveLength(1);
+    expect(unmetRequirements(equipped, points, SETS, itemIndependentValue(graph, { "Pet.Level": 750 }))).toEqual([]);
+    expect(unmetRequirements(equipped, points, SETS, itemIndependentValue(graph, { "Pet.Level": 600 }))).toEqual([
+      { item: item("Spellweaving Kilt").key, attribute: "Spellcraft", required: 250, available: 248 },
     ]);
   });
 });

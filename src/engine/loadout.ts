@@ -1,3 +1,4 @@
+import type { Expr } from "./expr.ts";
 import type { DynamicEffect, ItemEffectSpec, ModifierSpec } from "./graph.ts";
 import type { Attribute, EffectBlock, ItemDef, ItemEffect, ItemSlot, Quality, SetDef, Source } from "./model.ts";
 import { SLOT_CAPACITY } from "./model.ts";
@@ -183,13 +184,22 @@ export interface UnmetRequirement {
  * (https://idlewizard.wiki.gg/wiki/Attributes, Item Requirements). Formula-valued bonuses such as
  * Commissar's Torn Sleeve are not counted, since they need stat values.
  */
-export function unmetRequirements(equipped: readonly EquippedItem[], assigned: Partial<Record<Attribute, number>>, sets: readonly SetDef[]): UnmetRequirement[] {
+/** Attribute requirements an equipped set doesn't meet; `formulaValue` evaluates formula bonuses (e.g. Commissar's Torn Sleeve's pet-level bonus). */
+export function unmetRequirements(
+  equipped: readonly EquippedItem[],
+  assigned: Partial<Record<Attribute, number>>,
+  sets: readonly SetDef[],
+  formulaValue: (e: Expr) => number | undefined = () => undefined,
+): UnmetRequirement[] {
   const bonusFrom = (key: string | null, attribute: Attribute) => {
     const stat = `Attr.${attribute}`;
     let total = 0;
     for (const e of equipped) {
       if (e.item.key === key) continue;
-      for (const eff of tier(e).effects) if (eff.stat === stat && eff.op === "add" && typeof eff.value === "number") total += eff.value;
+      for (const eff of tier(e).effects) {
+        if (eff.stat !== stat || eff.op !== "add") continue;
+        total += typeof eff.value === "number" ? eff.value : (formulaValue(eff.value) ?? 0);
+      }
     }
     const pieces: Record<string, number> = {};
     for (const e of equipped) if (e.item.set) pieces[e.item.set] = (pieces[e.item.set] ?? 0) + 1;
