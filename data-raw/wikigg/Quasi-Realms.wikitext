@@ -1,0 +1,429 @@
+'''{{PAGENAME}}''' are a special type of [[Realm]] where you can earn [[#Delusions|Delusions]], and [[Enhanced]] Spells. They do not adhere to normal Realm rules.
+
+Accessing different Quasi-Realms require different total amount of [[Memories]] earned, with some having additional prerequisites.
+
+==Special Rules==
+{| class=wikitable
+! style="width:50%; overflow-wrap: normal;" | You Will Keep
+! style="width:50%; overflow-wrap: normal;" | You Will Lose
+|-
+| [[Paragon#Legacy|Legacy]] Level || [[Paragon]] Level
+|-
+| [[Achievements]] || [[Trial Milestones]]
+|-
+| Completed [[Challenges]] || [[Attributes]]
+|-
+| Currencies ([[Relics]], [[Runes]] etc) || [[Buffs]] total Time
+|-
+| [[Crafting Dust]] || [[Mysteries]]
+|-
+| [[Classes|Class]] and [[Pet]] Requirements done || [[Catalysts]]
+|-
+| [[Expedition]] Progress || [[Enchanting Dust]] (Including invested)
+|-
+| [[Memetic Splinter|Memetic Splinters]] both available and invested || Research [[Breakthrough|Breakthroughs]] and Trophy [[Exhibits]]
+|-
+| [[Familiars]], their Rank and Levels || [[Persistent]] Spell casts
+|-
+| Mechanics affected by [[Imprints]] will be carried over to your next Prime Realm || [[Pantheon]] levels and [[Boons]]
+|-
+| || [[Echo Trap]] experience
+|-
+| || [[Proficiency]] and Proficiency Shards
+|-
+|}
+
+Additionally, the following cannot be attempted nor interacted with during a Quasi-Realm:
+* [[Triumphs]] (however, previously finished Triumphs and their relevant upgrades/rewards are available)
+* Unfinished [[Challenges]]
+* [[Trial of Skill]]
+
+==Delusions==
+[[File:{{#setmainimage:Delusion.png}}|thumb|x128px|right|Delusion]]
+You will gain Delusions by doing well in Quasi-Realms where you will be required to hit a goal. For example, the Rainforest requires you to hit e1200 mana, and then you will gain 1 delusion, after that you get an additional delusion every +e300 mana you earn on top of the original e1200. Each Quasi-Realm has their own set of rules on this, and functions based on a high-score system - so if you replay the same Quasi-Realm you will have to beat your last high score in order to gain anything.
+
+Earning at least 1 Delusion in a Quasi-Realm will consider it as "completed" upon switching realms and will allow you to access other Quasi-Realms that have it as a prerequisite.
+
+Delusions are spent on [[Paramnesics]] (a subset of [[Realm Upgrades]]) which provide another form of progression.
+
+==Realm Cosmos Map==
+<imagemap>
+File:Realm Cosmos.png|center|x480px|Realm Cosmos
+
+circle 653 488 92  [[Realm|Prime Realm]]
+circle 896 581 40  [[Quasi-Realms#Rainforest|Rainforest]]
+circle 895 373 40  [[Quasi-Realms#Feral Abyss|Feral Abyss]]
+circle 416 457 41  [[Quasi-Realms#Thunderous Justice|Thunderous Justice]]
+circle 671 221 40  [[Quasi-Realms#Decadence|Decadence]]
+circle 446 185 40  [[Quasi-Realms#The Oracle|The Oracle]]
+circle 1178 895 40 [[Quasi-Realms#Lord Of Darkness|Lord Of Darkness]]
+circle 601 915 40  [[Quasi-Realms#Dystopia|Dystopia]]
+circle 154 357 41  [[Quasi-Realms#Cryoweaver|Cryoweaver]]
+circle 450 680 40  [[Quasi-Realms#Ahead of Its Time|Ahead of Its Time]]
+circle 699 709 42  [[Quasi-Realms#In Over Your Head|In Over Your Head]]
+circle 359 846 40  [[Quasi-Realms#Scientific Approach|Scientific Approach]]
+circle 115 796 41  [[Quasi-Realms#A Prodigy's Burden|A Prodigy's Burden]]
+circle 992 166 41  [[Quasi-Realms#Tombworld Warfare|Tombworld Warfare]]
+circle 1147 412 42 [[Quasi-Realms#Redemption|Redemption]]
+circle 1113 651 40 [[Quasi-Realms#The Great Crusade|The Great Crusade]]
+circle 975 811 41  [[Quasi-Realms#Global Warming|Global Warming]]
+circle 821 920 39  [[Quasi-Realms#Faraway Paladin|Faraway Paladin]]
+circle 174 556 40  [[Quasi-Realms#A Tragic Fate|A Tragic Fate]]
+circle 208 79 40   [[Quasi-Realms#Primal Instincts|Primal Instincts]]
+circle 1335 544 41 [[Quasi-Realms#Star Fletcher|Star Fletcher]]
+
+desc none
+</imagemap>
+
+==Types==
+===Rainforest===
+[[File:QuasirealmsMap Rainforest.png|thumb|x128px|right|Rainforest Node Portrait]]
+{{QuasiRealm
+|description=Lush forests and meadows cover the entire continent, the wildlife is abundant and diverse beyond imagination.
+|requirements=3.00e5 Memories
+|prerequisites=None
+|delusion=e1200 Mana (+e300)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Druid}}
+* Autoclicks amount increased, based on Mysteries amount
+* Autoclick profit increased, based on Mysteries amount
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Rules Of Nature (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small>
+|guide=[[Rainforest Druid Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===Feral Abyss===
+[[File:QuasirealmsMap Feral Abyss.png|thumb|x128px|right|Feral Abyss Node Portrait]]
+{{QuasiRealm
+|description=Demons of this Realm, uncontested by humans, have developed a unique, perhaps questionable, way of self-improvement.
+|requirements=4.00e5 Memories
+|prerequisites=None
+|delusion=e1100 Mana (+e200)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Demonologist}} with a {{PetTooltip|Greater Chimaera}} pet, and with an alternative "Hellstorm" Spell ({{SpellTooltip|Nurturing Flame}})
+* Void Mana per Entity increased, based on Pet Ability Power
+* Cannot gain Attributes passively
+* Character Class is unchangeable
+* Active Pet is unchangable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Fire Ball (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e1900 Total Mana, accounting for display rounding'')</small>
+|guide=[[Feral Abyss Demonologist Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===Thunderous Justice===
+[[File:QuasirealmsMap Thunderous Justice.png|thumb|x128px|right|Thunderous Justice Node Portrait]]
+{{QuasiRealm
+|description=Technology and knowledge took a more gradual path to progress. Arcanists are close to cracking Chronomancy - and it's frighteningly efficient.
+|requirements=5.00e5 Memories
+|prerequisites=None
+|delusion=e1200 Mana (+e220)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Arcanist}} with an alternative "Jas'Aham's Missile Storm" spell ({{SpellTooltip|Jas'Aham's Thunderous Swarm}})
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Jas'Aham's Missile Storm (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2080 Total Mana, accounting for display rounding'')</small>
+|guide=[[Thunderous Justice Arcanist Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===Ahead of Its Time===
+[[File:QuasirealmsMap Ahead of Its Time.png|thumb|x128px|right|Ahead of Its Time Node Portrait]]
+{{QuasiRealm
+|description=The genius' theory failed - but a scientist's will is not so easily broken. There's always another way to succeed.
+|requirements=5.00e5 Memories
+|prerequisites=None
+|delusion=e1200 Mana (+e240)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Prodigy}} with a {{PetTooltip|Mechanos Apexis}} pet
+* Pet Ability charging speed increased, based on {{SpellTooltip|Quasi-incantation}} casts
+* Each {{SpellTooltip|Kelphior's Black Beam}} cast grants 1 second to a random active buff
+* Character Class unchangable
+* Active Pet is unchangable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Primal Power (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2160 Total Mana, accounting for display rounding'')</small>
+|guide=[[Ahead of Its Time Prodigy Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===Tombworld Warfare===
+[[File:QuasirealmsMap Tombworld Warfare.png|thumb|x128px|right|Tombworld Warfare Node Portrait]]
+{{QuasiRealm
+|description=A plague is not unlike a pyre - a corpse properly utilized can lead to a dozen more.
+|requirements=6.00e5 Memories
+|prerequisites=[[Quasi-Realms#Feral Abyss|Feral Abyss]]
+|delusion=e1200 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Necromancer}} with alternative {{SpellTooltip|Plague Zombie}} and {{SpellTooltip|Voracious Plague}} spells ({{SpellTooltip|Corpse Explosion}} and {{SpellTooltip|Combustive Plague}} respectively)
+* Idle mode is unavailable
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Nightfall (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2200 Total Mana, accounting for display rounding'')</small>
+|guide=[[Tombworld Warfare Necromancer Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===Redemption===
+[[File:QuasirealmsMap Redemption.png|thumb|x128px|right|Redemption Node Portrait]]
+{{QuasiRealm
+|description=The road to redemption is full of loss and pain - but perhaps, there's a chance to break free? Chaos laughs.
+|requirements=7.00e5 Memories
+|prerequisites=[[Quasi-Realms#Feral Abyss|Feral Abyss]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Voidmancer}} possessing additional {{ClassTooltip|Exorcist}} spells
+* Void Mana per Entity increased, based on critical profit
+* All Traps are unavailable
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Conjure Void Elemental (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small>
+|guide=[[Redemption Voidmancer Guide]]
+}}<!-- Patch v1.50.0 -->
+
+===The Great Crusade===
+[[File:QuasirealmsMap The Great Crusade.png|thumb|x128px|right|The Great Crusade Node Portrait]]
+{{QuasiRealm
+|description=The Seventh Star rose to its rightful place on the Pantheon, and the Church crusades across the landscape, unopposed and unmatched.
+|requirements=8.00e5 Memories
+|prerequisites=[[Quasi-Realms#Rainforest|Rainforest]], [[Quasi-Realms#Redemption|Redemption]]
+|delusion=e1200 Mana (+e240)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Exorcist}} with 4 alternative spells
+* Summoning efficiency increased, based on Void Mana per Entity, Void profits, Void Entity spawn rate and lifetime, and Excess Hallowed Clicks
+* Orb is unavailable <sup>(editor's note: RIP pondering)</sup>
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Spirit Of Valor (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2160 Total Mana, accounting for display rounding'')</small>
+|guide=[[The Great Crusade Exorcist Guide]]
+}}<!-- Patch v1.51.0 -->
+
+===In Over Your Head===
+[[File:QuasirealmsMap In Over Your Head.png|thumb|x128px|right|In Over Your Head Node Portrait]]
+{{QuasiRealm
+|description=The knowledge of time travel has fallen into the hands of amateurs. Somehow, this turned out to be a unique advantage.
+|requirements=9.00e5 Memories
+|prerequisites=[[Quasi-Realms#Ahead of Its Time|Ahead of Its Time]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Chronomancer}} with an alternative {{SpellTooltip|Time Helix}} ({{SpellTooltip|Time Fork}}) spell, {{PetTooltip|Temporal Paradox}} as a unique Pet type
+* {{SpellTooltip|Singularity Beam}} unavailable
+* Pet Ability Power increased, based on pet level
+* Character Class is unchangeable
+* Active Pet is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Stabilize The Flow (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small>
+|guide=[[In Over Your Head Chronomancer Guide]]
+}}<!-- Patch v1.51.0 -->
+
+===Decadence===
+[[File:QuasirealmsMap Decadence.png|thumb|x128px|right|Decadence Node Portrait]]
+{{QuasiRealm
+|description=Figuring out the deepest mysteries of the universe turned out to be easier than expected. But what purpose does that knowledge even serve?
+|requirements=1.00e6 Memories
+|prerequisites=None
+|delusion=e1500 Mana (+e150)
+|rules={{!}}
+* Mysteries formula is changed, requiring e1 more Mana per e1 more Mysteries
+* Mysteries earned reduce Mysteries Power e1 for every e2 Mysteries earned, proportionally
+* [[Mythic Forge]] is unavailable
+* Only Foundation Heritages are available
+|unlocks={{SpellTooltip|Void Lure (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2100 Total Mana, accounting for display rounding'')</small>
+|guide=None - treat this as if any regular Prime Realm. 
+
+To illustrate the rules a bit: Usually, if you have e1000 mana, this corresponds to (roughly) e500 mysts, which give you e500 profits.
+
+In Decadence: e1000 mana gives you e1000 mysts (because decadence gives you more mysts), which give you e500 profits (because your mysts are weaker in decadence).
+}}<!-- Patch v1.51.0 -->
+
+===The Oracle===
+[[File:QuasirealmsMap The Oracle.png|thumb|x128px|right|The Oracle Node Portrait]]
+{{QuasiRealm
+|description=A select few possess an unnatural talent to know things before they actually happen. Reluctant to purpose any specific path, they can still try and use their knowledge.
+|requirements=1.10e6 Memories
+|prerequisites=[[Quasi-Realms#Thunderous Justice|Thunderous Justice]], [[Quasi-Realms#Decadence|Decadence]]
+|delusion=e1100 Mana (+e240)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Apprentice}} with all Persistent and Augment spells available
+* Shards Pool capacity increased, based on Mysteries amount
+* Shards Pool efficiency increased, based on Mysteries amount
+* Persistent Spells' casts amount granted per cast for the purpose of the Spells' passive part is increased, based on Mysteries amount
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Ritual Of Power (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2060 Total Mana, accounting for display rounding'')</small>
+|guide=[[The Oracle Apprentice Guide]]
+}}<!-- Patch v1.52.0 -->
+
+===Global Warming===
+[[File:QuasirealmsMap Global Warming.png|thumb|x128px|right|Global Warming Node Portrait]]
+{{QuasiRealm
+|description=The Abolishers' coup failed. Fayth'Zem'Hal's fury spreads across the Realm, leaving behind nothing but barren deserts, charred by umbral flames.
+|requirements=1.60e6 Memories
+|prerequisites=[[Quasi-Realms#Rainforest|Rainforest]]
+|delusion=e1700 Mana (+e180)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Umbramancer}} with {{PetTooltip|Herald of Rot}} pet and 5 alternative spells
+* Critical profit is increased, based on Autoclick profit
+* Character Class is unchangeable
+* Active Pet is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Critical Mass (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2420 Total Mana, accounting for display rounding'')</small>
+|guide=[[Global Warming Umbramancer Guide]]
+}}<!-- Patch v1.53.0 -->
+
+===Scientific Approach===
+[[File:QuasirealmsMap Scientific Approach.png|thumb|x128px|right|Scientific Approach Node Portrait]]
+{{QuasiRealm
+|description=The world is mundane, there is no hidden talent or magical heritage to shape the world. Yet, for a true scientist, nothing is impossible.
+|requirements=1.30e6 Memories
+|prerequisites=[[Quasi-Realms#Ahead of Its Time|Ahead of Its Time]]
+|delusion=e1400 Mana (+e200)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Alchemist}} with {{PetTooltip|Simulacrum}} pet, 2 new spells and a potion brewing mechanic in place of usual bursting and Void Mana mechanics
+* Charge potions using special spells, which grow stronger based on specific stat values
+* Character Class is unchangeable
+* Active Pet is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Artificial Muse (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2200 Total Mana, accounting for display rounding'')</small>
+|guide=[[Scientific Approach Alchemist Guide]]
+}}<!-- Patch v1.54.0 -->
+
+===Cryoweaver===
+[[File:QuasirealmsMap Cryoweaver.png|thumb|x128px|right|Cryoweaver Node Portrait]]
+{{QuasiRealm
+|description=A small group of Abolishers search for a cure to their infinite struggle with the Doppelganger, and seemingly finds it within the elemental magic of the west...
+|requirements=2.40e6 Memories
+|prerequisites=[[Quasi-Realms#Thunderous Justice|Thunderous Justice]], [[Quasi-Realms#A Tragic Fate|A Tragic Fate]]
+|delusion=e1200 Mana (+e320)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Cryomancer|display_name=Cryomancer (unique class)}}
+* Incantation efficiency increased, based on Temperature reduction cap
+* Character class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e2480 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[The Cryoweaver Guide]]
+}}<!-- Patch v1.56.0 -->
+
+===Faraway Paladin===
+[[File:QuasirealmsMap Faraway Paladin.png|thumb|x128px|right|Faraway Paladin Node Portrait]]
+{{QuasiRealm
+|description=After the failure of Abolishers' coup against Fayth'Zem'Hal, the few Ironsouls left travelled west, where they've found a new calling.
+|requirements=1.70e6 Memories
+|prerequisites=[[Quasi-Realms#Global Warming|Global Warming]]
+|delusion=e1400 Mana (+e200)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Ironsoul}} with [[Hallowed Clicks]], 5 alternative Spells, and without Void Mana
+* Hallowed clicks profit increased, based on Evocation efficiency
+* Charge-based Spells Charging Speed increased, based on Character level
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Temper The Steel (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2200 Total Mana, accounting for display rounding'')</small>
+|guide=[[Faraway Paladin Ironsoul Guide]]
+}}<!-- Patch v1.59.0 -->
+
+===Lord Of Darkness===
+[[File:QuasirealmsMap Lord Of Darkness.png|thumb|x128px|right|Lord Of Darkness Node Portrait]]
+{{QuasiRealm
+|description=A breed of immortal creatures infest the darkest and most remote corners of the Realm, where they rule uncontested.
+|requirements=1.80e6 Memories
+|prerequisites=[[Quasi-Realms#Global Warming|Global Warming]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Nosferatu|display_name=Nosferatu (unique class)}}
+* Summoning efficiency increased based, on Mysteries amount
+* Incantation efficiency, based on Blood spent in Realm
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[Lord Of Darkness Guide]]
+}}<!-- Patch v1.61.0 -->
+
+===A Tragic Fate===
+[[File:QuasirealmsMap A Tragic Fate.png|thumb|x128px|right|A Tragic Fate Node Portrait]]
+{{QuasiRealm
+|description=The brave warrior succumbed to the malicious creature in the contest of will. Now, its evil is unleashed upon the land.
+|requirements=2.20e6 Memories
+|prerequisites=[[Quasi-Realms#Thunderous Justice|Thunderous Justice]]
+|delusion=e1400 Mana (+e220)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Abolisher}} with a selectable Pet, a set of unique attributes of the {{PetTooltip|Doppelganger}} and a new Spell to gain them
+* First Mystery is gained at 1.00e50 Mana
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks={{SpellTooltip|Nullzone (Enhanced)}} at 5 Delusions<br><small>(''at least 1.01e2280 Total Mana, accounting for display rounding'')</small>
+|guide=[[A Tragic Fate Abolisher Guide]]
+}}<!-- Patch v1.63.0 -->
+
+===Dystopia===
+[[File:QuasirealmsMap Dystopia.png|thumb|x128px|right|Dystopia Node Portrait]]
+{{QuasiRealm
+|description=Cerebros' rise to power brings about an age of technology, for better or worse.
+|requirements=1.50e6 Memories
+|prerequisites=[[Quasi-Realms#Scientific Approach|Scientific Approach]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as an {{ClassTooltip|Artificer|display_name=Artificer (unique class)}}
+* Profits increased, based on Character Ability Power
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[Dystopia Guide]]
+}}<!-- Patch v1.68.0 -->
+
+===Primal Instincts===
+[[File:QuasirealmsMap Primal Instincts.png|thumb|x128px|right|Primal Instincts Node Portrait]]
+{{QuasiRealm
+|description=As an ominous moon loomed over the lands of this Realm, some of the Druids lost their humanity forever.
+|requirements=2.50e6 Memories
+|prerequisites=[[Quasi-Realms#The Oracle|The Oracle]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Shapeshifter|display_name=Shapeshifter (unique class)}}
+* Profits increased, based on Satiety
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[Primal Instincts Shapeshifter Guide]]
+}}<!-- Patch v1.70.1 -->
+
+===A Prodigy's Burden===
+[[File:QuasirealmsMap A Prodigy's Burden.png|thumb|x128px|right|A Prodigy's Burden Node Portrait]]
+{{QuasiRealm
+|description=Shards of Cerebros' destruction have only grazed the mind of the Realm's denizens. Kelphior is bound to carry the progress of the entire world alone.
+|requirements=1.40e6 Memories
+|prerequisites=[[Quasi-Realms#Scientific Approach|Scientific Approach]]
+|delusion=e300 Mana (+e260)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Prodigy}} with an array of powerful Spells from a multitude of different Classes
+* Mysteries earned reduce Mysteries Power e9 for every e10 Mysteries earned, proportionally
+* Character Class is unchangeable
+* Mana, Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e1340 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[A Prodigy's Burden Guide]]
+}}<!-- Patch v1.73.1 -->
+
+===Star Fletcher===
+[[File:QuasirealmsMap Star Fletcher.png|thumb|x128px|right|Star Fletcher Node Portrait]]
+{{QuasiRealm
+|description=The Moonfolk, all but a legend in Prime Realms, firmly stood their ground in this remote Realm. Their graceful Rangers fiercely protect the borders of their kingdoms, blessed by the Moon and Stars.
+|requirements=2.30e6 Memories
+|prerequisites=[[Quasi-Realms#The Great Crusade|The Great Crusade]]
+|delusion=e1400 Mana (+e250)
+|rules={{!}}
+* Always start as a {{ClassTooltip|Ranger|display_name=Ranger (unique class)}}
+* Profits increased, based on Mysteries
+* Character Class is unchangeable
+* Foundation, Tools, and Power Heritages are available
+|unlocks=None <!-- at 5 Delusions<br><small>(''at least 1.01e2400 Total Mana, accounting for display rounding'')</small> -->
+|guide=[[Star Fletcher Ranger Guide]]
+}}<!-- Patch v1.75.1 -->
+
+==Community Notes==
+===5 Delusion Difficulty===
+The approximate difficulty of reaching 5 delusions (not 1) in each quasi realm to reach a quasi realm's bonus unlock, considered by the community, is shown below.
+
+''Created 16 Aug 2025''
+[[File:Quasi_diff_chart_with_hat.png|800px|left|class=responsive-image]]<!-- Custom CSS class "responsive-image" may not always behave properly depending on usage or layout. -->
+{{Clear}}
+
+===1 Delusion Difficulty===
+''Created 16 Aug 2025''
+[[File:Quasi_first_completion_chart_2.png|800px|left|class=responsive-image]]<!-- Custom CSS class "responsive-image" may not always behave properly depending on usage or layout. -->
+{{Clear}}
+{{Note| The difficulty of a Quasi-Realm depends on, among many factors, their unlock requirements. Completing (1D) a Quasi-Realm at a later time may reduce its difficulty significantly.<br> Example: Completing Rainforest at 1e6+ memories, instead of 3e5, is quite easy.}}
