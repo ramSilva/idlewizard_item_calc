@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { FANDOM, WIKIGG, fetchCategoryMembers, fetchRawWithBrowser, fetchRevisions, pageUrl } from "./wiki.mjs";
 
@@ -15,7 +15,21 @@ const MODULES = [
   "Module:BiS",
 ];
 
-const MECHANICS = ["Items", "Attributes", "Enchantments", "Stance", "Elixir", "Basic Mechanics", "Paragon", "Mysteries", "Void Mana", "Idle Mode"];
+const MECHANICS = [
+  "Items",
+  "Attributes",
+  "Enchantments",
+  "Stance",
+  "Elixir",
+  "Basic Mechanics",
+  "Paragon",
+  "Mysteries",
+  "Void Mana",
+  "Idle Mode",
+  "Expeditions",
+  "Collectibles",
+  "Catalysts",
+];
 
 const CLASSES = ["Oni", "Shaman", "Temporalist", "Chronomancer"];
 
@@ -28,9 +42,21 @@ function fileNameFor(title) {
   return title.replace(/[/:]/g, "__").replace(/[^\w\-(). ']/g, "_") + ".wikitext";
 }
 
-async function main() {
+/** `--only "A,B"` fetches just those titles and merges them into the existing manifest. */
+function onlyTitles() {
+  const i = process.argv.indexOf("--only");
+  if (i < 0) return null;
+  return process.argv[i + 1].split(",").map((t) => t.trim()).filter(Boolean);
+}
+
+async function allTitles() {
   const [pets, items] = await Promise.all([fetchCategoryMembers(WIKIGG, "Pets"), fetchCategoryMembers(WIKIGG, "Items")]);
-  const titles = [...new Set([...MODULES, ...MECHANICS, ...CLASSES, ...GUIDES, ...pets, ...items])].filter((t) => !EXCLUDED.has(t));
+  return [...MODULES, ...MECHANICS, ...CLASSES, ...GUIDES, ...pets, ...items];
+}
+
+async function main() {
+  const only = onlyTitles();
+  const titles = [...new Set(only ?? (await allTitles()))].filter((t) => !EXCLUDED.has(t));
 
   const manifest = [];
   const fetched = await fetchRevisions(WIKIGG, titles);
@@ -67,11 +93,18 @@ async function main() {
     missing = missing.filter((t) => !viaFandom.has(t));
   }
 
-  manifest.sort((a, b) => a.title.localeCompare(b.title));
-  await writeFile(
-    path.join(OUT_DIR, "manifest.json"),
-    JSON.stringify({ fetchedAt: new Date().toISOString(), pages: manifest, missing }, null, 2) + "\n",
-  );
+  const manifestFile = path.join(OUT_DIR, "manifest.json");
+  let pages = manifest;
+  let fetchedAt = new Date().toISOString();
+  if (only) {
+    const previous = JSON.parse(await readFile(manifestFile, "utf8"));
+    const replaced = new Set(manifest.map((p) => p.title));
+    pages = [...previous.pages.filter((p) => !replaced.has(p.title)), ...manifest];
+    missing = [...new Set([...previous.missing.filter((t) => !replaced.has(t)), ...missing])];
+    fetchedAt = previous.fetchedAt;
+  }
+  pages.sort((a, b) => a.title.localeCompare(b.title));
+  await writeFile(manifestFile, JSON.stringify({ fetchedAt, pages, missing }, null, 2) + "\n");
   console.log(`Saved ${manifest.length} pages; missing: ${missing.length ? missing.join(", ") : "none"}`);
 }
 

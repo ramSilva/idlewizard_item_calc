@@ -372,6 +372,16 @@
       "file": "wikigg/Cataclysm.wikitext"
     },
     {
+      "title": "Catalysts",
+      "resolvedTitle": "Catalysts",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Catalysts",
+      "revid": 31463,
+      "revisionTimestamp": "2026-09-25T14:06:55Z",
+      "file": "wikigg/Catalysts.wikitext"
+    },
+    {
       "title": "Ceaseless Hunger",
       "resolvedTitle": "Ceaseless Hunger",
       "wiki": "wikigg",
@@ -470,6 +480,16 @@
       "revid": 14501,
       "revisionTimestamp": "2019-06-07T16:30:53Z",
       "file": "wikigg/Collar Of Obedience.wikitext"
+    },
+    {
+      "title": "Collectibles",
+      "resolvedTitle": "Collectibles",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Collectibles",
+      "revid": 27139,
+      "revisionTimestamp": "2026-01-19T22:28:18Z",
+      "file": "wikigg/Collectibles.wikitext"
     },
     {
       "title": "Collection Of Samples",
@@ -1000,6 +1020,16 @@
       "revid": 24366,
       "revisionTimestamp": "2025-09-16T18:57:36Z",
       "file": "wikigg/Ethereal Veil.wikitext"
+    },
+    {
+      "title": "Expeditions",
+      "resolvedTitle": "Expeditions",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Expeditions",
+      "revid": 30339,
+      "revisionTimestamp": "2026-08-01T18:14:48Z",
+      "file": "wikigg/Expeditions.wikitext"
     },
     {
       "title": "Faithful Fists",

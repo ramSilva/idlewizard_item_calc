@@ -1,0 +1,168 @@
+{{TODO}}
+'''Collectibles''' currently consist of [[#Bats|Bats]] and [[#Corruptions|Corruptions]]. Bats float across the screen and can be clicked for a reward. They were initially introduced to the game during the 2017 Christmas event as Snowflakes, which also had a rare chance to drop [[Market|Relics]]. After the event ended, they were changed into '''Bats''' and no longer had a chance to drop Relics.
+
+==Bats==
+[[File:Bat1.png|frameless|left|128x128px]]
+Bats spawn every 30 minutes of game time. This spawn rate can be improved through various means, and so the real Bat spawn rate can be found in the More Statistics window (as a percentage, where 100% = 30 minutes, 150% = 20 minutes, etc.)
+{{Clear}}
+Certain [[Items]] scale in power with the number of Bats collected during an Exile. In particular the {{ItemTooltip|item_name = Chiropteric Rod}} (or "Batstick") scales with Bats collected, and can be activated to manually spawn an additional Bat independent from the normal spawn rate.
+
+The [[Market]] upgrade 'Bat Hunter' will automatically collect any Bats which spawn. There is also an upgrade for 'Bat Hunter' which lets it automatically activate your batstick whenever it catches a bat. This is not just to save clicks but also for the purpose of syncing.
+
+===Bat Spawn Rate===
+(WIP)
+<pre>
+=(1+pest control)*(1+pest control 2)*(1+gotcha secret achievement)*(1+trials milestone)*(1+legacy)*(1+week of artisanry)*(1+halloween event bonus)*(1+current renown)
+</pre>
+
+===Bat Rewards===
+The table assumes Bat Hunter purchased and no events increasing Bat rewards.
+
+Reward drop chances were calculated analytically.
+
+You cannot drop a random Buff if you already have all 5 types of Buff running.
+
+{| class="wikitable" style="font-size:100%"
+!
+! colspan="2" scope="col" |-
+! colspan="2" scope="col" |Week of Finesse
+|-
+!Reward !! Buffs obtainable !! Buffs not obtainable !! Buffs obtainable !! Buffs not obtainable
+|-
+|Alteration Sand || colspan="4" | 0.5141%
+|-
+|500 Dust || colspan="4" | 1.3198%
+|-
+|Rune || colspan="4" | 1.5722%
+|-
+|Blue Catalyst ||rowspan="2" | 1.4167% ||rowspan="2" | 1.6347% ||rowspan="2" | 1.8417% ||rowspan="2" | 2.1251%
+|-
+|Red Catalyst
+|-
+|1 or 2 Expedition Key || 3.4886% || 4.121% || 4.3073% || 5.0838%
+|-
+|10, 20 or 30 Enchanting Dust || 4.9054% || 5.7557% || 6.1491% || 7.2089%
+|-
+|Attribute time reduction ||rowspan="4" | 7.1905% ||rowspan="4" | 8.2856% ||rowspan="4" | 8.0616% ||rowspan="4" | 9.3074%
+|-
+|50 Dust
+|-
+|1 or 3 Sources
+|-
+|Green Catalyst
+|-
+|Random Buffs || 10.6792% || - || 12.369% || -
+|-
+|Pet experience ||rowspan="4" | 11.4813% ||rowspan="4" | 12.5764% ||rowspan="4" | 9.4596% ||rowspan="4" | 10.7054%
+|-
+|Void Mana
+|-
+|Spellshards
+|-
+|Mana
+|}
+
+{| class="wikitable" style="font-size:100%"
+!Reward type !! Note
+|-
+|All Dust
+|Random color
+|-
+|Catalysts
+|Affected by Cata Income AND Bats Income (so 30% more during Finesse Week)
+|-
+|Enchanting Dust
+|Affected by EDust Income and Bats Income
+|-
+|Attribute time reduction
+|You get 1% (50% chance), 2% (25% chance) or 3% (25% chance) of remaining time (30% more time gain during Finesse). If it's > 7200 seconds, you get 7200 + (T - 7200)<sup>0.5</sup> seconds
+|-
+|Sources
+|25% chances to get 1, 75% to get 3
+|-
+|Pet XP
+|Grants Pet XP, equal to:
+<math>(S - R)^\text{L} \times 500</math>
+<br>During Week of Finesse, instead grants Pet XP, equal to:
+<math>(S - R)^\text{L} \times 650</math>
+<br>where:
+* <math>\text{Soulstealer} \implies S = 1.14</math>
+* <math>\text{Psychic Cacophony} \implies S = 1.16</math>
+* <math>\text{Tier 1 Pet} \implies S = 1.16</math>
+* <math>\text{Tier 2 Pet} \implies S = 1.2</math>
+* <math>\text{Tier 3 Pet} \implies S = 1.24</math>
+
+* <math>P(R=0.04) = 50\%</math>
+* <math>P(R=0.03) = 25\%</math>
+* <math>P(R=0.02) = 25\%</math>
+
+* <math>L = \text{Pet Level}</math>
+|-
+|Void Mana
+|Grants Void Mana, equal to:
+<math>V \times R</math>
+<br>During Week of Finesse, instead grants Void Mana, equal to:
+<br><math>V \times R \times 1.3</math>
+where:
+* <math>V = \text{Void Mana per Entity}</math>
+* <math>P(R=1) = 50\%</math>
+* <math>P(R=2) = 25\%</math>
+* <math>P(R=3) = 25\%</math>
+|-
+|Mana
+|Grants Mana, equal to:
+<math>M \times R</math>
+<br>If this exceeds '''All Mana This Realm''', instead grants Mana, equal to:
+<br><math>M \times R \times 0.1</math>
+<br>During Week of Finesse, instead grants Mana, equal to:
+<br><math>M \times R \times 1.3</math>
+<br>If this exceeds '''All Mana This Realm''', instead grants Mana, equal to:
+<br><math>M \times R \times 0.13</math>
+
+where:
+* <math>M = \text{Current Mana}</math>
+* <math>P(R=0.05) = 50\%</math>
+* <math>P(R=0.1) = 25\%</math>
+* <math>P(R=0.2) = 25\%</math>
+|}
+
+==Corruptions==
+[[File:Corruption_example.png|frameless|left|128x128px]]
+Corruptions looks like a swirling circular distortion that occasionally spawns on the screen. They will spawn every 144 minutes (2.4 hours), stacking up to a maximum of 10, and can accumulate offline (up to 24h).
+{{Clear}}
+Upon picking up, they grant one of the following rewards for each stack accumulated:
+{| class="wikitable" style="font-size:100%"
+!Reward type !! Note
+|-
+|Relic
+|1 Relic, is a guaranteed drop every 20th Corruption collection with no chance to drop otherwise, averaging to 5% chance
+|-
+|Alteration Sands
+|22.2% chance <math>\textbf{Amount} = 2</math>
+|-
+|[[Reliquary]]
+|11.1% chance <math>\textbf{Amount} = 1</math>
+|-
+|Large [[Items#Gathering|Crafting Dust]] drop
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = 500</math>
+|-
+|[[Breakthrough|Breakthroughs]]
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = \text{Rand}(1,2)</math>
+|-
+|[[Memetics#Memetic Splinters|Memetic Splinters]]
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = \text{Rand}(20,30)</math>
+|-
+|[[Mana_Source_Memetics#Memetic Ingots|Memetic Ingots]]
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = \text{Rand}(6.25,9.4)</math>
+|-
+|[[Spell_Memetics#Memetic Ink|Memetic Ink]]
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = \text{Rand}(4.375,6.25)</math>
+|-
+|[[Ascension_Forms|Ascension Form]] Experience
+|Replaced by Buff if not available, 11.1% chance <math>\textbf{Amount} = \text{Rand}(225000,275000)</math>
+|}
+
+NOTE:
+* Except for Alteration Sands and Reliquary, all are increased by "collectable's reward" bonus.
+* Crafting Dust, Memetic Splinters, and Ascension Form XP are increased by their income bonuses.
+* Breakthroughs prioritize based on enchant levels, same as Innovation Trials.

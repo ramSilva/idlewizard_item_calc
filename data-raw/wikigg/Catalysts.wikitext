@@ -1,0 +1,60 @@
+{{TOC}}
+[[File:{{#setmainimage:Catalysts.png}}|thumb|right|Catalysts (Green, Red, Blue)]]
+'''Catalysts''' are a special resource you can apply to your various [[sources]] via Catalyst Shards, which are in turn earned via [[Trials]], [[Bats]], and [[Experiments]]. In particular, [[Trial of Valor]] and [[Trial of Talent]] guarantee to give you catalysts.  
+
+When you assign Catalyst shards to a Source they will stay there semi-permanently (you may respec at a cost of 2 [[Nullifier Core|Nullifier Cores]]) on that Source and buff the mana production given by that source. There are three types of catalyst:
+* Green catalysts, or "Additive" catalysts grant an additional 12.50% to the profits of this source.
+* Red catalysts, which increase the quantity you have of a certain source.
+* Blue catalysts, or "Multiplicative" catalysts, multiply the profits of this source by 4%.
+
+
+So the production given by that source is as such:
+ (Base Profit) * (1 + Additive Catalysts * 0.125) * (1 + 0.04)<sup>Multiplicative Catalysts</sup>
+
+
+== Gathering and Distribution ==
+We receive catalyst shards from [[trials]], [[Collectibles|bat drops]], [[expeditions]] and [[Items|experiments]].
+The number of shards received is:<br>
+<math>Shards = (N + 1) \times M \times C \times G \times S</math>
+
+where:
+* N = Number of ''Catalysts'' for a randomly selected source
+* M = Catalyst income multiplier from [[trials]], [[Paragon#Legacy|legacy]], [[Realm_Upgrades|realm upgrades]], [[Triumph|shut-in triumph]] and [[Market|daily offer buff]]. Only this number is shown in the total statistics menu
+* C = Catalyst income multiplier for this colour from [[Catalyst_Memetics|catalyst memetics]]
+* G = Global catalyst income multiplier from [[Weekly_Bonus|weekly bonuses]] and events
+* S = Multiplier specific to the Catalyst source. Ex: it is 0.7 for [[Expeditions|auto expedition]]
+
+
+The cost to increment the number of Catalysts for a Source by 1 is equal to:
+<pre>price = 1 + level + growth^level</pre>
+level = current amount of Catalysts in that source
+
+growth = 1.01 (green), 1.02 (red), 1.04 (blue)
+
+''Example:'' if you have 80 green Catalysts in a source, you will need 83.22 Catalyst Shards to reach 81 Catalysts (of proper color) in said source.
+
+It has been proven (mathematically!) that the best way to maximize your Catalyst Shard drops is to have an even distribution (all sources should have the same number of catalysts). This strategy will be referred to as ''Generation Configuration ('''GC''')''.
+
+For Myst generation, it is obviously optimal to spend all catalysts only in the sources that matter. E.g. only in Arcanaspring when playing {{ClassTooltip|class_name = Archon}}. This strategy will be referred to as ''Burst Configuration ('''BC''').''
+
+'''You do ''NOT'' need to use BC, but it can help if you are stuck, typical cases include being near e300, being late into a quasi realm, or when pushing as high as you can.'''
+
+== Configuration Swapping/Catalyst Respeccing ==
+Since you can fully refund all your catalyst shards at the cost of 2 Nullification Cores, it is possible to swap configuration, depending on need.
+
+The idea is to swap from '''GC''' to '''BC''' when you are ready to burst at the end of a ''long run'' (but after you have generated void mana, if you need to). You swap back after exiling. With this approach you are almost always in '''GC''' but you get the benefits of '''BC''' when you need it.
+
+To do this after e850 mysteries, at an approximation (ie. without spreadsheeting super optimal values), create your BC configuration like this:
+* Take your current red catalyst value that you've spread evenly to all reds so far (ie. in your GC configuration).
+* Multiply by 0.9
+** (Optionally, before the next step, export your save for safety - even just copying the code to your clipboard.)
+* Reset your catalysts with 2 nullifiers and apply that many levels evenly to all red catalysts (eg. if you had 1000 red catalysts in your GC configuration, use 900 here, applying to all red catalysts)
+* Put ALL remaining catalysts into your burst source from mana source memetics (blues, greens, and extra reds)
+* If you have any remaining red catalysts, put those into your Incantation source
+* Switch to your Burst phase
+
+[[Spreadsheets#Merp's_Random_Shit_Calculator|Merp's Random Shit Calculator]] has a page for calculating the exact optimal spread of catalysts based on your stats for any T3 class.
+
+Note that you spend most of your time in '''GC''', hence you are maximizing the catalysts drops from bats, trials, expeditions and experiments.
+[[Category:Trials]]
+[[Category:Mechanics]]

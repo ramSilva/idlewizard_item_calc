@@ -1,0 +1,773 @@
+{{TODO}}
+{{For|archived/historical content relevant to Xbox players|Expeditions/Xbox}}
+'''{{PAGENAME}}''' is a simple minigame loosely resembling an "AFK auto-battler" (minus the strategy and unit composition), requiring minimal interaction. Through this a player can unlock and upgrade [[Trophy]] items, and earn resources such as [[Catalyst Shards]] and [[Memetic Splinter|Memetic Splinters]].
+
+This minigame becomes available to the player upon reaching [[Paragon]] '''4''' in a [[Realm]].
+
+==Overview==
+Expeditions are unlocked at [[Paragon]] '''4'''. They take place separately from the main game, and your progress in the main game does not directly affect your progress in them. However, your success in Expeditions can give you various rewards in the main game, which are valuable to progression. You may continue to play the main game as normal at the same time an expedition is running.
+
+Expeditions are not affected by changing [[Realm|Realms]]; while they will initially be locked in the new Realm until reaching the required Paragon, no progress in Expeditions is lost.
+
+Each run of an Expedition consists of 10 [[#Bestiary|Monster]] encounters, with increasing difficulty per [[#Locations|Location]]. At any point you may choose to go back to the main game and let the Expedition run its course ''("Leave")'' to revisit later once it's done to either restart the current location, or proceed to a different one. You may also choose to abandon a current run entirely ''("Give Up")''.
+
+Enemies, rewards, and difficulty are determined by location, with some requiring specific [[#Keys|Keys]] to attempt. Upon reaching [[Paragon]] '''9''' you will have chances to receive [[#Trophy Items|Trophy Items]] as rewards, and upon reaching [[Paragon]] '''36''' you will be able to access [[#Key-Locked Locations|Key-Locked Locations]] at the cost of aforementioned keys.
+<!-- [WIP]
+==Experience==
+(WIP: General information, and related math regarding Expedition experience and leveling needed here.)
+-->
+==Rewards==
+For each successful monster encounter the player is rewarded with [[#Experience|Expedition XP]] and [[Catalyst Shards]], and a chance for additional rewards - which are listed below.
+
+===Trophy Items===
+{{Main|Trophy{{!}}Trophy Items}}
+Upon reaching [[Paragon]] '''9''', successful monster encounters may drop [[Trophy|Trophies]]. If a player receives any one Trophy for the first time in their whole playthrough then it will also unlock the Trophy [[Item]] slot.
+
+Succeeding drops for the same Trophy will contribute to upgrading its rarity - starting at '''''Common''''' all the way to '''''Legendary''''' rarity.
+
+There are specific sets of possible Trophy drops per location; you may view the detailed droprates in [[/Expedition Data/]].
+
+====Exhibits====
+{{For|more information|Exhibits}}
+If a Trophy is already at '''''Legendary''''' rarity and a related drop occurs after a successful monster encounter then instead the player receives an [[Exhibit]] for that specific Trophy.
+
+===Consumables===
+Expedition Consumables are items usable within this minigame that grant bonuses to expedition stats, protection from losing an encounter, and instantly completing your current encounter. You may only have a maximum of 100 for each consumable.
+
+{| class="wikitable"
+|-
+! colspan="2" | Consumable
+! Effect
+! Duration
+! Stackable
+|-
+| [[File:Expedition Consumable Greater Healing Potion.png|alt=Greater Healing Potion]]
+| Greater Healing Potion
+| +1 Protection from losing a monster encounter
+| Instant
+| Effect
+|-
+| [[File:Expedition Consumable Draught of Battle Trance.png|alt=Draught of Battle Trance]]
+| Draught of Battle Trance
+| Success chance increased by 10%
+| +60 minutes
+| Duration
+|-
+| [[File:Expedition Consumable Bottled Lightning.png|alt=Bottled Lightning]]
+| Bottled Lightning
+| Speed increased by 25%
+| +60 minutes
+| Duration
+|-
+| [[File:Expedition Consumable Draught of Keen Eye.png|alt=Draught of Keen Eye]]
+| Draught of Keen Eye
+| Reward chance increased by 20%
+| +60 minutes
+| Duration
+|-
+| [[File:Expedition Consumable Draught of Fertile Mind.png|alt=Draught of Fertile Mind]]
+| Draught of Fertile Mind
+| Experience gained increased by 25%
+| +60 minutes
+| Duration
+|-
+| [[File:Expedition Consumable Arcane Bomb.png|alt=Arcane Bomb]]
+| Arcane Bomb
+| Instantly complete a monster encounter as a success
+| Instant
+| N/A
+|-
+|}
+
+===Keys===
+[[File:Expedition Key Unstable.png|thumb|x128px|right|Unstable Key]]
+Upon reaching [[Paragon]] '''36''', everytime you "level up" in excess of the maximum level of 100 you are rewarded with 300 [[File:Expedition Key Unstable.png|x24px]] Unstable Keys ''(aka. Key Fragments)'', which may be converted into 1 of 4 special location keys that give access to [[#Key-Locked Locations|Key-Locked Locations]].
+
+{| class="wikitable"
+|-
+! colspan="2" | Key
+! Location
+! Conversion Rate
+|-
+| [[File:Expedition Key Shattered Reality.png|x64px|alt=Shattered Reality Key]]
+| Shattered Reality Key
+| [[#Shattered Reality|Shattered Reality]]
+| 2 [[File:Expedition Key Unstable.png|x24px]] Unstable Keys
+|-
+| [[File:Expedition Key Eye of Chaos.png|x64px|alt=Eye of Chaos Key]]
+| Eye of Chaos Key
+| [[#Eye of Chaos|Eye of Chaos]]
+| 3 [[File:Expedition Key Unstable.png|x24px]] Unstable Keys
+|-
+| [[File:Expedition Key Cathedral.png|x64px|alt=Cathedral Key]]
+| Cathedral Key
+| [[#Cathedral|Cathedral]]
+| 2 [[File:Expedition Key Unstable.png|x24px]] Unstable Keys
+|-
+| [[File:Expedition Key Secret Altar.png|x64px|alt=Secret Altar Key]]
+| Secret Altar Key
+| [[#Secret Altar|Secret Altar]]
+| 3 [[File:Expedition Key Unstable.png|x24px]] Unstable Keys
+|-
+|}
+
+===Familiar Food===
+{{Main|Familiars}}
+Familiar Food are resources used to buff [[Familiars|Familiars']] main abilities and boost their XP gain. Certain types of food drop from specific [[#Bestiary|Monsters]], thus only certain types of food may drop per [[#Locations|Location]].
+
+{| class="wikitable"
+|-
+! colspan="2" | Food
+! Location
+|-
+| [[File:Familiars Food Nutrients.png|alt=Nutrients]]
+| Nutrients
+| [[#Forest|Forest]], [[#Desert|Desert]], [[#Sewer|Sewer]], [[#Cave|Cave]], [[#Swamp|Swamp]], [[#Crypt|Crypt]], [[#Glacier|Glacier]], [[#Volcano|Volcano]], [[#Darkwood|Darkwood]], [[#Shattered Reality|Shattered Reality]], [[#Cathedral|Cathedral]]
+|-
+| [[File:Familiars Food Minerals.png|alt=Minerals]]
+| Minerals
+| [[#Forest|Forest]], [[#Desert|Desert]], [[#Sewer|Sewer]], [[#Crypt|Crypt]], [[#Glacier|Glacier]], [[#Volcano|Volcano]], [[#Castle|Castle]], [[#Darkwood|Darkwood]], [[#Mausoleum|Mausoleum]], [[#Eye of Chaos|Eye of Chaos]], [[#Cathedral|Cathedral]], [[#Secret Altar|Secret Altar]]
+|-
+| [[File:Familiars Food Ectoplasm.png|alt=Ectoplasm]]
+| Ectoplasm
+| [[#Desert|Desert]], [[#Sewer|Sewer]], [[#Cave|Cave]], [[#Swamp|Swamp]], [[#Sea|Sea]], [[#Crypt|Crypt]], [[#Glacier|Glacier]], [[#Volcano|Volcano]], [[#Castle|Castle]], [[#Darkwood|Darkwood]], [[#Mausoleum|Mausoleum]], [[#Shattered Reality|Shattered Reality]], [[#Eye of Chaos|Eye of Chaos]], [[#Cathedral|Cathedral]], [[#Secret Altar|Secret Altar]]
+|-
+| [[File:Familiars Food Twisted Seed.png|alt=Twisted Seed]]
+| Twisted Seed
+| [[#Desert|Desert]], [[#Cave|Cave]], [[#Sea|Sea]], [[#Crypt|Crypt]], [[#Castle|Castle]], [[#Mausoleum|Mausoleum]], [[#Shattered Reality|Shattered Reality]], [[#Eye of Chaos|Eye of Chaos]], [[#Cathedral|Cathedral]]
+|-
+| [[File:Familiars Food Psychic Traces.png|alt=Psychic Traces]]
+| Psychic Traces
+| [[#Cave|Cave]], [[#Sea|Sea]], [[#Crypt|Crypt]], [[#Glacier|Glacier]], [[#Castle|Castle]], [[#Mausoleum|Mausoleum]], [[#Shattered Reality|Shattered Reality]], [[#Cathedral|Cathedral]]
+|-
+|}
+
+===Memetic Splinters===
+{{Main|Memetics}}
+{{For|more information|Memetic Splinter{{!}}Memetic Splinters}}
+During succesful encounters in [[#Key-Locked Locations|Key-Locked Locations]], the player may have a chance to receive an amount of [[File:MemeticSplinter.png|x24px]] [[Memetic Splinter|Memetic Splinters]] used to upgrade the various [[Memetics]].
+
+==Locations==
+There are 12 Expediton Locations ''(aka. [[#Normal Locations|Normal Locations]])'' available to the player upon reaching [[Paragon]] '''4''', the 1st location immediately accessible at expedition level 1, the next at level 10 and the succeeding 8 more locations at +10 level increments, and the 11th and 12th locations both requiring expedition level 100. Each new location requires at least 1 complete run of the previous location.
+
+Meanwhile, accessing [[#Key-Locked Locations|Key-Locked Locations]] (available to the player upon reaching [[Paragon]] '''36''') require the following:
+* Expedition level 100
+* Completion of the 12th (last) Normal Location for the first 2 key-locked locations (with location level 110)
+* Completion of the prerequisite key-locked locations (with location level 110) for the other 2 key-locked locations (with location level 120)
+* 100 [[#Keys|Keys]] relevant to the key-Locked location.
+
+Each run of a key-locked location costs 100 of its aforementioned keys upfront; abandoning a current run will not refund the keys spent.
+
+===Location Map===
+<imagemap>
+File:Expedition Overworld Map with Pins.png|center|x480px|Expedition Overworld Map with Pins
+
+circle 244 343 44  [[Expeditions#Forest|Forest]]
+circle 409 255 44  [[Expeditions#Desert|Desert]]
+circle 572 390 44  [[Expeditions#Sewer|Sewer]]
+circle 717 225 44  [[Expeditions#Cave|Cave]]
+circle 820 343 44  [[Expeditions#Swamp|Swamp]]
+circle 1015 261 44 [[Expeditions#Sea|Sea]]
+circle 1218 224 44 [[Expeditions#Crypt|Crypt]]
+circle 1370 414 44 [[Expeditions#Glacier|Glacier]]
+circle 1511 688 44 [[Expeditions#Volcano|Volcano]]
+circle 1326 652 44 [[Expeditions#Castle|Castle]]
+circle 1172 704 44 [[Expeditions#Darkwood|Darkwood]]
+circle 953 634 44  [[Expeditions#Mausoleum|Mausoleum]]
+circle 502 596 44  [[Expeditions#Shattered Reality|Shattered Reality]]
+circle 235 633 44  [[Expeditions#Eye of Chaos|Eye of Chaos]]
+circle 525 841 44  [[Expeditions#Cathedral|Cathedral]]
+circle 279 829 44  [[Expeditions#Secret Altar|Secret Altar]]
+
+desc none
+</imagemap>
+
+===Normal Locations===
+The Monster levels start at level 1, capping out at level 100.
+
+====Forest====
+[[File:Expedition Location Background Forest.png|thumb|x256px|right|Forest Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 1
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Biterweed
+* Forest Ant
+* Earthwurm
+* Green Slime
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Fossil Seeds}}
+* {{ItemTooltip|Pheromone Gland}}
+* {{ItemTooltip|Intact Carapace}}
+* {{ItemTooltip|Collection Of Samples}}
+|-
+|}{{Clear}}
+
+====Desert====
+[[File:Expedition Location Background Desert.png|thumb|x256px|right|Desert Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 10
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Earthwurm
+* Desert Twister
+* Skeleton Nomad
+* Lost Gear
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Minerals}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Intact Carapace}}
+* {{ItemTooltip|Heart of the Storm}}
+* {{ItemTooltip|Necrotic Powerstone}}
+* {{ItemTooltip|Arcane Engine}}
+|-
+|}{{Clear}}
+
+====Sewer====
+[[File:Expedition Location Background Sewer.png|thumb|x256px|right|Sewer Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 20
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Fetid Slime
+* Sewer Biter
+* Foul Water Elemental
+* Noxious Shroom
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Collection Of Samples}}
+* {{ItemTooltip|Fossil Seeds}}
+* {{ItemTooltip|Empowered Water}}
+* {{ItemTooltip|Mutated Mycelium}}
+|-
+|}{{Clear}}
+
+====Cave====
+[[File:Expedition Location Background Cave.png|thumb|x256px|right|Cave Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 30
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Skeleton Warrior
+* Cave Wurm
+* Deep Shroom
+* Lost Wraith
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Necrotic Powerstone}}
+* {{ItemTooltip|Intact Carapace}}
+* {{ItemTooltip|Mutated Mycelium}}
+* {{ItemTooltip|Anomalous Essence}}
+|-
+|}{{Clear}}
+
+====Swamp====
+[[File:Expedition Location Background Swamp.png|thumb|x256px|right|Swamp Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 40
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Marsh Biter
+* Swamp Shroom
+* Toxic Ant
+* Swamp Elemental
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Ectoplasm}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Fossil Seeds}}
+* {{ItemTooltip|Mutated Mycelium}}
+* {{ItemTooltip|Pheromone Gland}}
+* {{ItemTooltip|Empowered Water}}
+|-
+|}{{Clear}}
+
+====Sea====
+[[File:Expedition Location Background Sea.png|thumb|x256px|right|Sea Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 50
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Storm Twister
+* Ghost Ship
+* Sea Wraith
+* Water Elemental
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Heart of the Storm}}
+* {{ItemTooltip|Binding Sigil}}
+* {{ItemTooltip|Anomalous Essence}}
+* {{ItemTooltip|Empowered Water}}
+|-
+|}{{Clear}}
+
+====Crypt====
+[[File:Expedition Location Background Crypt.png|thumb|x256px|right|Crypt Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 60
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Skeleton Warrior
+* Old Gear
+* Crypt Wraith
+* Tomb Ant
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Necrotic Powerstone}}
+* {{ItemTooltip|Arcane Engine}}
+* {{ItemTooltip|Anomalous Essence}}
+* {{ItemTooltip|Pheromone Gland}}
+|-
+|}{{Clear}}
+
+====Glacier====
+[[File:Expedition Location Background Glacier.png|thumb|x256px|right|Glacier Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 70
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Frozen Vessel
+* Frost Wurm
+* Frost Slime
+* Ice Golem
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Binding Sigil}}
+* {{ItemTooltip|Intact Carapace}}
+* {{ItemTooltip|Collection Of Samples}}
+* {{ItemTooltip|Anima Core}}
+|-
+|}{{Clear}}
+
+====Volcano====
+[[File:Expedition Location Background Volcano.png|thumb|x256px|right|Volcano Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 80
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Lava Wurm
+* Magma Golem
+* Tempered Gear
+* Fiery Slime
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Intact Carapace}}
+* {{ItemTooltip|Anima Core}}
+* {{ItemTooltip|Arcane Engine}}
+* {{ItemTooltip|Collection Of Samples}}
+|-
+|}{{Clear}}
+
+====Castle====
+[[File:Expedition Location Background Castle.png|thumb|x256px|right|Castle Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 90
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Defender Gear
+* Molten Golem
+* Dungeon Wraith
+* Skeleton Guardsman
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Arcane Engine}}
+* {{ItemTooltip|Anima Core}}
+* {{ItemTooltip|Anomalous Essence}}
+* {{ItemTooltip|Necrotic Powerstone}}
+|-
+|}{{Clear}}
+
+====Darkwood====
+[[File:Expedition Location Background Darkwood.png|thumb|x256px|right|Darkwood Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 100
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Toxic Ant
+* Marsh Biter
+* Deep Shroom
+* Swamp Elemental
+* Fetid Slime
+* Earthwurm
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Pheromone Gland}}
+* {{ItemTooltip|Fossil Seeds}}
+* {{ItemTooltip|Mutated Mycelium}}
+* {{ItemTooltip|Empowered Water}}
+* {{ItemTooltip|Collection Of Samples}}
+* {{ItemTooltip|Intact Carapace}}
+|-
+|}{{Clear}}
+
+====Mausoleum====
+[[File:Expedition Location Background Mausoleum.png|thumb|x256px|right|Mausoleum Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 100
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Defender Gear
+* Lost Wraith
+* Ghost Ship
+* Molten Golem
+* Desert Twister
+* Skeleton Warrior
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Arcane Engine}}
+* {{ItemTooltip|Anomalous Essence}}
+* {{ItemTooltip|Binding Sigil}}
+* {{ItemTooltip|Anima Core}}
+* {{ItemTooltip|Heart of the Storm}}
+* {{ItemTooltip|Necrotic Powerstone}}
+|-
+|}{{Clear}}
+
+===Key-Locked Locations===
+The Monster levels start at level 110, capping out at level 120.
+
+====Shattered Reality====
+[[File:Expedition Location Background Shattered Reality.png|thumb|x256px|right|Shattered Reality Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 110
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Void Serpent
+* Netherwatcher
+* Corrupted Waterspawn
+* Enigmatic Twister
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Charged Fin-Wing}}
+* {{ItemTooltip|Beholding Eye}}
+* {{ItemTooltip|Empowered Water}}
+* {{ItemTooltip|Heart of the Storm}}
+|-
+|}{{Clear}}
+
+====Eye of Chaos====
+[[File:Expedition Location Background Eye of Chaos.png|thumb|x256px|right|Eye of Chaos Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 120
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Anomalous Vortex
+* Deep Stalker
+* Twisted Revenant
+* Voidstone Construct
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Abnormal Voidmass}}
+* {{ItemTooltip|Insidious Lure}}
+* {{ItemTooltip|Necrotic Powerstone}}
+* {{ItemTooltip|Anima Core}}
+|-
+|}{{Clear}}
+
+====Cathedral====
+[[File:Expedition Location Background Cathedral.png|thumb|x256px|right|Cathedral Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 110
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Hallowed Serpent
+* War Banner
+* Golden Sentry
+* Librarian
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Nutrients}}
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+* {{FoodTooltip|Twisted Seed}}
+* {{FoodTooltip|Psychic Traces}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Warbanner Fragment}}
+* {{ItemTooltip|Inquisitive Eye}}
+* {{ItemTooltip|Arcane Engine}}
+|-
+|}{{Clear}}
+
+====Secret Altar====
+[[File:Expedition Location Background Secret Altar.png|thumb|x256px|right|Secret Altar Background]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 120
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+|
+* Animated Armor
+* Holy Construct
+* Hallowed Spirit
+* Forbidden Relic
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+|
+* {{FoodTooltip|Minerals}}
+* {{FoodTooltip|Ectoplasm}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+|
+* {{ItemTooltip|Blessed Armor Scales}}
+* {{ItemTooltip|Anointed Ashes}}
+* {{ItemTooltip|Anima Core}}
+|-
+|}{{Clear}}
+
+===Event Locations===
+These are locations that may appear on the [[#Location Map|map]] only during certain [[Events]]. They may not necessarily have the same stats as non-event locations.
+
+====Rabbit-Infested Forest====
+[[File:Expedition Location Background Rabbit-Infested Forest.png|thumb|x256px|right|Rabbit-Infested Forest]]
+{| class="wikitable"
+|-
+! scope="row" style="text-align:left;" | During [[Events|Event]]
+| [[Eggplague]]
+|-
+! scope="row" style="text-align:left;" | Location Level
+| 110
+|-
+! scope="row" style="text-align:left;" | Monster Level
+| 100
+|-
+! scope="row" style="text-align:left;" | Possible Encounters
+| Rabbits/Bunnies
+|-
+! scope="row" style="text-align:left;" | Possible Food Drops
+| {{FoodTooltip|Nutrients}}
+|-
+! scope="row" style="text-align:left;" | Possible [[Trophy]] Drops
+| N/A
+|-
+! scope="row" style="text-align:left;" | Other Drops
+| [[File:Event Eggplague Devious Egg.png|x32px]] Devious Eggs
+|-
+|}{{Clear}}
+
+===Missions===
+[[File:Expedition Map Pin Mission Alert Example.png|thumb|x128px|right|Mission Alert Example]]
+Missions are special instances of [[#Normal Locations|Normal Locations]] that have a randomly selected modifier such as: bonus stats, additional rewards, or Monster encounters unconventional to the location. They become available when the player reaches expedition level 100 and with at least 1 completion of [[#Mausoleum|Mausoleum]] location.
+
+Monster levels are increased to level 110 for all Missions. The number of encounters per Mission is also increased when compared to non-mission instances.
+
+Missions rotate on a daily basis, with 3 randomly selected locations having a different modifier for each. There are only 3 missions available per day, and each may be completed only once. Once a mission is completed, the location where it spawned will revert back to its "normal" state.
+
+The different Mission modifiers are listed below.
+
+{| class="wikitable"
+|-
+! colspan="2" | Mission
+! Modifier
+|-
+| [[File:Expedition Map Mission Alert Hidden Knowledge.png|x64px|alt=Hidden Knowledge]]
+| Hidden Knowledge
+| Increased [[#Experience|Experience]] gain by 50%.
+|-
+| [[File:Expedition Map Mission Alert Catalyzation.png|x64px|alt=Catalyzation]]
+| Catalyzation
+| Increased [[Catalyst Shards]] reward by 50%.
+|-
+| [[File:Expedition Map Mission Alert Supply Caches.png|x64px|alt=Supply Caches]]
+| Supply Caches
+| Contains additional [[#Consumables|Consumables]].
+|-
+| [[File:Expedition Map Mission Alert Hunting Grounds.png|x64px|alt=Hunting Grounds]]
+| Hunting Grounds
+| Contains additional (ignoring the Loot cap) [[Exhibits]].
+|-
+| [[File:Expedition Map Mission Alert Rich Crops.png|x64px|alt=Rich Crops]]
+| Rich Crops
+| Contains additional (ignoring the Loot cap) [[#Familiar Food|Food]] for [[Familiars]].
+|-
+| [[File:Expedition Map Mission Alert Void Invasion.png|x64px|alt=Void Invasion]]
+| Void Invasion
+| Contains monsters from the ''Void'' ([[#Shattered Reality|Shattered Reality]], [[#Eye of Chaos|Eye of Chaos]]) locations.
+|-
+| [[File:Expedition Map Mission Alert Seventh Invasion.png|x64px|alt=Seventh Invasion]]
+| Seventh Invasion
+| Contains monsters from the ''Seventh Cathedral'' ([[#Cathedral|Cathedral]], [[#Secret Altar|Secret Altar]]) locations.
+|-
+| [[File:Expedition Map Mission Alert Realmshift.png|x64px|alt=Realmshift]]
+| Realmshift
+| Monsters can drop [[Memetic Splinter|Memetic Splinters]] upon defeat.
+|-
+|}
+
+====Event Missions====
+[[File:Expedition Map Pin Mission Alert Egg Hunt.png|thumb|x128px|right|Mission Alert Egg Hunt]]
+There are also [[Events|Event]]-specific missions that are available for the duration of an event.
+
+Monster levels and number of monster encounters may be unique to each of these mission types. These missions may be completed once a day - they do not count against the daily completion count for regular missions.
+
+Currently, there is only 1 recorded event-specific mission type.
+
+{| class="wikitable"
+|-
+! colspan="2" | Mission
+! During [[Events|Event]]
+! Modifier
+|-
+| [[File:Expedition Map Mission Alert Egg Hunt.png|x64px|alt=Egg Hunt]]
+| Egg Hunt
+| [[Eggplague]]
+| Contains Rabbits/Bunnies that drop [[File:Event Eggplague Devious Egg.png|x32px]] Devious Eggs upon defeat.
+|-
+|}
+
+==Bestiary==
+{{For|a catalog of Monster encounters|/Expedition Bestiary/}}
+
+==Data==
+{{For|detailed drop rates of rewards per location|/Expedition Data/}}
