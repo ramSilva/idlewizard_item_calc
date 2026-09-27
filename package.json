@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "scrape": "node scripts/scrape/scrape.mjs",
-    "build-data": "node scripts/data/build-data.mjs"
+    "build-data": "node scripts/data/build-data.mjs",
+    "chronomancer-setup": "node scripts/validation/chronomancer-setup.mjs"
   },
   "dependencies": {
     "break_eternity.js": "^2.1.3",
