@@ -50,7 +50,12 @@ export function spellById(id: number): SpellDef {
   return s;
 }
 
-export const classSpells = (className: string): SpellDef[] => SPELLS.filter((s) => s.classes.includes(className));
+/** Spells an item adds to any class's spellbook; they only take effect while the item is equipped. */
+export const ITEM_GRANTED_SPELLS: ReadonlyMap<number, { item: string; source: Source }> = new Map([
+  [111, { item: "The Accumulator", source: { url: "https://idlewizard.wiki.gg/wiki/The_Accumulator", verified: true } }],
+]);
+
+export const classSpells = (className: string): SpellDef[] => SPELLS.filter((s) => s.classes.includes(className) || ITEM_GRANTED_SPELLS.has(s.id));
 
 /** Per-spell stat ids, e.g. `Spell.RitualOfPower.CastsThisExile`. */
 export const spellStat = (spell: SpellDef, name: string): string => `Spell.${spell.key}.${name}`;

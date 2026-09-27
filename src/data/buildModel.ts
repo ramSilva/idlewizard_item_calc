@@ -9,7 +9,7 @@ import { ITEMS, SETS } from "./items.ts";
 import { petById } from "./pets.ts";
 import { SCORES, spellScores, type ScoreContext, type ScoreDef } from "./scores.ts";
 import { behaviourOf } from "./spellBehaviours.ts";
-import { spellById, spellStat } from "./spells.ts";
+import { ITEM_GRANTED_SPELLS, spellById, spellStat } from "./spells.ts";
 import { GENERIC_EFFECTS, GENERIC_STATS } from "./stats.ts";
 
 export const MAX_SPELLS = 6;
@@ -116,7 +116,7 @@ function validate(sel: ModelSelection, cls: ClassDef): void {
   if (new Set(sel.spells).size !== sel.spells.length) throw new Error("A spell is selected twice");
   for (const id of sel.spells) {
     const s = spellById(id);
-    if (!s.classes.includes(cls.name)) throw new Error(`${s.name} isn't a ${cls.name} spell`);
+    if (!s.classes.includes(cls.name) && !ITEM_GRANTED_SPELLS.has(id)) throw new Error(`${s.name} isn't a ${cls.name} spell`);
   }
   if (sel.stance && !cls.stances.some((s) => s.id === sel.stance)) throw new Error(`${cls.name} has no stance ${sel.stance}`);
   for (const id of sel.snapped ?? []) if (!behaviourOf(id).snap) throw new Error(`${spellById(id).name} has nothing to snap`);
@@ -141,7 +141,7 @@ export function buildModel(selection: ModelSelection, options: BuildOptions = {}
   const stats = new StatCollector(GENERIC_STATS);
   for (const b of active) stats.add(b.stats, spellById(b.spellId).name);
   stats.add(pet.stats, pet.name);
-  stats.replace([constantStat("Pet.Tier", "Pet tier", "Pet", pet.tier, { source: pet.source })]);
+  stats.replace([constantStat("Pet.Tier", "Pet tier", "Pet", pet.tier, { source: pet.tierSource ?? pet.source })]);
 
   const autoclicks: AutoclickSource[] = [...active.flatMap((b) => (b.autoclicks ? [b.autoclicks] : [])), ...(pet.autoclicks ? [pet.autoclicks] : [])];
   const summons = spells.filter((s) => s.school === "Summoning").length;
@@ -184,13 +184,29 @@ export function buildModel(selection: ModelSelection, options: BuildOptions = {}
     }
   }
 
+  let petManaYield: string | null = null;
+  if (pet.manaPerSecond) {
+    petManaYield = "Pet.ManaYieldPerSecond";
+    derived.push(derivedStat(petManaYield, `Mana per second ${pet.name} yields`, "Pet", pet.manaPerSecond.value, { source: pet.manaPerSecond.source }));
+  }
+
   const voidSources = [...active.flatMap((b) => (b.voidManaPerSecond ? [b.voidManaPerSecond] : [])), ...(pet.voidManaPerSecond ? [pet.voidManaPerSecond] : [])];
   derived.push(derivedStat("Void.ManaPerSecond", "Void mana per second", "Void", sum(voidSources), { source: { url: "https://idlewizard.wiki.gg/wiki/Module:Data/Spells", verified: true } }));
 
   stats.add(derived, "model builder");
   stats.replace(cls.stats);
 
-  const ctx: ScoreContext = { cls, pet, spells, manaPerCast, manaPerSecond, petCastMana, autoclicks: autoclicks.length > 0, voidMana: voidSources.length > 0 };
+  const ctx: ScoreContext = {
+    cls,
+    pet,
+    spells,
+    manaPerCast,
+    manaPerSecond,
+    petCastMana,
+    petManaYield,
+    autoclicks: autoclicks.length > 0,
+    voidMana: voidSources.length > 0,
+  };
   const scores = [...SCORES, ...spellScores(ctx)].filter((s) => s.build(ctx) !== null);
   const scoreId = selection.scoreId ?? cls.defaultScore;
   const scoreDef = scores.find((s) => s.id === scoreId);

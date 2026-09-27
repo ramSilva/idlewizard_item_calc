@@ -5,14 +5,14 @@ A clause is one comma- or sentence-separated part of an item, set or enchant tex
 "Modelled" clauses produce typed effects or bonus enchant levels; the others are kept with a reason.
 Unverified effects rely on a reading of the wiki text that the wiki doesn't state outright (each carries a note).
 
-- Items: 223 (203 regular, 20 Mythic); 201 have at least one modelled effect.
+- Items: 223 (203 regular, 20 Mythic); 202 have at least one modelled effect.
 - Sets: 12 with 59 tiers.
 - Enchants: 223, of which 193 modelled, 10 not-production, 20 mythic-random.
 
 | Texts | Blocks | Modelled clauses | not-production | mechanic | mythic-random | unparsed | Effects | Formula effects | Unverified effects |
 |---|---|---|---|---|---|---|---|---|---|
-| Item tiers at max quality | 223 | 404 | 17 | 26 | 20 | 0 | 426 | 52 | 349 |
-| All item tiers | 916 | 1286 | 67 | 79 | 20 | 0 | 1325 | 204 | 1146 |
+| Item tiers at max quality | 223 | 405 | 17 | 26 | 20 | 0 | 427 | 52 | 349 |
+| All item tiers | 916 | 1291 | 67 | 79 | 20 | 0 | 1330 | 204 | 1146 |
 | Set tiers | 59 | 57 | 0 | 2 | 0 | 0 | 65 | 0 | 47 |
 
 ## Unmodelled clauses (max quality, sets and enchants; Mythic random bonuses omitted)
@@ -59,7 +59,7 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 | Spellstealer | mechanic | Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity | Counterspell and Debilitate are not modelled. |
 | Enchanting Membrane | mechanic | Can be activated to earn additional enchanting dust after experiments. | Activated part of the ability; not modelled. |
 | Chiropteric Rod | mechanic | Can be activated to spawn a Bat. | Spawning bats only matters through the bats-collected input. |
-| The Accumulator | mechanic | Adds the Ritual of Potency spell to your spellbook. On activation increase the amount of Ritual of Potency casts | Adds the Ritual of Potency spell; spell availability is not modelled. |
+| The Accumulator | mechanic | On activation, consumes all charges to add that many Ritual of Potency casts. | Cast counts are inputs. |
 | Shadow-Scryer's Crystal Ball | mechanic | Grants passive ability to reduce active spell duration on each Evocation cast | Shortens active spell durations; spell timing is not modelled. |
 | Blessed Tapestry | not-production | Attribute gain speed +900% | Attribute points are an input. |
 | Nulldragon, The Anomaly | not-production | Ascension forms experience gain +150% | Doesn't change mana production in the scored phase. |

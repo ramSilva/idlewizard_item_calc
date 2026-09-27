@@ -316,7 +316,12 @@ export const ITEM_OVERRIDES: Readonly<Record<string, readonly ClauseOverride[]>>
   "Temporal Stabilizer": [mechanic("Changes time skipped by Wormhole over the run; skipped time is an input.")],
   Berzerker: [mechanic("Grants incantation spellcasts from Furious Strike over the run; cast counts are inputs.")],
   Spellstealer: [mechanic("Counterspell and Debilitate are not modelled.")],
-  "The Accumulator": [mechanic("Adds the Ritual of Potency spell; spell availability is not modelled.")],
+  "The Accumulator": [
+    whole((ctx) => ({
+      effects: [overrideEffect(ctx, "Weapon.RitualOfPotencyGranted", "add", 1)],
+      unmodelled: [activation("On activation, consumes all charges to add that many Ritual of Potency casts.", "Cast counts are inputs.")],
+    })),
+  ],
   "Shadow-Scryer's Crystal Ball": [mechanic("Shortens active spell durations; spell timing is not modelled.")],
   "Broomstaff Of Klevdariah": [mechanic("Buffs are not modelled.")],
 };

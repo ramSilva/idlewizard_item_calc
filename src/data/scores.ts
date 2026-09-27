@@ -9,6 +9,7 @@ export interface ScoreContext {
   manaPerCast: ReadonlyMap<number, string>;
   manaPerSecond: ReadonlyMap<number, string>;
   petCastMana: string | null;
+  petManaYield: string | null;
   autoclicks: boolean;
   voidMana: boolean;
 }
@@ -67,6 +68,13 @@ export const SCORES: readonly ScoreDef[] = [
     label: "Mana per second while the selected spells are active",
     description: "Production with every selected spell active; the score for bursts that earn mana over time.",
     build: () => ref("Prod.Total"),
+  },
+  {
+    id: "production-with-pet",
+    label: "Mana per second including the pet's own mana yield",
+    description:
+      "Production plus the mana the pet yields by itself (Temporal Paradox: 100 × Mana/s × PAP² × level factor per activation), with every selected spell active; the score for In Over Your Head bursts.",
+    build: (ctx) => (ctx.petManaYield ? f(`Prod.Total + ${ctx.petManaYield}`) : null),
   },
   {
     id: "autoclick-mana",

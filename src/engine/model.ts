@@ -272,11 +272,15 @@ export interface PetDef {
   id: string;
   name: string;
   tier: 1 | 2 | 3;
+  /** Set when the tier isn't stated by the pet's page. */
+  tierSource?: Source;
   effects: Effect[];
   stats: StatDef[];
   autoclicks?: AutoclickSource;
   /** Spells the pet casts itself (Mechanos Apexis casts Kelphior's Black Beam). */
   casts?: PetCast[];
+  /** Mana the pet yields by itself per second (Temporal Paradox). */
+  manaPerSecond?: { value: Expr; source: Source };
   voidManaPerSecond?: Expr;
   defaults?: Record<string, DefaultValue>;
   unmodelled: UnmodelledPart[];

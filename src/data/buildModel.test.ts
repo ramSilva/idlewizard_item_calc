@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { FloatEvaluator } from "../engine/graph.ts";
 import { buildModel, defaultSelection, elasticity, loadoutModifiers, MAX_SPELLS, type BuiltModel } from "./buildModel.ts";
 import { CLASSES } from "./classes.ts";
-import { presetItems } from "./items.ts";
+import { itemByName, presetItems } from "./items.ts";
 import { SPELL_BEHAVIOURS } from "./spellBehaviours.ts";
 import { spellById } from "./spells.ts";
 
@@ -207,6 +207,51 @@ describe("chronomancer burst model", () => {
   it("needs Singularity Beam on the bar for its burst score", () => {
     expect(model("chronomancer").scores.map((s) => s.id)).toEqual(expect.arrayContaining(["chronomancer-burst", "spell:SingularityBeam", "production"]));
     expect(() => buildModel({ classId: "chronomancer", petId: "risen-giant", spells: [17, 60], scoreId: "chronomancer-burst" })).toThrow(/isn't available/);
+  });
+});
+
+describe("In Over Your Head: Temporal Paradox and Ritual Of Potency", () => {
+  const m = buildModel(
+    { classId: "chronomancer", petId: "temporal-paradox", spells: [69, 4, 73, 111, 17, 60], snapped: [69, 4], scoreId: "production-with-pet" },
+    { relevance: false },
+  );
+  const equip = (...names: string[]) => loadoutModifiers(m, names.map((n) => ({ item: itemByName(n)!, enchant: 0 })), false);
+
+  it("yields 100 × Mana/s × PAP² × (1 + (L − 1)^4 / 100) per activation, at one activation per second per charging speed", () => {
+    const ev = new FloatEvaluator(m.graph, { "Pet.AbilityPower": 3, "Pet.Level": 11 });
+    ev.scoreLog10(equip("Whiplash"));
+    const v = (id: string) => 10 ** ev.statLog10(id);
+    expect(v("Pet.ChargeSpeed")).toBeCloseTo(4, 9);
+    expect(v("Pet.ManaYieldPerSecond") / (v("Prod.Total") * v("Pet.AbilityPower") ** 2 * v("Pet.ChargeSpeed"))).toBeCloseTo(100 * (1 + 10 ** 4 / 100), 6);
+  });
+
+  it("scales with PAP squared and with pet charging speed", () => {
+    expect(elasticity(m, "Pet.AbilityPower", equip())).toBeCloseTo(2, 3);
+    expect(elasticity(m, "Pet.ChargeSpeed", equip())).toBeCloseTo(1, 3);
+    const ev = new FloatEvaluator(m.graph);
+    expect(ev.scoreLog10(equip("Whiplash")) - ev.scoreLog10(equip())).toBeCloseTo(Math.log10(2 ** 2 * 4), 6);
+  });
+
+  it("counts Ritual Of Potency only while The Accumulator is equipped", () => {
+    const ev = new FloatEvaluator(m.graph);
+    const none = ev.scoreLog10(equip());
+    expect(ev.scoreLog10(equip("Cataclysm"))).toBeCloseTo(none, 9);
+    const withIt = ev.scoreLog10(equip("The Accumulator"));
+    const inc = 10 ** ev.statLog10("Spell.IncantationEfficiency");
+    const casts = m.stats.get("Spell.RitualOfPotency.CastsThisExile")!.input!.default;
+    expect(withIt - none).toBeCloseTo(Math.log10((casts + 1) ** 0.8 * inc * 0.5 + 1), 6);
+  });
+
+  it("puts item-granted Ritual Of Potency on any class's bar, but no other classless spell", () => {
+    const oni = defaultSelection("oni");
+    expect(() => buildModel({ ...oni, spells: [111, ...oni.spells.slice(1)] }, { relevance: false })).not.toThrow();
+    expect(() => buildModel({ classId: "chronomancer", petId: "temporal-paradox", spells: [208] }, { relevance: false })).toThrow(/isn't a Chronomancer spell/);
+  });
+
+  it("offers the pet-yield score only for a pet that yields mana and flags the unstated tier", () => {
+    expect(m.scores.map((s) => s.id)).toContain("production-with-pet");
+    expect(model("chronomancer").scores.map((s) => s.id)).not.toContain("production-with-pet");
+    expect(m.stats.get("Pet.Tier")!.source).toMatchObject({ verified: false });
   });
 });
 

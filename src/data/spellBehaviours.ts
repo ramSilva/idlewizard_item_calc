@@ -295,6 +295,16 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
       .effect("Prod.Global", "mul", "C * (log10(I) * 0.95 + 1) * 0.9 + 1", undefined, "Incantation efficiency is read as the current value; the Math doesn't say it's fixed at cast.")
       .skip("Resets Character Experience, Mana, Void Mana, and various Exile statistics", "Resets over the run aren't modelled; the affected totals are inputs."),
   107: (b) => b.effect("Spell.EvocationEfficiency", "mul", "(Pet.MaxLevelThisExile + 1) ^ 0.8 * I ^ 1.3 + 1"),
+  111: (b) =>
+    b
+      .casts()
+      .effect(
+        "Prod.Global",
+        "mul",
+        "(C + 1) ^ 0.8 * I * 0.5 * min(Weapon.RitualOfPotencyGranted, 1) + 1",
+        undefined,
+        '"RealCastsThisExile" is read as the cast count input; the Math doesn\'t say whether casts added by The Accumulator\'s activation count as real.',
+      ),
   117: (b) =>
     b
       .effect("Pet.AbilityPower", "mul", `(${buildingCount(6)} + 1) ^ 0.3 * I ^ 0.75 * 0.9 + 1`)

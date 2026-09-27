@@ -29,7 +29,9 @@ class PetBuilder {
   readonly unmodelled: UnmodelledPart[] = [];
   readonly casts: PetCast[] = [];
   autoclicks?: AutoclickSource;
+  manaPerSecond?: PetDef["manaPerSecond"];
   voidManaPerSecond?: Expr;
+  tierSource?: Source;
   readonly source: Source;
 
   constructor(
@@ -59,6 +61,16 @@ class PetBuilder {
     return this;
   }
 
+  manaYield(perSecond: string, note: string): this {
+    this.manaPerSecond = { value: this.f(perSecond), source: { ...this.source, verified: false, note } };
+    return this;
+  }
+
+  unstatedTier(note: string): this {
+    this.tierSource = { ...this.source, verified: false, note };
+    return this;
+  }
+
   stat(def: StatDef): this {
     this.stats.push(def);
     return this;
@@ -74,10 +86,12 @@ class PetBuilder {
       id: this.name.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       name: this.name,
       tier: this.tier,
+      tierSource: this.tierSource,
       effects: this.effects,
       stats: this.stats,
       autoclicks: this.autoclicks,
       casts: this.casts.length ? this.casts : undefined,
+      manaPerSecond: this.manaPerSecond,
       voidManaPerSecond: this.voidManaPerSecond,
       unmodelled: this.unmodelled,
       source: this.source,
@@ -211,6 +225,17 @@ export const PETS: readonly PetDef[] = [
       )
       .effect("Prod.Global", "mul", "Shards.PerSecond * P * L ^ 1.2 * 0.025 + 1")
       .skip("On ability activation, grants spell shards each second for 10 seconds", "Spell shards aren't modelled."),
+  ),
+  pet("Temporal Paradox", 3, (b) =>
+    b
+      .unstatedTier("The page gives no tier and the pet is in no \"Tier N Pets\" category (Quasi-Realm unique pet); read as tier 3, so The Bond's tier 1/2 bonuses don't apply.")
+      .manaYield(
+        "100 * Prod.Total * P ^ 2 * (1 + max(L - 1, 0) ^ 4 / 100) * Pet.ChargeSpeed",
+        "The page says the ability activates once per second and that Whiplash, Collar Of Obedience and Empathy perks (the pet ability charging speed sources) reduce that; read as activations per second = charging speed. M is read as production without the pet's own yield.",
+      )
+      .skip("Increases Compressed Time per tick by (1 + log10(P)/3) × (1 + (L − 1)/10)", "Compressed Time isn't modelled.")
+      .skip("Cannot gain experience; gains one level per Time Fork cast while Generate Paradox is active", "Pet level is an input.")
+      .skip("In Over Your Head Quasi-Realm: pet ability power increased, based on pet level (Quasi-Realms page; no formula given)", "Pet ability power is an input."),
   ),
 ];
 

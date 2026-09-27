@@ -368,6 +368,10 @@ const weapons: StatDef[] = [
     source: WEAPON("Branch_of_the_Great_Cycle"),
   }),
   count("Weapon.CataclysmCharges", "Cataclysm charges (temporary Hellholes when activated)", "Items", WEAPON("Cataclysm")),
+  additiveStat("Weapon.RitualOfPotencyGranted", "Ritual Of Potency in the spellbook", "Items", {
+    description: "1 while The Accumulator is equipped: it adds Ritual Of Potency to the spellbook, so the spell only counts with it.",
+    source: WEAPON("The_Accumulator"),
+  }),
 ];
 
 export const GENERIC_STATS: readonly StatDef[] = [
