@@ -1,29 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { defaultSelection } from "../data/buildModel.ts";
-import { OptimizeCancelled, OptimizerClient, type WorkerLike } from "./optimizerClient.ts";
-import { OptimizerHost } from "./optimizerHost.ts";
-import type { WorkerRequest, WorkerResponse } from "./protocol.ts";
-
-/** Runs the host in-process; messages are structured-cloned both ways, as `postMessage` would. */
-class InProcessWorker implements WorkerLike {
-  readonly sent: WorkerResponse[] = [];
-  private readonly listeners: ((event: MessageEvent<WorkerResponse>) => void)[] = [];
-  private readonly host = new OptimizerHost((m) => {
-    const copy = structuredClone(m);
-    this.sent.push(copy);
-    setTimeout(() => this.listeners.forEach((l) => l({ data: copy } as MessageEvent<WorkerResponse>)), 0);
-  });
-
-  postMessage(message: WorkerRequest): void {
-    void this.host.handle(structuredClone(message));
-  }
-
-  addEventListener(_: "message", listener: (event: MessageEvent<WorkerResponse>) => void): void {
-    this.listeners.push(listener);
-  }
-
-  terminate(): void {}
-}
+import { InProcessWorker } from "./inProcessWorker.ts";
+import { OptimizeCancelled, OptimizerClient } from "./optimizerClient.ts";
 
 describe("optimizer worker protocol", () => {
   it("streams one progress message per level, then the sweep and the relevance", async () => {
