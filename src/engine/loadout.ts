@@ -149,6 +149,11 @@ export class ItemCatalog {
     this.spec = { add: [...add], mul: [...mul], dynamic };
   }
 
+  /** Index into `spec.dynamic` of a formula-valued item or set effect. */
+  dynamicIndexOf(effect: ItemEffect): number | undefined {
+    return this.dynamicIndex.get(effect);
+  }
+
   /** Static sums/products per stat plus the dynamic effect indices, ready for `createModifiers`. */
   modifierSpec(resolved: ResolvedLoadout): ModifierSpec {
     const add: Record<string, number> = {};
@@ -156,7 +161,7 @@ export class ItemCatalog {
     const dynamic: number[] = [];
     for (const r of resolved.effects) {
       if (typeof r.value !== "number") {
-        const k = r.effect ? this.dynamicIndex.get(r.effect) : undefined;
+        const k = r.effect ? this.dynamicIndexOf(r.effect) : undefined;
         if (k === undefined) throw new Error(`Formula effect on ${r.stat} from ${r.from} is not in the catalog`);
         dynamic.push(k);
       } else if (r.op === "add") add[r.stat] = (add[r.stat] ?? 0) + r.value;

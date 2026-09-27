@@ -585,6 +585,23 @@ function compileStatStep(s: CompiledStat, graph: StatGraph, ctx: FloatCtx, inLg:
   };
 }
 
+/** The item modifier entries a caller will ever set (stat indices for `add`/`logMul`, effect indices for `dynamic`). */
+export interface ActiveItemCoordinates {
+  add: Iterable<number>;
+  mul: Iterable<number>;
+  dynamic: Iterable<number>;
+}
+
+export interface FloatEvaluatorOptions {
+  /**
+   * Stats that only depend on item modifiers outside this set are cached like item-independent ones.
+   * Every modifier passed to the evaluator must then be zero (or off) outside the set.
+   */
+  activeItems?: ActiveItemCoordinates;
+  /** Recompute only item-dependent stats whose modifiers or dependencies changed since the previous evaluation. */
+  incremental?: boolean;
+}
+
 /**
  * Fast evaluator in signed log10 space, so magnitudes far beyond 1e308 stay on the float path.
  * Item-independent stats are cached until an input changes. Whenever the float path can't
@@ -603,10 +620,12 @@ export class FloatEvaluator {
   private readonly empty: ItemModifiers;
   private dirty = true;
   private staticBad = false;
+  private readonly incremental: IncrementalState | null;
 
   constructor(
     readonly graph: StatGraph,
     inputs: InputValues = {},
+    options: FloatEvaluatorOptions = {},
   ) {
     const n = graph.stats.length;
     this.lg = new Float64Array(n);
@@ -614,10 +633,12 @@ export class FloatEvaluator {
     this.inLg = new Float64Array(n);
     this.inSg = new Float64Array(n);
     const ctx: FloatCtx = { lg: this.lg, sg: this.sg, index: graph.index };
+    const dependent = activeDependence(graph, options.activeItems);
     for (const s of graph.stats) {
       const step = compileStatStep(s, graph, ctx, this.inLg, this.inSg);
-      (s.itemDependent ? this.itemSteps : this.staticSteps).push(step);
+      (dependent[s.index] ? this.itemSteps : this.staticSteps).push(step);
     }
+    this.incremental = options.incremental ? incrementalState(graph, dependent) : null;
     this.scoreNode = compileFloat(graph.score, ctx);
     this.empty = createModifiers(graph);
     this.setInputs(inputs);
@@ -669,16 +690,104 @@ export class FloatEvaluator {
   }
 
   private run(mods: ItemModifiers): number {
+    const fresh = this.dirty;
     if (this.dirty) {
       BAD = false;
       for (const step of this.staticSteps) step(this.empty);
       this.staticBad = BAD;
       this.dirty = false;
     }
-    BAD = this.staticBad;
-    for (const step of this.itemSteps) step(mods);
+    const inc = this.incremental;
+    if (!inc) {
+      BAD = this.staticBad;
+      for (const step of this.itemSteps) step(mods);
+      return this.scoreNode();
+    }
+    const { lg, sg } = this;
+    const all = fresh || !inc.valid;
+    let bad = this.staticBad;
+    for (let j = 0; j < this.itemSteps.length; j++) {
+      const t = inc.targets[j];
+      let changed = all;
+      if (!changed && t.add >= 0 && mods.add[t.add] !== inc.add[t.add]) changed = true;
+      if (!changed && t.mul >= 0 && mods.logMul[t.mul] !== inc.logMul[t.mul]) changed = true;
+      if (!changed) for (const k of t.dynamic) if (mods.dynamic[k] !== inc.dynamic[k]) changed = true;
+      if (!changed) for (const d of t.deps) if (inc.changed[d]) changed = true;
+      if (!changed) {
+        inc.changed[j] = 0;
+        bad ||= inc.bad[j] === 1;
+        continue;
+      }
+      const before = lg[t.stat];
+      const beforeSign = sg[t.stat];
+      BAD = false;
+      this.itemSteps[j](mods);
+      inc.bad[j] = BAD ? 1 : 0;
+      bad ||= BAD;
+      inc.changed[j] = all || lg[t.stat] !== before || sg[t.stat] !== beforeSign ? 1 : 0;
+    }
+    for (const i of inc.addCoords) inc.add[i] = mods.add[i];
+    for (const i of inc.mulCoords) inc.logMul[i] = mods.logMul[i];
+    inc.dynamic.set(mods.dynamic);
+    inc.valid = true;
+    BAD = bad;
     return this.scoreNode();
   }
+}
+
+interface IncrementalState {
+  valid: boolean;
+  /** Per item step: its stat, direct item coordinates, and the item steps it depends on. */
+  targets: { stat: number; add: number; mul: number; dynamic: number[]; deps: number[] }[];
+  addCoords: number[];
+  mulCoords: number[];
+  add: Float64Array;
+  logMul: Float64Array;
+  dynamic: Uint8Array;
+  changed: Uint8Array;
+  bad: Uint8Array;
+}
+
+function incrementalState(graph: StatGraph, dependent: boolean[]): IncrementalState {
+  const stepOf = new Map<number, number>();
+  const targets: IncrementalState["targets"] = [];
+  for (const s of graph.stats) {
+    if (!dependent[s.index]) continue;
+    stepOf.set(s.index, targets.length);
+    targets.push({
+      stat: s.index,
+      add: s.itemAdd ? s.index : -1,
+      mul: s.itemMul ? s.index : -1,
+      dynamic: s.dynamic,
+      deps: s.deps.filter((d) => stepOf.has(d)).map((d) => stepOf.get(d)!),
+    });
+  }
+  const n = graph.stats.length;
+  return {
+    valid: false,
+    targets,
+    addCoords: targets.filter((t) => t.add >= 0).map((t) => t.add),
+    mulCoords: targets.filter((t) => t.mul >= 0).map((t) => t.mul),
+    add: new Float64Array(n),
+    logMul: new Float64Array(n),
+    dynamic: new Uint8Array(graph.dynamic.length),
+    changed: new Uint8Array(targets.length),
+    bad: new Uint8Array(targets.length),
+  };
+}
+
+function activeDependence(graph: StatGraph, active: ActiveItemCoordinates | undefined): boolean[] {
+  if (!active) return graph.stats.map((s) => s.itemDependent);
+  const add = new Set(active.add);
+  const mul = new Set(active.mul);
+  const dynamic = new Set(active.dynamic);
+  const out: boolean[] = [];
+  for (const s of graph.stats) {
+    out.push(
+      (s.itemAdd && add.has(s.index)) || (s.itemMul && mul.has(s.index)) || s.dynamic.some((k) => dynamic.has(k)) || s.deps.some((d) => out[d]),
+    );
+  }
+  return out;
 }
 
 function decimalLog10(d: Decimal): number {

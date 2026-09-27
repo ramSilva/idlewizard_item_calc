@@ -135,6 +135,43 @@ describe("evaluation", () => {
     expectAgreement(spec, {}, { add: { "Test.X": 5 }, mul: { "Test.X": 1.5 }, dynamic: [0, 1] });
   });
 
+  it("gives the same scores with active-coordinate caching and incremental re-evaluation", () => {
+    const graph = compileGraph({
+      stats: [
+        input("In.A", 2),
+        input("In.B", 7),
+        multiplierStat("Test.M", "M", "Misc"),
+        multiplierStat("Test.N", "N", "Misc"),
+        derivedStat("Test.S", "S", "Misc", f("In.B")),
+        derivedStat("Test.Mix", "Mix", "Misc", f("max(Test.M * In.A, Test.S) + Test.N ^ 0.5")),
+      ],
+      score: f("Test.Mix * Test.S * Test.N"),
+      items: { add: ["Test.S"], mul: ["Test.M", "Test.N"], dynamic: [{ stat: "Test.M", op: "mul", value: f("1 + Test.S / 10") }] },
+    });
+    const m = graph.index.get("Test.M")!;
+    const n = graph.index.get("Test.N")!;
+    const s = graph.index.get("Test.S")!;
+    const plain = new FloatEvaluator(graph);
+    const incremental = new FloatEvaluator(graph, {}, { incremental: true, activeItems: { add: [s], mul: [m, n], dynamic: [0] } });
+    const narrow = new FloatEvaluator(graph, {}, { activeItems: { add: [], mul: [m], dynamic: [] } });
+    let seed = 7;
+    const next = () => ((seed = (seed * 16807) % 2147483647), seed / 2147483647);
+    for (let k = 0; k < 200; k++) {
+      const mods = createModifiers(graph);
+      mods.logMul[m] = next() < 0.5 ? 0 : next() * 2;
+      mods.logMul[n] = next() < 0.5 ? 0 : next();
+      mods.add[s] = next() < 0.5 ? 0 : next() * 20;
+      mods.dynamic[0] = next() < 0.5 ? 1 : 0;
+      expect(incremental.scoreLog10(mods)).toBeCloseTo(plain.scoreLog10(mods), 12);
+      if (k === 100) {
+        for (const ev of [plain, incremental, narrow]) ev.setInput("In.B", 3);
+      }
+      const onlyM = createModifiers(graph);
+      onlyM.logMul[m] = mods.logMul[m];
+      expect(narrow.scoreLog10(onlyM)).toBeCloseTo(plain.scoreLog10(onlyM), 12);
+    }
+  });
+
   it("recomputes cached item-independent stats when an input changes", () => {
     const graph = compileGraph({
       stats: [input("In.A", 2), derivedStat("Test.Sq", "sq", "Misc", f("In.A ^ 2")), multiplierStat("Test.M", "M", "Misc")],

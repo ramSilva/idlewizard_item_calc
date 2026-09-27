@@ -37,6 +37,10 @@ export interface RelevanceOptions {
   candidates?: ItemModifiers[];
   /** Tolerance on log10 score differences, relative to max(1, |difference|). */
   epsilon?: number;
+  /** Candidates are compared with this set (default: no items). */
+  reference?: ItemModifiers;
+  /** Inputs whose largest deviation (log10 units) stays at or below this are hidden as noise (default 0). */
+  threshold?: number;
 }
 
 export interface RelevanceResult {
@@ -60,6 +64,7 @@ export function analyzeRelevance(graph: StatGraph, options: RelevanceOptions = {
   const evaluator = new FloatEvaluator(graph, options.inputs ?? {});
   const candidates = options.candidates ?? syntheticCandidates(graph);
   const epsilon = options.epsilon ?? 1e-9;
+  const check = { reference: options.reference ?? createModifiers(graph), threshold: options.threshold ?? 0, epsilon };
 
   const inputs = graph.inputs.map((i): InputRelevance => {
     const s = graph.stats[i];
@@ -75,7 +80,7 @@ export function analyzeRelevance(graph: StatGraph, options: RelevanceOptions = {
         reason: "Only feeds factors of the score that no item changes, so it scales every item set's score equally.",
       };
     }
-    return { ...base, ...numericCheck(evaluator, i, candidates, epsilon) };
+    return { ...base, ...numericCheck(evaluator, i, candidates, check) };
   });
 
   return {
@@ -199,7 +204,7 @@ function numericCheck(
   ev: FloatEvaluator,
   input: number,
   candidates: ItemModifiers[],
-  epsilon: number,
+  { reference, threshold, epsilon }: { reference: ItemModifiers; threshold: number; epsilon: number },
 ): Pick<InputRelevance, "shown" | "method" | "reason" | "maxDeviation"> {
   const s = ev.graph.stats[input];
   const spec = (s.base as { spec: InputSpec }).spec;
@@ -207,10 +212,9 @@ function numericCheck(
   const current = original === undefined ? spec.default : typeof original === "boolean" ? Number(original) : original;
   const values = sampleValues(spec, current);
 
-  const empty = createModifiers(ev.graph);
   // Ratios are undefined where a score is zero or can't be evaluated, so those points are skipped.
   const diffs = (): number[] => {
-    const base = ev.scoreLog10(empty);
+    const base = ev.scoreLog10(reference);
     return candidates.map((m) => {
       const l = ev.scoreLog10(m);
       return Number.isFinite(base) && Number.isFinite(l) ? l - base : NaN;
@@ -247,6 +251,14 @@ function numericCheck(
       shown: false,
       method: "numeric",
       reason: `Varying it from ${range} changes every item set's score by the same factor.`,
+      maxDeviation,
+    };
+  }
+  if (maxDeviation <= threshold) {
+    return {
+      shown: false,
+      method: "numeric",
+      reason: `Varying it from ${range} moves the gap between item sets by at most ×${formatValue(10 ** maxDeviation)}, which is below the noise threshold.`,
       maxDeviation,
     };
   }
