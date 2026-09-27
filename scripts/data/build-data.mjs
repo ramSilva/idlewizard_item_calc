@@ -66,6 +66,7 @@ async function buildSpells(manifest) {
       school: s.School,
       accumulated: Boolean(s.Accumulated),
       persistent: Boolean(s.Persistent),
+      behavior: s.Behavior ?? null,
       level: s.Level ?? null,
       cost: s.Cost ?? null,
       charge: s.Charge ?? null,
