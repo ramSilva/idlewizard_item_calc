@@ -25,7 +25,7 @@ todos:
     status: completed
   - id: optimizer
     content: "Implement Web Worker optimizer: relevance filter, per-slot pruning, set-permutation test, branch-and-bound, Resonator/Legion branching, enchant-level sweep"
-    status: pending
+    status: completed
   - id: ui
     content: Build setup, dynamic inputs, items/enchant (global + overrides, owned/quality), and results views with localStorage + shareable URL
     status: pending
