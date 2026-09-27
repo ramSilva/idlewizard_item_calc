@@ -80,7 +80,8 @@ class SpellBuilder {
   charges(max?: number): this {
     const s = this.spell;
     const id = spellStat(s, "Charges");
-    this.stats.push(inputStat(id, `${s.name}: charges`, "Spells", { default: 0, kind: "number", min: 0, max, logScale: true }, { source: SPELL_SOURCE }));
+    // The charged spells' Math has a floor(k × (Charges − 1)) + 1 factor, which is 0 at 0 charges and would zero the score.
+    this.stats.push(inputStat(id, `${s.name}: charges`, "Spells", { default: 1, kind: "number", min: 0, max, logScale: true }, { source: SPELL_SOURCE }));
     this.local.Q = id;
     return this;
   }

@@ -231,7 +231,11 @@ const voidMana: StatDef[] = [
   }),
   count("Void.EntitiesThisExile", "Void entities collected this Exile", "Void", ATTRIBUTES_PAGE),
   count("Void.ManaThisExile", "All Void mana earned this Exile", "Void", { url: "https://idlewizard.wiki.gg/wiki/Voidterror", verified: true }),
-  count("Void.ActiveTraps", "Active Void Traps", "Void", SPELL_DATA, { kind: "integer" }),
+  count("Void.ActiveTraps", "Active Void Traps", "Void", SPELL_DATA, {
+    kind: "integer",
+    default: 1,
+    hint: "Void Radiance's Void mana is proportional to this count, so any value of 1 or more ranks sets the same.",
+  }),
 ];
 
 const idle: StatDef[] = [

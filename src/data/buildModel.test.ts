@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { FloatEvaluator } from "../engine/graph.ts";
-import { buildModel, defaultSelection, elasticity, loadoutModifiers, type BuiltModel } from "./buildModel.ts";
+import { buildModel, defaultSelection, elasticity, loadoutModifiers, MAX_SPELLS, type BuiltModel } from "./buildModel.ts";
+import { CLASSES } from "./classes.ts";
 import { presetItems } from "./items.ts";
+import { SPELL_BEHAVIOURS } from "./spellBehaviours.ts";
+import { spellById } from "./spells.ts";
 
 type Scaled = "Evo" | "Inc" | "Summon" | "CAP" | "PAP" | "Idle";
 
@@ -253,5 +256,21 @@ describe("guide-anchored magnitudes and toggles", () => {
     expect(ids).toEqual(expect.arrayContaining(["oni-burst", "production", "spell:FuriousStrike", "stat:Spell.IncantationEfficiency", "stat:Hero.AbilityPower"]));
     expect(model("shaman").scores.map((s) => s.id)).toEqual(expect.arrayContaining(["shaman-burst", "autoclick-mana"]));
     expect(model("temporalist").scores.map((s) => s.id)).toContain("temporalist-burst");
+  });
+
+  it("gives every score a nonzero value at the defaults, whichever class spell is on the bar", () => {
+    const zero: string[] = [];
+    for (const cls of CLASSES) {
+      const base = defaultSelection(cls.id);
+      for (const id of [...SPELL_BEHAVIOURS.keys()].filter((s) => spellById(s).classes.includes(cls.name))) {
+        const spells = [...base.spells.filter((s) => s !== id).slice(0, MAX_SPELLS - 1), id];
+        const selection = { ...base, spells, snapped: (base.snapped ?? []).filter((s) => spells.includes(s)), scoreId: "production" };
+        for (const score of buildModel(selection, { relevance: false }).scores) {
+          const m = buildModel({ ...selection, scoreId: score.id }, { relevance: false });
+          if (!Number.isFinite(new FloatEvaluator(m.graph).scoreLog10())) zero.push(`${cls.id} with spell ${id}: ${score.id}`);
+        }
+      }
+    }
+    expect(zero).toEqual([]);
   });
 });
