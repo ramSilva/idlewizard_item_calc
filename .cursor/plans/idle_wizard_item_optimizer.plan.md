@@ -40,7 +40,7 @@ todos:
     status: completed
   - id: deploy
     content: Add GitHub Pages Actions workflow, create public repo under ramSilva, and commit/push only after explicit approval
-    status: pending
+    status: completed
 isProject: false
 ---
 
