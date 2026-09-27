@@ -28,7 +28,7 @@ todos:
     status: completed
   - id: ui
     content: Build setup, dynamic inputs, items/enchant (global + overrides, owned/quality), and results views with localStorage + shareable URL
-    status: pending
+    status: completed
   - id: validate
     content: Unit tests for effect math and golden tests against class-guide BiS embeds
     status: pending
