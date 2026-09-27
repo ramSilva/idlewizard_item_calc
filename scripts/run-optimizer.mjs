@@ -2,8 +2,8 @@
 //
 //   npm run optimize -- --class oni [--levels 0-55|0,10,20] [--all-levels] [--pet living-sin] [--spells 60,6,88]
 //     [--stance berserk] [--snapped 69,4] [--score oni-burst] [--no-idle] [--legion on|off] [--no-resonator]
-//     [--input Id=value]... [--override item-key=level]... [--exclude-slot Shoulder]... [--pruning bot|none]
-//     [--thorough] [--preset "104;113;..." --preset-level 17] [--relevance 17] [--json out.json]
+//     [--input Id=value]... [--override item-key=level]... [--exclude-slot Shoulder]... [--not-owned item-key]...
+//     [--pruning bot|none] [--thorough] [--preset "104;113;..." --preset-level 17] [--relevance 17] [--json out.json]
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { runnerImport } from "vite";
@@ -11,7 +11,7 @@ import { runnerImport } from "vite";
 const root = fileURLToPath(new URL("..", import.meta.url));
 
 function parseArgs(argv) {
-  const out = { inputs: {}, overrides: {}, excludedSlots: [] };
+  const out = { inputs: {}, overrides: {}, excludedSlots: [], notOwned: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     const next = () => {
@@ -42,6 +42,7 @@ function parseArgs(argv) {
       const [k, v] = pair(next());
       out.overrides[k] = Number(v);
     } else if (a === "--exclude-slot") out.excludedSlots.push(next());
+    else if (a === "--not-owned") out.notOwned.push(next());
     else if (a === "--pruning") out.pruning = next();
     else if (a === "--thorough") out.thorough = true;
     else if (a === "--preset") out.preset = next();
@@ -65,7 +66,8 @@ function parseLevels(spec) {
 
 const args = parseArgs(process.argv.slice(2));
 const { module } = await runnerImport(`${root}src/data/scriptEntry.ts`, { root, configFile: false, logLevel: "error" });
-const { buildModel, defaultSelection, createOptimizer, deserializeInputs, comparePreset, presetReport, sweepReport } = module;
+const { ITEMS, buildModel, defaultSelection, createOptimizer, deserializeInputs, comparePreset, presetReport, sweepReport } = module;
+for (const key of args.notOwned) if (!ITEMS.some((i) => i.key === key)) throw new Error(`Unknown item key ${key}`);
 
 const selection = { ...defaultSelection(args.classId) };
 for (const k of ["petId", "spells", "stance", "snapped", "scoreId", "idle"]) if (args[k] !== undefined) selection[k] = args[k];
@@ -78,6 +80,7 @@ const options = {
   enchantOverrides: args.overrides,
   legion: args.legion,
   resonator: args.resonator,
+  ...(args.notOwned.length ? { owned: Object.fromEntries(ITEMS.filter((i) => !i.mythic && !args.notOwned.includes(i.key)).map((i) => [i.key, i.maxQuality])) } : {}),
   pruning: args.pruning,
   ...(args.thorough ? { polishDepth: 2, nodeBudget: 1_000_000 } : {}),
 };
@@ -97,11 +100,24 @@ if (args.preset) {
   const row = result.levels.find((r) => r.level === level) ?? opt.optimizeLevel(level);
   console.log(presetReport(comparePreset(opt, model, row, args.preset, inputs)));
 }
+let relevance;
 if (args.relevanceLevel !== undefined) {
   const row = result.levels.find((r) => r.level === args.relevanceLevel) ?? opt.optimizeLevel(args.relevanceLevel);
   const rel = opt.relevance(row);
   const shown = rel.inputs.filter((i) => i.shown);
   console.log(`Ranking-relevant inputs at enchant ${row.level}: ${shown.length} of ${rel.inputs.length}`);
   for (const i of rel.inputs) console.log(`  ${i.shown ? "show" : "hide"} ${i.id}: ${i.reason}`);
+  relevance = { level: row.level, inputs: rel.inputs.map(({ id, shown, reason }) => ({ id, shown, reason })) };
 }
-if (args.json) writeFileSync(args.json, JSON.stringify({ selection: model.selection, result }, (_, v) => (v === Infinity ? "Infinity" : v), 2));
+if (args.json) {
+  const run = {
+    inputOverrides: args.inputs,
+    legion: opt.legion,
+    resonator: args.resonator ?? true,
+    excludedSlots: args.excludedSlots,
+    notOwned: args.notOwned,
+    enchantOverrides: args.overrides,
+    thorough: Boolean(args.thorough),
+  };
+  writeFileSync(args.json, JSON.stringify({ selection: model.selection, run, result, relevance }, (_, v) => (v === Infinity ? "Infinity" : v), 2));
+}

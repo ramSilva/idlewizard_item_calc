@@ -1,0 +1,442 @@
+Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
+Legion off; snapped 69; 41 levels in 179.62 s (setup 13 ms)
+Enchant 0: ×4.70e6 vs no items [37 candidates, 9 searched slots, 555468 leaves, 444532 bounds, 2875 ms, budget exhausted]
+    Chest      The Ribcage                              ×22.9
+    Feet       Lordic Greaves                           ×14.4
+    Research   Destabilized Evocations                  ×11
+    Finger     Morbid Loop                              ×27.5
+    Trophy     Anomalous Essence                        ×15
+    Trophy     Necrotic Powerstone                      ×16.2
+Enchant 1: ×2.22e7 vs no items [41 candidates, 10 searched slots, 570664 leaves, 429336 bounds, 2831 ms, budget exhausted]
+    Chest      The Ribcage +1                           ×30.3
+    Feet       Lordic Greaves +1                        ×19
+    Neck       Light Of Eighth Star +1                  ×1.33
+    Research   Servants Overclocking +1                 ×13.2
+    Finger     Morbid Loop +1                           ×31.6
+    Finger     Voidstrike Seal +1                       ×1.22
+    Trophy     Anomalous Essence                        ×15
+    Trophy     Necrotic Powerstone +1                   ×19.4
+Enchant 2: ×1.26e8 vs no items [41 candidates, 10 searched slots, 565118 leaves, 434882 bounds, 3403 ms, budget exhausted]
+    Chest      The Ribcage +2                           ×40.2
+    Feet       Lordic Greaves +2                        ×25.2
+    Neck       Light Of Eighth Star +2                  ×1.76
+    Research   Servants Overclocking +2                 ×19.1
+    Finger     Morbid Loop +2                           ×36.3
+    Finger     Voidstrike Seal +2                       ×1.5
+    Trophy     Anomalous Essence                        ×15
+    Trophy     Necrotic Powerstone +2                   ×23.3
+Enchant 3: ×8.27e8 vs no items [40 candidates, 10 searched slots, 545025 leaves, 454975 bounds, 3467 ms, budget exhausted]
+    Chest      The Ribcage +3                           ×53.3
+    Feet       Lordic Greaves +3                        ×33.4
+    Neck       Light Of Eighth Star +3                  ×2.33
+    Research   Servants Overclocking +3                 ×27.6
+    Finger     Morbid Loop +3                           ×41.8
+    Finger     Voidstrike Seal +3                       ×1.84
+    Trophy     Collection Of Samples +3                 ×17.3
+    Trophy     Necrotic Powerstone +3                   ×27.9
+Enchant 4: ×5.64e9 vs no items [39 candidates, 10 searched slots, 542344 leaves, 457656 bounds, 3557 ms, budget exhausted]
+    Chest      The Ribcage +4                           ×70.6
+    Feet       Lordic Greaves +4                        ×44.3
+    Neck       Light Of Eighth Star +4                  ×3.09
+    Research   Servants Overclocking +4                 ×39.8
+    Finger     Morbid Loop +4                           ×48
+    Finger     Voidstrike Seal +4                       ×2.25
+    Trophy     Collection Of Samples +4                 ×20.7
+    Trophy     Necrotic Powerstone +4                   ×33.5
+Enchant 5: ×3.86e10 vs no items [40 candidates, 10 searched slots, 558922 leaves, 441078 bounds, 3878 ms, budget exhausted]
+    Chest      The Ribcage +5                           ×93.6
+    Feet       Lordic Greaves +5                        ×58.7
+    Neck       Light Of Eighth Star +5                  ×4.09
+    Research   Servants Overclocking +5                 ×57.5
+    Finger     Morbid Loop +5                           ×55.2
+    Finger     Voidstrike Seal +5                       ×2.76
+    Trophy     Mutated Mycelium +5                      ×25
+    Trophy     Necrotic Powerstone +5                   ×40.2
+Enchant 6: ×2.83e11 vs no items [38 candidates, 9 searched slots, 536081 leaves, 463919 bounds, 4056 ms, budget exhausted]
+    Chest      The Ribcage +6                           ×124
+    Feet       Lordic Greaves +6                        ×77.8
+    Neck       Light Of Eighth Star +6                  ×5.42
+    Research   Servants Overclocking +6                 ×83
+    Finger     Morbid Loop +6                           ×63.5
+    Finger     Voidstrike Seal +6                       ×3.38
+    Trophy     Mutated Mycelium +6                      ×32.2
+    Trophy     Necrotic Powerstone +6                   ×48.3
+Enchant 7: ×2.08e12 vs no items [37 candidates, 9 searched slots, 530118 leaves, 469882 bounds, 4110 ms, budget exhausted]
+    Chest      The Ribcage +7                           ×164
+    Feet       Lordic Greaves +7                        ×103
+    Neck       Light Of Eighth Star +7                  ×7.18
+    Research   Servants Overclocking +7                 ×120
+    Finger     Morbid Loop +7                           ×73.1
+    Finger     Voidstrike Seal +7                       ×4.14
+    Trophy     Mutated Mycelium +7                      ×41.6
+    Trophy     Necrotic Powerstone +7                   ×58
+Enchant 8: ×1.52e13 vs no items [37 candidates, 9 searched slots, 524536 leaves, 475464 bounds, 4157 ms, budget exhausted]
+    Chest      The Ribcage +8                           ×218
+    Feet       Lordic Greaves +8                        ×137
+    Neck       Light Of Eighth Star +8                  ×9.52
+    Research   Servants Overclocking +8                 ×173
+    Finger     Morbid Loop +8                           ×84
+    Finger     Voidstrike Seal +8                       ×5.07
+    Trophy     Mutated Mycelium +8                      ×53.7
+    Trophy     Necrotic Powerstone +8                   ×69.5
+Enchant 9: ×1.12e14 vs no items [37 candidates, 9 searched slots, 518352 leaves, 481648 bounds, 4165 ms, budget exhausted]
+    Chest      The Ribcage +9                           ×289
+    Feet       Lordic Greaves +9                        ×181
+    Neck       Light Of Eighth Star +9                  ×12.6
+    Research   Servants Overclocking +9                 ×250
+    Finger     Morbid Loop +9                           ×96.6
+    Finger     Voidstrike Seal +9                       ×6.21
+    Trophy     Mutated Mycelium +9                      ×69.3
+    Trophy     Necrotic Powerstone +9                   ×83.4
+Enchant 10: ×8.20e14 vs no items [37 candidates, 9 searched slots, 513268 leaves, 486732 bounds, 4216 ms, budget exhausted]
+    Chest      The Ribcage +10                          ×383
+    Feet       Lordic Greaves +10                       ×240
+    Neck       Light Of Eighth Star +10                 ×16.7
+    Research   Servants Overclocking +10                ×361
+    Finger     Morbid Loop +10                          ×111
+    Finger     Voidstrike Seal +10                      ×7.61
+    Trophy     Mutated Mycelium +10                     ×89.4
+    Trophy     Necrotic Powerstone +10                  ×100
+Enchant 11: ×6.01e15 vs no items [37 candidates, 9 searched slots, 497237 leaves, 502763 bounds, 4289 ms, budget exhausted]
+    Chest      The Ribcage +11                          ×507
+    Feet       Lordic Greaves +11                       ×318
+    Neck       Light Of Eighth Star +11                 ×22.2
+    Research   Servants Overclocking +11                ×521
+    Finger     Morbid Loop +11                          ×128
+    Finger     Voidstrike Seal +11                      ×9.32
+    Trophy     Mutated Mycelium +11                     ×115
+    Trophy     Necrotic Powerstone +11                  ×120
+Enchant 12: ×4.41e16 vs no items [37 candidates, 9 searched slots, 492788 leaves, 507212 bounds, 4321 ms, budget exhausted]
+    Chest      The Ribcage +12                          ×672
+    Feet       Lordic Greaves +12                       ×422
+    Neck       Light Of Eighth Star +12                 ×29.4
+    Research   Servants Overclocking +12                ×753
+    Finger     Morbid Loop +12                          ×147
+    Finger     Voidstrike Seal +12                      ×11.4
+    Trophy     Mutated Mycelium +12                     ×149
+    Trophy     Necrotic Powerstone +12                  ×144
+Enchant 13: ×3.24e17 vs no items [37 candidates, 9 searched slots, 495411 leaves, 504589 bounds, 4475 ms, budget exhausted]
+    Chest      The Ribcage +13                          ×891
+    Feet       Lordic Greaves +13                       ×559
+    Neck       Light Of Eighth Star +13                 ×38.9
+    Research   Servants Overclocking +13                ×1090
+    Finger     Morbid Loop +13                          ×169
+    Finger     Voidstrike Seal +13                      ×14
+    Trophy     Mutated Mycelium +13                     ×192
+    Trophy     Necrotic Powerstone +13                  ×173
+Enchant 14: ×2.37e18 vs no items [37 candidates, 9 searched slots, 491342 leaves, 508658 bounds, 4465 ms, budget exhausted]
+    Chest      The Ribcage +14                          ×1180
+    Feet       Lordic Greaves +14                       ×741
+    Neck       Light Of Eighth Star +14                 ×51.6
+    Research   Servants Overclocking +14                ×1570
+    Finger     Morbid Loop +14                          ×194
+    Finger     Voidstrike Seal +14                      ×17.1
+    Trophy     Mutated Mycelium +14                     ×248
+    Trophy     Necrotic Powerstone +14                  ×208
+Enchant 15: ×1.74e19 vs no items [37 candidates, 9 searched slots, 486930 leaves, 513070 bounds, 4489 ms, budget exhausted]
+    Chest      The Ribcage +15                          ×1570
+    Feet       Lordic Greaves +15                       ×982
+    Neck       Light Of Eighth Star +15                 ×68.4
+    Research   Servants Overclocking +15                ×2270
+    Finger     Morbid Loop +15                          ×223
+    Finger     Voidstrike Seal +15                      ×21
+    Trophy     Mutated Mycelium +15                     ×320
+    Trophy     Necrotic Powerstone +15                  ×249
+Enchant 16: ×1.28e20 vs no items [37 candidates, 9 searched slots, 481812 leaves, 518188 bounds, 4529 ms, budget exhausted]
+    Chest      The Ribcage +16                          ×2070
+    Feet       Lordic Greaves +16                       ×1300
+    Neck       Light Of Eighth Star +16                 ×90.7
+    Research   Servants Overclocking +16                ×3270
+    Finger     Morbid Loop +16                          ×257
+    Finger     Voidstrike Seal +16                      ×25.7
+    Trophy     Mutated Mycelium +16                     ×414
+    Trophy     Necrotic Powerstone +16                  ×299
+Enchant 17: ×9.37e20 vs no items [37 candidates, 9 searched slots, 478097 leaves, 521903 bounds, 4584 ms, budget exhausted]
+    Chest      The Ribcage +17                          ×2750
+    Feet       Lordic Greaves +17                       ×1720
+    Neck       Light Of Eighth Star +17                 ×120
+    Research   Servants Overclocking +17                ×4730
+    Finger     Morbid Loop +17                          ×296
+    Finger     Voidstrike Seal +17                      ×31.5
+    Trophy     Mutated Mycelium +17                     ×534
+    Trophy     Necrotic Powerstone +17                  ×359
+Enchant 18: ×6.88e21 vs no items [37 candidates, 9 searched slots, 474648 leaves, 525352 bounds, 4596 ms, budget exhausted]
+    Chest      The Ribcage +18                          ×3640
+    Feet       Lordic Greaves +18                       ×2290
+    Neck       Light Of Eighth Star +18                 ×159
+    Research   Servants Overclocking +18                ×6830
+    Finger     Morbid Loop +18                          ×340
+    Finger     Voidstrike Seal +18                      ×38.6
+    Trophy     Mutated Mycelium +18                     ×689
+    Trophy     Necrotic Powerstone +18                  ×431
+Enchant 19: ×5.05e22 vs no items [37 candidates, 9 searched slots, 471188 leaves, 528812 bounds, 4597 ms, budget exhausted]
+    Chest      The Ribcage +19                          ×4830
+    Feet       Lordic Greaves +19                       ×3030
+    Neck       Light Of Eighth Star +19                 ×211
+    Research   Servants Overclocking +19                ×9860
+    Finger     Morbid Loop +19                          ×391
+    Finger     Voidstrike Seal +19                      ×47.3
+    Trophy     Mutated Mycelium +19                     ×890
+    Trophy     Necrotic Powerstone +19                  ×517
+Enchant 20: ×3.70e23 vs no items [37 candidates, 9 searched slots, 467672 leaves, 532328 bounds, 4627 ms, budget exhausted]
+    Chest      The Ribcage +20                          ×6400
+    Feet       Lordic Greaves +20                       ×4020
+    Neck       Light Of Eighth Star +20                 ×280
+    Research   Servants Overclocking +20                ×14200
+    Finger     Morbid Loop +20                          ×449
+    Finger     Voidstrike Seal +20                      ×57.9
+    Trophy     Mutated Mycelium +20                     ×1150
+    Trophy     Necrotic Powerstone +20                  ×620
+Enchant 21: ×2.72e24 vs no items [37 candidates, 9 searched slots, 463874 leaves, 536126 bounds, 4667 ms, budget exhausted]
+    Chest      The Ribcage +21                          ×8490
+    Feet       Lordic Greaves +21                       ×5320
+    Neck       Light Of Eighth Star +21                 ×371
+    Research   Servants Overclocking +21                ×20600
+    Finger     Morbid Loop +21                          ×517
+    Finger     Voidstrike Seal +21                      ×70.9
+    Trophy     Mutated Mycelium +21                     ×1480
+    Trophy     Necrotic Powerstone +21                  ×744
+Enchant 22: ×1.99e25 vs no items [37 candidates, 9 searched slots, 461286 leaves, 538714 bounds, 4702 ms, budget exhausted]
+    Chest      The Ribcage +22                          ×11200
+    Feet       Lordic Greaves +22                       ×7050
+    Neck       Light Of Eighth Star +22                 ×491
+    Research   Servants Overclocking +22                ×29700
+    Finger     Morbid Loop +22                          ×594
+    Finger     Voidstrike Seal +22                      ×86.9
+    Trophy     Mutated Mycelium +22                     ×1910
+    Trophy     Necrotic Powerstone +22                  ×893
+Enchant 23: ×1.46e26 vs no items [37 candidates, 9 searched slots, 458730 leaves, 541270 bounds, 4673 ms, budget exhausted]
+    Chest      The Ribcage +23                          ×14900
+    Feet       Lordic Greaves +23                       ×9350
+    Neck       Light Of Eighth Star +23                 ×651
+    Research   Servants Overclocking +23                ×42900
+    Finger     Morbid Loop +23                          ×684
+    Finger     Voidstrike Seal +23                      ×106
+    Trophy     Mutated Mycelium +23                     ×2470
+    Trophy     Necrotic Powerstone +23                  ×1070
+Enchant 24: ×1.07e27 vs no items [37 candidates, 9 searched slots, 456132 leaves, 543868 bounds, 4681 ms, budget exhausted]
+    Chest      The Ribcage +24                          ×19800
+    Feet       Lordic Greaves +24                       ×12400
+    Neck       Light Of Eighth Star +24                 ×863
+    Research   Servants Overclocking +24                ×61900
+    Finger     Morbid Loop +24                          ×786
+    Finger     Voidstrike Seal +24                      ×130
+    Trophy     Mutated Mycelium +24                     ×3190
+    Trophy     Necrotic Powerstone +24                  ×1290
+Enchant 25: ×7.86e27 vs no items [37 candidates, 9 searched slots, 453386 leaves, 546614 bounds, 4707 ms, budget exhausted]
+    Chest      The Ribcage +25                          ×26200
+    Feet       Lordic Greaves +25                       ×16400
+    Neck       Light Of Eighth Star +25                 ×1140
+    Research   Servants Overclocking +25                ×89400
+    Finger     Morbid Loop +25                          ×904
+    Finger     Voidstrike Seal +25                      ×160
+    Trophy     Mutated Mycelium +25                     ×4110
+    Trophy     Necrotic Powerstone +25                  ×1540
+Enchant 26: ×5.77e28 vs no items [37 candidates, 9 searched slots, 451168 leaves, 548832 bounds, 4714 ms, budget exhausted]
+    Chest      The Ribcage +26                          ×34700
+    Feet       Lordic Greaves +26                       ×21800
+    Neck       Light Of Eighth Star +26                 ×1520
+    Research   Servants Overclocking +26                ×129000
+    Finger     Morbid Loop +26                          ×1040
+    Finger     Voidstrike Seal +26                      ×196
+    Trophy     Mutated Mycelium +26                     ×5310
+    Trophy     Necrotic Powerstone +26                  ×1850
+Enchant 27: ×4.23e29 vs no items [37 candidates, 9 searched slots, 448363 leaves, 551637 bounds, 4739 ms, budget exhausted]
+    Chest      The Ribcage +27                          ×46000
+    Feet       Lordic Greaves +27                       ×28800
+    Neck       Light Of Eighth Star +27                 ×2010
+    Research   Servants Overclocking +27                ×186000
+    Finger     Morbid Loop +27                          ×1200
+    Finger     Voidstrike Seal +27                      ×240
+    Trophy     Mutated Mycelium +27                     ×6850
+    Trophy     Necrotic Powerstone +27                  ×2220
+Enchant 28: ×3.10e30 vs no items [37 candidates, 9 searched slots, 445473 leaves, 554527 bounds, 4780 ms, budget exhausted]
+    Chest      The Ribcage +28                          ×61000
+    Feet       Lordic Greaves +28                       ×38200
+    Neck       Light Of Eighth Star +28                 ×2660
+    Research   Servants Overclocking +28                ×269000
+    Finger     Morbid Loop +28                          ×1380
+    Finger     Voidstrike Seal +28                      ×294
+    Trophy     Mutated Mycelium +28                     ×8850
+    Trophy     Necrotic Powerstone +28                  ×2670
+Enchant 29: ×2.28e31 vs no items [36 candidates, 9 searched slots, 408660 leaves, 591340 bounds, 4613 ms, budget exhausted]
+    Chest      The Ribcage +29                          ×80800
+    Feet       Lordic Greaves +29                       ×50700
+    Neck       Light Of Eighth Star +29                 ×3530
+    Research   Servants Overclocking +29                ×389000
+    Finger     Morbid Loop +29                          ×1580
+    Finger     Voidstrike Seal +29                      ×360
+    Trophy     Mutated Mycelium +29                     ×11400
+    Trophy     Necrotic Powerstone +29                  ×3200
+Enchant 30: ×1.67e32 vs no items [36 candidates, 9 searched slots, 406698 leaves, 593302 bounds, 4637 ms, budget exhausted]
+    Chest      The Ribcage +30                          ×107000
+    Feet       Lordic Greaves +30                       ×67200
+    Neck       Light Of Eighth Star +30                 ×4680
+    Research   Servants Overclocking +30                ×562000
+    Finger     Morbid Loop +30                          ×1820
+    Finger     Voidstrike Seal +30                      ×441
+    Trophy     Mutated Mycelium +30                     ×14700
+    Trophy     Necrotic Powerstone +30                  ×3840
+Enchant 31: ×1.23e33 vs no items [36 candidates, 9 searched slots, 404293 leaves, 595707 bounds, 4675 ms, budget exhausted]
+    Chest      The Ribcage +31                          ×142000
+    Feet       Lordic Greaves +31                       ×89000
+    Neck       Light Of Eighth Star +31                 ×6200
+    Research   Servants Overclocking +31                ×811000
+    Finger     Morbid Loop +31                          ×2090
+    Finger     Voidstrike Seal +31                      ×540
+    Trophy     Mutated Mycelium +31                     ×19000
+    Trophy     Necrotic Powerstone +31                  ×4610
+Enchant 32: ×8.99e33 vs no items [36 candidates, 9 searched slots, 402054 leaves, 597946 bounds, 4671 ms, budget exhausted]
+    Chest      The Ribcage +32                          ×188000
+    Feet       Lordic Greaves +32                       ×118000
+    Neck       Light Of Eighth Star +32                 ×8220
+    Research   Servants Overclocking +32                ×1.17e6
+    Finger     Morbid Loop +32                          ×2400
+    Finger     Voidstrike Seal +32                      ×661
+    Trophy     Mutated Mycelium +32                     ×24600
+    Trophy     Necrotic Powerstone +32                  ×5530
+Enchant 33: ×6.60e34 vs no items [36 candidates, 9 searched slots, 400023 leaves, 599977 bounds, 4661 ms, budget exhausted]
+    Chest      The Ribcage +33                          ×249000
+    Feet       Lordic Greaves +33                       ×156000
+    Neck       Light Of Eighth Star +33                 ×10900
+    Research   Servants Overclocking +33                ×1.69e6
+    Finger     Morbid Loop +33                          ×2770
+    Finger     Voidstrike Seal +33                      ×810
+    Trophy     Mutated Mycelium +33                     ×31700
+    Trophy     Necrotic Powerstone +33                  ×6630
+Enchant 34: ×4.84e35 vs no items [36 candidates, 9 searched slots, 397896 leaves, 602104 bounds, 4713 ms, budget exhausted]
+    Chest      The Ribcage +34                          ×330000
+    Feet       Lordic Greaves +34                       ×207000
+    Neck       Light Of Eighth Star +34                 ×14400
+    Research   Servants Overclocking +34                ×2.44e6
+    Finger     Morbid Loop +34                          ×3180
+    Finger     Voidstrike Seal +34                      ×992
+    Trophy     Mutated Mycelium +34                     ×40900
+    Trophy     Necrotic Powerstone +34                  ×7960
+Enchant 35: ×3.55e36 vs no items [36 candidates, 9 searched slots, 396382 leaves, 603618 bounds, 4737 ms, budget exhausted]
+    Chest      The Ribcage +35                          ×438000
+    Feet       Lordic Greaves +35                       ×275000
+    Neck       Light Of Eighth Star +35                 ×19100
+    Research   Servants Overclocking +35                ×3.53e6
+    Finger     Morbid Loop +35                          ×3660
+    Finger     Voidstrike Seal +35                      ×1220
+    Trophy     Mutated Mycelium +35                     ×52800
+    Trophy     Necrotic Powerstone +35                  ×9550
+Enchant 36: ×2.60e37 vs no items [36 candidates, 9 searched slots, 394546 leaves, 605454 bounds, 4698 ms, budget exhausted]
+    Chest      The Ribcage +36                          ×580000
+    Feet       Lordic Greaves +36                       ×364000
+    Neck       Light Of Eighth Star +36                 ×25400
+    Research   Servants Overclocking +36                ×5.09e6
+    Finger     Morbid Loop +36                          ×4210
+    Finger     Voidstrike Seal +36                      ×1490
+    Trophy     Mutated Mycelium +36                     ×68200
+    Trophy     Necrotic Powerstone +36                  ×11500
+Enchant 37: ×1.91e38 vs no items [36 candidates, 9 searched slots, 392500 leaves, 607500 bounds, 4704 ms, budget exhausted]
+    Chest      The Ribcage +37                          ×769000
+    Feet       Lordic Greaves +37                       ×482000
+    Neck       Light Of Eighth Star +37                 ×33600
+    Research   Servants Overclocking +37                ×7.35e6
+    Finger     Morbid Loop +37                          ×4840
+    Finger     Voidstrike Seal +37                      ×1820
+    Trophy     Mutated Mycelium +37                     ×88000
+    Trophy     Necrotic Powerstone +37                  ×13800
+Enchant 38: ×1.40e39 vs no items [36 candidates, 9 searched slots, 390480 leaves, 609520 bounds, 4748 ms, budget exhausted]
+    Chest      The Ribcage +38                          ×1.02e6
+    Feet       Lordic Greaves +38                       ×639000
+    Neck       Light Of Eighth Star +38                 ×44500
+    Research   Servants Overclocking +38                ×1.06e7
+    Finger     Morbid Loop +38                          ×5560
+    Finger     Voidstrike Seal +38                      ×2230
+    Trophy     Mutated Mycelium +38                     ×114000
+    Trophy     Necrotic Powerstone +38                  ×16500
+Enchant 39: ×1.03e40 vs no items [36 candidates, 9 searched slots, 388098 leaves, 609415 bounds, 4699 ms]
+    Chest      The Ribcage +39                          ×1.35e6
+    Feet       Lordic Greaves +39                       ×848000
+    Neck       Light Of Eighth Star +39                 ×59000
+    Research   Servants Overclocking +39                ×1.53e7
+    Finger     Morbid Loop +39                          ×6400
+    Finger     Voidstrike Seal +39                      ×2740
+    Trophy     Mutated Mycelium +39                     ×147000
+    Trophy     Necrotic Powerstone +39                  ×19800
+Enchant 40: ×7.54e40 vs no items [36 candidates, 9 searched slots, 386048 leaves, 609061 bounds, 4710 ms]
+    Chest      The Ribcage +40                          ×1.79e6
+    Feet       Lordic Greaves +40                       ×1.12e6
+    Neck       Light Of Eighth Star +40                 ×78300
+    Research   Servants Overclocking +40                ×2.21e7
+    Finger     Morbid Loop +40                          ×7360
+    Finger     Voidstrike Seal +40                      ×3350
+    Trophy     Mutated Mycelium +40                     ×189000
+    Trophy     Necrotic Powerstone +40                  ×23800
+Excluded items: excluded-slot 77, not-owned 28, no-effect 9, requirements 43
+Ranking-relevant inputs at enchant 10: 15 of 71
+  hide Char.Level: Varying it from 1 to 200000000.000 changes every item set's score by the same factor.
+  hide AttrPoints.Spellcraft: Varying it from 0 to 100 moves the gap between item sets by at most ×1.003, which is below the noise threshold.
+  hide Pet.Level: Varying it from 1 to 300000000.000 changes every item set's score by the same factor.
+  hide Misc.AttributeCap: Varying it from 100 to 250 changes every item set's score by the same factor.
+  hide Spell.AccumulatedCastsThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Misc.CatalystShards: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×63.1.
+  show Expeditions.Level: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×18.39.
+  hide Weapon.ThunderbirdCharges: Varying it from 0 to 10000 changes every item set's score by the same factor.
+  hide Misc.Arcanasprings: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.Laboratories: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Elixir.EvocationIngredients: Varying it from 0 to 5 changes every item set's score by the same factor.
+  hide AttrPoints.Intelligence: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Mastery: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Char.LevelRequirementReduction: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Spell.EvocationEfficiency: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Mysteries.Count: Varying it from 1e144 to 1e156 changes every item set's score by the same factor.
+  hide Void.Mana: Varying it from 10000 to 1e16 changes every item set's score by the same factor.
+  hide AttrPoints.Insight: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Patience: Varying it from 0 to 160 changes every item set's score by the same factor.
+  hide Idle.TimeThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Spell.CastsThisExile: Varying it from 10 to 10000000000000.000 changes every item set's score by the same factor.
+  hide Idle.Bonus: Varying it from 1 to 100000000.000 changes every item set's score by the same factor.
+  hide Void.ProfitPerPoint: Varying it from 0.000 to 1000000.000 changes every item set's score by the same factor.
+  show Idle.Active: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×361.
+  hide AttrPoints.Versatility: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Wisdom: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Dominance: Varying it from 0 to 100 changes every item set's score by the same factor.
+  show AttrPoints.Empathy: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×1.532.
+  hide Misc.AchievementsUnlocked: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Misc.UpgradesBought: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Void.EntitiesThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Shards.CollectedThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Shards.PassiveGeneration: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Click.AutoclicksThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.SourcesOwned: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.AchievementPoints: Varying it from 0 to 100 changes every item set's score by the same factor.
+  show Building.8.Count: Changes how much items are worth: varying it from 0 to 3000000000.000 moves the gap between item sets by up to ×2.901.
+  hide Spell.EvocationCastsThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Elixir.IncantationIngredients: Varying it from 0 to 5 changes every item set's score by the same factor.
+  show Spell.IncantationEfficiency: Changes how much items are worth: varying it from 0.001 to 1000000000.000 moves the gap between item sets by up to ×7.886.
+  hide Items.EnchantingDustThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Hero.AbilityPower: Varying it from 1 to 1000000000000.000 changes every item set's score by the same factor.
+  hide Char.ClassTimeHours: Varying it from 0.000 to 10000000.000 changes every item set's score by the same factor.
+  hide Time.SkippedYears: Varying it from 0.000 to 1000000.000 moves the gap between item sets by at most ×1, which is below the noise threshold.
+  hide Hero.AbilityPowerGrowth: Varying it from 0.000 to 10000000.000 changes every item set's score by the same factor.
+  hide Pet.TimeCurrent: Varying it from 31.54 to 31536000000000.000 moves the gap between item sets by at most ×1, which is below the noise threshold.
+  show Pet.AbilityPower: Changes how much items are worth: varying it from 0.000 to 1000000.000 moves the gap between item sets by up to ×11.85.
+  hide Spell.Superposition.CastsThisExile: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Spell.RitualOfPower.CastsThisExile: Varying it from 0.1 to 100000000000.000 moves the gap between item sets by at most ×1.001, which is below the noise threshold.
+  hide Spell.StabilizeTheFlow.SnappedMaxDistortion: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Spell.StabilizeTheFlow.SnappedIncantationEfficiency: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  show Spell.TimeHelix.CastsThisExile: Changes how much items are worth: varying it from 0.000 to 100000000.000 moves the gap between item sets by up to ×1.114.
+  hide Misc.LiquidShadow: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.ShadowCoals: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.BatsThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.MaxManaAccrued: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Void.ManaAccrued: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Click.AutoclicksAccrued: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Spell.CastsAccrued: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Void.EntitiesAccrued: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Building.1.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×5.987.
+  hide Building.1.Count: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Building.2.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×2.5.
+  show Building.3.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×5.5.
+  show Building.4.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×2.5.
+  show Building.5.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×2.5.
+  show Building.6.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×2.5.
+  hide Weapon.CataclysmCharges: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Building.6.Count: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Building.7.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×5.5.
+  hide Building.8.Share: Varying it from 0 to 1 changes every item set's score by the same factor.

@@ -1,0 +1,1120 @@
+{
+  "selection": {
+    "classId": "chronomancer",
+    "petId": "risen-giant",
+    "spells": [
+      65,
+      17,
+      73,
+      60,
+      4,
+      69
+    ],
+    "idle": true,
+    "snapped": [
+      69
+    ],
+    "scoreId": "chronomancer-burst"
+  },
+  "run": {
+    "inputOverrides": {
+      "Misc.AttributeCap": 175,
+      "AttrPoints.Patience": 175,
+      "AttrPoints.Spellcraft": 175
+    },
+    "legion": false,
+    "resonator": true,
+    "excludedSlots": [
+      "Wrist",
+      "Weapon",
+      "Offhand",
+      "Legs",
+      "Mount",
+      "Accessory",
+      "Phylactery",
+      "Neck",
+      "Back"
+    ],
+    "notOwned": [
+      "charged-fin-wing",
+      "beholding-eye",
+      "abnormal-voidmass",
+      "insidious-lure",
+      "warbanner-fragment",
+      "inquisitive-eye",
+      "blessed-armor-scales",
+      "anointed-ashes"
+    ],
+    "enchantOverrides": {},
+    "thorough": true
+  },
+  "result": {
+    "baselineLog10": 226.61365402629028,
+    "excluded": [
+      {
+        "key": "light-of-eighth-star",
+        "name": "Light Of Eighth Star",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "radiant-leaf-pendant",
+        "name": "Radiant Leaf Pendant",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "fist-brooch",
+        "name": "Fist Brooch",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "shadow-tendril",
+        "name": "Shadow Tendril",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "lucky-amulet",
+        "name": "Lucky Amulet",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nether-chain",
+        "name": "Nether Chain",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "torc-of-privilege",
+        "name": "Torc Of Privilege",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "hollow-eye-pendant",
+        "name": "Hollow Eye Pendant",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "searing-gaze",
+        "name": "Searing Gaze",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "miniaturized-accelerator",
+        "name": "Miniaturized Accelerator",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "precise-wristband",
+        "name": "Precise Wristband",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "focusing-bracers",
+        "name": "Focusing Bracers",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "rich-bands",
+        "name": "Rich Bands",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "rugged-wristcoat",
+        "name": "Rugged Wristcoat",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nomadic-wrists",
+        "name": "Nomadic Wrists",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spirits-guidance",
+        "name": "Spirit's Guidance",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bite-sleeves",
+        "name": "Bite Sleeves",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "perfected-kata-bracers",
+        "name": "Perfected Kata Bracers",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nethershackles",
+        "name": "Nethershackles",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-sawrings",
+        "name": "Conjured Sawrings",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "embrace-of-the-grove",
+        "name": "Embrace Of The Grove",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "darklight-mantle",
+        "name": "Darklight Mantle",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "fancy-cape",
+        "name": "Fancy Cape",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "flaming-cape",
+        "name": "Flaming Cape",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-amplifier",
+        "name": "The Amplifier",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "timeshroud",
+        "name": "Timeshroud",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "concealing-shroud",
+        "name": "Concealing Shroud",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "falconers-warm-cape",
+        "name": "Falconer's Warm Cape",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-magnifier",
+        "name": "The Magnifier",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "chaos-mantle",
+        "name": "Chaos Mantle",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "temporal-scabbard",
+        "name": "Temporal Scabbard",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spellweaving-kilt",
+        "name": "Spellweaving Kilt",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "folds-of-magma",
+        "name": "Folds of Magma",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "vita-bulwark",
+        "name": "Vita Bulwark",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "tribal-dressing",
+        "name": "Tribal Dressing",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "mesmerizing-pants",
+        "name": "Mesmerizing Pants",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "falconers-bottoms",
+        "name": "Falconer's Bottoms",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "empowering-legguards",
+        "name": "Empowering Legguards",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-painguards",
+        "name": "Conjured Painguards",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nether-barrier",
+        "name": "Nether Barrier",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "scales-of-appraisal",
+        "name": "Scales of Appraisal",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "enigmatic-parchment",
+        "name": "Enigmatic Parchment",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "pitch-black-cage",
+        "name": "Pitch-black Cage",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "simple-memento",
+        "name": "Simple Memento",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ceaseless-hunger",
+        "name": "Ceaseless Hunger",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "black-vortex",
+        "name": "Black Vortex",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "murmuring-spellbook",
+        "name": "Murmuring Spellbook",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "symbol-of-authority",
+        "name": "Symbol Of Authority",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "habitstone",
+        "name": "Habitstone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "arcane-accelerator",
+        "name": "Arcane Accelerator",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "commissars-torn-sleeve",
+        "name": "Commissar's Torn Sleeve",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "recaller-stone",
+        "name": "Recaller Stone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "insidious-lure",
+        "name": "Insidious Lure",
+        "reason": "not-owned"
+      },
+      {
+        "key": "abnormal-voidmass",
+        "name": "Abnormal Voidmass",
+        "reason": "not-owned"
+      },
+      {
+        "key": "beholding-eye",
+        "name": "Beholding Eye",
+        "reason": "not-owned"
+      },
+      {
+        "key": "charged-fin-wing",
+        "name": "Charged Fin-Wing",
+        "reason": "not-owned"
+      },
+      {
+        "key": "inquisitive-eye",
+        "name": "Inquisitive Eye",
+        "reason": "not-owned"
+      },
+      {
+        "key": "anointed-ashes",
+        "name": "Anointed Ashes",
+        "reason": "not-owned"
+      },
+      {
+        "key": "warbanner-fragment",
+        "name": "Warbanner Fragment",
+        "reason": "not-owned"
+      },
+      {
+        "key": "blessed-armor-scales",
+        "name": "Blessed Armor Scales",
+        "reason": "not-owned"
+      },
+      {
+        "key": "book-of-litanies",
+        "name": "Book Of Litanies",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-strangleash",
+        "name": "Conjured Strangleash",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "auxtrap-backpack",
+        "name": "Auxtrap Backpack",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "empowering-managuard",
+        "name": "Empowering Managuard",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bag-of-tricks",
+        "name": "Bag Of Tricks",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "falconers-treats",
+        "name": "Falconer's Treats",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "burial-urn",
+        "name": "Burial Urn",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ethereal-veil",
+        "name": "Ethereal Veil",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spell-vault",
+        "name": "Spell Vault",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "mothers-gift",
+        "name": "Mother's Gift",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "branch-of-the-great-cycle",
+        "name": "Branch of the Great Cycle",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "cataclysm",
+        "name": "Cataclysm",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "heart-of-the-grave",
+        "name": "Heart of the Grave",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "thunderbird",
+        "name": "Thunderbird",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "reality-prism",
+        "name": "Reality Prism",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "shard-of-a-lost-dimension",
+        "name": "Shard Of A Lost Dimension",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "redeemer",
+        "name": "Redeemer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "temporal-stabilizer",
+        "name": "Temporal Stabilizer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "black-blade",
+        "name": "Black Blade",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "philosophers-stone",
+        "name": "Philosopher's Stone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "berzerker",
+        "name": "Berzerker",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spellstealer",
+        "name": "Spellstealer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "enchanting-membrane",
+        "name": "Enchanting Membrane",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "chiropteric-rod",
+        "name": "Chiropteric Rod",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-accumulator",
+        "name": "The Accumulator",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "shadow-scryers-crystal-ball",
+        "name": "Shadow-Scryer's Crystal Ball",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "head-of-the-all-eater",
+        "name": "Head Of The All-Eater",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "zenith-the-champions-steed",
+        "name": "Zenith, The Champion's Steed",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "warp-basilisk",
+        "name": "Warp Basilisk",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-rubedo-engine",
+        "name": "The Rubedo Engine",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "fey-glider",
+        "name": "Fey Glider",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "blessed-tapestry",
+        "name": "Blessed Tapestry",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nulldragon-the-anomaly",
+        "name": "Nulldragon, The Anomaly",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ritual-disk",
+        "name": "Ritual Disk",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "broomstaff-of-klevdariah",
+        "name": "Broomstaff Of Klevdariah",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "paukan-the-spider",
+        "name": "Paukan, The Spider",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "crystallized-echo",
+        "name": "Crystallized Echo",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "intricate-crimson-phylactery",
+        "name": "Intricate Crimson Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bold-azure-phylactery",
+        "name": "Bold Azure Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "smooth-amber-phylactery",
+        "name": "Smooth Amber Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "inert-jade-phylactery",
+        "name": "Inert Jade Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "robust-tangerine-phylactery",
+        "name": "Robust Tangerine Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "devious-violet-phylactery",
+        "name": "Devious Violet Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "eerie-turquoise-phylactery",
+        "name": "Eerie Turquoise Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "hectic-lime-phylactery",
+        "name": "Hectic Lime Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "burden-of-the-erased",
+        "name": "Burden of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "crown-of-the-first-realm",
+        "name": "Crown of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "embrace-of-the-erased",
+        "name": "Embrace of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-armor",
+        "name": "Endtimes Armor",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-failsafe",
+        "name": "Endtimes Failsafe",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-gear",
+        "name": "Endtimes Gear",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-visor",
+        "name": "Endtimes Visor",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-appendages",
+        "name": "Godflesh Appendages",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-dominion",
+        "name": "Godflesh Dominion",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-grasp",
+        "name": "Godflesh Grasp",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-heart",
+        "name": "Godflesh Heart",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-veil",
+        "name": "Godflesh Veil",
+        "reason": "not-owned"
+      },
+      {
+        "key": "legacy-of-the-erased",
+        "name": "Legacy of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "mantle-of-the-first-realm",
+        "name": "Mantle of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "pillars-of-the-first-realm",
+        "name": "Pillars of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "power-of-the-first-realm",
+        "name": "Power of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "pride-of-the-first-realm",
+        "name": "Pride of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "realmwalkers",
+        "name": "Realmwalkers",
+        "reason": "not-owned"
+      },
+      {
+        "key": "the-starmap",
+        "name": "The Starmap",
+        "reason": "not-owned"
+      },
+      {
+        "key": "voice-of-the-erased",
+        "name": "Voice of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "wrathseed",
+        "name": "WrathSeed",
+        "reason": "no-effect"
+      },
+      {
+        "key": "gravemoss-waistband",
+        "name": "Gravemoss Waistband",
+        "reason": "no-effect"
+      },
+      {
+        "key": "symbiotic-loop",
+        "name": "Symbiotic Loop",
+        "reason": "no-effect"
+      },
+      {
+        "key": "cold-blooded-ring",
+        "name": "Cold-blooded Ring",
+        "reason": "no-effect"
+      },
+      {
+        "key": "acclimatized-summons",
+        "name": "Acclimatized Summons",
+        "reason": "no-effect"
+      },
+      {
+        "key": "holidays",
+        "name": "Holidays",
+        "reason": "no-effect"
+      },
+      {
+        "key": "efficient-minion-tactics",
+        "name": "Efficient Minion Tactics",
+        "reason": "no-effect"
+      },
+      {
+        "key": "void-sampling",
+        "name": "Void Sampling",
+        "reason": "no-effect"
+      },
+      {
+        "key": "binding-sigil",
+        "name": "Binding Sigil",
+        "reason": "no-effect"
+      },
+      {
+        "key": "easymind-hat",
+        "name": "Easymind Hat",
+        "reason": "requirements"
+      },
+      {
+        "key": "falconers-ranger-hat",
+        "name": "Falconer's Ranger Hat",
+        "reason": "requirements"
+      },
+      {
+        "key": "the-clockcarers",
+        "name": "The Clockcarers",
+        "reason": "requirements"
+      },
+      {
+        "key": "talented-gloves",
+        "name": "Talented Gloves",
+        "reason": "requirements"
+      },
+      {
+        "key": "darklight-claws",
+        "name": "Darklight Claws",
+        "reason": "requirements"
+      },
+      {
+        "key": "seclusion-shell",
+        "name": "Seclusion Shell",
+        "reason": "requirements"
+      },
+      {
+        "key": "boots-of-harsh-trials",
+        "name": "Boots Of Harsh Trials",
+        "reason": "requirements"
+      },
+      {
+        "key": "conjured-spiked-stompers",
+        "name": "Conjured Spiked Stompers",
+        "reason": "requirements"
+      },
+      {
+        "key": "artificers-shoulderpads",
+        "name": "Artificer's Shoulderpads",
+        "reason": "requirements"
+      },
+      {
+        "key": "strange-spaulders",
+        "name": "Strange Spaulders",
+        "reason": "requirements"
+      },
+      {
+        "key": "tranquil-spaulders",
+        "name": "Tranquil Spaulders",
+        "reason": "requirements"
+      },
+      {
+        "key": "umbral-coil",
+        "name": "Umbral Coil",
+        "reason": "requirements"
+      },
+      {
+        "key": "collar-of-obedience",
+        "name": "Collar Of Obedience",
+        "reason": "requirements"
+      },
+      {
+        "key": "shadowflame-loop",
+        "name": "Shadowflame Loop",
+        "reason": "requirements"
+      },
+      {
+        "key": "seeping-shadow-signet",
+        "name": "Seeping Shadow Signet",
+        "reason": "requirements"
+      },
+      {
+        "key": "netherloop",
+        "name": "Netherloop",
+        "reason": "requirements"
+      },
+      {
+        "key": "resonator-ring",
+        "name": "Resonator Ring",
+        "reason": "requirements"
+      }
+    ],
+    "levels": [
+      {
+        "level": 0,
+        "best": {
+          "items": [
+            {
+              "key": "empowering-headguard",
+              "name": "Empowering Headguard",
+              "slot": "Head",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.653212513775344
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.9777152773505406
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.1807635042628135
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.3848834869187385
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.0838534912547573
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.0638795252653495
+            },
+            {
+              "key": "destabilized-evocations",
+              "name": "Destabilized Evocations",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.041392685158229
+            },
+            {
+              "key": "fiery-ring",
+              "name": "Fiery Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.7772460826631971
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.2599447503104386
+            },
+            {
+              "key": "anomalous-essence",
+              "name": "Anomalous Essence",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.1760912590556813
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.2087922278339533
+            }
+          ],
+          "scoreLog10": 238.07226083844625,
+          "gainLog10": 11.458606812155978,
+          "forced": [],
+          "candidates": [
+            "empowering-headguard",
+            "the-artificers-crown",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "encircling-trophies",
+            "sash-of-luxury",
+            "endless-pouches",
+            "morbid-loop",
+            "fiery-ring",
+            "frosty-ring",
+            "destabilized-evocations",
+            "necrotic-powerstone",
+            "anomalous-essence"
+          ],
+          "stats": {
+            "candidates": 20,
+            "positions": 6,
+            "leaves": 12,
+            "bounds": 228,
+            "evaluations": 1501,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 30.663166999999987
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "empowering-headguard",
+                "name": "Empowering Headguard",
+                "slot": "Head",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.653212513775344
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.9777152773505406
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.1807635042628135
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.3848834869187385
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.0838534912547573
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.0638795252653495
+              },
+              {
+                "key": "destabilized-evocations",
+                "name": "Destabilized Evocations",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.041392685158229
+              },
+              {
+                "key": "fiery-ring",
+                "name": "Fiery Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.7772460826631971
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.2599447503104386
+              },
+              {
+                "key": "anomalous-essence",
+                "name": "Anomalous Essence",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.1760912590556813
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.2087922278339533
+              }
+            ],
+            "scoreLog10": 238.07226083844625,
+            "gainLog10": 11.458606812155978,
+            "forced": [],
+            "candidates": [
+              "empowering-headguard",
+              "the-artificers-crown",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "encircling-trophies",
+              "sash-of-luxury",
+              "endless-pouches",
+              "morbid-loop",
+              "fiery-ring",
+              "frosty-ring",
+              "destabilized-evocations",
+              "necrotic-powerstone",
+              "anomalous-essence"
+            ],
+            "stats": {
+              "candidates": 20,
+              "positions": 6,
+              "leaves": 12,
+              "bounds": 228,
+              "evaluations": 1501,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 30.663166999999987
+            }
+          }
+        ],
+        "changed": true
+      }
+    ],
+    "changes": [
+      0
+    ]
+  }
+}

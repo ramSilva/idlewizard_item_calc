@@ -1,0 +1,255 @@
+Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
+Legion off; snapped 69; 12 levels in 0.90 s (setup 17 ms)
+Enchant 0: ×7.19e24 vs no items [30 candidates, 8 searched slots, 8 leaves, 1219 bounds, 77 ms]
+    Head       Circlet Of Deep Thoughts                 required
+    Hands      Grasp Of The Grave                       ×6.34
+    Chest      The Ribcage                              ×15.2
+    Feet       Boots Of Concentration                   ×16.3
+    Shoulder   Mantle Of The Crypt                      ×12.1
+    Neck       Lucky Amulet                             ×16.1
+    Waist      Encircling Trophies                      ×11.6
+    Wrist      Focusing Bracers                         ×7.56
+    Back       Flaming Cape                             ×10.5
+    Legs       Tribal Dressing                          ×17.9
+    Offhand    Murmuring Spellbook                      ×4800
+    Research   Destabilized Evocations                  ×11
+    Accessory  Ethereal Veil                            required
+    Mount      Zenith, The Champion's Steed             ×1
+    Phylactery Inert Jade Phylactery                    ×9570
+    Weapon     Thunderbird                              ×1.2
+    Finger     Fiery Ring                               ×5.98
+    Finger     Morbid Loop                              ×18.2
+    Trophy     Blessed Armor Scales                     ×21
+    Trophy     Necrotic Powerstone                      ×16.2
+Enchant 1: ×4.63e26 vs no items [29 candidates, 10 searched slots, 858 leaves, 3023 bounds, 80 ms]
+    Head       Circlet Of Deep Thoughts +1              required
+    Hands      Empowering Handguards +1                 ×7.13
+    Chest      The Ribcage +1                           ×20.1
+    Feet       Boots Of Concentration +1                ×20.4
+    Shoulder   Mantle Of The Crypt +1                   ×16.1
+    Neck       Lucky Amulet +1                          ×20.1
+    Waist      Encircling Trophies +1                   ×13.3
+    Wrist      Focusing Bracers +1                      ×9.07
+    Back       Flaming Cape +1                          ×12.6
+    Legs       Tribal Dressing +1                       ×22.8
+    Offhand    Murmuring Spellbook +1                   ×6930
+    Research   Servants Overclocking +1                 ×13.2
+    Accessory  Ethereal Veil +1                         required
+    Mount      Blessed Tapestry +1                      ×1.17
+    Phylactery Inert Jade Phylactery +1                 ×11200
+    Weapon     Thunderbird +1                           ×1.56
+    Finger     Frosty Ring +1                           ×7.17
+    Finger     Morbid Loop +1                           ×20.9
+    Trophy     Blessed Armor Scales +1                  ×26.3
+    Trophy     Necrotic Powerstone +1                   ×19.4
+Enchant 2: ×3.71e28 vs no items [28 candidates, 9 searched slots, 356 leaves, 2027 bounds, 60 ms]
+    Head       Circlet Of Deep Thoughts +2              required
+    Hands      Empowering Handguards +2                 ×8.04
+    Chest      The Ribcage +2                           ×26.6
+    Feet       Boots Of Concentration +2                ×25.5
+    Shoulder   Mantle Of The Crypt +2                   ×21.3
+    Neck       Lucky Amulet +2                          ×25.2
+    Waist      Encircling Trophies +2                   ×15.3
+    Wrist      Focusing Bracers +2                      ×10.9
+    Back       Flaming Cape +2                          ×15.1
+    Legs       Tribal Dressing +2                       ×28.8
+    Offhand    Murmuring Spellbook +2                   ×10000
+    Research   Servants Overclocking +2                 ×19.1
+    Accessory  Ethereal Veil +2                         required
+    Mount      Blessed Tapestry +2                      ×1.36
+    Phylactery Inert Jade Phylactery +2                 ×13100
+    Weapon     Heart of the Grave +2                    ×2.09
+    Finger     Frosty Ring +2                           ×8.6
+    Finger     Morbid Loop +2                           ×24.1
+    Trophy     Blessed Armor Scales +2                  ×32.8
+    Trophy     Necrotic Powerstone +2                   ×23.3
+Enchant 5: ×2.39e34 vs no items [29 candidates, 10 searched slots, 202 leaves, 3314 bounds, 67 ms]
+    Head       Circlet Of Deep Thoughts +5              required
+    Hands      Empowering Handguards +5                 ×11.6
+    Chest      The Ribcage +5                           ×62
+    Feet       Boots Of Concentration +5                ×49.9
+    Shoulder   Mantle Of The Crypt +5                   ×49.6
+    Neck       Lucky Amulet +5                          ×49.1
+    Waist      Encircling Trophies +5                   ×23.3
+    Wrist      Focusing Bracers +5                      ×18.8
+    Back       Flaming Cape +5                          ×26.1
+    Legs       Tribal Dressing +5                       ×58.8
+    Offhand    Murmuring Spellbook +5                   ×30200
+    Research   Servants Overclocking +5                 ×57.5
+    Accessory  Ethereal Veil +5                         required
+    Mount      Blessed Tapestry +5                      ×2.17
+    Phylactery Inert Jade Phylactery +5                 ×20800
+    Weapon     Heart of the Grave +5                    ×6.28
+    Finger     Frosty Ring +5                           ×14.9
+    Finger     Morbid Loop +5                           ×36.6
+    Trophy     Blessed Armor Scales +5                  ×64.1
+    Trophy     Necrotic Powerstone +5                   ×40.2
+Enchant 10: ×1.29e44 vs no items [29 candidates, 10 searched slots, 192 leaves, 3518 bounds, 69 ms]
+    Head       Circlet Of Deep Thoughts +10             required
+    Hands      Empowering Handguards +10                ×21.2
+    Chest      The Ribcage +10                          ×254
+    Feet       Boots Of Concentration +10               ×152
+    Shoulder   Mantle Of The Crypt +10                  ×203
+    Neck       Lucky Amulet +10                         ×150
+    Waist      Encircling Trophies +10                  ×46.9
+    Wrist      Focusing Bracers +10                     ×46.8
+    Back       Flaming Cape +10                         ×64.9
+    Legs       Tribal Dressing +10                      ×193
+    Offhand    Murmuring Spellbook +10                  ×189000
+    Research   Servants Overclocking +10                ×361
+    Accessory  Ethereal Veil +10                        required
+    Mount      Blessed Tapestry +10                     ×4.72
+    Phylactery Inert Jade Phylactery +10                ×45100
+    Weapon     Heart of the Grave +10                   ×39.4
+    Finger     Morbid Loop +10                          ×73.6
+    Finger     Spell Helix +10                          ×41.4
+    Trophy     Blessed Armor Scales +10                 ×196
+    Trophy     Necrotic Powerstone +10                  ×100
+Enchant 12: ×1.16e48 vs no items [30 candidates, 11 searched slots, 484 leaves, 11622 bounds, 139 ms]
+    Head       Circlet Of Deep Thoughts +12             required
+    Hands      Empowering Handguards +12                ×27
+    Chest      The Ribcage +12                          ×445
+    Feet       Boots Of Concentration +12               ×238
+    Shoulder   Mantle Of The Crypt +12                  ×356
+    Neck       Lucky Amulet +12                         ×234
+    Waist      Encircling Trophies +12                  ×62
+    Wrist      Focusing Bracers +12                     ×67.4
+    Back       Flaming Cape +12                         ×93.5
+    Legs       Tribal Dressing +12                      ×310
+    Offhand    Murmuring Spellbook +12                  ×395000
+    Research   Servants Overclocking +12                ×753
+    Accessory  Ethereal Veil +12                        required
+    Mount      Blessed Tapestry +12                     ×6.43
+    Phylactery Inert Jade Phylactery +12                ×61600
+    Weapon     Heart of the Grave +12                   ×82.2
+    Finger     Morbid Loop +12                          ×97.3
+    Finger     Spell Helix +12                          ×69.9
+    Trophy     Blessed Armor Scales +12                 ×306
+    Trophy     Mutated Mycelium +12                     ×149
+Enchant 15: ×1.31e54 vs no items [31 candidates, 10 searched slots, 450 leaves, 8309 bounds, 115 ms]
+    Head       Circlet Of Deep Thoughts +15             required
+    Hands      Empowering Handguards +15                ×38.8
+    Chest      The Ribcage +15                          ×1040
+    Feet       Lordic Greaves +15                       ×650
+    Shoulder   Mantle Of The Crypt +15                  ×830
+    Neck       Lucky Amulet +15                         ×457
+    Waist      Colourful Belt +15                       ×74.1
+    Wrist      Focusing Bracers +15                     ×74.7
+    Back       Flaming Cape +15                         ×161
+    Legs       Tribal Dressing +15                      ×632
+    Offhand    Murmuring Spellbook +15                  ×1.19e6
+    Research   Servants Overclocking +15                ×2270
+    Accessory  Ethereal Veil +15                        required
+    Mount      Blessed Tapestry +15                     ×10.2
+    Phylactery Inert Jade Phylactery +15                ×98000
+    Weapon     Heart of the Grave +15                   ×248
+    Finger     Morbid Loop +15                          ×148
+    Finger     Spell Helix +15                          ×154
+    Trophy     Blessed Armor Scales +15                 ×597
+    Trophy     Mutated Mycelium +15                     ×320
+Enchant 20: ×2.24e64 vs no items [29 candidates, 10 searched slots, 156 leaves, 3650 bounds, 73 ms]
+    Head       Circlet Of Deep Thoughts +20             required
+    Hands      Empowering Handguards +20                ×71
+    Chest      The Ribcage +20                          ×4240
+    Feet       Lordic Greaves +20                       ×2660
+    Shoulder   Mantle Of The Crypt +20                  ×3390
+    Neck       Lucky Amulet +20                         ×1400
+    Waist      Colourful Belt +20                       ×184
+    Wrist      Focusing Bracers +20                     ×186
+    Back       Flaming Cape +20                         ×401
+    Legs       Tribal Dressing +20                      ×2070
+    Offhand    Murmuring Spellbook +20                  ×7.47e6
+    Research   Servants Overclocking +20                ×14200
+    Accessory  Ethereal Veil +20                        required
+    Mount      Blessed Tapestry +20                     ×22.2
+    Phylactery Inert Jade Phylactery +20                ×213000
+    Weapon     Heart of the Grave +20                   ×1560
+    Finger     Morbid Loop +20                          ×298
+    Finger     Spell Helix +20                          ×570
+    Trophy     Blessed Armor Scales +20                 ×1820
+    Trophy     Mutated Mycelium +20                     ×1150
+Enchant 25: ×3.84e74 vs no items [29 candidates, 10 searched slots, 150 leaves, 3554 bounds, 68 ms]
+    Head       Circlet Of Deep Thoughts +25             required
+    Hands      Empowering Handguards +25                ×130
+    Chest      The Ribcage +25                          ×17300
+    Feet       Lordic Greaves +25                       ×10900
+    Shoulder   Mantle Of The Crypt +25                  ×13900
+    Neck       Lucky Amulet +25                         ×4260
+    Waist      Colourful Belt +25                       ×459
+    Wrist      Focusing Bracers +25                     ×462
+    Back       Flaming Cape +25                         ×998
+    Legs       Tribal Dressing +25                      ×6780
+    Offhand    Murmuring Spellbook +25                  ×4.69e7
+    Research   Servants Overclocking +25                ×89400
+    Accessory  Ethereal Veil +25                        required
+    Mount      Blessed Tapestry +25                     ×48.3
+    Phylactery Inert Jade Phylactery +25                ×462000
+    Weapon     Heart of the Grave +25                   ×9770
+    Finger     Morbid Loop +25                          ×599
+    Finger     Spell Helix +25                          ×2120
+    Trophy     Blessed Armor Scales +25                 ×5560
+    Trophy     Mutated Mycelium +25                     ×4110
+Enchant 30: ×7.74e84 vs no items [28 candidates, 9 searched slots, 54 leaves, 919 bounds, 46 ms]
+    Head       Circlet Of Deep Thoughts +30             required
+    Hands      Empowering Handguards +30                ×237
+    Chest      The Ribcage +30                          ×107000
+    Feet       Lordic Greaves +30                       ×67200
+    Shoulder   Mantle Of The Crypt +30                  ×85700
+    Neck       Lucky Amulet +30                         ×13000
+    Waist      Colourful Belt +30                       ×1140
+    Wrist      Focusing Bracers +30                     ×1150
+    Back       Flaming Cape +30                         ×2480
+    Legs       Tribal Dressing +30                      ×22200
+    Offhand    Murmuring Spellbook +30                  ×2.95e8
+    Research   Servants Overclocking +30                ×562000
+    Accessory  Ethereal Veil +30                        required
+    Mount      Blessed Tapestry +30                     ×105
+    Phylactery Inert Jade Phylactery +30                ×1.00e6
+    Weapon     Heart of the Grave +30                   ×61300
+    Finger     Frosty Ring +30                          ×1420
+    Finger     Spell Helix +30                          ×7860
+    Trophy     Blessed Armor Scales +30                 ×17000
+    Trophy     Mutated Mycelium +30                     ×14700
+Enchant 40: ×3.47e105 vs no items [28 candidates, 9 searched slots, 50 leaves, 880 bounds, 45 ms]
+    Head       Circlet Of Deep Thoughts +40             required
+    Hands      Empowering Handguards +40                ×792
+    Chest      The Ribcage +40                          ×1.79e6
+    Feet       Lordic Greaves +40                       ×1.12e6
+    Shoulder   Mantle Of The Crypt +40                  ×1.43e6
+    Neck       Lucky Amulet +40                         ×121000
+    Waist      Colourful Belt +40                       ×7070
+    Wrist      Focusing Bracers +40                     ×7120
+    Back       Flaming Cape +40                         ×15400
+    Legs       Tribal Dressing +40                      ×239000
+    Offhand    Murmuring Spellbook +40                  ×1.16e10
+    Research   Servants Overclocking +40                ×2.21e7
+    Accessory  Ethereal Veil +40                        required
+    Mount      Blessed Tapestry +40                     ×495
+    Phylactery Inert Jade Phylactery +40                ×4.74e6
+    Weapon     Heart of the Grave +40                   ×2.42e6
+    Finger     Frosty Ring +40                          ×8760
+    Finger     Spell Helix +40                          ×108000
+    Trophy     Blessed Armor Scales +40                 ×158000
+    Trophy     Mutated Mycelium +40                     ×189000
+Enchant 55: ×5.47e136 vs no items [29 candidates, 9 searched slots, 156 leaves, 1615 bounds, 52 ms]
+    Head       Circlet Of Deep Thoughts +55             required
+    Hands      Empowering Handguards +55                ×4850
+    Chest      The Ribcage +55                          ×7.10e8
+    Feet       Lordic Greaves +55                       ×4.66e8
+    Shoulder   Mantle Of The Crypt +55                  ×5.68e8
+    Neck       Light Of Eighth Star +55                 ×2.49e7
+    Waist      Colourful Belt +55                       ×109000
+    Wrist      Focusing Bracers +55                     ×110000
+    Back       Flaming Cape +55                         ×236000
+    Legs       Tribal Dressing +55                      ×3.61e7
+    Offhand    Black Vortex +55                         ×3.07e12
+    Research   Servants Overclocking +55                ×5.08e10
+    Accessory  Ethereal Veil +55                        required
+    Mount      Blessed Tapestry +55                     ×11800
+    Phylactery Inert Jade Phylactery +55                ×2.81e8
+    Weapon     Heart of the Grave +55                   ×4.45e9
+    Finger     Frosty Ring +55                          ×135000
+    Finger     Spell Helix +55                          ×5.55e6
+    Trophy     Blessed Armor Scales +55                 ×4.49e6
+    Trophy     Mutated Mycelium +55                     ×4.25e7
+Excluded items: mythic 20, no-effect 25, requirements 15

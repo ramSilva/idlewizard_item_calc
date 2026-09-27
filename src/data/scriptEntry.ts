@@ -17,4 +17,4 @@ export {
   setItems,
   swapGains,
 } from "./golden.ts";
-export { itemByName, presetItems } from "./items.ts";
+export { ITEMS, itemByKey, itemByName, presetItems, setByNameOf } from "./items.ts";

@@ -1,0 +1,1195 @@
+
+> idlewizard-item-calc@0.1.0 optimize
+> node scripts/run-optimizer.mjs --class chronomancer --all-levels --thorough --relevance 10 --json validation/chronomancer/tool-result.json
+
+Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
+Legion off; snapped 69; 56 levels in 99.79 s (setup 18 ms)
+Enchant 0: ×3.92e18 vs no items [70 candidates, 13 searched slots, 1138882 leaves, 861118 bounds, 7535 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts                 required
+    Chest      The Ribcage                              ×22.9
+    Feet       Lordic Greaves                           ×14.4
+    Shoulder   Empowering Shoulderguard                 ×2.5
+    Neck       Shadow Tendril                           ×1.26
+    Waist      Colourful Belt                           ×4.81
+    Wrist      Focusing Bracers                         ×4.85
+    Offhand    Murmuring Spellbook                      ×4800
+    Research   Destabilized Evocations                  ×11
+    Accessory  Ethereal Veil                            required
+    Phylactery Inert Jade Phylactery                    ×9570
+    Weapon     Thunderbird                              ×1.2
+    Finger     Morbid Loop                              ×27.5
+    Trophy     Blessed Armor Scales                     ×21
+    Trophy     Necrotic Powerstone                      ×16.2
+Enchant 1: ×2.51e22 vs no items [75 candidates, 14 searched slots, 1822937 leaves, 1177063 bounds, 10607 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +1              required
+    Hands      Conjured Claws +1                        ×7.04
+    Chest      Pompous Tunic +1                         required
+    Feet       Lordic Greaves +1                        ×8.4
+    Shoulder   Conjured Razorspaulders +1               ×11.9
+    Neck       Shadow Tendril                           ×1.51
+    Waist      Colourful Belt +1                        ×8.66
+    Wrist      Bite Sleeves +1                          required
+    Legs       Conjured Painguards +1                   ×6.8
+    Offhand    Murmuring Spellbook +1                   ×6930
+    Research   Servants Overclocking +1                 ×13.2
+    Accessory  Ethereal Veil +1                         required
+    Mount      Blessed Tapestry +1                      ×1.17
+    Phylactery Inert Jade Phylactery +1                 ×12800
+    Weapon     Thunderbird +1                           ×1.56
+    Finger     Morbid Loop +1                           ×13.9
+    Finger     The Bond +1                              ×6.25
+    Trophy     Blessed Armor Scales +1                  ×26.2
+    Trophy     Necrotic Powerstone +1                   ×19.4
+Enchant 2: ×9.93e23 vs no items [71 candidates, 13 searched slots, 599862 leaves, 400138 bounds, 3499 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +2              required
+    Hands      Conjured Claws +2                        ×7.62
+    Chest      Pompous Tunic +2                         required
+    Feet       Lordic Greaves +2                        ×11.1
+    Shoulder   Conjured Razorspaulders +2               ×13.7
+    Neck       Light Of Eighth Star +2                  ×1.76
+    Waist      Colourful Belt +2                        ×10.4
+    Wrist      Bite Sleeves +2                          required
+    Legs       Conjured Painguards +2                   ×7.8
+    Offhand    Murmuring Spellbook +2                   ×10000
+    Research   Servants Overclocking +2                 ×19.1
+    Accessory  Ethereal Veil +2                         required
+    Mount      Blessed Tapestry +2                      ×1.36
+    Phylactery Inert Jade Phylactery +2                 ×15000
+    Weapon     Heart of the Grave +2                    ×2.09
+    Finger     Morbid Loop +2                           ×16
+    Finger     The Bond +2                              ×6.78
+    Trophy     Blessed Armor Scales +2                  ×32.8
+    Trophy     Necrotic Powerstone +2                   ×23.3
+Enchant 3: ×4.84e25 vs no items [70 candidates, 12 searched slots, 694016 leaves, 305984 bounds, 2992 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +3              required
+    Hands      Conjured Claws +3                        ×8.31
+    Chest      Pompous Tunic +3                         required
+    Feet       Lordic Greaves +3                        ×14.8
+    Shoulder   Conjured Razorspaulders +3               ×15.8
+    Neck       Light Of Eighth Star +3                  ×2.33
+    Waist      Colourful Belt +3                        ×12.5
+    Wrist      Bite Sleeves +3                          required
+    Legs       Conjured Painguards +3                   ×9.01
+    Offhand    Murmuring Spellbook +3                   ×14500
+    Research   Servants Overclocking +3                 ×27.6
+    Accessory  Ethereal Veil +3                         required
+    Mount      Blessed Tapestry +3                      ×1.59
+    Phylactery Inert Jade Phylactery +3                 ×17500
+    Weapon     Heart of the Grave +3                    ×3.01
+    Finger     Morbid Loop +3                           ×18.4
+    Finger     The Bond +3                              ×7.38
+    Trophy     Blessed Armor Scales +3                  ×41
+    Trophy     Necrotic Powerstone +3                   ×27.9
+Enchant 4: ×2.36e27 vs no items [70 candidates, 12 searched slots, 691049 leaves, 308951 bounds, 3064 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +4              required
+    Hands      Conjured Claws +4                        ×9.05
+    Chest      Pompous Tunic +4                         required
+    Feet       Lordic Greaves +4                        ×19.6
+    Shoulder   Conjured Razorspaulders +4               ×18.2
+    Neck       Light Of Eighth Star +4                  ×3.09
+    Waist      Colourful Belt +4                        ×15
+    Wrist      Bite Sleeves +4                          required
+    Legs       Conjured Painguards +4                   ×10.4
+    Offhand    Murmuring Spellbook +4                   ×20900
+    Research   Servants Overclocking +4                 ×39.8
+    Accessory  Ethereal Veil +4                         required
+    Mount      Blessed Tapestry +4                      ×1.86
+    Phylactery Inert Jade Phylactery +4                 ×20400
+    Weapon     Heart of the Grave +4                    ×4.35
+    Finger     Morbid Loop +4                           ×21.2
+    Finger     The Bond +4                              ×8.04
+    Trophy     Blessed Armor Scales +4                  ×51.3
+    Trophy     Necrotic Powerstone +4                   ×33.5
+Enchant 5: ×1.15e29 vs no items [70 candidates, 12 searched slots, 690152 leaves, 309848 bounds, 3389 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +5              required
+    Hands      Conjured Claws +5                        ×9.87
+    Chest      Pompous Tunic +5                         required
+    Feet       Lordic Greaves +5                        ×25.9
+    Shoulder   Conjured Razorspaulders +5               ×21
+    Neck       Light Of Eighth Star +5                  ×4.09
+    Waist      Colourful Belt +5                        ×18
+    Wrist      Bite Sleeves +5                          required
+    Legs       Conjured Painguards +5                   ×12
+    Offhand    Murmuring Spellbook +5                   ×30200
+    Research   Servants Overclocking +5                 ×57.5
+    Accessory  Ethereal Veil +5                         required
+    Mount      Blessed Tapestry +5                      ×2.17
+    Phylactery Inert Jade Phylactery +5                 ×23800
+    Weapon     Heart of the Grave +5                    ×6.28
+    Finger     Morbid Loop +5                           ×24.4
+    Finger     The Bond +5                              ×8.75
+    Trophy     Blessed Armor Scales +5                  ×64.1
+    Trophy     Necrotic Powerstone +5                   ×40.2
+Enchant 6: ×5.62e30 vs no items [68 candidates, 12 searched slots, 692400 leaves, 307600 bounds, 3385 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +6              required
+    Hands      Conjured Claws +6                        ×10.7
+    Chest      Pompous Tunic +6                         required
+    Feet       Lordic Greaves +6                        ×34.4
+    Shoulder   Conjured Razorspaulders +6               ×24.2
+    Neck       Light Of Eighth Star +6                  ×5.42
+    Waist      Colourful Belt +6                        ×21.6
+    Wrist      Bite Sleeves +6                          required
+    Legs       Conjured Painguards +6                   ×13.8
+    Offhand    Murmuring Spellbook +6                   ×43500
+    Research   Servants Overclocking +6                 ×83
+    Accessory  Ethereal Veil +6                         required
+    Mount      Blessed Tapestry +6                      ×2.54
+    Phylactery Inert Jade Phylactery +6                 ×27800
+    Weapon     Heart of the Grave +6                    ×9.07
+    Finger     Morbid Loop +6                           ×28.1
+    Finger     The Bond +6                              ×9.53
+    Trophy     Blessed Armor Scales +6                  ×80.1
+    Trophy     Necrotic Powerstone +6                   ×48.3
+Enchant 7: ×2.74e32 vs no items [68 candidates, 12 searched slots, 670370 leaves, 329630 bounds, 3539 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +7              required
+    Hands      Conjured Claws +7                        ×11.7
+    Chest      Pompous Tunic +7                         required
+    Feet       Lordic Greaves +7                        ×45.5
+    Shoulder   Conjured Razorspaulders +7               ×27.8
+    Neck       Light Of Eighth Star +7                  ×7.18
+    Waist      Colourful Belt +7                        ×25.9
+    Wrist      Bite Sleeves +7                          required
+    Legs       Conjured Painguards +7                   ×15.9
+    Offhand    Murmuring Spellbook +7                   ×62900
+    Research   Servants Overclocking +7                 ×120
+    Accessory  Ethereal Veil +7                         required
+    Mount      Blessed Tapestry +7                      ×2.96
+    Phylactery Inert Jade Phylactery +7                 ×32500
+    Weapon     Heart of the Grave +7                    ×13.1
+    Finger     Morbid Loop +7                           ×32.3
+    Finger     The Bond +7                              ×10.4
+    Trophy     Blessed Armor Scales +7                  ×100
+    Trophy     Necrotic Powerstone +7                   ×58
+Enchant 8: ×1.34e34 vs no items [67 candidates, 12 searched slots, 694520 leaves, 305480 bounds, 3332 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +8              required
+    Hands      Conjured Claws +8                        ×12.7
+    Chest      Pompous Tunic +8                         required
+    Feet       Lordic Greaves +8                        ×60.4
+    Shoulder   Conjured Razorspaulders +8               ×32
+    Neck       Light Of Eighth Star +8                  ×9.52
+    Waist      Colourful Belt +8                        ×31
+    Wrist      Bite Sleeves +8                          required
+    Legs       Conjured Painguards +8                   ×18.3
+    Offhand    Murmuring Spellbook +8                   ×90800
+    Research   Servants Overclocking +8                 ×173
+    Accessory  Ethereal Veil +8                         required
+    Mount      Blessed Tapestry +8                      ×3.46
+    Phylactery Inert Jade Phylactery +8                 ×38000
+    Weapon     Heart of the Grave +8                    ×18.9
+    Finger     Morbid Loop +8                           ×37.1
+    Finger     The Bond +8                              ×11.3
+    Trophy     Blessed Armor Scales +8                  ×125
+    Trophy     Necrotic Powerstone +8                   ×69.5
+Enchant 9: ×6.54e35 vs no items [67 candidates, 12 searched slots, 691851 leaves, 308149 bounds, 3348 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +9              required
+    Hands      Conjured Claws +9                        ×13.9
+    Chest      Pompous Tunic +9                         required
+    Feet       Lordic Greaves +9                        ×80
+    Shoulder   Conjured Razorspaulders +9               ×36.8
+    Neck       Light Of Eighth Star +9                  ×12.6
+    Waist      Colourful Belt +9                        ×37.2
+    Wrist      Bite Sleeves +9                          required
+    Legs       Conjured Painguards +9                   ×21.1
+    Offhand    Murmuring Spellbook +9                   ×131000
+    Research   Servants Overclocking +9                 ×250
+    Accessory  Ethereal Veil +9                         required
+    Mount      Blessed Tapestry +9                      ×4.04
+    Phylactery Inert Jade Phylactery +9                 ×44400
+    Weapon     Heart of the Grave +9                    ×27.3
+    Finger     Morbid Loop +9                           ×42.7
+    Finger     The Bond +9                              ×12.3
+    Trophy     Blessed Armor Scales +9                  ×156
+    Trophy     Necrotic Powerstone +9                   ×83.4
+Enchant 10: ×3.19e37 vs no items [66 candidates, 12 searched slots, 692132 leaves, 307868 bounds, 3386 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +10             required
+    Hands      Conjured Claws +10                       ×15.1
+    Chest      Pompous Tunic +10                        required
+    Feet       Lordic Greaves +10                       ×106
+    Shoulder   Conjured Razorspaulders +10              ×42.4
+    Neck       Light Of Eighth Star +10                 ×16.7
+    Waist      Colourful Belt +10                       ×44.7
+    Wrist      Bite Sleeves +10                         required
+    Legs       Conjured Painguards +10                  ×24.2
+    Offhand    Murmuring Spellbook +10                  ×189000
+    Research   Servants Overclocking +10                ×361
+    Accessory  Ethereal Veil +10                        required
+    Mount      Blessed Tapestry +10                     ×4.72
+    Phylactery Inert Jade Phylactery +10                ×51800
+    Weapon     Heart of the Grave +10                   ×39.4
+    Finger     Morbid Loop +10                          ×49.1
+    Finger     The Bond +10                             ×13.4
+    Trophy     Blessed Armor Scales +10                 ×196
+    Trophy     Necrotic Powerstone +10                  ×100
+Enchant 11: ×1.56e39 vs no items [67 candidates, 13 searched slots, 664016 leaves, 335984 bounds, 3557 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +11             required
+    Hands      Conjured Claws +11                       ×16.4
+    Chest      Pompous Tunic +11                        required
+    Feet       Lordic Greaves +11                       ×141
+    Shoulder   Conjured Razorspaulders +11              ×48.8
+    Neck       Light Of Eighth Star +11                 ×22.2
+    Waist      Colourful Belt +11                       ×53.6
+    Wrist      Bite Sleeves +11                         required
+    Legs       Conjured Painguards +11                  ×27.9
+    Offhand    Murmuring Spellbook +11                  ×273000
+    Research   Servants Overclocking +11                ×521
+    Accessory  Ethereal Veil +11                        required
+    Mount      Blessed Tapestry +11                     ×5.51
+    Phylactery Inert Jade Phylactery +11                ×60500
+    Weapon     Heart of the Grave +11                   ×57
+    Finger     Morbid Loop +11                          ×56.4
+    Finger     The Bond +11                             ×14.5
+    Trophy     Blessed Armor Scales +11                 ×244
+    Trophy     Necrotic Powerstone +11                  ×120
+Enchant 12: ×7.88e40 vs no items [67 candidates, 13 searched slots, 661106 leaves, 338894 bounds, 3581 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +12             required
+    Hands      Conjured Claws +12                       ×17.9
+    Chest      Pompous Tunic +12                        required
+    Feet       Lordic Greaves +12                       ×186
+    Shoulder   Conjured Razorspaulders +12              ×56.1
+    Neck       Light Of Eighth Star +12                 ×29.4
+    Waist      Colourful Belt +12                       ×64.4
+    Wrist      Bite Sleeves +12                         required
+    Legs       Conjured Painguards +12                  ×32.1
+    Offhand    Murmuring Spellbook +12                  ×395000
+    Research   Servants Overclocking +12                ×753
+    Accessory  Ethereal Veil +12                        required
+    Mount      Blessed Tapestry +12                     ×6.43
+    Phylactery Inert Jade Phylactery +12                ×70600
+    Weapon     Heart of the Grave +12                   ×82.2
+    Finger     Morbid Loop +12                          ×64.9
+    Finger     The Bond +12                             ×15.8
+    Trophy     Blessed Armor Scales +12                 ×306
+    Trophy     Mutated Mycelium +12                     ×149
+Enchant 13: ×4.14e42 vs no items [65 candidates, 12 searched slots, 701012 leaves, 298988 bounds, 3336 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +13             required
+    Hands      Conjured Claws +13                       ×19.5
+    Chest      Pompous Tunic +13                        required
+    Feet       Lordic Greaves +13                       ×247
+    Shoulder   Conjured Razorspaulders +13              ×64.5
+    Neck       Light Of Eighth Star +13                 ×38.9
+    Waist      Colourful Belt +13                       ×77.2
+    Wrist      Bite Sleeves +13                         required
+    Legs       Conjured Painguards +13                  ×36.9
+    Offhand    Murmuring Spellbook +13                  ×570000
+    Research   Servants Overclocking +13                ×1090
+    Accessory  Ethereal Veil +13                        required
+    Mount      Blessed Tapestry +13                     ×7.51
+    Phylactery Inert Jade Phylactery +13                ×82500
+    Weapon     Heart of the Grave +13                   ×119
+    Finger     Morbid Loop +13                          ×74.6
+    Finger     The Bond +13                             ×17.2
+    Trophy     Blessed Armor Scales +13                 ×382
+    Trophy     Mutated Mycelium +13                     ×192
+Enchant 14: ×2.17e44 vs no items [65 candidates, 12 searched slots, 699940 leaves, 300060 bounds, 3351 ms, budget exhausted]
+    Head       Circlet Of Deep Thoughts +14             required
+    Hands      Conjured Claws +14                       ×21.2
+    Chest      Pompous Tunic +14                        required
+    Feet       Lordic Greaves +14                       ×327
+    Shoulder   Conjured Razorspaulders +14              ×74.2
+    Neck       Light Of Eighth Star +14                 ×51.6
+    Waist      Colourful Belt +14                       ×92.7
+    Wrist      Bite Sleeves +14                         required
+    Legs       Conjured Painguards +14                  ×42.5
+    Offhand    Murmuring Spellbook +14                  ×824000
+    Research   Servants Overclocking +14                ×1570
+    Accessory  Ethereal Veil +14                        required
+    Mount      Blessed Tapestry +14                     ×8.77
+    Phylactery Inert Jade Phylactery +14                ×96300
+    Weapon     Heart of the Grave +14                   ×172
+    Finger     Morbid Loop +14                          ×85.8
+    Finger     The Bond +14                             ×18.7
+    Trophy     Blessed Armor Scales +14                 ×477
+    Trophy     Mutated Mycelium +14                     ×248
+Enchant 15: ×1.18e46 vs no items [33 candidates, 12 searched slots, 58396 leaves, 213791 bounds, 1683 ms]
+    Head       Circlet Of Deep Thoughts +15             required
+    Hands      Conjured Claws +15                       ×22.8
+    Chest      Pompous Tunic +15                        required
+    Feet       Lordic Greaves +15                       ×434
+    Shoulder   Conjured Razorspaulders +15              ×85.2
+    Neck       Light Of Eighth Star +15                 ×68.4
+    Waist      Colourful Belt +15                       ×111
+    Wrist      Bite Sleeves +15                         required
+    Legs       Conjured Painguards +15                  ×48.7
+    Offhand    Murmuring Spellbook +15                  ×1.19e6
+    Research   Servants Overclocking +15                ×2270
+    Accessory  Ethereal Veil +15                        required
+    Mount      Blessed Tapestry +15                     ×10.2
+    Phylactery Inert Jade Phylactery +15                ×112000
+    Weapon     Heart of the Grave +15                   ×248
+    Finger     Morbid Loop +15                          ×98.7
+    Finger     Voidstrike Seal +15                      ×21
+    Trophy     Blessed Armor Scales +15                 ×597
+    Trophy     Mutated Mycelium +15                     ×320
+Enchant 16: ×6.97e47 vs no items [32 candidates, 12 searched slots, 42166 leaves, 148803 bounds, 1180 ms]
+    Head       Circlet Of Deep Thoughts +16             required
+    Hands      Conjured Claws +16                       ×24.8
+    Chest      Pompous Tunic +16                        required
+    Feet       Lordic Greaves +16                       ×575
+    Shoulder   Conjured Razorspaulders +16              ×98
+    Neck       Light Of Eighth Star +16                 ×90.7
+    Waist      Colourful Belt +16                       ×133
+    Wrist      Bite Sleeves +16                         required
+    Legs       Conjured Painguards +16                  ×56
+    Offhand    Murmuring Spellbook +16                  ×1.72e6
+    Research   Servants Overclocking +16                ×3270
+    Accessory  Ethereal Veil +16                        required
+    Mount      Blessed Tapestry +16                     ×12
+    Phylactery Inert Jade Phylactery +16                ×131000
+    Weapon     Heart of the Grave +16                   ×358
+    Finger     Morbid Loop +16                          ×114
+    Finger     Voidstrike Seal +16                      ×25.7
+    Trophy     Blessed Armor Scales +16                 ×746
+    Trophy     Mutated Mycelium +16                     ×414
+Enchant 17: ×4.12e49 vs no items [32 candidates, 12 searched slots, 40836 leaves, 146475 bounds, 1163 ms]
+    Head       Circlet Of Deep Thoughts +17             required
+    Hands      Conjured Claws +17                       ×27
+    Chest      Pompous Tunic +17                        required
+    Feet       Lordic Greaves +17                       ×762
+    Shoulder   Conjured Razorspaulders +17              ×113
+    Neck       Light Of Eighth Star +17                 ×120
+    Waist      Colourful Belt +17                       ×160
+    Wrist      Bite Sleeves +17                         required
+    Legs       Conjured Painguards +17                  ×64.5
+    Offhand    Murmuring Spellbook +17                  ×2.48e6
+    Research   Servants Overclocking +17                ×4730
+    Accessory  Ethereal Veil +17                        required
+    Mount      Blessed Tapestry +17                     ×14
+    Phylactery Inert Jade Phylactery +17                ×153000
+    Weapon     Heart of the Grave +17                   ×516
+    Finger     Morbid Loop +17                          ×131
+    Finger     Voidstrike Seal +17                      ×31.5
+    Trophy     Blessed Armor Scales +17                 ×933
+    Trophy     Mutated Mycelium +17                     ×534
+Enchant 18: ×2.44e51 vs no items [32 candidates, 12 searched slots, 39564 leaves, 144255 bounds, 1147 ms]
+    Head       Circlet Of Deep Thoughts +18             required
+    Hands      Conjured Claws +18                       ×29.4
+    Chest      Pompous Tunic +18                        required
+    Feet       Lordic Greaves +18                       ×1010
+    Shoulder   Conjured Razorspaulders +18              ×130
+    Neck       Light Of Eighth Star +18                 ×159
+    Waist      Colourful Belt +18                       ×192
+    Wrist      Bite Sleeves +18                         required
+    Legs       Conjured Painguards +18                  ×74.2
+    Offhand    Murmuring Spellbook +18                  ×3.58e6
+    Research   Servants Overclocking +18                ×6830
+    Accessory  Ethereal Veil +18                        required
+    Mount      Blessed Tapestry +18                     ×16.3
+    Phylactery Inert Jade Phylactery +18                ×179000
+    Weapon     Heart of the Grave +18                   ×746
+    Finger     Morbid Loop +18                          ×150
+    Finger     Voidstrike Seal +18                      ×38.6
+    Trophy     Blessed Armor Scales +18                 ×1170
+    Trophy     Mutated Mycelium +18                     ×689
+Enchant 19: ×1.44e53 vs no items [32 candidates, 12 searched slots, 38382 leaves, 142305 bounds, 1132 ms]
+    Head       Circlet Of Deep Thoughts +19             required
+    Hands      Conjured Claws +19                       ×32
+    Chest      Pompous Tunic +19                        required
+    Feet       Lordic Greaves +19                       ×1340
+    Shoulder   Conjured Razorspaulders +19              ×149
+    Neck       Light Of Eighth Star +19                 ×211
+    Waist      Colourful Belt +19                       ×231
+    Wrist      Bite Sleeves +19                         required
+    Legs       Conjured Painguards +19                  ×85.3
+    Offhand    Murmuring Spellbook +19                  ×5.17e6
+    Research   Servants Overclocking +19                ×9860
+    Accessory  Ethereal Veil +19                        required
+    Mount      Blessed Tapestry +19                     ×19.1
+    Phylactery Inert Jade Phylactery +19                ×209000
+    Weapon     Heart of the Grave +19                   ×1080
+    Finger     Morbid Loop +19                          ×173
+    Finger     Voidstrike Seal +19                      ×47.3
+    Trophy     Blessed Armor Scales +19                 ×1460
+    Trophy     Mutated Mycelium +19                     ×890
+Enchant 20: ×8.55e54 vs no items [32 candidates, 12 searched slots, 37390 leaves, 140280 bounds, 1120 ms]
+    Head       Circlet Of Deep Thoughts +20             required
+    Hands      Conjured Claws +20                       ×34.8
+    Chest      Pompous Tunic +20                        required
+    Feet       Lordic Greaves +20                       ×1770
+    Shoulder   Conjured Razorspaulders +20              ×172
+    Neck       Light Of Eighth Star +20                 ×280
+    Waist      Colourful Belt +20                       ×277
+    Wrist      Bite Sleeves +20                         required
+    Legs       Conjured Painguards +20                  ×98.2
+    Offhand    Murmuring Spellbook +20                  ×7.47e6
+    Research   Servants Overclocking +20                ×14200
+    Accessory  Ethereal Veil +20                        required
+    Mount      Blessed Tapestry +20                     ×22.2
+    Phylactery Inert Jade Phylactery +20                ×244000
+    Weapon     Heart of the Grave +20                   ×1560
+    Finger     Morbid Loop +20                          ×199
+    Finger     Voidstrike Seal +20                      ×57.9
+    Trophy     Blessed Armor Scales +20                 ×1820
+    Trophy     Mutated Mycelium +20                     ×1150
+Enchant 21: ×5.06e56 vs no items [32 candidates, 12 searched slots, 36550 leaves, 138525 bounds, 1104 ms]
+    Head       Circlet Of Deep Thoughts +21             required
+    Hands      Conjured Claws +21                       ×37.9
+    Chest      Pompous Tunic +21                        required
+    Feet       Lordic Greaves +21                       ×2350
+    Shoulder   Conjured Razorspaulders +21              ×197
+    Neck       Light Of Eighth Star +21                 ×371
+    Waist      Colourful Belt +21                       ×332
+    Wrist      Bite Sleeves +21                         required
+    Legs       Conjured Painguards +21                  ×113
+    Offhand    Murmuring Spellbook +21                  ×1.08e7
+    Research   Servants Overclocking +21                ×20600
+    Accessory  Ethereal Veil +21                        required
+    Mount      Blessed Tapestry +21                     ×26
+    Phylactery Inert Jade Phylactery +21                ×285000
+    Weapon     Heart of the Grave +21                   ×2250
+    Finger     Morbid Loop +21                          ×228
+    Finger     Voidstrike Seal +21                      ×70.9
+    Trophy     Blessed Armor Scales +21                 ×2280
+    Trophy     Mutated Mycelium +21                     ×1480
+Enchant 22: ×2.99e58 vs no items [32 candidates, 12 searched slots, 35662 leaves, 136707 bounds, 1090 ms]
+    Head       Circlet Of Deep Thoughts +22             required
+    Hands      Conjured Claws +22                       ×41.3
+    Chest      Pompous Tunic +22                        required
+    Feet       Lordic Greaves +22                       ×3120
+    Shoulder   Conjured Razorspaulders +22              ×227
+    Neck       Light Of Eighth Star +22                 ×491
+    Waist      Colourful Belt +22                       ×399
+    Wrist      Bite Sleeves +22                         required
+    Legs       Conjured Painguards +22                  ×130
+    Offhand    Murmuring Spellbook +22                  ×1.56e7
+    Research   Servants Overclocking +22                ×29700
+    Accessory  Ethereal Veil +22                        required
+    Mount      Blessed Tapestry +22                     ×30.3
+    Phylactery Inert Jade Phylactery +22                ×333000
+    Weapon     Heart of the Grave +22                   ×3240
+    Finger     Morbid Loop +22                          ×263
+    Finger     Voidstrike Seal +22                      ×86.9
+    Trophy     Blessed Armor Scales +22                 ×2850
+    Trophy     Mutated Mycelium +22                     ×1910
+Enchant 23: ×1.77e60 vs no items [32 candidates, 12 searched slots, 34948 leaves, 135171 bounds, 1081 ms]
+    Head       Circlet Of Deep Thoughts +23             required
+    Hands      Conjured Claws +23                       ×44.9
+    Chest      Pompous Tunic +23                        required
+    Feet       Lordic Greaves +23                       ×4130
+    Shoulder   Conjured Razorspaulders +23              ×261
+    Neck       Light Of Eighth Star +23                 ×651
+    Waist      Colourful Belt +23                       ×478
+    Wrist      Bite Sleeves +23                         required
+    Legs       Conjured Painguards +23                  ×149
+    Offhand    Murmuring Spellbook +23                  ×2.25e7
+    Research   Servants Overclocking +23                ×42900
+    Accessory  Ethereal Veil +23                        required
+    Mount      Blessed Tapestry +23                     ×35.4
+    Phylactery Inert Jade Phylactery +23                ×389000
+    Weapon     Heart of the Grave +23                   ×4680
+    Finger     Morbid Loop +23                          ×302
+    Finger     Voidstrike Seal +23                      ×106
+    Trophy     Blessed Armor Scales +23                 ×3560
+    Trophy     Mutated Mycelium +23                     ×2470
+Enchant 24: ×1.05e62 vs no items [32 candidates, 12 searched slots, 34242 leaves, 133737 bounds, 1067 ms]
+    Head       Circlet Of Deep Thoughts +24             required
+    Hands      Conjured Claws +24                       ×48.9
+    Chest      Pompous Tunic +24                        required
+    Feet       Lordic Greaves +24                       ×5470
+    Shoulder   Conjured Razorspaulders +24              ×300
+    Neck       Light Of Eighth Star +24                 ×863
+    Waist      Colourful Belt +24                       ×574
+    Wrist      Bite Sleeves +24                         required
+    Legs       Conjured Painguards +24                  ×172
+    Offhand    Murmuring Spellbook +24                  ×3.25e7
+    Research   Servants Overclocking +24                ×61900
+    Accessory  Ethereal Veil +24                        required
+    Mount      Blessed Tapestry +24                     ×41.4
+    Phylactery Inert Jade Phylactery +24                ×454000
+    Weapon     Heart of the Grave +24                   ×6760
+    Finger     Morbid Loop +24                          ×347
+    Finger     Voidstrike Seal +24                      ×130
+    Trophy     Blessed Armor Scales +24                 ×4450
+    Trophy     Mutated Mycelium +24                     ×3190
+Enchant 25: ×6.21e63 vs no items [32 candidates, 12 searched slots, 33616 leaves, 132453 bounds, 1062 ms]
+    Head       Circlet Of Deep Thoughts +25             required
+    Hands      Conjured Claws +25                       ×53.2
+    Chest      Pompous Tunic +25                        required
+    Feet       Lordic Greaves +25                       ×7250
+    Shoulder   Conjured Razorspaulders +25              ×345
+    Neck       Light Of Eighth Star +25                 ×1140
+    Waist      Colourful Belt +25                       ×689
+    Wrist      Bite Sleeves +25                         required
+    Legs       Conjured Painguards +25                  ×198
+    Offhand    Murmuring Spellbook +25                  ×4.69e7
+    Research   Servants Overclocking +25                ×89400
+    Accessory  Ethereal Veil +25                        required
+    Mount      Blessed Tapestry +25                     ×48.3
+    Phylactery Inert Jade Phylactery +25                ×531000
+    Weapon     Heart of the Grave +25                   ×9770
+    Finger     Morbid Loop +25                          ×399
+    Finger     Voidstrike Seal +25                      ×160
+    Trophy     Blessed Armor Scales +25                 ×5560
+    Trophy     Mutated Mycelium +25                     ×4110
+Enchant 26: ×3.67e65 vs no items [32 candidates, 12 searched slots, 33018 leaves, 131241 bounds, 1052 ms]
+    Head       Circlet Of Deep Thoughts +26             required
+    Hands      Conjured Claws +26                       ×57.8
+    Chest      Pompous Tunic +26                        required
+    Feet       Lordic Greaves +26                       ×9610
+    Shoulder   Conjured Razorspaulders +26              ×397
+    Neck       Light Of Eighth Star +26                 ×1520
+    Waist      Colourful Belt +26                       ×826
+    Wrist      Bite Sleeves +26                         required
+    Legs       Conjured Painguards +26                  ×227
+    Offhand    Murmuring Spellbook +26                  ×6.77e7
+    Research   Servants Overclocking +26                ×129000
+    Accessory  Ethereal Veil +26                        required
+    Mount      Blessed Tapestry +26                     ×56.4
+    Phylactery Inert Jade Phylactery +26                ×620000
+    Weapon     Heart of the Grave +26                   ×14100
+    Finger     Morbid Loop +26                          ×459
+    Finger     Voidstrike Seal +26                      ×196
+    Trophy     Blessed Armor Scales +26                 ×6950
+    Trophy     Mutated Mycelium +26                     ×5310
+Enchant 27: ×2.18e67 vs no items [32 candidates, 12 searched slots, 32498 leaves, 130053 bounds, 1040 ms]
+    Head       Circlet Of Deep Thoughts +27             required
+    Hands      Conjured Claws +27                       ×62.9
+    Chest      Pompous Tunic +27                        required
+    Feet       Lordic Greaves +27                       ×12700
+    Shoulder   Conjured Razorspaulders +27              ×457
+    Neck       Light Of Eighth Star +27                 ×2010
+    Waist      Colourful Belt +27                       ×992
+    Wrist      Bite Sleeves +27                         required
+    Legs       Conjured Painguards +27                  ×261
+    Offhand    Murmuring Spellbook +27                  ×9.78e7
+    Research   Servants Overclocking +27                ×186000
+    Accessory  Ethereal Veil +27                        required
+    Mount      Blessed Tapestry +27                     ×65.9
+    Phylactery Inert Jade Phylactery +27                ×724000
+    Weapon     Heart of the Grave +27                   ×20400
+    Finger     Morbid Loop +27                          ×528
+    Finger     Voidstrike Seal +27                      ×240
+    Trophy     Blessed Armor Scales +27                 ×8690
+    Trophy     Mutated Mycelium +27                     ×6850
+Enchant 28: ×1.29e69 vs no items [32 candidates, 12 searched slots, 31968 leaves, 128991 bounds, 1034 ms]
+    Head       Circlet Of Deep Thoughts +28             required
+    Hands      Conjured Claws +28                       ×68.5
+    Chest      Pompous Tunic +28                        required
+    Feet       Lordic Greaves +28                       ×16900
+    Shoulder   Conjured Razorspaulders +28              ×525
+    Neck       Light Of Eighth Star +28                 ×2660
+    Waist      Colourful Belt +28                       ×1190
+    Wrist      Bite Sleeves +28                         required
+    Legs       Conjured Painguards +28                  ×301
+    Offhand    Murmuring Spellbook +28                  ×1.41e8
+    Research   Servants Overclocking +28                ×269000
+    Accessory  Ethereal Veil +28                        required
+    Mount      Blessed Tapestry +28                     ×77
+    Phylactery Inert Jade Phylactery +28                ×845000
+    Weapon     Heart of the Grave +28                   ×29400
+    Finger     Morbid Loop +28                          ×607
+    Finger     Voidstrike Seal +28                      ×294
+    Trophy     Blessed Armor Scales +28                 ×10900
+    Trophy     Mutated Mycelium +28                     ×8850
+Enchant 29: ×7.62e70 vs no items [32 candidates, 12 searched slots, 31518 leaves, 128019 bounds, 1022 ms]
+    Head       Circlet Of Deep Thoughts +29             required
+    Hands      Conjured Claws +29                       ×74.5
+    Chest      Pompous Tunic +29                        required
+    Feet       Lordic Greaves +29                       ×22400
+    Shoulder   Conjured Razorspaulders +29              ×604
+    Neck       Light Of Eighth Star +29                 ×3530
+    Waist      Colourful Belt +29                       ×1430
+    Wrist      Bite Sleeves +29                         required
+    Legs       Conjured Painguards +29                  ×346
+    Offhand    Murmuring Spellbook +29                  ×2.04e8
+    Research   Servants Overclocking +29                ×389000
+    Accessory  Ethereal Veil +29                        required
+    Mount      Blessed Tapestry +29                     ×89.9
+    Phylactery Inert Jade Phylactery +29                ×987000
+    Weapon     Heart of the Grave +29                   ×42500
+    Finger     Morbid Loop +29                          ×698
+    Finger     Voidstrike Seal +29                      ×360
+    Trophy     Blessed Armor Scales +29                 ×13600
+    Trophy     Mutated Mycelium +29                     ×11400
+Enchant 30: ×4.51e72 vs no items [32 candidates, 12 searched slots, 31072 leaves, 127008 bounds, 1050 ms]
+    Head       Circlet Of Deep Thoughts +30             required
+    Hands      Conjured Claws +30                       ×81
+    Chest      Pompous Tunic +30                        required
+    Feet       Lordic Greaves +30                       ×29700
+    Shoulder   Conjured Razorspaulders +30              ×695
+    Neck       Light Of Eighth Star +30                 ×4680
+    Waist      Colourful Belt +30                       ×1710
+    Wrist      Bite Sleeves +30                         required
+    Legs       Conjured Painguards +30                  ×398
+    Offhand    Murmuring Spellbook +30                  ×2.95e8
+    Research   Servants Overclocking +30                ×562000
+    Accessory  Ethereal Veil +30                        required
+    Mount      Blessed Tapestry +30                     ×105
+    Phylactery Inert Jade Phylactery +30                ×1.15e6
+    Weapon     Heart of the Grave +30                   ×61300
+    Finger     Morbid Loop +30                          ×803
+    Finger     Voidstrike Seal +30                      ×441
+    Trophy     Blessed Armor Scales +30                 ×17000
+    Trophy     Mutated Mycelium +30                     ×14700
+Enchant 31: ×2.67e74 vs no items [32 candidates, 12 searched slots, 30658 leaves, 126063 bounds, 1007 ms]
+    Head       Circlet Of Deep Thoughts +31             required
+    Hands      Conjured Claws +31                       ×88.1
+    Chest      Pompous Tunic +31                        required
+    Feet       Lordic Greaves +31                       ×39300
+    Shoulder   Conjured Razorspaulders +31              ×799
+    Neck       Light Of Eighth Star +31                 ×6200
+    Waist      Colourful Belt +31                       ×2060
+    Wrist      Bite Sleeves +31                         required
+    Legs       Conjured Painguards +31                  ×457
+    Offhand    Murmuring Spellbook +31                  ×4.25e8
+    Research   Servants Overclocking +31                ×811000
+    Accessory  Ethereal Veil +31                        required
+    Mount      Blessed Tapestry +31                     ×123
+    Phylactery Inert Jade Phylactery +31                ×1.35e6
+    Weapon     Heart of the Grave +31                   ×88600
+    Finger     Morbid Loop +31                          ×924
+    Finger     Voidstrike Seal +31                      ×540
+    Trophy     Blessed Armor Scales +31                 ×21200
+    Trophy     Mutated Mycelium +31                     ×19000
+Enchant 32: ×1.58e76 vs no items [32 candidates, 12 searched slots, 30254 leaves, 125193 bounds, 1006 ms]
+    Head       Circlet Of Deep Thoughts +32             required
+    Hands      Conjured Claws +32                       ×95.9
+    Chest      Pompous Tunic +32                        required
+    Feet       Lordic Greaves +32                       ×52100
+    Shoulder   Conjured Razorspaulders +32              ×919
+    Neck       Light Of Eighth Star +32                 ×8220
+    Waist      Colourful Belt +32                       ×2470
+    Wrist      Bite Sleeves +32                         required
+    Legs       Conjured Painguards +32                  ×526
+    Offhand    Murmuring Spellbook +32                  ×6.14e8
+    Research   Servants Overclocking +32                ×1.17e6
+    Accessory  Ethereal Veil +32                        required
+    Mount      Blessed Tapestry +32                     ×143
+    Phylactery Inert Jade Phylactery +32                ×1.57e6
+    Weapon     Heart of the Grave +32                   ×128000
+    Finger     Morbid Loop +32                          ×1060
+    Finger     Voidstrike Seal +32                      ×661
+    Trophy     Blessed Armor Scales +32                 ×26500
+    Trophy     Mutated Mycelium +32                     ×24600
+Enchant 33: ×9.36e77 vs no items [32 candidates, 12 searched slots, 29902 leaves, 124389 bounds, 995 ms]
+    Head       Circlet Of Deep Thoughts +33             required
+    Hands      Conjured Claws +33                       ×104
+    Chest      Pompous Tunic +33                        required
+    Feet       Lordic Greaves +33                       ×69100
+    Shoulder   Conjured Razorspaulders +33              ×1060
+    Neck       Light Of Eighth Star +33                 ×10900
+    Waist      Colourful Belt +33                       ×2960
+    Wrist      Bite Sleeves +33                         required
+    Legs       Conjured Painguards +33                  ×605
+    Offhand    Murmuring Spellbook +33                  ×8.87e8
+    Research   Servants Overclocking +33                ×1.69e6
+    Accessory  Ethereal Veil +33                        required
+    Mount      Blessed Tapestry +33                     ×167
+    Phylactery Inert Jade Phylactery +33                ×1.84e6
+    Weapon     Heart of the Grave +33                   ×185000
+    Finger     Morbid Loop +33                          ×1220
+    Finger     Voidstrike Seal +33                      ×810
+    Trophy     Blessed Armor Scales +33                 ×33100
+    Trophy     Mutated Mycelium +33                     ×31700
+Enchant 34: ×5.54e79 vs no items [32 candidates, 12 searched slots, 29566 leaves, 123678 bounds, 994 ms]
+    Head       Circlet Of Deep Thoughts +34             required
+    Hands      Conjured Claws +34                       ×113
+    Chest      Pompous Tunic +34                        required
+    Feet       Lordic Greaves +34                       ×91500
+    Shoulder   Conjured Razorspaulders +34              ×1220
+    Neck       Light Of Eighth Star +34                 ×14400
+    Waist      Colourful Belt +34                       ×3550
+    Wrist      Bite Sleeves +34                         required
+    Legs       Conjured Painguards +34                  ×695
+    Offhand    Murmuring Spellbook +34                  ×1.28e9
+    Research   Servants Overclocking +34                ×2.44e6
+    Accessory  Ethereal Veil +34                        required
+    Mount      Blessed Tapestry +34                     ×195
+    Phylactery Inert Jade Phylactery +34                ×2.14e6
+    Weapon     Heart of the Grave +34                   ×267000
+    Finger     Morbid Loop +34                          ×1400
+    Finger     Voidstrike Seal +34                      ×992
+    Trophy     Blessed Armor Scales +34                 ×41400
+    Trophy     Mutated Mycelium +34                     ×40900
+Enchant 35: ×3.28e81 vs no items [32 candidates, 12 searched slots, 29324 leaves, 122976 bounds, 988 ms]
+    Head       Circlet Of Deep Thoughts +35             required
+    Hands      Conjured Claws +35                       ×123
+    Chest      Pompous Tunic +35                        required
+    Feet       Lordic Greaves +35                       ×121000
+    Shoulder   Conjured Razorspaulders +35              ×1400
+    Neck       Light Of Eighth Star +35                 ×19100
+    Waist      Colourful Belt +35                       ×4260
+    Wrist      Bite Sleeves +35                         required
+    Legs       Conjured Painguards +35                  ×800
+    Offhand    Murmuring Spellbook +35                  ×1.85e9
+    Research   Servants Overclocking +35                ×3.53e6
+    Accessory  Ethereal Veil +35                        required
+    Mount      Blessed Tapestry +35                     ×228
+    Phylactery Inert Jade Phylactery +35                ×2.50e6
+    Weapon     Heart of the Grave +35                   ×385000
+    Finger     Morbid Loop +35                          ×1620
+    Finger     Voidstrike Seal +35                      ×1220
+    Trophy     Blessed Armor Scales +35                 ×51800
+    Trophy     Mutated Mycelium +35                     ×52800
+Enchant 36: ×1.94e83 vs no items [32 candidates, 12 searched slots, 29020 leaves, 122286 bounds, 980 ms]
+    Head       Circlet Of Deep Thoughts +36             required
+    Hands      Conjured Claws +36                       ×134
+    Chest      Pompous Tunic +36                        required
+    Feet       Lordic Greaves +36                       ×161000
+    Shoulder   Conjured Razorspaulders +36              ×1610
+    Neck       Light Of Eighth Star +36                 ×25400
+    Waist      Colourful Belt +36                       ×5120
+    Wrist      Bite Sleeves +36                         required
+    Legs       Conjured Painguards +36                  ×920
+    Offhand    Murmuring Spellbook +36                  ×2.67e9
+    Research   Servants Overclocking +36                ×5.09e6
+    Accessory  Ethereal Veil +36                        required
+    Mount      Blessed Tapestry +36                     ×266
+    Phylactery Inert Jade Phylactery +36                ×2.92e6
+    Weapon     Heart of the Grave +36                   ×556000
+    Finger     Morbid Loop +36                          ×1860
+    Finger     Voidstrike Seal +36                      ×1490
+    Trophy     Blessed Armor Scales +36                 ×64700
+    Trophy     Mutated Mycelium +36                     ×68200
+Enchant 37: ×1.15e85 vs no items [32 candidates, 12 searched slots, 28792 leaves, 121659 bounds, 973 ms]
+    Head       Circlet Of Deep Thoughts +37             required
+    Hands      Conjured Claws +37                       ×146
+    Chest      Pompous Tunic +37                        required
+    Feet       Lordic Greaves +37                       ×213000
+    Shoulder   Conjured Razorspaulders +37              ×1850
+    Neck       Light Of Eighth Star +37                 ×33600
+    Waist      Colourful Belt +37                       ×6140
+    Wrist      Bite Sleeves +37                         required
+    Legs       Conjured Painguards +37                  ×1060
+    Offhand    Murmuring Spellbook +37                  ×3.86e9
+    Research   Servants Overclocking +37                ×7.35e6
+    Accessory  Ethereal Veil +37                        required
+    Mount      Blessed Tapestry +37                     ×311
+    Phylactery Inert Jade Phylactery +37                ×3.41e6
+    Weapon     Heart of the Grave +37                   ×803000
+    Finger     Morbid Loop +37                          ×2140
+    Finger     Voidstrike Seal +37                      ×1820
+    Trophy     Blessed Armor Scales +37                 ×80900
+    Trophy     Mutated Mycelium +37                     ×88000
+Enchant 38: ×6.80e86 vs no items [32 candidates, 12 searched slots, 28522 leaves, 120993 bounds, 969 ms]
+    Head       Circlet Of Deep Thoughts +38             required
+    Hands      Conjured Claws +38                       ×159
+    Chest      Pompous Tunic +38                        required
+    Feet       Lordic Greaves +38                       ×282000
+    Shoulder   Conjured Razorspaulders +38              ×2130
+    Neck       Light Of Eighth Star +38                 ×44500
+    Waist      Colourful Belt +38                       ×7370
+    Wrist      Bite Sleeves +38                         required
+    Legs       Conjured Painguards +38                  ×1220
+    Offhand    Murmuring Spellbook +38                  ×5.57e9
+    Research   Servants Overclocking +38                ×1.06e7
+    Accessory  Ethereal Veil +38                        required
+    Mount      Blessed Tapestry +38                     ×363
+    Phylactery Inert Jade Phylactery +38                ×3.99e6
+    Weapon     Heart of the Grave +38                   ×1.16e6
+    Finger     Morbid Loop +38                          ×2460
+    Finger     Voidstrike Seal +38                      ×2230
+    Trophy     Blessed Armor Scales +38                 ×101000
+    Trophy     Mutated Mycelium +38                     ×114000
+Enchant 39: ×4.02e88 vs no items [32 candidates, 12 searched slots, 28240 leaves, 120471 bounds, 967 ms]
+    Head       Circlet Of Deep Thoughts +39             required
+    Hands      Conjured Claws +39                       ×173
+    Chest      Pompous Tunic +39                        required
+    Feet       Lordic Greaves +39                       ×374000
+    Shoulder   Conjured Razorspaulders +39              ×2440
+    Neck       Light Of Eighth Star +39                 ×59000
+    Waist      Colourful Belt +39                       ×8840
+    Wrist      Bite Sleeves +39                         required
+    Legs       Conjured Painguards +39                  ×1400
+    Offhand    Murmuring Spellbook +39                  ×8.04e9
+    Research   Servants Overclocking +39                ×1.53e7
+    Accessory  Ethereal Veil +39                        required
+    Mount      Blessed Tapestry +39                     ×424
+    Phylactery Inert Jade Phylactery +39                ×4.65e6
+    Weapon     Heart of the Grave +39                   ×1.68e6
+    Finger     Morbid Loop +39                          ×2830
+    Finger     Voidstrike Seal +39                      ×2740
+    Trophy     Blessed Armor Scales +39                 ×126000
+    Trophy     Mutated Mycelium +39                     ×147000
+Enchant 40: ×2.38e90 vs no items [32 candidates, 12 searched slots, 28028 leaves, 119955 bounds, 964 ms]
+    Head       Circlet Of Deep Thoughts +40             required
+    Hands      Conjured Claws +40                       ×188
+    Chest      Pompous Tunic +40                        required
+    Feet       Lordic Greaves +40                       ×496000
+    Shoulder   Conjured Razorspaulders +40              ×2810
+    Neck       Light Of Eighth Star +40                 ×78300
+    Waist      Colourful Belt +40                       ×10600
+    Wrist      Bite Sleeves +40                         required
+    Legs       Conjured Painguards +40                  ×1610
+    Offhand    Murmuring Spellbook +40                  ×1.16e10
+    Research   Servants Overclocking +40                ×2.21e7
+    Accessory  Ethereal Veil +40                        required
+    Mount      Blessed Tapestry +40                     ×495
+    Phylactery Inert Jade Phylactery +40                ×5.44e6
+    Weapon     Heart of the Grave +40                   ×2.42e6
+    Finger     Morbid Loop +40                          ×3250
+    Finger     Voidstrike Seal +40                      ×3350
+    Trophy     Blessed Armor Scales +40                 ×158000
+    Trophy     Mutated Mycelium +40                     ×189000
+Enchant 41: ×1.41e92 vs no items [32 candidates, 12 searched slots, 27840 leaves, 119457 bounds, 961 ms]
+    Head       Circlet Of Deep Thoughts +41             required
+    Hands      Conjured Claws +41                       ×204
+    Chest      Pompous Tunic +41                        required
+    Feet       Lordic Greaves +41                       ×658000
+    Shoulder   Conjured Razorspaulders +41              ×3230
+    Neck       Light Of Eighth Star +41                 ×104000
+    Waist      Colourful Belt +41                       ×12700
+    Wrist      Bite Sleeves +41                         required
+    Legs       Conjured Painguards +41                  ×1850
+    Offhand    Murmuring Spellbook +41                  ×1.68e10
+    Research   Servants Overclocking +41                ×3.20e7
+    Accessory  Ethereal Veil +41                        required
+    Mount      Blessed Tapestry +41                     ×578
+    Phylactery Inert Jade Phylactery +41                ×6.35e6
+    Weapon     Heart of the Grave +41                   ×3.49e6
+    Finger     Morbid Loop +41                          ×3740
+    Finger     Voidstrike Seal +41                      ×4110
+    Trophy     Blessed Armor Scales +41                 ×197000
+    Trophy     Mutated Mycelium +41                     ×244000
+Enchant 42: ×8.35e93 vs no items [32 candidates, 12 searched slots, 27618 leaves, 119010 bounds, 951 ms]
+    Head       Circlet Of Deep Thoughts +42             required
+    Hands      Conjured Claws +42                       ×222
+    Chest      Pompous Tunic +42                        required
+    Feet       Lordic Greaves +42                       ×871000
+    Shoulder   Conjured Razorspaulders +42              ×3720
+    Neck       Light Of Eighth Star +42                 ×137000
+    Waist      Colourful Belt +42                       ×15300
+    Wrist      Bite Sleeves +42                         required
+    Legs       Conjured Painguards +42                  ×2130
+    Offhand    Murmuring Spellbook +42                  ×2.42e10
+    Research   Servants Overclocking +42                ×4.62e7
+    Accessory  Ethereal Veil +42                        required
+    Mount      Blessed Tapestry +42                     ×675
+    Phylactery Inert Jade Phylactery +42                ×7.41e6
+    Weapon     Heart of the Grave +42                   ×5.04e6
+    Finger     Morbid Loop +42                          ×4300
+    Finger     Voidstrike Seal +42                      ×5030
+    Trophy     Blessed Armor Scales +42                 ×247000
+    Trophy     Mutated Mycelium +42                     ×315000
+Enchant 43: ×4.94e95 vs no items [32 candidates, 12 searched slots, 27430 leaves, 118518 bounds, 951 ms]
+    Head       Circlet Of Deep Thoughts +43             required
+    Hands      Conjured Claws +43                       ×242
+    Chest      Pompous Tunic +43                        required
+    Feet       Lordic Greaves +43                       ×1.15e6
+    Shoulder   Conjured Razorspaulders +43              ×4280
+    Neck       Light Of Eighth Star +43                 ×182000
+    Waist      Colourful Belt +43                       ×18300
+    Wrist      Bite Sleeves +43                         required
+    Legs       Conjured Painguards +43                  ×2450
+    Offhand    Murmuring Spellbook +43                  ×3.50e10
+    Research   Servants Overclocking +43                ×6.67e7
+    Accessory  Ethereal Veil +43                        required
+    Mount      Blessed Tapestry +43                     ×788
+    Phylactery Inert Jade Phylactery +43                ×8.66e6
+    Weapon     Heart of the Grave +43                   ×7.29e6
+    Finger     Morbid Loop +43                          ×4940
+    Finger     Voidstrike Seal +43                      ×6160
+    Trophy     Blessed Armor Scales +43                 ×309000
+    Trophy     Mutated Mycelium +43                     ×407000
+Enchant 44: ×2.93e97 vs no items [32 candidates, 12 searched slots, 27244 leaves, 118074 bounds, 949 ms]
+    Head       Circlet Of Deep Thoughts +44             required
+    Hands      Conjured Claws +44                       ×263
+    Chest      Pompous Tunic +44                        required
+    Feet       Lordic Greaves +44                       ×1.53e6
+    Shoulder   Conjured Razorspaulders +44              ×4920
+    Neck       Light Of Eighth Star +44                 ×241000
+    Waist      Colourful Belt +44                       ×22000
+    Wrist      Bite Sleeves +44                         required
+    Legs       Conjured Painguards +44                  ×2810
+    Offhand    Murmuring Spellbook +44                  ×5.05e10
+    Research   Servants Overclocking +44                ×9.63e7
+    Accessory  Ethereal Veil +44                        required
+    Mount      Blessed Tapestry +44                     ×921
+    Phylactery Inert Jade Phylactery +44                ×1.01e7
+    Weapon     Heart of the Grave +44                   ×1.05e7
+    Finger     Morbid Loop +44                          ×5680
+    Finger     Voidstrike Seal +44                      ×7550
+    Trophy     Blessed Armor Scales +44                 ×386000
+    Trophy     Mutated Mycelium +44                     ×525000
+Enchant 45: ×1.73e99 vs no items [32 candidates, 12 searched slots, 27050 leaves, 117600 bounds, 947 ms]
+    Head       Circlet Of Deep Thoughts +45             required
+    Hands      Conjured Claws +45                       ×286
+    Chest      Pompous Tunic +45                        required
+    Feet       Lordic Greaves +45                       ×2.03e6
+    Shoulder   Conjured Razorspaulders +45              ×5650
+    Neck       Light Of Eighth Star +45                 ×320000
+    Waist      Colourful Belt +45                       ×26400
+    Wrist      Bite Sleeves +45                         required
+    Legs       Conjured Painguards +45                  ×3240
+    Offhand    Murmuring Spellbook +45                  ×7.29e10
+    Research   Servants Overclocking +45                ×1.39e8
+    Accessory  Ethereal Veil +45                        required
+    Mount      Blessed Tapestry +45                     ×1080
+    Phylactery Inert Jade Phylactery +45                ×1.18e7
+    Weapon     Heart of the Grave +45                   ×1.52e7
+    Finger     Morbid Loop +45                          ×6540
+    Finger     Voidstrike Seal +45                      ×9250
+    Trophy     Blessed Armor Scales +45                 ×482000
+    Trophy     Mutated Mycelium +45                     ×678000
+Enchant 46: ×1.02e101 vs no items [32 candidates, 12 searched slots, 26844 leaves, 117306 bounds, 942 ms]
+    Head       Circlet Of Deep Thoughts +46             required
+    Hands      Conjured Claws +46                       ×311
+    Chest      Pompous Tunic +46                        required
+    Feet       Lordic Greaves +46                       ×2.69e6
+    Shoulder   Conjured Razorspaulders +46              ×6500
+    Neck       Light Of Eighth Star +46                 ×424000
+    Waist      Colourful Belt +46                       ×31700
+    Wrist      Bite Sleeves +46                         required
+    Legs       Conjured Painguards +46                  ×3720
+    Offhand    Murmuring Spellbook +46                  ×1.05e11
+    Research   Servants Overclocking +46                ×2.01e8
+    Accessory  Ethereal Veil +46                        required
+    Mount      Blessed Tapestry +46                     ×1260
+    Phylactery Inert Jade Phylactery +46                ×1.38e7
+    Weapon     Heart of the Grave +46                   ×2.19e7
+    Finger     Morbid Loop +46                          ×7520
+    Finger     Voidstrike Seal +46                      ×11300
+    Trophy     Blessed Armor Scales +46                 ×603000
+    Trophy     Mutated Mycelium +46                     ×875000
+Enchant 47: ×6.07e102 vs no items [32 candidates, 12 searched slots, 26690 leaves, 116859 bounds, 941 ms]
+    Head       Circlet Of Deep Thoughts +47             required
+    Hands      Conjured Claws +47                       ×338
+    Chest      Pompous Tunic +47                        required
+    Feet       Lordic Greaves +47                       ×3.56e6
+    Shoulder   Conjured Razorspaulders +47              ×7480
+    Neck       Light Of Eighth Star +47                 ×562000
+    Waist      Colourful Belt +47                       ×38000
+    Wrist      Bite Sleeves +47                         required
+    Legs       Conjured Painguards +47                  ×4280
+    Offhand    Murmuring Spellbook +47                  ×1.52e11
+    Research   Servants Overclocking +47                ×2.90e8
+    Accessory  Ethereal Veil +47                        required
+    Mount      Blessed Tapestry +47                     ×1470
+    Phylactery Inert Jade Phylactery +47                ×1.61e7
+    Weapon     Heart of the Grave +47                   ×3.17e7
+    Finger     Morbid Loop +47                          ×8640
+    Finger     Voidstrike Seal +47                      ×13900
+    Trophy     Blessed Armor Scales +47                 ×753000
+    Trophy     Mutated Mycelium +47                     ×1.13e6
+Enchant 48: ×3.59e104 vs no items [31 candidates, 11 searched slots, 12808 leaves, 50679 bounds, 423 ms]
+    Head       Circlet Of Deep Thoughts +48             required
+    Hands      Conjured Claws +48                       ×367
+    Chest      Pompous Tunic +48                        required
+    Feet       Lordic Greaves +48                       ×4.72e6
+    Shoulder   Conjured Razorspaulders +48              ×8600
+    Neck       Light Of Eighth Star +48                 ×745000
+    Waist      Colourful Belt +48                       ×45600
+    Wrist      Bite Sleeves +48                         required
+    Legs       Conjured Painguards +48                  ×4920
+    Offhand    Murmuring Spellbook +48                  ×2.20e11
+    Research   Servants Overclocking +48                ×4.19e8
+    Accessory  Ethereal Veil +48                        required
+    Mount      Blessed Tapestry +48                     ×1710
+    Phylactery Inert Jade Phylactery +48                ×1.88e7
+    Weapon     Heart of the Grave +48                   ×4.57e7
+    Finger     Morbid Loop +48                          ×9940
+    Finger     Voidstrike Seal +48                      ×17000
+    Trophy     Blessed Armor Scales +48                 ×942000
+    Trophy     Mutated Mycelium +48                     ×1.46e6
+Enchant 49: ×2.13e106 vs no items [31 candidates, 11 searched slots, 12804 leaves, 50619 bounds, 421 ms]
+    Head       Circlet Of Deep Thoughts +49             required
+    Hands      Conjured Claws +49                       ×400
+    Chest      Pompous Tunic +49                        required
+    Feet       Lordic Greaves +49                       ×6.26e6
+    Shoulder   Conjured Razorspaulders +49              ×9890
+    Neck       Light Of Eighth Star +49                 ×988000
+    Waist      Colourful Belt +49                       ×54700
+    Wrist      Bite Sleeves +49                         required
+    Legs       Conjured Painguards +49                  ×5660
+    Offhand    Murmuring Spellbook +49                  ×3.17e11
+    Research   Servants Overclocking +49                ×6.05e8
+    Accessory  Ethereal Veil +49                        required
+    Mount      Blessed Tapestry +49                     ×2000
+    Phylactery Inert Jade Phylactery +49                ×2.20e7
+    Weapon     Heart of the Grave +49                   ×6.61e7
+    Finger     Morbid Loop +49                          ×11400
+    Finger     Voidstrike Seal +49                      ×20800
+    Trophy     Blessed Armor Scales +49                 ×1.18e6
+    Trophy     Mutated Mycelium +49                     ×1.88e6
+Enchant 50: ×1.26e108 vs no items [31 candidates, 11 searched slots, 12768 leaves, 50571 bounds, 421 ms]
+    Head       Circlet Of Deep Thoughts +50             required
+    Hands      Conjured Claws +50                       ×435
+    Chest      Pompous Tunic +50                        required
+    Feet       Lordic Greaves +50                       ×8.30e6
+    Shoulder   Conjured Razorspaulders +50              ×11400
+    Neck       Light Of Eighth Star +50                 ×1.31e6
+    Waist      Colourful Belt +50                       ×65700
+    Wrist      Bite Sleeves +50                         required
+    Legs       Conjured Painguards +50                  ×6510
+    Offhand    Murmuring Spellbook +50                  ×4.58e11
+    Research   Servants Overclocking +50                ×8.73e8
+    Accessory  Ethereal Veil +50                        required
+    Mount      Blessed Tapestry +50                     ×2340
+    Phylactery Inert Jade Phylactery +50                ×2.56e7
+    Weapon     Heart of the Grave +50                   ×9.54e7
+    Finger     Morbid Loop +50                          ×13100
+    Finger     Voidstrike Seal +50                      ×25500
+    Trophy     Blessed Armor Scales +50                 ×1.47e6
+    Trophy     Mutated Mycelium +50                     ×2.43e6
+Enchant 51: ×7.45e109 vs no items [31 candidates, 11 searched slots, 12756 leaves, 50556 bounds, 420 ms]
+    Head       Circlet Of Deep Thoughts +51             required
+    Hands      Conjured Claws +51                       ×473
+    Chest      Pompous Tunic +51                        required
+    Feet       Lordic Greaves +51                       ×1.10e7
+    Shoulder   Conjured Razorspaulders +51              ×13100
+    Neck       Light Of Eighth Star +51                 ×1.73e6
+    Waist      Colourful Belt +51                       ×78800
+    Wrist      Bite Sleeves +51                         required
+    Legs       Conjured Painguards +51                  ×7480
+    Offhand    Murmuring Spellbook +51                  ×6.62e11
+    Research   Servants Overclocking +51                ×1.26e9
+    Accessory  Ethereal Veil +51                        required
+    Mount      Blessed Tapestry +51                     ×2730
+    Phylactery Inert Jade Phylactery +51                ×2.99e7
+    Weapon     Heart of the Grave +51                   ×1.38e8
+    Finger     Morbid Loop +51                          ×15100
+    Finger     Voidstrike Seal +51                      ×31300
+    Trophy     Blessed Armor Scales +51                 ×1.84e6
+    Trophy     Mutated Mycelium +51                     ×3.13e6
+Enchant 52: ×4.41e111 vs no items [31 candidates, 11 searched slots, 12734 leaves, 50559 bounds, 420 ms]
+    Head       Circlet Of Deep Thoughts +52             required
+    Hands      Conjured Claws +52                       ×514
+    Chest      Pompous Tunic +52                        required
+    Feet       Lordic Greaves +52                       ×1.46e7
+    Shoulder   Conjured Razorspaulders +52              ×15000
+    Neck       Light Of Eighth Star +52                 ×2.30e6
+    Waist      Colourful Belt +52                       ×94600
+    Wrist      Bite Sleeves +52                         required
+    Legs       Conjured Painguards +52                  ×8610
+    Offhand    Murmuring Spellbook +52                  ×9.55e11
+    Research   Servants Overclocking +52                ×1.82e9
+    Accessory  Ethereal Veil +52                        required
+    Mount      Blessed Tapestry +52                     ×3180
+    Phylactery Inert Jade Phylactery +52                ×3.50e7
+    Weapon     Heart of the Grave +52                   ×1.99e8
+    Finger     Morbid Loop +52                          ×17400
+    Finger     Voidstrike Seal +52                      ×38300
+    Trophy     Blessed Armor Scales +52                 ×2.30e6
+    Trophy     Mutated Mycelium +52                     ×4.05e6
+Enchant 53: ×2.61e113 vs no items [31 candidates, 11 searched slots, 12700 leaves, 50496 bounds, 420 ms]
+    Head       Circlet Of Deep Thoughts +53             required
+    Hands      Conjured Claws +53                       ×559
+    Chest      Pompous Tunic +53                        required
+    Feet       Lordic Greaves +53                       ×1.93e7
+    Shoulder   Conjured Razorspaulders +53              ×17300
+    Neck       Light Of Eighth Star +53                 ×3.05e6
+    Waist      Colourful Belt +53                       ×114000
+    Wrist      Bite Sleeves +53                         required
+    Legs       Conjured Painguards +53                  ×9900
+    Offhand    Murmuring Spellbook +53                  ×1.38e12
+    Research   Servants Overclocking +53                ×2.63e9
+    Accessory  Ethereal Veil +53                        required
+    Mount      Blessed Tapestry +53                     ×3720
+    Phylactery Inert Jade Phylactery +53                ×4.08e7
+    Weapon     Heart of the Grave +53                   ×2.87e8
+    Finger     Morbid Loop +53                          ×20000
+    Finger     Voidstrike Seal +53                      ×46900
+    Trophy     Blessed Armor Scales +53                 ×2.87e6
+    Trophy     Mutated Mycelium +53                     ×5.22e6
+Enchant 54: ×1.54e115 vs no items [31 candidates, 11 searched slots, 12678 leaves, 50454 bounds, 420 ms]
+    Head       Circlet Of Deep Thoughts +54             required
+    Hands      Conjured Claws +54                       ×608
+    Chest      Pompous Tunic +54                        required
+    Feet       Lordic Greaves +54                       ×2.56e7
+    Shoulder   Conjured Razorspaulders +54              ×19900
+    Neck       Light Of Eighth Star +54                 ×4.04e6
+    Waist      Colourful Belt +54                       ×136000
+    Wrist      Bite Sleeves +54                         required
+    Legs       Conjured Painguards +54                  ×11400
+    Offhand    Murmuring Spellbook +54                  ×1.99e12
+    Research   Servants Overclocking +54                ×3.80e9
+    Accessory  Ethereal Veil +54                        required
+    Mount      Blessed Tapestry +54                     ×4340
+    Phylactery Inert Jade Phylactery +54                ×4.77e7
+    Weapon     Heart of the Grave +54                   ×4.15e8
+    Finger     Morbid Loop +54                          ×23000
+    Finger     Voidstrike Seal +54                      ×57500
+    Trophy     Blessed Armor Scales +54                 ×3.59e6
+    Trophy     Mutated Mycelium +54                     ×6.74e6
+Enchant 55: ×9.15e116 vs no items [31 candidates, 11 searched slots, 12690 leaves, 50442 bounds, 420 ms]
+    Head       Circlet Of Deep Thoughts +55             required
+    Hands      Conjured Claws +55                       ×661
+    Chest      Pompous Tunic +55                        required
+    Feet       Lordic Greaves +55                       ×3.39e7
+    Shoulder   Conjured Razorspaulders +55              ×22900
+    Neck       Light Of Eighth Star +55                 ×5.35e6
+    Waist      Colourful Belt +55                       ×163000
+    Wrist      Bite Sleeves +55                         required
+    Legs       Conjured Painguards +55                  ×13100
+    Offhand    Murmuring Spellbook +55                  ×2.88e12
+    Research   Servants Overclocking +55                ×5.49e9
+    Accessory  Ethereal Veil +55                        required
+    Mount      Blessed Tapestry +55                     ×5070
+    Phylactery Inert Jade Phylactery +55                ×5.57e7
+    Weapon     Heart of the Grave +55                   ×5.99e8
+    Finger     Morbid Loop +55                          ×26400
+    Finger     Voidstrike Seal +55                      ×70400
+    Trophy     Blessed Armor Scales +55                 ×4.49e6
+    Trophy     Mutated Mycelium +55                     ×8.70e6
+Excluded items: mythic 20, no-effect 25, requirements 27
+Ranking-relevant inputs at enchant 10: 30 of 71
+  show Char.Level: Changes how much items are worth: varying it from 1 to 200000000.000 moves the gap between item sets.
+  hide AttrPoints.Spellcraft: Varying it from 0 to 100 moves the gap between item sets by at most ×1.003, which is below the noise threshold.
+  hide Pet.Level: Varying it from 1 to 300000000.000 changes every item set's score by the same factor.
+  hide Misc.AttributeCap: Varying it from 100 to 250 changes every item set's score by the same factor.
+  hide Spell.AccumulatedCastsThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.CatalystShards: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Expeditions.Level: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×27.47.
+  hide Weapon.ThunderbirdCharges: Varying it from 0 to 10000 changes every item set's score by the same factor.
+  hide Misc.Arcanasprings: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Misc.Laboratories: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×91462388.429.
+  hide Elixir.EvocationIngredients: Varying it from 0 to 5 changes every item set's score by the same factor.
+  show AttrPoints.Intelligence: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×1.023.
+  show AttrPoints.Mastery: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×1.023.
+  show Char.LevelRequirementReduction: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×10.07.
+  hide Spell.EvocationEfficiency: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Mysteries.Count: Varying it from 1e144 to 1e156 changes every item set's score by the same factor.
+  hide Void.Mana: Varying it from 10000 to 1e16 moves the gap between item sets by at most ×1, which is below the noise threshold.
+  show AttrPoints.Insight: Changes how much items are worth: varying it from 0 to 100 moves the gap between item sets by up to ×1.01.
+  show AttrPoints.Patience: Changes how much items are worth: varying it from 0 to 160 moves the gap between item sets by up to ×2.185.
+  hide Idle.TimeThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Spell.CastsThisExile: Changes how much items are worth: varying it from 10 to 10000000000000.000 moves the gap between item sets by up to ×778700.
+  show Idle.Bonus: Changes how much items are worth: varying it from 1 to 100000000.000 moves the gap between item sets by up to ×38.55.
+  show Void.ProfitPerPoint: Changes how much items are worth: varying it from 0.000 to 1000000.000 moves the gap between item sets by up to ×1.417.
+  show Idle.Active: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×189400.
+  hide AttrPoints.Versatility: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Wisdom: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Dominance: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide AttrPoints.Empathy: Varying it from 0 to 100 moves the gap between item sets by at most ×1.003, which is below the noise threshold.
+  hide Misc.AchievementsUnlocked: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Misc.UpgradesBought: Varying it from 0 to 100 changes every item set's score by the same factor.
+  hide Void.EntitiesThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Shards.CollectedThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Shards.PassiveGeneration: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Click.AutoclicksThisExile: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×3.4.
+  hide Misc.SourcesOwned: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.AchievementPoints: Varying it from 0 to 100 changes every item set's score by the same factor.
+  show Building.8.Count: Changes how much items are worth: varying it from 0 to 3000000000.000 moves the gap between item sets by up to ×2.901.
+  hide Spell.EvocationCastsThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Elixir.IncantationIngredients: Varying it from 0 to 5 changes every item set's score by the same factor.
+  show Spell.IncantationEfficiency: Changes how much items are worth: varying it from 0.001 to 1000000000.000 moves the gap between item sets by up to ×5.779.
+  hide Items.EnchantingDustThisExile: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Hero.AbilityPower: Varying it from 1 to 1000000000000.000 changes every item set's score by the same factor.
+  hide Char.ClassTimeHours: Varying it from 0.000 to 10000000.000 changes every item set's score by the same factor.
+  hide Time.SkippedYears: Varying it from 0.000 to 1000000.000 moves the gap between item sets by at most ×1, which is below the noise threshold.
+  hide Hero.AbilityPowerGrowth: Varying it from 0.000 to 10000000.000 changes every item set's score by the same factor.
+  hide Pet.TimeCurrent: Varying it from 31.54 to 31536000000000.000 changes every item set's score by the same factor.
+  show Pet.AbilityPower: Changes how much items are worth: varying it from 0.000 to 1000000.000 moves the gap between item sets by up to ×3.785.
+  hide Spell.Superposition.CastsThisExile: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Spell.RitualOfPower.CastsThisExile: Varying it from 0.1 to 100000000000.000 moves the gap between item sets by at most ×1, which is below the noise threshold.
+  hide Spell.StabilizeTheFlow.SnappedMaxDistortion: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  hide Spell.StabilizeTheFlow.SnappedIncantationEfficiency: Only feeds factors of the score that no item changes, so it scales every item set's score equally.
+  show Spell.TimeHelix.CastsThisExile: Changes how much items are worth: varying it from 0.000 to 100000000.000 moves the gap between item sets by up to ×1.107.
+  hide Misc.LiquidShadow: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Misc.ShadowCoals: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Misc.BatsThisExile: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×1000000000001.047.
+  show Misc.MaxManaAccrued: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×1.15.
+  show Void.ManaAccrued: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×6.1.
+  show Click.AutoclicksAccrued: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×117.6.
+  show Spell.CastsAccrued: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×82.
+  show Void.EntitiesAccrued: Changes how much items are worth: varying it from 0 to 1000000.000 moves the gap between item sets by up to ×145.
+  show Building.1.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×20.14.
+  hide Building.1.Count: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Building.2.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×1.136.
+  show Building.3.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×1.039.
+  show Building.4.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×1.136.
+  show Building.5.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×2.5.
+  show Building.6.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×1.039.
+  hide Weapon.CataclysmCharges: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  hide Building.6.Count: Varying it from 0 to 1000000.000 changes every item set's score by the same factor.
+  show Building.7.Share: Changes how much items are worth: varying it from 0 to 1 moves the gap between item sets by up to ×1.039.
+  hide Building.8.Share: Varying it from 0 to 1 changes every item set's score by the same factor.

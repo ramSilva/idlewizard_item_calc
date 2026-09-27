@@ -1,0 +1,143 @@
+Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
+Legion on; snapped 69; 10 levels in 0.42 s (setup 12 ms)
+Enchant 0: ×1.22e13 vs no items [22 candidates, 7 searched slots, 63 leaves, 604 bounds, 39 ms]
+    Head       Empowering Headguard                     ×4.5
+    Hands      Empowering Handguards                    ×9.49
+    Chest      The Ribcage                              ×15.2
+    Feet       Boots Of Concentration                   ×24.3
+    Shoulder   Mantle Of The Crypt                      ×12.1
+    Neck       Torc Of Privilege                        ×4.03
+    Waist      Encircling Trophies                      ×11.6
+    Back       Flaming Cape                             ×10.5
+    Research   Destabilized Evocations                  ×11
+    Finger     Fiery Ring                               ×5.98
+    Finger     Morbid Loop                              ×18.2
+    Trophy     Anomalous Essence                        ×15
+    Trophy     Necrotic Powerstone                      ×16.2
+Enchant 1: ×1.04e15 vs no items [24 candidates, 8 searched slots, 4842 leaves, 11637 bounds, 125 ms]
+    Head       Empowering Headguard +1 (2)              ×5.4
+    Hands      Empowering Handguards +1 (2)             ×12.1
+    Chest      The Ribcage +1 (2)                       ×26.6
+    Feet       Boots Of Concentration +1 (2)            ×37.9
+    Shoulder   Mantle Of The Crypt +1 (2)               ×21.3
+    Neck       Torc Of Privilege +1 (2)                 ×5.13
+    Waist      Encircling Trophies +1 (2)               ×15.3
+    Back       Flaming Cape +1 (2)                      ×15.1
+    Research   Servants Overclocking +1 (2)             ×19.1
+    Finger     Frosty Ring +1 (2)                       ×8.61
+    Finger     Morbid Loop +1 (2)                       ×24.1
+    Trophy     Anomalous Essence                        ×15
+    Trophy     Necrotic Powerstone +1 (2)               ×23.3
+Enchant 2: ×1.21e16 vs no items [23 candidates, 8 searched slots, 2457 leaves, 6692 bounds, 77 ms]
+    Head       Empowering Headguard +2 (3)              ×5.92
+    Hands      Empowering Handguards +2 (3)             ×13.6
+    Chest      The Ribcage +2 (3)                       ×35.3
+    Feet       Boots Of Concentration +2 (3)            ×47.4
+    Shoulder   Mantle Of The Crypt +2 (3)               ×28.2
+    Neck       Torc Of Privilege +2 (3)                 ×5.79
+    Waist      Encircling Trophies +2 (3)               ×17.6
+    Back       Flaming Cape +2 (3)                      ×18.2
+    Research   Servants Overclocking +2 (3)             ×27.6
+    Finger     Frosty Ring +2 (3)                       ×10.3
+    Finger     Morbid Loop +2 (3)                       ×27.7
+    Trophy     Collection Of Samples +2 (3)             ×17.3
+    Trophy     Necrotic Powerstone +2 (3)               ×27.9
+Enchant 5: ×2.51e19 vs no items [22 candidates, 7 searched slots, 798 leaves, 1743 bounds, 30 ms]
+    Head       Empowering Headguard +5 (6)              ×7.78
+    Hands      Empowering Handguards +5 (6)             ×19.6
+    Chest      The Ribcage +5 (6)                       ×82.2
+    Feet       Boots Of Concentration +5 (6)            ×92.5
+    Shoulder   Mantle Of The Crypt +5 (6)               ×65.7
+    Neck       Searing Gaze +5 (6)                      ×8.96
+    Waist      Encircling Trophies +5 (6)               ×26.8
+    Back       Flaming Cape +5 (6)                      ×31.4
+    Research   Servants Overclocking +5 (6)             ×83
+    Finger     Frosty Ring +5 (6)                       ×17.9
+    Finger     Morbid Loop +5 (6)                       ×42.1
+    Trophy     Mutated Mycelium +5 (6)                  ×32.2
+    Trophy     Necrotic Powerstone +5 (6)               ×48.3
+Enchant 10: ×1.78e25 vs no items [23 candidates, 7 searched slots, 825 leaves, 2094 bounds, 31 ms]
+    Head       The Artificer's Crown +10 (11)           ×14
+    Hands      Empowering Handguards +10 (11)           ×24
+    Chest      The Ribcage +10 (11)                     ×336
+    Feet       Boots Of Concentration +10 (11)          ×282
+    Shoulder   Mantle Of The Crypt +10 (11)             ×269
+    Neck       Searing Gaze +10 (11)                    ×22.3
+    Waist      Encircling Trophies +10 (11)             ×53.9
+    Back       Flaming Cape +10 (11)                    ×78.1
+    Research   Servants Overclocking +10 (11)           ×521
+    Finger     Morbid Loop +10 (11)                     ×84.6
+    Finger     Spell Helix +10 (11)                     ×53.8
+    Trophy     Mutated Mycelium +10 (11)                ×115
+    Trophy     Necrotic Powerstone +10 (11)             ×120
+Enchant 12: ×5.38e27 vs no items [22 candidates, 7 searched slots, 564 leaves, 1473 bounds, 28 ms]
+    Head       The Artificer's Crown +12 (13)           ×18.5
+    Hands      Empowering Handguards +12 (13)           ×30.6
+    Chest      The Ribcage +12 (13)                     ×590
+    Feet       Boots Of Concentration +12 (13)          ×441
+    Shoulder   Mantle Of The Crypt +12 (13)             ×472
+    Neck       Light Of Eighth Star +12 (13)            ×38.9
+    Waist      Encircling Trophies +12 (13)             ×71.3
+    Back       Flaming Cape +12 (13)                    ×112
+    Research   Servants Overclocking +12 (13)           ×1090
+    Finger     Morbid Loop +12 (13)                     ×112
+    Finger     Spell Helix +12 (13)                     ×90.9
+    Trophy     Mutated Mycelium +12 (13)                ×192
+    Trophy     Necrotic Powerstone +12 (13)             ×173
+Enchant 15: ×2.85e31 vs no items [22 candidates, 7 searched slots, 444 leaves, 1359 bounds, 25 ms]
+    Head       The Artificer's Crown +15 (16)           ×28.1
+    Hands      Empowering Handguards +15 (16)           ×44.1
+    Chest      The Ribcage +15 (16)                     ×1370
+    Feet       Boots Of Concentration +15 (16)          ×862
+    Shoulder   Mantle Of The Crypt +15 (16)             ×1100
+    Neck       Light Of Eighth Star +15 (16)            ×90.7
+    Waist      Encircling Trophies +15 (16)             ×108
+    Back       Flaming Cape +15 (16)                    ×194
+    Research   Servants Overclocking +15 (16)           ×3270
+    Finger     Morbid Loop +15 (16)                     ×170
+    Finger     Spell Helix +15 (16)                     ×200
+    Trophy     Mutated Mycelium +15 (16)                ×414
+    Trophy     Necrotic Powerstone +15 (16)             ×299
+Enchant 20: ×4.93e37 vs no items [23 candidates, 7 searched slots, 1545 leaves, 1368 bounds, 26 ms]
+    Head       The Artificer's Crown +20 (21)           ×56.5
+    Hands      Empowering Handguards +20 (21)           ×80.6
+    Chest      The Ribcage +20 (21)                     ×5620
+    Feet       Lordic Greaves +20 (21)                  ×3530
+    Shoulder   Mantle Of The Crypt +20 (21)             ×4500
+    Neck       Light Of Eighth Star +20 (21)            ×371
+    Waist      Encircling Trophies +20 (21)             ×218
+    Back       Flaming Cape +20 (21)                    ×483
+    Research   Servants Overclocking +20 (21)           ×20600
+    Finger     Frosty Ring +20 (21)                     ×275
+    Finger     Spell Helix +20 (21)                     ×741
+    Trophy     Mutated Mycelium +20 (21)                ×1480
+    Trophy     Necrotic Powerstone +20 (21)             ×744
+Enchant 30: ×3.51e50 vs no items [21 candidates, 6 searched slots, 1215 leaves, 0 bounds, 18 ms]
+    Head       The Artificer's Crown +30 (31)           ×228
+    Hands      Empowering Handguards +30 (31)           ×270
+    Chest      The Ribcage +30 (31)                     ×94000
+    Feet       Lordic Greaves +30 (31)                  ×59000
+    Shoulder   Mantle Of The Crypt +30 (31)             ×75200
+    Neck       Light Of Eighth Star +30 (31)            ×6200
+    Waist      Encircling Trophies +30 (31)             ×882
+    Back       Flaming Cape +30 (31)                    ×2980
+    Research   Servants Overclocking +30 (31)           ×811000
+    Finger     Frosty Ring +30 (31)                     ×1700
+    Finger     Spell Helix +30 (31)                     ×10200
+    Trophy     Mutated Mycelium +30 (31)                ×19000
+    Trophy     Necrotic Powerstone +30 (31)             ×4610
+Enchant 40: ×2.49e63 vs no items [21 candidates, 6 searched slots, 1215 leaves, 0 bounds, 17 ms]
+    Head       The Artificer's Crown +40 (41)           ×924
+    Hands      Empowering Handguards +40 (41)           ×904
+    Chest      The Ribcage +40 (41)                     ×1.57e6
+    Feet       Lordic Greaves +40 (41)                  ×986000
+    Shoulder   Mantle Of The Crypt +40 (41)             ×1.26e6
+    Neck       Light Of Eighth Star +40 (41)            ×104000
+    Waist      Encircling Trophies +40 (41)             ×3570
+    Back       Flaming Cape +40 (41)                    ×18500
+    Research   Servants Overclocking +40 (41)           ×3.20e7
+    Finger     Frosty Ring +40 (41)                     ×10500
+    Finger     Spell Helix +40 (41)                     ×141000
+    Trophy     Mutated Mycelium +40 (41)                ×244000
+    Trophy     Necrotic Powerstone +40 (41)             ×28500
+Excluded items: excluded-slot 77, not-owned 28, no-effect 9, requirements 24

@@ -1,0 +1,4241 @@
+{
+  "selection": {
+    "classId": "chronomancer",
+    "petId": "risen-giant",
+    "spells": [
+      65,
+      17,
+      73,
+      60,
+      4,
+      69
+    ],
+    "idle": true,
+    "snapped": [
+      69
+    ],
+    "scoreId": "chronomancer-burst"
+  },
+  "run": {
+    "inputOverrides": {
+      "Misc.AttributeCap": 200,
+      "AttrPoints.Patience": 200,
+      "AttrPoints.Spellcraft": 200
+    },
+    "legion": true,
+    "resonator": true,
+    "excludedSlots": [
+      "Wrist",
+      "Weapon",
+      "Offhand",
+      "Legs",
+      "Mount",
+      "Accessory",
+      "Phylactery"
+    ],
+    "notOwned": [
+      "charged-fin-wing",
+      "beholding-eye",
+      "abnormal-voidmass",
+      "insidious-lure",
+      "warbanner-fragment",
+      "inquisitive-eye",
+      "blessed-armor-scales",
+      "anointed-ashes"
+    ],
+    "enchantOverrides": {},
+    "thorough": true
+  },
+  "result": {
+    "baselineLog10": 227.4749390045457,
+    "excluded": [
+      {
+        "key": "precise-wristband",
+        "name": "Precise Wristband",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "focusing-bracers",
+        "name": "Focusing Bracers",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "rich-bands",
+        "name": "Rich Bands",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "rugged-wristcoat",
+        "name": "Rugged Wristcoat",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nomadic-wrists",
+        "name": "Nomadic Wrists",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spirits-guidance",
+        "name": "Spirit's Guidance",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bite-sleeves",
+        "name": "Bite Sleeves",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "perfected-kata-bracers",
+        "name": "Perfected Kata Bracers",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nethershackles",
+        "name": "Nethershackles",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-sawrings",
+        "name": "Conjured Sawrings",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "temporal-scabbard",
+        "name": "Temporal Scabbard",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spellweaving-kilt",
+        "name": "Spellweaving Kilt",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "folds-of-magma",
+        "name": "Folds of Magma",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "vita-bulwark",
+        "name": "Vita Bulwark",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "tribal-dressing",
+        "name": "Tribal Dressing",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "mesmerizing-pants",
+        "name": "Mesmerizing Pants",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "falconers-bottoms",
+        "name": "Falconer's Bottoms",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "empowering-legguards",
+        "name": "Empowering Legguards",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-painguards",
+        "name": "Conjured Painguards",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nether-barrier",
+        "name": "Nether Barrier",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "scales-of-appraisal",
+        "name": "Scales of Appraisal",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "enigmatic-parchment",
+        "name": "Enigmatic Parchment",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "pitch-black-cage",
+        "name": "Pitch-black Cage",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "simple-memento",
+        "name": "Simple Memento",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ceaseless-hunger",
+        "name": "Ceaseless Hunger",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "black-vortex",
+        "name": "Black Vortex",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "murmuring-spellbook",
+        "name": "Murmuring Spellbook",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "symbol-of-authority",
+        "name": "Symbol Of Authority",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "habitstone",
+        "name": "Habitstone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "arcane-accelerator",
+        "name": "Arcane Accelerator",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "commissars-torn-sleeve",
+        "name": "Commissar's Torn Sleeve",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "recaller-stone",
+        "name": "Recaller Stone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "insidious-lure",
+        "name": "Insidious Lure",
+        "reason": "not-owned"
+      },
+      {
+        "key": "abnormal-voidmass",
+        "name": "Abnormal Voidmass",
+        "reason": "not-owned"
+      },
+      {
+        "key": "beholding-eye",
+        "name": "Beholding Eye",
+        "reason": "not-owned"
+      },
+      {
+        "key": "charged-fin-wing",
+        "name": "Charged Fin-Wing",
+        "reason": "not-owned"
+      },
+      {
+        "key": "inquisitive-eye",
+        "name": "Inquisitive Eye",
+        "reason": "not-owned"
+      },
+      {
+        "key": "anointed-ashes",
+        "name": "Anointed Ashes",
+        "reason": "not-owned"
+      },
+      {
+        "key": "warbanner-fragment",
+        "name": "Warbanner Fragment",
+        "reason": "not-owned"
+      },
+      {
+        "key": "blessed-armor-scales",
+        "name": "Blessed Armor Scales",
+        "reason": "not-owned"
+      },
+      {
+        "key": "book-of-litanies",
+        "name": "Book Of Litanies",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "conjured-strangleash",
+        "name": "Conjured Strangleash",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "auxtrap-backpack",
+        "name": "Auxtrap Backpack",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "empowering-managuard",
+        "name": "Empowering Managuard",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bag-of-tricks",
+        "name": "Bag Of Tricks",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "falconers-treats",
+        "name": "Falconer's Treats",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "burial-urn",
+        "name": "Burial Urn",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ethereal-veil",
+        "name": "Ethereal Veil",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spell-vault",
+        "name": "Spell Vault",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "mothers-gift",
+        "name": "Mother's Gift",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "branch-of-the-great-cycle",
+        "name": "Branch of the Great Cycle",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "cataclysm",
+        "name": "Cataclysm",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "heart-of-the-grave",
+        "name": "Heart of the Grave",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "thunderbird",
+        "name": "Thunderbird",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "reality-prism",
+        "name": "Reality Prism",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "shard-of-a-lost-dimension",
+        "name": "Shard Of A Lost Dimension",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "redeemer",
+        "name": "Redeemer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "temporal-stabilizer",
+        "name": "Temporal Stabilizer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "black-blade",
+        "name": "Black Blade",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "philosophers-stone",
+        "name": "Philosopher's Stone",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "berzerker",
+        "name": "Berzerker",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "spellstealer",
+        "name": "Spellstealer",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "enchanting-membrane",
+        "name": "Enchanting Membrane",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "chiropteric-rod",
+        "name": "Chiropteric Rod",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-accumulator",
+        "name": "The Accumulator",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "shadow-scryers-crystal-ball",
+        "name": "Shadow-Scryer's Crystal Ball",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "head-of-the-all-eater",
+        "name": "Head Of The All-Eater",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "zenith-the-champions-steed",
+        "name": "Zenith, The Champion's Steed",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "warp-basilisk",
+        "name": "Warp Basilisk",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "the-rubedo-engine",
+        "name": "The Rubedo Engine",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "fey-glider",
+        "name": "Fey Glider",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "blessed-tapestry",
+        "name": "Blessed Tapestry",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "nulldragon-the-anomaly",
+        "name": "Nulldragon, The Anomaly",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "ritual-disk",
+        "name": "Ritual Disk",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "broomstaff-of-klevdariah",
+        "name": "Broomstaff Of Klevdariah",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "paukan-the-spider",
+        "name": "Paukan, The Spider",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "crystallized-echo",
+        "name": "Crystallized Echo",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "intricate-crimson-phylactery",
+        "name": "Intricate Crimson Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "bold-azure-phylactery",
+        "name": "Bold Azure Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "smooth-amber-phylactery",
+        "name": "Smooth Amber Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "inert-jade-phylactery",
+        "name": "Inert Jade Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "robust-tangerine-phylactery",
+        "name": "Robust Tangerine Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "devious-violet-phylactery",
+        "name": "Devious Violet Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "eerie-turquoise-phylactery",
+        "name": "Eerie Turquoise Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "hectic-lime-phylactery",
+        "name": "Hectic Lime Phylactery",
+        "reason": "excluded-slot"
+      },
+      {
+        "key": "burden-of-the-erased",
+        "name": "Burden of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "crown-of-the-first-realm",
+        "name": "Crown of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "embrace-of-the-erased",
+        "name": "Embrace of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-armor",
+        "name": "Endtimes Armor",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-failsafe",
+        "name": "Endtimes Failsafe",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-gear",
+        "name": "Endtimes Gear",
+        "reason": "not-owned"
+      },
+      {
+        "key": "endtimes-visor",
+        "name": "Endtimes Visor",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-appendages",
+        "name": "Godflesh Appendages",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-dominion",
+        "name": "Godflesh Dominion",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-grasp",
+        "name": "Godflesh Grasp",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-heart",
+        "name": "Godflesh Heart",
+        "reason": "not-owned"
+      },
+      {
+        "key": "godflesh-veil",
+        "name": "Godflesh Veil",
+        "reason": "not-owned"
+      },
+      {
+        "key": "legacy-of-the-erased",
+        "name": "Legacy of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "mantle-of-the-first-realm",
+        "name": "Mantle of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "pillars-of-the-first-realm",
+        "name": "Pillars of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "power-of-the-first-realm",
+        "name": "Power of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "pride-of-the-first-realm",
+        "name": "Pride of the First Realm",
+        "reason": "not-owned"
+      },
+      {
+        "key": "realmwalkers",
+        "name": "Realmwalkers",
+        "reason": "not-owned"
+      },
+      {
+        "key": "the-starmap",
+        "name": "The Starmap",
+        "reason": "not-owned"
+      },
+      {
+        "key": "voice-of-the-erased",
+        "name": "Voice of the Erased",
+        "reason": "not-owned"
+      },
+      {
+        "key": "wrathseed",
+        "name": "WrathSeed",
+        "reason": "no-effect"
+      },
+      {
+        "key": "gravemoss-waistband",
+        "name": "Gravemoss Waistband",
+        "reason": "no-effect"
+      },
+      {
+        "key": "symbiotic-loop",
+        "name": "Symbiotic Loop",
+        "reason": "no-effect"
+      },
+      {
+        "key": "cold-blooded-ring",
+        "name": "Cold-blooded Ring",
+        "reason": "no-effect"
+      },
+      {
+        "key": "acclimatized-summons",
+        "name": "Acclimatized Summons",
+        "reason": "no-effect"
+      },
+      {
+        "key": "holidays",
+        "name": "Holidays",
+        "reason": "no-effect"
+      },
+      {
+        "key": "efficient-minion-tactics",
+        "name": "Efficient Minion Tactics",
+        "reason": "no-effect"
+      },
+      {
+        "key": "void-sampling",
+        "name": "Void Sampling",
+        "reason": "no-effect"
+      },
+      {
+        "key": "binding-sigil",
+        "name": "Binding Sigil",
+        "reason": "no-effect"
+      },
+      {
+        "key": "easymind-hat",
+        "name": "Easymind Hat",
+        "reason": "requirements"
+      },
+      {
+        "key": "falconers-ranger-hat",
+        "name": "Falconer's Ranger Hat",
+        "reason": "requirements"
+      },
+      {
+        "key": "the-clockcarers",
+        "name": "The Clockcarers",
+        "reason": "requirements"
+      },
+      {
+        "key": "talented-gloves",
+        "name": "Talented Gloves",
+        "reason": "requirements"
+      },
+      {
+        "key": "darklight-claws",
+        "name": "Darklight Claws",
+        "reason": "requirements"
+      },
+      {
+        "key": "seclusion-shell",
+        "name": "Seclusion Shell",
+        "reason": "requirements"
+      },
+      {
+        "key": "boots-of-harsh-trials",
+        "name": "Boots Of Harsh Trials",
+        "reason": "requirements"
+      },
+      {
+        "key": "conjured-spiked-stompers",
+        "name": "Conjured Spiked Stompers",
+        "reason": "requirements"
+      },
+      {
+        "key": "artificers-shoulderpads",
+        "name": "Artificer's Shoulderpads",
+        "reason": "requirements"
+      },
+      {
+        "key": "strange-spaulders",
+        "name": "Strange Spaulders",
+        "reason": "requirements"
+      },
+      {
+        "key": "tranquil-spaulders",
+        "name": "Tranquil Spaulders",
+        "reason": "requirements"
+      },
+      {
+        "key": "nether-chain",
+        "name": "Nether Chain",
+        "reason": "requirements"
+      },
+      {
+        "key": "hollow-eye-pendant",
+        "name": "Hollow Eye Pendant",
+        "reason": "requirements"
+      },
+      {
+        "key": "umbral-coil",
+        "name": "Umbral Coil",
+        "reason": "requirements"
+      },
+      {
+        "key": "collar-of-obedience",
+        "name": "Collar Of Obedience",
+        "reason": "requirements"
+      },
+      {
+        "key": "darklight-mantle",
+        "name": "Darklight Mantle",
+        "reason": "requirements"
+      },
+      {
+        "key": "fancy-cape",
+        "name": "Fancy Cape",
+        "reason": "requirements"
+      },
+      {
+        "key": "concealing-shroud",
+        "name": "Concealing Shroud",
+        "reason": "requirements"
+      },
+      {
+        "key": "falconers-warm-cape",
+        "name": "Falconer's Warm Cape",
+        "reason": "requirements"
+      },
+      {
+        "key": "chaos-mantle",
+        "name": "Chaos Mantle",
+        "reason": "requirements"
+      },
+      {
+        "key": "shadowflame-loop",
+        "name": "Shadowflame Loop",
+        "reason": "requirements"
+      },
+      {
+        "key": "seeping-shadow-signet",
+        "name": "Seeping Shadow Signet",
+        "reason": "requirements"
+      },
+      {
+        "key": "netherloop",
+        "name": "Netherloop",
+        "reason": "requirements"
+      },
+      {
+        "key": "resonator-ring",
+        "name": "Resonator Ring",
+        "reason": "requirements"
+      }
+    ],
+    "levels": [
+      {
+        "level": 0,
+        "best": {
+          "items": [
+            {
+              "key": "empowering-headguard",
+              "name": "Empowering Headguard",
+              "slot": "Head",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.653212513775344
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.9771260552743399
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.180763504262785
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.38488348691871
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.0838534912547289
+            },
+            {
+              "key": "torc-of-privilege",
+              "name": "Torc Of Privilege",
+              "slot": "Neck",
+              "quality": "Legendary",
+              "set": "The Eastern Tale",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.6051037163398121
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.063879525265321
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.021815419289652
+            },
+            {
+              "key": "destabilized-evocations",
+              "name": "Destabilized Evocations",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.041392685158229
+            },
+            {
+              "key": "fiery-ring",
+              "name": "Fiery Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 0.7768111882255084
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.2599447503104102
+            },
+            {
+              "key": "anomalous-essence",
+              "name": "Anomalous Essence",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.1760912590556813
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.208792227833925
+            }
+          ],
+          "scoreLog10": 240.56061218665883,
+          "gainLog10": 13.08567318211314,
+          "forced": [],
+          "candidates": [
+            "empowering-headguard",
+            "the-artificers-crown",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "torc-of-privilege",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "morbid-loop",
+            "fiery-ring",
+            "frosty-ring",
+            "destabilized-evocations",
+            "necrotic-powerstone",
+            "anomalous-essence"
+          ],
+          "stats": {
+            "candidates": 22,
+            "positions": 7,
+            "leaves": 63,
+            "bounds": 604,
+            "evaluations": 2315,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 39.181415999999956
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "empowering-headguard",
+                "name": "Empowering Headguard",
+                "slot": "Head",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.653212513775344
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.9771260552743399
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.180763504262785
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.38488348691871
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.0838534912547289
+              },
+              {
+                "key": "torc-of-privilege",
+                "name": "Torc Of Privilege",
+                "slot": "Neck",
+                "quality": "Legendary",
+                "set": "The Eastern Tale",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.6051037163398121
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.063879525265321
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.021815419289652
+              },
+              {
+                "key": "destabilized-evocations",
+                "name": "Destabilized Evocations",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.041392685158229
+              },
+              {
+                "key": "fiery-ring",
+                "name": "Fiery Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 0.7768111882255084
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.2599447503104102
+              },
+              {
+                "key": "anomalous-essence",
+                "name": "Anomalous Essence",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.1760912590556813
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.208792227833925
+              }
+            ],
+            "scoreLog10": 240.56061218665883,
+            "gainLog10": 13.08567318211314,
+            "forced": [],
+            "candidates": [
+              "empowering-headguard",
+              "the-artificers-crown",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "torc-of-privilege",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "morbid-loop",
+              "fiery-ring",
+              "frosty-ring",
+              "destabilized-evocations",
+              "necrotic-powerstone",
+              "anomalous-essence"
+            ],
+            "stats": {
+              "candidates": 22,
+              "positions": 7,
+              "leaves": 63,
+              "bounds": 604,
+              "evaluations": 2315,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 39.181415999999956
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 1,
+        "best": {
+          "items": [
+            {
+              "key": "empowering-headguard",
+              "name": "Empowering Headguard",
+              "slot": "Head",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 0.7325458995641156
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.0822414870143575
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.4254390313601277
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.578703512934851
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.3285290183521
+            },
+            {
+              "key": "torc-of-privilege",
+              "name": "Torc Of Privilege",
+              "slot": "Neck",
+              "quality": "Legendary",
+              "set": "The Eastern Tale",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 0.7103240541768798
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.1852752059725447
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.1798537238425126
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.2808307495612326
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 0.9349982728120096
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.3813404310176622
+            },
+            {
+              "key": "anomalous-essence",
+              "name": "Anomalous Essence",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 0,
+              "effectiveEnchant": 0,
+              "contributionLog10": 1.1760912590556813
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 1,
+              "effectiveEnchant": 2,
+              "contributionLog10": 1.3671547199262477
+            }
+          ],
+          "scoreLog10": 242.49102410382037,
+          "gainLog10": 15.016085099274676,
+          "forced": [],
+          "candidates": [
+            "empowering-headguard",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "torc-of-privilege",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "frosty-ring",
+            "morbid-loop",
+            "fiery-ring",
+            "servants-overclocking",
+            "anomalous-essence",
+            "necrotic-powerstone",
+            "collection-of-samples",
+            "empowered-water"
+          ],
+          "stats": {
+            "candidates": 24,
+            "positions": 8,
+            "leaves": 4842,
+            "bounds": 11637,
+            "evaluations": 13500,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 124.68487499999998
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "empowering-headguard",
+                "name": "Empowering Headguard",
+                "slot": "Head",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 0.7325458995641156
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.0822414870143575
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.4254390313601277
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.578703512934851
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.3285290183521
+              },
+              {
+                "key": "torc-of-privilege",
+                "name": "Torc Of Privilege",
+                "slot": "Neck",
+                "quality": "Legendary",
+                "set": "The Eastern Tale",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 0.7103240541768798
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.1852752059725447
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.1798537238425126
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.2808307495612326
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 0.9349982728120096
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.3813404310176622
+              },
+              {
+                "key": "anomalous-essence",
+                "name": "Anomalous Essence",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 0,
+                "effectiveEnchant": 0,
+                "contributionLog10": 1.1760912590556813
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 1,
+                "effectiveEnchant": 2,
+                "contributionLog10": 1.3671547199262477
+              }
+            ],
+            "scoreLog10": 242.49102410382037,
+            "gainLog10": 15.016085099274676,
+            "forced": [],
+            "candidates": [
+              "empowering-headguard",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "torc-of-privilege",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "frosty-ring",
+              "morbid-loop",
+              "fiery-ring",
+              "servants-overclocking",
+              "anomalous-essence",
+              "necrotic-powerstone",
+              "collection-of-samples",
+              "empowered-water"
+            ],
+            "stats": {
+              "candidates": 24,
+              "positions": 8,
+              "leaves": 4842,
+              "bounds": 11637,
+              "evaluations": 13500,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 124.68487499999998
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 2,
+        "best": {
+          "items": [
+            {
+              "key": "empowering-headguard",
+              "name": "Empowering Headguard",
+              "slot": "Head",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 0.7721837849565816
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.1347643224366664
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.5477767949088275
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.6756135259429072
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.4508667819007428
+            },
+            {
+              "key": "torc-of-privilege",
+              "name": "Torc Of Privilege",
+              "slot": "Neck",
+              "quality": "Legendary",
+              "set": "The Eastern Tale",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 0.7628983538582759
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.2459730463261565
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.2588776266439368
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.4404222028984464
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.0140943639722764
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.442038271371274
+            },
+            {
+              "key": "collection-of-samples",
+              "name": "Collection Of Samples",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.2375437381428753
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 2,
+              "effectiveEnchant": 3,
+              "contributionLog10": 1.4463359659727644
+            }
+          ],
+          "scoreLog10": 243.5574933814734,
+          "gainLog10": 16.082554376927703,
+          "forced": [],
+          "candidates": [
+            "empowering-headguard",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "torc-of-privilege",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "frosty-ring",
+            "morbid-loop",
+            "fiery-ring",
+            "servants-overclocking",
+            "collection-of-samples",
+            "necrotic-powerstone",
+            "empowered-water"
+          ],
+          "stats": {
+            "candidates": 23,
+            "positions": 8,
+            "leaves": 2457,
+            "bounds": 6692,
+            "evaluations": 8463,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 76.85841699999992
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "empowering-headguard",
+                "name": "Empowering Headguard",
+                "slot": "Head",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 0.7721837849565816
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.1347643224366664
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.5477767949088275
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.6756135259429072
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.4508667819007428
+              },
+              {
+                "key": "torc-of-privilege",
+                "name": "Torc Of Privilege",
+                "slot": "Neck",
+                "quality": "Legendary",
+                "set": "The Eastern Tale",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 0.7628983538582759
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.2459730463261565
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.2588776266439368
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.4404222028984464
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.0140943639722764
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.442038271371274
+              },
+              {
+                "key": "collection-of-samples",
+                "name": "Collection Of Samples",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.2375437381428753
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 2,
+                "effectiveEnchant": 3,
+                "contributionLog10": 1.4463359659727644
+              }
+            ],
+            "scoreLog10": 243.5574933814734,
+            "gainLog10": 16.082554376927703,
+            "forced": [],
+            "candidates": [
+              "empowering-headguard",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "torc-of-privilege",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "frosty-ring",
+              "morbid-loop",
+              "fiery-ring",
+              "servants-overclocking",
+              "collection-of-samples",
+              "necrotic-powerstone",
+              "empowered-water"
+            ],
+            "stats": {
+              "candidates": 23,
+              "positions": 8,
+              "leaves": 2457,
+              "bounds": 6692,
+              "evaluations": 8463,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 76.85841699999992
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 5,
+        "best": {
+          "items": [
+            {
+              "key": "empowering-headguard",
+              "name": "Empowering Headguard",
+              "slot": "Head",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 0.891186560149265
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.2928195321065061
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.9147900855548414
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.966343564967076
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.8178800725467852
+            },
+            {
+              "key": "searing-gaze",
+              "name": "Searing Gaze",
+              "slot": "Neck",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 0.9522087310054133
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.4280665673870487
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.496430940717147
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.9191965629101162
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.2516432850541435
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.6241317924321095
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.5081668171341391
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 5,
+              "effectiveEnchant": 6,
+              "contributionLog10": 1.6838797041132523
+            }
+          ],
+          "scoreLog10": 246.8746540176031,
+          "gainLog10": 19.399715013057403,
+          "forced": [],
+          "candidates": [
+            "empowering-headguard",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "searing-gaze",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "frosty-ring",
+            "morbid-loop",
+            "spell-helix",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 22,
+            "positions": 7,
+            "leaves": 798,
+            "bounds": 1743,
+            "evaluations": 3455,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 30.083000000000084
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "empowering-headguard",
+                "name": "Empowering Headguard",
+                "slot": "Head",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 0.891186560149265
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.2928195321065061
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.9147900855548414
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.966343564967076
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.8178800725467852
+              },
+              {
+                "key": "searing-gaze",
+                "name": "Searing Gaze",
+                "slot": "Neck",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 0.9522087310054133
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.4280665673870487
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.496430940717147
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.9191965629101162
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.2516432850541435
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.6241317924321095
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.5081668171341391
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 5,
+                "effectiveEnchant": 6,
+                "contributionLog10": 1.6838797041132523
+              }
+            ],
+            "scoreLog10": 246.8746540176031,
+            "gainLog10": 19.399715013057403,
+            "forced": [],
+            "candidates": [
+              "empowering-headguard",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "searing-gaze",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "frosty-ring",
+              "morbid-loop",
+              "spell-helix",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 22,
+              "positions": 7,
+              "leaves": 798,
+              "bounds": 1743,
+              "evaluations": 3455,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 30.083000000000084
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 10,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.1447974986093925
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.3808138562715726
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.5264789032981696
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.450893630007357
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.429568890290085
+            },
+            {
+              "key": "searing-gaze",
+              "name": "Searing Gaze",
+              "slot": "Neck",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.3481149612435388
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.7315557691550794
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.8926379560740259
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.7171538295961852
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.9276209942001685
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 1.7304981300948725
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.0623933484828
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 10,
+              "effectiveEnchant": 11,
+              "contributionLog10": 2.079785934349445
+            }
+          ],
+          "scoreLog10": 252.7250706760657,
+          "gainLog10": 25.250131671520023,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "searing-gaze",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "spell-helix",
+            "morbid-loop",
+            "frosty-ring",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 23,
+            "positions": 7,
+            "leaves": 825,
+            "bounds": 2094,
+            "evaluations": 3822,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 30.608167000000094
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.1447974986093925
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.3808138562715726
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.5264789032981696
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.450893630007357
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.429568890290085
+              },
+              {
+                "key": "searing-gaze",
+                "name": "Searing Gaze",
+                "slot": "Neck",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.3481149612435388
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.7315557691550794
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.8926379560740259
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.7171538295961852
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.9276209942001685
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 1.7304981300948725
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.0623933484828
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 10,
+                "effectiveEnchant": 11,
+                "contributionLog10": 2.079785934349445
+              }
+            ],
+            "scoreLog10": 252.7250706760657,
+            "gainLog10": 25.250131671520023,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "searing-gaze",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "spell-helix",
+              "morbid-loop",
+              "frosty-ring",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 23,
+              "positions": 7,
+              "leaves": 825,
+              "bounds": 2094,
+              "evaluations": 3822,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 30.608167000000094
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 12,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 1.2661931793166161
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 1.4860884916056705
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.7711544303955122
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.6447136560234696
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.6742444173874276
+            },
+            {
+              "key": "light-of-eighth-star",
+              "name": "Light Of Eighth Star",
+              "slot": "Neck",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 1.5903909261326987
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 1.8529514498622746
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.050883682393561
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 3.036336736270613
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.049016674907392
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 1.9583848347085393
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.284083961022276
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 12,
+              "effectiveEnchant": 13,
+              "contributionLog10": 2.2381484264442975
+            }
+          ],
+          "scoreLog10": 255.20546460663908,
+          "gainLog10": 27.730525602093394,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "morbid-loop",
+            "spell-helix",
+            "frosty-ring",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 22,
+            "positions": 7,
+            "leaves": 564,
+            "bounds": 1473,
+            "evaluations": 3181,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 27.81841600000007
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 1.2661931793166161
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 1.4860884916056705
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.7711544303955122
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.6447136560234696
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.6742444173874276
+              },
+              {
+                "key": "light-of-eighth-star",
+                "name": "Light Of Eighth Star",
+                "slot": "Neck",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 1.5903909261326987
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 1.8529514498622746
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.050883682393561
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 3.036336736270613
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.049016674907392
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 1.9583848347085393
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.284083961022276
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 12,
+                "effectiveEnchant": 13,
+                "contributionLog10": 2.2381484264442975
+              }
+            ],
+            "scoreLog10": 255.20546460663908,
+            "gainLog10": 27.730525602093394,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "morbid-loop",
+              "spell-helix",
+              "frosty-ring",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 22,
+              "positions": 7,
+              "leaves": 564,
+              "bounds": 1473,
+              "evaluations": 3181,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 27.81841600000007
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 15,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 1.44828670037748
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 1.6439600189352177
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 3.1381677210414978
+            },
+            {
+              "key": "boots-of-concentration",
+              "name": "Boots Of Concentration",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Raiments Of The Perfect Mind",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.935443695047667
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 3.0412577080334415
+            },
+            {
+              "key": "light-of-eighth-star",
+              "name": "Light Of Eighth Star",
+              "slot": "Neck",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 1.957404216778741
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.0350449709231384
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.288255382974967
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 3.5151110962822543
+            },
+            {
+              "key": "morbid-loop",
+              "name": "Morbid Loop",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.231110195968256
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.300214891629082
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.6166198798314895
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 15,
+              "effectiveEnchant": 16,
+              "contributionLog10": 2.4756921645868033
+            }
+          ],
+          "scoreLog10": 258.92961442014007,
+          "gainLog10": 31.45467541559438,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "morbid-loop",
+            "spell-helix",
+            "frosty-ring",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 22,
+            "positions": 7,
+            "leaves": 444,
+            "bounds": 1359,
+            "evaluations": 3002,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 25.328250000000025
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 1.44828670037748
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 1.6439600189352177
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 3.1381677210414978
+              },
+              {
+                "key": "boots-of-concentration",
+                "name": "Boots Of Concentration",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Raiments Of The Perfect Mind",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.935443695047667
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 3.0412577080334415
+              },
+              {
+                "key": "light-of-eighth-star",
+                "name": "Light Of Eighth Star",
+                "slot": "Neck",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 1.957404216778741
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.0350449709231384
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.288255382974967
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 3.5151110962822543
+              },
+              {
+                "key": "morbid-loop",
+                "name": "Morbid Loop",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.231110195968256
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.300214891629082
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.6166198798314895
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 15,
+                "effectiveEnchant": 16,
+                "contributionLog10": 2.4756921645868033
+              }
+            ],
+            "scoreLog10": 258.92961442014007,
+            "gainLog10": 31.45467541559438,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "morbid-loop",
+              "spell-helix",
+              "frosty-ring",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 22,
+              "positions": 7,
+              "leaves": 444,
+              "bounds": 1359,
+              "evaluations": 3002,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 25.328250000000025
+            }
+          }
+        ],
+        "changed": false
+      },
+      {
+        "level": 20,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 1.7517759021454822
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 1.9060687619665941
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 3.7498565387847975
+            },
+            {
+              "key": "lordic-greaves",
+              "name": "Lordic Greaves",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 3.5472406831272565
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 3.6529465257767697
+            },
+            {
+              "key": "light-of-eighth-star",
+              "name": "Light Of Eighth Star",
+              "slot": "Neck",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.569093034521984
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.3385341726910838
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.683577341909654
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 4.313068362968352
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.439052134612666
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.869931653163235
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 3.1708464111800367
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 20,
+              "effectiveEnchant": 21,
+              "contributionLog10": 2.8715983948245594
+            }
+          ],
+          "scoreLog10": 265.16812511412354,
+          "gainLog10": 37.69318610957785,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "boots-of-concentration",
+            "lordic-greaves",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "morbid-loop",
+            "spell-helix",
+            "frosty-ring",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 23,
+            "positions": 7,
+            "leaves": 1545,
+            "bounds": 1368,
+            "evaluations": 3003,
+            "exhaustive": false,
+            "complete": true,
+            "ms": 26.24958300000003
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 1.7517759021454822
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 1.9060687619665941
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 3.7498565387847975
+              },
+              {
+                "key": "lordic-greaves",
+                "name": "Lordic Greaves",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 3.5472406831272565
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 3.6529465257767697
+              },
+              {
+                "key": "light-of-eighth-star",
+                "name": "Light Of Eighth Star",
+                "slot": "Neck",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.569093034521984
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.3385341726910838
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.683577341909654
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 4.313068362968352
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.439052134612666
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.869931653163235
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 3.1708464111800367
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 20,
+                "effectiveEnchant": 21,
+                "contributionLog10": 2.8715983948245594
+              }
+            ],
+            "scoreLog10": 265.16812511412354,
+            "gainLog10": 37.69318610957785,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "boots-of-concentration",
+              "lordic-greaves",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "morbid-loop",
+              "spell-helix",
+              "frosty-ring",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 23,
+              "positions": 7,
+              "leaves": 1545,
+              "bounds": 1368,
+              "evaluations": 3003,
+              "exhaustive": false,
+              "complete": true,
+              "ms": 26.24958300000003
+            }
+          }
+        ],
+        "changed": true
+      },
+      {
+        "level": 30,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 2.3587543056816003
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 2.4314416695317504
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 4.973234174271511
+            },
+            {
+              "key": "lordic-greaves",
+              "name": "Lordic Greaves",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 4.77061831861397
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 4.876324161263483
+            },
+            {
+              "key": "light-of-eighth-star",
+              "name": "Light Of Eighth Star",
+              "slot": "Neck",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 3.792470670008697
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 2.9455125762273155
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 3.474880645901294
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 5.90898289634049
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 3.2305887780695457
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 4.00936517623154
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 4.279299473877359
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 30,
+              "effectiveEnchant": 31,
+              "contributionLog10": 3.66341085530064
+            }
+          ],
+          "scoreLog10": 278.02020387127413,
+          "gainLog10": 50.545264866728445,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "lordic-greaves",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "frosty-ring",
+            "spell-helix",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 21,
+            "positions": 6,
+            "leaves": 1215,
+            "bounds": 0,
+            "evaluations": 1704,
+            "exhaustive": true,
+            "complete": true,
+            "ms": 17.542291999999975
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 2.3587543056816003
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 2.4314416695317504
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 4.973234174271511
+              },
+              {
+                "key": "lordic-greaves",
+                "name": "Lordic Greaves",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 4.77061831861397
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 4.876324161263483
+              },
+              {
+                "key": "light-of-eighth-star",
+                "name": "Light Of Eighth Star",
+                "slot": "Neck",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 3.792470670008697
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 2.9455125762273155
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 3.474880645901294
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 5.90898289634049
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 3.2305887780695457
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 4.00936517623154
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 4.279299473877359
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 30,
+                "effectiveEnchant": 31,
+                "contributionLog10": 3.66341085530064
+              }
+            ],
+            "scoreLog10": 278.02020387127413,
+            "gainLog10": 50.545264866728445,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "lordic-greaves",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "frosty-ring",
+              "spell-helix",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 21,
+              "positions": 6,
+              "leaves": 1215,
+              "bounds": 0,
+              "evaluations": 1704,
+              "exhaustive": true,
+              "complete": true,
+              "ms": 17.542291999999975
+            }
+          }
+        ],
+        "changed": false
+      },
+      {
+        "level": 40,
+        "best": {
+          "items": [
+            {
+              "key": "the-artificers-crown",
+              "name": "The Artificer's Crown",
+              "slot": "Head",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 2.9657327092177184
+            },
+            {
+              "key": "empowering-handguards",
+              "name": "Empowering Handguards",
+              "slot": "Hands",
+              "quality": "Legendary",
+              "set": "Power Armor",
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 2.9563541479146807
+            },
+            {
+              "key": "the-ribcage",
+              "name": "The Ribcage",
+              "slot": "Chest",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 6.19661180975811
+            },
+            {
+              "key": "lordic-greaves",
+              "name": "Lordic Greaves",
+              "slot": "Feet",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 5.993995954100569
+            },
+            {
+              "key": "mantle-of-the-crypt",
+              "name": "Mantle Of The Crypt",
+              "slot": "Shoulder",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 6.099701796750082
+            },
+            {
+              "key": "light-of-eighth-star",
+              "name": "Light Of Eighth Star",
+              "slot": "Neck",
+              "quality": "Unique",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 5.015848305495297
+            },
+            {
+              "key": "encircling-trophies",
+              "name": "Encircling Trophies",
+              "slot": "Waist",
+              "quality": "Legendary",
+              "set": "Ancient Bones",
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 3.55249097976332
+            },
+            {
+              "key": "flaming-cape",
+              "name": "Flaming Cape",
+              "slot": "Back",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 4.266216580111063
+            },
+            {
+              "key": "servants-overclocking",
+              "name": "Servants Overclocking",
+              "slot": "Research",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 7.504897429712628
+            },
+            {
+              "key": "frosty-ring",
+              "name": "Frosty Ring",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 4.0221429641181885
+            },
+            {
+              "key": "spell-helix",
+              "name": "Spell Helix",
+              "slot": "Finger",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 5.1487986992999595
+            },
+            {
+              "key": "mutated-mycelium",
+              "name": "Mutated Mycelium",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 5.387752536574681
+            },
+            {
+              "key": "necrotic-powerstone",
+              "name": "Necrotic Powerstone",
+              "slot": "Trophy",
+              "quality": "Legendary",
+              "set": null,
+              "enchant": 40,
+              "effectiveEnchant": 41,
+              "contributionLog10": 4.455223315776834
+            }
+          ],
+          "scoreLog10": 290.8718221992426,
+          "gainLog10": 63.396883194696926,
+          "forced": [],
+          "candidates": [
+            "the-artificers-crown",
+            "casque-of-learning",
+            "empowering-handguards",
+            "fiery-grips",
+            "the-ribcage",
+            "darklight-tunic",
+            "burning-heart-breastplate",
+            "forests-embrace",
+            "lordic-greaves",
+            "the-great-journey",
+            "mantle-of-the-crypt",
+            "light-of-eighth-star",
+            "lucky-amulet",
+            "encircling-trophies",
+            "endless-pouches",
+            "flaming-cape",
+            "frosty-ring",
+            "spell-helix",
+            "servants-overclocking",
+            "mutated-mycelium",
+            "necrotic-powerstone"
+          ],
+          "stats": {
+            "candidates": 21,
+            "positions": 6,
+            "leaves": 1215,
+            "bounds": 0,
+            "evaluations": 1696,
+            "exhaustive": true,
+            "complete": true,
+            "ms": 17.085208999999963
+          }
+        },
+        "branches": [
+          {
+            "items": [
+              {
+                "key": "the-artificers-crown",
+                "name": "The Artificer's Crown",
+                "slot": "Head",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 2.9657327092177184
+              },
+              {
+                "key": "empowering-handguards",
+                "name": "Empowering Handguards",
+                "slot": "Hands",
+                "quality": "Legendary",
+                "set": "Power Armor",
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 2.9563541479146807
+              },
+              {
+                "key": "the-ribcage",
+                "name": "The Ribcage",
+                "slot": "Chest",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 6.19661180975811
+              },
+              {
+                "key": "lordic-greaves",
+                "name": "Lordic Greaves",
+                "slot": "Feet",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 5.993995954100569
+              },
+              {
+                "key": "mantle-of-the-crypt",
+                "name": "Mantle Of The Crypt",
+                "slot": "Shoulder",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 6.099701796750082
+              },
+              {
+                "key": "light-of-eighth-star",
+                "name": "Light Of Eighth Star",
+                "slot": "Neck",
+                "quality": "Unique",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 5.015848305495297
+              },
+              {
+                "key": "encircling-trophies",
+                "name": "Encircling Trophies",
+                "slot": "Waist",
+                "quality": "Legendary",
+                "set": "Ancient Bones",
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 3.55249097976332
+              },
+              {
+                "key": "flaming-cape",
+                "name": "Flaming Cape",
+                "slot": "Back",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 4.266216580111063
+              },
+              {
+                "key": "servants-overclocking",
+                "name": "Servants Overclocking",
+                "slot": "Research",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 7.504897429712628
+              },
+              {
+                "key": "frosty-ring",
+                "name": "Frosty Ring",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 4.0221429641181885
+              },
+              {
+                "key": "spell-helix",
+                "name": "Spell Helix",
+                "slot": "Finger",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 5.1487986992999595
+              },
+              {
+                "key": "mutated-mycelium",
+                "name": "Mutated Mycelium",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 5.387752536574681
+              },
+              {
+                "key": "necrotic-powerstone",
+                "name": "Necrotic Powerstone",
+                "slot": "Trophy",
+                "quality": "Legendary",
+                "set": null,
+                "enchant": 40,
+                "effectiveEnchant": 41,
+                "contributionLog10": 4.455223315776834
+              }
+            ],
+            "scoreLog10": 290.8718221992426,
+            "gainLog10": 63.396883194696926,
+            "forced": [],
+            "candidates": [
+              "the-artificers-crown",
+              "casque-of-learning",
+              "empowering-handguards",
+              "fiery-grips",
+              "the-ribcage",
+              "darklight-tunic",
+              "burning-heart-breastplate",
+              "forests-embrace",
+              "lordic-greaves",
+              "the-great-journey",
+              "mantle-of-the-crypt",
+              "light-of-eighth-star",
+              "lucky-amulet",
+              "encircling-trophies",
+              "endless-pouches",
+              "flaming-cape",
+              "frosty-ring",
+              "spell-helix",
+              "servants-overclocking",
+              "mutated-mycelium",
+              "necrotic-powerstone"
+            ],
+            "stats": {
+              "candidates": 21,
+              "positions": 6,
+              "leaves": 1215,
+              "bounds": 0,
+              "evaluations": 1696,
+              "exhaustive": true,
+              "complete": true,
+              "ms": 17.085208999999963
+            }
+          }
+        ],
+        "changed": false
+      }
+    ],
+    "changes": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      12,
+      20
+    ]
+  }
+}
