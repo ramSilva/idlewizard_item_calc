@@ -19,7 +19,7 @@ todos:
     status: completed
   - id: encode-classes
     content: Encode Oni, Shaman, Temporalist abilities/stances/spells and paired pets, plus spell-based score definitions
-    status: pending
+    status: completed
   - id: encode-chronomancer
     content: Encode Chronomancer ability, spells and guide pet(s), reading only the setup sections of the Fandom guide (no gear sections)
     status: pending
