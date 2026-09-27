@@ -1,0 +1,61 @@
+Skipped Time is similar to Offline Time. There are only two ways to skip time: using a [[Market#Time|Time Warp]] from the Market; and casting {{SpellTooltip|spell_name=Wormhole}} or {{SpellTooltip|spell_name=Refined Wormhole}}. It is uncapped since v1.31.
+
+<!-- if cheats are enabled, {NUM-9} or {F9} skips 1h of 'real' time -->
+
+== Effects ==
+Time Warps and {{SpellTooltip|spell_name=Wormhole}} stop all active spells, increasing casts as if completed normally. Casting {{SpellTooltip|Refined Wormhole}}, or {{SpellTooltip|spell_name=Wormhole}} with {{ItemTooltip|item_name=Temporal Stabilizer}}, does not.
+
+[[Void Entities|Void Mana]] is set to '''0'''.
+
+Grants Mana, equal to:
+<br><math>I \times O \times M \times T</math>
+
+Grants [[:Category:Spells#Spell_Shards|Spell Shards]], equal to:
+<br><math>S \times T</math>
+<br>up to 1 day of skipped time (or enough to fill all scrolls on panel).
+
+Increases Skipped Time by '''T'''. This affects Skipped and Played Game Time This Exile, Realm, and Total, as well as Character and Pet Game Time.
+
+where:
+*<math>I = \text{Idle Bonus} + 1</math>
+*<math>O = \text{Offline Bonus} + 1</math>
+*<math>M = \text{Mana per Sec}</math>
+*<math>T = \text{Time Skipped, in Seconds}</math>
+*<math>S = \text{Passive Spell Shard Generation}</math>
+
+=== On Tick ===
+Skipped time counts for the purposes of effects that activate on game tick, including:
+* {{SpellTooltip|spell_name=Synthetic Entity}}, {{SpellTooltip|spell_name=Nightfall}}, {{SpellTooltip|spell_name=Quasi-incantation}}, and {{SpellTooltip|spell_name=Refined Wormhole}} charging
+* {{ClassTooltip|class_name=Ironsoul}} and {{ClassTooltip|class_name=Oni}} charging in Meditation stance
+* [[Upgrademeister]] profit boost timer
+* [[Balanced Darkness]] Liquid Shadow condition
+This does not affect {{ItemTooltip|item_name=Chiropteric Rod}} charging; nor [[Trials]] of [[Trial_of_Innovation|Innovation]], [[Trial_of_Patience|Patience]], or [[Trial_of_Talent|Talent]].
+
+=== Pets ===
+Skipped Time counts as Offline time for the purposes of pets, granting XP and performing actions while offline:
+* {{PetTooltip|pet_name=Spellhound}} grants Spell Shards.
+* {{PetTooltip|pet_name=Daemon}}, {{PetTooltip|pet_name=Pit Lord}}. and {{PetTooltip|pet_name=Living Sin}} grant Mana.
+* {{PetTooltip|pet_name=Golem}}, and {{PetTooltip|pet_name=Anima Construct}}, and {{PetTooltip|pet_name=Nix-Instability}} gain XP.
+* {{PetTooltip|pet_name=Doppelganger}} grants mana sources (except in [[Absorption]] challenge) and resets its XP pool to 10.
+* {{PetTooltip|pet_name=Homunculus}}, {{PetTooltip|pet_name=Simulacrum}}, {{PetTooltip|pet_name=Soulstealer}}, {{PetTooltip|pet_name=Psychic Cacophony}}, and {{PetTooltip|pet_name=Greater Chimaera}} grant mana sources and gain XP.
+* {{PetTooltip|pet_name=Pixie}}, {{PetTooltip|pet_name=Zombie}}, {{PetTooltip|pet_name=Ent}}, {{PetTooltip|pet_name=Risen Giant}}, and {{PetTooltip|pet_name=Herald of Rot}} autoclick (up to 2,147,483,647 times) and gain XP.
+* {{PetTooltip|pet_name=Mechanos Apexis}} casts {{SpellTooltip|spell_name=Kelphior's Black Beam}} and gains XP.
+
+=== Time Warps ===
+Time Warps, unlike {{SpellTooltip|spell_name=Wormhole}} and {{SpellTooltip|spell_name=Refined Wormhole}}, also count for Offline time towards:
+* [[Pantheon|God XP]], including [[Praying]] XP gain
+* [[Collectibles|Bat]] spawn rate boost and spawn timer
+* [[Trials|Trial]] Rune Timer
+* [[Attributes|Attribute]] Point Timer
+* Trials of [[Trial_of_Innovation|Innovation]] and [[Trial_of_Patience|Patience]] completion
+
+
+== See also ==
+* {{SpellTooltip|spell_name=Wormhole}}
+* {{SpellTooltip|spell_name=Refined Wormhole}}
+* {{SpellTooltip|spell_name=Singularity Beam}}
+* {{ClassTooltip|class_name=Chronomancer}}
+* {{ClassTooltip|class_name=Temporalist}}
+* {{ItemTooltip|item_name=Temporal Stabilizer}}
+* [[Market#Time|Time Warps]]
+[[Category:Mechanics]]
