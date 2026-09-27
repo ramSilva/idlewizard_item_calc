@@ -32,6 +32,8 @@ Uncommitted, but typecheck and lint pass:
 
 Tooling: `npm test` (Vitest, one smoke test), `npm run build`, `npm run lint`, `npm run scrape` (needs network), `npm run build-data` (Lua to JSON). Versions: Node 22, Vite 8, Vitest 5, TypeScript 6, React 19, ESLint 10. `.gitignore` covers node_modules, dist, coverage, Playwright artifacts, .env, .idea, .vscode.
 
+Pushing: `origin`'s push URL is set to SSH (`git@github.com:ramSilva/idlewizard_item_calc.git`), which authenticates as ramSilva, and `feat/item-optimizer` tracks `origin/feat/item-optimizer`. Plain `git push` works (the sandbox needs `full_network`). Do NOT push over HTTPS: the stored HTTPS credential belongs to the user's work account and returns 403. Do not inspect credential stores. The user wants this work done autonomously: agents may commit, push and spawn subagents without asking.
+
 Git identity is set repo-locally (ramSilva, noreply email). `gh` CLI auth is broken: the active account is a different, invalid user. So `gh` can't be used to check or enable Pages. Report that rather than switching accounts.
 
 ## 3. Data acquisition (plan todo `scrape`: done)
