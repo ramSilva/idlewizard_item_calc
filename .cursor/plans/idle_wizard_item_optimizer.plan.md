@@ -4,10 +4,10 @@ overview: A client-side web app (Vite + React + TypeScript) where you pick a cla
 todos:
   - id: setup-repo
     content: Create project folder, git init, move agent to root, set repo-local ramSilva noreply identity, scaffold Vite+React+TS+Vitest+break_eternity
-    status: pending
+    status: completed
   - id: scrape
     content: Build Playwright wikitext scraper (wiki.gg with Fandom fallback) and snapshot raw pages for items, Oni/Shaman/Temporalist, their spells and pets
-    status: pending
+    status: completed
   - id: effect-model
     content: Implement stat registry, effect/expression AST, stat dependency graph, and required-input discovery
     status: pending
