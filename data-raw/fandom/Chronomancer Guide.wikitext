@@ -1,0 +1,120 @@
+
+
+This is outdated, check out [[Chronomancer Guide Updated]]
+
+==How to unlock==
+Chronomancer can be unlocked when your "all mana" total is at 1.31e145, but I would recommend going for the unlock at around e80 mysts depending on your patience (real life, not attribute).
+
+
+Don't buy anything.<br />Click/buy upgrades ([[Pixie]]/[[Zombie]] speeds this up a tad) until you can cast {{SpellTooltip|Gem Resonance}}.<br />Only Buy [[Sources#The Nexus|Nexus]]<br />Switch to [[Homunculus]]/ [[Simulacrum]] (If you can)<br />Cast spells/Buy upgrades/Patience Check. Keep in mind you need to stay online as Homunculus/Simulacrum doesn't work offline.
+=='''<u>!DISCLAIMER!</u>'''==
+I am making this guide while currently at e145 mysteries (Paragon 16) without the full Chronomancer set. This is mostly for those who are between e80-e140 trying to figure out the confusion that is Chronomancer (as I see questions in chat all the time). As I progress further/get the gear I will update the guide accordingly.
+
+
+There are two ways to make Chronomancer effective, and those are <u>Active</u> -or- <u>AFK</u> stacking. Either are effective and mostly depend on your mysteries, mouse speed(RIP your wrists), and [[Geode]] potential. Both have the same <u>Charge/Burst</u><u> Phase</u> up until e150 mysts.
+
+
+
+==<u>Build Phase:</u>==
+Start with [[Chronomancer]](asap)/[[Pixie]]. Set {{SpellTooltip|Singularity Beam}} on reckless until you unlock {{SpellTooltip|Wormhole}} and set them both on reckless. You should notice a flicker in the number of {{SpellTooltip|Singularity Beam}}. That means they are infinitely casting off of each other. You should also notice how fast your character and the Pixie are levelling. Your character gains xp off of autoclicks, so if your Pixie is level 60, clicking 3 times a second, and {{SpellTooltip|Wormhole}} skips 3 minutes, that's 540 autoclicks a cast.
+
+Once you have {{SpellTooltip|Singularity Beam}} and {{SpellTooltip|Wormhole}} going, switch to [[Homunculus]] and your sources will max (all that homunculus can possibly buy) in a few seconds, then switch back to [[Pixie]].
+
+Add {{SpellTooltip|Ritual Of Power}}, {{SpellTooltip|Converge Timelines}}, {{SpellTooltip|Synthetic Entity}} on reckless until you unlock {{SpellTooltip|Time Helix}}. Then choose a '''<u>Stacking Phase</u>''' and continue. If you're unable to reach {{SpellTooltip|Time Helix}}, then skip to '''<u>Charging Phase</u>'''. An alternative route to skipping is switching to [[Geode]] and doing something a little different. here you want to put {{SpellTooltip|Singularity Beam}}, {{SpellTooltip|Conjure Manabeast}}, {{SpellTooltip|Void Lure}}, {{SpellTooltip|Void Automaton}}, and {{SpellTooltip|Temporal Distortion}} out and set them all to reckless. if you are having trouble building distortion use [[Arcanaworg]] to kick it off and once you get to 10x switch to [[Geode]] . this will level it much faster as it gains exp per use of its ability, and at 10x time distortion it casts it 10x as often. the same principal can be applied to later on when levelling [[Interrogator]], and [[Archivist]]  once your [[Geode]] is around level 100 you should have zero problems casting {{SpellTooltip|Time Helix}},
+
+There are two ways to make Chronomancer effective, and those are <u>Active</u> 'or <u>AFK</u> stacking. Either are effective and mostly depend on your mysteries, mouse speed(RIP your wrists), and [[Geode]] potential. Both have the same <u>Charge/Burst</u>'<u> Phase</u> up until e150 mysts.
+==<u>Active Stacking Chronomancer</u>==
+I would recommend''' '''this style if you're new to chronomancer, find the [[Geode]] method to be too slow for your mysteries level, or prefer to have a more active involvement in the game. The faster you move/the time you spend during the '''<u>Build/Stacking Phase</u>''', the more mysteries you'll make. I was able to stack {{SpellTooltip|Time Helix}} faster with this method than with the AFK method, but it requires you to be quick.
+
+==Attributes==
+''Main article: [[Attributes]]''
+
+*<u>'''Pre-250'''</u>: 100 [Spellcraft], 25 [Insight], 50 [Wisdom], the rest in [Mastery].
+*<u>'''At 250'''</u>: 100 [Spellcraft], 25 [Intelligence], 25 [Insight], 50 [Wisdom], 50 [Mastery].
+*'''<u>Pre-300</u>''': 125 [Spellcraft], 25 [Intelligence], 25 [Insight], 50 [Wisdom], The rest in [Mastery].
+*<u>'''At 300'''</u>: 125 [Spellcraft], 25 [Intelligence], 25 [Insight], 50 [Wisdom], 75 [Mastery]
+*'''<u>At 350</u>''': 125 [Spellcraft], 50 [Intelligence], 50 [Insight], 50 [Wisdom], 75 [Mastery]
+*'''<u>Post 350</u>''': Focus on [Mastery]/[Insight] over other attributes until you can get 150 [Spellcraft] without sacrificing the setup from <u>'''350'''</u> attributes.
+
+
+
+===<u>Stacking Phase:</u>===
+
+
+#Remove all spells except for {{SpellTooltip|Singularity Beam}} and {{SpellTooltip|Wormhole}} and add {{SpellTooltip|Time Helix}}.
+#Take {{SpellTooltip|Wormhole}} off reckless, and cast manually until you have 500 Compressed Time.
+#Cast {{SpellTooltip|Time Helix}} and set {{SpellTooltip|Wormhole}} on Reckless again, add {{SpellTooltip|Synthetic Entity}} on reckless until you are a high enough level for {{SpellTooltip|Time Helix}}.
+#If need be, add {{SpellTooltip|Converge Timelines}}, {{SpellTooltip|Ritual Of Power}}, {{SpellTooltip|Superposition}} until you are high enough for {{SpellTooltip|Time Helix}}.
+#Repeat until comfortable.
+
+
+
+==<u>AFK Stacking Chronomancer</u>==
+I would recommend this method if your mysteries are e120+, or if you feel like having the game up while doing other things. Keep in mind that Idle Wizard will need to be on the Active Tab for the window it is on, otherwise the game may not cast.
+==[[Attributes]]==
+
+
+*'''<u>At 350</u>''': 20 [Intelligence], 150 [Wisdom], 75 [Mastery], 75 [Spellcraft], 50 [Insight] (Extras into [Spellcraft]/[Patience] until 400)
+*'''<u>At 420</u>''': 20 [Intelligence],150 [Wisdom], 75 [Mastery], 100 [Spellcraft], 50 [Insight], 25 [Patience]
+*'''<u>At 450</u>''': 20 [Intelligence],150 [Wisdom], 75 [Mastery], 100 [Spellcraft], 75 [Insight], 50 [Patience]
+*'''<u>After 450</u>''': 20 [Intelligence], Focus on more [Mastery]/[Spellcraft] before [Intelligence]/[Patience] unless you have more ideal gear.
+
+
+
+===<u>Stacking Phase:</u>===
+
+
+#Switch from [[Pixie]] to [[Geode]] and level to 100 for the 40 level reduction buff on [[Geode]]. You do NOT lose the level reduction when you use {{SpellTooltip|Time Helix}}.  You can max out {{SpellTooltip|Temporal Distortion}} to level the Geode faster.
+#Set your spell bar up as {{SpellTooltip|Generate Paradox}}, {{SpellTooltip|Conjure Manabeast}}, {{SpellTooltip|Void Lure}}, {{SpellTooltip|Void Automaton}}, {{SpellTooltip|Singularity Beam}}, and {{SpellTooltip|Time Helix}}.
+#Set all to reckless from left to right.
+#Continue until satisfied.
+
+
+
+Another users' personal experience:  As an alternative stacking setup, you can get [[Geode]] to [[Ley Keeper]] and get the level reduction back to whatever you require for {{SpellTooltip|Time Helix}}. When {{SpellTooltip|Time Helix}} goes off, [[Ley Keeper]] will drop its' levels but you won't lose it. It will not revert to [[Geode]]. However, you will lose {{SpellTooltip|Time Helix}} off your bar if you didn't meet the level reduction requirement again with [[Ley Keeper]].  As far as spells, I found that setting the bar to {{SpellTooltip|Wormhole}} (careful), {{SpellTooltip|Conjure Manabeast}} (reckless), {{SpellTooltip|Spell Focus}} (reckless), {{SpellTooltip|Synthetic Entity}} (stacking not casting), {{SpellTooltip|Singularity Beam}} (reckless), and lastly {{SpellTooltip|Time Helix}} (careful) to be a far superior method to Helix stacks. Now you can stack entity while also getting helix stacks. For comparison, I get 1-5 helix casts per second using this method. Experiment switching spells between reckless and careful if your helix isn't stacking fast enough as your stats may be different from mine.  If you are getting enough spell shards without using [[Spell Focus]], switch it to [[Superposition]] to stack that. I find {{SpellTooltip|Void Automaton}} and {{SpellTooltip|Void Lure}} to be a waste of time as their values can't keep up with the degen rate of void mana. Much easier to just plug in a void mana phase where you switch to [[Voidfiend]] and then [[Voidterror]] to reach a reasonable amount of void mana.
+
+==<u>Charge Phase:</u>==
+
+
+#Switch to [[Interrogator]]. If desired, upgrade to [[Archivist]] for extra profit, but not necessary if faster bursts are desired.
+#Have {{SpellTooltip|Singularity Beam}}, {{SpellTooltip|Wormhole}}, {{SpellTooltip|Converge Timelines}}, {{SpellTooltip|Ritual Of Power}}, {{SpellTooltip|Superposition}} on reckless with {{SpellTooltip|Synthetic Entity}} on the bar building stacks.
+#When you're satisfied with {{SpellTooltip|Synthetic Entity}} charges (100-300) Switch to [[Spellhound]] to get [[Arcanaworg]].
+#When [[Arcanaworg]] levels slow down, take {{SpellTooltip|Converge Timelines}}, {{SpellTooltip|Ritual Of Power}}, and {{SpellTooltip|Superposition}} off reckless, and you're ready for '''<u>Burst Phase</u>'''.
+
+
+==<u>Burst Phase:</u>==
+#Take {{SpellTooltip|Singularity Beam}} and {{SpellTooltip|Wormhole}} off reckless. It is important you take {{SpellTooltip|Singularity Beam}} off reckless first or you'll be stuck waiting for [[Arcanaworg]] ability for charges.
+#Replace {{SpellTooltip|Wormhole}} with {{SpellTooltip|Temporal Distortion}}.
+#Set {{SpellTooltip|Temporal Distortion}} on reckless, followed by {{SpellTooltip|Singularity Beam}} on reckless.
+#At x5.00 Time Distortion(it says under Hero Portrait), set {{SpellTooltip|Converge Timelines}}, {{SpellTooltip|Ritual Of Power}}, and {{SpellTooltip|Superposition}} on reckless.
+#At x10.00 Time Distortion, set {{SpellTooltip|Synthetic Entity}} on reckless until it finishes casting all stacks.
+#Quickly replace {{SpellTooltip|Synthetic Entity}} with {{SpellTooltip|Stabilize the Flow}} and set it to reckless.
+#Watch until mystery production halts or void mana runs out, and head back to '''<u>Charge Phase</u>''' or '''<u>Build/Stack Phase</u>''' if you want more {{SpellTooltip|Time Helix}} stacks.
+
+Alt burst
+
+This burst works best with Archivist for the higher mysteries
+
+# Setup your bar like this: {{SpellTooltip|Singularity Beam}} , {{SpellTooltip|Temporal Distortion}}, {{SpellTooltip|Conjure Manabeast}}, {{SpellTooltip|Superposition}}, {{SpellTooltip|Void Lure}}, and {{SpellTooltip|Void Radiance}} with Spellhound out
+# Set all except {{SpellTooltip|Temporal Distortion}} to reckless until its fully charged, then set it to reckless as well
+# At 10x distortion (or whatever your limit is. {{ItemTooltip|item_name=Stabilizing Pauldrons}} increase it up to 20x total distortion at legendary), switch your pet to [[Interrogator]], and in turn [[Archivist]], and get it to around level 70+. the higher the level here the better the results.
+# Take {{SpellTooltip|Temporal Distortion}} off reckless to build full charges again, switch {{SpellTooltip|Superposition}} out for {{SpellTooltip|Stabilize the Flow}}. once you cast {{SpellTooltip|Stabilize the Flow}} set {{SpellTooltip|Temporal Distortion}} back onto reckless and stack back up to full distortion.
+# Once back at full distortion, you need to time this based on how strong your {{SpellTooltip|Void Lure}} is. if you have somewhere over a 5e3 bonus to duration, you can take your time in setting this all up. first, you should now be generating plenty enough shards to keep your distortion capped without {{SpellTooltip|Conjure Manabeast}}, so switch it out for {{SpellTooltip|Superposition}}. then take {{SpellTooltip|Void Lure}} and switch it out to {{SpellTooltip|Converge Timelines}}.
+# Now quickly change {{SpellTooltip|Temporal Distortion}} to {{SpellTooltip|Ritual Of Power}}, and then {{SpellTooltip|Void Radiance}} to {{SpellTooltip|Gem Resonance}}.
+# Profit.
+
+==<nowiki/>====<u>'''Notes/Important Info:'''</u>==
+*The more you stack {{SpellTooltip|Time Helix}}, the better off you'll be. Don't feel like you made enough mysteries off of that burst? You need more {{SpellTooltip|Time Helix}}.
+*At higher mysteries (e140+) I am finding it better to not use [[Arcanaworg]] and to stay as [[Archivist]]  in order to generate more profits.
+*You can level pets almost as effectively, if not more so than Demonologist, depending on the pet.
+*Any pet with an active ability is not effected by {{SpellTooltip|Wormhole}}; however, they are effected by {{SpellTooltip|Temporal Distortion}}. Ex. [[Daemon]], [[Pit_Lord]], [[Spellhound]], [[Arcanaworg]], [[Voidfiend]], [[Voidterror]], [[Geode]], and [[Ley_Keeper]].
+**Yes, it is faster to level [[Voidterror]], [[Geode]], and [[Ley_Keeper]] with {{SpellTooltip|Temporal Distortion}}!
+
+
+
+Thank you for checking out Sithelia's first guide! If you see me in chat room #3, please give me pointers on how I can do better in the future! A special thanks goes to Takxs (The Chronomancer) to helping me understand this class in the first place.
+
+Minor tweaks done by VinnyLeone, also of chat room #3
+[[Category:Classes]]
+[[Category:Chronomancer]]
+[[Category:Guide]]

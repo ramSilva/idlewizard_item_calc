@@ -1,0 +1,24 @@
+{
+  "fetchedAt": "2026-09-27T14:19:18.713Z",
+  "note": "wiki.gg guides read only as extra context in part 2 of the Chronomancer blind check (not the blind-check source). wiki.gg Chronomancer_Guide_Updated redirects to Chronomancer Guide.",
+  "pages": [
+    {
+      "title": "In Over Your Head Chronomancer Guide",
+      "wiki": "wikigg",
+      "url": "https://idlewizard.wiki.gg/wiki/In_Over_Your_Head_Chronomancer_Guide",
+      "revid": 30817,
+      "revisionTimestamp": "2026-08-27T19:02:19Z",
+      "file": "In Over Your Head Chronomancer Guide.wikitext",
+      "method": "api"
+    },
+    {
+      "title": "Chronomancer Guide",
+      "wiki": "wikigg",
+      "url": "https://idlewizard.wiki.gg/wiki/Chronomancer_Guide",
+      "revid": 31289,
+      "revisionTimestamp": "2026-09-25T10:33:48Z",
+      "file": "Chronomancer Guide.wikitext",
+      "method": "api"
+    }
+  ]
+}

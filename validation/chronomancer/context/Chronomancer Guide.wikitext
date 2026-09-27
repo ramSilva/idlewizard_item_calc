@@ -1,0 +1,106 @@
+{{Guides}}
+{{T1disclaimer}}
+{{VersionUpdated|1.78.0}}
+{{GuideIntroClass|Chronomancer}}
+
+==Introduction==
+{{ClassTooltip|Chronomancer}} is a class which can use it's time manipulation spells to gather a variety of things, among others accumulated spellcasts, character experience and pet time. It can be used from the moment you unlock it and generally starts to slow down a bit after e210 mysteries.
+
+==Attributes==
+A rough guideline on where to invest your points (if you have some) looks like this.
+*Wisdom to 50 (can be skipped if you're not struggling with shards)
+*Intelligence to 75, Spellcraft to 50, Patience to 40 for all T2 pets
+*Patience to 150
+*Spellcraft to 150
+*Intelligence to 150
+*Mastery to 150
+
+After being able to equip all T2 pets, always invest attributes in a way that allows you to equip strong items. Those are mainly items used in burst or in the void mana phase.
+
+==Phases==
+The general flow of an exile in this guide is:
+*Maximize sources with {{PetTooltip|Simulacrum}}
+*Sit in Helix Buildup for roughly 1/3 of your exile
+*Go to the Character EXP phase
+*Sit in regular Buildup for roughly 2/3 of your exile
+*Generate Void Mana
+*Snap {{SpellTooltip|Gem Resonance}} and {{SpellTooltip|Stabilize The Flow}}
+*Burst
+The technically optimal split for the buildup phases is 1 part {{SpellTooltip|Time Helix}}, 1.64 parts regular buildup.
+===Character EXP===
+Here we rapidly gather character experience through several means, all made possible by {{SpellTooltip|Wormhole}}. Make sure that {{PetTooltip|Simulacrum}} bought all the sources it can before moving on from this phase.
+{{GuideBox|
+pet=Simulacrum|
+spells=#0#Char+Pet EXP@29,2;71,2;67,1;66,2;65,2;104,2
+}}
+Most items you would equip here don't have a meaningful effect. Due to this, we recommend that you equip pet experience gear and additionally use this set for pet leveling. Apart from that, you can equip shard generation or evocation efficiency if you're not struggling with shards.
+
+===Helix Buildup===
+This phase can be skipped if your exile is short. Additionally, before around e180 mysteries it will not be possible to autocast {{SpellTooltip|Time Helix}} due to your level being too low (experience gained from sources and spellcasts), in which case you should also skip this phase. After running this set make sure to go back to the character experience phase, since you deleted all your experience gathered from clicks and entities by using {{SpellTooltip|Time Helix}}. <br>
+{{Note|
+If you are struggling with shards, you can leave the scrolls with {{SpellTooltip|Ritual Of Power}} and {{SpellTooltip|Wormhole}} empty. Note that using either of them without the other does not accomplish anything.
+}}
+{{GuideBox|
+pet=Ley Keeper|
+spells=#1#Helix Buildup@29,2;60,2;101,2;66,2;65,2;104,2
+}}
+Items have no impact here, so feel free to equip gear for generating shards. One exception is character experience gear, which might make it possible to do this phase at lower mysteries. Incantation efficiency does NOT boost {{SpellTooltip|Time Helix}} here, since the given bonus updates itself automatically when swapping gear.
+
+===Buildup===
+Here we cast our accumulated spells while also skipping time for our character ability. Since {{SpellTooltip|Wormhole}} cancels the duration of most spells, we can gather a lot of spellcasts in a relatively short time. <br>
+Using {{PetTooltip|Archivist}} here is preferable for skipped time, but if you have trouble with shards then {{PetTooltip|Arcanaworg}} is a reasonable alternative. Before moving on to the void mana phase, make sure to give {{PetTooltip|Risen Giant}} some skipped time to boost its ability power. Do note, that it essentially reaches its peak power immediately unless you have a legendary {{ItemTooltip|Temporal Stabilizer}}.
+{{GuideBox|
+pet=Archivist|
+pet1=Arcanaworg|
+spells=#2#Buildup@29,2;17,2;60,2;67,1;66,2;65,2
+}}
+The items to look out for in this phase are those giving evocation efficiency. If you have access to weapons, then you should equip {{ItemTooltip|Temporal Stabilizer}} for roughly 50% of the time you spend here. This weapon will boost your skipped time significantly, but will also undercut your {{SpellTooltip|Ritual Of Power}} casts.
+
+===Void Mana===
+Since {{SpellTooltip|Wormhole}} removes all of our void mana, we have to keep {{PetTooltip|Risen Giant}} equipped here. Therefor, our only choice for generating void mana is {{SpellTooltip|Void Radiance}}.
+{{GuideBox|
+pet=Risen Giant|
+spells=#3#Void Mana@29,2;30,2;34,2;69,0;67,1;65,2
+}}
+For items, the most important stat is void mana per entity (VMpE), followed by incantation efficiency.
+
+===Snap===
+To understand this phase we must quickly discuss a quirk about incantation spells (for a more in-depth look see [[Snap]]). Most incantations (including {{SpellTooltip|Time Helix}}) update their bonus when you swap gear. Among the few exceptions are {{SpellTooltip|Gem Resonance}} and {{SpellTooltip|Stabilize The Flow}}. What this means is that we can equip items with incantation efficiency and maximum time distortion here, activate both spells (for example by pressing Y/Z+6) and swap to our burst items afterwards. We call this behaviour "snapping" (from snapshot), hence we snap both of our incantations here. Make sure that time distortion is at its maximum when casting {{SpellTooltip|Stabilize The Flow}}.<br>
+That being said, snapping {{SpellTooltip|Gem Resonance}} specifically gives almost no profit with weak gear, but we might as well do it since we snap {{SpellTooltip|Stabilize The Flow}} anyway.
+{{GuideBox|
+pet=Risen Giant|
+spells=#4#Snap@29,2;30,2;4,0;69,0;67,1;65,2
+}}
+The two items increasing maximum time distortion ({{ItemTooltip|Timeshroud}} and {{ItemTooltip|Stabilizing Pauldrons}}) are incredible here, although only Pauldrons do so at common quality. Apart from that, keep an eye out for items giving incantation efficiency.
+
+===Burst===
+Here we cast all our best spells and generate profit.
+{{GuideBox|
+pet=Risen Giant|
+spells=#5#Burst@60,2;17,2;4,2;69,2;73,2;65,2
+}}
+Items are complicated here, so look further below in the Scalings section for details on how each stat affects our generated mana.
+
+==Scalings==
+Here we list the scalings of certain stats purely in the burst phase. If an obvious stat is not mentioned (like generic profit), then it is ^1. Note that we burst with {{SpellTooltip|Singularity Beam}}, so all forms of click profit are useless to us.
+
+{| class="wikitable"
+|- 
+!colspan='2'|Burst Scaling to Profits
+|-
+| IdleBonus || ^2.0155
+|-
+| EvocationEfficiency ||^1
+|-
+| CharacterAbilityPower ||^1
+|-
+| PetAbilityPower ||^0.6
+|-
+| IncantationEfficiency ||^3
+|}
+
+Additionally, the Void Mana phase has an efficiency of VMpE^1 and IncEff^1.2.
+
+The reason the incantation efficiency is only ^3 is because we snapped {{SpellTooltip|Gem Resonance}} and {{SpellTooltip|Stabilize The Flow}}. Due to this, we have an incantation efficiency of ^2.1264 to profit in the snap phase.
+
+An incantation efficiency of ^3 in burst is incredibly weak. For example, common {{ItemTooltip|Incantations Restructuring}} gives ~12.5% profit.

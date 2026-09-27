@@ -1,0 +1,289 @@
+{{TODO}}
+{{Guides}}
+{{VersionUpdated|}}
+This page aims to aid in progression when using {{ClassTooltip|Chronomancer}} in [[Quasi-Realms#In Over Your Head|In Over Your Head Quasi-Realm]] by providing information, procedures, builds, or detailed recommendations.
+
+==Introduction==
+This [[Quasi-Realms|Quasi-Realm]] is played with {{ClassTooltip|Chronomancer}}.
+* Starts with {{PetTooltip|Temporal Paradox}}, a Pet unique to this Quasi-Realm
+** Generates [[Compressed Time]].
+** Periodically generates Mana.
+* {{SpellTooltip|Time Fork}} replaces {{SpellTooltip|Time Helix}}
+** Every cast of this spell while {{SpellTooltip|Generate Paradox}} is active increases the pet level of {{PetTooltip|Temporal Paradox}} by 1.
+* {{SpellTooltip|Singularity Beam}} unavailable.
+* Pet Ability Power increased, based on Pet level<br/><math>\text{PAP} = 1.17^\text{PetLevel}</math>
+* Character Class is unchangeable.
+* Active Pet is unchangeable.
+* Foundation, Tools, Power [[Heritage|Heritages]] are available.
+
+==Scaling==
+{| class="wikitable"
+|-
+! colspan="2" | Overall Scaling to Profits
+|-
+| Inc ^7.39
+|-
+| Char Exp ^3.9 (see note))
+|-
+| PAP ^2
+|-
+| *Skipped Time ^1.14
+|-
+| Idle, Profit, CAP, VpE, Void Mana ^1
+|-
+| Evo ^0.016
+|}
+''Note: Pet level = Character level. A quasi rule gives +17% PAP per pet level. Scaling math: 1.17 ^ (log(cxp) / log(1.09)) = cxp ^ (log(1.17) / log(1.09)) = 1.822. Because PAP is ^2, ^1.822^2 = ^(1.822 * 2) = 3.319, then phylacteries add about ^0.6. Therefore the final Cexp scaling is about ^3.9''
+
+==Attributes==
+* Fill for items<br/>(Requires quite a lot - {{ItemTooltip|Blessed Tapestry}} is your friend for 1sec points)
+* Important Perks
+* Max everything except for SPC, DOM and WIS which are left at 240+10.<br/>(For DOM, invest in Vers until you have enough points to respec on exile for the 150/250 perks. Until then, you'll get more profit from the Vers points)
+* Finally invest in Vers
+
+Chronomancer is one of the few classes that does not profit from clicks but can generate enough autoclicks for the dominance 150/250 perks to outweigh that many points in Versatility.  The threshold is in the range of e13-e16 clicks.
+
+''NOTE: SPC provides very little - Need 250 for Kilt in snap, next is 175 for Perfected Kata in buildup, it may be better to invest 175 points in SPC and forgo Kilt. Needs testing.''
+
+{{SummarizeGuideBoxSets}}
+
+==Phases==
+A typical run consists of
+* Quick Burst Phase to get upgrades and sources.
+* Careful Pet Level (Be able to still cast Time Fork)
+* Stack Time Fork
+* Pet Levelling phase (As much as possible so you can no longer cast TF)
+* Skip Time
+* Void Mana Phase
+* Burst Phase
+
+===Careful Pet Levelling Set===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| Stack your pet levels by casting {{SpellTooltip|Time Fork}} until the spell's level requirement is about 10-20 levels lower than you character's base level (what it reverts to after casting Time Fork). 
+|}
+
+{{Callout|
+class=warning|'''Do not raise your pet level too high''' or you won't be able to stack Time Fork in the next phase for the remainder of the exile..}}
+
+{{GuideBox
+|spells=#0#PetXP[Careful]@208,0;29,2;60,2;111,2;68,1;104,2
+|items=#0#PetXP[Careful]@104;101;2;29;14;32;40;68;56;84;70;1022;209;304;411;415;91;2007;3001}}
+
+* We need some Shard enchant gear to keep everything up at the Spell Memetic range.
+* {{SpellTooltip|Ritual Of Power}} and {{SpellTooltip|Ritual Of Potency}} have minimal impact, but can allow for slightly more sources and thus a higher baseline character level.  You can replace them with better spells as your base character level improves.
+* You do not need to be super aggressive about getting as close to the limit as you can.  As soon as you have enough Compressed Time per second to sustain both Time Fork and Wormhole in the next phase you can move on.  Likewise, I advise against using any mythics or other strategies to boost your character level in this phase.
+
+===Spell Stacking Set===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| Stacking Time Fork, stacking Accumulated spells, and casting lots of spells to charge {{ItemTooltip|The Accumulator}}
+|}
+
+{{GuideBox
+|spells=#1#Buildup[TimeFork50%]@208,2;60,2;17,2;104,2;33,2;66,2
+|items=#1#Buildup[TimeFork50%]@101;104;2;29;14;32;41;68;56;86;77;1022;209;307;416;415;90;2007;3003;509}}
+
+* Spend about 50% of buildup time here.
+
+Some gear optimizations are available.
+* You need enough Compressed Time or Pet Ability Power gear for {{SpellTooltip|Time Fork}} and  {{SpellTooltip|Wormhole}} while also having enough Shard Gear to keep {{SpellTooltip|Ritual Of Power}} and {{SpellTooltip|Superposition}} going at peak cast rate at higher Spell Memetic levels.
+* You may need to swap some combination of {{ItemTooltip|Daemonics Reverse-Engineering}} for {{ItemTooltip|Spell Shards Fractalization}} or {{ItemTooltip|Inquisitive Eye}} for {{ItemTooltip|Pheromone Gland}}. {{ItemTooltip|Perfected Kata Bracers}} for {{ItemTooltip|Precise Wristband}} is also possible, but should be avoided.
+* {{ItemTooltip|Ritual Disk}} is the best mount for this phase, but if you don't have it {{ItemTooltip|The Rubedo Engine}} is only marginally worse (about 0.3 of an E) after you account for the different scalings of RoP and Superposition.
+* {{ItemTooltip|Temporal Scabbard}} doubles the rate at which you stack {{SpellTooltip|Ritual Of Potency}} and makes RoPot your best scaling burst spell. It scales better than both regular and enhanced {{SpellTooltip|Ritual Of Power}} (^0.8 per cast rather than ^0.45 or ^0.55) and gains charges based on EVERY spell cast. This will be dominated by accumulated spells due to the Heritage upgrade "muscle memory" multiplying accumulated casts.
+* All of this combines to wanting to sit on this phase for roughly 50% of your total exile length with the remaining 50% being spent on the Time Skip phase.
+
+===Pet Levelling Set===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| Stack as many pet levels as possible. A class ability makes Pet Ability Power scale 1.17^PetLevel, and PAP is ^2 to profit, so every extra level is very strong.
+|}
+
+{{GuideBox
+|spells=#8#PetXP@208,2;29,2;60,2;71,2;66,2;67,2
+|items=#8#PetXP@104;113;4;29;14;31;43;66;57;86;74;1022;212;300;415;405;90;2008;3005;508}}
+
+{{Note| You really want to use {{ItemTooltip|Endtimes Failsafe}} here. Even better with a CharXP imbuement.}}
+
+* Character level -> Pet level. Actually, {{SpellTooltip|Time Fork}}'s level requirement = pet level and *casting* TF earns you pet levels. Therefore higher character level (or level requirement reduction) means more pet levels. But because TF resets all sources of "collectible" character experience, once TF requires more than your base character level from static sources (like mana sources), it will auto-remove itself from your spellbar. So you'll need to spam this set to put TF *back* on the spellbar. 
+* You can squeeze a handful of extra pet levels even after spamming the set to up TF back no longer works. Toggle back and forth with the Time Skip phase and it'll give you a large chunk of void entities and autoclicks that will continue to boost your character level when you switch back to this set. Do this until spending 30-60 seconds on Time Skip doesn't earn you another pet level. On longer exiles it's probably technically worth micromanaging this a bit more to earn another few levels even if they take a few minutes each... but who has time for that?
+* If you have the Triumph Ingot Shortage, it's a good idea to enchant the Mystery Power enchant gear; {{ItemTooltip|Recaller Stone}} and {{ItemTooltip|Broomstaff Of Klevdariah}} to get a few more pet levels out of your pet {{PetTooltip|Temporal Paradox}}. This is useful when pushing for Delusions.
+* This spell and item set have been numbered to put them on shortcut key 9. This is intentionally "out of the way" to reduce the chance of a misclick accidentally turning on this set and overleveling your {{SpellTooltip|Time Fork}}.
+
+===Skipped Time===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| Stack Skipped Time and collect Autoclicks and Void Entities. 
+|}
+{{GuideBox
+|spells=#2#Buildup[Time50%]@17,2;29,2;60,2;71,2;66,2;67,1
+|items=#2#Buildup[Time50%]@115;101;0;24;14;35;41;60;58;85;77;1008;209;300;415;405;90;2002;3007;504}}
+
+* Spend about 50% of Buildup time here.
+* {{ItemTooltip|Cold-blooded Ring}} should be enchanted for more autoclicks.
+* Evocation gear should be enchanted to boost the power of {{SpellTooltip|Wormhole}}.
+
+===Void Mana Set===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| Maximize Void Mana
+|}
+{{GuideBox
+|spells=#3#VoidMana@26,2;29,2;104,2;30,2;34,2;67,2
+|items=#3#VoidMana@111;113;5;25;15;30;49;68;55;89;78;1022;202;309;412;407;99;2010;3006;503}}
+
+===Stabilize The Flow Snap===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| 
+Stack Incant & Max Time Distortion gear to cast Stabilise The Flow and then swap sets so it's still effected by incant gear until duration runs out.
+|}
+
+{{GuideBox
+|spells=#4#StabilizeTheFlow@26,2;29,2;-1,0;4,0;69,0;68,2
+|items=#4#StabilizeTheFlow@100;113;7;23;18;32;41;68;56;85;72;1022;209;301;411;409;91;2007;3001;509}}
+
+{{Note|Swap to this set's items with the P+5 hotkeys from a set that casts {{SpellTooltip|Temporal Distortion}}(like Void Mana) to allow Time Distortion to grow to max (27), before fully swapping both spells and items with Q+5 and snapping {{SpellTooltip|Stabilize The Flow}}}}
+
+* The Position of {{SpellTooltip|Stabilize The Flow}} is in slot 5, the same as the set's hotkey number, to make it simpler to activate when quickly switching from the Void Mana to Burst. With Chronomancer's time distortion, you lose VM rapidly, so making this easier to input helps lose less VM in the transition through your snap sets
+* Enchants on {{ItemTooltip|Stabilizing Pauldrons}} and {{ItemTooltip|Timeshroud}} don't matter.
+
+===Gem Resonance Snap===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| 
+Stack Incant gear to cast Gem Resonance and then swap sets to burst so it's still effected by incant gear until duration runs out.
+|}
+
+{{GuideBox
+|spells=#5#GRSnap@17,2;73,2;60,2;4,2;69,0;68,2
+|items=#5#GRSnap@100;113;7;23;18;32;40;68;56;84;72;1022;209;301;411;409;91;2007;3001;509}}
+
+===Burst Set===
+{| class="wikitable" style= "max-width:800px"
+|-
+! Goal
+| 
+Burst.
+|}
+
+{{GuideBox
+|spells=#6#Burst@17,2;73,2;60,2;4,0;69,0;111,2
+|items=#6#Burst@112;113;6;24;17;38;46;67;57;87;76;1022;204;307;415;401;96;2002;3003;506}}
+
+* {{SpellTooltip|Gem Resonance}} will run out very quickly, so use your hotkeys to switch back and forth between your Burst and GR Snap sets (hotkeys 6 and 7) to refresh its duration. Repeat this a few times until your VM decays too much and you're no longer able to buy new sources or upgrades.
+* {{SpellTooltip|Revert}} in the GR snap set will prevent you from needing to re-snap StF.
+* At enchant 24+5 {{ItemTooltip|Falconer's Leather Wrappings}} beats {{ItemTooltip|Conjured Razorspaulders}}
+
+==Familiars==
+Recommended Familiars (lv20+):
+* {{FamiliarTooltip|Anima Mundi}}
+* {{FamiliarTooltip|Mist}}
+* {{FamiliarTooltip|Lost Memories}}
+*
+
+Secondary Options:
+*{{FamiliarTooltip|Cornerstone}}
+* {{FamiliarTooltip|Lamp}}
+* {{FamiliarTooltip|Gembug}}
+* {{FamiliarTooltip|Sanity Worm}}
+* {{FamiliarTooltip|Leech}}
+
+==Memetics==
+===Source Memes===
+{{SourceMemes
+|class=chronomancer
+|gem=gild
+|grimoire=
+|fountain=
+|tree=inc
+|desk=exp
+|circle=cap
+|rift=pap
+|nexus=ac
+}}
+
+To calculate the ideal ingot distribution, use the following stat scalings with [[Spreadsheets#Source_Memes_Calculator|Muninn's Source Meme Calculator]].
+{| class="wikitable" style="max-width:800px"
+! colspan="2" | Stat Scaling
+|-
+| Incantation
+| 7.4
+|-
+| Character Ability Power
+| 1
+|-
+| Autoclick
+| 0
+|-
+| Evocation
+| ~0
+|-
+| Summoning
+| 0
+|-
+| Pet Ability Power
+| 2
+|-
+| Character Experience
+| 3.9
+|-
+| '''Additional Source Scaling<br> to Nexus'''
+| 2.14
+|}
+
+* Rough priority is PAP > Incant = CAP >> cEXP.  Leave Autoclick at 1.
+* Autoclick is placed to reduce the cost growth of Nexi, as both {{ItemTooltip|Temporal Stabilizer}} and {{SpellTooltip|Converge Timelines}} scale with Nexi amount.
+* With enough Spell Mastery, autoclick scaling gets +0.02 and is worth investing some small amount of ingots into.
+* Evocation and summoning scale so poorly that the increased cost growth make them not worth placing compared to having more sources for the source scaling upgrades and exp, so it is advised not to enter your Spell Mastery amount into the sheet, as it will distort the results.
+
+===Spell Memes===
+For use with [[Spreadsheets#Spell_Meme_Calculator|Merp's spell meme sheet]].
+
+{| class=wikitable
+|-
+! Spell !! Efficiency !! Cast scaling !! AC amt scaling !! AC profit !! Cast amt !! Cast rate
+|-
+| {{SpellTooltip|Stabilize The Flow|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Stabilize The Flow (Enhanced)|icon=hidden}} || 1.245 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Gem Resonance|icon=hidden}} || 1.228 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ritual Of Power|icon=hidden}} || 1.2 || 0.45 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Ritual Of Power (Enhanced)|icon=hidden}} || 1.2 || 0.55 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Converge Timelines|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Superposition|icon=hidden}} || 1.2 || 0.009 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ritual Of Potency|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Void Radiance|icon=hidden}} || 1.244 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Void Lure|icon=hidden}} || 1.011 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Void Lure (Enhanced)|icon=hidden}} || 1.035 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Time Fork|icon=hidden}} || 1.01 || 1 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Wormhole|icon=hidden}} || 1.01 || 1.14 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxT}}
+|-
+| colspan="7" | For spells marked with a '''^''', replace the line above if you have it, do not add both.
+|-
+|}
+''NOTE: For Instant Spells the effective cap is 100 casts per second.''
+
+Prioritization:
+# Burst Spells
+# {{SpellTooltip|Void Radiance}}
+# {{SpellTooltip|Time Fork}}, {{SpellTooltip|Wormhole}}, {{SpellTooltip|Temporal Distortion}}, {{SpellTooltip|Spell Focus}} should be leveled enough to give extra casts for {{SpellTooltip|Ritual Of Potency}}
+# Put any left over ink into {{SpellTooltip|Generate Paradox}} for more autoclicks.

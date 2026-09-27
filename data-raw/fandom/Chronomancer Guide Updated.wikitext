@@ -1,0 +1,62 @@
+[[Chronomancer]] is a powerful class with a very solid push for mysteries in the post-voidmancer stage. 
+
+Updated for v1.35.0
+
+*Range: e90-e220+ mysteries
+*Run duration: 10 minutes - 10 hours. Does not rely on long runs until later.
+*Pets: {{PetTooltip|pet_name = Archivist}}, {{PetTooltip|pet_name = Geode}}, {{PetTooltip|pet_name = Simulacrum}}, {{PetTooltip|pet_name = Zombie}}, {{PetTooltip|pet_name = Risen Giant}}
+*At this range, '''items''' are still being discovered. Focus on using items that increase maximum Temporal Distortion and provides bonuses to incantation efficiency, evocation efficiency, character ability power and idle bonus for bursting. Naturally, during set-up, evocation efficiency and pet experience are always welcome. Incantation efficiency is normally best in slot for burst, but if you are snapshotting {{SpellTooltip|spell_name = Stabilize the Flow}} and {{SpellTooltip|spell_name = Gem Resonance}} other stats will work better in burst.
+
+==Attributes==
+<blockquote>''While there are more effective attributes for this build, at this stage you are still finding items and the requirements of items you find are also a large effect on your attribute distribution. In '''Bold''' there will be very effective attributes, but feel free to tinker with those as well. Always distribute your attributes based on the perks you'll obtain from them, after filling for your best items, and then dump the excess in the designated 'dump' attribute.''</blockquote>
+
+*Intelligence: '''25'''
+*Insight: '''25'''
+*Wisdom: '''25''' ²
+*Patience: '''40''' for {{PetTooltip|pet_name = Risen Giant}} and as much as possible without losing gear otherwise. Your best attribute.
+*Mastery: '''25''' <blockquote>''1. Patience benefits this build the most because of how well {{PetTooltip|pet_name = Risen Giant}} scales with 3% idle. After patience is maxed, SPC is very good because it helps burst and adds additional time skipped in build.''</blockquote><blockquote>''2. Wisdom doesn't help you with profit, so it's a balancing act to keep up your casts in build going at max rate without sacrificing too much profit. At higher mysteries, you won't need this as much because of spell shard upgrades. But at low mysts you may want 25 Wisdom or more to keep casts going quick. ''</blockquote>
+==Phase 1: Build up Levels==
+Your goal here is to get some levels, early game just so you can equip Chrono's spells, and at higher mysts because you'll need some levels for profit. Equip the first spellset displayed below. First, equip '''Homunculus''' and then '''Simulacrum''' to max your sources. Then, equip {{PetTooltip|pet_name = Pixie}}. Spells get interrupted during wormhole, so summons won't give autoclicks, but {{PetTooltip|pet_name = Pixie}} will. Using wormhole + {{PetTooltip|pet_name = Pixie}}, you can get some autoclicks for levels. Note that {{PetTooltip|pet_name = Pixie}} gives more autoclicks than the t2 pet, so don't upgrade her. Just get autoclicks until you aren't gaining substantial experience anymore. Then, switch to {{PetTooltip|pet_name = Archivist}} to get some Void entities. 
+At low levels, you may want to do a preburst/burst phase real quick to get some more sources for character experience. You may also have trouble using {{SpellTooltip|spell_name = Wormhole}} and {{SpellTooltip|spell_name = Temporal Distortion}} on reckless, so you may have to cast those manually. You may also need to equip {{PetTooltip|pet_name = Geode}} at low levels to start off if you can't reach the spells. Gear priority this phase is evocation efficiency and pet experience.
+
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Wormhole|spell_2_autocast = Reckless|spell_3_name = Ritual Of Power|spell_3_autocast = Reckless|spell_4_name = Synthetic Entity|spell_4_autocast = Reckless|spell_5_name = Temporal Distortion|spell_5_autocast = Careful|spell_6_name = Spell Focus|spell_6_autocast = Reckless}}
+
+
+==Phase 2: Build up Superposition and Ritual of Power==
+At lower mysteries you should just use the first spellset here with {{PetTooltip|pet_name = Archivist}}. Since wormhole interrupts spells, you will continue stacking spells even though {{PetTooltip|pet_name = Archivist}} increases the duration of your incantations. {{PetTooltip|pet_name = Archivist}} will also increase your skipped time and the void entities you get from {{SpellTooltip|spell_name = Synthetic Entity}}.  
+
+When your gains start slowing down, after stacking a bunch of skipped time with the first spellset you can swap to the second spellset with {{SpellTooltip|spell_name = Time Helix}}. Stacking it doesn't increase your profit a huge amount compared to your other incantations, but it is better than {{SpellTooltip|spell_name = Synthetic Entity}} after you've gotten enough skipped time with {{PetTooltip|pet_name = Archivist}}. {{SpellTooltip|spell_name = Time Helix}} resets all experience from things like max mana, autoclicks and void entities. The only thing it doesn't reset is character experience from sources.
+It's easier to use at higher mysteries when you won't lose too many levels to use it again, {{PetTooltip|pet_name = Geode}} can help with the level requirements, but only use it if you can't recklessly cast {{SpellTooltip|spell_name = Time Helix}} with {{PetTooltip|pet_name = Archivist}}. 
+Once you are done stacking in this phase, you'll be at 0 Autoclicks, Void Entities and low max mana because of {{SpellTooltip|spell_name = Time Helix}}. You'll want to do a quick phase 1 build again with Pixie for AC's and Archivist for skipped time/VE, and a quick vm/burst to get higher max mana. You should gain a large amount of character levels and some upgrades from this.
+Next you'll equip {{PetTooltip|pet_name = Risen Giant}} and the first spellset here. {{PetTooltip|pet_name = Risen Giant}} scales with played pet time you gain from wormhole. You can see the bonuses on {{PetTooltip|pet_name = Risen Giant}}, once they stop increasing very much, '''make sure you fill up the spell shards for your burst spells''' and move to the next phase.
+Gear priority this phase is evocation efficiency and pet experience.
+
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Wormhole|spell_2_autocast = Reckless|spell_3_name = Ritual Of Power|spell_3_autocast = Reckless|spell_4_name = Superposition|spell_4_autocast = Reckless|spell_5_name = Synthetic Entity|spell_5_autocast = Reckless|spell_6_name = Spell Focus|spell_6_autocast = Reckless}}
+
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Wormhole|spell_2_autocast = Reckless|spell_3_name = Ritual Of Power|spell_3_autocast = Reckless|spell_4_name = Superposition|spell_4_autocast = Reckless|spell_5_name = Time Helix|spell_5_autocast = Reckless|spell_6_name = Spell Focus|spell_6_autocast = Reckless}}
+
+
+==Phase 3: PreBurst==
+Because {{PetTooltip|pet_name = Risen Giant}} stacked with wormhole skipped time is so good, we won't be able to pet swap to Voidterror for VM like many other classes. We'll use void radiance to get VM. Equip the spellset below. Once you have enough VM, stop casting Temporal Distortion, cast Stabilize The Flow and swap to the burst spellset. For gear for this phase, pieces with void mana per entity are priority, followed by incantation efficiency.
+
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Temporal Distortion|spell_2_autocast = Reckless|spell_3_name = Void Lure|spell_3_autocast = Reckless|spell_4_name = Void Radiance|spell_4_autocast = Reckless|spell_5_name = Spell Focus|spell_5_autocast = Reckless|spell_6_name = Stabilize the Flow|spell_6_autocast = None}}
+
+====High Level Snapshot Optimization====
+<div class="mw-collapsible mw-collapsed">
+This section applies mostly if you have high rarity gear or enchants post e200.
+Gem Resonance and Stabilize The Flow work differently than most spells. If you change your gear, their values won't update, so you can 'snapshot' the values by equipping your highest incantation efficiency gear and casting them, and then switching to your regular burst gear and your burst set. 
+To do this, you'll want to set up another item set with your incantation efficiency gear and the spellset below. Swap to the spellset below, equip your incantation efficiency gear, and cast GR/StF (good idea to use hotbuttons to minimize void mana decay). After that, switch to your burst gear and the burst set. It's important to keep the GR/Stf in the same slots on both sets. Otherwise, you'll recast them when you swap spellsets and lose your bonus.
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Temporal Distortion|spell_2_autocast = Reckless|spell_3_name = Void Lure|spell_3_autocast = Reckless|spell_4_name = Void Radiance|spell_4_autocast = Reckless|spell_5_name = Gem Resonance|spell_5_autocast = Reckless|spell_6_name = Stabilize the Flow|spell_6_autocast = None}}
+
+</div>
+
+==Phase 4: Bursting==
+You'll likely gain a lot of mysteries from this burst, and you can repeat it if you're still getting good gains before you exile.
+
+{{SpellSet|spell_1_name = Singularity Beam|spell_1_autocast = Reckless|spell_2_name = Superposition|spell_2_autocast = Reckless|spell_3_name = Converge Timelines|spell_3_autocast = Reckless|spell_4_name = Ritual Of Power|spell_4_autocast = Reckless|spell_5_name = Gem Resonance|spell_5_autocast = Reckless|spell_6_name = Stabilize the Flow|spell_6_autocast = Reckless}}-
+
+''Credits:''
+
+''Tito - Master Chronomancer -- original guide''
+[[Category:Chronomancer]]
+[[Category:Guide]]

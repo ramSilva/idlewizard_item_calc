@@ -1,0 +1,51 @@
+{
+  "fetchedAt": "2026-09-27T14:19:18.713Z",
+  "note": "Fandom pages read in part 2 of the Chronomancer blind check (after the blind tool result was committed in 7b01f3a). The primary source is Chronomancer Guide Updated; all 24 of its revisions (14304-15488) were scanned and none names an item.",
+  "pages": [
+    {
+      "title": "Chronomancer",
+      "wiki": "fandom",
+      "url": "https://idle-wizard.fandom.com/wiki/Chronomancer",
+      "revid": 16884,
+      "revisionTimestamp": "2024-03-07T15:35:07Z",
+      "file": "Chronomancer.wikitext",
+      "method": "api"
+    },
+    {
+      "title": "Chronomancer Guide Updated",
+      "wiki": "fandom",
+      "url": "https://idle-wizard.fandom.com/wiki/Chronomancer_Guide_Updated",
+      "revid": 15488,
+      "revisionTimestamp": "2023-03-24T19:33:09Z",
+      "file": "Chronomancer Guide Updated.wikitext",
+      "method": "api"
+    },
+    {
+      "title": "Chronomancer Guide",
+      "wiki": "fandom",
+      "url": "https://idle-wizard.fandom.com/wiki/Chronomancer_Guide",
+      "revid": 14312,
+      "revisionTimestamp": "2021-12-14T06:08:35Z",
+      "file": "Chronomancer Guide.wikitext",
+      "method": "api"
+    },
+    {
+      "title": "Tito's Chronomancer Build",
+      "wiki": "fandom",
+      "url": "https://idle-wizard.fandom.com/wiki/Tito's_Chronomancer_Build",
+      "revid": 14311,
+      "revisionTimestamp": "2021-12-14T06:08:18Z",
+      "file": "Tito's Chronomancer Build.wikitext",
+      "method": "api"
+    },
+    {
+      "title": "In Over Your Head Chronomancer Guide",
+      "wiki": "fandom",
+      "url": "https://idle-wizard.fandom.com/wiki/In_Over_Your_Head_Chronomancer_Guide",
+      "revid": 16563,
+      "revisionTimestamp": "2024-02-13T20:36:03Z",
+      "file": "In Over Your Head Chronomancer Guide.wikitext",
+      "method": "api"
+    }
+  ]
+}

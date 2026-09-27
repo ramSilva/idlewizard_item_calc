@@ -1,0 +1,61 @@
+
+
+This is outdated, check out [[Chronomancer Guide Updated]] 
+
+Chronomancer is a powerful class with a very solid push for mysteries in the post-voidmancer stage. With two equally capable burst pets, this build is certain to provide huge profits as of v0.80b. 
+
+* Range: e90-e150 mysteries
+* Run duration: 30 minutes - 8 hours. Does not rely on long runs until later.
+* Pets: '''Archivist/Anima Construct''', Geode, Simulacrum
+* At this range, '''items''' are still being discovered. Focus on using items that increase maximum time distortion and provides bonuses to character ability power for bursting. Naturally, during set-up, evocation efficiency and pet experience are always welcome. Due to the amount of incantations used in the burst, this stat is naturally ''Best in Slot'', but it usually requires upgraded items and this is not really necessary.
+
+== Attributes ==
+<blockquote>''While there is a backbone for attributes that maximize this build's strengths,we will cover attributes in a more dynamic way, as these can vary, especially when using Anima Construct to burst. In '''Bold''' there will be the minimum requirements based on testing, but feel free to tinker with those as well, if needed. Always distribute your attributes based on the perks you'll obtain from them, after filling for your best items, and then dump the excess in the designated 'dump' attribute.''</blockquote>
+* Intelligence: '''25/50'''
+* Insight: '''25/50/75'''
+* Spellcraft: '''25/50/<u>75</u>/'''100/125/150/175 ¹
+* Wisdom: '''25''' ²
+* Patience: Dump Attribute, 10 if you wish to use Simulacrum
+* Mastery: <u>25</u>/50/75/<u>100</u> ³
+* Empathy: <u>25</u>/50/<u>75</u>
+<blockquote>''1. Spellcraft benefits this build a lot, so feel free to go all the way if possible.''</blockquote><blockquote>''2. Wisdom may vary in case you decide to use '''Anima Construct'''. This is because Archivist greatly enhances the power of''' '''Spell Focus, making this attribute less important for that pet.''</blockquote><blockquote>''3. While low on priority at this range, Mastery and Empathy are powerful attributes that can benefit any run. If investing on these, always use an <u>underlined value</u>.''</blockquote>
+== Phase 1: Build up Time Helix ==
+Set '''Geode''' as your pet and equip the spells displayed below. Proceed to do the typical Time Helix buildup, which consists of skipping time to cast '''Synthetic Entity''' (which provides the character levels) to finally achieve the geode-reduced requirement of '''Time Helix'''. A good trick is to manually cast Wormhole once the loop has began so that you have better control on Compressed Time usage, minimizing the amount of time and work needed for this phase.
+
+{{SpellSet|spell_1_name = Spell Focus|spell_1_autocast = Reckless|spell_2_name = Conjure Manabeast|spell_2_autocast = Reckless|spell_3_name = Singularity Beam|spell_3_autocast = Reckless|spell_4_name = Synthetic Entity|spell_4_autocast = Reckless|spell_5_name = Wormhole|spell_5_autocast = None|spell_6_name = Time Helix|spell_6_autocast = None}}
+
+== Phase 2: Build up Superposition and Ritual of Power ==
+
+Equip the '''Homunculus''' as your pet to maximize sources, and then use the spell set below to stack accumulated spells. <s>It's important to remember that this must be done '''after '''you have stacked your Time Helix, as it also resets accumulated casts.</s> In case of an overnight setup, this is the phase you want to idle the most in, although it's possible to burst with a bare minimum of ten minutes of stacking. During this phase the '''hero power''' will also be stacked via Wormholing. Note that idling this phase with '''Simulacrum''' is optimal since you can benefit from it's 10% increase to jars accumulation. The '''Archivist''' on the other hand would increase incantation duration times, and would therefore reduce the final spell counts.{{SpellSet|spell_1_name = Spell Focus|spell_1_autocast = Reckless|spell_2_name = Conjure Manabeast|spell_2_autocast = Reckless|spell_3_name = Singularity Beam|spell_3_autocast = Reckless|spell_4_name = Wormhole|spell_4_autocast = Reckless|spell_5_name = Ritual Of Power|spell_5_autocast = Reckless|spell_6_name = Superposition|spell_6_autocast = Reckless}}
+
+== Phase 3: Build up the Burst Pet ==
+
+Once you have enough bonuses it's time to get your burst pet going. Set '''Interrogator/Golem''' as your pet and equip the spells below. The sixth slot is blank on purpose, you should fill it with Wormhole ('''Golem/Anima Construct''') or Time Distortion '''(Interrogator/Archivist).''' This is because skipping time with Temporal Distortion levels up the Interrogator and the Archivist faster than Wormhole would. Set a standard time of pet levelling for your runs, like 5 or 10 minutes, always starting to count when the pet is upgraded to tier 2. This will help reach consistency. Initial goals should be something like level 80 for '''Archivist''', and level 100 for '''Anima Construct'''. Some spells might seem silly in that set but the point here is to have as many spells as possible going on to maximize '''Interrogator/Archivist''' experience with the least amount of spell shards.{{SpellSet|spell_1_name = Void Lure|spell_1_autocast = Reckless|spell_2_name = Conjure Manabeast|spell_2_autocast = Reckless|spell_3_name = Singularity Beam|spell_3_autocast = Reckless|spell_5_name = Gem Resonance|spell_5_autocast = Reckless|spell_6_name = Void Automaton|spell_6_autocast = Reckless}}
+
+== Phase 4: Bursting ==
+
+Clean all your spell sets and fill them with the following:
+
+{{SpellSet|spell_1_name = Void Lure|spell_1_autocast = Reckless|spell_2_name = Conjure Manabeast|spell_2_autocast = Reckless|spell_3_name = Synthetic Entity|spell_3_autocast = None|spell_4_name = Singularity Beam|spell_4_autocast = Reckless|spell_5_name = Wormhole|spell_5_autocast = Reckless|spell_6_name = Superposition|spell_6_autocast = Reckless}}
+{{SpellSet|spell_1_name = Void Lure|spell_1_autocast = Reckless|spell_2_name = Conjure Manabeast|spell_2_autocast = Reckless|spell_3_name = Synthetic Entity|spell_3_autocast = None|spell_4_name = Singularity Beam|spell_4_autocast = Reckless|spell_5_name = Temporal Distortion|spell_5_autocast = Reckless|spell_6_name = Superposition|spell_6_autocast = None}}
+{{SpellSet|spell_1_name = Stabilize the Flow|spell_1_autocast = None|spell_2_name = Gem Resonance|spell_2_autocast = Reckless|spell_3_name = Converge Timelines|spell_3_autocast = Reckless|spell_4_name = Superposition|spell_4_autocast = Reckless|spell_5_name = Ritual Of Power|spell_5_autocast = Reckless|spell_6_name = Singularity Beam|spell_6_autocast = None}}
+
+Use #1 (from top to bottom) to stack casts of Synthetic Entity and to get the spell shards of all the other required spells. About 100 casts of Synthetic Entity is usually enough. Proceed to use #2 to max out your Time Distortion '''-''' '''If using Anima Construct, swap Superposition out for Void Radiance - Keep in mind however that this will be expensive in spell shards, and in case you can't use it, leave it blank'''. Now, once Time Distortion is maxed out, it's time to finally burst.
+
+Still on #2, Reckless autocast Synthetic Entity. '''When about 10 Synthetic Entity casts are left, disable autocast on Singularity Beam and Temporal Distortion so that you have enough charges and compressed time for the next step. Timing is key for a perfect burst (surprisingly), but it's fine to overlook small mistakes.'''
+
+Switch to preset #3 and cast all the profits increasing spells as fast as possible before finally casting your mind-blowing Singularity Beams. 
+
+This burst will be so powerful it's likely that you'll have a lot of mysteries to exile at this point, but repeating this phase once or twice is encouraged. The amount of sources and upgrades you'll be able to purchase might be able to further increase mysteries count.
+
+-
+
+''Credits:''
+
+''Tito - Master Chronomancer''
+
+''Anonymous - Someone who tested different pets and told me Archivist was indeed the best option''
+
+''Jey - For pointing out that Anima Construct might also be viable''
+[[Category:Guide]]
+[[Category:Chronomancer]]

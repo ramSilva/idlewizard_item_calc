@@ -1,0 +1,71 @@
+{{ClassInfobox
+|level=55
+|unlock=
+*Play 1 days total
+*1500 Nexi
+*325 Upgrades
+|mechanic=Skipped Time
+|source=Temporal Anchor
+|description=''Time traveling techniques were thought to be nigh impossible to attain by the magical society, though some manipulation has been proved be plausible by the most cunning experimenters. While exact time or means cannot be discerned now, since the beginning of the Void exploration age, there've been reports of strangers with knowledge of future or past events appearing all around the world. Over time, this peculiar caste of wizards became known as Chronomancers.''
+}}
+== Description ==
+
+The Chronomancer is an adept time traveler, who's visited countless timelines in past, present, and future. No one really knows where they came from or how they attained their powers. He utilizes unknown technology to manipulate time at will. By compressing the time and tying himself to anchors within certain timelines, he can accelerate his perception of time straight up jump forwards and backwards, using it to prolong and augment his spellcasting.
+
+Unique [[Sources]]: Temporal Anchor, replaces Nexi
+
+== Unlocking ==
+The Chronomancer unlock run should be a very short run - about 15 minutes.
+
+Requirements:
+* e68 Mysteries (which will get up to 1530 Nexi)
+* 175 Empathy (you can use less, but it will take longer - 150 Empathy will bring the timer to 2 seconds at about 1250 Nexi)
+
+# Do not buy any sources until Nexi are available
+# Click the orb, buying any upgrades along the way, until a spell slot can be purchased and cast {{SpellTooltip|spell_name = Gem Resonance}}
+# Buy max Nexi available to you and buy all upgrades
+# Set your pet to [[Homunculus]], ensure the timer is at 1 second (check your Empathy if it isn't). Let this run until your Nexi hit 1507.
+# Buy all sources to max and buy all remaining upgrades, this will certainly cover the final requirement.
+# Select Chronomancer
+
+== Guides ==
+
+[[Chronomancer_Guide_Updated]] (Most up to date)
+
+''To learn about writing your own guides, please see the [[Guide to Guides]].''
+
+== Hero Ability ==
+{{FormulaNotationToggle}}
+{{FormulaNotation
+|percentagecontent=The Chronomancer increases Sources profit by:
+<br><math>L^2 \times C \times ((T + S) \times G)^{0.64} \times 25\%</math>
+<br>where:
+* <math>C = \text{Character Ability Power}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+* <math>L = \text{Hero Level}</math>
+* <math>T = \text{Character Play Time}</math>
+* <math>S = \text{Skipped Time}</math>
+|multipliercontent=The Chronomancer multiplies Sources profit by:
+<br><math>L^2 \times C \times ((T + S) \times G)^{0.64} \times 0.25 + 1</math>
+<br>where:
+* <math>C = \text{Character Ability Power}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+* <math>L = \text{Hero Level}</math>
+* <math>T = \text{Character Play Time}</math>
+* <math>S = \text{Skipped Time}</math>
+}}
+
+== [[Spells]] ==
+{{SpellList}}
+
+== [[Upgrades]] ==
+
+{| class="mw-collapsible mw-collapsed wikitable" width="100%" data-expandtext="Reveal" data-collapsetext="Conceal"
+! colspan="50" |Upgrades
+|-
+|{{UpgradeList}}
+|}
+
+{{SiteNav}}
+[[Category:Classes]]
+[[Category:Wizard]]

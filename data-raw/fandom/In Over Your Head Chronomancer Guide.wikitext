@@ -1,0 +1,184 @@
+{{TODO}}
+{{Guides}}
+
+== Rules ==
+Chronomancer with new Temporal Paradox pet, no class or pet changes. Pet Ability Power increased based on pet level. (1.15 ^ pet lvl)
+
+Gain Unique Time Helix spell. (Time Fork, level requirement = pet level) 
+
+==Scaling==
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! colspan="2" | Overall Scaling to Profits
+|-
+| Inc ^7.39
+|-
+| Pap ^2
+|-
+| Char Exp ^? (Valuable since Char lvl = pet lvl)
+|-
+| Idle, Profit, CaP, VpE, Void Mana ^1
+|-
+| Evo ^0.016
+|}
+
+==Attributes==
+<small>SPC provides very little - Need 250 for Kilt in snap, next is 150 for Amp & Torc in Amp, it may be better to invest 150 points in SPC and forgo Kilt. Needs testing.</small>
+* Fill for items (Requires quite a lot - {{ItemTooltip|Blessed Tapestry}} is your friend for 1sec points)
+* Important Perks
+* Spc & Wis left at 240+10.
+* Dom left at 0
+* Rest fully cap before Vers
+
+== Items ==
+
+== Phases ==
+
+A typical run consists of
+
+* Level Pet (Be able to still cast Time Fork)
+* Stack Spells 
+* Pet Levelling phase (As much as possible so you can no longer cast TF)
+* Skip Time
+* Void Mana Phase 
+* Quick Burst Phase to get upgrades and sources.
+* Void Mana Phase
+* Burst Phase
+
+=== Spell Stacking Set ===
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! Goal 
+| Stack Time Fork, Superposition, RoP.
+|}
+
+<small> NOTE: To begin with you may not be able to cast Time Fork with Wormhole at max casts, so you might need to split the phases up until you can generate enough Compressed Time to cast both at max rate. </small>
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#0#Build up@208,2;66,2;104,2;71,2;17,2;60,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#0#Stack@6;41;24;14;38;57;104;113;69;85;76;1022;204;307;415;401;90;2007;3003}}
+|-
+| colspan="2" |
+* ''The only real items you need here are enough PaP to cast TF + WH at max casts (60/s) since wormhole acts like a better scryball''
+|}
+
+=== Pet Levelling Set ===
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! Goal 
+| Stack some pet levels to get more Compressed Time, but do not overlevel so you cannot cast it anymore. 
+|}
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#1#Pet@71,2;66,2;29,2;67,2;17,2;208,0}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#1#Pet lvl@6;41;24;14;38;58;104;101;69;85;76;1023;209;307;415;401;90;2007;3003}}
+|}
+
+=== Pet Levelling Set 2 ===
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! Goal 
+| Stack as many pet levels as possible. Character level = Pet level, will need to spam this set to put TF back on the spellbar
+|}
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#8#Plvl 2@71,2;66,2;29,2;67,2;17,2;208,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#8#Plvl 2@4;43;29;14;31;57;104;101;66;86;74;1023;209;307;415;401;90;2008;3005}}
+|}
+
+
+=== Skipped Time ===
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#2#time@71,2;66,2;29,2;67,2;17,2;60,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#2#Skip Time@0;41;23;14;35;58;104;113;60;85;70;1008;210;300;415;405;92;2001;3007}}
+|}
+
+=== Void Mana Set ===
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#3#VM@67,2;71,2;33,2;30,2;34,2;104,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#3#VM@5;49;25;15;30;55;113;111;68;89;78;1022;202;309;412;407;99;2007;3006}}
+|}
+
+=== Snap Set 1===
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! Goal 
+| Stack Incant & Max Time Distortion gear to cast Stabilise The Flow and then swap sets to burst so its still effected by incant gear until duration runs out.
+|}
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#4#Snap StF@69,0;4,0;67,0;30,2;34,2;60,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#4#Snap@7;41;23;18;32;56;113;104;68;85;72;1022;209;301;411;409;91;2007;3001}}
+|}
+
+=== Snap Set 2===
+
+{| class="wikitable" style= "max-width:800px"
+|- 
+! Goal 
+| Stack Incant gear to cast Gem Resonance and then swap sets to burst so its still effected by incant gear until duration runs out.
+|}
+
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#5#Snap 2 GR@69,0;4,2;67,0;30,2;34,2;60,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#5#Snap 2 @7;40;23;18;32;56;113;104;68;84;72;1022;209;301;411;409;91;2007;3001}}
+|}
+
+=== Burst Set ===
+{| class="wikitable mw-collapsible mw-expanded" data-expandtext="Show" data-collapsetext="Hide" cellpadding=10 style="max-width: 600px; border: 2px solid #6b6b6b; border-collapse: collapse; background-color: #393939;"
+|+ style="background-color: #393939; border:2px solid #6b6b6b; padding:3px; width:800px" | Spells and BiS
+|-
+| style="background-color: #292929" |{{SpellSet|spellcodes=true|spellset_code=#6#Burst@69,2;4,2;73,2;111,2;17,2;60,2}}
+|-
+| colspan="2" style="background-color: #292929" |
+|- class="enchant-row"
+| colspan="2" | {{ItemPreset|itemcodes=true|itempreset_code=#6#Burst@6;46;24;17;38;57;113;112;67;87;76;1022;204;307;415;401;96;2002;3003}}
+|}
+
+
+==Source Memes==
+[[File:In Over Your Head Source Memes.png|frameless]]
+
+==Spell Memes==
