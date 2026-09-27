@@ -1,14 +1,15 @@
 // Browser smoke test of the production build under the Pages base path: serves dist/ with `vite preview`,
 // drives the app in headless Chrome (real Web Worker) and fails on page errors or failed requests.
-// Usage: npm run build && npm run ui-smoke   (CHROME_PATH overrides the browser; SCREENSHOTS=dir saves screenshots)
+// Usage: npm run build && npm run ui-smoke   (CHROME_PATH overrides the browser; SCREENSHOTS=dir saves screenshots;
+// SMOKE_URL=https://ramsilva.github.io/idlewizard_item_calc/ tests a deployed site instead of the local build)
 import { chromium } from "playwright-core";
 import { preview } from "vite";
 
 const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const SHOTS = process.env.SCREENSHOTS;
 
-const server = await preview({ root: process.cwd(), preview: { port: 0, strictPort: false } });
-const base = server.resolvedUrls.local[0];
+const server = process.env.SMOKE_URL ? null : await preview({ root: process.cwd(), preview: { port: 0, strictPort: false } });
+const base = process.env.SMOKE_URL ?? server.resolvedUrls.local[0];
 const browser = await chromium.launch({ executablePath: CHROME, headless: true });
 const problems = [];
 const watch = (page) => {
@@ -73,7 +74,7 @@ try {
   console.log(`Shared link restores the class (${cls}) and ${fieldId} (${value})`);
 } finally {
   await browser.close();
-  await server.close();
+  await server?.close();
 }
 
 if (problems.length) {

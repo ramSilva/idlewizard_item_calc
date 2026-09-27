@@ -1,5 +1,11 @@
 # Checkpoint 13 (final): all plan todos done; source for the final report
 
+> **Addendum (2026-09-27, after the report): Pages is now enabled and the site is live.** Sections 6 and 8 below describe the earlier state.
+> - Pages was enabled without `gh` by pushing a built `dist/` (from `fbd0161`) as an orphan `gh-pages` branch over SSH. GitHub auto-enabled Pages from that branch: the repo API reports `has_pages: true`, and the "pages build and deployment" run succeeded. https://ramsilva.github.io/idlewizard_item_calc/ returns 200, and its JS, CSS and worker assets load under the base path.
+> - `SMOKE_URL=https://ramsilva.github.io/idlewizard_item_calc/ npm run ui-smoke` passes against the live site (Oni auto result, Shaman sweep 0–55 in about 5 s, share-link restore, no errors).
+> - Because Pages serves `gh-pages` rather than Actions, `deploy.yml` now builds and force-pushes `dist/` to `gh-pages` with `GITHUB_TOKEN` (`contents: write`) instead of using `actions/deploy-pages`. That keeps working without changing repository settings. It still runs only on push to `main` or manually, so it takes over once the branch is merged. Until then the live site is the manual deploy of `fbd0161`.
+> - Remaining manual step: review and merge `feat/item-optimizer` into `main`. Agents must not merge.
+
 Final handoff. Every plan todo in `.cursor/plans/idle_wizard_item_optimizer.plan.md` is `completed`. This file is the source for the final report to the user. Deep technical detail (game mechanics with wiki URLs, engine APIs, stat lists, per-run Chronomancer data, how to add classes/spells/pets) is in `checkpoint-12.md` (committed in `e836e09`), which stays valid: nothing in the engine, data or validation changed in this step.
 
 ## 1. Constraints (unchanged)

@@ -2,7 +2,7 @@
 
 A client-side web app that finds the best item set for [Idle Wizard](https://idlewizard.wiki.gg/). Pick a class, pet, stance and up to 6 spells; the app builds a score formula from the encoded game effects, asks only for the inputs that can change which set wins, and searches item combinations (in a Web Worker) at your enchant levels.
 
-Live site (once Pages is enabled and `main` is deployed): https://ramsilva.github.io/idlewizard_item_calc/
+Live site: https://ramsilva.github.io/idlewizard_item_calc/
 
 ## How scores work
 
@@ -54,4 +54,4 @@ Requires Node 22.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` lints, tests, builds and deploys `dist/` to GitHub Pages on every push to `main` (or manually). `.github/workflows/ci.yml` runs lint, tests and build on other branches and pull requests. Pages must be enabled once in the repository settings (Settings → Pages → Source: GitHub Actions). The Vite `base` is `/idlewizard_item_calc/`.
+GitHub Pages serves the `gh-pages` branch. `.github/workflows/deploy.yml` lints, tests and builds on every push to `main` (or manually), then force-pushes `dist/` to `gh-pages`. `.github/workflows/ci.yml` runs lint, tests and build on other branches and pull requests. The Vite `base` is `/idlewizard_item_calc/`. `SMOKE_URL=https://ramsilva.github.io/idlewizard_item_calc/ npm run ui-smoke` smoke-tests the deployed site in headless Chrome.
