@@ -10,10 +10,10 @@ todos:
     status: completed
   - id: effect-model
     content: Implement stat registry, effect/expression AST, stat dependency graph, and required-input discovery
-    status: pending
+    status: completed
   - id: input-relevance
     content: "Ranking-relevance filter: drop constant log-factors structurally, numeric ratio-invariance check for mixed terms, one separate labelled input per remaining parameter, collapsed section for hidden ones"
-    status: pending
+    status: completed
   - id: encode-data
     content: Encode item database (structure for all, effects for relevant stats), sets, enchant effects, bonus-enchant items, attributes perks
     status: pending
