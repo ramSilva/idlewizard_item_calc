@@ -16,7 +16,7 @@ todos:
     status: completed
   - id: encode-data
     content: Encode item database (structure for all, effects for relevant stats), sets, enchant effects, bonus-enchant items, attributes perks
-    status: pending
+    status: completed
   - id: encode-classes
     content: Encode Oni, Shaman, Temporalist abilities/stances/spells and paired pets, plus spell-based score definitions
     status: pending
