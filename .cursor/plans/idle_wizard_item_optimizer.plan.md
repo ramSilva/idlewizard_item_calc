@@ -31,7 +31,7 @@ todos:
     status: completed
   - id: validate
     content: Unit tests for effect math and golden tests against class-guide BiS embeds
-    status: pending
+    status: completed
   - id: chronomancer-blind-check
     content: "Blind confidence check: save tool result for the Chronomancer guide setup first, then read the guide's gear, write the comparison and classify each difference (bug / assumption or outdated / unclear)"
     status: pending
