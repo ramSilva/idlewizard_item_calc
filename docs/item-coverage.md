@@ -11,8 +11,8 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 
 | Texts | Blocks | Modelled clauses | not-production | mechanic | mythic-random | unparsed | Effects | Formula effects | Unverified effects |
 |---|---|---|---|---|---|---|---|---|---|
-| Item tiers at max quality | 223 | 400 | 17 | 30 | 20 | 0 | 422 | 52 | 346 |
-| All item tiers | 916 | 1280 | 67 | 85 | 20 | 0 | 1319 | 204 | 1141 |
+| Item tiers at max quality | 223 | 404 | 17 | 26 | 20 | 0 | 426 | 52 | 349 |
+| All item tiers | 916 | 1286 | 67 | 79 | 20 | 0 | 1325 | 204 | 1146 |
 | Set tiers | 59 | 57 | 0 | 2 | 0 | 0 | 65 | 0 | 47 |
 
 ## Unmodelled clauses (max quality, sets and enchants; Mythic random bonuses omitted)
@@ -24,8 +24,6 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 | Darklight Claws (enchant) | not-production | Offline bonus +25% | The scored phase is an online burst. |
 | Darklight Tunic | not-production | Offline bonus +300% | The scored phase is an online burst. |
 | Darklight Tunic (enchant) | not-production | Offline bonus +30% | The scored phase is an online burst. |
-| The Great Journey | mechanic | reduces level requirements +1 | Spell/class/pet level requirements are not modelled. |
-| Falconer's Leather Wrappings | mechanic | reduces level requirements +1 | Spell/class/pet level requirements are not modelled. |
 | Light Of Eighth Star | not-production | Maximum resources in jars +3000 | Doesn't change mana production in the scored phase. |
 | Light Of Eighth Star | not-production | additionally +200% | Doesn't change mana production in the scored phase. |
 | Shadow Tendril | not-production | Offline bonus +200% | The scored phase is an online burst. |
@@ -33,8 +31,6 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 | Umbral Coil | not-production | offline bonus +200% | The scored phase is an online burst. |
 | Umbral Coil (enchant) | not-production | Offline bonus +25% | The scored phase is an online burst. |
 | Architectural Databelt | mechanic | Red catalyst power +10% (multiplicative) | Catalysts (source quantity multipliers) are not modelled. |
-| Nomadic Wrists | mechanic | reduces level requirements +1 | Spell/class/pet level requirements are not modelled. |
-| Bite Sleeves | mechanic | level requirement reduction +3 | Spell/class/pet level requirements are not modelled. |
 | Darklight Mantle | not-production | Offline bonus +150% | The scored phase is an online burst. |
 | Darklight Mantle (enchant) | not-production | Offline bonus +30% | The scored phase is an online burst. |
 | Shadowflame Loop | not-production | Time without clicks before Idle mode activates +1 min | Doesn't change mana production in the scored phase. |
@@ -83,11 +79,9 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 
 | Attribute | Points | Perk | Reason |
 |---|---|---|---|
-| Intelligence | 75 | Reduces Level requirements by 1 | mechanic |
 | Insight | 100 | Collecting a Void Entity makes the next one appear 2 seconds sooner | not-production |
 | Insight | 125 | Reduces Void Mana degeneration by 50% | not-production |
 | Patience | 25 | Reduces time without clicks before Idle mode activates by 5 sec | not-production |
 | Patience | 50 | First 3 clicks while in Idle mode don't reset Idle mode | not-production |
 | Patience | 100 | Ability to click without resetting Idle mode now replenishes once every minute | not-production |
 | Patience | 225 | Increases green catalysts power by 25% (additive) | mechanic |
-| Mastery | 125 | Reduces Level requirements by 1 | mechanic |

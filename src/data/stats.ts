@@ -78,11 +78,11 @@ const spells: StatDef[] = [
   multiplierStat("Spell.MaxCastRate", "Maximum cast rate of spells per second", "Spells", { source: ITEM_DATA }),
   multiplierStat("Spell.AutoclicksFromSpells", "Autoclick amount from spells", "Spells", { source: ITEM_DATA }),
   multiplierStat("Spell.AccumulatedCastCountFactor", "Cast count multiplier for accumulated and persistent spells", "Spells", {
-    description: "The Rubedo Engine counts these casts twice for spells' cast counts.",
+    description: "The Rubedo Engine counts these casts twice as they are made; cast counts are inputs, so no score reads this.",
     source: ITEM_DATA,
   }),
   multiplierStat("Spell.AugmentCastCountFactor", "Cast count multiplier for augment spells", "Spells", {
-    description: "Ritual Disk counts these casts twice for spells' cast counts.",
+    description: "Ritual Disk counts these casts twice as they are made; cast counts are inputs, so no score reads this.",
     source: ITEM_DATA,
   }),
   multiplierStat("Spell.PersistentActiveAccumulationFactor", "Persistent spells' active-part accumulation per cast", "Spells", {
@@ -100,6 +100,19 @@ const spells: StatDef[] = [
 
 const character: StatDef[] = [
   inputStat("Char.Level", "Character level", "Character", { default: 1, kind: "integer", min: 1, logScale: true }, { source: MECHANICS }),
+  inputStat(
+    "Char.LevelRequirementReduction",
+    "Level requirement reduction without items",
+    "Character",
+    { default: 0, kind: "integer", min: 0, hint: "From Renown, challenges and pets such as Ley Keeper or Geode; items and attribute perks are added by the tool." },
+    { source: MECHANICS },
+  ),
+  derivedStat("Char.PhylacteryLevel", "Character level that phylacteries scale from", "Character", f("Char.Level + Char.LevelRequirementReduction"), {
+    source: unverified(
+      { url: "https://idlewizard.wiki.gg/wiki/Shaman_Guide", verified: true },
+      'Phylacteries "scale multiplicatively from Character level"; the Shaman guide says level reduction also counts (Eerie Turquoise), and other guides use Ley Keeper\'s level reduction to boost phylacteries. Read as level + reduction.',
+    ),
+  }),
   inputStat(
     "Hero.AbilityPower",
     "Character ability power (CAP) without item and attribute bonuses",

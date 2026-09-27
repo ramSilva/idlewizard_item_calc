@@ -131,6 +131,20 @@ describe("worked examples from the wiki", () => {
     expect(evalExpr(bonus, { "Pet.Level": 306 })).toBeCloseTo(24, 9);
   });
 
+  it("Conjured Razorspaulders' Legendary pet ability power is +100% like its lower tiers and the Fandom text", () => {
+    const pap = tierOf(itemByName("Conjured Razorspaulders")!).effects.find((e) => e.stat === "Pet.AbilityPower")!;
+    expect(pap).toMatchObject({ op: "mul", value: 2, source: { verified: true } });
+    expect(effectValue("Conjured Razorspaulders", "Pet.AbilityPower", "Epic")).toBeCloseTo(1.75, 12);
+  });
+
+  it("phylacteries compound per character level and count level requirement reduction", () => {
+    const tangerine = effectValue("Robust Tangerine Phylactery", "Mysteries.Power") as Expr;
+    expect(evalExpr(tangerine, { "Char.Level": 200 })).toBeCloseTo(1.023 ** 200, 6);
+    expect(evalExpr(tangerine, { "Char.Level": 200, "Char.LevelRequirementReduction": 3 })).toBeCloseTo(1.023 ** 203, 6);
+    expect(effectValue("Bite Sleeves", "Char.LevelRequirementReduction")).toBe(3);
+    expect(effectValue("The Great Journey", "Char.LevelRequirementReduction")).toBe(1);
+  });
+
   it("Scales of Appraisal matches the Enchantments page's experiment efficiency formula", () => {
     const e = effectValue("Scales of Appraisal", "Items.ExperimentEfficiency") as Expr;
     expect(evalExpr(e, { "Items.ExperimentsThisRealm": 99 })).toBeCloseTo(1 + 0.1 * Math.sqrt(2), 12);

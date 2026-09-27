@@ -40,12 +40,15 @@ describe("spells", () => {
     }
   });
 
-  it("uses per-spell cast inputs that The Rubedo Engine and Ritual Disk count twice", () => {
+  it("reads per-spell cast counts as the game shows them, so The Rubedo Engine and Ritual Disk don't change a burst", () => {
     const rop = SPELL_BEHAVIOURS.get(60)!;
-    const counted = rop.stats.find((s) => s.id === "Spell.RitualOfPower.CountedCasts")!;
-    expect(refsOf(counted.base as Expr)).toEqual(new Set(["Spell.RitualOfPower.CastsThisExile", "Spell.AccumulatedCastCountFactor"]));
-    const qi = SPELL_BEHAVIOURS.get(93)!.stats.find((s) => s.id === "Spell.QuasiIncantation.CountedCasts")!;
-    expect(refsOf(qi.base as Expr)).toEqual(new Set(["Spell.QuasiIncantation.CastsThisExile", "Spell.AugmentCastCountFactor"]));
+    expect(rop.stats.map((s) => s.id)).toEqual(["Spell.RitualOfPower.CastsThisExile"]);
+    expect(rop.effects.some((e) => refsOf(e.value as Expr).has("Spell.RitualOfPower.CastsThisExile"))).toBe(true);
+    const qi = SPELL_BEHAVIOURS.get(93)!;
+    for (const e of [...rop.effects, ...qi.effects]) {
+      const refs = refsOf(e.value as Expr);
+      expect(refs.has("Spell.AccumulatedCastCountFactor") || refs.has("Spell.AugmentCastCountFactor")).toBe(false);
+    }
   });
 });
 

@@ -47,12 +47,14 @@ export const ENCHANTMENTS_URL = "https://idlewizard.wiki.gg/wiki/Enchantments";
 
 const NOTES = {
   percentMul: 'Percentage item bonuses are read as multipliers ×(1 + N%) (edust bonuses are "multiplicative unless stated otherwise", Enchantments page).',
-  base: '"(base)" is read as an addition to the stat\'s base value.',
+  base: '"(base)" is read as an addition to the stat\'s base value; the older Fandom item data words the same bonuses "(additive)".',
   divisor: "Divisors from several sources are assumed to multiply.",
   points: "Read as percentage points added to the critical chance.",
   reduce: "Read as a factor ×(1 − N%).",
   decrease: 'A "decreases X +N%" clause is read as a factor ×(1 − N%).',
-  levelScaling: '"Scales multiplicatively from Character level" is read as raising the per-level factor to the power of the character level.',
+  levelScaling:
+    '"Scales multiplicatively from Character level" is read as raising the per-level factor to the power of the character level plus level requirement reduction. The guides\' character-experience scalings (Oni 0.39, Shaman 0.88, Temporalist 1.34) are only reached this way; a linear reading would make phylacteries nearly insensitive to levels.',
+  levelReduction: "Only phylacteries use it (the guides say level requirement reduction raises their power); spell, class and pet level requirements are not modelled.",
   carried: "The value-only clause is applied to the stat named just before it.",
   shared: "The stat names listed before the value share it.",
 } as const;
@@ -98,12 +100,7 @@ export const PHRASES: Readonly<Record<string, Target>> = {
   "incantation efficiency": multiplier("Spell.IncantationEfficiency"),
   "summoning efficiency": multiplier("Spell.SummoningEfficiency"),
   "character ability power": multiplier("Hero.AbilityPower"),
-  "pet ability power": {
-    stat: "Pet.AbilityPower",
-    percent: "mul",
-    flat: "add",
-    flatNote: 'A flat "+N" (no %) is added to the PAP base as written; it may be a wiki typo for +N%.',
-  },
+  "pet ability power": multiplier("Pet.AbilityPower"),
   "idle bonus": multiplier("Idle.Bonus"),
   "mysteries power": multiplier("Mysteries.Power"),
   "void mana per entity": { stat: "Void.ManaPerEntity", percent: "mul", flat: "add", flatStat: "Void.ManaPerEntityFlat" },
@@ -160,6 +157,8 @@ export const PHRASES: Readonly<Record<string, Target>> = {
   "the spawnrate of void entities": multiplier("Void.EntitySpawnRate"),
   "entities spawnrate": multiplier("Void.EntitySpawnRate", '"Entities" is read as Void entities.'),
   "character level": { stat: "Char.Level", flat: "add" },
+  "level requirement reduction": { stat: "Char.LevelRequirementReduction", flat: "add", flatNote: NOTES.levelReduction },
+  "reduces level requirements": { stat: "Char.LevelRequirementReduction", flat: "add", flatNote: NOTES.levelReduction },
   "versatility per-point attribute bonus' power": { stat: "AttrBonus.Versatility", percent: "mul", flatStat: "AttrBonus.Versatility" },
 };
 
@@ -180,7 +179,6 @@ export const UNMODELLED_RULES: readonly UnmodelledRule[] = [
   { pattern: /^ascension forms experience gain\b/i, reason: "not-production", note: NOT_PRODUCTION },
   { pattern: /^attribute gain speed\b/i, reason: "not-production", note: "Attribute points are an input." },
   { pattern: /^time without clicks before idle mode activates\b/i, reason: "not-production", note: NOT_PRODUCTION },
-  { pattern: /^(level requirement reduction|reduces level requirements)\b/i, reason: "mechanic", note: "Spell/class/pet level requirements are not modelled." },
   { pattern: /^red catalyst power\b/i, reason: "mechanic", note: "Catalysts (source quantity multipliers) are not modelled." },
   { pattern: /^amount of echoes held by echo traps\b/i, reason: "mechanic", note: "Echo traps are not modelled." },
   { pattern: /liquid shadow|shadow clots/i, reason: "mechanic", note: LIQUID_SHADOW },
@@ -309,7 +307,7 @@ function applyLevelScaling(effects: ItemEffect[]): ItemEffect[] {
     if (e.op !== "mul" || typeof e.value !== "number") return e;
     return {
       ...e,
-      value: f(`${e.value} ^ Char.Level`),
+      value: f(`${e.value} ^ Char.PhylacteryLevel`),
       source: { ...e.source, verified: false, note: joinNotes(e.source.note, NOTES.levelScaling) },
     };
   });

@@ -44,6 +44,18 @@ const castsOf = (id: number): string => spellStat(spellById(id), "CastsThisExile
 const chargesOf = (id: number): string => spellStat(spellById(id), "Charges");
 const snappedOf = (id: number, stat: string): string => spellStat(spellById(id), `Snapped${stat}`);
 
+// Basic Mechanics' Wizard XP table: each level needs 1.09× the previous one; level 300 takes 2.58e15 XP in total, and
+// Legacy milestones ask for character levels 110–300, so late-game levels are in the low hundreds.
+const XP_TABLE = "https://idlewizard.wiki.gg/wiki/Basic_Mechanics#XP_to_Level";
+const characterLevel = (value: number, note: string): DefaultValue =>
+  inferred(XP_TABLE, value, `${note} The Wizard XP table (level 300 = 2.58e15 XP) and Legacy's level milestones (110–300) put late-game levels in the low hundreds.`);
+/** Total XP to reach a level, from the Wizard XP table: (1.09^(n−1) − 1) × 50000/3. */
+const experienceForLevel = (level: number): number => Number((((1.09 ** (level - 1) - 1) * 50000) / 3).toPrecision(3));
+
+/** The burst presets use items that only drop in key-locked Expedition locations, which need the maximum expedition level. */
+const maxExpeditionLevel = (item: string, location: string, guide: string): DefaultValue =>
+  fromGuide(guide, 100, `The burst preset uses ${item}, which drops in ${location}, a key-locked location that needs expedition level 100 (the maximum, ${wiki("Expeditions")}).`);
+
 /** Numbers above ~1e308 don't fit an input's default; the Mysteries count only shifts every set's score equally at this size. */
 const LATE_MYSTERIES = placeholder(1e300, "e550+ Mysteries (the guides' range) exceed a number input's range; any huge value ranks sets the same.");
 
@@ -97,11 +109,15 @@ export const ONI: ClassDef = {
     [buildingShare(6)]: fromGuide(ONI_GUIDE, 1, "The burst buys Hellholes (Circles of Power) and Anointed Ashes boosts them; assumed to hold all production."),
     "Items.LegionReward": fromGuide(ONI_GUIDE, 1, 'Burst tabs like "Living Sin 17+5" add 5 bonus levels: Resonator Ring +4 and The Legion +1.'),
     [chargesOf(86)]: fromGuide(ONI_GUIDE, 1e9, "Stack Furious Strike charges before the burst; they cap at 1e9."),
-    "Pet.Level": inferred(ONI_GUIDE, 600, "Commissar's Torn Sleeve gives 2 perks (50–74 attribute points, 0.08 per pet level) in the guide's late burst."),
+    "Pet.Level": inferred(
+      ONI_GUIDE,
+      750,
+      "The guide's latest attribute column has Commissar's Torn Sleeve giving 2 perks (50–74 attribute points at 0.08 per pet level, so pet levels 625–925).",
+    ),
     "Pet.MaxLevelThisExile": inferred(wiki("Living_Sin"), 1000, "Living Sin unlocks at highest pet level 1000 this Exile; Interrogator box levelling raises it for Possessed Blade."),
     "Pet.TimeCurrent": placeholder(86400, "one day with the burst pet.", ONI_GUIDE),
     "Pet.ExperienceTotal": placeholder(1e20, "total Living Sin/Hungerer experience.", ONI_GUIDE),
-    "Char.Level": placeholder(1000, "character level at the guide's burst.", ONI_GUIDE),
+    "Char.Level": characterLevel(200, "Character level at the burst."),
     "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", ONI_GUIDE),
     "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", ONI_GUIDE),
     "Spell.IncantationCastsThisExile": placeholder(1e8, "incantations stacked with Berzerker in the buildup phase.", ONI_GUIDE),
@@ -115,7 +131,7 @@ export const ONI: ClassDef = {
     "Mysteries.Count": LATE_MYSTERIES,
     "Void.Mana": placeholder(1e10, "Void mana collected with Voidterror before the burst.", ONI_GUIDE),
     "Idle.Bonus": placeholder(100, "idle bonus before items and attributes.", ONI_GUIDE),
-    "Expeditions.Level": placeholder(50, "expedition level (Anima Core is in the burst presets).", wiki("Expeditions")),
+    "Expeditions.Level": maxExpeditionLevel("Anointed Ashes", "Secret Altar", ONI_GUIDE),
   },
   mainBuilding: 6,
   buildingNames: { 3: "Monuments", 4: "Grim Trophies", 6: "Hellholes" },
@@ -169,7 +185,7 @@ export const SHAMAN: ClassDef = {
     "Char.ClassTimeHours": inferred(SHAMAN_GUIDE, 86, "Long exiles: about 80 hours of pet time stacking plus buildup."),
     "Click.AutoclicksThisExile": placeholder(1e12, "autoclicks this Exile (the class ability softcaps at 7e7; the guide mentions 1e12 for a realm).", SHAMAN_GUIDE),
     "Pet.Level": placeholder(300, "Herald of Rot level at the burst.", SHAMAN_GUIDE),
-    "Char.Level": placeholder(1000, "character level at the burst.", SHAMAN_GUIDE),
+    "Char.Level": characterLevel(200, "Character level at the burst."),
     "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", SHAMAN_GUIDE),
     "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", SHAMAN_GUIDE),
     "Spell.SummoningEfficiency": {
@@ -187,7 +203,7 @@ export const SHAMAN: ClassDef = {
     "Mysteries.Count": LATE_MYSTERIES,
     "Void.Mana": placeholder(1e10, "Void mana collected before the burst.", SHAMAN_GUIDE),
     "Idle.Bonus": placeholder(100, "idle bonus before items, attributes and the class ability.", SHAMAN_GUIDE),
-    "Expeditions.Level": placeholder(50, "expedition level (Binding Sigil is in the burst presets).", wiki("Expeditions")),
+    "Expeditions.Level": maxExpeditionLevel("Warbanner Fragment", "Cathedral", SHAMAN_GUIDE),
     "Misc.CatalystShards": inferred(TEMPORALIST_GUIDE, 2e9, "Miniaturized Accelerator beats Lucky Amulet above ~1.6e8–3.2e10 catalysts (Temporalist guide); the Shaman burst uses it."),
   },
   mainBuilding: 2,
@@ -230,12 +246,13 @@ export const TEMPORALIST: ClassDef = {
   defaultScore: "temporalist-burst",
   defaults: {
     ...attributeDefaults(TEMPORALIST_GUIDE, { Intelligence: 155, Insight: 140, Spellcraft: 250, Wisdom: 200, Dominance: 0, Patience: 150, Mastery: 250, Empathy: 175 }),
-    [buildingShare(8)]: {
+    [buildingShare(1)]: {
       value: 1,
       source: {
-        url: TEMPORALIST_PAGE.url,
+        url: TEMPORALIST_GUIDE,
         verified: false,
-        note: "Assumed: Ley Temporal Singletons (The Nexus's replacement) hold the production; the guide's burst also carries Mana Gems profit items, so this may be wrong.",
+        note:
+          "Assumed: Mana Gems hold the burst's production. The guide snaps Gem Resonance for the burst and carries Mana Gems profit items (Gemshoes, Necrotic Powerstone) but no Nexus-profit item, and swaps Fiery Grips for The Clockcarers between 15+5 and 22+5, where their Evocation enchants cross over only if Clockcarers' Nexi profit doesn't count.",
       },
     },
     "Items.LegionReward": fromGuide(TEMPORALIST_GUIDE, 1, 'Burst tabs like "Enchant 15+5" add 5 bonus levels: Resonator Ring +4 and The Legion +1.'),
@@ -245,8 +262,8 @@ export const TEMPORALIST: ClassDef = {
     "Pet.RealTime": inferred(TEMPORALIST_GUIDE, 3 * 86400, "Mechanos Apexis's Kelphior's Black Beam cast rate maxes after 24 hours; long exiles."),
     "Char.ClassTimeHours": inferred(TEMPORALIST_GUIDE, 72, "Long exiles (the class scales with time); three days assumed."),
     "Time.SkippedYears": placeholder(1e6, "skipped time; Mechanos Apexis unlocks at 1e12 skipped time (about 3e4 years if in seconds).", wiki("Mechanos_Apexis")),
-    "Char.ExperienceTotal": placeholder(1e12, "total character experience.", TEMPORALIST_GUIDE),
-    "Char.Level": placeholder(2000, "character level at the burst.", TEMPORALIST_GUIDE),
+    "Char.ExperienceTotal": inferred(XP_TABLE, experienceForLevel(250), "Total XP of the default character level, from the Wizard XP table."),
+    "Char.Level": characterLevel(250, 'Character level at the burst; the guide calls Temporalist "very good at gaining character levels".'),
     "Pet.Level": placeholder(300, "Mechanos Apexis level at the burst.", TEMPORALIST_GUIDE),
     "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", TEMPORALIST_GUIDE),
     "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", TEMPORALIST_GUIDE),
@@ -262,9 +279,9 @@ export const TEMPORALIST: ClassDef = {
     "Mysteries.Count": LATE_MYSTERIES,
     "Void.Mana": placeholder(1e10, "Void mana collected with Void Radiance before the burst.", TEMPORALIST_GUIDE),
     "Idle.Bonus": placeholder(100, "idle bonus before items and attributes.", TEMPORALIST_GUIDE),
-    "Expeditions.Level": placeholder(50, "expedition level (Anima Core is in the burst presets).", wiki("Expeditions")),
+    "Expeditions.Level": maxExpeditionLevel("Necrotic Powerstone", "Eye of Chaos", TEMPORALIST_GUIDE),
   },
-  mainBuilding: 8,
+  mainBuilding: 1,
   buildingNames: { 8: "Ley Temporal Singletons" },
   unmodelled: [
     { text: "Compressed Time (maximum L × 7.5)", note: "Compressed Time isn't modelled." },
@@ -277,7 +294,6 @@ const CHRONOMANCER_PAGE: Source = { url: wiki("Chronomancer"), verified: true };
 const CHRONOMANCER_GUIDE = "https://idle-wizard.fandom.com/wiki/Chronomancer_Guide_Updated";
 const chronomancerSection = (heading: string): string => `${CHRONOMANCER_GUIDE}#${heading.replace(/ /g, "_")}`;
 const CHRONO_ATTRIBUTES = chronomancerSection("Attributes");
-const CHRONO_LEVELS = chronomancerSection("Phase 1: Build up Levels");
 const CHRONO_STACKING = chronomancerSection("Phase 2: Build up Superposition and Ritual of Power");
 const CHRONO_PREBURST = chronomancerSection("Phase 3: PreBurst");
 const CHRONO_BURST = chronomancerSection("Phase 4: Bursting");
@@ -332,7 +348,7 @@ export const CHRONOMANCER: ClassDef = {
     [castsOf(60)]: placeholder(1e5, "Ritual Of Power casts stacked in phase 2.", CHRONO_STACKING),
     [castsOf(101)]: placeholder(100, "Time Helix casts from phase 2's second spell set.", CHRONO_STACKING),
     "Spell.CastsThisExile": placeholder(1e7, "spells cast this Exile (phases 1 and 2 cast recklessly).", CHRONO_STACKING),
-    "Char.Level": placeholder(1000, "character level after the level buildup.", CHRONO_LEVELS),
+    "Char.Level": characterLevel(200, "Character level after the level buildup (same generic magnitude as the other classes)."),
     "Pet.Level": placeholder(300, "Risen Giant level at the burst.", CHRONO_BURST),
     "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", CHRONO_BURST),
     "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", CHRONO_BURST),

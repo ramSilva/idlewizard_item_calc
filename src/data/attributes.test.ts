@@ -39,6 +39,19 @@ describe("attribute per-point bonuses and perks", () => {
     expect(withCirclet).toBeCloseTo(0.35 * 1.025 ** 250, 6);
   });
 
+  it("stops item attribute bonuses at the attribute cap", () => {
+    const dom = { [attributePoints("Dominance")]: 200 };
+    expect(statValue("Click.AutoclickProfit", dom, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 250, 4);
+    expect(statValue("Click.AutoclickProfit", { ...dom, "Misc.AttributeCap": 225 }, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 225, 4);
+    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 50 }, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 200, 4);
+  });
+
+  it("Intelligence 75 and Mastery 125 reduce level requirements, which phylacteries count", () => {
+    const inputs = { "Char.Level": 200, [attributePoints("Intelligence")]: 75, [attributePoints("Mastery")]: 125 };
+    expect(statValue("Char.PhylacteryLevel", inputs)).toBeCloseTo(202, 9);
+    expect(statValue("Char.PhylacteryLevel", { ...inputs, "Char.LevelRequirementReduction": 3 })).toBeCloseTo(205, 9);
+  });
+
   it("Spellcraft incantation perks and per-point Evocation stack multiplicatively", () => {
     const inputs = { [attributePoints("Spellcraft")]: 225 };
     expect(statValue("Spell.IncantationEfficiency", inputs)).toBeCloseTo(1.15 * 1.2 * 1.25 * 1.25, 12);

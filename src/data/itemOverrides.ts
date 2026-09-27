@@ -77,6 +77,23 @@ export const ITEM_OVERRIDES: Readonly<Record<string, readonly ClauseOverride[]>>
       build: (m, ctx) => ({ effects: [overrideEffect(ctx, "Pet.ChargeSpeed", "mul", `1 + ${m[1]} * log10(Hero.AbilityPower + 1)`, AS_FRACTION)] }),
     },
   ],
+  "Conjured Razorspaulders": [
+    {
+      pattern: /pet ability power \+100(?![\d.%])/,
+      build: (_m, ctx) => ({
+        effects: [
+          overrideEffect(
+            ctx,
+            "Pet.AbilityPower",
+            "mul",
+            2,
+            'wiki.gg\'s Legendary text drops the "%"; the lower tiers (+50%, +75%) and the older Fandom text ("character and pet ability power by 100%", https://idle-wizard.fandom.com/wiki/Module:Data/Items) give +100%.',
+            true,
+          ),
+        ],
+      }),
+    },
+  ],
   "Symbol Of Authority": [
     {
       pattern: rx(`summoning efficiency \\+${N} \\* character level, based on character level`),

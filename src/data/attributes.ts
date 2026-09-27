@@ -15,8 +15,12 @@ const THRESHOLD_NOTE = "https://idlewizard.wiki.gg/wiki/Temporalist_Guide_(e550%
 
 /** Points the user assigns. */
 export const attributePoints = (a: Attribute): string => `AttrPoints.${a}`;
-/** Assigned points plus item bonuses; per-point bonuses and perks use this. */
+/** Assigned points plus item bonuses; item requirements use this. */
 export const attributeStat = (a: Attribute): string => `Attr.${a}`;
+/** Assigned points plus item bonuses, up to the attribute cap; per-point bonuses and perks use this. */
+export const attributeEffective = (a: Attribute): string => `AttrEffective.${a}`;
+export const ATTRIBUTE_CAP = "Misc.AttributeCap";
+const PARAGON = "https://idlewizard.wiki.gg/wiki/Paragon";
 const perPoint = (a: Attribute): string => `AttrBonus.${a}`;
 
 interface PerPoint {
@@ -37,7 +41,11 @@ const PER_POINT: Record<Attribute, PerPoint> = {
   Versatility: { bonus: 0.018, stat: "Prod.Global", label: "profits" },
 };
 
-export const ATTRIBUTE_STATS: readonly StatDef[] = ATTRIBUTES.flatMap((a) => [
+export const ATTRIBUTE_STATS: readonly StatDef[] = [
+  inputStat(ATTRIBUTE_CAP, "Attribute cap", "Attributes", { default: 250, kind: "integer", min: 100, max: 250, hint: "100, raised by 25 at Paragon 6, 10, 12, 15, 21 and 24 (250)." }, {
+    source: { url: PARAGON, verified: true },
+  }),
+  ...ATTRIBUTES.flatMap((a) => [
   inputStat(attributePoints(a), `${a} points assigned`, "Attributes", { default: 0, kind: "integer", min: 0, hint: "Points you assign; item attribute bonuses are added by the tool." }, {
     source: VERIFIED,
   }),
@@ -48,16 +56,25 @@ export const ATTRIBUTE_STATS: readonly StatDef[] = ATTRIBUTES.flatMap((a) => [
       note: "Item attribute bonuses are assumed to count as points for per-point bonuses and perks (perk thresholds: see the Temporalist guide).",
     },
   }),
+  derivedStat(attributeEffective(a), `${a} counted by bonuses and perks`, "Attributes", f(`min(${attributeStat(a)}, ${ATTRIBUTE_CAP})`), {
+    source: {
+      url: "https://idlewizard.wiki.gg/wiki/Shaman_Guide",
+      verified: false,
+      note:
+        "Item attribute bonuses are assumed to stop at the attribute cap: the Shaman guide says Voidstrike Seal, Encircling Trophies and Bite Sleeves are best only \"before maxing out their respective attributes\", and the Temporalist guide needs just 240 points with Innate Aptitude's bonus.",
+    },
+  }),
   constantStat(perPoint(a), `${a} bonus per point`, "Attributes", PER_POINT[a].bonus, {
     description: `Each point multiplies ${PER_POINT[a].label} by (1 + this).`,
     source: VERIFIED,
   }),
-]);
+  ]),
+];
 
 const perPointEffects: Effect[] = ATTRIBUTES.map((a) => ({
   stat: PER_POINT[a].stat,
   op: "mul",
-  value: f(`(1 + ${perPoint(a)}) ^ ${attributeStat(a)}`),
+  value: f(`(1 + ${perPoint(a)}) ^ ${attributeEffective(a)}`),
   label: `${a} points`,
   source: { ...VERIFIED, note: "Each assigned point gives a percentage boost, applied multiplicatively: (1 + B)^X." },
 }));
@@ -74,12 +91,19 @@ interface Perk {
   source?: Source;
 }
 
+const LEVEL_REDUCTION: Source = {
+  url: PAGE,
+  verified: false,
+  note: "Only phylacteries use it (the guides say level requirement reduction raises their power); spell, class and pet level requirements are not modelled.",
+};
+
 const log10p1 = (id: string) => `log10(${id} + 1)`;
 
 const PERKS: Partial<Record<Attribute, Perk[]>> = {
   Intelligence: [
     { points: 25, text: "Increases Mysteries power by 2% (total of 5%)", stat: "Mysteries.Power", op: "add", value: "0.02", source: VERIFIED },
     { points: 50, text: "Increases Mysteries power by 2% (total of 7%)", stat: "Mysteries.Power", op: "add", value: "0.02", source: VERIFIED },
+    { points: 75, text: "Reduces Level requirements by 1", stat: "Char.LevelRequirementReduction", op: "add", value: "1", source: LEVEL_REDUCTION },
     { points: 100, text: "Increases Mysteries power by 3% (total of 10%)", stat: "Mysteries.Power", op: "add", value: "0.03", source: VERIFIED },
     { points: 125, text: "Increases Mysteries' power by 5% (total of 15%)", stat: "Mysteries.Power", op: "add", value: "0.05", source: VERIFIED },
     {
@@ -234,6 +258,7 @@ const PERKS: Partial<Record<Attribute, Perk[]>> = {
     { points: 50, text: "Increases character experience gained from actions by 50%", stat: "Char.ExperienceFromActions", op: "mul", value: "1.5" },
     { points: 75, text: "Increases character experience from sources by 15%", stat: "Char.ExperienceFromSources", op: "mul", value: "1.15" },
     { points: 100, text: "Increases character ability power growth rate by 50%", stat: "Hero.AbilityPowerGrowth", op: "mul", value: "1.5" },
+    { points: 125, text: "Reduces Level requirements by 1", stat: "Char.LevelRequirementReduction", op: "add", value: "1", source: LEVEL_REDUCTION },
     { points: 150, text: "Increases profits by 1.5% × character level", stat: "Prod.Global", op: "mul", value: "1 + 0.015 * Char.Level" },
     { points: 175, text: "Increases character experience from sources by 25%", stat: "Char.ExperienceFromSources", op: "mul", value: "1.25" },
     { points: 200, text: "Increases character ability power by 0.075% × achievement points", stat: "Hero.AbilityPower", op: "mul", value: "1 + 0.00075 * Misc.AchievementPoints" },
@@ -266,18 +291,16 @@ export interface UnmodelledPerk extends UnmodelledClause {
 }
 
 export const UNMODELLED_PERKS: readonly UnmodelledPerk[] = [
-  { attribute: "Intelligence", points: 75, text: "Reduces Level requirements by 1", reason: "mechanic", note: "Spell/class/pet level requirements are not modelled." },
   { attribute: "Insight", points: 100, text: "Collecting a Void Entity makes the next one appear 2 seconds sooner", reason: "not-production", note: "Changes Void mana collection before the burst, which is an input." },
   { attribute: "Insight", points: 125, text: "Reduces Void Mana degeneration by 50%", reason: "not-production", note: "Changes Void mana collection before the burst, which is an input." },
   { attribute: "Patience", points: 25, text: "Reduces time without clicks before Idle mode activates by 5 sec", reason: "not-production" },
   { attribute: "Patience", points: 50, text: "First 3 clicks while in Idle mode don't reset Idle mode", reason: "not-production" },
   { attribute: "Patience", points: 100, text: "Ability to click without resetting Idle mode now replenishes once every minute", reason: "not-production" },
   { attribute: "Patience", points: 225, text: "Increases green catalysts power by 25% (additive)", reason: "mechanic", note: "Catalysts are not modelled." },
-  { attribute: "Mastery", points: 125, text: "Reduces Level requirements by 1", reason: "mechanic", note: "Spell/class/pet level requirements are not modelled." },
 ];
 
 function perkValue(a: Attribute, perk: Perk): Expr {
-  const reached = `ge(${attributeStat(a)}, ${perk.points})`;
+  const reached = `ge(${attributeEffective(a)}, ${perk.points})`;
   return perk.op === "mul" ? f(`if(${reached}, ${perk.value}, 1)`) : f(`${reached} * (${perk.value})`);
 }
 

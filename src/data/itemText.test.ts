@@ -78,11 +78,11 @@ describe("parseEffectText", () => {
     expect(r.effects.every((e) => e.op === "add" && e.value === 5 && e.stat.startsWith("Attr."))).toBe(true);
   });
 
-  it("raises phylactery factors to the character level, including decreases", () => {
+  it("raises phylactery factors to the character level plus level requirement reduction, including decreases", () => {
     const r = parse("Incantation efficiency +0.36%, decreases Evocation efficiency +0.75%. Scales multiplicatively from Character level.");
     expect(brief(r.effects)).toEqual([
-      ["Spell.IncantationEfficiency", "mul", "(1.0036 ^ Char.Level)"],
-      ["Spell.EvocationEfficiency", "mul", "(0.9925 ^ Char.Level)"],
+      ["Spell.IncantationEfficiency", "mul", "(1.0036 ^ Char.PhylacteryLevel)"],
+      ["Spell.EvocationEfficiency", "mul", "(0.9925 ^ Char.PhylacteryLevel)"],
     ]);
     expect(r.effects.every((e) => !e.source.verified && e.source.note)).toBe(true);
   });

@@ -1,6 +1,6 @@
 import { f, type Expr } from "../engine/expr.ts";
 import type { AutoclickSource, Effect, Source, SpellBehaviour, SpellDef, StatDef, UnmodelledPart } from "../engine/model.ts";
-import { derivedStat, inputStat } from "../engine/stats.ts";
+import { inputStat } from "../engine/stats.ts";
 import { SPELL_SOURCE, spellById, spellStat } from "./spells.ts";
 import { buildingCount, buildingProfit } from "./stats.ts";
 
@@ -20,6 +20,16 @@ const BINDINGS = {
 };
 
 const SECONDS_PER_YEAR = 365 * 86400;
+
+const CAST_COUNT_HINT = "The count the game shows: casts made while The Rubedo Engine (accumulated and persistent spells) or Ritual Disk (augments) was worn already count twice.";
+// Read as doubling at cast time: the guides wear Ritual Disk and Rubedo while stacking casts but burst with whichever
+// enchant is stronger (Oni: Disk, Temporalist: Rubedo), the Temporalist guide values Ritual Disk only for its snap-set
+// enchant, and Rubedo's page says it doesn't affect external casts.
+const CAST_COUNT_SOURCE: Source = {
+  ...SPELL_SOURCE,
+  verified: false,
+  note: "The Rubedo Engine and Ritual Disk are read as doubling casts when they are made, so they don't change a burst's cast counts.",
+};
 
 type Crit = "character" | "none" | { chance: number; profit: number };
 
@@ -47,40 +57,23 @@ class SpellBuilder {
     return f(source, { ...BINDINGS, ...this.local });
   }
 
-  /** Casts this Exile as counted by the spell's formula: The Rubedo Engine doubles accumulated and persistent casts, Ritual Disk augment casts. */
+  /** The spell's cast count this Exile as the game shows it (The Rubedo Engine and Ritual Disk double casts made while worn). */
   casts(): this {
-    const s = this.spell;
-    const raw = spellStat(s, "CastsThisExile");
+    const id = spellStat(this.spell, "CastsThisExile");
     this.stats.push(
-      inputStat(raw, `${s.name}: casts this Exile`, "Spells", { default: 0, kind: "number", min: 0, logScale: true, hint: "Casts performed, before the doubling of The Rubedo Engine or Ritual Disk." }, {
-        source: SPELL_SOURCE,
-      }),
+      inputStat(id, `${this.spell.name}: casts this Exile`, "Spells", { default: 0, kind: "number", min: 0, logScale: true, hint: CAST_COUNT_HINT }, { source: CAST_COUNT_SOURCE }),
     );
-    const factors = [
-      ...(s.accumulated || s.persistent ? ["Spell.AccumulatedCastCountFactor"] : []),
-      ...(s.behavior === "Augment" ? ["Spell.AugmentCastCountFactor"] : []),
-    ];
-    const counted = spellStat(s, "CountedCasts");
-    this.stats.push(
-      derivedStat(counted, `${s.name}: casts counted by the spell`, "Spells", f([raw, ...factors].join(" * ")), {
-        source: { url: "https://idlewizard.wiki.gg/wiki/The_Rubedo_Engine", verified: true },
-      }),
-    );
-    this.local.C = counted;
+    this.local.C = id;
     return this;
   }
 
-  /** Casts this Realm (persistent spells' passive parts), counted twice by The Rubedo Engine. */
+  /** Casts this Realm (persistent spells' passive parts), as the game counts them. */
   realmCasts(): this {
-    const s = this.spell;
-    const raw = spellStat(s, "CastsThisRealm");
+    const id = spellStat(this.spell, "CastsThisRealm");
     this.stats.push(
-      inputStat(raw, `${s.name}: casts this Realm`, "Spells", { default: 0, kind: "number", min: 0, logScale: true }, { source: SPELL_SOURCE }),
-      derivedStat(spellStat(s, "CountedRealmCasts"), `${s.name}: casts this Realm counted by the passive`, "Spells", f(`${raw} * Spell.AccumulatedCastCountFactor`), {
-        source: { url: "https://idlewizard.wiki.gg/wiki/The_Rubedo_Engine", verified: true },
-      }),
+      inputStat(id, `${this.spell.name}: casts this Realm`, "Spells", { default: 0, kind: "number", min: 0, logScale: true, hint: CAST_COUNT_HINT }, { source: CAST_COUNT_SOURCE }),
     );
-    this.local.R = spellStat(s, "CountedRealmCasts");
+    this.local.R = id;
     return this;
   }
 
