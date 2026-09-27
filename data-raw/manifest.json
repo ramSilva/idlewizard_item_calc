@@ -382,6 +382,16 @@
       "file": "wikigg/Catalysts.wikitext"
     },
     {
+      "title": "Category:Phylactery",
+      "resolvedTitle": "Category:Phylactery",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Category%3APhylactery",
+      "revid": 21942,
+      "revisionTimestamp": "2025-06-26T11:42:34Z",
+      "file": "wikigg/Category__Phylactery.wikitext"
+    },
+    {
       "title": "Ceaseless Hunger",
       "resolvedTitle": "Ceaseless Hunger",
       "wiki": "wikigg",
@@ -1030,6 +1040,16 @@
       "revid": 30339,
       "revisionTimestamp": "2026-08-01T18:14:48Z",
       "file": "wikigg/Expeditions.wikitext"
+    },
+    {
+      "title": "Experience",
+      "resolvedTitle": "Basic Mechanics",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Basic_Mechanics",
+      "revid": 31664,
+      "revisionTimestamp": "2026-09-27T04:10:07Z",
+      "file": "wikigg/Basic Mechanics.wikitext"
     },
     {
       "title": "Faithful Fists",
@@ -1950,6 +1970,16 @@
       "revid": 31529,
       "revisionTimestamp": "2026-09-25T14:10:17Z",
       "file": "wikigg/Philosopher's Stone.wikitext"
+    },
+    {
+      "title": "Phylactery",
+      "resolvedTitle": "Items",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Items",
+      "revid": 30594,
+      "revisionTimestamp": "2026-08-17T23:17:08Z",
+      "file": "wikigg/Items.wikitext"
     },
     {
       "title": "Pillars of the First Realm",
