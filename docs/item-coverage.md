@@ -5,14 +5,14 @@ A clause is one comma- or sentence-separated part of an item, set or enchant tex
 "Modelled" clauses produce typed effects or bonus enchant levels; the others are kept with a reason.
 Unverified effects rely on a reading of the wiki text that the wiki doesn't state outright (each carries a note).
 
-- Items: 223 (203 regular, 20 Mythic); 199 have at least one modelled effect.
+- Items: 223 (203 regular, 20 Mythic); 201 have at least one modelled effect.
 - Sets: 12 with 59 tiers.
 - Enchants: 223, of which 193 modelled, 10 not-production, 20 mythic-random.
 
 | Texts | Blocks | Modelled clauses | not-production | mechanic | mythic-random | unparsed | Effects | Formula effects | Unverified effects |
 |---|---|---|---|---|---|---|---|---|---|
-| Item tiers at max quality | 223 | 398 | 17 | 30 | 20 | 0 | 420 | 50 | 345 |
-| All item tiers | 916 | 1270 | 67 | 85 | 20 | 0 | 1309 | 194 | 1136 |
+| Item tiers at max quality | 223 | 400 | 17 | 30 | 20 | 0 | 422 | 52 | 346 |
+| All item tiers | 916 | 1280 | 67 | 85 | 20 | 0 | 1319 | 204 | 1141 |
 | Set tiers | 59 | 57 | 0 | 2 | 0 | 0 | 65 | 0 | 47 |
 
 ## Unmodelled clauses (max quality, sets and enchants; Mythic random bonuses omitted)
@@ -53,8 +53,8 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 | Beholding Eye | not-production | maximum resources in jars (base) +2000 | Doesn't change mana production in the scored phase. |
 | Charged Fin-Wing | not-production | Gods' experience bonus +50% | Doesn't change mana production in the scored phase. |
 | Blessed Armor Scales | not-production | Trial of Innovation completion speed +100% | Doesn't change mana production in the scored phase. |
-| Branch of the Great Cycle | mechanic | Grants a summoning ability, which charges with autoclicks while Rules of Nature is active. Charging speed also scales with total autoclicks performed this Exile. When used, it autoclicks for a short duration with greatly increased efficiency per click | An activated 10-second autoclick burst; a candidate extra mana source for Shaman scores (encode-classes). |
-| Cataclysm | mechanic | Grants an ability which grants you temporary Hellholes, based on usage of Fire spells during its charging period | Grants temporary Hellholes; building counts are not modelled. |
+| Branch of the Great Cycle | mechanic | Charges with autoclicks while Rules of Nature is active. | Charges are an input (maximum 2,000,000). |
+| Cataclysm | mechanic | Charges from Fire spells during its charging period. | Charges are an input. |
 | Heart of the Grave | mechanic | Augments Plague Zombie with an effect that increases Pet's Played time whenever a certain amount of Plague Zombie charges is spent | Adds pet played time over the run; pet time is an input. |
 | Redeemer | mechanic | Grants an ability charged by Evocation spellcasts that makes manual clicks use all Hallowed Clicks with increased potency when activated | Hallowed Clicks are not modelled. |
 | Temporal Stabilizer | mechanic | Grants a passive ability which stops Timewarps (not the Market item) from disrupting active spells and boosts Time Skipped by Wormhole | Changes time skipped by Wormhole over the run; skipped time is an input. |

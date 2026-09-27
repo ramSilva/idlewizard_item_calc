@@ -19,7 +19,7 @@ describe("item coverage", () => {
     expect(coverage.items).toBe(223);
     expect(coverage.maxTiers).toMatchObject({
       blocks: 223,
-      modelledClauses: 398,
+      modelledClauses: 400,
       unmodelled: { "not-production": 17, mechanic: 30, "mythic-random": 20, unparsed: 0 },
     });
     expect(coverage.enchants).toMatchObject({ total: 223, modelled: 193, unmodelled: { "not-production": 10, "mythic-random": 20, mechanic: 0 } });

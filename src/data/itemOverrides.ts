@@ -2,6 +2,7 @@ import { ATTRIBUTES } from "../engine/model.ts";
 import type { UnmodelledClause } from "../engine/model.ts";
 import { attributeStat } from "./attributes.ts";
 import { overrideEffect, type BlockParts, type ClauseOverride, type OverrideContext } from "./itemText.ts";
+import { buildingCount, buildingProfit } from "./stats.ts";
 
 const N = String.raw`(\d*\.?\d+)`;
 const rx = (source: string) => new RegExp(source, "i");
@@ -262,9 +263,37 @@ export const ITEM_OVERRIDES: Readonly<Record<string, readonly ClauseOverride[]>>
     })),
   ],
   "Branch of the Great Cycle": [
-    mechanic("An activated 10-second autoclick burst; a candidate extra mana source for Shaman scores (encode-classes)."),
+    whole((ctx) => {
+      const r = weaponR(ctx);
+      return {
+        effects: [
+          overrideEffect(
+            ctx,
+            "Weapon.BranchClickMultiplier",
+            "add",
+            `Weapon.BranchCharges * ${r} * Spell.SummoningEfficiency ^ ${1 + 0.5 * r} * 100 + 1`,
+            "Per-click factor of the 10-second activation from the Details; the activation's 10 clicks are counted by the Shaman burst score.",
+            true,
+          ),
+        ],
+        unmodelled: [activation("Charges with autoclicks while Rules of Nature is active.", "Charges are an input (maximum 2,000,000).")],
+      };
+    }),
   ],
-  Cataclysm: [mechanic("Grants temporary Hellholes; building counts are not modelled.")],
+  Cataclysm: [
+    whole((ctx) => ({
+      effects: [
+        overrideEffect(
+          ctx,
+          buildingProfit(6),
+          "mul",
+          `1 + Weapon.CataclysmCharges / max(${buildingCount(6)}, 1)`,
+          "Temporary Hellholes equal to the charges consumed; assumes Hellholes' production is proportional to the amount owned and that the ability is active during the burst.",
+        ),
+      ],
+      unmodelled: [activation("Charges from Fire spells during its charging period.", "Charges are an input.")],
+    })),
+  ],
   "Heart of the Grave": [mechanic("Adds pet played time over the run; pet time is an input.")],
   Redeemer: [mechanic("Hallowed Clicks are not modelled.")],
   "Temporal Stabilizer": [mechanic("Changes time skipped by Wormhole over the run; skipped time is an input.")],

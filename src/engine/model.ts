@@ -169,32 +169,69 @@ export interface SetDef {
   source: Source;
 }
 
+export type SpellBehavior = "Instant" | "Buff" | "Periodic" | "Augment";
+
 export interface SpellDef {
   id: number;
   name: string;
+  /** Identifier-safe name used in stat ids, e.g. `KelphiorsBlackBeam`. */
+  key: string;
   school: "Evocation" | "Incantation" | "Summoning";
   accumulated: boolean;
   persistent: boolean;
+  behavior: SpellBehavior | null;
+  duration: number | null;
   description: string;
   math: string | null;
   classes: string[];
   source: Source;
 }
 
-/** Game behaviour of a spell while it is on the bar/active during the scored phase. */
+/** A stream of autoclicks (a summon or a pet) and the mana each click earns. */
+export interface AutoclickSource {
+  label: string;
+  perSecond: Expr;
+  /** Mana per click, including click and autoclick profit, efficiency and criticals. */
+  manaPerClick: Expr;
+}
+
+/** A part of a spell, pet or class ability that doesn't change any modelled stat. */
+export interface UnmodelledPart {
+  text: string;
+  note: string;
+}
+
+/** Game behaviour of a spell while it is on the bar during the scored phase. */
 export interface SpellBehaviour {
   spellId: number;
+  /** Effects while the spell is active; persistent spells' passive parts are included (labelled "passive"). */
   effects: Effect[];
-  /** Mana this spell produces, relative to production; used as a spell score. */
-  mana?: { expr: Expr; label: string };
-  inputs?: StatDef[];
-  notes?: string[];
+  /** Mana earned per cast (instant evocations) or per second while active (periodic evocations). */
+  mana?: { perCast?: Expr; perSecond?: Expr };
+  autoclicks?: AutoclickSource;
+  voidManaPerSecond?: Expr;
+  /** Per-spell inputs (casts, charges) and derived stats. */
+  stats: StatDef[];
+  /**
+   * Stats a snapped cast freezes at cast time ("snapping": casting with one item set, then swapping).
+   * When the spell is snapped, references to the key are replaced by the value's input stat.
+   */
+  snap?: Record<string, string>;
+  unmodelled: UnmodelledPart[];
+  source: Source;
 }
 
 export interface StanceDef {
   id: string;
   name: string;
   effects: Effect[];
+  unmodelled: UnmodelledPart[];
+  source: Source;
+}
+
+/** An input default with where the value comes from. */
+export interface DefaultValue {
+  value: number;
   source: Source;
 }
 
@@ -203,20 +240,32 @@ export interface ClassDef {
   name: string;
   effects: Effect[];
   stances: StanceDef[];
-  inputs: StatDef[];
-  /** Pets listed first in the picker, from the class guide. */
+  /** Class-specific stats; they replace generic, spell or pet stats with the same id. */
+  stats: StatDef[];
+  /** Spells whose effect lasts until Exile once cast (Augments), applied even when not on the bar. */
+  augments: number[];
+  /** Pets listed first in the picker, from the class guides. */
   pairedPets: string[];
-  /** Burst spell loadout from the class guide, used as the default selection. */
+  /** Burst setup from the class guide, used as the default selection. */
   defaultSpells: number[];
   defaultPet: string;
   defaultStance?: string;
-  /** Default attribute points, from the class guide. */
-  defaultAttributes: Partial<Record<Attribute, number>>;
+  /** Spells the guide snaps before swapping to burst gear. */
+  defaultSnapped: number[];
+  defaultScore: string;
+  /** Input defaults (attribute points, levels, counts), each with its source. */
+  defaults: Record<string, DefaultValue>;
   /** Building that holds (almost) all production in the scored phase, by default. */
   mainBuilding: BuildingId;
   buildingNames: Partial<Record<BuildingId, string>>;
+  unmodelled: UnmodelledPart[];
   source: Source;
-  notes?: string[];
+}
+
+export interface PetCast {
+  spellId: number;
+  /** Casts per second. */
+  perSecond: Expr;
 }
 
 export interface PetDef {
@@ -224,18 +273,14 @@ export interface PetDef {
   name: string;
   tier: 1 | 2 | 3;
   effects: Effect[];
-  inputs: StatDef[];
-  /** Spells cast by the pet itself (e.g. Mechanos Apexis casts Kelphior's Black Beam). */
-  castsSpells?: number[];
+  stats: StatDef[];
+  autoclicks?: AutoclickSource;
+  /** Spells the pet casts itself (Mechanos Apexis casts Kelphior's Black Beam). */
+  casts?: PetCast[];
+  voidManaPerSecond?: Expr;
+  defaults?: Record<string, DefaultValue>;
+  unmodelled: UnmodelledPart[];
   source: Source;
-  notes?: string[];
 }
 
 export type BuildingId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-
-export interface ScoreDef {
-  id: string;
-  label: string;
-  expr: Expr;
-  description: string;
-}

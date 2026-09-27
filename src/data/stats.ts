@@ -14,6 +14,7 @@ const COLLECTIBLES: Source = { url: "https://idlewizard.wiki.gg/wiki/Collectible
 const CATALYSTS: Source = { url: "https://idlewizard.wiki.gg/wiki/Catalysts", verified: true };
 const CHRONOMANCER: Source = { url: "https://idlewizard.wiki.gg/wiki/Chronomancer", verified: true };
 const STANCE: Source = { url: "https://idlewizard.wiki.gg/wiki/Stance", verified: true };
+const SPELL_DATA: Source = { url: "https://idlewizard.wiki.gg/wiki/Module:Data/Spells", verified: true };
 const unverified = (source: Source, note: string): Source => ({ ...source, verified: false, note });
 
 const BEFORE_BONUSES = "Enter the value without the bonuses of items and attributes; the tool applies those itself.";
@@ -32,14 +33,26 @@ const BUILDING_IDS = Object.keys(BUILDINGS).map(Number) as BuildingId[];
 
 export const buildingProfit = (b: BuildingId): string => `Building.${b}.Profit`;
 export const buildingShare = (b: BuildingId): string => `Building.${b}.Share`;
+export const buildingCount = (b: BuildingId): string => `Building.${b}.Count`;
 
 const count = (id: string, label: string, group: StatGroup, source: Source, spec: Partial<InputSpec> = {}): StatDef =>
   inputStat(id, label, group, { default: 0, kind: "number", min: 0, logScale: true, ...spec }, { source });
 
+const OTHER_SOURCES = "Enter the value without items, attributes, class, pet and spells; the tool applies those itself. Upgrades, memetics, challenges and other sources the tool doesn't model belong in this value.";
+
+const efficiency = (school: "Evocation" | "Incantation" | "Summoning"): StatDef =>
+  inputStat(
+    `Spell.${school}Efficiency`,
+    `${school} efficiency from sources the tool doesn't model`,
+    "Spells",
+    { default: 1, kind: "number", min: 0, logScale: true, hint: OTHER_SOURCES },
+    { source: unverified(MECHANICS, "Everything except items, attributes, class, pet and spells is lumped into this input.") },
+  );
+
 const spells: StatDef[] = [
-  multiplierStat("Spell.EvocationEfficiency", "Evocation efficiency", "Spells", { source: ATTRIBUTES_PAGE }),
-  multiplierStat("Spell.IncantationEfficiency", "Incantation efficiency", "Spells", { source: ATTRIBUTES_PAGE }),
-  multiplierStat("Spell.SummoningEfficiency", "Summoning efficiency", "Spells", { source: ATTRIBUTES_PAGE }),
+  efficiency("Evocation"),
+  efficiency("Incantation"),
+  efficiency("Summoning"),
   multiplierStat("Spell.EvocationDuration", "Evocation duration multiplier", "Spells", { source: ITEM_DATA }),
   multiplierStat("Spell.IncantationDuration", "Incantation duration multiplier", "Spells", { source: ITEM_DATA }),
   multiplierStat("Spell.EvocationDurationDivisor", "Evocation duration divisor", "Spells", { source: ITEM_DATA }),
@@ -82,6 +95,7 @@ const spells: StatDef[] = [
   count("Spell.CastsThisExile", "Spells cast this Exile", "Spells", ATTRIBUTES_PAGE),
   count("Spell.AccumulatedCastsThisExile", "Accumulated and persistent spells cast this Exile", "Spells", ATTRIBUTES_PAGE),
   count("Spell.EvocationCastsThisExile", "Evocation spells cast this Exile", "Spells", ATTRIBUTES_PAGE),
+  count("Spell.IncantationCastsThisExile", "Incantation spells cast this Exile", "Spells", { url: "https://idlewizard.wiki.gg/wiki/Oni", verified: true }),
 ];
 
 const character: StatDef[] = [
@@ -100,6 +114,12 @@ const character: StatDef[] = [
     { default: 1, kind: "number", min: 0, logScale: true, hint: BEFORE_BONUSES },
     { source: unverified(ATTRIBUTES_PAGE, "Named by the Mastery perks; its base value is not documented.") },
   ),
+  count("Char.ExperienceTotal", "Total character experience", "Character", { url: "https://idlewizard.wiki.gg/wiki/Temporalist", verified: true }),
+  count("Char.ClassTimeHours", "Time played as this class this Exile (hours)", "Character", unverified(
+    { url: "https://idlewizard.wiki.gg/wiki/Shaman", verified: true },
+    'Shaman\'s "time spent as Shaman this Exile" and Temporalist\'s "Character Time" are assumed to be the same quantity.',
+  ), { unit: "h" }),
+  count("Time.SkippedYears", "Skipped time this Exile (years)", "Character", { url: "https://idlewizard.wiki.gg/wiki/Temporalist", verified: true }, { unit: "years" }),
   multiplierStat("Char.ExperienceFromActions", "Character experience gained from actions", "Character", { source: MECHANICS }),
   multiplierStat("Char.ExperienceFromSources", "Character experience gained from mana sources", "Character", { source: MECHANICS }),
   count("Misc.AchievementsUnlocked", "Achievements unlocked", "Character", ATTRIBUTES_PAGE, { kind: "integer", logScale: false }),
@@ -125,8 +145,16 @@ const pet: StatDef[] = [
   inputStat("Pet.Tier", "Pet tier", "Pet", { default: 1, kind: "integer", min: 1, max: 3 }, {
     source: unverified(ITEM_DATA, "Named by The Bond; pet encodings are expected to set it."),
   }),
-  count("Pet.TimeCurrent", "Current pet time (seconds)", "Pet", unverified(ATTRIBUTES_PAGE, "The Empathy 200 perk doesn't state the unit; seconds assumed."), {
+  count("Pet.TimeCurrent", "Current pet time (seconds)", "Pet", unverified(ATTRIBUTES_PAGE, "The Empathy 200 perk doesn't state the unit; seconds assumed. Includes time skipped (game time)."), {
     unit: "s",
+  }),
+  count("Pet.RealTime", "Current pet real time (seconds)", "Pet", { url: "https://idlewizard.wiki.gg/wiki/Mechanos_Apexis", verified: true }, {
+    unit: "s",
+    hint: "Real time with this pet, without skipped time.",
+  }),
+  count("Pet.ExperienceTotal", "Total pet experience", "Pet", { url: "https://idlewizard.wiki.gg/wiki/Living_Sin", verified: true }),
+  count("Pet.MaxLevelThisExile", "Highest pet level this Exile", "Pet", SPELL_DATA, {
+    kind: "integer",
   }),
 ];
 
@@ -141,6 +169,7 @@ const production: StatDef[] = [
       { default: 0, kind: "number", min: 0, max: 1, unit: "fraction" },
       { source: unverified(MECHANICS, "Class encodings default the main building to 1 (assumption).") },
     ),
+    count(buildingCount(b), `${BUILDINGS[b]} owned`, "Production", MECHANICS, { kind: "integer" }),
   ]),
   derivedStat(
     "Prod.Total",
@@ -150,6 +179,8 @@ const production: StatDef[] = [
     { source: unverified(MECHANICS, "Production modelled as global profits times the share-weighted building profits.") },
   ),
   count("Misc.SourcesOwned", "Total amount of mana sources owned", "Production", ATTRIBUTES_PAGE),
+  count("Misc.LeastSourceCount", "Amount of your least profitable mana source", "Production", { url: "https://idlewizard.wiki.gg/wiki/Ley_Keeper", verified: true }),
+  count("Misc.TemporalAnchors", "Temporal Anchors owned", "Production", SPELL_DATA),
 ];
 
 const mysteries: StatDef[] = [
@@ -186,6 +217,8 @@ const voidMana: StatDef[] = [
     source: unverified(ATTRIBUTES_PAGE, "The Insight 250 perk doesn't state the unit of the spawn rate."),
   }),
   count("Void.EntitiesThisExile", "Void entities collected this Exile", "Void", ATTRIBUTES_PAGE),
+  count("Void.ManaThisExile", "All Void mana earned this Exile", "Void", { url: "https://idlewizard.wiki.gg/wiki/Voidterror", verified: true }),
+  count("Void.ActiveTraps", "Active Void Traps", "Void", SPELL_DATA, { kind: "integer" }),
 ];
 
 const idle: StatDef[] = [
@@ -232,9 +265,22 @@ const clicks: StatDef[] = [
     source: unverified(MECHANICS, "Assumes a critical click earns (critical profit / 100%) times a normal click."),
   }),
   multiplierStat("Click.HallowedProfit", "Hallowed click profit", "Clicks", { source: ITEM_DATA }),
-  additiveStat("Click.ProductionShare", "Click profit bonus as a share of mana per second", "Clicks", {
-    description: 'From "click profit +5% of your Mana per second": each click also earns this fraction of mana per second.',
-    source: unverified(ITEM_DATA, "Whether this share is further multiplied by click profit is not documented."),
+  inputStat(
+    "Click.ProductionShare",
+    "Mana per click as a share of mana per second, without item bonuses",
+    "Clicks",
+    { default: 1, kind: "number", min: 0, logScale: true, unit: "fraction", hint: BEFORE_BONUSES },
+    {
+      description:
+        'Items add "N% of your Mana per second" to it; Summon Centipede Swarm scales it ("ClickProfitPerManaProduction"). Flat click mana is not modelled.',
+      source: unverified(
+        { url: "https://idlewizard.wiki.gg/wiki/Module:Data/Spells", verified: true },
+        "Clicks are modelled as worth a share of mana per second; the base share isn't documented and the default 1 (100%) is a placeholder.",
+      ),
+    },
+  ),
+  derivedStat("Click.ManaPerClick", "Mana per click before autoclick profit and criticals", "Clicks", f("Click.Profit * Prod.Total * Click.ProductionShare"), {
+    source: unverified(MECHANICS, "Assumes click profit multiplies the production-based click value."),
   }),
   count("Click.AutoclicksThisExile", "Autoclicks this Exile", "Clicks", ATTRIBUTES_PAGE),
 ];
@@ -299,6 +345,12 @@ const weapons: StatDef[] = [
   count("Click.AutoclicksAccrued", "Autoclicks accrued", "Items", WEAPON("Head_Of_The_All-Eater", "See Maximum mana accrued.")),
   count("Spell.CastsAccrued", "Spellcasts accrued", "Items", WEAPON("Head_Of_The_All-Eater", "See Maximum mana accrued.")),
   count("Void.EntitiesAccrued", "Void entities accrued", "Items", WEAPON("Head_Of_The_All-Eater", "See Maximum mana accrued.")),
+  count("Weapon.BranchCharges", "Branch of the Great Cycle charges", "Items", WEAPON("Branch_of_the_Great_Cycle"), { max: 2e6 }),
+  additiveStat("Weapon.BranchClickMultiplier", "Branch of the Great Cycle per-click profit multiplier", "Items", {
+    description: "(C × R × S^(1 + 0.5R) × 100 + 1) from the weapon's Details; 0 when Branch isn't equipped.",
+    source: WEAPON("Branch_of_the_Great_Cycle"),
+  }),
+  count("Weapon.CataclysmCharges", "Cataclysm charges (temporary Hellholes when activated)", "Items", WEAPON("Cataclysm")),
 ];
 
 export const GENERIC_STATS: readonly StatDef[] = [
