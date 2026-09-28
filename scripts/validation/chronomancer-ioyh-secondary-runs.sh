@@ -41,7 +41,7 @@ for r in "${runs[@]}"; do
     paradox) run paradox "${paradox[@]}" --legion on "${attrs[@]}" "${common[@]}" --relevance 20 ;;
     paradox-literal-attrs) run paradox-literal-attrs "${paradox[@]}" --legion on "${literal_attrs[@]}" "${common[@]}" ;;
     paradox-no-legion) run paradox-no-legion "${paradox[@]}" --legion off "${attrs[@]}" "${common[@]}" ;;
-    # Empathy below the cap, so Bite Sleeves' +75 Empathy counts (the guide's "Fill for items").
+    # Empathy 175 assigned (the guide's "Fill for items" reading); a sensitivity run for the Empathy allocation.
     paradox-empathy-175) run paradox-empathy-175 "${paradox[@]}" --legion on "${attrs[@]}" --input AttrPoints.Empathy=175 "${common[@]}" ;;
     *) echo "Unknown run $r" >&2 && exit 1 ;;
   esac

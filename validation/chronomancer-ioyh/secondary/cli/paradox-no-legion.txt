@@ -1,803 +1,803 @@
 Chronomancer with Temporal Paradox, spells 69,4,73,111,17,60, score production-with-pet
-Legion off; snapped 69,4; 56 levels in 7.54 s (setup 15 ms)
-Enchant 0: ×3.00e33 vs no items, other branch ×0.111 [29 candidates, 10 searched slots, 0 leaves, 143 bounds, 84 ms]
-    Head       Conjured Ragecrown                       ×23.4
-    Hands      Talented Gloves                          ×30
-    Chest      Conjured Thornmail                       ×23.4
-    Feet       Conjured Spiked Stompers                 ×15.7
-    Shoulder   Conjured Razorspaulders                  ×58.2
+Legion off; snapped 69,4; 56 levels in 6.34 s (setup 15 ms)
+Enchant 0: ×1.34e35 vs no items, other branch ×0.108 [29 candidates, 9 searched slots, 0 leaves, 225 bounds, 83 ms]
+    Head       Conjured Ragecrown                       ×57.7
+    Hands      Conjured Claws                           ×72.1
+    Chest      Conjured Thornmail                       ×57.7
+    Feet       Conjured Spiked Stompers                 ×38.6
+    Shoulder   Conjured Razorspaulders                  ×144
     Neck       Lucky Amulet                             ×9.95
-    Waist      Colourful Belt                           ×19.3
-    Wrist      Conjured Sawrings                        ×36.5
-    Back       Fancy Cape                               ×48
-    Legs       Conjured Painguards                      ×36.5
+    Waist      Encircling Trophies                      ×15
+    Wrist      Bite Sleeves                             ×178
+    Back       Falconer's Warm Cape                     ×12.4
+    Legs       Conjured Painguards                      ×90.1
     Offhand    Murmuring Spellbook                      ×67.1
     Research   Daemonics Reverse-Engineering            ×100
-    Accessory  Bag Of Tricks                            ×35
-    Phylactery Smooth Amber Phylactery                  ×410
+    Accessory  Conjured Strangleash                     ×57.7
+    Phylactery Smooth Amber Phylactery                  ×448
     Weapon     The Accumulator                          ×6.39e7
-    Finger     Companionship Ring                       ×9
+    Finger     Companionship Ring                       ×11.9
     Finger     Whiplash                                 ×16
     Trophy     Anima Core                               ×79.9
     Trophy     Charged Fin-Wing                         ×36
-Enchant 1 (forced: resonator-ring): ×2.05e42 vs no items, other branch ×1.60e-7 [32 candidates, 11 searched slots, 375 leaves, 5932 bounds, 115 ms]
-    Head       Conjured Ragecrown +1 (5)                ×94.4
-    Hands      Conjured Claws +1 (5)                    ×118
-    Chest      Conjured Thornmail +1 (5)                ×94.4
-    Feet       Conjured Spiked Stompers +1 (5)          ×63.3
-    Shoulder   Conjured Razorspaulders +1 (5)           ×117
+Enchant 1 (forced: resonator-ring): ×9.28e43 vs no items, other branch ×1.84e-7 [29 candidates, 10 searched slots, 111 leaves, 2057 bounds, 71 ms]
+    Head       Conjured Ragecrown +1 (5)                ×233
+    Hands      Conjured Claws +1 (5)                    ×292
+    Chest      Conjured Thornmail +1 (5)                ×233
+    Feet       Conjured Spiked Stompers +1 (5)          ×156
+    Shoulder   Conjured Razorspaulders +1 (5)           ×288
     Neck       Lucky Amulet +1 (5)                      ×30.4
-    Waist      Colourful Belt +1 (5)                    ×47.9
-    Wrist      Conjured Sawrings +1 (5)                 ×148
-    Back       Fancy Cape +1 (5)                        ×119
-    Legs       Mesmerizing Pants +1 (5)                 ×74.6
+    Waist      Encircling Trophies +1 (5)               ×30.2
+    Wrist      Bite Sleeves +1 (5)                      ×1100
+    Back       Falconer's Warm Cape +1 (5)              ×37.9
+    Legs       Conjured Painguards +1 (5)               ×181
     Offhand    Murmuring Spellbook +1 (5)               ×167
     Research   Daemonics Reverse-Engineering +1 (5)     ×619
-    Accessory  Bag Of Tricks +1 (5)                     ×107
+    Accessory  Conjured Strangleash +1 (5)              ×116
     Mount      Warp Basilisk +1 (5)                     ×2.16
-    Phylactery Smooth Amber Phylactery +1 (5)           ×1060
+    Phylactery Smooth Amber Phylactery +1 (5)           ×1160
     Weapon     The Accumulator +1 (5)                   ×2.11e8
-    Finger     Resonator Ring                           ×8.08e7
+    Finger     Resonator Ring                           ×8.54e7
     Finger     Whiplash +1 (5)                          ×99.1
     Trophy     Anima Core +1 (5)                        ×178
     Trophy     Charged Fin-Wing +1 (5)                  ×274
-Enchant 2 (forced: resonator-ring): ×1.94e44 vs no items, other branch ×1.95e-7 [32 candidates, 11 searched slots, 609 leaves, 7120 bounds, 126 ms]
-    Head       Conjured Ragecrown +2 (6)                ×125
-    Hands      Conjured Claws +2 (6)                    ×156
-    Chest      Conjured Thornmail +2 (6)                ×125
-    Feet       Conjured Spiked Stompers +2 (6)          ×83.7
-    Shoulder   Conjured Razorspaulders +2 (6)           ×134
+Enchant 2 (forced: resonator-ring): ×8.92e45 vs no items, other branch ×2.44e-7 [29 candidates, 10 searched slots, 114 leaves, 2102 bounds, 66 ms]
+    Head       Conjured Ragecrown +2 (6)                ×309
+    Hands      Conjured Claws +2 (6)                    ×386
+    Chest      Conjured Thornmail +2 (6)                ×309
+    Feet       Conjured Spiked Stompers +2 (6)          ×207
+    Shoulder   Conjured Razorspaulders +2 (6)           ×332
     Neck       Lucky Amulet +2 (6)                      ×37.9
-    Waist      Colourful Belt +2 (6)                    ×57.5
-    Wrist      Conjured Sawrings +2 (6)                 ×195
-    Back       Fancy Cape +2 (6)                        ×143
-    Legs       Mesmerizing Pants +2 (6)                 ×89.6
+    Waist      Encircling Trophies +2 (6)               ×34.8
+    Wrist      Bite Sleeves +2 (6)                      ×1580
+    Back       Falconer's Warm Cape +2 (6)              ×50.2
+    Legs       Conjured Painguards +2 (6)               ×208
     Offhand    Murmuring Spellbook +2 (6)               ×200
     Research   Daemonics Reverse-Engineering +2 (6)     ×892
-    Accessory  Bag Of Tricks +2 (6)                     ×134
+    Accessory  Conjured Strangleash +2 (6)              ×133
     Mount      Warp Basilisk +2 (6)                     ×2.52
-    Phylactery Smooth Amber Phylactery +2 (6)           ×1290
+    Phylactery Smooth Amber Phylactery +2 (6)           ×1410
     Weapon     The Accumulator +2 (6)                   ×2.67e8
-    Finger     Resonator Ring                           ×8.08e7
+    Finger     Resonator Ring                           ×8.54e7
     Finger     Whiplash +2 (6)                          ×143
     Trophy     Anima Core +2 (6)                        ×208
     Trophy     Charged Fin-Wing +2 (6)                  ×411
-Enchant 3 (forced: resonator-ring): ×2.41e46 vs no items, other branch ×1.97e-7 [31 candidates, 10 searched slots, 324 leaves, 3280 bounds, 86 ms]
-    Head       Conjured Ragecrown +3 (7)                ×165
-    Hands      Conjured Claws +3 (7)                    ×207
-    Chest      Conjured Thornmail +3 (7)                ×165
-    Feet       Conjured Spiked Stompers +3 (7)          ×111
-    Shoulder   Conjured Razorspaulders +3 (7)           ×154
+Enchant 3 (forced: resonator-ring): ×9.29e47 vs no items, other branch ×2.98e-7 [28 candidates, 9 searched slots, 60 leaves, 1001 bounds, 60 ms]
+    Head       Conjured Ragecrown +3 (7)                ×408
+    Hands      Conjured Claws +3 (7)                    ×510
+    Chest      Conjured Thornmail +3 (7)                ×408
+    Feet       Conjured Spiked Stompers +3 (7)          ×273
+    Shoulder   Conjured Razorspaulders +3 (7)           ×381
     Neck       Hollow Eye Pendant +3 (7)                ×51.4
-    Waist      Colourful Belt +3 (7)                    ×25.9
-    Wrist      Conjured Sawrings +3 (7)                 ×258
-    Back       Falconer's Warm Cape +3 (7)              ×87.7
-    Legs       Falconer's Bottoms +3 (7)                ×126
+    Waist      Encircling Trophies +3 (7)               ×40
+    Wrist      Bite Sleeves +3 (7)                      ×2280
+    Back       Falconer's Warm Cape +3 (7)              ×66.3
+    Legs       Conjured Painguards +3 (7)               ×240
     Offhand    Murmuring Spellbook +3 (7)               ×240
     Research   Daemonics Reverse-Engineering +3 (7)     ×1280
-    Accessory  Bag Of Tricks +3 (7)                     ×62.6
+    Accessory  Conjured Strangleash +3 (7)              ×153
     Mount      Warp Basilisk +3 (7)                     ×2.94
-    Phylactery Smooth Amber Phylactery +3 (7)           ×1560
+    Phylactery Smooth Amber Phylactery +3 (7)           ×1700
     Weapon     The Accumulator +3 (7)                   ×2.71e8
-    Finger     Resonator Ring                           ×3.10e8
+    Finger     Resonator Ring                           ×1.50e8
     Finger     Whiplash +3 (7)                          ×205
     Trophy     Anima Core +3 (7)                        ×245
     Trophy     Charged Fin-Wing +3 (7)                  ×617
-Enchant 4 (forced: resonator-ring): ×3.19e48 vs no items, other branch ×1.86e-7 [29 candidates, 10 searched slots, 90 leaves, 1637 bounds, 62 ms]
-    Head       Conjured Ragecrown +4 (8)                ×218
-    Hands      Conjured Claws +4 (8)                    ×273
-    Chest      Conjured Thornmail +4 (8)                ×218
-    Feet       Conjured Spiked Stompers +4 (8)          ×146
-    Shoulder   Conjured Razorspaulders +4 (8)           ×178
+Enchant 4 (forced: resonator-ring): ×1.03e50 vs no items, other branch ×3.42e-7 [28 candidates, 9 searched slots, 66 leaves, 1034 bounds, 57 ms]
+    Head       Conjured Ragecrown +4 (8)                ×540
+    Hands      Conjured Claws +4 (8)                    ×675
+    Chest      Conjured Thornmail +4 (8)                ×540
+    Feet       Conjured Spiked Stompers +4 (8)          ×362
+    Shoulder   Conjured Razorspaulders +4 (8)           ×439
     Neck       Hollow Eye Pendant +4 (8)                ×74
-    Waist      Colourful Belt +4 (8)                    ×31
-    Wrist      Conjured Sawrings +4 (8)                 ×341
-    Back       Falconer's Warm Cape +4 (8)              ×116
-    Legs       Falconer's Bottoms +4 (8)                ×167
+    Waist      Encircling Trophies +4 (8)               ×46
+    Wrist      Bite Sleeves +4 (8)                      ×3280
+    Back       Falconer's Warm Cape +4 (8)              ×87.7
+    Legs       Conjured Painguards +4 (8)               ×276
     Offhand    Murmuring Spellbook +4 (8)               ×288
     Research   Daemonics Reverse-Engineering +4 (8)     ×1850
-    Accessory  Bag Of Tricks +4 (8)                     ×78.2
+    Accessory  Conjured Strangleash +4 (8)              ×176
     Mount      Warp Basilisk +4 (8)                     ×3.43
-    Phylactery Smooth Amber Phylactery +4 (8)           ×1880
+    Phylactery Smooth Amber Phylactery +4 (8)           ×2060
     Weapon     The Accumulator +4 (8)                   ×3.44e8
-    Finger     Resonator Ring                           ×3.10e8
+    Finger     Resonator Ring                           ×1.50e8
     Finger     Whiplash +4 (8)                          ×296
     Trophy     Anima Core +4 (8)                        ×287
     Trophy     Charged Fin-Wing +4 (8)                  ×926
-Enchant 5 (forced: resonator-ring): ×4.24e50 vs no items, other branch ×1.76e-7 [29 candidates, 10 searched slots, 87 leaves, 1721 bounds, 63 ms]
-    Head       Conjured Ragecrown +5 (9)                ×289
-    Hands      Conjured Claws +5 (9)                    ×361
-    Chest      Conjured Thornmail +5 (9)                ×289
-    Feet       Conjured Spiked Stompers +5 (9)          ×194
-    Shoulder   Conjured Razorspaulders +5 (9)           ×204
+Enchant 5 (forced: resonator-ring): ×1.14e52 vs no items, other branch ×3.92e-7 [28 candidates, 9 searched slots, 69 leaves, 1001 bounds, 55 ms]
+    Head       Conjured Ragecrown +5 (9)                ×714
+    Hands      Conjured Claws +5 (9)                    ×892
+    Chest      Conjured Thornmail +5 (9)                ×714
+    Feet       Conjured Spiked Stompers +5 (9)          ×478
+    Shoulder   Conjured Razorspaulders +5 (9)           ×504
     Neck       Hollow Eye Pendant +5 (9)                ×106
-    Waist      Colourful Belt +5 (9)                    ×37.2
-    Wrist      Conjured Sawrings +5 (9)                 ×451
-    Back       Falconer's Warm Cape +5 (9)              ×153
-    Legs       Falconer's Bottoms +5 (9)                ×221
+    Waist      Encircling Trophies +5 (9)               ×52.9
+    Wrist      Bite Sleeves +5 (9)                      ×4730
+    Back       Falconer's Warm Cape +5 (9)              ×116
+    Legs       Conjured Painguards +5 (9)               ×317
     Offhand    Murmuring Spellbook +5 (9)               ×346
     Research   Daemonics Reverse-Engineering +5 (9)     ×2660
-    Accessory  Bag Of Tricks +5 (9)                     ×97.8
+    Accessory  Conjured Strangleash +5 (9)              ×203
     Mount      Warp Basilisk +5 (9)                     ×4
-    Phylactery Smooth Amber Phylactery +5 (9)           ×2280
+    Phylactery Smooth Amber Phylactery +5 (9)           ×2490
     Weapon     The Accumulator +5 (9)                   ×4.37e8
-    Finger     Resonator Ring                           ×3.10e8
+    Finger     Resonator Ring                           ×1.50e8
     Finger     Whiplash +5 (9)                          ×426
     Trophy     Anima Core +5 (9)                        ×337
     Trophy     Charged Fin-Wing +5 (9)                  ×1390
-Enchant 6 (forced: resonator-ring): ×5.62e52 vs no items, other branch ×1.77e-7 [29 candidates, 10 searched slots, 84 leaves, 1844 bounds, 65 ms]
-    Head       Conjured Ragecrown +6 (10)               ×382
-    Hands      Conjured Claws +6 (10)                   ×477
-    Chest      Conjured Thornmail +6 (10)               ×382
-    Feet       Conjured Spiked Stompers +6 (10)         ×256
-    Shoulder   Conjured Razorspaulders +6 (10)          ×235
+Enchant 6 (forced: resonator-ring): ×1.46e54 vs no items, other branch ×3.88e-7 [30 candidates, 9 searched slots, 243 leaves, 2440 bounds, 75 ms]
+    Head       Conjured Ragecrown +6 (10)               ×1600
+    Hands      Conjured Claws +6 (10)                   ×2000
+    Chest      Conjured Thornmail +6 (10)               ×1600
+    Feet       Conjured Spiked Stompers +6 (10)         ×1070
+    Shoulder   Conjured Razorspaulders +6 (10)          ×985
     Neck       Hollow Eye Pendant +6 (10)               ×153
-    Waist      Colourful Belt +6 (10)                   ×44.7
-    Wrist      Conjured Sawrings +6 (10)                ×597
+    Waist      Encircling Trophies +6 (10)              ×60.8
+    Wrist      Bite Sleeves +6 (10)                     ×6810
     Back       Falconer's Warm Cape +6 (10)             ×203
     Legs       Falconer's Bottoms +6 (10)               ×292
     Offhand    Murmuring Spellbook +6 (10)              ×415
     Research   Daemonics Reverse-Engineering +6 (10)    ×3830
-    Accessory  Bag Of Tricks +6 (10)                    ×122
+    Accessory  Ethereal Veil +6 (10)                    ×137
     Mount      Warp Basilisk +6 (10)                    ×4.66
-    Phylactery Smooth Amber Phylactery +6 (10)          ×2760
-    Weapon     The Accumulator +6 (10)                  ×5.55e8
-    Finger     Resonator Ring                           ×3.10e8
+    Phylactery Smooth Amber Phylactery +6 (10)          ×3010
+    Weapon     The Accumulator +6 (10)                  ×6.40e8
+    Finger     Resonator Ring                           ×3.67e8
     Finger     Whiplash +6 (10)                         ×613
     Trophy     Anima Core +6 (10)                       ×395
     Trophy     Charged Fin-Wing +6 (10)                 ×2080
-Enchant 7 (forced: resonator-ring): ×7.45e54 vs no items, other branch ×2.06e-7 [29 candidates, 10 searched slots, 93 leaves, 1907 bounds, 65 ms]
-    Head       Conjured Ragecrown +7 (11)               ×505
-    Hands      Conjured Claws +7 (11)                   ×631
-    Chest      Conjured Thornmail +7 (11)               ×505
-    Feet       Conjured Spiked Stompers +7 (11)         ×338
-    Shoulder   Conjured Razorspaulders +7 (11)          ×270
+Enchant 7 (forced: resonator-ring): ×2.03e56 vs no items, other branch ×3.86e-7 [28 candidates, 9 searched slots, 57 leaves, 671 bounds, 50 ms]
+    Head       Conjured Ragecrown +7 (11)               ×2120
+    Hands      Conjured Claws +7 (11)                   ×2650
+    Chest      Conjured Thornmail +7 (11)               ×2120
+    Feet       Conjured Spiked Stompers +7 (11)         ×1420
+    Shoulder   Conjured Razorspaulders +7 (11)          ×1130
     Neck       Hollow Eye Pendant +7 (11)               ×221
-    Waist      Colourful Belt +7 (11)                   ×53.6
-    Wrist      Conjured Sawrings +7 (11)                ×789
+    Waist      Encircling Trophies +7 (11)              ×70
+    Wrist      Bite Sleeves +7 (11)                     ×9800
     Back       Falconer's Warm Cape +7 (11)             ×268
     Legs       Falconer's Bottoms +7 (11)               ×386
     Offhand    Murmuring Spellbook +7 (11)              ×498
     Research   Daemonics Reverse-Engineering +7 (11)    ×5520
-    Accessory  Bag Of Tricks +7 (11)                    ×153
+    Accessory  Ethereal Veil +7 (11)                    ×171
     Mount      Warp Basilisk +7 (11)                    ×5.44
-    Phylactery Smooth Amber Phylactery +7 (11)          ×3330
-    Weapon     The Accumulator +7 (11)                  ×7.04e8
-    Finger     Resonator Ring                           ×3.10e8
+    Phylactery Smooth Amber Phylactery +7 (11)          ×3650
+    Weapon     The Accumulator +7 (11)                  ×8.12e8
+    Finger     Resonator Ring                           ×3.67e8
     Finger     Whiplash +7 (11)                         ×883
     Trophy     Anima Core +7 (11)                       ×463
     Trophy     Charged Fin-Wing +7 (11)                 ×3130
-Enchant 8 (forced: resonator-ring): ×9.88e56 vs no items, other branch ×2.72e-7 [29 candidates, 10 searched slots, 93 leaves, 1931 bounds, 64 ms]
-    Head       Conjured Ragecrown +8 (12)               ×668
-    Hands      Conjured Claws +8 (12)                   ×835
-    Chest      Conjured Thornmail +8 (12)               ×668
-    Feet       Conjured Spiked Stompers +8 (12)         ×447
-    Shoulder   Conjured Razorspaulders +8 (12)          ×310
+Enchant 8 (forced: resonator-ring): ×2.80e58 vs no items, other branch ×4.08e-7 [28 candidates, 9 searched slots, 63 leaves, 704 bounds, 51 ms]
+    Head       Conjured Ragecrown +8 (12)               ×2810
+    Hands      Conjured Claws +8 (12)                   ×3510
+    Chest      Conjured Thornmail +8 (12)               ×2810
+    Feet       Conjured Spiked Stompers +8 (12)         ×1880
+    Shoulder   Conjured Razorspaulders +8 (12)          ×1300
     Neck       Hollow Eye Pendant +8 (12)               ×318
-    Waist      Colourful Belt +8 (12)                   ×64.4
-    Wrist      Conjured Sawrings +8 (12)                ×1040
+    Waist      Encircling Trophies +8 (12)              ×80.5
+    Wrist      Bite Sleeves +8 (12)                     ×14100
     Back       Falconer's Warm Cape +8 (12)             ×355
     Legs       Falconer's Bottoms +8 (12)               ×511
     Offhand    Murmuring Spellbook +8 (12)              ×598
     Research   Daemonics Reverse-Engineering +8 (12)    ×7950
-    Accessory  Bag Of Tricks +8 (12)                    ×191
+    Accessory  Ethereal Veil +8 (12)                    ×214
     Mount      Warp Basilisk +8 (12)                    ×6.34
-    Phylactery Smooth Amber Phylactery +8 (12)          ×4030
-    Weapon     The Accumulator +8 (12)                  ×8.93e8
-    Finger     Resonator Ring                           ×3.10e8
+    Phylactery Smooth Amber Phylactery +8 (12)          ×4410
+    Weapon     The Accumulator +8 (12)                  ×1.03e9
+    Finger     Resonator Ring                           ×3.67e8
     Finger     Whiplash +8 (12)                         ×1270
-    Trophy     Anima Core +8 (12)                       ×544
+    Trophy     Anima Core +8 (12)                       ×543
     Trophy     Charged Fin-Wing +8 (12)                 ×4690
-Enchant 9 (forced: resonator-ring): ×1.31e59 vs no items, other branch ×3.60e-7 [29 candidates, 10 searched slots, 96 leaves, 1994 bounds, 65 ms]
-    Head       Conjured Ragecrown +9 (13)               ×883
-    Hands      Conjured Claws +9 (13)                   ×1100
-    Chest      Conjured Thornmail +9 (13)               ×883
-    Feet       Conjured Spiked Stompers +9 (13)         ×592
-    Shoulder   Conjured Razorspaulders +9 (13)          ×357
+Enchant 9 (forced: resonator-ring): ×3.88e60 vs no items, other branch ×4.32e-7 [28 candidates, 9 searched slots, 66 leaves, 728 bounds, 49 ms]
+    Head       Conjured Ragecrown +9 (13)               ×3710
+    Hands      Conjured Claws +9 (13)                   ×4640
+    Chest      Conjured Thornmail +9 (13)               ×3710
+    Feet       Conjured Spiked Stompers +9 (13)         ×2490
+    Shoulder   Conjured Razorspaulders +9 (13)          ×1500
     Neck       Hollow Eye Pendant +9 (13)               ×458
-    Waist      Colourful Belt +9 (13)                   ×77.2
-    Wrist      Conjured Sawrings +9 (13)                ×1380
+    Waist      Encircling Trophies +9 (13)              ×92.5
+    Wrist      Bite Sleeves +9 (13)                     ×20300
     Back       Falconer's Warm Cape +9 (13)             ×469
     Legs       Falconer's Bottoms +9 (13)               ×676
     Offhand    Murmuring Spellbook +9 (13)              ×718
     Research   Daemonics Reverse-Engineering +9 (13)    ×11400
-    Accessory  Bag Of Tricks +9 (13)                    ×239
+    Accessory  Ethereal Veil +9 (13)                    ×267
     Mount      Warp Basilisk +9 (13)                    ×7.4
-    Phylactery Smooth Amber Phylactery +9 (13)          ×4880
-    Weapon     The Accumulator +9 (13)                  ×1.13e9
-    Finger     Resonator Ring                           ×3.09e8
+    Phylactery Smooth Amber Phylactery +9 (13)          ×5340
+    Weapon     The Accumulator +9 (13)                  ×1.31e9
+    Finger     Resonator Ring                           ×3.67e8
     Finger     Whiplash +9 (13)                         ×1830
-    Trophy     Anima Core +9 (13)                       ×638
+    Trophy     Anima Core +9 (13)                       ×637
     Trophy     Charged Fin-Wing +9 (13)                 ×7040
-Enchant 10 (forced: resonator-ring): ×1.90e61 vs no items, other branch ×4.34e-7 [30 candidates, 10 searched slots, 174 leaves, 3249 bounds, 81 ms]
-    Head       Conjured Ragecrown +10 (14)              ×1190
-    Hands      Conjured Claws +10 (14)                  ×1500
-    Chest      Conjured Thornmail +10 (14)              ×1190
-    Feet       Conjured Spiked Stompers +10 (14)        ×796
-    Shoulder   Conjured Razorspaulders +10 (14)         ×437
+Enchant 10 (forced: resonator-ring): ×5.76e62 vs no items, other branch ×4.26e-7 [27 candidates, 8 searched slots, 30 leaves, 229 bounds, 47 ms]
+    Head       Conjured Ragecrown +10 (14)              ×4910
+    Hands      Conjured Claws +10 (14)                  ×6130
+    Chest      Conjured Thornmail +10 (14)              ×4910
+    Feet       Conjured Spiked Stompers +10 (14)        ×3290
+    Shoulder   Conjured Razorspaulders +10 (14)         ×1730
     Neck       Hollow Eye Pendant +10 (14)              ×659
-    Waist      Collar Of Obedience +10 (14)             ×62.8
-    Wrist      Conjured Sawrings +10 (14)               ×1860
-    Back       Falconer's Warm Cape +10 (14)            ×469
-    Legs       Falconer's Bottoms +10 (14)              ×676
+    Waist      Encircling Trophies +10 (14)             ×106
+    Wrist      Bite Sleeves +10 (14)                    ×29300
+    Back       Falconer's Warm Cape +10 (14)            ×621
+    Legs       Falconer's Bottoms +10 (14)              ×894
     Offhand    Murmuring Spellbook +10 (14)             ×861
     Research   Daemonics Reverse-Engineering +10 (14)   ×16500
-    Accessory  Falconer's Treats +10 (14)               ×300
+    Accessory  Ethereal Veil +10 (14)                   ×335
     Mount      Warp Basilisk +10 (14)                   ×8.63
-    Phylactery Smooth Amber Phylactery +10 (14)         ×5910
-    Weapon     The Accumulator +10 (14)                 ×2.90e8
-    Finger     Resonator Ring                           ×6.44e8
+    Phylactery Smooth Amber Phylactery +10 (14)         ×6460
+    Weapon     The Accumulator +10 (14)                 ×3.30e8
+    Finger     Resonator Ring                           ×5.93e8
     Finger     Whiplash +10 (14)                        ×2640
     Trophy     Charged Fin-Wing +10 (14)                ×10600
     Trophy     Pheromone Gland +10 (14)                 ×801
-Enchant 11 (forced: resonator-ring): ×3.03e63 vs no items, other branch ×4.78e-7 [28 candidates, 9 searched slots, 45 leaves, 640 bounds, 52 ms]
-    Head       Conjured Ragecrown +11 (15)              ×1580
-    Hands      Conjured Claws +11 (15)                  ×1980
-    Chest      Conjured Thornmail +11 (15)              ×1580
-    Feet       Conjured Spiked Stompers +11 (15)        ×1050
-    Shoulder   Conjured Razorspaulders +11 (15)         ×503
+Enchant 11 (forced: resonator-ring): ×8.99e64 vs no items, other branch ×4.39e-7 [27 candidates, 8 searched slots, 30 leaves, 232 bounds, 44 ms]
+    Head       Conjured Ragecrown +11 (15)              ×6490
+    Hands      Conjured Claws +11 (15)                  ×8110
+    Chest      Conjured Thornmail +11 (15)              ×6490
+    Feet       Conjured Spiked Stompers +11 (15)        ×4350
+    Shoulder   Conjured Razorspaulders +11 (15)         ×1990
     Neck       Hollow Eye Pendant +11 (15)              ×950
-    Waist      Collar Of Obedience +11 (15)             ×75.9
-    Wrist      Conjured Sawrings +11 (15)               ×2460
-    Back       Falconer's Warm Cape +11 (15)            ×621
-    Legs       Falconer's Bottoms +11 (15)              ×894
+    Waist      Encircling Trophies +11 (15)             ×122
+    Wrist      Bite Sleeves +11 (15)                    ×42200
+    Back       Falconer's Warm Cape +11 (15)            ×821
+    Legs       Falconer's Bottoms +11 (15)              ×1180
     Offhand    Murmuring Spellbook +11 (15)             ×1030
     Research   Daemonics Reverse-Engineering +11 (15)   ×23700
-    Accessory  Falconer's Treats +11 (15)               ×397
+    Accessory  Ethereal Veil +11 (15)                   ×419
     Mount      Warp Basilisk +11 (15)                   ×10.1
-    Phylactery Smooth Amber Phylactery +11 (15)         ×7150
-    Weapon     The Accumulator +11 (15)                 ×3.54e8
-    Finger     Resonator Ring                           ×6.44e8
+    Phylactery Smooth Amber Phylactery +11 (15)         ×7810
+    Weapon     The Accumulator +11 (15)                 ×4.03e8
+    Finger     Resonator Ring                           ×5.93e8
     Finger     Whiplash +11 (15)                        ×3800
     Trophy     Charged Fin-Wing +11 (15)                ×15900
     Trophy     Pheromone Gland +11 (15)                 ×1060
-Enchant 12 (forced: resonator-ring): ×5.33e65 vs no items, other branch ×4.78e-7 [28 candidates, 9 searched slots, 45 leaves, 658 bounds, 52 ms]
-    Head       Conjured Ragecrown +12 (16)              ×2080
-    Hands      Conjured Claws +12 (16)                  ×2610
-    Chest      Conjured Thornmail +12 (16)              ×2080
-    Feet       Conjured Spiked Stompers +12 (16)        ×1390
-    Shoulder   Conjured Razorspaulders +12 (16)         ×580
+Enchant 12 (forced: resonator-ring): ×1.55e67 vs no items, other branch ×4.66e-7 [28 candidates, 8 searched slots, 66 leaves, 494 bounds, 51 ms]
+    Head       Conjured Ragecrown +12 (16)              ×8580
+    Hands      Conjured Claws +12 (16)                  ×10700
+    Chest      Conjured Thornmail +12 (16)              ×8580
+    Feet       Conjured Spiked Stompers +12 (16)        ×5750
+    Shoulder   Conjured Razorspaulders +12 (16)         ×2280
     Neck       Hollow Eye Pendant +12 (16)              ×1370
-    Waist      Collar Of Obedience +12 (16)             ×91.6
-    Wrist      Conjured Sawrings +12 (16)               ×3250
+    Waist      Encircling Trophies +12 (16)             ×141
+    Wrist      Bite Sleeves +12 (16)                    ×60700
     Back       Falconer's Warm Cape +12 (16)            ×821
     Legs       Falconer's Bottoms +12 (16)              ×1180
     Offhand    Ceaseless Hunger +12 (16)                ×1370
     Research   Daemonics Reverse-Engineering +12 (16)   ×34200
     Accessory  Falconer's Treats +12 (16)               ×525
     Mount      Warp Basilisk +12 (16)                   ×11.7
-    Phylactery Smooth Amber Phylactery +12 (16)         ×8650
-    Weapon     The Accumulator +12 (16)                 ×4.33e8
-    Finger     Resonator Ring                           ×1.33e9
+    Phylactery Smooth Amber Phylactery +12 (16)         ×9450
+    Weapon     The Accumulator +12 (16)                 ×3.29e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +12 (16)                        ×5470
     Trophy     Charged Fin-Wing +12 (16)                ×23800
     Trophy     Pheromone Gland +12 (16)                 ×1400
-Enchant 13 (forced: resonator-ring): ×1.02e68 vs no items, other branch ×4.39e-7 [28 candidates, 9 searched slots, 45 leaves, 664 bounds, 50 ms]
-    Head       Conjured Ragecrown +13 (17)              ×2750
-    Hands      Conjured Claws +13 (17)                  ×3460
-    Chest      Conjured Thornmail +13 (17)              ×2750
-    Feet       Conjured Spiked Stompers +13 (17)        ×1840
-    Shoulder   Conjured Razorspaulders +13 (17)         ×668
+Enchant 13 (forced: resonator-ring): ×3.08e69 vs no items, other branch ×4.30e-7 [27 candidates, 8 searched slots, 39 leaves, 298 bounds, 46 ms]
+    Head       Conjured Ragecrown +13 (17)              ×11300
+    Hands      Conjured Claws +13 (17)                  ×14200
+    Chest      Conjured Thornmail +13 (17)              ×11300
+    Feet       Conjured Spiked Stompers +13 (17)        ×7600
+    Shoulder   Conjured Razorspaulders +13 (17)         ×2630
     Neck       Hollow Eye Pendant +13 (17)              ×1970
-    Waist      Collar Of Obedience +13 (17)             ×111
-    Wrist      Conjured Sawrings +13 (17)               ×4300
+    Waist      Encircling Trophies +13 (17)             ×162
+    Wrist      Bite Sleeves +13 (17)                    ×87400
     Back       Falconer's Warm Cape +13 (17)            ×1090
     Legs       Falconer's Bottoms +13 (17)              ×1560
     Offhand    Ceaseless Hunger +13 (17)                ×1970
     Research   Daemonics Reverse-Engineering +13 (17)   ×49200
     Accessory  Falconer's Treats +13 (17)               ×695
     Mount      Warp Basilisk +13 (17)                   ×13.7
-    Phylactery Smooth Amber Phylactery +13 (17)         ×10500
-    Weapon     The Accumulator +13 (17)                 ×5.29e8
-    Finger     Resonator Ring                           ×1.33e9
+    Phylactery Smooth Amber Phylactery +13 (17)         ×11400
+    Weapon     The Accumulator +13 (17)                 ×4.02e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +13 (17)                        ×7880
     Trophy     Charged Fin-Wing +13 (17)                ×35700
     Trophy     Pheromone Gland +13 (17)                 ×1850
-Enchant 14 (forced: resonator-ring): ×1.95e70 vs no items, other branch ×4.41e-7 [28 candidates, 9 searched slots, 42 leaves, 670 bounds, 51 ms]
-    Head       Conjured Ragecrown +14 (18)              ×3640
-    Hands      Conjured Claws +14 (18)                  ×4570
-    Chest      Conjured Thornmail +14 (18)              ×3640
-    Feet       Conjured Spiked Stompers +14 (18)        ×2430
-    Shoulder   Conjured Razorspaulders +14 (18)         ×770
+Enchant 14 (forced: resonator-ring): ×6.09e71 vs no items, other branch ×4.26e-7 [27 candidates, 8 searched slots, 39 leaves, 301 bounds, 47 ms]
+    Head       Conjured Ragecrown +14 (18)              ×15000
+    Hands      Conjured Claws +14 (18)                  ×18800
+    Chest      Conjured Thornmail +14 (18)              ×15000
+    Feet       Conjured Spiked Stompers +14 (18)        ×10100
+    Shoulder   Conjured Razorspaulders +14 (18)         ×3020
     Neck       Hollow Eye Pendant +14 (18)              ×2840
-    Waist      Collar Of Obedience +14 (18)             ×134
-    Wrist      Conjured Sawrings +14 (18)               ×5690
+    Waist      Encircling Trophies +14 (18)             ×186
+    Wrist      Bite Sleeves +14 (18)                    ×126000
     Back       Falconer's Warm Cape +14 (18)            ×1440
     Legs       Falconer's Bottoms +14 (18)              ×2070
     Offhand    Ceaseless Hunger +14 (18)                ×2840
     Research   Daemonics Reverse-Engineering +14 (18)   ×70900
     Accessory  Falconer's Treats +14 (18)               ×919
     Mount      Warp Basilisk +14 (18)                   ×16
-    Phylactery Smooth Amber Phylactery +14 (18)         ×12700
-    Weapon     The Accumulator +14 (18)                 ×6.46e8
-    Finger     Resonator Ring                           ×1.33e9
+    Phylactery Smooth Amber Phylactery +14 (18)         ×13800
+    Weapon     The Accumulator +14 (18)                 ×4.91e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +14 (18)                        ×11300
     Trophy     Charged Fin-Wing +14 (18)                ×53600
     Trophy     Pheromone Gland +14 (18)                 ×2450
-Enchant 15 (forced: resonator-ring): ×3.72e72 vs no items, other branch ×4.86e-7 [28 candidates, 9 searched slots, 42 leaves, 679 bounds, 51 ms]
-    Head       Conjured Ragecrown +15 (19)              ×4810
-    Hands      Conjured Claws +15 (19)                  ×6040
-    Chest      Conjured Thornmail +15 (19)              ×4810
-    Feet       Conjured Spiked Stompers +15 (19)        ×3220
-    Shoulder   Conjured Razorspaulders +15 (19)         ×887
+Enchant 15 (forced: resonator-ring): ×1.21e74 vs no items, other branch ×4.44e-7 [27 candidates, 8 searched slots, 39 leaves, 316 bounds, 46 ms]
+    Head       Conjured Ragecrown +15 (19)              ×19800
+    Hands      Conjured Claws +15 (19)                  ×24800
+    Chest      Conjured Thornmail +15 (19)              ×19800
+    Feet       Conjured Spiked Stompers +15 (19)        ×13300
+    Shoulder   Conjured Razorspaulders +15 (19)         ×3470
     Neck       Hollow Eye Pendant +15 (19)              ×4080
-    Waist      Collar Of Obedience +15 (19)             ×161
-    Wrist      Conjured Sawrings +15 (19)               ×7520
+    Waist      Encircling Trophies +15 (19)             ×214
+    Wrist      Bite Sleeves +15 (19)                    ×181000
     Back       Falconer's Warm Cape +15 (19)            ×1900
     Legs       Falconer's Bottoms +15 (19)              ×2730
     Offhand    Ceaseless Hunger +15 (19)                ×4080
     Research   Daemonics Reverse-Engineering +15 (19)   ×102000
     Accessory  Falconer's Treats +15 (19)               ×1220
     Mount      Warp Basilisk +15 (19)                   ×18.6
-    Phylactery Smooth Amber Phylactery +15 (19)         ×15300
-    Weapon     The Accumulator +15 (19)                 ×7.89e8
-    Finger     Resonator Ring                           ×1.33e9
+    Phylactery Smooth Amber Phylactery +15 (19)         ×16700
+    Weapon     The Accumulator +15 (19)                 ×5.99e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +15 (19)                        ×16300
     Trophy     Charged Fin-Wing +15 (19)                ×80400
     Trophy     Pheromone Gland +15 (19)                 ×3240
-Enchant 16 (forced: resonator-ring): ×7.78e74 vs no items, other branch ×5.39e-7 [28 candidates, 9 searched slots, 36 leaves, 733 bounds, 55 ms]
+Enchant 16 (forced: resonator-ring): ×2.39e76 vs no items, other branch ×5.12e-7 [27 candidates, 8 searched slots, 39 leaves, 310 bounds, 46 ms]
     Head       Conjured Ragecrown +16 (20)              ×26300
     Hands      Conjured Claws +16 (20)                  ×32800
     Chest      Conjured Thornmail +16 (20)              ×26300
     Feet       Conjured Spiked Stompers +16 (20)        ×17600
-    Shoulder   Falconer's Leather Wrappings +16 (20)    ×1100
+    Shoulder   Conjured Razorspaulders +16 (20)         ×3990
     Neck       Hollow Eye Pendant +16 (20)              ×5880
-    Waist      Colourful Belt +16 (20)                  ×184
-    Wrist      Conjured Sawrings +16 (20)               ×41000
+    Waist      Encircling Trophies +16 (20)             ×246
+    Wrist      Bite Sleeves +16 (20)                    ×261000
     Back       Falconer's Warm Cape +16 (20)            ×2510
     Legs       Falconer's Bottoms +16 (20)              ×3620
     Offhand    Ceaseless Hunger +16 (20)                ×5880
     Research   Daemonics Reverse-Engineering +16 (20)   ×147000
     Accessory  Falconer's Treats +16 (20)               ×1610
     Mount      Warp Basilisk +16 (20)                   ×21.7
-    Phylactery Smooth Amber Phylactery +16 (20)         ×19100
-    Weapon     The Accumulator +16 (20)                 ×5.86e8
-    Finger     Resonator Ring                           ×2.27e9
+    Phylactery Smooth Amber Phylactery +16 (20)         ×20300
+    Weapon     The Accumulator +16 (20)                 ×7.31e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +16 (20)                        ×23500
     Trophy     Charged Fin-Wing +16 (20)                ×121000
     Trophy     Pheromone Gland +16 (20)                 ×4290
-Enchant 17 (forced: resonator-ring): ×1.70e77 vs no items, other branch ×6.24e-7 [28 candidates, 9 searched slots, 36 leaves, 736 bounds, 51 ms]
+Enchant 17 (forced: resonator-ring): ×4.74e78 vs no items, other branch ×6.77e-7 [27 candidates, 8 searched slots, 39 leaves, 310 bounds, 44 ms]
     Head       Conjured Ragecrown +17 (21)              ×34700
     Hands      Conjured Claws +17 (21)                  ×43400
     Chest      Conjured Thornmail +17 (21)              ×34700
     Feet       Conjured Spiked Stompers +17 (21)        ×23300
-    Shoulder   Falconer's Leather Wrappings +17 (21)    ×1460
+    Shoulder   Conjured Razorspaulders +17 (21)         ×4590
     Neck       Hollow Eye Pendant +17 (21)              ×8470
-    Waist      Colourful Belt +17 (21)                  ×221
-    Wrist      Conjured Sawrings +17 (21)               ×54200
+    Waist      Encircling Trophies +17 (21)             ×283
+    Wrist      Bite Sleeves +17 (21)                    ×376000
     Back       Falconer's Warm Cape +17 (21)            ×3320
     Legs       Falconer's Bottoms +17 (21)              ×4780
     Offhand    Ceaseless Hunger +17 (21)                ×8470
     Research   Daemonics Reverse-Engineering +17 (21)   ×212000
     Accessory  Falconer's Treats +17 (21)               ×2130
     Mount      Warp Basilisk +17 (21)                   ×25.3
-    Phylactery Smooth Amber Phylactery +17 (21)         ×23100
-    Weapon     The Accumulator +17 (21)                 ×7.15e8
-    Finger     Resonator Ring                           ×2.27e9
+    Phylactery Smooth Amber Phylactery +17 (21)         ×24500
+    Weapon     The Accumulator +17 (21)                 ×8.92e8
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +17 (21)                        ×33900
     Trophy     Charged Fin-Wing +17 (21)                ×181000
     Trophy     Pheromone Gland +17 (21)                 ×5670
-Enchant 18 (forced: resonator-ring): ×3.71e79 vs no items, other branch ×7.58e-7 [28 candidates, 9 searched slots, 36 leaves, 739 bounds, 52 ms]
+Enchant 18 (forced: resonator-ring): ×9.38e80 vs no items, other branch ×8.95e-7 [27 candidates, 8 searched slots, 21 leaves, 307 bounds, 45 ms]
     Head       Conjured Ragecrown +18 (22)              ×45900
     Hands      Conjured Claws +18 (22)                  ×57400
     Chest      Conjured Thornmail +18 (22)              ×45900
     Feet       Conjured Spiked Stompers +18 (22)        ×30800
-    Shoulder   Falconer's Leather Wrappings +18 (22)    ×1930
+    Shoulder   Conjured Razorspaulders +18 (22)         ×5280
     Neck       Hollow Eye Pendant +18 (22)              ×12200
-    Waist      Colourful Belt +18 (22)                  ×266
-    Wrist      Conjured Sawrings +18 (22)               ×71700
+    Waist      Encircling Trophies +18 (22)             ×325
+    Wrist      Bite Sleeves +18 (22)                    ×541000
     Back       Falconer's Warm Cape +18 (22)            ×4390
     Legs       Falconer's Bottoms +18 (22)              ×6320
     Offhand    Ceaseless Hunger +18 (22)                ×12200
     Research   Daemonics Reverse-Engineering +18 (22)   ×305000
     Accessory  Falconer's Treats +18 (22)               ×2810
     Mount      Warp Basilisk +18 (22)                   ×29.6
-    Phylactery Smooth Amber Phylactery +18 (22)         ×28000
-    Weapon     The Accumulator +18 (22)                 ×8.73e8
-    Finger     Resonator Ring                           ×2.27e9
+    Phylactery Smooth Amber Phylactery +18 (22)         ×29700
+    Weapon     The Accumulator +18 (22)                 ×1.09e9
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +18 (22)                        ×48800
     Trophy     Charged Fin-Wing +18 (22)                ×272000
     Trophy     Pheromone Gland +18 (22)                 ×7500
-Enchant 19 (forced: resonator-ring): ×8.10e81 vs no items, other branch ×0.000001 [29 candidates, 9 searched slots, 36 leaves, 844 bounds, 52 ms]
+Enchant 19 (forced: resonator-ring): ×1.86e83 vs no items, other branch ×0.00000118 [28 candidates, 8 searched slots, 21 leaves, 349 bounds, 45 ms]
     Head       Conjured Ragecrown +19 (23)              ×60700
     Hands      Conjured Claws +19 (23)                  ×75900
     Chest      Conjured Thornmail +19 (23)              ×60700
     Feet       Conjured Spiked Stompers +19 (23)        ×40700
-    Shoulder   Falconer's Leather Wrappings +19 (23)    ×2550
+    Shoulder   Conjured Razorspaulders +19 (23)         ×6070
     Neck       Hollow Eye Pendant +19 (23)              ×17600
-    Waist      Colourful Belt +19 (23)                  ×319
-    Wrist      Conjured Sawrings +19 (23)               ×94900
+    Waist      Encircling Trophies +19 (23)             ×374
+    Wrist      Bite Sleeves +19 (23)                    ×779000
     Back       Falconer's Warm Cape +19 (23)            ×5810
     Legs       Falconer's Bottoms +19 (23)              ×8360
     Offhand    Ceaseless Hunger +19 (23)                ×17600
     Research   Daemonics Reverse-Engineering +19 (23)   ×439000
     Accessory  Falconer's Treats +19 (23)               ×3720
     Mount      Warp Basilisk +19 (23)                   ×34.5
-    Phylactery Smooth Amber Phylactery +19 (23)         ×33800
-    Weapon     The Accumulator +19 (23)                 ×1.07e9
-    Finger     Resonator Ring                           ×2.27e9
+    Phylactery Smooth Amber Phylactery +19 (23)         ×35900
+    Weapon     The Accumulator +19 (23)                 ×1.33e9
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +19 (23)                        ×70200
     Trophy     Charged Fin-Wing +19 (23)                ×408000
     Trophy     Pheromone Gland +19 (23)                 ×9910
-Enchant 20 (forced: resonator-ring): ×1.77e84 vs no items, other branch ×0.00000132 [29 candidates, 9 searched slots, 36 leaves, 853 bounds, 53 ms]
-    Head       Conjured Ragecrown +20 (24)              ×81300
-    Hands      Conjured Claws +20 (24)                  ×102000
-    Chest      Conjured Thornmail +20 (24)              ×81300
-    Feet       Conjured Spiked Stompers +20 (24)        ×54300
-    Shoulder   Falconer's Leather Wrappings +20 (24)    ×3380
+Enchant 20 (forced: resonator-ring): ×3.68e85 vs no items, other branch ×0.00000157 [28 candidates, 8 searched slots, 21 leaves, 349 bounds, 45 ms]
+    Head       Conjured Ragecrown +20 (24)              ×80300
+    Hands      Conjured Claws +20 (24)                  ×100000
+    Chest      Conjured Thornmail +20 (24)              ×80300
+    Feet       Conjured Spiked Stompers +20 (24)        ×53800
+    Shoulder   Conjured Razorspaulders +20 (24)         ×6980
     Neck       Hollow Eye Pendant +20 (24)              ×25300
-    Waist      Collar Of Obedience +20 (24)             ×383
-    Wrist      Conjured Sawrings +20 (24)               ×127000
+    Waist      Encircling Trophies +20 (24)             ×430
+    Wrist      Bite Sleeves +20 (24)                    ×1.12e6
     Back       Falconer's Warm Cape +20 (24)            ×7680
     Legs       Falconer's Bottoms +20 (24)              ×11100
     Offhand    Ceaseless Hunger +20 (24)                ×25300
     Research   Daemonics Reverse-Engineering +20 (24)   ×632000
     Accessory  Falconer's Treats +20 (24)               ×4920
     Mount      Warp Basilisk +20 (24)                   ×40.2
-    Phylactery Smooth Amber Phylactery +20 (24)         ×40900
-    Weapon     The Accumulator +20 (24)                 ×1.33e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +20 (24)         ×43400
+    Weapon     The Accumulator +20 (24)                 ×1.62e9
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +20 (24)                        ×101000
     Trophy     Charged Fin-Wing +20 (24)                ×612000
     Trophy     Pheromone Gland +20 (24)                 ×13100
-Enchant 21 (forced: resonator-ring): ×3.88e86 vs no items, other branch ×0.00000174 [29 candidates, 9 searched slots, 36 leaves, 862 bounds, 53 ms]
-    Head       Conjured Ragecrown +21 (25)              ×108000
-    Hands      Conjured Claws +21 (25)                  ×135000
-    Chest      Conjured Thornmail +21 (25)              ×108000
-    Feet       Conjured Spiked Stompers +21 (25)        ×71900
-    Shoulder   Falconer's Leather Wrappings +21 (25)    ×4470
+Enchant 21 (forced: resonator-ring): ×7.30e87 vs no items, other branch ×0.00000207 [28 candidates, 8 searched slots, 21 leaves, 352 bounds, 44 ms]
+    Head       Conjured Ragecrown +21 (25)              ×106000
+    Hands      Conjured Claws +21 (25)                  ×133000
+    Chest      Conjured Thornmail +21 (25)              ×106000
+    Feet       Conjured Spiked Stompers +21 (25)        ×71100
+    Shoulder   Conjured Razorspaulders +21 (25)         ×8030
     Neck       Hollow Eye Pendant +21 (25)              ×36400
-    Waist      Collar Of Obedience +21 (25)             ×462
-    Wrist      Conjured Sawrings +21 (25)               ×168000
+    Waist      Encircling Trophies +21 (25)             ×495
+    Wrist      Bite Sleeves +21 (25)                    ×1.62e6
     Back       Falconer's Warm Cape +21 (25)            ×10200
     Legs       Falconer's Bottoms +21 (25)              ×14600
     Offhand    Ceaseless Hunger +21 (25)                ×36400
     Research   Daemonics Reverse-Engineering +21 (25)   ×910000
     Accessory  Falconer's Treats +21 (25)               ×6500
     Mount      Warp Basilisk +21 (25)                   ×46.9
-    Phylactery Smooth Amber Phylactery +21 (25)         ×49500
-    Weapon     The Accumulator +21 (25)                 ×1.62e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +21 (25)         ×52600
+    Weapon     The Accumulator +21 (25)                 ×1.98e9
+    Finger     Resonator Ring                           ×1.54e9
     Finger     Whiplash +21 (25)                        ×146000
     Trophy     Charged Fin-Wing +21 (25)                ×919000
     Trophy     Pheromone Gland +21 (25)                 ×17300
-Enchant 22 (forced: resonator-ring): ×8.52e88 vs no items, other branch ×0.0000023 [29 candidates, 9 searched slots, 36 leaves, 873 bounds, 53 ms]
+Enchant 22 (forced: resonator-ring): ×1.51e90 vs no items, other branch ×0.00000262 [28 candidates, 8 searched slots, 21 leaves, 354 bounds, 47 ms]
     Head       Conjured Ragecrown +22 (26)              ×142000
     Hands      Conjured Claws +22 (26)                  ×178000
     Chest      Conjured Thornmail +22 (26)              ×142000
     Feet       Conjured Spiked Stompers +22 (26)        ×95000
-    Shoulder   Falconer's Leather Wrappings +22 (26)    ×5910
+    Shoulder   Conjured Razorspaulders +22 (26)         ×10000
     Neck       Hollow Eye Pendant +22 (26)              ×52400
-    Waist      Collar Of Obedience +22 (26)             ×556
-    Wrist      Conjured Sawrings +22 (26)               ×222000
+    Waist      Collar Of Obedience +22 (26)             ×595
+    Wrist      Bite Sleeves +22 (26)                    ×2.33e6
     Back       Falconer's Warm Cape +22 (26)            ×13400
     Legs       Falconer's Bottoms +22 (26)              ×19300
     Offhand    Ceaseless Hunger +22 (26)                ×52400
     Research   Daemonics Reverse-Engineering +22 (26)   ×1.31e6
     Accessory  Falconer's Treats +22 (26)               ×8600
     Mount      Warp Basilisk +22 (26)                   ×54.7
-    Phylactery Smooth Amber Phylactery +22 (26)         ×59900
-    Weapon     The Accumulator +22 (26)                 ×1.98e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +22 (26)         ×63600
+    Weapon     The Accumulator +22 (26)                 ×2.47e9
+    Finger     Resonator Ring                           ×1.87e9
     Finger     Whiplash +22 (26)                        ×210000
     Trophy     Charged Fin-Wing +22 (26)                ×1.38e6
     Trophy     Pheromone Gland +22 (26)                 ×22900
-Enchant 23 (forced: resonator-ring): ×1.87e91 vs no items, other branch ×0.00000303 [29 candidates, 9 searched slots, 36 leaves, 879 bounds, 52 ms]
+Enchant 23 (forced: resonator-ring): ×3.14e92 vs no items, other branch ×0.0000033 [27 candidates, 7 searched slots, 18 leaves, 234 bounds, 44 ms]
     Head       Conjured Ragecrown +23 (27)              ×188000
     Hands      Conjured Claws +23 (27)                  ×236000
     Chest      Conjured Thornmail +23 (27)              ×188000
     Feet       Conjured Spiked Stompers +23 (27)        ×126000
-    Shoulder   Falconer's Leather Wrappings +23 (27)    ×7810
+    Shoulder   Conjured Razorspaulders +23 (27)         ×11500
     Neck       Hollow Eye Pendant +23 (27)              ×75500
-    Waist      Collar Of Obedience +23 (27)             ×670
-    Wrist      Conjured Sawrings +23 (27)               ×294000
+    Waist      Collar Of Obedience +23 (27)             ×718
+    Wrist      Bite Sleeves +23 (27)                    ×3.35e6
     Back       Falconer's Warm Cape +23 (27)            ×17800
     Legs       Falconer's Bottoms +23 (27)              ×25600
     Offhand    Ceaseless Hunger +23 (27)                ×75500
     Research   Daemonics Reverse-Engineering +23 (27)   ×1.89e6
     Accessory  Falconer's Treats +23 (27)               ×11400
     Mount      Warp Basilisk +23 (27)                   ×63.8
-    Phylactery Smooth Amber Phylactery +23 (27)         ×72500
-    Weapon     The Accumulator +23 (27)                 ×2.42e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +23 (27)         ×77000
+    Weapon     The Accumulator +23 (27)                 ×3.02e9
+    Finger     Resonator Ring                           ×1.87e9
     Finger     Whiplash +23 (27)                        ×302000
     Trophy     Charged Fin-Wing +23 (27)                ×2.07e6
     Trophy     Pheromone Gland +23 (27)                 ×30300
-Enchant 24 (forced: resonator-ring): ×4.09e93 vs no items, other branch ×0.00000401 [29 candidates, 9 searched slots, 36 leaves, 899 bounds, 53 ms]
-    Head       Conjured Ragecrown +24 (28)              ×249000
+Enchant 24 (forced: resonator-ring): ×6.53e94 vs no items, other branch ×0.00000416 [27 candidates, 7 searched slots, 18 leaves, 234 bounds, 43 ms]
+    Head       Conjured Ragecrown +24 (28)              ×248000
     Hands      Conjured Claws +24 (28)                  ×312000
-    Chest      Conjured Thornmail +24 (28)              ×249000
+    Chest      Conjured Thornmail +24 (28)              ×248000
     Feet       Conjured Spiked Stompers +24 (28)        ×166000
-    Shoulder   Falconer's Leather Wrappings +24 (28)    ×10300
+    Shoulder   Conjured Razorspaulders +24 (28)         ×13300
     Neck       Hollow Eye Pendant +24 (28)              ×109000
-    Waist      Collar Of Obedience +24 (28)             ×808
-    Wrist      Conjured Sawrings +24 (28)               ×389000
+    Waist      Collar Of Obedience +24 (28)             ×867
+    Wrist      Bite Sleeves +24 (28)                    ×4.83e6
     Back       Falconer's Warm Cape +24 (28)            ×23500
     Legs       Falconer's Bottoms +24 (28)              ×33800
     Offhand    Ceaseless Hunger +24 (28)                ×109000
     Research   Daemonics Reverse-Engineering +24 (28)   ×2.72e6
     Accessory  Falconer's Treats +24 (28)               ×15000
     Mount      Warp Basilisk +24 (28)                   ×74.4
-    Phylactery Smooth Amber Phylactery +24 (28)         ×87700
-    Weapon     The Accumulator +24 (28)                 ×2.96e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +24 (28)         ×93100
+    Weapon     The Accumulator +24 (28)                 ×3.69e9
+    Finger     Resonator Ring                           ×1.87e9
     Finger     Whiplash +24 (28)                        ×435000
     Trophy     Charged Fin-Wing +24 (28)                ×3.10e6
     Trophy     Pheromone Gland +24 (28)                 ×40100
-Enchant 25 (forced: resonator-ring): ×8.97e95 vs no items, other branch ×0.0000053 [29 candidates, 9 searched slots, 36 leaves, 896 bounds, 53 ms]
+Enchant 25 (forced: resonator-ring): ×1.36e97 vs no items, other branch ×0.00000524 [27 candidates, 7 searched slots, 18 leaves, 234 bounds, 43 ms]
     Head       Conjured Ragecrown +25 (29)              ×329000
-    Hands      Conjured Claws +25 (29)                  ×413000
+    Hands      Conjured Claws +25 (29)                  ×412000
     Chest      Conjured Thornmail +25 (29)              ×329000
     Feet       Conjured Spiked Stompers +25 (29)        ×220000
-    Shoulder   Falconer's Leather Wrappings +25 (29)    ×13700
+    Shoulder   Conjured Razorspaulders +25 (29)         ×15300
     Neck       Hollow Eye Pendant +25 (29)              ×157000
-    Waist      Collar Of Obedience +25 (29)             ×973
-    Wrist      Conjured Sawrings +25 (29)               ×514000
+    Waist      Collar Of Obedience +25 (29)             ×1050
+    Wrist      Bite Sleeves +25 (29)                    ×6.95e6
     Back       Falconer's Warm Cape +25 (29)            ×31100
     Legs       Falconer's Bottoms +25 (29)              ×44800
     Offhand    Ceaseless Hunger +25 (29)                ×157000
     Research   Daemonics Reverse-Engineering +25 (29)   ×3.91e6
     Accessory  Falconer's Treats +25 (29)               ×19900
     Mount      Warp Basilisk +25 (29)                   ×86.8
-    Phylactery Smooth Amber Phylactery +25 (29)         ×106000
-    Weapon     The Accumulator +25 (29)                 ×3.62e9
-    Finger     Resonator Ring                           ×2.31e9
+    Phylactery Smooth Amber Phylactery +25 (29)         ×113000
+    Weapon     The Accumulator +25 (29)                 ×4.50e9
+    Finger     Resonator Ring                           ×1.87e9
     Finger     Whiplash +25 (29)                        ×626000
     Trophy     Charged Fin-Wing +25 (29)                ×4.66e6
     Trophy     Pheromone Gland +25 (29)                 ×53000
-Enchant 26 (forced: resonator-ring): ×1.97e98 vs no items, other branch ×0.00000701 [29 candidates, 9 searched slots, 36 leaves, 848 bounds, 51 ms]
-    Head       Conjured Ragecrown +26 (30)              ×435000
-    Hands      Conjured Claws +26 (30)                  ×546000
-    Chest      Conjured Thornmail +26 (30)              ×435000
-    Feet       Conjured Spiked Stompers +26 (30)        ×291000
+Enchant 26 (forced: resonator-ring): ×2.90e99 vs no items, other branch ×0.00000672 [29 candidates, 8 searched slots, 104 leaves, 989 bounds, 54 ms]
+    Head       Conjured Ragecrown +26 (30)              ×109000
+    Hands      Conjured Claws +26 (30)                  ×136000
+    Chest      Conjured Thornmail +26 (30)              ×109000
+    Feet       Conjured Spiked Stompers +26 (30)        ×72600
     Shoulder   Falconer's Leather Wrappings +26 (30)    ×18100
     Neck       Hollow Eye Pendant +26 (30)              ×225000
-    Waist      Collar Of Obedience +26 (30)             ×1170
-    Wrist      Conjured Sawrings +26 (30)               ×680000
+    Waist      Collar Of Obedience +26 (30)             ×1160
+    Wrist      Bite Sleeves +26 (30)                    ×1.00e7
     Back       Falconer's Warm Cape +26 (30)            ×41100
     Legs       Falconer's Bottoms +26 (30)              ×59200
     Offhand    Ceaseless Hunger +26 (30)                ×225000
     Research   Daemonics Reverse-Engineering +26 (30)   ×5.63e6
     Accessory  Falconer's Treats +26 (30)               ×26300
     Mount      Warp Basilisk +26 (30)                   ×101
-    Phylactery Smooth Amber Phylactery +26 (30)         ×128000
+    Phylactery Smooth Amber Phylactery +26 (30)         ×140000
     Weapon     The Accumulator +26 (30)                 ×4.42e9
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.25e9
     Finger     Whiplash +26 (30)                        ×902000
     Trophy     Charged Fin-Wing +26 (30)                ×6.99e6
     Trophy     Pheromone Gland +26 (30)                 ×70100
-Enchant 27 (forced: resonator-ring): ×4.31e100 vs no items, other branch ×0.00000927 [29 candidates, 9 searched slots, 36 leaves, 848 bounds, 52 ms]
-    Head       Conjured Ragecrown +27 (31)              ×575000
-    Hands      Conjured Claws +27 (31)                  ×722000
-    Chest      Conjured Thornmail +27 (31)              ×575000
-    Feet       Conjured Spiked Stompers +27 (31)        ×384000
+Enchant 27 (forced: resonator-ring): ×6.91e101 vs no items, other branch ×0.00000775 [28 candidates, 8 searched slots, 57 leaves, 665 bounds, 50 ms]
+    Head       Conjured Ragecrown +27 (31)              ×144000
+    Hands      Conjured Claws +27 (31)                  ×180000
+    Chest      Conjured Thornmail +27 (31)              ×144000
+    Feet       Conjured Spiked Stompers +27 (31)        ×96000
     Shoulder   Falconer's Leather Wrappings +27 (31)    ×23900
     Neck       Hollow Eye Pendant +27 (31)              ×325000
-    Waist      Collar Of Obedience +27 (31)             ×1410
-    Wrist      Conjured Sawrings +27 (31)               ×899000
+    Waist      Collar Of Obedience +27 (31)             ×1400
+    Wrist      Bite Sleeves +27 (31)                    ×1.44e7
     Back       Falconer's Warm Cape +27 (31)            ×54400
     Legs       Falconer's Bottoms +27 (31)              ×78300
     Offhand    Ceaseless Hunger +27 (31)                ×325000
     Research   Daemonics Reverse-Engineering +27 (31)   ×8.11e6
     Accessory  Falconer's Treats +27 (31)               ×34800
     Mount      Warp Basilisk +27 (31)                   ×118
-    Phylactery Smooth Amber Phylactery +27 (31)         ×155000
+    Phylactery Smooth Amber Phylactery +27 (31)         ×170000
     Weapon     The Accumulator +27 (31)                 ×5.40e9
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.25e9
     Finger     Whiplash +27 (31)                        ×1.30e6
     Trophy     Charged Fin-Wing +27 (31)                ×1.05e7
     Trophy     Pheromone Gland +27 (31)                 ×92800
-Enchant 28 (forced: resonator-ring): ×9.45e102 vs no items, other branch ×0.0000123 [29 candidates, 9 searched slots, 36 leaves, 842 bounds, 51 ms]
-    Head       Conjured Ragecrown +28 (32)              ×761000
-    Hands      Conjured Claws +28 (32)                  ×955000
-    Chest      Conjured Thornmail +28 (32)              ×761000
-    Feet       Conjured Spiked Stompers +28 (32)        ×508000
+Enchant 28 (forced: resonator-ring): ×1.65e104 vs no items, other branch ×0.00000893 [28 candidates, 8 searched slots, 54 leaves, 658 bounds, 49 ms]
+    Head       Conjured Ragecrown +28 (32)              ×190000
+    Hands      Conjured Claws +28 (32)                  ×239000
+    Chest      Conjured Thornmail +28 (32)              ×190000
+    Feet       Conjured Spiked Stompers +28 (32)        ×127000
     Shoulder   Falconer's Leather Wrappings +28 (32)    ×31600
     Neck       Hollow Eye Pendant +28 (32)              ×467000
-    Waist      Collar Of Obedience +28 (32)             ×1700
-    Wrist      Conjured Sawrings +28 (32)               ×1.19e6
+    Waist      Collar Of Obedience +28 (32)             ×1680
+    Wrist      Bite Sleeves +28 (32)                    ×2.08e7
     Back       Falconer's Warm Cape +28 (32)            ×71900
     Legs       Falconer's Bottoms +28 (32)              ×104000
     Offhand    Ceaseless Hunger +28 (32)                ×467000
     Research   Daemonics Reverse-Engineering +28 (32)   ×1.17e7
     Accessory  Falconer's Treats +28 (32)               ×46000
     Mount      Warp Basilisk +28 (32)                   ×138
-    Phylactery Smooth Amber Phylactery +28 (32)         ×188000
+    Phylactery Smooth Amber Phylactery +28 (32)         ×206000
     Weapon     The Accumulator +28 (32)                 ×6.60e9
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.25e9
     Finger     Whiplash +28 (32)                        ×1.87e6
     Trophy     Charged Fin-Wing +28 (32)                ×1.57e7
     Trophy     Pheromone Gland +28 (32)                 ×123000
-Enchant 29 (forced: resonator-ring): ×2.07e105 vs no items, other branch ×0.0000162 [29 candidates, 9 searched slots, 36 leaves, 770 bounds, 53 ms]
-    Head       Conjured Ragecrown +29 (33)              ×1.01e6
-    Hands      Conjured Claws +29 (33)                  ×1.26e6
-    Chest      Conjured Thornmail +29 (33)              ×1.01e6
-    Feet       Conjured Spiked Stompers +29 (33)        ×672000
+Enchant 29 (forced: resonator-ring): ×3.94e106 vs no items, other branch ×0.0000115 [28 candidates, 8 searched slots, 56 leaves, 607 bounds, 48 ms]
+    Head       Conjured Ragecrown +29 (33)              ×251000
+    Hands      Conjured Claws +29 (33)                  ×315000
+    Chest      Conjured Thornmail +29 (33)              ×251000
+    Feet       Conjured Spiked Stompers +29 (33)        ×168000
     Shoulder   Falconer's Leather Wrappings +29 (33)    ×41800
     Neck       Hollow Eye Pendant +29 (33)              ×673000
-    Waist      Collar Of Obedience +29 (33)             ×2050
-    Wrist      Conjured Sawrings +29 (33)               ×1.57e6
+    Waist      Collar Of Obedience +29 (33)             ×2030
+    Wrist      Bite Sleeves +29 (33)                    ×2.99e7
     Back       Falconer's Warm Cape +29 (33)            ×95100
     Legs       Falconer's Bottoms +29 (33)              ×137000
     Offhand    Ceaseless Hunger +29 (33)                ×673000
     Research   Daemonics Reverse-Engineering +29 (33)   ×1.68e7
     Accessory  Falconer's Treats +29 (33)               ×60800
     Mount      Warp Basilisk +29 (33)                   ×161
-    Phylactery Smooth Amber Phylactery +29 (33)         ×228000
+    Phylactery Smooth Amber Phylactery +29 (33)         ×249000
     Weapon     The Accumulator +29 (33)                 ×8.06e9
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.25e9
     Finger     Whiplash +29 (33)                        ×2.69e6
     Trophy     Charged Fin-Wing +29 (33)                ×2.36e7
     Trophy     Pheromone Gland +29 (33)                 ×162000
-Enchant 30 (forced: resonator-ring): ×4.54e107 vs no items, other branch ×0.0000215 [29 candidates, 9 searched slots, 36 leaves, 760 bounds, 51 ms]
-    Head       Conjured Ragecrown +30 (34)              ×1.33e6
-    Hands      Conjured Claws +30 (34)                  ×1.67e6
-    Chest      Conjured Thornmail +30 (34)              ×1.33e6
-    Feet       Conjured Spiked Stompers +30 (34)        ×889000
+Enchant 30 (forced: resonator-ring): ×9.40e108 vs no items, other branch ×0.0000153 [28 candidates, 8 searched slots, 56 leaves, 595 bounds, 47 ms]
+    Head       Conjured Ragecrown +30 (34)              ×332000
+    Hands      Conjured Claws +30 (34)                  ×417000
+    Chest      Conjured Thornmail +30 (34)              ×332000
+    Feet       Conjured Spiked Stompers +30 (34)        ×222000
     Shoulder   Falconer's Leather Wrappings +30 (34)    ×55300
     Neck       Hollow Eye Pendant +30 (34)              ×969000
-    Waist      Collar Of Obedience +30 (34)             ×2470
-    Wrist      Conjured Sawrings +30 (34)               ×2.08e6
+    Waist      Collar Of Obedience +30 (34)             ×2440
+    Wrist      Bite Sleeves +30 (34)                    ×4.30e7
     Back       Falconer's Warm Cape +30 (34)            ×126000
     Legs       Falconer's Bottoms +30 (34)              ×181000
     Offhand    Ceaseless Hunger +30 (34)                ×969000
     Research   Daemonics Reverse-Engineering +30 (34)   ×2.42e7
     Accessory  Falconer's Treats +30 (34)               ×80500
     Mount      Warp Basilisk +30 (34)                   ×187
-    Phylactery Smooth Amber Phylactery +30 (34)         ×275000
+    Phylactery Smooth Amber Phylactery +30 (34)         ×301000
     Weapon     The Accumulator +30 (34)                 ×9.84e9
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.25e9
     Finger     Whiplash +30 (34)                        ×3.88e6
     Trophy     Charged Fin-Wing +30 (34)                ×3.54e7
     Trophy     Pheromone Gland +30 (34)                 ×215000
-Enchant 31 (forced: resonator-ring): ×9.95e109 vs no items, other branch ×0.0000284 [29 candidates, 9 searched slots, 36 leaves, 752 bounds, 51 ms]
-    Head       Conjured Ragecrown +31 (35)              ×1.76e6
-    Hands      Conjured Claws +31 (35)                  ×2.21e6
-    Chest      Conjured Thornmail +31 (35)              ×1.76e6
-    Feet       Conjured Spiked Stompers +31 (35)        ×1.18e6
+Enchant 31 (forced: resonator-ring): ×2.24e111 vs no items, other branch ×0.0000202 [28 candidates, 8 searched slots, 56 leaves, 595 bounds, 48 ms]
+    Head       Conjured Ragecrown +31 (35)              ×439000
+    Hands      Conjured Claws +31 (35)                  ×551000
+    Chest      Conjured Thornmail +31 (35)              ×439000
+    Feet       Conjured Spiked Stompers +31 (35)        ×294000
     Shoulder   Falconer's Leather Wrappings +31 (35)    ×73100
     Neck       Hollow Eye Pendant +31 (35)              ×1.40e6
-    Waist      Collar Of Obedience +31 (35)             ×2980
-    Wrist      Conjured Sawrings +31 (35)               ×2.75e6
+    Waist      Collar Of Obedience +31 (35)             ×2940
+    Wrist      Bite Sleeves +31 (35)                    ×6.20e7
     Back       Falconer's Warm Cape +31 (35)            ×166000
     Legs       Falconer's Bottoms +31 (35)              ×239000
     Offhand    Ceaseless Hunger +31 (35)                ×1.40e6
     Research   Daemonics Reverse-Engineering +31 (35)   ×3.49e7
     Accessory  Falconer's Treats +31 (35)               ×106000
     Mount      Warp Basilisk +31 (35)                   ×219
-    Phylactery Smooth Amber Phylactery +31 (35)         ×333000
+    Phylactery Smooth Amber Phylactery +31 (35)         ×364000
     Weapon     The Accumulator +31 (35)                 ×1.20e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +31 (35)                        ×5.58e6
     Trophy     Charged Fin-Wing +31 (35)                ×5.32e7
     Trophy     Pheromone Gland +31 (35)                 ×284000
-Enchant 32 (forced: resonator-ring): ×2.18e112 vs no items, other branch ×0.0000375 [28 candidates, 8 searched slots, 18 leaves, 303 bounds, 48 ms]
-    Head       Conjured Ragecrown +32 (36)              ×2.33e6
-    Hands      Conjured Claws +32 (36)                  ×2.92e6
-    Chest      Conjured Thornmail +32 (36)              ×2.33e6
-    Feet       Conjured Spiked Stompers +32 (36)        ×1.55e6
+Enchant 32 (forced: resonator-ring): ×5.35e113 vs no items, other branch ×0.0000267 [28 candidates, 8 searched slots, 56 leaves, 592 bounds, 48 ms]
+    Head       Conjured Ragecrown +32 (36)              ×581000
+    Hands      Conjured Claws +32 (36)                  ×729000
+    Chest      Conjured Thornmail +32 (36)              ×581000
+    Feet       Conjured Spiked Stompers +32 (36)        ×388000
     Shoulder   Falconer's Leather Wrappings +32 (36)    ×96700
     Neck       Hollow Eye Pendant +32 (36)              ×2.01e6
-    Waist      Collar Of Obedience +32 (36)             ×3590
-    Wrist      Conjured Sawrings +32 (36)               ×3.63e6
+    Waist      Collar Of Obedience +32 (36)             ×3540
+    Wrist      Bite Sleeves +32 (36)                    ×8.92e7
     Back       Falconer's Warm Cape +32 (36)            ×220000
     Legs       Falconer's Bottoms +32 (36)              ×317000
     Offhand    Ceaseless Hunger +32 (36)                ×2.01e6
     Research   Daemonics Reverse-Engineering +32 (36)   ×5.02e7
     Accessory  Falconer's Treats +32 (36)               ×141000
     Mount      Warp Basilisk +32 (36)                   ×255
-    Phylactery Smooth Amber Phylactery +32 (36)         ×403000
+    Phylactery Smooth Amber Phylactery +32 (36)         ×441000
     Weapon     The Accumulator +32 (36)                 ×1.47e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +32 (36)                        ×8.04e6
     Trophy     Charged Fin-Wing +32 (36)                ×7.98e7
     Trophy     Pheromone Gland +32 (36)                 ×375000
-Enchant 33 (forced: resonator-ring): ×4.78e114 vs no items, other branch ×0.0000496 [28 candidates, 8 searched slots, 15 leaves, 303 bounds, 46 ms]
-    Head       Conjured Ragecrown +33 (37)              ×3.08e6
-    Hands      Conjured Claws +33 (37)                  ×3.86e6
-    Chest      Conjured Thornmail +33 (37)              ×3.08e6
-    Feet       Conjured Spiked Stompers +33 (37)        ×2.06e6
+Enchant 33 (forced: resonator-ring): ×1.28e116 vs no items, other branch ×0.0000353 [28 candidates, 8 searched slots, 56 leaves, 580 bounds, 48 ms]
+    Head       Conjured Ragecrown +33 (37)              ×768000
+    Hands      Conjured Claws +33 (37)                  ×964000
+    Chest      Conjured Thornmail +33 (37)              ×768000
+    Feet       Conjured Spiked Stompers +33 (37)        ×513000
     Shoulder   Falconer's Leather Wrappings +33 (37)    ×128000
     Neck       Hollow Eye Pendant +33 (37)              ×2.89e6
-    Waist      Collar Of Obedience +33 (37)             ×4320
-    Wrist      Conjured Sawrings +33 (37)               ×4.81e6
+    Waist      Collar Of Obedience +33 (37)             ×4270
+    Wrist      Bite Sleeves +33 (37)                    ×1.28e8
     Back       Falconer's Warm Cape +33 (37)            ×291000
     Legs       Falconer's Bottoms +33 (37)              ×419000
     Offhand    Ceaseless Hunger +33 (37)                ×2.89e6
     Research   Daemonics Reverse-Engineering +33 (37)   ×7.23e7
     Accessory  Falconer's Treats +33 (37)               ×186000
     Mount      Warp Basilisk +33 (37)                   ×297
-    Phylactery Smooth Amber Phylactery +33 (37)         ×488000
+    Phylactery Smooth Amber Phylactery +33 (37)         ×533000
     Weapon     The Accumulator +33 (37)                 ×1.79e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +33 (37)                        ×1.16e7
     Trophy     Charged Fin-Wing +33 (37)                ×1.20e8
     Trophy     Pheromone Gland +33 (37)                 ×496000
-Enchant 34 (forced: resonator-ring): ×1.05e117 vs no items, other branch ×0.0000657 [28 candidates, 8 searched slots, 15 leaves, 303 bounds, 46 ms]
-    Head       Conjured Ragecrown +34 (38)              ×4.07e6
-    Hands      Conjured Claws +34 (38)                  ×5.11e6
-    Chest      Conjured Thornmail +34 (38)              ×4.07e6
-    Feet       Conjured Spiked Stompers +34 (38)        ×2.72e6
+Enchant 34 (forced: resonator-ring): ×3.05e118 vs no items, other branch ×0.0000467 [28 candidates, 8 searched slots, 48 leaves, 577 bounds, 48 ms]
+    Head       Conjured Ragecrown +34 (38)              ×1.02e6
+    Hands      Conjured Claws +34 (38)                  ×1.27e6
+    Chest      Conjured Thornmail +34 (38)              ×1.02e6
+    Feet       Conjured Spiked Stompers +34 (38)        ×679000
     Shoulder   Falconer's Leather Wrappings +34 (38)    ×169000
     Neck       Hollow Eye Pendant +34 (38)              ×4.17e6
-    Waist      Collar Of Obedience +34 (38)             ×5210
-    Wrist      Conjured Sawrings +34 (38)               ×6.36e6
+    Waist      Collar Of Obedience +34 (38)             ×5140
+    Wrist      Bite Sleeves +34 (38)                    ×1.85e8
     Back       Falconer's Warm Cape +34 (38)            ×385000
     Legs       Falconer's Bottoms +34 (38)              ×554000
     Offhand    Ceaseless Hunger +34 (38)                ×4.17e6
     Research   Daemonics Reverse-Engineering +34 (38)   ×1.04e8
     Accessory  Falconer's Treats +34 (38)               ×246000
     Mount      Warp Basilisk +34 (38)                   ×347
-    Phylactery Smooth Amber Phylactery +34 (38)         ×590000
+    Phylactery Smooth Amber Phylactery +34 (38)         ×645000
     Weapon     The Accumulator +34 (38)                 ×2.19e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +34 (38)                        ×1.67e7
     Trophy     Charged Fin-Wing +34 (38)                ×1.80e8
     Trophy     Pheromone Gland +34 (38)                 ×656000
-Enchant 35 (forced: resonator-ring): ×2.30e119 vs no items, other branch ×0.0000868 [28 candidates, 8 searched slots, 15 leaves, 306 bounds, 47 ms]
-    Head       Conjured Ragecrown +35 (39)              ×5.38e6
-    Hands      Conjured Claws +35 (39)                  ×6.75e6
-    Chest      Conjured Thornmail +35 (39)              ×5.38e6
-    Feet       Conjured Spiked Stompers +35 (39)        ×3.60e6
+Enchant 35 (forced: resonator-ring): ×7.27e120 vs no items, other branch ×0.0000618 [27 candidates, 7 searched slots, 24 leaves, 238 bounds, 44 ms]
+    Head       Conjured Ragecrown +35 (39)              ×1.34e6
+    Hands      Conjured Claws +35 (39)                  ×1.69e6
+    Chest      Conjured Thornmail +35 (39)              ×1.34e6
+    Feet       Conjured Spiked Stompers +35 (39)        ×898000
     Shoulder   Falconer's Leather Wrappings +35 (39)    ×224000
     Neck       Hollow Eye Pendant +35 (39)              ×6.00e6
-    Waist      Collar Of Obedience +35 (39)             ×6270
-    Wrist      Conjured Sawrings +35 (39)               ×8.41e6
+    Waist      Collar Of Obedience +35 (39)             ×6200
+    Wrist      Bite Sleeves +35 (39)                    ×2.66e8
     Back       Falconer's Warm Cape +35 (39)            ×509000
     Legs       Falconer's Bottoms +35 (39)              ×732000
     Offhand    Ceaseless Hunger +35 (39)                ×6.00e6
     Research   Daemonics Reverse-Engineering +35 (39)   ×1.50e8
     Accessory  Falconer's Treats +35 (39)               ×326000
     Mount      Warp Basilisk +35 (39)                   ×405
-    Phylactery Smooth Amber Phylactery +35 (39)         ×714000
+    Phylactery Smooth Amber Phylactery +35 (39)         ×781000
     Weapon     The Accumulator +35 (39)                 ×2.68e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +35 (39)                        ×2.40e7
     Trophy     Charged Fin-Wing +35 (39)                ×2.70e8
     Trophy     Pheromone Gland +35 (39)                 ×868000
-Enchant 36 (forced: resonator-ring): ×5.03e121 vs no items, other branch ×0.000115 [28 candidates, 8 searched slots, 15 leaves, 302 bounds, 48 ms]
-    Head       Conjured Ragecrown +36 (40)              ×7.11e6
-    Hands      Conjured Claws +36 (40)                  ×8.93e6
-    Chest      Conjured Thornmail +36 (40)              ×7.11e6
-    Feet       Conjured Spiked Stompers +36 (40)        ×4.76e6
+Enchant 36 (forced: resonator-ring): ×1.74e123 vs no items, other branch ×0.0000817 [27 candidates, 7 searched slots, 24 leaves, 238 bounds, 44 ms]
+    Head       Conjured Ragecrown +36 (40)              ×1.78e6
+    Hands      Conjured Claws +36 (40)                  ×2.23e6
+    Chest      Conjured Thornmail +36 (40)              ×1.78e6
+    Feet       Conjured Spiked Stompers +36 (40)        ×1.19e6
     Shoulder   Falconer's Leather Wrappings +36 (40)    ×296000
     Neck       Hollow Eye Pendant +36 (40)              ×8.64e6
-    Waist      Collar Of Obedience +36 (40)             ×7560
-    Wrist      Conjured Sawrings +36 (40)               ×1.11e7
+    Waist      Collar Of Obedience +36 (40)             ×7470
+    Wrist      Bite Sleeves +36 (40)                    ×3.84e8
     Back       Falconer's Warm Cape +36 (40)            ×673000
     Legs       Falconer's Bottoms +36 (40)              ×969000
     Offhand    Ceaseless Hunger +36 (40)                ×8.64e6
     Research   Daemonics Reverse-Engineering +36 (40)   ×2.16e8
     Accessory  Falconer's Treats +36 (40)               ×431000
     Mount      Warp Basilisk +36 (40)                   ×472
-    Phylactery Smooth Amber Phylactery +36 (40)         ×864000
+    Phylactery Smooth Amber Phylactery +36 (40)         ×945000
     Weapon     The Accumulator +36 (40)                 ×3.27e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +36 (40)                        ×3.46e7
     Trophy     Charged Fin-Wing +36 (40)                ×4.05e8
     Trophy     Pheromone Gland +36 (40)                 ×1.15e6
-Enchant 37 (forced: resonator-ring): ×1.10e124 vs no items, other branch ×0.000152 [28 candidates, 8 searched slots, 15 leaves, 302 bounds, 46 ms]
-    Head       Conjured Ragecrown +37 (41)              ×9.41e6
-    Hands      Conjured Claws +37 (41)                  ×1.18e7
-    Chest      Conjured Thornmail +37 (41)              ×9.41e6
-    Feet       Conjured Spiked Stompers +37 (41)        ×6.29e6
+Enchant 37 (forced: resonator-ring): ×4.14e125 vs no items, other branch ×0.000108 [27 candidates, 7 searched slots, 24 leaves, 235 bounds, 45 ms]
+    Head       Conjured Ragecrown +37 (41)              ×2.35e6
+    Hands      Conjured Claws +37 (41)                  ×2.95e6
+    Chest      Conjured Thornmail +37 (41)              ×2.35e6
+    Feet       Conjured Spiked Stompers +37 (41)        ×1.57e6
     Shoulder   Falconer's Leather Wrappings +37 (41)    ×391000
     Neck       Hollow Eye Pendant +37 (41)              ×1.24e7
-    Waist      Collar Of Obedience +37 (41)             ×9100
-    Wrist      Conjured Sawrings +37 (41)               ×1.47e7
+    Waist      Collar Of Obedience +37 (41)             ×9000
+    Wrist      Bite Sleeves +37 (41)                    ×5.52e8
     Back       Falconer's Warm Cape +37 (41)            ×890000
     Legs       Falconer's Bottoms +37 (41)              ×1.28e6
     Offhand    Ceaseless Hunger +37 (41)                ×1.24e7
     Research   Daemonics Reverse-Engineering +37 (41)   ×3.11e8
     Accessory  Falconer's Treats +37 (41)               ×569000
     Mount      Warp Basilisk +37 (41)                   ×550
-    Phylactery Smooth Amber Phylactery +37 (41)         ×1.05e6
+    Phylactery Smooth Amber Phylactery +37 (41)         ×1.14e6
     Weapon     The Accumulator +37 (41)                 ×3.99e10
-    Finger     Resonator Ring                           ×2.31e9
+    Finger     Resonator Ring                           ×3.24e9
     Finger     Whiplash +37 (41)                        ×4.98e7
     Trophy     Charged Fin-Wing +37 (41)                ×6.07e8
     Trophy     Pheromone Gland +37 (41)                 ×1.52e6
-Enchant 38 (forced: resonator-ring): ×2.43e126 vs no items, other branch ×0.000199 [28 candidates, 8 searched slots, 15 leaves, 302 bounds, 48 ms]
+Enchant 38 (forced: resonator-ring): ×9.88e127 vs no items, other branch ×0.000143 [27 candidates, 7 searched slots, 24 leaves, 229 bounds, 45 ms]
     Head       Conjured Ragecrown +38 (42)              ×3.11e6
     Hands      Conjured Claws +38 (42)                  ×3.90e6
     Chest      Conjured Thornmail +38 (42)              ×3.11e6
@@ -805,7 +805,7 @@ Enchant 38 (forced: resonator-ring): ×2.43e126 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +38 (42)    ×517000
     Neck       Hollow Eye Pendant +38 (42)              ×1.79e7
     Waist      Collar Of Obedience +38 (42)             ×10800
-    Wrist      Bite Sleeves +38 (42)                    ×1.96e7
+    Wrist      Bite Sleeves +38 (42)                    ×7.96e8
     Back       Falconer's Warm Cape +38 (42)            ×1.18e6
     Legs       Falconer's Bottoms +38 (42)              ×1.69e6
     Offhand    Ceaseless Hunger +38 (42)                ×1.79e7
@@ -818,7 +818,7 @@ Enchant 38 (forced: resonator-ring): ×2.43e126 vs no items, other branch ×0.00
     Finger     Whiplash +38 (42)                        ×7.17e7
     Trophy     Charged Fin-Wing +38 (42)                ×9.11e8
     Trophy     Pheromone Gland +38 (42)                 ×2.01e6
-Enchant 39 (forced: resonator-ring): ×5.81e128 vs no items, other branch ×0.000242 [27 candidates, 7 searched slots, 24 leaves, 226 bounds, 46 ms]
+Enchant 39 (forced: resonator-ring): ×2.36e130 vs no items, other branch ×0.000189 [27 candidates, 7 searched slots, 24 leaves, 226 bounds, 45 ms]
     Head       Conjured Ragecrown +39 (43)              ×4.11e6
     Hands      Conjured Claws +39 (43)                  ×5.15e6
     Chest      Conjured Thornmail +39 (43)              ×4.11e6
@@ -826,7 +826,7 @@ Enchant 39 (forced: resonator-ring): ×5.81e128 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +39 (43)    ×684000
     Neck       Hollow Eye Pendant +39 (43)              ×2.58e7
     Waist      Collar Of Obedience +39 (43)             ×13100
-    Wrist      Bite Sleeves +39 (43)                    ×2.82e7
+    Wrist      Bite Sleeves +39 (43)                    ×1.15e9
     Back       Falconer's Warm Cape +39 (43)            ×1.56e6
     Legs       Falconer's Bottoms +39 (43)              ×2.24e6
     Offhand    Ceaseless Hunger +39 (43)                ×2.58e7
@@ -839,7 +839,7 @@ Enchant 39 (forced: resonator-ring): ×5.81e128 vs no items, other branch ×0.00
     Finger     Whiplash +39 (43)                        ×1.03e8
     Trophy     Charged Fin-Wing +39 (43)                ×1.37e9
     Trophy     Pheromone Gland +39 (43)                 ×2.66e6
-Enchant 40 (forced: resonator-ring): ×1.39e131 vs no items, other branch ×0.000294 [27 candidates, 7 searched slots, 20 leaves, 226 bounds, 46 ms]
+Enchant 40 (forced: resonator-ring): ×5.62e132 vs no items, other branch ×0.00025 [27 candidates, 7 searched slots, 20 leaves, 226 bounds, 44 ms]
     Head       Conjured Ragecrown +40 (44)              ×5.43e6
     Hands      Conjured Claws +40 (44)                  ×6.82e6
     Chest      Conjured Thornmail +40 (44)              ×5.43e6
@@ -847,7 +847,7 @@ Enchant 40 (forced: resonator-ring): ×1.39e131 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +40 (44)    ×904000
     Neck       Hollow Eye Pendant +40 (44)              ×3.72e7
     Waist      Collar Of Obedience +40 (44)             ×15700
-    Wrist      Bite Sleeves +40 (44)                    ×4.06e7
+    Wrist      Bite Sleeves +40 (44)                    ×1.65e9
     Back       Falconer's Warm Cape +40 (44)            ×2.06e6
     Legs       Falconer's Bottoms +40 (44)              ×2.96e6
     Offhand    Ceaseless Hunger +40 (44)                ×3.72e7
@@ -860,7 +860,7 @@ Enchant 40 (forced: resonator-ring): ×1.39e131 vs no items, other branch ×0.00
     Finger     Whiplash +40 (44)                        ×1.49e8
     Trophy     Charged Fin-Wing +40 (44)                ×2.05e9
     Trophy     Pheromone Gland +40 (44)                 ×3.51e6
-Enchant 41 (forced: resonator-ring): ×3.30e133 vs no items, other branch ×0.000357 [27 candidates, 7 searched slots, 20 leaves, 226 bounds, 46 ms]
+Enchant 41 (forced: resonator-ring): ×1.34e135 vs no items, other branch ×0.000331 [27 candidates, 7 searched slots, 20 leaves, 226 bounds, 44 ms]
     Head       Conjured Ragecrown +41 (45)              ×7.18e6
     Hands      Conjured Claws +41 (45)                  ×9.01e6
     Chest      Conjured Thornmail +41 (45)              ×7.18e6
@@ -868,7 +868,7 @@ Enchant 41 (forced: resonator-ring): ×3.30e133 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +41 (45)    ×1.20e6
     Neck       Hollow Eye Pendant +41 (45)              ×5.35e7
     Waist      Collar Of Obedience +41 (45)             ×18900
-    Wrist      Bite Sleeves +41 (45)                    ×5.85e7
+    Wrist      Bite Sleeves +41 (45)                    ×2.38e9
     Back       Falconer's Warm Cape +41 (45)            ×2.72e6
     Legs       Falconer's Bottoms +41 (45)              ×3.92e6
     Offhand    Ceaseless Hunger +41 (45)                ×5.35e7
@@ -881,7 +881,7 @@ Enchant 41 (forced: resonator-ring): ×3.30e133 vs no items, other branch ×0.00
     Finger     Whiplash +41 (45)                        ×2.14e8
     Trophy     Charged Fin-Wing +41 (45)                ×3.08e9
     Trophy     Pheromone Gland +41 (45)                 ×4.64e6
-Enchant 42 (forced: resonator-ring): ×7.88e135 vs no items, other branch ×0.000437 [27 candidates, 7 searched slots, 20 leaves, 220 bounds, 46 ms]
+Enchant 42 (forced: resonator-ring): ×3.20e137 vs no items, other branch ×0.000437 [27 candidates, 7 searched slots, 20 leaves, 220 bounds, 45 ms]
     Head       Conjured Ragecrown +42 (46)              ×9.50e6
     Hands      Conjured Claws +42 (46)                  ×1.19e7
     Chest      Conjured Thornmail +42 (46)              ×9.50e6
@@ -889,7 +889,7 @@ Enchant 42 (forced: resonator-ring): ×7.88e135 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +42 (46)    ×1.58e6
     Neck       Hollow Eye Pendant +42 (46)              ×7.70e7
     Waist      Collar Of Obedience +42 (46)             ×22800
-    Wrist      Bite Sleeves +42 (46)                    ×8.42e7
+    Wrist      Bite Sleeves +42 (46)                    ×3.42e9
     Back       Falconer's Warm Cape +42 (46)            ×3.60e6
     Legs       Falconer's Bottoms +42 (46)              ×5.18e6
     Offhand    Ceaseless Hunger +42 (46)                ×7.70e7
@@ -902,7 +902,7 @@ Enchant 42 (forced: resonator-ring): ×7.88e135 vs no items, other branch ×0.00
     Finger     Whiplash +42 (46)                        ×3.08e8
     Trophy     Charged Fin-Wing +42 (46)                ×4.62e9
     Trophy     Pheromone Gland +42 (46)                 ×6.14e6
-Enchant 43 (forced: resonator-ring): ×1.88e138 vs no items, other branch ×0.000579 [27 candidates, 7 searched slots, 16 leaves, 220 bounds, 46 ms]
+Enchant 43 (forced: resonator-ring): ×7.64e139 vs no items, other branch ×0.000579 [27 candidates, 7 searched slots, 16 leaves, 220 bounds, 44 ms]
     Head       Conjured Ragecrown +43 (47)              ×1.26e7
     Hands      Conjured Claws +43 (47)                  ×1.58e7
     Chest      Conjured Thornmail +43 (47)              ×1.26e7
@@ -910,7 +910,7 @@ Enchant 43 (forced: resonator-ring): ×1.88e138 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +43 (47)    ×2.09e6
     Neck       Hollow Eye Pendant +43 (47)              ×1.11e8
     Waist      Collar Of Obedience +43 (47)             ×27500
-    Wrist      Bite Sleeves +43 (47)                    ×1.21e8
+    Wrist      Bite Sleeves +43 (47)                    ×4.93e9
     Back       Falconer's Warm Cape +43 (47)            ×4.76e6
     Legs       Falconer's Bottoms +43 (47)              ×6.85e6
     Offhand    Ceaseless Hunger +43 (47)                ×1.11e8
@@ -923,7 +923,7 @@ Enchant 43 (forced: resonator-ring): ×1.88e138 vs no items, other branch ×0.00
     Finger     Whiplash +43 (47)                        ×4.44e8
     Trophy     Charged Fin-Wing +43 (47)                ×6.94e9
     Trophy     Pheromone Gland +43 (47)                 ×8.12e6
-Enchant 44 (forced: resonator-ring): ×4.49e140 vs no items, other branch ×0.000765 [27 candidates, 7 searched slots, 12 leaves, 217 bounds, 50 ms]
+Enchant 44 (forced: resonator-ring): ×1.82e142 vs no items, other branch ×0.000765 [27 candidates, 7 searched slots, 12 leaves, 217 bounds, 44 ms]
     Head       Conjured Ragecrown +44 (48)              ×1.66e7
     Hands      Conjured Claws +44 (48)                  ×2.08e7
     Chest      Conjured Thornmail +44 (48)              ×1.66e7
@@ -931,7 +931,7 @@ Enchant 44 (forced: resonator-ring): ×4.49e140 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +44 (48)    ×2.77e6
     Neck       Hollow Eye Pendant +44 (48)              ×1.60e8
     Waist      Collar Of Obedience +44 (48)             ×33100
-    Wrist      Bite Sleeves +44 (48)                    ×1.75e8
+    Wrist      Bite Sleeves +44 (48)                    ×7.09e9
     Back       Falconer's Warm Cape +44 (48)            ×6.29e6
     Legs       Falconer's Bottoms +44 (48)              ×9.06e6
     Offhand    Ceaseless Hunger +44 (48)                ×1.60e8
@@ -944,7 +944,7 @@ Enchant 44 (forced: resonator-ring): ×4.49e140 vs no items, other branch ×0.00
     Finger     Whiplash +44 (48)                        ×6.39e8
     Trophy     Charged Fin-Wing +44 (48)                ×1.04e10
     Trophy     Pheromone Gland +44 (48)                 ×1.07e7
-Enchant 45 (forced: resonator-ring): ×1.07e143 vs no items, other branch ×0.00101 [27 candidates, 7 searched slots, 12 leaves, 217 bounds, 46 ms]
+Enchant 45 (forced: resonator-ring): ×4.35e144 vs no items, other branch ×0.00101 [27 candidates, 7 searched slots, 12 leaves, 217 bounds, 44 ms]
     Head       Conjured Ragecrown +45 (49)              ×2.20e7
     Hands      Conjured Claws +45 (49)                  ×2.76e7
     Chest      Conjured Thornmail +45 (49)              ×2.20e7
@@ -952,7 +952,7 @@ Enchant 45 (forced: resonator-ring): ×1.07e143 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +45 (49)    ×3.66e6
     Neck       Hollow Eye Pendant +45 (49)              ×2.30e8
     Waist      Collar Of Obedience +45 (49)             ×39900
-    Wrist      Bite Sleeves +45 (49)                    ×2.52e8
+    Wrist      Bite Sleeves +45 (49)                    ×1.02e10
     Back       Falconer's Warm Cape +45 (49)            ×8.32e6
     Legs       Falconer's Bottoms +45 (49)              ×1.20e7
     Offhand    Ceaseless Hunger +45 (49)                ×2.30e8
@@ -965,7 +965,7 @@ Enchant 45 (forced: resonator-ring): ×1.07e143 vs no items, other branch ×0.00
     Finger     Whiplash +45 (49)                        ×9.20e8
     Trophy     Charged Fin-Wing +45 (49)                ×1.56e10
     Trophy     Pheromone Gland +45 (49)                 ×1.42e7
-Enchant 46 (forced: resonator-ring): ×2.55e145 vs no items, other branch ×0.00134 [27 candidates, 7 searched slots, 12 leaves, 211 bounds, 47 ms]
+Enchant 46 (forced: resonator-ring): ×1.04e147 vs no items, other branch ×0.00134 [27 candidates, 7 searched slots, 12 leaves, 211 bounds, 44 ms]
     Head       Conjured Ragecrown +46 (50)              ×2.90e7
     Hands      Conjured Claws +46 (50)                  ×3.64e7
     Chest      Conjured Thornmail +46 (50)              ×2.90e7
@@ -973,7 +973,7 @@ Enchant 46 (forced: resonator-ring): ×2.55e145 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +46 (50)    ×4.84e6
     Neck       Hollow Eye Pendant +46 (50)              ×3.31e8
     Waist      Collar Of Obedience +46 (50)             ×48100
-    Wrist      Bite Sleeves +46 (50)                    ×3.62e8
+    Wrist      Bite Sleeves +46 (50)                    ×1.47e10
     Back       Falconer's Warm Cape +46 (50)            ×1.10e7
     Legs       Falconer's Bottoms +46 (50)              ×1.59e7
     Offhand    Ceaseless Hunger +46 (50)                ×3.31e8
@@ -986,7 +986,7 @@ Enchant 46 (forced: resonator-ring): ×2.55e145 vs no items, other branch ×0.00
     Finger     Whiplash +46 (50)                        ×1.33e9
     Trophy     Charged Fin-Wing +46 (50)                ×2.34e10
     Trophy     Pheromone Gland +46 (50)                 ×1.88e7
-Enchant 47 (forced: resonator-ring): ×6.09e147 vs no items, other branch ×0.00177 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 46 ms]
+Enchant 47 (forced: resonator-ring): ×2.47e149 vs no items, other branch ×0.00177 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 44 ms]
     Head       Conjured Ragecrown +47 (51)              ×3.84e7
     Hands      Conjured Claws +47 (51)                  ×4.82e7
     Chest      Conjured Thornmail +47 (51)              ×3.84e7
@@ -994,7 +994,7 @@ Enchant 47 (forced: resonator-ring): ×6.09e147 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +47 (51)    ×6.40e6
     Neck       Hollow Eye Pendant +47 (51)              ×4.77e8
     Waist      Collar Of Obedience +47 (51)             ×57900
-    Wrist      Bite Sleeves +47 (51)                    ×5.22e8
+    Wrist      Bite Sleeves +47 (51)                    ×2.12e10
     Back       Falconer's Warm Cape +47 (51)            ×1.46e7
     Legs       Falconer's Bottoms +47 (51)              ×2.10e7
     Offhand    Ceaseless Hunger +47 (51)                ×4.77e8
@@ -1007,7 +1007,7 @@ Enchant 47 (forced: resonator-ring): ×6.09e147 vs no items, other branch ×0.00
     Finger     Whiplash +47 (51)                        ×1.91e9
     Trophy     Charged Fin-Wing +47 (51)                ×3.52e10
     Trophy     Pheromone Gland +47 (51)                 ×2.48e7
-Enchant 48 (forced: resonator-ring): ×1.45e150 vs no items, other branch ×0.00234 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 48 ms]
+Enchant 48 (forced: resonator-ring): ×5.90e151 vs no items, other branch ×0.00234 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 45 ms]
     Head       Conjured Ragecrown +48 (52)              ×5.08e7
     Hands      Conjured Claws +48 (52)                  ×6.37e7
     Chest      Conjured Thornmail +48 (52)              ×5.08e7
@@ -1015,7 +1015,7 @@ Enchant 48 (forced: resonator-ring): ×1.45e150 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +48 (52)    ×8.46e6
     Neck       Hollow Eye Pendant +48 (52)              ×6.87e8
     Waist      Collar Of Obedience +48 (52)             ×69700
-    Wrist      Bite Sleeves +48 (52)                    ×7.51e8
+    Wrist      Bite Sleeves +48 (52)                    ×3.05e10
     Back       Falconer's Warm Cape +48 (52)            ×1.93e7
     Legs       Falconer's Bottoms +48 (52)              ×2.77e7
     Offhand    Ceaseless Hunger +48 (52)                ×6.87e8
@@ -1028,7 +1028,7 @@ Enchant 48 (forced: resonator-ring): ×1.45e150 vs no items, other branch ×0.00
     Finger     Whiplash +48 (52)                        ×2.75e9
     Trophy     Charged Fin-Wing +48 (52)                ×5.28e10
     Trophy     Pheromone Gland +48 (52)                 ×3.29e7
-Enchant 49 (forced: resonator-ring): ×3.47e152 vs no items, other branch ×0.0031 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 46 ms]
+Enchant 49 (forced: resonator-ring): ×1.41e154 vs no items, other branch ×0.0031 [27 candidates, 7 searched slots, 12 leaves, 208 bounds, 45 ms]
     Head       Conjured Ragecrown +49 (53)              ×6.71e7
     Hands      Conjured Claws +49 (53)                  ×8.42e7
     Chest      Conjured Thornmail +49 (53)              ×6.71e7
@@ -1036,7 +1036,7 @@ Enchant 49 (forced: resonator-ring): ×3.47e152 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +49 (53)    ×1.12e7
     Neck       Hollow Eye Pendant +49 (53)              ×9.89e8
     Waist      Collar Of Obedience +49 (53)             ×84000
-    Wrist      Bite Sleeves +49 (53)                    ×1.08e9
+    Wrist      Bite Sleeves +49 (53)                    ×4.39e10
     Back       Falconer's Warm Cape +49 (53)            ×2.55e7
     Legs       Falconer's Bottoms +49 (53)              ×3.67e7
     Offhand    Ceaseless Hunger +49 (53)                ×9.89e8
@@ -1049,7 +1049,7 @@ Enchant 49 (forced: resonator-ring): ×3.47e152 vs no items, other branch ×0.00
     Finger     Whiplash +49 (53)                        ×3.96e9
     Trophy     Charged Fin-Wing +49 (53)                ×7.92e10
     Trophy     Pheromone Gland +49 (53)                 ×4.35e7
-Enchant 50 (forced: resonator-ring): ×8.26e154 vs no items, other branch ×0.0041 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 46 ms]
+Enchant 50 (forced: resonator-ring): ×3.36e156 vs no items, other branch ×0.0041 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 45 ms]
     Head       Conjured Ragecrown +50 (54)              ×8.88e7
     Hands      Conjured Claws +50 (54)                  ×1.11e8
     Chest      Conjured Thornmail +50 (54)              ×8.88e7
@@ -1057,7 +1057,7 @@ Enchant 50 (forced: resonator-ring): ×8.26e154 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +50 (54)    ×1.48e7
     Neck       Hollow Eye Pendant +50 (54)              ×1.42e9
     Waist      Collar Of Obedience +50 (54)             ×101000
-    Wrist      Bite Sleeves +50 (54)                    ×1.56e9
+    Wrist      Bite Sleeves +50 (54)                    ×6.32e10
     Back       Falconer's Warm Cape +50 (54)            ×3.37e7
     Legs       Falconer's Bottoms +50 (54)              ×4.85e7
     Offhand    Ceaseless Hunger +50 (54)                ×1.42e9
@@ -1070,7 +1070,7 @@ Enchant 50 (forced: resonator-ring): ×8.26e154 vs no items, other branch ×0.00
     Finger     Whiplash +50 (54)                        ×5.70e9
     Trophy     Charged Fin-Wing +50 (54)                ×1.19e11
     Trophy     Pheromone Gland +50 (54)                 ×5.75e7
-Enchant 51 (forced: resonator-ring): ×1.97e157 vs no items, other branch ×0.00542 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 48 ms]
+Enchant 51 (forced: resonator-ring): ×8.00e158 vs no items, other branch ×0.00542 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 44 ms]
     Head       Conjured Ragecrown +51 (55)              ×1.17e8
     Hands      Conjured Claws +51 (55)                  ×1.47e8
     Chest      Conjured Thornmail +51 (55)              ×1.17e8
@@ -1078,7 +1078,7 @@ Enchant 51 (forced: resonator-ring): ×1.97e157 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +51 (55)    ×1.96e7
     Neck       Hollow Eye Pendant +51 (55)              ×2.05e9
     Waist      Collar Of Obedience +51 (55)             ×122000
-    Wrist      Bite Sleeves +51 (55)                    ×2.24e9
+    Wrist      Bite Sleeves +51 (55)                    ×9.11e10
     Back       Falconer's Warm Cape +51 (55)            ×4.45e7
     Legs       Falconer's Bottoms +51 (55)              ×6.41e7
     Offhand    Ceaseless Hunger +51 (55)                ×2.05e9
@@ -1091,7 +1091,7 @@ Enchant 51 (forced: resonator-ring): ×1.97e157 vs no items, other branch ×0.00
     Finger     Whiplash +51 (55)                        ×8.20e9
     Trophy     Charged Fin-Wing +51 (55)                ×1.78e11
     Trophy     Pheromone Gland +51 (55)                 ×7.60e7
-Enchant 52 (forced: resonator-ring): ×4.70e159 vs no items, other branch ×0.00717 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 46 ms]
+Enchant 52 (forced: resonator-ring): ×1.91e161 vs no items, other branch ×0.00717 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 45 ms]
     Head       Conjured Ragecrown +52 (56)              ×1.55e8
     Hands      Conjured Claws +52 (56)                  ×1.95e8
     Chest      Conjured Thornmail +52 (56)              ×1.55e8
@@ -1099,7 +1099,7 @@ Enchant 52 (forced: resonator-ring): ×4.70e159 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +52 (56)    ×2.59e7
     Neck       Hollow Eye Pendant +52 (56)              ×2.95e9
     Waist      Collar Of Obedience +52 (56)             ×147000
-    Wrist      Bite Sleeves +52 (56)                    ×3.23e9
+    Wrist      Bite Sleeves +52 (56)                    ×1.31e11
     Back       Falconer's Warm Cape +52 (56)            ×5.89e7
     Legs       Falconer's Bottoms +52 (56)              ×8.48e7
     Offhand    Ceaseless Hunger +52 (56)                ×2.95e9
@@ -1112,7 +1112,7 @@ Enchant 52 (forced: resonator-ring): ×4.70e159 vs no items, other branch ×0.00
     Finger     Whiplash +52 (56)                        ×1.18e10
     Trophy     Charged Fin-Wing +52 (56)                ×2.68e11
     Trophy     Pheromone Gland +52 (56)                 ×1.01e8
-Enchant 53 (forced: resonator-ring): ×1.12e162 vs no items, other branch ×0.00948 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 46 ms]
+Enchant 53 (forced: resonator-ring): ×4.55e163 vs no items, other branch ×0.00948 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 44 ms]
     Head       Conjured Ragecrown +53 (57)              ×2.05e8
     Hands      Conjured Claws +53 (57)                  ×2.58e8
     Chest      Conjured Thornmail +53 (57)              ×2.05e8
@@ -1120,7 +1120,7 @@ Enchant 53 (forced: resonator-ring): ×1.12e162 vs no items, other branch ×0.00
     Shoulder   Falconer's Leather Wrappings +53 (57)    ×3.42e7
     Neck       Hollow Eye Pendant +53 (57)              ×4.25e9
     Waist      Collar Of Obedience +53 (57)             ×177000
-    Wrist      Bite Sleeves +53 (57)                    ×4.65e9
+    Wrist      Bite Sleeves +53 (57)                    ×1.89e11
     Back       Falconer's Warm Cape +53 (57)            ×7.79e7
     Legs       Falconer's Bottoms +53 (57)              ×1.12e8
     Offhand    Ceaseless Hunger +53 (57)                ×4.25e9
@@ -1133,7 +1133,7 @@ Enchant 53 (forced: resonator-ring): ×1.12e162 vs no items, other branch ×0.00
     Finger     Whiplash +53 (57)                        ×1.70e10
     Trophy     Charged Fin-Wing +53 (57)                ×4.02e11
     Trophy     Pheromone Gland +53 (57)                 ×1.33e8
-Enchant 54 (forced: resonator-ring): ×2.67e164 vs no items, other branch ×0.0125 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 46 ms]
+Enchant 54 (forced: resonator-ring): ×1.09e166 vs no items, other branch ×0.0125 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 44 ms]
     Head       Conjured Ragecrown +54 (58)              ×2.71e8
     Hands      Conjured Claws +54 (58)                  ×3.41e8
     Chest      Conjured Thornmail +54 (58)              ×2.71e8
@@ -1141,7 +1141,7 @@ Enchant 54 (forced: resonator-ring): ×2.67e164 vs no items, other branch ×0.01
     Shoulder   Falconer's Leather Wrappings +54 (58)    ×4.53e7
     Neck       Hollow Eye Pendant +54 (58)              ×6.12e9
     Waist      Collar Of Obedience +54 (58)             ×213000
-    Wrist      Bite Sleeves +54 (58)                    ×6.70e9
+    Wrist      Bite Sleeves +54 (58)                    ×2.72e11
     Back       Falconer's Warm Cape +54 (58)            ×1.03e8
     Legs       Falconer's Bottoms +54 (58)              ×1.48e8
     Offhand    Ceaseless Hunger +54 (58)                ×6.12e9
@@ -1154,7 +1154,7 @@ Enchant 54 (forced: resonator-ring): ×2.67e164 vs no items, other branch ×0.01
     Finger     Whiplash +54 (58)                        ×2.45e10
     Trophy     Charged Fin-Wing +54 (58)                ×6.03e11
     Trophy     Pheromone Gland +54 (58)                 ×1.76e8
-Enchant 55 (forced: resonator-ring): ×6.38e166 vs no items, other branch ×0.0166 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 45 ms]
+Enchant 55 (forced: resonator-ring): ×2.59e168 vs no items, other branch ×0.0166 [27 candidates, 7 searched slots, 12 leaves, 205 bounds, 44 ms]
     Head       Conjured Ragecrown +55 (59)              ×3.59e8
     Hands      Conjured Claws +55 (59)                  ×4.50e8
     Chest      Conjured Thornmail +55 (59)              ×3.59e8
@@ -1162,7 +1162,7 @@ Enchant 55 (forced: resonator-ring): ×6.38e166 vs no items, other branch ×0.01
     Shoulder   Falconer's Leather Wrappings +55 (59)    ×5.99e7
     Neck       Hollow Eye Pendant +55 (59)              ×8.82e9
     Waist      Collar Of Obedience +55 (59)             ×256000
-    Wrist      Bite Sleeves +55 (59)                    ×9.64e9
+    Wrist      Bite Sleeves +55 (59)                    ×3.92e11
     Back       Falconer's Warm Cape +55 (59)            ×1.36e8
     Legs       Falconer's Bottoms +55 (59)              ×1.96e8
     Offhand    Ceaseless Hunger +55 (59)                ×8.82e9

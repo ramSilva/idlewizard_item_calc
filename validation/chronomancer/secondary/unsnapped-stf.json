@@ -811,7 +811,7 @@
               "set": "Ancient Bones",
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 1.8496822760975533
+              "contributionLog10": 2.9303909973497753
             },
             {
               "key": "timeshroud",
@@ -851,7 +851,7 @@
               "set": "Ancient Bones",
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 2.0457475011426425
+              "contributionLog10": 2.0457475011425856
             },
             {
               "key": "mutated-mycelium",
@@ -874,8 +874,8 @@
               "contributionLog10": 2.0006046883021327
             }
           ],
-          "scoreLog10": 254.50389107448746,
-          "gainLog10": 26.792163700648416,
+          "scoreLog10": 255.58459979573968,
+          "gainLog10": 27.872872421900638,
           "forced": [],
           "candidates": [
             "empowering-headguard",
@@ -886,13 +886,11 @@
             "darklight-tunic",
             "burning-heart-breastplate",
             "forests-embrace",
-            "lordic-greaves",
-            "the-great-journey",
             "boots-of-concentration",
+            "the-great-journey",
             "stabilizing-pauldrons",
             "torc-of-privilege",
             "lucky-amulet",
-            "empowering-waistguard",
             "encircling-trophies",
             "endless-pouches",
             "timeshroud",
@@ -905,14 +903,14 @@
             "mutated-mycelium"
           ],
           "stats": {
-            "candidates": 25,
+            "candidates": 23,
             "positions": 8,
-            "leaves": 1920,
-            "bounds": 6298,
-            "evaluations": 8110,
+            "leaves": 522,
+            "bounds": 2427,
+            "evaluations": 4164,
             "exhaustive": false,
             "complete": true,
-            "ms": 84.151209
+            "ms": 54.875207999999986
           }
         },
         "branches": [
@@ -986,7 +984,7 @@
                 "set": "Ancient Bones",
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 1.8496822760975533
+                "contributionLog10": 2.9303909973497753
               },
               {
                 "key": "timeshroud",
@@ -1026,7 +1024,7 @@
                 "set": "Ancient Bones",
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 2.0457475011426425
+                "contributionLog10": 2.0457475011425856
               },
               {
                 "key": "mutated-mycelium",
@@ -1049,8 +1047,8 @@
                 "contributionLog10": 2.0006046883021327
               }
             ],
-            "scoreLog10": 254.50389107448746,
-            "gainLog10": 26.792163700648416,
+            "scoreLog10": 255.58459979573968,
+            "gainLog10": 27.872872421900638,
             "forced": [],
             "candidates": [
               "empowering-headguard",
@@ -1061,13 +1059,11 @@
               "darklight-tunic",
               "burning-heart-breastplate",
               "forests-embrace",
-              "lordic-greaves",
-              "the-great-journey",
               "boots-of-concentration",
+              "the-great-journey",
               "stabilizing-pauldrons",
               "torc-of-privilege",
               "lucky-amulet",
-              "empowering-waistguard",
               "encircling-trophies",
               "endless-pouches",
               "timeshroud",
@@ -1080,14 +1076,14 @@
               "mutated-mycelium"
             ],
             "stats": {
-              "candidates": 25,
+              "candidates": 23,
               "positions": 8,
-              "leaves": 1920,
-              "bounds": 6298,
-              "evaluations": 8110,
+              "leaves": 522,
+              "bounds": 2427,
+              "evaluations": 4164,
               "exhaustive": false,
               "complete": true,
-              "ms": 84.151209
+              "ms": 54.875207999999986
             }
           }
         ],

@@ -1,13 +1,13 @@
 Chronomancer with Risen Giant, spells 65,17,73,60,4,69, score chronomancer-burst
-Legion off; snapped 69; 1 levels in 0.05 s (setup 12 ms)
-Enchant 10: ×1.13e24 vs no items [22 candidates, 7 searched slots, 693 leaves, 1594 bounds, 49 ms]
+Legion off; snapped 69; 1 levels in 0.05 s (setup 11 ms)
+Enchant 10: ×1.36e25 vs no items [22 candidates, 7 searched slots, 693 leaves, 1594 bounds, 46 ms]
     Head       The Artificer's Crown +10                ×12.1
     Hands      Empowering Handguards +10                ×21.3
     Chest      The Ribcage +10                          ×254
     Feet       Boots Of Concentration +10               ×226
     Shoulder   Mantle Of The Crypt +10                  ×203
     Neck       Searing Gaze +10                         ×18.6
-    Waist      Encircling Trophies +10                  ×46.9
+    Waist      Encircling Trophies +10                  ×564
     Back       Flaming Cape +10                         ×65.1
     Research   Servants Overclocking +10                ×361
     Finger     Morbid Loop +10                          ×73.6

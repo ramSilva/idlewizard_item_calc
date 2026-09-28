@@ -48,7 +48,7 @@ Requires Node 22.
 ## Known limitations
 
 - Many class defaults are placeholder magnitudes (cast counts, CAP/PAP bases, efficiency bases, Void mana); set real values in the Inputs tab.
-- Unverified readings include: percentage item bonuses as multipliers, "(base)" bonuses as additive, phylacteries compounding per character level, item attribute bonuses stopping at the attribute cap, weapon abilities active during the burst, and Temporal Paradox's tier. Full lists are in the reports above.
+- Unverified readings include: percentage item bonuses as multipliers, "(base)" bonuses as additive, phylacteries compounding per character level, the attribute cap limiting only assigned points (item bonuses count above it; backed by an in-game test), weapon abilities active during the burst, and Temporal Paradox's tier. Full lists are in the reports above.
 - One item set per score: snapshot sets and build-phase gear have no score of their own; snapped spells enter through inputs.
 - The default search prunes like the Discord BiS bot, so it's a heuristic; `--thorough` or `pruning: "none"` searches more.
 

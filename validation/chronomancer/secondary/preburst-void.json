@@ -1109,7 +1109,7 @@
             "evaluations": 883,
             "exhaustive": true,
             "complete": true,
-            "ms": 17.24791700000003
+            "ms": 16.230625000000032
           }
         },
         "branches": [
@@ -1266,7 +1266,7 @@
               "evaluations": 883,
               "exhaustive": true,
               "complete": true,
-              "ms": 17.24791700000003
+              "ms": 16.230625000000032
             }
           }
         ],

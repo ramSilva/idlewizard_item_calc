@@ -1,6 +1,6 @@
 Chronomancer with Risen Giant, spells 65,67,30,34,104,69, score void-mana
 Legion off; snapped none; 1 levels in 0.02 s (setup 8 ms)
-Enchant 10: ×1.74e6 vs no items [17 candidates, 4 searched slots, 81 leaves, 0 bounds, 17 ms]
+Enchant 10: ×1.74e6 vs no items [17 candidates, 4 searched slots, 81 leaves, 0 bounds, 16 ms]
     Head       Empowering Headguard +10                 ×1.86
     Hands      Empowering Handguards +10                ×3
     Chest      Empowering Chestguard                    ×2.13

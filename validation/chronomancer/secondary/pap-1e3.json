@@ -774,7 +774,7 @@
               "set": "Ancient Bones",
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 2.40414113974947
+              "contributionLog10": 2.4041411397494983
             },
             {
               "key": "boots-of-concentration",
@@ -794,7 +794,7 @@
               "set": "Ancient Bones",
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 2.3072311267414136
+              "contributionLog10": 2.307231126741442
             },
             {
               "key": "searing-gaze",
@@ -814,7 +814,7 @@
               "set": "Ancient Bones",
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 1.6708579288014676
+              "contributionLog10": 2.751566650053718
             },
             {
               "key": "flaming-cape",
@@ -834,7 +834,7 @@
               "set": null,
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 2.557562376258943
+              "contributionLog10": 2.5575623762589714
             },
             {
               "key": "morbid-loop",
@@ -864,7 +864,7 @@
               "set": null,
               "enchant": 10,
               "effectiveEnchant": 10,
-              "contributionLog10": 1.9515480422130338
+              "contributionLog10": 1.9515480422130622
             },
             {
               "key": "necrotic-powerstone",
@@ -877,8 +877,8 @@
               "contributionLog10": 2.000604688302076
             }
           ],
-          "scoreLog10": 253.0326213798273,
-          "gainLog10": 24.05188324263318,
+          "scoreLog10": 254.11333010107955,
+          "gainLog10": 25.13259196388543,
           "forced": [],
           "candidates": [
             "the-artificers-crown",
@@ -909,10 +909,10 @@
             "positions": 7,
             "leaves": 693,
             "bounds": 1594,
-            "evaluations": 3380,
+            "evaluations": 3319,
             "exhaustive": false,
             "complete": true,
-            "ms": 49.285541999999964
+            "ms": 47.66504200000003
           }
         },
         "branches": [
@@ -946,7 +946,7 @@
                 "set": "Ancient Bones",
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 2.40414113974947
+                "contributionLog10": 2.4041411397494983
               },
               {
                 "key": "boots-of-concentration",
@@ -966,7 +966,7 @@
                 "set": "Ancient Bones",
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 2.3072311267414136
+                "contributionLog10": 2.307231126741442
               },
               {
                 "key": "searing-gaze",
@@ -986,7 +986,7 @@
                 "set": "Ancient Bones",
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 1.6708579288014676
+                "contributionLog10": 2.751566650053718
               },
               {
                 "key": "flaming-cape",
@@ -1006,7 +1006,7 @@
                 "set": null,
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 2.557562376258943
+                "contributionLog10": 2.5575623762589714
               },
               {
                 "key": "morbid-loop",
@@ -1036,7 +1036,7 @@
                 "set": null,
                 "enchant": 10,
                 "effectiveEnchant": 10,
-                "contributionLog10": 1.9515480422130338
+                "contributionLog10": 1.9515480422130622
               },
               {
                 "key": "necrotic-powerstone",
@@ -1049,8 +1049,8 @@
                 "contributionLog10": 2.000604688302076
               }
             ],
-            "scoreLog10": 253.0326213798273,
-            "gainLog10": 24.05188324263318,
+            "scoreLog10": 254.11333010107955,
+            "gainLog10": 25.13259196388543,
             "forced": [],
             "candidates": [
               "the-artificers-crown",
@@ -1081,10 +1081,10 @@
               "positions": 7,
               "leaves": 693,
               "bounds": 1594,
-              "evaluations": 3380,
+              "evaluations": 3319,
               "exhaustive": false,
               "complete": true,
-              "ms": 49.285541999999964
+              "ms": 47.66504200000003
             }
           }
         ],
