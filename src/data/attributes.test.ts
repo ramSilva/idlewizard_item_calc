@@ -39,11 +39,12 @@ describe("attribute per-point bonuses and perks", () => {
     expect(withCirclet).toBeCloseTo(0.35 * 1.025 ** 250, 6);
   });
 
-  it("stops item attribute bonuses at the attribute cap", () => {
-    const dom = { [attributePoints("Dominance")]: 200 };
-    expect(statValue("Click.AutoclickProfit", dom, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 250, 4);
-    expect(statValue("Click.AutoclickProfit", { ...dom, "Misc.AttributeCap": 225 }, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 225, 4);
-    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 50 }, { add: { "Attr.Dominance": 150 } })).toBeCloseTo(1.03 ** 200, 4);
+  it("caps assigned points at the attribute cap and counts item bonuses above it", () => {
+    const items = { add: { "Attr.Dominance": 150 } };
+    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 200 }, items)).toBeCloseTo(1.03 ** 350, 2);
+    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 250, "Misc.AttributeCap": 225 }, items)).toBeCloseTo(1.03 ** 375, 1);
+    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 250, "Misc.AttributeCap": 225 })).toBeCloseTo(1.03 ** 225, 4);
+    expect(statValue("Click.AutoclickProfit", { [attributePoints("Dominance")]: 50 }, items)).toBeCloseTo(1.03 ** 200, 4);
   });
 
   it("Intelligence 75 and Mastery 125 reduce level requirements, which phylacteries count", () => {

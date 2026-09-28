@@ -17,7 +17,7 @@ const THRESHOLD_NOTE = "https://idlewizard.wiki.gg/wiki/Temporalist_Guide_(e550%
 export const attributePoints = (a: Attribute): string => `AttrPoints.${a}`;
 /** Assigned points plus item bonuses; item requirements use this. */
 export const attributeStat = (a: Attribute): string => `Attr.${a}`;
-/** Assigned points plus item bonuses, up to the attribute cap; per-point bonuses and perks use this. */
+/** Assigned points (up to the attribute cap) plus item bonuses; per-point bonuses and perks use this. */
 export const attributeEffective = (a: Attribute): string => `AttrEffective.${a}`;
 export const ATTRIBUTE_CAP = "Misc.AttributeCap";
 const PARAGON = "https://idlewizard.wiki.gg/wiki/Paragon";
@@ -42,9 +42,13 @@ const PER_POINT: Record<Attribute, PerPoint> = {
 };
 
 export const ATTRIBUTE_STATS: readonly StatDef[] = [
-  inputStat(ATTRIBUTE_CAP, "Attribute cap", "Attributes", { default: 250, kind: "integer", min: 100, max: 250, hint: "100, raised by 25 at Paragon 6, 10, 12, 15, 21 and 24 (250)." }, {
-    source: { url: PARAGON, verified: true },
-  }),
+  inputStat(
+    ATTRIBUTE_CAP,
+    "Attribute cap",
+    "Attributes",
+    { default: 250, kind: "integer", min: 100, max: 250, hint: "Most points you can assign to one attribute: 100, raised by 25 at Paragon 6, 10, 12, 15, 21 and 24 (250). Item bonuses go above it." },
+    { source: { url: PARAGON, verified: true } },
+  ),
   ...ATTRIBUTES.flatMap((a) => [
   inputStat(attributePoints(a), `${a} points assigned`, "Attributes", { default: 0, kind: "integer", min: 0, hint: "Points you assign; item attribute bonuses are added by the tool." }, {
     source: VERIFIED,
@@ -56,14 +60,20 @@ export const ATTRIBUTE_STATS: readonly StatDef[] = [
       note: "Item attribute bonuses are assumed to count as points for per-point bonuses and perks (perk thresholds: see the Temporalist guide).",
     },
   }),
-  derivedStat(attributeEffective(a), `${a} counted by bonuses and perks`, "Attributes", f(`min(${attributeStat(a)}, ${ATTRIBUTE_CAP})`), {
-    source: {
-      url: "https://idlewizard.wiki.gg/wiki/Shaman_Guide",
-      verified: false,
-      note:
-        "Item attribute bonuses are assumed to stop at the attribute cap: the Shaman guide says Voidstrike Seal, Encircling Trophies and Bite Sleeves are best only \"before maxing out their respective attributes\", and the Temporalist guide needs just 240 points with Innate Aptitude's bonus.",
+  derivedStat(
+    attributeEffective(a),
+    `${a} counted by bonuses and perks`,
+    "Attributes",
+    f(`${attributeStat(a)} - max(${attributePoints(a)} - ${ATTRIBUTE_CAP}, 0)`),
+    {
+      source: {
+        url: PARAGON,
+        verified: false,
+        note:
+          "The Paragon page's attribute cap is read as a limit on assigned points only; item bonuses count above it. An in-game test (Oni, Empathy 205 assigned + Commissar's Torn Sleeve) found Bite Sleeves' +75 Empathy still raises profit past 250, which rules out capping item bonuses.",
+      },
     },
-  }),
+  ),
   constantStat(perPoint(a), `${a} bonus per point`, "Attributes", PER_POINT[a].bonus, {
     description: `Each point multiplies ${PER_POINT[a].label} by (1 + this).`,
     source: VERIFIED,

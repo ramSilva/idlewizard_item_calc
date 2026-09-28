@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { validateLoadout } from "../engine/loadout.ts";
 import { ENCHANT_LEVELS } from "../engine/optimizer.ts";
 import { buildModel, defaultSelection, type BuiltModel } from "./buildModel.ts";
-import { itemByKey } from "./items.ts";
+import { ITEMS, itemByKey } from "./items.ts";
 import { createOptimizer } from "./optimize.ts";
 import { comparePreset } from "./optimizerReport.ts";
 
@@ -87,5 +87,33 @@ describe("optimizer performance", () => {
         ].join("\n"),
       );
     }
+  });
+});
+
+// A player's in-game check: with 205 Empathy assigned and Commissar's Torn Sleeve already past 250, swapping Bite
+// Sleeves in for the suggested wrist item raised profit, so its +75 Empathy must still count above the attribute cap.
+describe("in-game check: Bite Sleeves above 250 Empathy (Oni)", () => {
+  it("prefers Bite Sleeves over Conjured Sawrings", () => {
+    const m = buildModel({ ...defaultSelection("oni"), scoreId: "spell:FuriousStrike" }, { relevance: false });
+    const inputs = {
+      "Char.Level": 194,
+      "Pet.Level": 827,
+      "AttrPoints.Intelligence": 250,
+      "AttrPoints.Insight": 175,
+      "AttrPoints.Spellcraft": 250,
+      "AttrPoints.Wisdom": 200,
+      "AttrPoints.Dominance": 80,
+      "AttrPoints.Patience": 250,
+      "AttrPoints.Mastery": 205,
+      "AttrPoints.Empathy": 205,
+      "Building.6.Count": 16963,
+      "Weapon.CataclysmCharges": 3250,
+    };
+    const owned = Object.fromEntries(ITEMS.filter((i) => !i.mythic && i.key !== "ritual-disk").map((i) => [i.key, i.maxQuality]));
+    const opt = createOptimizer(m, inputs, { owned: { ...owned, "anointed-ashes": "Epic" } });
+    const row = opt.optimizeLevel(20);
+    expect(row.best.items.find((i) => itemByKey(i.key)!.slot === "Wrist")?.key).toBe("bite-sleeves");
+    const withSawrings = row.best.items.map((i) => (i.key === "bite-sleeves" ? itemByKey("conjured-sawrings")! : itemByKey(i.key)!).id).join(";");
+    expect(comparePreset(opt, m, row, withSawrings, inputs).gapLog10).toBeGreaterThan(0);
   });
 });

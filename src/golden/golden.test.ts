@@ -17,13 +17,13 @@ interface Expected {
 
 const EXPECTED: Record<string, Record<string, Expected>> = {
   oni: {
-    "LS 13+5": { missing: ["Seclusion Shell", "Boots Of Eastern Blessings", "The Amplifier", "Incantations Restructuring", "Spellweaving Kilt", "Spell Vault"], maxGapLog10: 1 },
-    "LS 17+5": { missing: ["Circlet Of Deep Thoughts", "Seclusion Shell", "Boots Of Eastern Blessings", "Incantations Restructuring", "Spellweaving Kilt", "Spell Vault"], maxGapLog10: 1 },
+    "LS 13+5": { missing: ["Conjured Ragecrown", "Boots Of Eastern Blessings", "The Amplifier", "Incantations Restructuring", "Spellweaving Kilt", "Spell Vault"], maxGapLog10: 1 },
+    "LS 17+5": { missing: ["Boots Of Eastern Blessings", "Incantations Restructuring", "Spellweaving Kilt", "Spell Vault"], maxGapLog10: 1 },
     "LS 39+5": { missing: ["Incantations Restructuring", "Spellweaving Kilt", "Spell Vault"], maxGapLog10: 1 },
   },
   "oni-spellcraft": {
-    "LS 13+5": { missing: ["Seclusion Shell", "Boots Of Eastern Blessings", "The Amplifier", "Incantations Restructuring", "Spell Vault"], maxGapLog10: 1.5 },
-    "LS 17+5": { missing: ["Circlet Of Deep Thoughts", "Seclusion Shell", "Boots Of Eastern Blessings", "Incantations Restructuring", "Spell Vault"], maxGapLog10: 1.5 },
+    "LS 13+5": { missing: ["Conjured Ragecrown", "Boots Of Eastern Blessings", "The Amplifier", "Incantations Restructuring", "Spell Vault"], maxGapLog10: 1.5 },
+    "LS 17+5": { missing: ["Boots Of Eastern Blessings", "Incantations Restructuring", "Spell Vault"], maxGapLog10: 1.5 },
     "LS 39+5": { missing: ["Incantations Restructuring", "Spell Vault"], maxGapLog10: 1 },
   },
   shaman: {
