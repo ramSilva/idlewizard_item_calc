@@ -75,7 +75,13 @@ const spells: StatDef[] = [
     source: unverified(ITEM_DATA, "Flat bonuses add up; percentage bonuses are assumed to multiply the sum."),
   }),
   multiplierStat("Spell.AccumulatedCastGain", "Accumulated casts gain", "Spells", { source: ITEM_DATA }),
-  multiplierStat("Spell.MaxCastRate", "Maximum cast rate of spells per second", "Spells", { source: ITEM_DATA }),
+  inputStat(
+    "Spell.MaxCastRate",
+    "Maximum cast rate of spells per second without item bonuses",
+    "Spells",
+    { default: 60, kind: "number", min: 0, unit: "casts/s", hint: `The spellbook's info tab shows it. ${BEFORE_BONUSES}` },
+    { source: { ...MECHANICS, note: "The default maximum cast rate is 60 casts per second per spell; items and upgrades raise it." } },
+  ),
   multiplierStat("Spell.AutoclicksFromSpells", "Autoclick amount from spells", "Spells", { source: ITEM_DATA }),
   multiplierStat("Spell.AccumulatedCastCountFactor", "Cast count multiplier for accumulated and persistent spells", "Spells", {
     description: "The Rubedo Engine counts these casts twice as they are made; cast counts are inputs, so no score reads this.",
@@ -371,6 +377,21 @@ const weapons: StatDef[] = [
   additiveStat("Weapon.RitualOfPotencyGranted", "Ritual Of Potency in the spellbook", "Items", {
     description: "1 while The Accumulator is equipped: it adds Ritual Of Potency to the spellbook, so the spell only counts with it.",
     source: WEAPON("The_Accumulator"),
+  }),
+  additiveStat("Weapon.AccumulatorChargesPerCast", "The Accumulator's charges per spell cast", "Items", {
+    description: "(R × 4)² × 0.1 − 0.009 while The Accumulator is equipped, 0 otherwise; weapon charging speed multiplies it.",
+    source: WEAPON("The_Accumulator"),
+  }),
+  inputStat("Weapon.AccumulatorChargesFromExtraCasts", "The Accumulator also charges from simulated and granted casts", "Items", { default: 0, kind: "boolean" }, {
+    description: "Whether Jas'Aham's simulated Magic Missile casts and the casts it grants other spells charge The Accumulator like real casts.",
+    source: WEAPON("The_Accumulator", 'The page says "each spell cast grants" charges without saying whether simulated or granted casts count; off by default.'),
+  }),
+  inputStat("Weapon.AccumulatorCastsCounted", "Ritual Of Potency casts from The Accumulator count as spell casts", "Items", { default: 1, kind: "boolean" }, {
+    description: "Whether the Ritual Of Potency casts The Accumulator's activation adds count toward spells cast this Exile (the casts-per-second score).",
+    source: WEAPON(
+      "The_Accumulator",
+      "The page says the activation increases Ritual Of Potency casts but not whether they count toward spells cast this Exile; on by default, like the casts Jas'Aham's spells grant.",
+    ),
   }),
 ];
 

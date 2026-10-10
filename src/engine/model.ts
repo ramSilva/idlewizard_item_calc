@@ -210,6 +210,8 @@ export interface SpellBehaviour {
   mana?: { perCast?: Expr; perSecond?: Expr };
   autoclicks?: AutoclickSource;
   voidManaPerSecond?: Expr;
+  /** Casts this Exile each cast adds besides itself; `toPanelSpell` ones go to another spell on the bar and need one there. */
+  extraCasts?: { perCast: Expr; toPanelSpell: boolean }[];
   /** Per-spell inputs (casts, charges) and derived stats. */
   stats: StatDef[];
   /**

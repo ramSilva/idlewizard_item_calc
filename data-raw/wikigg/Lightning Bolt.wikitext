@@ -1,0 +1,16 @@
+{{Spell}}
+
+==Details==
+Grants Mana equal to:
+
+<math>N \times E \times 80</math>
+
+Grants [[:Category:Spells#Spell_Shards|Spell Shards]] equal to:
+
+<math>(L \times 4 + 100) \times E^{0.075}</math>
+<br>(maximum 1e12). Cannot grant shards to itself.
+
+where:
+* <math>N = \text{Mana per Sec}</math>
+* <math>L = \text{Character Level}</math>
+* <math>E = \text{Evocation Efficiency}</math>

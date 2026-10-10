@@ -215,6 +215,7 @@ export function ResultsPanel({ view, progress, error, enchant, sweep, onSweepCha
       <p className="muted">
         Scores are relative multipliers: factors that scale every item set equally are dropped (and never asked for), so only ratios between sets are meaningful,
         never absolute mana.
+        {model?.score.def.unit && ` ${model.score.def.label} is also shown as a value, computed with the hidden inputs at their defaults.`}
       </p>
       {view?.stale && <p className="warning">The setup changed since this result was computed{view.kind === "quick" ? "; updating…" : "; run again to refresh it."}</p>}
       {view?.kind === "quick" && <p className="muted">Automatic result for the global enchant level. Run the sweep to see where the best set changes.</p>}
@@ -223,6 +224,7 @@ export function ResultsPanel({ view, progress, error, enchant, sweep, onSweepCha
         <>
           <h3>
             Best set at enchant {row.level}: {formatMultiplier(row.best.gainLog10)} vs no items
+            {model?.score.def.unit && ` (${formatNumber(10 ** row.best.scoreLog10)} ${model.score.def.unit})`}
           </h3>
           {row.branches.length > 1 && (
             <p className="muted">

@@ -92,6 +92,16 @@
       "file": "wikigg/Arcane Engine.wikitext"
     },
     {
+      "title": "Arcanist",
+      "resolvedTitle": "Arcanist",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Arcanist",
+      "revid": 31891,
+      "revisionTimestamp": "2026-10-07T15:10:28Z",
+      "file": "wikigg/Arcanist.wikitext"
+    },
+    {
       "title": "Architectural Databelt",
       "resolvedTitle": "Architectural Databelt",
       "wiki": "wikigg",
@@ -1552,6 +1562,36 @@
       "file": "wikigg/Items.wikitext"
     },
     {
+      "title": "Jas'Aham's Missile Storm",
+      "resolvedTitle": "Jas'Aham's Missile Storm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Jas'Aham's_Missile_Storm",
+      "revid": 28387,
+      "revisionTimestamp": "2026-04-25T08:14:44Z",
+      "file": "wikigg/Jas'Aham's Missile Storm.wikitext"
+    },
+    {
+      "title": "Jas'Aham's Missile Storm (Enhanced)",
+      "resolvedTitle": "Jas'Aham's Missile Storm (Enhanced)",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Jas'Aham's_Missile_Storm_(Enhanced)",
+      "revid": 28388,
+      "revisionTimestamp": "2026-04-25T08:14:49Z",
+      "file": "wikigg/Jas'Aham's Missile Storm (Enhanced).wikitext"
+    },
+    {
+      "title": "Jas'Aham's Thunderous Swarm",
+      "resolvedTitle": "Jas'Aham's Thunderous Swarm",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Jas'Aham's_Thunderous_Swarm",
+      "revid": 29938,
+      "revisionTimestamp": "2026-07-03T17:54:26Z",
+      "file": "wikigg/Jas'Aham's Thunderous Swarm.wikitext"
+    },
+    {
       "title": "Legacy",
       "resolvedTitle": "Legacy",
       "wiki": "wikigg",
@@ -1590,6 +1630,16 @@
       "revid": 28536,
       "revisionTimestamp": "2026-04-25T11:24:32Z",
       "file": "wikigg/Light Of Eighth Star.wikitext"
+    },
+    {
+      "title": "Lightning Bolt",
+      "resolvedTitle": "Lightning Bolt",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Lightning_Bolt",
+      "revid": 28393,
+      "revisionTimestamp": "2026-04-25T08:16:11Z",
+      "file": "wikigg/Lightning Bolt.wikitext"
     },
     {
       "title": "Living Sin",
@@ -2172,6 +2222,16 @@
       "file": "wikigg/Ritual Disk.wikitext"
     },
     {
+      "title": "Ritual Of Potency",
+      "resolvedTitle": "Ritual Of Potency",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Ritual_Of_Potency",
+      "revid": 31545,
+      "revisionTimestamp": "2026-09-25T14:10:48Z",
+      "file": "wikigg/Ritual Of Potency.wikitext"
+    },
+    {
       "title": "Robust Tangerine Phylactery",
       "resolvedTitle": "Robust Tangerine Phylactery",
       "wiki": "wikigg",
@@ -2690,6 +2750,16 @@
       "revid": 31578,
       "revisionTimestamp": "2026-09-25T14:11:56Z",
       "file": "wikigg/Thunderbird.wikitext"
+    },
+    {
+      "title": "Thunderous Justice Arcanist Guide",
+      "resolvedTitle": "Thunderous Justice Arcanist Guide",
+      "wiki": "wikigg",
+      "method": "api",
+      "url": "https://idlewizard.wiki.gg/wiki/Thunderous_Justice_Arcanist_Guide",
+      "revid": 31702,
+      "revisionTimestamp": "2026-09-29T15:44:48Z",
+      "file": "wikigg/Thunderous Justice Arcanist Guide.wikitext"
     },
     {
       "title": "Timeshroud",

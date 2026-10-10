@@ -1,0 +1,230 @@
+{{TODO}}
+{{Guides}}
+{{VersionUpdated|}}
+This page aims to aid in progression when using {{ClassTooltip|Arcanist}} in [[Quasi-Realms#Thunderous Justice|Thunderous Justice Quasi-Realm]] by providing information, procedures, builds, or detailed recommendations.
+
+==Quasi Tips==
+* Typically a "quasi tour" involves a first pass over all of the [[Quasi-Realms]] to get them to at least 1 [[Delusion]], and depending on your [[Memories]], you can expect Thunderous Justice to get you to around 1-2 delusions from when you first hit its requirement with active play over a few days, at which point you should realm out back to prime or another quasi realm.
+* The Sleight of Hand [[Paramnesics|Paramnesic]] helps slightly in this realm, but is likely not worth putting points into unless you have a lot of delusions already (at least 1 full quasi tour completed, preferably 2). You will get more profit, but probably not as much as putting that point elsewhere. If you're inclined to put points into it early anyway, only put 1 in.
+* The approximate difficulty of this quasi realm to reach 5 delusions on a [[Quasi-Realms#5 Delusion Difficulty|6-scale difficulty chart]] (1 easiest, 6 hardest) is 1.
+
+To optimise your run for 5 delusions on a subsequent pass of the quasi realm, you should have as many of the following as possible:
+* The calendar [[Weekly Bonus]] should be Week of Persistence, especially later in the run.
+* You should have at some point previously reached [[Mythic_Forge#Imbuement_Bonuses|paragon 46 for mythic imbuements]] and have at least one piece of gear (each) with increased stacking gain for persistent spells, augment spells, and accumulated spells (in that order of priority, but very preferably all of them).
+
+==Attributes==
+* Fill for items (Requires quite a lot - {{ItemTooltip|Blessed Tapestry}} is your friend for 1sec points)
+* Important Perks
+* Wis left at 240+10.
+* Dom left at 0
+* Rest fully cap before Vers
+
+==Scaling==
+{| class="wikitable" style= "max-width:800px"
+|- 
+! colspan="2" | Overall Scaling to Profits
+|-
+| Inc ^4.91
+|-
+| Idle^2.0155
+|-
+| Pap ^1.3
+|-
+| Evo, Profit, CaP, VpE, Void Mana ^1
+|}
+
+<details>
+<summary>Enchantment Profit Table</summary><!-- Content that follows wrapped in <div> to avoid unkown behaviour when using tooltip templates -->
+<div>
+{| class="wikitable" style="display: inline-table; max-width:800px;"
+|-
+!   !! Vmana  !! Burst  !! if both
+|-
+| PAP  20%   || 13.61%  || 11.56% || 26.75%
+|-
+| PAP 22.5%  || 15.26%  || 12.95% || 30.19%
+|-
+| PAP    25% || 16.91% || 14.33% || 33.65%
+|-
+| Inc   4%   || 00.28%  || 20.90% || 21.25%
+|-
+| Inc   5%   || 00.35% || 26.64% || 27.09%
+|-
+| Idle 8% ||     || 16.78% || 16.78%
+|-
+| Idle 12.5% ||    || 26.79% || 26.79%
+|-
+| Idle 15% ||    || 32.54% || 32.54%
+|-
+| Idle 20% ||     || 44.41% || 44.41%
+|}
+</div>
+</details>
+
+This quasi has cast scaling of 5.86 (with Enhanced Ritual of Power, a little less without).
+
+The Sleight of Hand paramnesic is not very profitable in this quasi - you probably want 1 point at most, and only then if you have a very high amount of delusions already.
+
+{{SummarizeGuideBoxSets}}
+
+==Phases==
+A typical run consists of
+
+* Spell Stacking phase
+* Pet Levelling phase
+* Void Mana Phase 
+* Quick Burst Phase to get upgrades and sources.
+* Void Mana Phase
+* Burst Phase
+
+===Spell Stacking===
+{{Xbox|Due to a bug that still exists in the XBOX version of the game - [[Augment]] spells like {{SpellTooltip|Arcane Infusion}} (aka AI) do not take effect unless there is at least 1 manual cast of them each exile or game session. Be sure to remove {{SpellTooltip|Jas'Aham's Thunderous Swarm|JTS}} (so that AI will charge) and cast {{SpellTooltip|Arcane Infusion|AI}} once before resuming normal buildup. (If you ever burst and barely get profit, this is probably why!)}}
+
+Stack Persistents, Accumulated, Augment.
+
+If you're using mythic imbued items for extra stacking, this phase can be split into up to 3 smaller phases using each item - one for more Persistent Casts Gain, one for more Augment Casts Gain, and one for more Maximum Spell Charges (for accumulated stacking - Accumulated Casts Gain won't work with JTS).
+
+JTS only charges from the shard pool 10 times per second, so we use {{SpellTooltip|Lightning Bolt}} to charge it at max cast rate.  Lightning bolt must grant at least 1e8 shards per cast to be worth using, so we use Archivist with evocation gear to make sure it's strong enough.
+
+{{GuideBox
+|pet=Risen Giant
+|pet1=Archivist
+|spells=#0#BuildupEarly[RG]@8,0;10,2;100,0;202,2;42,2;60,0
+|t-spells=Early Game Inc (RG)
+|t-spells1=End Game Evo (Arch)
+|spells1=#0#BuildupLate[Arch]@8,0;10,2;100,0;202,2;1,2;60,0
+|itemtab=Early Game Inc (RG)
+|items=#0#BuildupEarly[RG]@100;113;7;23;18;32;40;68;56;88;72;1022;209;301;415;411;90;2003;3007;504
+|itemtab1=End Game Evo (Arch)
+|items1=#0#BuildupLate[Arch]@112;113;2;23;14;35;41;60;58;88;76;1022;210;300;405;415;90;2003;3003;504
+}}
+
+* Archivist makes PAP^1 = Evo, so check whether {{ItemTooltip|Ceaseless Hunger}} is better.
+* Do not enchant {{ItemTooltip|The Magnifier}}, {{ItemTooltip|The Rubedo Engine}}, or {{ItemTooltip|Temporal Scabbard}}.  {{ItemTooltip|Easymind Hat}} and {{ItemTooltip|Resonator Ring}} can be enchanted a bit to keep the shard pool full.
+* Use {{ItemTooltip|Concealing Shroud}} instead of {{ItemTooltip|The Magnifier}} if that increases your {{SpellTooltip|Jas'Aham's Thunderous Swarm|JTS}} cast rate
+* Once you're far enough, you won't need to run {{SpellTooltip|spell_name=Conjure Lesser Elemental}}, so occasionally check if you still need it. If you don't, remove it so that {{SpellTooltip|Jas'Aham's Thunderous Swarm|JTS}} gives more casts to the rest of the spells.
+
+===Pet Levelling===
+Level up your pet as high as possible.
+
+{{Note|Since RG beats Zombie after a couple of minutes, after your Void mana phase you should stay leveling RG for at least 1-2 minutes before going to burst}}
+
+{{GuideBox|
+spells=#1#PetXP@25,2;202,2;10,2;42,2;21,2;71,2|
+items=#1#PetXP@112;106;9;27;13;35;43;67;57;87;76;1023;203;304;407;412;96;2009;3007;506
+}}
+
+===Void Mana===
+Get as much Void Mana as possible.
+
+{{GuideBox|
+pet=Voidterror|
+spells=#2#VoidMana@25,2;202,2;26,2;42,2;10,2;30,2|
+items=#2#VoidMana@112;113;5;25;15;30;49;67;55;89;76;1002;202;309;407;412;99;2002;3006;503
+}}
+
+{| class="wikitable replace"
+! colspan=3 width:100%| Later Substitutions:
+|-
+! Replaced || Better|| Condition
+|-
+| {{ItemTooltip|Whiplash}} ||{{ItemTooltip|Netherloop}} || At enchant level 31+5
+|}
+
+===Burst===
+Get as much mana as possible.
+
+For a significant boost, flick between your stacking set and your burst set (with about a 1-2 second delay) repeatedly to refill your stacks of {{SpellTooltip|spell_name = Jas'Aham's Thunderous Swarm}} and bursting again and again with an exponential set of extra casts. Keep your pet on {{PetTooltip|pet_name = Risen Giant}}; just keep buying mana sources and upgrades as they become available. There might be a more optimal way to achieve this, but this is simple enough and it works thanks to {{SpellTooltip|spell_name = Conjure Lesser Elemental}}'s extra shard capacity and probably some stacking items as well. 
+
+When you reach 4 to 4.5 delusions (or whenever progression feels difficult), you can perform what is known as a "[[Catalysts#Configuration%20Swapping/Catalyst%20Respeccing|Catalyst Respec]]", which will increase your profits. This is particularly useful if you're struggling to reach the 5 delusion mark to unlock the enhanced spell.  
+
+{{Note|Profits are at their highest inside the range of 4 to 10 minutes after selecting {{PetTooltip|pet_name = Risen Giant}}. After that, Void Mana degeneration brings it down much more than the pet keeps scaling it up.}}
+
+{{GuideBox|
+pet=Zombie|
+pet1=Risen Giant|
+spells=#3#Burst@202,2;60,2;51,2;8,2;42,2;111,2|
+items=#3#Burst@104;113;1;20;14;33;47;65;54;85;70;1022;207;306;404;411;94;2005;3004;507
+}}
+
+==Pantheon==
+Order of priority of pantheons, with secondary abilities, is roughly:
+
+Cerebros = Altermutus > Tempoaeverum > Chaos > Procreogenus > Ardourium > Animatealia 
+
+Veritallios has nearly zero value.
+
+Animatealia should be roughly half of Cerebros until higher levels, at which point Cerebros should be closer to about 4-5 levels ahead of Animatealia.
+
+==Source Memes==
+{{SourceMemes
+|class=arcanist
+|gem=
+|grimoire=
+|fountain=gild
+|tree=exp
+|desk=evo
+|circle=cap
+|rift=pap
+|nexus=inc
+}}
+
+Rough priority is PAP > CAP >> Evo > Incant >>> cEXP
+
+To calculate the ideal ingot distribution, use the following stat scalings with [[Spreadsheets#Source_Memes_Calculator|Muninn's Source Meme Calculator]]
+{| class="wikitable mw-collapsible mw-collapsed"
+|-
+!Stat !! Scaling
+|-
+| Incantation || 4.911
+|-
+| Character Ability Power || 1
+|-
+| Autoclick || 0
+|-
+| Evocation || 1
+|- 
+| Summoning || 0
+|-
+| Pet Ability Power || 1.3
+|-
+| Character Experience || 0.703
+|}
+These scalings and the above source distribution assumes 0 Spell Mastery. The distribution of sources will change if you use the Spell Mastery field.
+
+==Spell Memes==
+These efficiency values work as a rough guide for priority, or can be used with [[Spreadsheets#Spell Meme Calculator|Merp's Spell Meme Calculator]].
+
+{| class="wikitable sortable"
+|-
+! Spell !! Efficiency !! Cast scaling !! AC amt scaling !! AC profit !! Cast amt !! Cast rate
+|-
+| {{SpellTooltip|Magic Missile|icon=hidden}} || 1.5 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Radiant Pools|icon=hidden}} || 1.2 || 0.81 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ritual Of Power|icon=hidden}} || 1.2 || 0.45 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Ritual Of Power (Enhanced)|icon=hidden}} || 1.2 || 0.55 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Ritual Of Potency|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Karnaphen's Spellshroud|icon=hidden}} || 1.2 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Spellstaff Of Chamaon|icon=hidden}} || 1.157 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Void Lure|icon=hidden}} || 1.007 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| ^{{SpellTooltip|Void Lure (Enhanced)|icon=hidden}} || 1.016 || 0 || 0 || {{CheckboxF}} || {{CheckboxF}} || {{CheckboxF}}
+|-
+| {{SpellTooltip|Arcane Infusion|icon=hidden}} || 1 || 1.15 || 0 || {{CheckboxF}} || {{CheckboxT}} || {{CheckboxF}}
+|-
+| colspan="7" | For spells marked with a '''^''', replace the line above if you have it, do not add both.
+|-
+|}
+
+Notes:
+* Because we don't need to actually cast most of our memed spells except slowly in burst, we need far less shard pool than normal; 18 is enough at level 30 burst spells.
+* Thanks to the increased shard pool size, it is likely you no longer need to flick between burst and the stacking set to recharge {{SpellTooltip|Jas'Aham's Thunderous Swarm|JTS}}, so you can simply stay in burst for as long as you like.
+* {{SpellTooltip|Jas'Aham's Thunderous Swarm|JTS}} can benefit from a small amount of memes for cast rate (level in 2s).  The exact amount you benefit from will vary, but is unlikely to be much more than around 4. It costs a trivial amount of ink to level it to 6 and adjust its levels until you see the best cast rate.
+* Spare ink can be spent on summons (5 levels at a time) for a small increase to autoclicks.

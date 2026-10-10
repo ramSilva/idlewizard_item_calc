@@ -18,6 +18,8 @@ export interface ScoreDef {
   id: string;
   label: string;
   description: string;
+  /** Set when the score's absolute value means something on its own; the results show it beside the multiplier. */
+  unit?: string;
   /** null when the selection can't produce this score. */
   build(ctx: ScoreContext): Expr | null;
 }
@@ -64,6 +66,13 @@ export const SCORES: readonly ScoreDef[] = [
     build: (ctx) => (ctx.manaPerCast.has(65) ? ref(ctx.manaPerCast.get(65)!) : null),
   },
   {
+    id: "arcanist-burst",
+    label: "Arcanist burst: Jas'Aham's Thunderous Swarm mana per cast",
+    description:
+      "Mana from one Jas'Aham's Thunderous Swarm cast with the burst incantations active; the burst flicks back to the stacking set to refill its charges (Thunderous Justice Arcanist Guide, Burst).",
+    build: (ctx) => (ctx.manaPerCast.has(202) ? ref(ctx.manaPerCast.get(202)!) : null),
+  },
+  {
     id: "production",
     label: "Mana per second while the selected spells are active",
     description: "Production with every selected spell active; the score for bursts that earn mana over time.",
@@ -87,6 +96,14 @@ export const SCORES: readonly ScoreDef[] = [
     label: "Void mana per second",
     description: "Void mana per second from Void Radiance and the pet (Void Mana phases).",
     build: (ctx) => (ctx.voidMana ? ref("Void.ManaPerSecond") : null),
+  },
+  {
+    id: "casts-per-second",
+    label: "Spell casts per second",
+    unit: "casts/s",
+    description:
+      "Casts added to spells cast this Exile each second: the bar's real casts (each capped by the maximum cast rate and its charges), the casts Jas'Aham's spells simulate and grant, and Ritual Of Potency casts from The Accumulator's charges.",
+    build: (ctx) => (ctx.spells.length ? ref("Spell.CastsPerSecond") : null),
   },
   statScore("Spell.EvocationEfficiency", "Evocation efficiency"),
   statScore("Spell.IncantationEfficiency", "Incantation efficiency"),

@@ -32,7 +32,9 @@ interface GuideCase {
 }
 
 // Burst presets and scaling tables from the guides (Oni: "Stat scalings" under Source Memetics; Shaman: "Run Scalings",
-// Burst column; Temporalist e550+: "Phase Scaling", Burst column).
+// Burst column; Temporalist e550+: "Phase Scaling", Burst column; Arcanist: "Scaling", with Inc, PAP and Idle from the
+// Burst column of the enchantment profit table, e.g. Inc 5% → +26.64% is ln 1.2664 / ln 1.05 ≈ 4.84). The Arcanist guide
+// states no enchant level for its burst set.
 const GUIDES: Record<string, GuideCase> = {
   oni: {
     preset: "104;113;1;29;18;32;48;68;54;84;76;1002;211;301;411;417;91;2007;3003;509",
@@ -73,6 +75,18 @@ const GUIDES: Record<string, GuideCase> = {
       CAP: { guide: 1 },
       PAP: { guide: 1 },
       Idle: { guide: 1 },
+    },
+  },
+  arcanist: {
+    preset: "104;113;1;20;14;33;47;65;54;85;70;1022;207;306;404;411;94;2005;3004;507",
+    enchant: 0,
+    source: "https://idlewizard.wiki.gg/wiki/Thunderous_Justice_Arcanist_Guide",
+    scalings: {
+      Evo: { guide: 1 },
+      Inc: { guide: 4.84 },
+      CAP: { guide: 1 },
+      PAP: { guide: 0.6 },
+      Idle: { guide: 2.016 },
     },
   },
 };
@@ -255,6 +269,63 @@ describe("In Over Your Head: Temporal Paradox and Ritual Of Potency", () => {
   });
 });
 
+describe("Arcanist: Jas'Aham's Thunderous Swarm, The Accumulator and casts per second", () => {
+  const m = buildModel({ ...defaultSelection("arcanist"), scoreId: "casts-per-second" }, { relevance: false });
+  const equip = (...names: string[]) => loadoutModifiers(m, names.map((n) => ({ item: itemByName(n)!, enchant: 0 })), false);
+  const JTS = { "Spell.JasAhamsThunderousSwarm.CastsThisExile": 1000, "Spell.JasAhamsThunderousSwarm.CastsThisRealm": 2000 };
+  const evaluate = (inputs: Record<string, number>, ...items: string[]) => {
+    const ev = new FloatEvaluator(m.graph, { ...JTS, ...inputs });
+    const score = 10 ** ev.scoreLog10(equip(...items));
+    return { score, v: (id: string) => 10 ** ev.statLog10(id) };
+  };
+  // Thunderous Swarm at the 60/s maximum cast rate; the burst incantations are recast when their 10–60 s durations end.
+  const real = (accumulator: boolean) => 60 + 1 / 10 + 1 / 20 + 1 / 10 + 1 / 60 + (accumulator ? 1 / 10 : 0);
+  const extra = 60 * (2 ** 1.3 + 100) + 60 * ((2000 * 0.05) ** 0.8 / 100 + 1);
+  const chargesPerCast = 4 ** 2 * 0.1 - 0.009;
+
+  it("counts real casts, Jas'Aham's simulated and granted casts, and Ritual Of Potency casts from The Accumulator's charges", () => {
+    const { score, v } = evaluate({}, "The Accumulator");
+    expect(v("Weapon.AccumulatorChargesPerCast")).toBeCloseTo(1.591, 9);
+    expect(score / (real(true) + extra + chargesPerCast * real(true))).toBeCloseTo(1, 9);
+    expect(evaluate({}).score / (real(false) + extra)).toBeCloseTo(1, 9);
+  });
+
+  it("toggles whether simulated casts charge The Accumulator and whether its casts count", () => {
+    expect(evaluate({ "Weapon.AccumulatorChargesFromExtraCasts": 1 }, "The Accumulator").score / (real(true) + extra + chargesPerCast * (real(true) + extra))).toBeCloseTo(1, 9);
+    expect(evaluate({ "Weapon.AccumulatorCastsCounted": 0 }, "The Accumulator").score / (real(true) + extra)).toBeCloseTo(1, 9);
+  });
+
+  it("charges The Accumulator faster with weapon charging speed", () => {
+    const base = evaluate({}, "The Accumulator").v("Weapon.AccumulatorCastsPerSecond");
+    expect(evaluate({}, "The Accumulator", "Temporal Scabbard").v("Weapon.AccumulatorCastsPerSecond") / base).toBeCloseTo(2, 9);
+  });
+
+  it("caps each spell at the maximum cast rate and its charges", () => {
+    const rate = "Spell.JasAhamsThunderousSwarm.CastsPerSecond";
+    expect(evaluate({}, "Zenith, The Champion's Steed").v(rate)).toBeCloseTo(66, 9);
+    expect(evaluate({ "Spell.JasAhamsThunderousSwarm.ChargedCastsPerSecond": 10 }, "Zenith, The Champion's Steed").v(rate)).toBeCloseTo(10, 9);
+  });
+
+  it("grants Jas'Aham's extra casts to another spell only when a non-persistent spell is on the bar", () => {
+    const alone = buildModel({ classId: "arcanist", petId: "risen-giant", spells: [202], scoreId: "casts-per-second" }, { relevance: false });
+    const ev = new FloatEvaluator(alone.graph, JTS);
+    ev.scoreLog10(loadoutModifiers(alone, [], false));
+    expect(10 ** ev.statLog10("Spell.ExtraCastsPerSecond")).toBeCloseTo(60 * (2 ** 1.3 + 100), 6);
+  });
+
+  it("multiplies Thunderous Swarm's mana by the charges each cast spends", () => {
+    const burst = model("arcanist");
+    const mana = (charges: number) => new FloatEvaluator(burst.graph, { "Spell.JasAhamsThunderousSwarm.Charges": charges }).scoreLog10(loadoutModifiers(burst, [], false));
+    expect(mana(21) - mana(1)).toBeCloseTo(Math.log10(3), 9);
+  });
+
+  it("puts Thunderous Swarm, the Quasi-Realm alternative to Missile Storm, only on Arcanist's bar", () => {
+    expect(model("arcanist").selection.spells).toContain(202);
+    expect(() => buildModel({ classId: "arcanist", petId: "risen-giant", spells: [81, 1, 8], scoreId: "production" }, { relevance: false })).not.toThrow();
+    expect(() => buildModel({ ...defaultSelection("oni"), spells: [202] }, { relevance: false })).toThrow(/isn't a Oni spell/);
+  });
+});
+
 describe("guide-anchored magnitudes and toggles", () => {
   it("gives about 76 Summon Centipede Swarm clicks per second in the Shaman burst preset", () => {
     const m = model("shaman");
@@ -301,6 +372,7 @@ describe("guide-anchored magnitudes and toggles", () => {
     expect(ids).toEqual(expect.arrayContaining(["oni-burst", "production", "spell:FuriousStrike", "stat:Spell.IncantationEfficiency", "stat:Hero.AbilityPower"]));
     expect(model("shaman").scores.map((s) => s.id)).toEqual(expect.arrayContaining(["shaman-burst", "autoclick-mana"]));
     expect(model("temporalist").scores.map((s) => s.id)).toContain("temporalist-burst");
+    expect(model("arcanist").scores.map((s) => s.id)).toEqual(expect.arrayContaining(["arcanist-burst", "casts-per-second", "spell:JasAhamsThunderousSwarm"]));
   });
 
   it("gives every score a nonzero value at the defaults, whichever class spell is on the bar", () => {

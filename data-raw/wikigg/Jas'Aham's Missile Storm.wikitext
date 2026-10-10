@@ -1,0 +1,31 @@
+{{Spell}}
+
+==Details==
+Simulates a number <math>N</math> of {{SpellTooltip|spell_name=Magic Missile}} casts, equal to:
+
+<math>\left\lfloor (C_{E} \times 0.001 + 1)^{1.3} \right\rfloor + 10</math>
+
+granting Mana, equal to:
+
+<math>M \times \left( N + 1 \right) \times E \times 30</math>
+
+''Note: This increases {{SpellTooltip|spell_name=Magic Missile}} casts, Casts This Exile, Casts This Realm, and Total Casts.''
+
+[[:Category:Spells#Persistent_Spells|Passive:]] Increases casts of a random (non-Persistent) spell on panel by:
+
+<math>\left( C_{R} \times 0.05 \right)^{0.8} \times 0.01 + 1</math>
+
+''Note: This increases Casts, Casts This Exile, Casts This Realm, and Total Casts.''
+
+where:
+* <math>N = \text{Number of simulated Magic Missile casts}</math>
+* <math>M = \text{Mana per Second}</math>
+* <math>E = \text{Evocation Efficiency}</math>
+* <math>C_{E} = \text{Jas'Aham's Missile Storm Casts This Exile}</math>
+* <math>C_{R} = \text{Jas'Aham's Missile Storm Casts This Realm}</math>
+
+==Related Spells==
+* {{SpellTooltip|Jas'Aham's Missile Storm (Enhanced)}} - Replaces '''Jas'Aham's Missile Storm''' after achieving 5 [[Quasi-Realms#Delusions|Delusions]] in [[Quasi-Realms#Thunderous Justice|Thunderous Justice Quasi-Realm]].
+
+== Community Notes ==
+Often shortened to  ''JMS''.

@@ -11,8 +11,8 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 
 | Texts | Blocks | Modelled clauses | not-production | mechanic | mythic-random | unparsed | Effects | Formula effects | Unverified effects |
 |---|---|---|---|---|---|---|---|---|---|
-| Item tiers at max quality | 223 | 405 | 17 | 26 | 20 | 0 | 427 | 52 | 349 |
-| All item tiers | 916 | 1291 | 67 | 79 | 20 | 0 | 1330 | 204 | 1146 |
+| Item tiers at max quality | 223 | 405 | 17 | 26 | 20 | 0 | 428 | 52 | 349 |
+| All item tiers | 916 | 1291 | 67 | 79 | 20 | 0 | 1335 | 204 | 1146 |
 | Set tiers | 59 | 57 | 0 | 2 | 0 | 0 | 65 | 0 | 47 |
 
 ## Unmodelled clauses (max quality, sets and enchants; Mythic random bonuses omitted)
@@ -59,7 +59,7 @@ Unverified effects rely on a reading of the wiki text that the wiki doesn't stat
 | Spellstealer | mechanic | Grants a passive ability which makes Counterspell and Debilitate more potent, at a higher cost per cast. Increases Shards Pool capacity | Counterspell and Debilitate are not modelled. |
 | Enchanting Membrane | mechanic | Can be activated to earn additional enchanting dust after experiments. | Activated part of the ability; not modelled. |
 | Chiropteric Rod | mechanic | Can be activated to spawn a Bat. | Spawning bats only matters through the bats-collected input. |
-| The Accumulator | mechanic | On activation, consumes all charges to add that many Ritual of Potency casts. | Cast counts are inputs. |
+| The Accumulator | mechanic | On activation, consumes all charges to add that many Ritual of Potency casts. | Cast counts are inputs; the casts-per-second score assumes every charge is eventually spent on an activation. |
 | Shadow-Scryer's Crystal Ball | mechanic | Grants passive ability to reduce active spell duration on each Evocation cast | Shortens active spell durations; spell timing is not modelled. |
 | Blessed Tapestry | not-production | Attribute gain speed +900% | Attribute points are an input. |
 | Nulldragon, The Anomaly | not-production | Ascension forms experience gain +150% | Doesn't change mana production in the scored phase. |

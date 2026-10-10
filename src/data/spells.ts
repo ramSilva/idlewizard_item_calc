@@ -51,11 +51,27 @@ export function spellById(id: number): SpellDef {
 }
 
 /** Spells an item adds to any class's spellbook; they only take effect while the item is equipped. */
-export const ITEM_GRANTED_SPELLS: ReadonlyMap<number, { item: string; source: Source }> = new Map([
-  [111, { item: "The Accumulator", source: { url: "https://idlewizard.wiki.gg/wiki/The_Accumulator", verified: true } }],
+export const ITEM_GRANTED_SPELLS: ReadonlyMap<number, { item: string; grantedStat: string; source: Source }> = new Map([
+  [111, { item: "The Accumulator", grantedStat: "Weapon.RitualOfPotencyGranted", source: { url: "https://idlewizard.wiki.gg/wiki/The_Accumulator", verified: true } }],
 ]);
 
-export const classSpells = (className: string): SpellDef[] => SPELLS.filter((s) => s.classes.includes(className) || ITEM_GRANTED_SPELLS.has(s.id));
+/** Quasi-Realm alternatives to a class spell; the data lists them under no class. */
+export const ALTERNATIVE_SPELLS: ReadonlyMap<number, { className: string; replaces: number; realm: string; source: Source }> = new Map([
+  [
+    202,
+    {
+      className: "Arcanist",
+      replaces: 81,
+      realm: "Thunderous Justice",
+      source: { url: "https://idlewizard.wiki.gg/wiki/Quasi-Realms#Thunderous_Justice", verified: true },
+    },
+  ],
+]);
+
+export const isClassSpell = (spell: SpellDef, className: string): boolean =>
+  spell.classes.includes(className) || ITEM_GRANTED_SPELLS.has(spell.id) || ALTERNATIVE_SPELLS.get(spell.id)?.className === className;
+
+export const classSpells = (className: string): SpellDef[] => SPELLS.filter((s) => isClassSpell(s, className));
 
 /** Per-spell stat ids, e.g. `Spell.RitualOfPower.CastsThisExile`. */
 export const spellStat = (spell: SpellDef, name: string): string => `Spell.${spell.key}.${name}`;

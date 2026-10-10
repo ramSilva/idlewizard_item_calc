@@ -318,8 +318,16 @@ export const ITEM_OVERRIDES: Readonly<Record<string, readonly ClauseOverride[]>>
   Spellstealer: [mechanic("Counterspell and Debilitate are not modelled.")],
   "The Accumulator": [
     whole((ctx) => ({
-      effects: [overrideEffect(ctx, "Weapon.RitualOfPotencyGranted", "add", 1)],
-      unmodelled: [activation("On activation, consumes all charges to add that many Ritual of Potency casts.", "Cast counts are inputs.")],
+      effects: [
+        overrideEffect(ctx, "Weapon.RitualOfPotencyGranted", "add", 1),
+        overrideEffect(ctx, "Weapon.AccumulatorChargesPerCast", "add", (weaponR(ctx) * 4) ** 2 * 0.1 - 0.009),
+      ],
+      unmodelled: [
+        activation(
+          "On activation, consumes all charges to add that many Ritual of Potency casts.",
+          "Cast counts are inputs; the casts-per-second score assumes every charge is eventually spent on an activation.",
+        ),
+      ],
     })),
   ],
   "Shadow-Scryer's Crystal Ball": [mechanic("Shortens active spell durations; spell timing is not modelled.")],

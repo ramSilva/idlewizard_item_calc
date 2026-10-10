@@ -1,0 +1,12 @@
+{{Spell}}
+
+==Details==
+This spell is only available if you have {{ItemTooltip|The Accumulator}} equipped.
+
+Multiplies profits by:
+<br><math>(C + 1)^{0.8} \times I \times 0.5 + 1</math>
+
+
+where:
+* <math>C = \text{Ritual of Potency Real Casts This Exile}</math>
+* <math>I = \text{Incantation Efficiency}</math>

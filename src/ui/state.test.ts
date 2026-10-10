@@ -22,7 +22,7 @@ const INT: InputSpec = { default: 200, kind: "integer", min: 0, max: 250 };
 
 describe("state encoding", () => {
   it("encodes a class's default state as the class alone", () => {
-    for (const c of ["oni", "shaman", "temporalist", "chronomancer"]) expect(toCompact(defaultState(c))).toEqual({ c });
+    for (const c of ["oni", "shaman", "temporalist", "chronomancer", "arcanist"]) expect(toCompact(defaultState(c))).toEqual({ c });
   });
 
   it("round-trips a state with every field changed", () => {

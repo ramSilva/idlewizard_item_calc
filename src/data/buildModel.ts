@@ -1,15 +1,15 @@
-import { add, mul, num, ref, type Expr } from "../engine/expr.ts";
+import { add, f, mul, num, ref, type Expr } from "../engine/expr.ts";
 import { compileGraph, createModifiers, FloatEvaluator, type InputValues, type ItemModifiers, type StatGraph } from "../engine/graph.ts";
 import { ItemCatalog, resolveLoadout, type EquippedItem } from "../engine/loadout.ts";
-import type { AutoclickSource, ClassDef, Effect, PetDef, SpellBehaviour, SpellDef, StanceDef, StatDef, UnmodelledPart } from "../engine/model.ts";
+import type { AutoclickSource, ClassDef, Effect, PetDef, Source, SpellBehaviour, SpellDef, StanceDef, StatDef, UnmodelledPart } from "../engine/model.ts";
 import { analyzeRelevance, type RelevanceResult } from "../engine/relevance.ts";
-import { constantStat, derivedStat, StatRegistry } from "../engine/stats.ts";
+import { constantStat, derivedStat, inputStat, StatRegistry } from "../engine/stats.ts";
 import { classById } from "./classes.ts";
 import { ITEMS, SETS } from "./items.ts";
 import { petById } from "./pets.ts";
 import { SCORES, spellScores, type ScoreContext, type ScoreDef } from "./scores.ts";
 import { behaviourOf } from "./spellBehaviours.ts";
-import { ITEM_GRANTED_SPELLS, spellById, spellStat } from "./spells.ts";
+import { isClassSpell, ITEM_GRANTED_SPELLS, spellById, spellStat } from "./spells.ts";
 import { GENERIC_EFFECTS, GENERIC_STATS } from "./stats.ts";
 
 export const MAX_SPELLS = 6;
@@ -80,10 +80,78 @@ function snappedBehaviour(b: SpellBehaviour): SpellBehaviour {
     effects: b.effects.map((e) => ({ ...e, value: substitute(e.value, map), label: `${e.label}, snapped` })),
     mana: b.mana && { perCast: sub(b.mana.perCast), perSecond: sub(b.mana.perSecond) },
     voidManaPerSecond: sub(b.voidManaPerSecond),
+    extraCasts: b.extraCasts?.map((x) => ({ ...x, perCast: substitute(x.perCast, map) })),
   };
 }
 
 const sum = (xs: Expr[]): Expr => (xs.length ? add(...xs) : num(0));
+
+const CAST_RATE: Source = { url: "https://idlewizard.wiki.gg/wiki/Basic_Mechanics", verified: true };
+
+const effectiveDuration = (s: SpellDef): string =>
+  s.school === "Summoning" ? `${s.duration} / Spell.SummoningDurationDivisor` : `${s.duration} * Spell.${s.school}Duration / Spell.${s.school}DurationDivisor`;
+
+/** Casts per second of the spells on the bar and everything that adds to spells cast this Exile. */
+function castRateStats(spells: readonly SpellDef[], active: readonly SpellBehaviour[]): StatDef[] {
+  const out: StatDef[] = [];
+  const real: Expr[] = [];
+  const extra: Expr[] = [];
+  const panelHasTarget = spells.some((s) => !s.persistent);
+  for (const s of spells) {
+    const charged = spellStat(s, "ChargedCastsPerSecond");
+    const rate = spellStat(s, "CastsPerSecond");
+    const granted = ITEM_GRANTED_SPELLS.get(s.id);
+    const castable = granted ? ` * min(${granted.grantedStat}, 1)` : "";
+    const cap = s.duration ? `min(Spell.MaxCastRate, 1 / max(${effectiveDuration(s)}, 1))` : "Spell.MaxCastRate";
+    out.push(
+      inputStat(
+        charged,
+        `${s.name}: casts per second its charges allow`,
+        "Spells",
+        { default: 1e9, kind: "number", min: 0, logScale: true, unit: "casts/s", hint: "Leave it high when charges never hold the spell back." },
+        {
+          description: "The spell casts at the maximum cast rate or as fast as its charges refill, whichever is slower.",
+          source: { ...CAST_RATE, verified: false, note: "Charge refills (shards, scroll charges) aren't modelled; the default means charges never limit the spell." },
+        },
+      ),
+      derivedStat(rate, `${s.name}: real casts per second`, "Spells", f(`min(${charged}, ${cap})${castable}`), {
+        description: granted ? `0 unless ${granted.item} is equipped, since it adds the spell to the spellbook.` : undefined,
+        source: {
+          ...CAST_RATE,
+          note: s.duration
+            ? "Limited by the maximum cast rate, its charges, and its duration (it's recast when it ends). Durations under 1 second last 1 second; the extra casts the game grants for them aren't modelled."
+            : "Limited by the maximum cast rate and its charges.",
+        },
+      }),
+    );
+    real.push(ref(rate));
+    const b = active.find((x) => x.spellId === s.id)!;
+    for (const x of b.extraCasts ?? []) if (!x.toPanelSpell || panelHasTarget) extra.push(mul(ref(rate), x.perCast));
+  }
+  const fromSpells = { url: "https://idlewizard.wiki.gg/wiki/Module:Data/Spells", verified: true };
+  out.push(
+    derivedStat("Spell.RealCastsPerSecond", "Real casts per second of the spells on the bar", "Spells", sum(real), { source: CAST_RATE }),
+    derivedStat("Spell.ExtraCastsPerSecond", "Simulated and granted casts per second", "Spells", sum(extra), {
+      description: "Casts the bar's spells add to spells cast this Exile besides their own, e.g. Jas'Aham's simulated Magic Missiles.",
+      source: fromSpells,
+    }),
+    derivedStat(
+      "Weapon.AccumulatorCastsPerSecond",
+      "Ritual Of Potency casts per second from The Accumulator",
+      "Items",
+      f("Weapon.AccumulatorChargesPerCast * Items.WeaponChargeSpeed * (Spell.RealCastsPerSecond + Weapon.AccumulatorChargesFromExtraCasts * Spell.ExtraCastsPerSecond)"),
+      { description: "Each activation turns every charge into a Ritual Of Potency cast.", source: { url: "https://idlewizard.wiki.gg/wiki/The_Accumulator", verified: true } },
+    ),
+    derivedStat(
+      "Spell.CastsPerSecond",
+      "Spell casts per second",
+      "Spells",
+      f("Spell.RealCastsPerSecond + Spell.ExtraCastsPerSecond + Weapon.AccumulatorCastsCounted * Weapon.AccumulatorCastsPerSecond"),
+      { description: "Everything added to spells cast this Exile each second.", source: fromSpells },
+    ),
+  );
+  return out;
+}
 
 class StatCollector {
   private readonly defs = new Map<string, StatDef>();
@@ -116,7 +184,7 @@ function validate(sel: ModelSelection, cls: ClassDef): void {
   if (new Set(sel.spells).size !== sel.spells.length) throw new Error("A spell is selected twice");
   for (const id of sel.spells) {
     const s = spellById(id);
-    if (!s.classes.includes(cls.name) && !ITEM_GRANTED_SPELLS.has(id)) throw new Error(`${s.name} isn't a ${cls.name} spell`);
+    if (!isClassSpell(s, cls.name)) throw new Error(`${s.name} isn't a ${cls.name} spell`);
   }
   if (sel.stance && !cls.stances.some((s) => s.id === sel.stance)) throw new Error(`${cls.name} has no stance ${sel.stance}`);
   for (const id of sel.snapped ?? []) if (!behaviourOf(id).snap) throw new Error(`${spellById(id).name} has nothing to snap`);
@@ -192,6 +260,7 @@ export function buildModel(selection: ModelSelection, options: BuildOptions = {}
 
   const voidSources = [...active.flatMap((b) => (b.voidManaPerSecond ? [b.voidManaPerSecond] : [])), ...(pet.voidManaPerSecond ? [pet.voidManaPerSecond] : [])];
   derived.push(derivedStat("Void.ManaPerSecond", "Void mana per second", "Void", sum(voidSources), { source: { url: "https://idlewizard.wiki.gg/wiki/Module:Data/Spells", verified: true } }));
+  derived.push(...castRateStats(spells, active));
 
   stats.add(derived, "model builder");
   stats.replace(cls.stats);

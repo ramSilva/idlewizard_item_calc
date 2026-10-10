@@ -7,13 +7,13 @@ Live site: https://ramsilva.github.io/idlewizard_item_calc/
 ## How scores work
 
 - Every game quantity is a named stat; classes, pets, spells, items and set bonuses are lists of effects on those stats. A score is an expression such as "Furious Strike mana per cast" or "production".
-- Scores are shown as **relative multipliers** (against no items, or against another set). Factors that multiply every set equally are dropped, so absolute mana is never shown.
+- Scores are shown as **relative multipliers** (against no items, or against another set). Factors that multiply every set equally are dropped, so absolute mana is never shown. Scores with a unit, such as "Spell casts per second", also show their value, computed with hidden inputs at their defaults.
 - **Only ranking-relevant inputs are asked for**, one labelled field per value. An input is hidden when it can't change which set wins: the log of the score is split into terms and terms that no item can affect are dropped (structural check); for mixed terms the input is varied across real candidate sets and hidden if the score ratios don't change (numeric check). Hidden inputs stay editable in a collapsed "Doesn't affect the ranking" section.
 - Numbers beyond 1e308 use `break_eternity.js`; comparisons run in log space.
 
 ## Supported classes
 
-Oni, Shaman and Temporalist (hero abilities, stances, all their spells and paired pets), plus Chronomancer (encoded for the blind validation checks, including the In Over Your Head pet Temporal Paradox). The full item database (223 items including 20 Mythics, 12 sets) is encoded; Mythics only use their inherent effect and are excluded unless marked owned.
+Oni, Shaman and Temporalist (hero abilities, stances, all their spells and paired pets), plus Chronomancer (encoded for the blind validation checks, including the In Over Your Head pet Temporal Paradox) and Arcanist (the Thunderous Justice guide's burst, with Jas'Aham's Thunderous Swarm, the Quasi-Realm alternative to Jas'Aham's Missile Storm). The full item database (223 items including 20 Mythics, 12 sets) is encoded; Mythics only use their inherent effect and are excluded unless marked owned.
 
 ## Data sources
 
@@ -50,6 +50,7 @@ Requires Node 22.
 - Many class defaults are placeholder magnitudes (cast counts, CAP/PAP bases, efficiency bases, Void mana); set real values in the Inputs tab.
 - Unverified readings include: percentage item bonuses as multipliers, "(base)" bonuses as additive, phylacteries compounding per character level, the attribute cap limiting only assigned points (item bonuses count above it; backed by an in-game test), weapon abilities active during the burst, and Temporal Paradox's tier. Full lists are in the reports above.
 - One item set per score: snapshot sets and build-phase gear have no score of their own; snapped spells enter through inputs.
+- The casts-per-second score takes each spell's charge-limited cast rate as an input and ignores the frame cap, spell memetics' cast rate, the extra casts of sub-second durations, item cast doublers and Voice of the Erased's flat cast rate; whether simulated casts charge The Accumulator is a toggle.
 - The default search prunes like the Discord BiS bot, so it's a heuristic; `--thorough` or `pruning: "none"` searches more.
 
 ## Deployment

@@ -1,0 +1,52 @@
+{{ClassInfobox
+|level=24
+|unlock=
+*Spells cast 500 
+*Spell shards collected 2.50e5
+*500 Mana Gems
+|mechanic=Spell Casts
+|source=Arcanaspring
+}}
+
+== Description ==
+
+Increases mana profits with amount of spells cast. Focuses on gaining more shards and increasing profits through his spells and upgrades.
+
+Unique [[Sources|Source]]: Arcanaspring, replaces Spell Fountain.
+
+== Basic Design ==
+Arcanist primarily profits by casting a lot of spells. He has a greatly increased ability to earn spell shards, thanks to spells like {{SpellTooltip|spell_name = Spellstaff Of Chamaon}}, which allows the autoclicks from the 4 apprentice summons to earn a lot more spell shards, and {{SpellTooltip|spell_name = Lightning Bolt}}, which is a much more powerful combination of {{SpellTooltip|spell_name = Spell Focus}} and {{SpellTooltip|spell_name = Magic Missile}}. At very high levels he can leverage these spell shards to cast {{SpellTooltip|spell_name = Arcane Infusion}}, an incredibly expensive spell that increases his character ability power with every cast.
+
+He also has 2 new spells that scale based on the number of casts: {{SpellTooltip|spell_name = Karnaphen's Spellshroud}}, and {{SpellTooltip|spell_name = Radiant Pools}}. Both of these are powerful new incantations that greatly increase profits, especially combined with his character ability, which also scales off total spells cast.
+
+At a high level, he also gains access to {{SpellTooltip|spell_name = Jas'Aham's Missile Storm}}, a persistent spell that grants an ever-increasing number of casts to other spells on the bar, allowing him to stack his spells cast, and the abilities of {{SpellTooltip|spell_name = Karnaphen's Spellshroud}}, {{SpellTooltip|spell_name = Radiant Pools}}, and {{SpellTooltip|spell_name = Arcane Infusion}} incredibly quickly. Stacking this persistent also helps in the future with [[Archon]].
+
+== Guides ==
+* [[Arcanist Guide]] (tested at e200+ but may work for lower myst)
+* [[Thunderous Justice Arcanist Guide]] for [[Quasi-Realms#Thunderous_Justice|Quasi-Realm]].
+
+''To learn about writing your own guides, please see the [[Guide to Guides]].''
+
+== Hero Ability ==
+
+The Arcanist multiplies all sources' profits by:
+<br><math>\left( S \times \frac{G}{80} + 1 \right) \times L^2 \times C + 1</math>
+<br>where:
+* <math>S = \text{Spells Cast this Exile}</math>
+* <math>L = \text{Character Level}</math>
+* <math>C = \text{Character Ability Power}</math>
+* <math>G = \text{Character Ability Power Growth Rate}</math>
+
+
+== [[Spells]] ==
+{{SpellList}}
+
+== [[Upgrades]] ==
+{{For|a detailed table of {{PAGENAME}} Upgrades|{{PAGENAME}}/Upgrades}}
+
+==Lore==
+{{Lore|While humanity tears apart into service of various forces and descends into oblivion, the Arcanist stands as the last beacon for humanity. Holding his human nature as a symbol of pride, these mages augment their abilities with numerous spells and incantations beyond the limits of any mortal, which makes them more than a match for any opponent.}}
+
+{{SiteNav}}
+[[Category:Classes]]
+[[Category:Wizard]]

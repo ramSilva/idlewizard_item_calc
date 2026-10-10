@@ -1,0 +1,39 @@
+{{Spell}}
+
+==Details==
+On cast, consumes charges equal to:
+
+<math>\left\lfloor\frac{C_h - 1}{10}\right\rfloor + 1</math>
+
+''Note: Maximum amount of charges is 1e9.''
+
+Each cast simulates a number <math>N</math> of {{SpellTooltip|spell_name=Magic Missile}} casts, equal to:
+
+<math>N = \left(\frac{C_E}{1000} + 1\right)^{1.3} + 100</math>
+
+granting Mana, equal to:
+
+<math> M \times E \times N \times 30</math>
+
+''Note: This increases {{SpellTooltip|spell_name=Magic Missile}} casts, Casts This Exile, Casts This Realm, and Total Casts.''
+
+[[:Category:Spells#Persistent_Spells|Passive:]] Each cast increases casts of a random (non-Persistent) spell on panel by:
+
+<math>\frac{\left(C_R \times 0.05\right)^{0.8}}{100} + 1</math>
+
+''Note: This increases Casts, Casts This Exile, Casts This Realm, and Total Casts.''
+
+where:
+* <math>C_{h} = \text{Jas'Aham's Thunderous Swarm charges when cast}</math>
+* <math>N = \text{Number of simulated Magic Missile casts}</math>
+* <math>M = \text{Mana per Second}</math>
+* <math>E = \text{Evocation Efficiency}</math>
+* <math>C_{E} = \text{Jas'Aham's Thunderous Swarm Casts This Exile}</math>
+* <math>C_{R} = \text{Jas'Aham's Thunderous Swarm Casts This Realm}</math>
+
+==Related Spells==
+* {{SpellTooltip|Jas'Aham's Missile Storm}}
+* {{SpellTooltip|Magic Missile}}
+
+== Community Notes ==
+Often shortened to  ''JTS''.

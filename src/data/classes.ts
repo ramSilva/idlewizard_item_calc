@@ -369,7 +369,76 @@ export const CHRONOMANCER: ClassDef = {
   source: CHRONOMANCER_PAGE,
 };
 
-export const CLASSES: readonly ClassDef[] = [ONI, SHAMAN, TEMPORALIST, CHRONOMANCER];
+const ARCANIST_PAGE: Source = { url: wiki("Arcanist"), verified: true };
+const ARCANIST_GUIDE = wiki("Thunderous_Justice_Arcanist_Guide");
+const ARCANIST_STACKING = `${ARCANIST_GUIDE}#Spell_Stacking`;
+const ARCANIST_BURST = `${ARCANIST_GUIDE}#Burst`;
+
+export const ARCANIST: ClassDef = {
+  id: "arcanist",
+  name: "Arcanist",
+  effects: [effect("Prod.Global", "(Spell.CastsThisExile * G / 80 + 1) * L ^ 2 * C + 1", "Arcanist hero ability (Sources profit)", ARCANIST_PAGE)],
+  stances: [],
+  stats: [
+    derivedStat("Misc.Arcanasprings", "Arcanasprings owned", "Production", f(buildingCount(3)), {
+      source: { url: wiki("Module:Data/ManaSources"), verified: true, note: "Arcanaspring is Arcanist's unique source and replaces Spell Fountain." },
+    }),
+  ],
+  augments: [100],
+  pairedPets: ["risen-giant", "zombie", "archivist", "voidterror"],
+  defaultSpells: [202, 60, 51, 8, 42, 111],
+  defaultPet: "risen-giant",
+  defaultSnapped: [],
+  defaultScore: "arcanist-burst",
+  defaults: {
+    ...attributeDefaults(`${ARCANIST_GUIDE}#Attributes`, {
+      Intelligence: 250,
+      Insight: 250,
+      Spellcraft: 250,
+      Wisdom: 240,
+      Dominance: 0,
+      Patience: 250,
+      Mastery: 250,
+      Empathy: 250,
+    }),
+    [buildingShare(3)]: inferred(
+      ARCANIST_BURST,
+      1,
+      "Assumed: Arcanasprings hold the burst's production; the guide memes the fountain source and the burst casts Radiant Pools (Arcanasprings profit).",
+    ),
+    "Pet.TimeCurrent": inferred(ARCANIST_BURST, 600, "Profits peak 4 to 10 minutes after selecting Risen Giant; the upper end is used."),
+    "Char.Level": characterLevel(200, "Character level at the burst."),
+    "Pet.Level": placeholder(300, "Risen Giant level at the burst.", ARCANIST_BURST),
+    "Hero.AbilityPower": placeholder(1e6, "CAP before items and attributes.", ARCANIST_BURST),
+    "Hero.AbilityPowerGrowth": placeholder(10, "CAP growth rate.", ARCANIST_BURST),
+    "Spell.CastsThisExile": placeholder(1e9, "spells cast this Exile (Jas'Aham's Thunderous Swarm simulates over 100 casts per cast).", ARCANIST_STACKING),
+    [castsOf(202)]: placeholder(1e6, "Jas'Aham's Thunderous Swarm casts this Exile.", ARCANIST_STACKING),
+    [spellStat(spellById(202), "CastsThisRealm")]: placeholder(1e7, "Jas'Aham's Thunderous Swarm casts this Realm.", ARCANIST_STACKING),
+    [castsOf(60)]: placeholder(1e7, "Ritual Of Power casts stacked in the spell stacking phase.", ARCANIST_STACKING),
+    [castsOf(8)]: placeholder(1e7, "Radiant Pools casts stacked in the spell stacking phase.", ARCANIST_STACKING),
+    [castsOf(100)]: placeholder(1e7, "Arcane Infusion casts stacked in the spell stacking phase.", ARCANIST_STACKING),
+    [castsOf(111)]: placeholder(1e7, "Ritual Of Potency casts (The Accumulator's activation adds casts).", wiki("The_Accumulator")),
+    [buildingCount(3)]: placeholder(5000, "Arcanasprings owned at the burst.", ARCANIST_BURST),
+    "Misc.SourcesOwned": placeholder(20000, "mana sources owned at the burst.", ARCANIST_BURST),
+    "Spell.EvocationEfficiency": placeholder(1e3, "Evocation efficiency from upgrades and other unmodelled sources.", ARCANIST_BURST),
+    "Spell.IncantationEfficiency": placeholder(1e3, "Incantation efficiency from upgrades and other unmodelled sources.", ARCANIST_BURST),
+    "Mysteries.Count": LATE_MYSTERIES,
+    "Void.Mana": placeholder(1e10, "Void mana collected in the Void Mana phase before the burst.", `${ARCANIST_GUIDE}#Void_Mana`),
+    "Idle.Bonus": placeholder(100, "idle bonus before items and attributes.", ARCANIST_BURST),
+    "Expeditions.Level": placeholder(50, "expedition level.", wiki("Expeditions")),
+  },
+  mainBuilding: 3,
+  buildingNames: { 3: "Arcanasprings" },
+  unmodelled: [
+    {
+      text: "Jas'Aham's Thunderous Swarm charges from the shard pool at most 10 times per second; the guide stacks it with Lightning Bolt",
+      note: "Charging over the run isn't modelled; each spell's charge-limited cast rate is an input.",
+    },
+  ],
+  source: ARCANIST_PAGE,
+};
+
+export const CLASSES: readonly ClassDef[] = [ONI, SHAMAN, TEMPORALIST, CHRONOMANCER, ARCANIST];
 
 export function classById(id: string): ClassDef {
   const c = CLASSES.find((x) => x.id === id);

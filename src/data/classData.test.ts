@@ -23,7 +23,7 @@ describe("spells", () => {
   });
 
   it("encodes every spell of every encoded class", () => {
-    expect(CLASSES.map((c) => c.id)).toEqual(["oni", "shaman", "temporalist", "chronomancer"]);
+    expect(CLASSES.map((c) => c.id)).toEqual(["oni", "shaman", "temporalist", "chronomancer", "arcanist"]);
     for (const c of CLASSES) {
       for (const s of classSpells(c.name)) expect(SPELL_BEHAVIOURS.has(s.id), `${c.name}: ${s.name} (${s.id})`).toBe(true);
     }

@@ -48,6 +48,7 @@ class SpellBuilder {
   mana?: SpellBehaviour["mana"];
   autoclicks?: AutoclickSource;
   voidManaPerSecond?: Expr;
+  extraCasts?: SpellBehaviour["extraCasts"];
   snap?: Record<string, string>;
   private readonly local: Record<string, string> = {};
 
@@ -134,6 +135,12 @@ class SpellBuilder {
     return this;
   }
 
+  /** Casts this Exile each cast adds besides its own: simulated casts, or casts given to a random other spell on the bar. */
+  extraCastsPerCast(formula: string, target: "simulated" | "panel spell"): this {
+    this.extraCasts = [...(this.extraCasts ?? []), { perCast: this.f(formula), toPanelSpell: target === "panel spell" }];
+    return this;
+  }
+
   skip(text: string, note: string): this {
     this.unmodelled.push({ text, note });
     return this;
@@ -154,6 +161,7 @@ class SpellBuilder {
       mana: this.mana,
       autoclicks: this.autoclicks,
       voidManaPerSecond: this.voidManaPerSecond,
+      extraCasts: this.extraCasts,
       stats: this.stats,
       snap: this.snap,
       unmodelled: this.unmodelled,
@@ -168,6 +176,7 @@ const SHARDS = "Spell shards aren't modelled.";
 const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
   // Evocations
   0: (b) => b.manaPerCast("E * M * 30"),
+  1: (b) => b.manaPerCast("M * E * 80").skip("Spell Shards = (CharLvl × 4 + 100) × Evocation^0.075, for the other spells", SHARDS),
   2: (b) =>
     b
       .manaPerCast("M * E * 30")
@@ -206,9 +215,25 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
       .realmCasts()
       .effect("Hero.AbilityPower", "mul", "R * 0.01 + 1", "passive")
       .skip("FSPercentGiven = CastsThisExile × 0.1% + log10(Evocation) × 1.5% + 1%", "Furious Strike charges are an input."),
+  81: (b) =>
+    b
+      .casts()
+      .realmCasts()
+      .manaPerCast("M * (floor((C * 0.001 + 1) ^ 1.3) + 11) * E * 30")
+      .extraCastsPerCast("floor((C * 0.001 + 1) ^ 1.3) + 10", "simulated")
+      .extraCastsPerCast("(R * 0.05) ^ 0.8 * 0.01 + 1", "panel spell"),
   91: (b) => b.skip("SpellShards = (CastsThisExile + 1000) × Evocation^0.1", SHARDS),
   104: (b) => b.skip("Shards = (CharLvl × 1.25 + 25) × Evocation^0.075", SHARDS),
   110: (b) => b.skip("TimeSkipped = (log10(Evocation) × 0.5 + 1) × Charlvl × 0.5 + 20", "Skipped time is an input."),
+  202: (b) =>
+    b
+      .charges(1e9)
+      .casts()
+      .realmCasts()
+      .manaPerCast("M * E * (floor((Q - 1) * 0.1) + 1) * ((C / 1000 + 1) ^ 1.3 + 100) * 30")
+      .note("The Math multiplies the mana by the charges spent on the cast; the spell page's Details leave that factor out. The Math is used.")
+      .extraCastsPerCast("(C / 1000 + 1) ^ 1.3 + 100", "simulated")
+      .extraCastsPerCast("(R * 0.05) ^ 0.8 * 0.01 + 1", "panel spell"),
 
   // Incantations
   4: (b) =>
@@ -222,6 +247,10 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
         "Temporary Mana Gems are assumed to raise Mana Gems' production in proportion to the amount owned; gem-count upgrades aren't modelled.",
       ),
   5: (b) => b.effect(buildingProfit(4), "mul", "(A + 1) ^ 0.5 * I ^ 1.2 + 1", undefined, "Trees of Life are Shaman's Enchanted Trees (building 4), per the Shaman page."),
+  8: (b) =>
+    b
+      .casts()
+      .effect(buildingProfit(3), "mul", "(C + 1) ^ 0.81 * I * 2.15 + 1", undefined, "Arcanasprings are Arcanist's Spell Fountains (building 3), per Module:Data/ManaSources."),
   6: (b) => b.effect(buildingProfit(6), "mul", "((Pet.Level + 1) * 0.25) ^ 1.25 * I ^ 1.6 + 1", undefined, "Hellholes are Oni's Circles of Power (building 6), per the Oni page."),
   7: (b) =>
     b.effect(
@@ -252,7 +281,19 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
       .effect("Click.Profit", "mul", "I + 1")
       .effect("Click.CritChance", "add", "(log10(I) * 0.9 + 1) * 3", "crit chance", "Adds percentage points to crit chance.")
       .effect("Click.CritProfit", "mul", "I * 0.5 + 1", "crit profit"),
+  42: (b) =>
+    b
+      .effect("Shards.PerClick", "mul", "I * 2 + 1", "shards from clicks")
+      .effect("Spell.EvocationEfficiency", "mul", "I ^ 0.8 * 2 + 1", "Evocation"),
   50: (b) => b.effect("Prod.Global", "mul", "((Misc.SourcesOwned + 1) * 0.1) ^ 0.34 * I + 1", undefined, '"BoughtSources" is read as total mana sources owned.'),
+  51: (b) =>
+    b.effect(
+      "Prod.Global",
+      "mul",
+      "(((Spell.CastsThisExile + 1) * 0.0075) ^ 0.25 + 1) * ((Misc.SourcesOwned + 1) ^ 0.45 * I + 1)",
+      undefined,
+      '"AllCastsThisExile" is read as spells cast this Exile and "BoughtSources" as total mana sources owned.',
+    ),
   52: (b) => b.effect("Prod.Global", "mul", "((Misc.SourcesOwned + 1) * 0.5) ^ 0.45 * I + 1", undefined, '"BoughtSources" is read as total mana sources owned.'),
   57: (b) => b.casts().effect("Prod.Global", "mul", "(Misc.LeyApexes * I * 3 / 4000 + 1) * (((C + 1) / 10) ^ 0.75 + 1)"),
   58: (b) =>
@@ -289,6 +330,7 @@ const DEFINITIONS: Record<number, (b: SpellBuilder) => SpellBuilder> = {
   89: (b) => b.casts().effect("Prod.Global", "mul", "((C + 1) * 0.005) ^ 1.2 * I + 1"),
   90: (b) => b.effect("Spell.EvocationEfficiency", "mul", "(L + 1) ^ 1.28 * I * 0.25 + 1"),
   93: (b) => b.casts().effect("Spell.IncantationEfficiency", "mul", "((C + 1) / 400) ^ 1.5 + 1"),
+  100: (b) => b.casts().effect("Hero.AbilityPower", "mul", "(C + 1) ^ 1.15 * (log10(I) * 2 + 1) * 0.2 + 1"),
   101: (b) =>
     b
       .casts()

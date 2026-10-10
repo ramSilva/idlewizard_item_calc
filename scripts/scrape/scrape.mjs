@@ -31,9 +31,11 @@ const MECHANICS = [
   "Catalysts",
 ];
 
-const CLASSES = ["Oni", "Shaman", "Temporalist", "Chronomancer"];
+const CLASSES = ["Oni", "Shaman", "Temporalist", "Chronomancer", "Arcanist"];
 
-const GUIDES = ["Oni Guide", "Shaman Guide", "Temporalist Guide (e300-e550)", "Temporalist Guide (e550+)"];
+const GUIDES = ["Oni Guide", "Shaman Guide", "Temporalist Guide (e300-e550)", "Temporalist Guide (e550+)", "Thunderous Justice Arcanist Guide"];
+
+const SPELL_PAGES = ["Jas'Aham's Thunderous Swarm", "Jas'Aham's Missile Storm", "Jas'Aham's Missile Storm (Enhanced)", "Ritual Of Potency", "Lightning Bolt"];
 
 // The Chronomancer guides are the answer key for the blind validation; keep them out of the snapshot.
 const EXCLUDED = new Set(["Chronomancer Guide", "Chronomancer Guide Updated", "In Over Your Head Chronomancer Guide"]);
@@ -51,7 +53,7 @@ function onlyTitles() {
 
 async function allTitles() {
   const [pets, items] = await Promise.all([fetchCategoryMembers(WIKIGG, "Pets"), fetchCategoryMembers(WIKIGG, "Items")]);
-  return [...MODULES, ...MECHANICS, ...CLASSES, ...GUIDES, ...pets, ...items];
+  return [...MODULES, ...MECHANICS, ...CLASSES, ...GUIDES, ...SPELL_PAGES, ...pets, ...items];
 }
 
 async function main() {
